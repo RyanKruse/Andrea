@@ -2,6 +2,7 @@
 // VRChat: Clearly
 // Discord: Clearly#3238
 // GitHub: https://github.com/RyanKruse/Candle
+// Prefab: https://clearly.booth.pm/items/3258223
 
 using UdonSharp;
 using UnityEngine;

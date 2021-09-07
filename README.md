@@ -8,7 +8,9 @@ Discord: Clearly#3238
 
 GitHub: https://github.com/RyanKruse/Candle
 
-------------
+Prefab: https://clearly.booth.pm/items/3258223
+
+
 
 ## Introduction
 
@@ -28,7 +30,7 @@ YouTube Tutorial: https://www.youtube.com/watch?v=bPbtYkrA3-M
 
 Discord Assistance: Clearly#3238
 
-------------
+
 
 ## Populate Text Files
 
@@ -41,7 +43,7 @@ Hint: The first two digits of the file name contain the order Candle will read t
 
 Hint: The file names appear on the lower-left hand corner of the Candle display when reading.
 
-------------
+
 
 ## Format Text Files
 
@@ -50,7 +52,7 @@ Hint: The file names appear on the lower-left hand corner of the Candle display 
 3) Open "06 - Acknowledgements.txt" to see an example of proper formatting.
 4) Save and close.
 
-------------
+
 
 ## Process Text Files
 
@@ -59,7 +61,7 @@ Hint: The file names appear on the lower-left hand corner of the Candle display 
 3) Populate "02_Text" with the text files.
 4) Save the scene.
 
-------------
+
 
 ## Compile Text Files
 
@@ -74,7 +76,7 @@ Hint: The file names appear on the lower-left hand corner of the Candle display 
 9) Populate "02_Block" with the block files.
 10) Save the scene.
 
-------------
+
 
 ## Read Text Files
 
@@ -86,13 +88,13 @@ Hint: The file names appear on the lower-left hand corner of the Candle display 
 
 Hint: Once everything works, feel free to change the book cover and add multiple books.
 
-------------
+
 
 ## Conclusion
 
 After finishing the above execution orders, the book that you have added into the text files should now be readable in VRChat.
 
-------------
+
 
 ## Numpad Commands
 
