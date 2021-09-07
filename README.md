@@ -1,8 +1,11 @@
 # Candle
 
 Author: Ryan Kruse
+
 VRChat: Clearly
+
 Discord: Clearly#3238
+
 GitHub: https://github.com/RyanKruse/Candle
 
 ------------
@@ -22,6 +25,7 @@ This document outlines the steps to publish a book onto Candle. There is no codi
 First time adding a book to Candle? Let's walk through each step:
 
 YouTube Tutorial: https://www.youtube.com/watch?v=bPbtYkrA3-M
+
 Discord Assistance: Clearly#3238
 
 ------------
@@ -34,6 +38,7 @@ Populate Text Files
 4) Save and close.
 
 Hint: The first two digits of the file name contain the order Candle will read the files.
+
 Hint: The file names appear on the lower-left hand corner of the Candle display when reading.
 
 ------------
@@ -92,15 +97,26 @@ After finishing the above execution orders, the book that you have added into th
 Numpad Commands
 
 [1] - Increment Page Down.
+
 [3] - Increment Page Up.
+
 [4] - Change Font Size.
+
 [5] - Toggle Mouse Scrolling.
+
 [6] - Change Font Type.
+
 [7] - Decrease Tablet Size.
+
 [9] - Increase Tablet Size.
+
 [0] - Rotate Tablet Display.
+
 [/] - Fast Increment Page Down.
+
 [*] - Fast Increment Page Up.
+
 [-] - Bump Tablet Position Up.
+
 [+] - Bump Tablet Position Down.
 
