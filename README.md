@@ -10,7 +10,7 @@ GitHub: https://github.com/RyanKruse/Candle
 
 ------------
 
-Introduction
+## Introduction
 
 VRChat is a virtual reality social platform that has introduced multiple media channels for communicating information to its users. One channel of communication missing in virtual reality is the channel of reading books. Textual mediums of communication have existed for thousands of years. They have evolved from wooden sticks, to parchment paper, to printed paper, to personal computers, to mobile devices, and now to virtual reality. The goal of Candle is to help bridge the gap between the user and the interface in reading books within a virtual reality platform.
 
@@ -30,7 +30,7 @@ Discord Assistance: Clearly#3238
 
 ------------
 
-Populate Text Files
+## Populate Text Files
 
 1) Open this folder: Candle / Assets / Books / 02 - Blank Book Template / Texts
 2) Populate the files with the book contents.
@@ -43,7 +43,7 @@ Hint: The file names appear on the lower-left hand corner of the Candle display 
 
 ------------
 
-Format Text Files
+## Format Text Files
 
 1) Open this folder: Candle / Assets / Books / 03 - Rich Text Commands / Texts
 2) Format your book text with the rich-text you'd like to add.
@@ -52,7 +52,7 @@ Format Text Files
 
 ------------
 
-Process Text Files
+## Process Text Files
 
 1) Click on "Wax" in Unity's Hierarchy Window.
 2) Open this folder: Candle / Assets / Books / 02 - Blank Book Template / Texts
@@ -61,7 +61,7 @@ Process Text Files
 
 ------------
 
-Compile Text Files
+## Compile Text Files
 
 1) Click on "Wick" in Unity's Hierarchy Window.
 2) Change the variable "Default Book Index" to 2.
@@ -76,7 +76,7 @@ Compile Text Files
 
 ------------
 
-Read Text Files
+## Read Text Files
 
 1) Click on the Play Button.
 2) Click on the book cover "Your Book Here".
@@ -88,13 +88,13 @@ Hint: Once everything works, feel free to change the book cover and add multiple
 
 ------------
 
-Conclusion
+## Conclusion
 
 After finishing the above execution orders, the book that you have added into the text files should now be readable in VRChat.
 
 ------------
 
-Numpad Commands
+## Numpad Commands
 
 [1] - Increment Page Down.
 
