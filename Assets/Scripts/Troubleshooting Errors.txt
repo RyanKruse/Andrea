@@ -1,0 +1,65 @@
+﻿    This document is a work-in-progress. 
+    Do not utilize.
+    
+    // READING MODE: DAY-TIME | NIGHT-TIME
+    // CANVAS SIZES: 0.5 | 0.4 | 0.3
+    // BACKLIGHT COLOR (Day-Time): 205 | 215 | 225 | 235 | 245
+    // BACKLIGHT COLOR (Night-Time): 10 | 20 | 30 | 40 | 50
+    // TEXT SHARPNESS: SOFT (1) | NORMAL (2) | SHARP (3)
+    // AUTO ROTATION: V (Vertical) | H (Horizontal)  // 
+
+    //</q1></h3></i></b>
+    //<q1><h3><i><b>
+    //\n<h5>* * *</h5>\n
+    /*
+<align="center"><size=200><sprite name="Image_4"><size=35><align="justified">
+<align="center"><i>Photograph of a Maple Tree</i><align="justified">
+    */
+
+    /* 
+    Candle Formatting Checklist.
+     * Open all documents.
+     * Do not accidently modify text.
+     * Do not use align-left.
+     * Do not modify sprite asset without also modifying Debug.unity (Align Bottom-Left).
+     * Stick to author's formatting.
+     * Save text files in UTF-8 with BOM format.
+     * Define headers: <h1>
+     * Define tabs: <t>
+     * Define lists and tabbed-lists.
+     * Define JPGs.
+     * Remove excess richtext.
+     * Convert body-text lists to actual lists (discretionary)
+     
+    Cleanup.
+     * Split huge words: counterproduct | overgeneral | counterexample | straightforward | troubleshoot | counterintuitive | semiprofession
+     * Remove any corruptable characters: ’ → ' | “ → " | ” → " | < | > | ~
+     * Remove spaces after blank paragraphs: '\n ' → '\n'
+     * Replace: [a-z]/[a-z] → (​/​) | — → (​—​)
+     * (Not Necessary) Shift: ' </?>' → '</?> '
+     * Remove any tabs not after new-line
+     * Remove any multi-spaces
+     * Remove any tabs
+     * Add missing spaces: \."[a-z] → " [a-z] | [a-z],[a-z] → [a-z], [a-z] | [a-z]</?>[a-z] → [a-z]</?> [a-z] | [a-z]"[a-z] → [a-z]" [a-z]
+     * Add missing letters (case-sensitive): <t>[a-z] → <t>[A-Z]
+     * Add blank line as last line
+     * Add smallcaps at the start of each chapter (discretionary)
+     * Add tabs, periods, capitalizations, dashes, and colons on lists.
+     * Break up HTTP links with hair-spaces.
+     * Review production for no capitalized or missing richtext commands.
+     * Review lists and indents for looping errors. 
+     * Review bottom-text for sizing and flush errors.
+     * Review TOC and Appendix.
+     * Review for huge paragraphs or huge new words. 
+     * Review for accidental new-line or word insertions (re-add any missing text). 
+    
+    // Best Fonts:
+    //      • "BaskervilleBT SDF" (Kindle)
+    //      • "Tahoma Regular font SDF" (Reddit)
+    //      • "AvenirNextLTPro-Regular SDF" (Instagram)
+    //      • "Helvetica Neue SDF" (Twitter)
+    //      • "Times New Roman SDF" (NY Times)
+
+    // CORRUPTABLE CHARCTERS: ’ | “ | ” | — | < | > | 
+    // GOOD CHARACTERS: ' | " | " - " | " / " | • | ○ | … | ZERO_SPACE (​) | HAIR_SPACE ( )
+    */

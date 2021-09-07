@@ -1,0 +1,127 @@
+﻿
+
+
+<h2>APPENDIX</h2>
+<h2+>A Reader's Guide to Using These Ideas</h2+>
+
+
+The difficult thing about studying the science of habits is that most people, when they hear about this field of research, want to know the secret formula for quickly changing any habit. If scientists have discovered how these patterns work, then it stands to reason that they must have also found a recipe for rapid change, right?
+<t>If only it were that easy.
+<t>It's not that formulas don't exist. The problem is that there isn't one formula for changing habits. There are thousands.
+<t>Individuals and habits are all different, and so the specifics of diagnosing and changing the patterns in our lives differ from person to person and behavior to behavior. Giving up cigarettes is different from curbing overeating, which is different from changing how you communicate with your spouse, which is different from how you prioritize tasks at work. What's more, each person's habits are driven by different cravings.
+<t>As a result, this book doesn't contain one prescription. Rather, I hoped to deliver something else: a framework for understanding how habits work and a guide to experimenting with how they might change. Some habits yield easily to analysis and influence. Others are more complex and obstinate, and require prolonged study. And for others, change is a process that never fully concludes.
+<t>But that doesn't mean it can't occur. Each chapter in this book explains a different aspect of why habits exist and how they function. The framework described in this appendix is an attempt to distill, in a very basic way, the tactics that researchers have found for diagnosing and shaping habits within our own lives. This isn't meant to be comprehensive. This is merely a practical guide, a place to start. And paired with deeper lessons from this book's chapters, it's a manual for where to go next.
+<t>Change might not be fast and it isn't always easy. But with time and effort, almost any habit can be reshaped.
+
+<i>THE FRAMEWORK:</i>
+
+1.Identify the routine
+2.Experiment with rewards
+3.Isolate the cue
+4.Have a plan
+
+<h5>STEP ONE: IDENTIFY THE ROUTINE</h5>
+
+The MIT researchers in chapter 1 discovered a simple neurological loop at the core of every habit, a loop that consists of three parts: a cue, a routine, and a reward.
+
+##<image="Duhi_9780679603856_epub_052_r1.jpg">
+
+<t>To understand your own habits, you need to identify the components of your loops. Once you have diagnosed the habit loop of a particular behavior, you can look for ways to supplant old vices with new routines.
+<t>As an example, let's say you have a bad habit, like I did when I started researching this book, of going to the cafeteria and buying a chocolate chip cookie every afternoon. Let's say this habit has caused you to gain a few pounds. In fact, let's say this habit has caused you to gain exactly eight pounds, and that your wife has made a few pointed comments. You've tried to force yourself to stop​—​you even went so far as to put a Post-it on your computer that reads no more cookies.
+<t>But every afternoon you manage to ignore that note, get up, wander toward the cafeteria, buy a cookie, and, while chatting with colleagues around the cash register, eat it. It feels good, and then it feels bad. Tomorrow, you promise yourself, you'll muster the willpower to resist. Tomorrow will be different.
+<t>But tomorrow the habit takes hold again.
+<t>How do you start diagnosing and then changing this behavior? By figuring out the habit loop. And the first step is to identify the routine. In this cookie scenario​—​as with most habits​—​the routine is the most obvious aspect: It's the behavior you want to change. Your routine is that you get up from your desk in the afternoon, walk to the cafeteria, buy a chocolate chip cookie, and eat it while chatting with friends. So that's what you put into the loop:
+
+##<image="Duhi_9780679603856_epub_053_r1.jpg">
+
+<t>Next, some less obvious questions: What's the cue for this routine? Is it hunger? Boredom? Low blood sugar? That you need a break before plunging into another task?
+<t>And what's the reward? The cookie itself? The change of scenery? The temporary distraction? Socializing with colleagues? Or the burst of energy that comes from that blast of sugar?
+<t>To figure this out, you'll need to do a little experimentation.
+
+<h5>STEP TWO: EXPERIMENT WITH REWARDS</h5>
+
+Rewards are powerful because they satisfy cravings. But we're often not conscious of the cravings that drive our behaviors. When the Febreze marketing team discovered that consumers desired a fresh scent at the end of a cleaning ritual, for example, they had found a craving that no one even knew existed. It was hiding in plain sight. Most cravings are like this: obvious in retrospect, but incredibly hard to see when we are under their sway.
+<t>To figure out which cravings are driving particular habits, it's useful to experiment with different rewards. This might take a few days, or a week, or longer. During that period, you shouldn't feel any pressure to make a real change​—​think of yourself as a scientist in the data collection stage.
+<t>On the first day of your experiment, when you feel the urge to go to the cafeteria and buy a cookie, adjust your routine so it delivers a different reward. For instance, instead of walking to the cafeteria, go outside, walk around the block, and then go back to your desk without eating anything. The next day, go to the cafeteria and buy a donut, or a candy bar, and eat it at your desk. The next day, go to the cafeteria, buy an apple, and eat it while chatting with your friends. Then, try a cup of coffee. Then, instead of going to the cafeteria, walk over to your friend's office and gossip for a few minutes and go back to your desk.
+<t>You get the idea. What you choose to do <i>instead</i> of buying a cookie isn't important. The point is to test different hypotheses to determine which craving is driving your routine. Are you craving the cookie itself, or a break from work? If it's the cookie, is it because you're hungry? (In which case the apple should work just as well.) Or is it because you want the burst of energy the cookie provides? (And so the coffee should suffice.) Or are you wandering up to the cafeteria as an excuse to socialize, and the cookie is just a convenient excuse? (If so, walking to someone's desk and gossiping for a few minutes should satisfy the urge.)
+<t>As you test four or five different rewards, you can use an old trick to look for patterns: After each activity, jot down on a piece of paper the first three things that come to mind when you get back to your desk. They can be emotions, random thoughts, reflections on how you're feeling, or just the first three words that pop into your head.
+
+##<image="Duhi_9780679603856_epub_054_r1.jpg">
+
+<t>Then, set an alarm on your watch or computer for fifteen minutes. When it goes off, ask yourself: Do you still feel the urge for that cookie?
+<t>The reason why it's important to write down three things​—​even if they are meaningless words​—​is twofold. First, it forces a momentary awareness of what you are thinking or feeling. Just as Mandy, the nail biter in chapter 3, carried around a note card filled with hash marks to force her into awareness of her habitual urges, so writing three words forces a moment of attention. What's more, studies show that writing down a few words helps in later recalling what you were thinking at that moment. At the end of the experiment, when you review your notes, it will be much easier to remember what you were thinking and feeling at that precise instant, because your scribbled words will trigger a wave of recollection.
+<t>And why the fifteen-minute alarm? Because the point of these tests is to determine the reward you're craving. If, fifteen minutes after eating a donut, you <i>still</i> feel an urge to get up and go to the cafeteria, then your habit isn't motivated by a sugar craving. If, after gossiping at a colleague's desk, you still want a cookie, then the need for human contact isn't what's driving your behavior.
+<t>On the other hand, if fifteen minutes after chatting with a friend, you find it easy to get back to work, then you've identified the reward​—​temporary distraction and socialization​—​that your habit sought to satisfy.
+<t>By experimenting with different rewards, you can isolate what you are <i>actually</i> craving, which is essential in redesigning the habit.
+
+##<image="Duhi_9780679603856_epub_055_r1.jpg">
+
+<t>Once you've figured out the routine and the reward, what remains is identifying the cue.
+
+<h5>STEP THREE: ISOLATE THE CUE</h5>
+
+About a decade ago, a psychologist at the University of Western Ontario tried to answer a question that had bewildered social scientists for years: Why do some eyewitnesses of crimes misremember what they see, while other recall events accurately?
+<t>The recollections of eyewitnesses, of course, are incredibly important. And yet studies indicate that eyewitnesses often misremember what they observe. They insist that the thief was a man, for instance, when she was wearing a skirt; or that the crime occurred at dusk, even though police reports say it happened at 2:00 in the afternoon. Other eyewitnesses, on the other hand, can remember the crimes they've seen with near-perfect recall.
+<t>Dozens of studies have examined this phenomena, trying to determine why some people are better eyewitnesses than others. Researchers theorized that some people simply have better memories, or that a crime that occurs in a familiar place is easier to recall. But those theories didn't test out​—​people with strong and weak memories, or more and less familiarity with the scene of a crime, were equally liable to misremember what took place.
+<t>The psychologist at the University of Western Ontario took a different approach. She wondered if researchers were making a mistake by focusing on what questioners and witnesses had said, rather than <i>how</i> they were saying it. She suspected there were subtle cues that were influencing the questioning process. But when she watched videotape after videotape of witness interviews, looking for these cues, she couldn't see anything. There was so much activity in each interview​—​all the facial expressions, the different ways the questions were posed, the fluctuating emotions​—​that she couldn't detect any patterns.
+<t>So she came up with an idea: She made a list of a few elements she would focus on​—​the questioners' tone, the facial expressions of the witness, and how close the witness and the questioner were sitting to each other. Then she removed any information that would distract her from those elements. She turned down the volume on the television so instead of hearing words, all she could detect was the tone of the questioner's voice. She taped a sheet of paper over the questioner's face, so all she could see was the witnesses' expressions. She held a tape measure to the screen to measure their distance from each other.
+<t>And once she started studying these specific elements, patterns leapt out. She saw that witnesses who misremembered facts usually were questioned by cops who used a gentle, friendly tone. When witnesses smiled more, or sat closer to the person asking the questions, they were more likely to misremember.
+<t>In other words, when environmental cues said "we are friends"​—​a gentle tone, a smiling face​—​the witnesses were more likely to misremember what had occurred. Perhaps it was because, subconsciously, those friendship cues triggered a habit to please the questioner.
+<t>But the importance of this experiment is that those same tapes had been watched by dozens of other researchers. Lots of smart people had seen the same patterns, but no one had recognized them before. Because there was <i>too much</i> information in each tape to see a subtle cue.
+<t>Once the psychologist decided to focus on only three categories of behavior, however, and eliminate the extraneous information, the patterns leapt out.
+<t>Our lives are the same way. The reason why it is so hard to identify the cues that trigger our habits is because there is too much information bombarding us as our behaviors unfold. Ask yourself, do you eat breakfast at a certain time each day because you are hungry? Or because the clock says 7:30? Or because your kids have started eating? Or because you're dressed, and that's when the breakfast habit kicks in?
+<t>When you automatically turn your car left while driving to work, what triggers that behavior? A street sign? A particular tree? The knowledge that this is, in fact, the correct route? All of them together? When you're driving your kid to school and you find that you've absentmindedly started taking the route to work​—​rather than to the school​—​what caused the mistake? What was the cue that caused the "drive to work" habit to kick in, rather than the "drive to school" pattern?
+<t>To identify a cue amid the noise, we can use the same system as the psychologist: Identify categories of behaviors ahead of time to scrutinize in order to see patterns. Luckily, science offers some help in this regard. Experiments have shown that almost all habitual cues fit into one of five categories:
+
+1.Location
+2.Time
+3.Emotional state
+4.Other people
+5.Immediately preceding action
+
+<t>So if you're trying to figure out the cue for the "going to the cafeteria and buying a chocolate chip cookie" habit, you write down five things the moment the urge hits (these are my actual notes from when I was trying to diagnose my habit):
+
+A)Where are you? (sitting at my desk)
+B)What time is it? (3:36 <smallcaps>P.M.</smallcaps>)
+C)What's your emotional state? (bored)
+D)Who else is around? (no one)
+E)What action preceded the urge? (answered an email)
+
+The next day:
+
+A)Where are you? (walking back from the copier)
+B)What time is it? (3:18 <smallcaps>P.M.</smallcaps>)
+C)What's your emotional state? (happy)
+D)Who else is around? (Jim from Sports)
+E)What action preceded the urge? (made a photocopy)
+
+The third day:
+
+A)Where are you? (conference room)
+B)What time is it? (3:41 <smallcaps>P.M.</smallcaps>)
+C)What's your emotional state? (tired, excited about the project I'm working on)
+D)Who else is around? (editors who are coming to this meeting)
+E)What action preceded the urge? (I sat down because the meeting is about to start)
+
+<t>Three days in, it was pretty clear which cue was triggering my cookie habit​—​I felt an urge to get a snack at a certain time of day. I had already figured out, in step two, that it wasn't hunger driving my behavior. The reward I was seeking was a temporary distraction​—​the kind that comes from gossiping with a friend. And the habit, I now knew, was triggered between 3:00 and 4:00.
+
+##<image="Duhi_9780679603856_epub_056_r1.jpg">
+
+<h5>STEP FOUR: HAVE A PLAN</h5>
+
+Once you've figured out your habit loop​—​you've identified the reward driving your behavior, the cue triggering it, and the routine itself​—​you can begin to shift the behavior. You can change to a better routine by planning for the cue and choosing a behavior that delivers the reward you are craving. What you need is a plan.
+<t>In the prologue, we learned that a habit is a choice that we deliberately make at some point, and then stop thinking about, but continue doing, often every day.
+<t>Put another way, a habit is a formula our brain automatically follows: When I see CUE, I will do ROUTINE in order to get a REWARD.
+<t>To re-engineer that formula, we need to begin making choices again. And the easiest way to do this, according to study after study, is to have a plan. Within psychology, these plans are known as "implementation intentions."
+<t>Take, for instance, my cookie-in-the-afternoon habit. By using this framework, I learned that my cue was roughly 3:30 in the afternoon. I knew that my routine was to go to the cafeteria, buy a cookie, and chat with friends. And, through experimentation, I had learned that it wasn't really the cookie I craved​—​rather, it was a moment of distraction and the opportunity to socialize.
+<t>So I wrote a plan:
+
+<q2>At 3:30, every day, I will walk to a friend's desk and talk for 10 minutes.</q2>
+
+<t>To make sure I remembered to do this, I set the alarm on my watch for 3:30.
+<t>It didn't work immediately. There were some days I was too busy and ignored the alarm, and then fell off the wagon. Other times it seemed like too much work to find a friend willing to chat​—​it was easier to get a cookie, and so I gave in to the urge. But on those days that I abided by my plan​—​when my alarm went off, I forced myself to walk to a friend's desk and chat for ten minutes​—​I found that I ended the workday feeling better. I hadn't gone to the cafeteria, I hadn't eat a cookie, and I felt fine. Eventually, it got be automatic: when the alarm rang, I found a friend and ended the day feeling a small, but real, sense of accomplishment. After a few weeks, I hardly thought about the routine anymore. And when I couldn't find anyone to chat with, I went to the cafeteria and bought tea and drank it with friends.
+<t>That all happened about six months ago. I don't have my watch anymore​—​I lost it at some point. But at about 3:30 every day, I absentmindedly stand up, look around the newsroom for someone to talk to, spend ten minutes gossiping about the news, and then go back to my desk. It occurs almost without me thinking about it. It has become a habit.
+
+##<image="Duhi_9780679603856_epub_057_r1.jpg">
+
+<t>Obviously, changing some habits can be more difficult. But this framework is a place to start. Sometimes change takes a long time. Sometimes it requires repeated experiments and failures. But once you understand how a habit operates​—​once you diagnose the cue, the routine and the reward​—​you gain power over it.

@@ -1,0 +1,49 @@
+﻿<align="center"><margin=2.3em><size=hdr1><b><cspace=-0.035em>
+Datacenter Technician Lead
+</cspace></b><size=hdr2></margin>
+Boydton, Virginia, United States
+<size=100%><align="justified">
+
+	Microsoft’s Cloud Operations & Innovation (CO+I) is the engine that powers our cloud services. As a CO+I Datacenter Technician Lead, you will perform a key role in delivering the core infrastructure and foundational technologies for Microsoft's online services including Bing, Office 365, Xbox, OneDrive, and the Microsoft Azure platform.
+	Our infrastructure is comprised of a large global portfolio of more than 100 datacenters and 1 million servers. Our foundation is built upon and managed by a team of subject matter experts working to support services for more than 1 billion customers and 20 million businesses in over 90 countries worldwide. 
+	With environmental sustainability and optimization at the forefront of our datacenter design and operations, we continue to grow and evolve as we meet the ever-changing business demands that hold Microsoft as a world-class cloud provider. Be at the forefront of the action in CO+I as part of our global datacenter operations. 
+	In alignment with our Microsoft values, we are committed to cultivating an inclusive work environment for all employees to positively impact our culture every day.
+
+
+<size=hdr2><i>Responsibilities</i><size=100%>
+
+<b><cspace=-0.035em>As a successful Datacenter Technician Lead, your performance objectives include:</cspace></b>
+
+<align="left"><space=0.85em><b>•</b><indent=2.3em>Empowering a culture of safety, security, and compliance in all aspect of datacenter activities</indent>
+<space=0.85em><b>•</b><indent=2.3em>Building strong working relationships with customers</indent>
+<space=0.85em><b>•</b><indent=2.3em>Ensuring alignment of operations and programs to Microsoft’s big picture and goals</indent> 
+<space=0.85em><b>•</b><indent=2.3em>Leading a team of datacenter technicians responsible for hardware installation, cabling, power cycles, swap out of failed components, and hardware troubleshooting</indent>
+<space=0.85em><b>•</b><indent=2.3em>People management including performance reviews, career coaching, and career growth discussions</indent>
+<space=0.85em><b>•</b><indent=2.3em>Performing shift-based tactical management tasks such as prioritizing ticketing queues, working to resolve escalations, and clearing blocking issues to enable continued delivery of datacenter support activities</indent>
+<space=0.85em><b>•</b><indent=2.3em>Encouraging team to share lessons learned, best practices, and innovations on process/procedures and tools to improve efficiencies and deliver success</indent>
+<space=0.85em><b>•</b><indent=2.3em>Manage resource scheduling to ensure meeting SLAs and project deliveries</indent>
+<space=0.85em><b>•</b><indent=2.3em>Provide hands-on support to DCT team as needed during high volume work activity</indent>
+<space=0.85em><b>•</b><indent=2.3em>Learn, live, and coach the One Microsoft culture and values.  Lead through change by bringing clarity, generating energy, and delivering success</indent><align="justified">
+
+
+<size=hdr2><i>Qualifications</i><size=100%>
+
+<b><cspace=-0.035em>Microsoft reviews all applications that meet the below Required Qualifications:</cspace></b>
+
+<align="left"><space=0.85em><b>•</b><indent=2.3em>High School diploma or equivalent</indent>
+<space=0.85em><b>•</b><indent=2.3em>Three years of experience supporting IT equipment or related technology</indent>
+<space=0.85em><b>•</b><indent=2.3em>Ability to work 12 hour shifts, including shift assignments during evening and nighttime hours.</indent><align="justified">
+
+
+<size=hdr2><i>Preferred Qualifications:</i><size=100%>
+
+<align="left"><space=0.85em><b>•</b><indent=2.3em>College or university degree in Computer Science, Math, Telecommunications, or equivalent work experience</indent>
+<space=0.85em><b>•</b><indent=2.3em>Prior experience leading and motivating a diverse, technical workforce of up to eight employees</indent>
+<space=0.85em><b>•</b><indent=2.3em>Applicable certifications: CompTIA, Microsoft, Network Certifications</indent>
+<space=0.85em><b>•</b><indent=2.3em>Ability to support frequent standing, walking, lifting, and working at heights</indent>
+<space=0.85em><b>•</b><indent=2.3em>Basic working knowledge of CE infrastructures (e.g. UPS, Generator, AHU, etc.)</indent>
+<space=0.85em><b>•</b><indent=2.3em>Valid license to drive standard street-legal automatic transmission vehicles within your DC’s local jurisdiction</indent>
+<space=0.85em><b>•</b><indent=2.3em>Flexibility to work non-business hours that may include weekends and/or holidays</indent>
+<space=0.85em><b>•</b><indent=2.3em>Background Check Requirements: (US Government Sites)</indent><align="justified">
+
+	Ability to meet Microsoft, customer and/or government security screening requirements are required for this role. Benefits/perks listed may vary depending on the nature of your employment with Microsoft and the country where you work.

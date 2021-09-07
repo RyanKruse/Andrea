@@ -1,0 +1,26 @@
+﻿
+<h1>CHAPTER 5</h1>
+
+Numbered rich-text commands for formatting paragraphs:
+
+1)Numbered List A
+
+1.Numbered List B
+
+1-Numbered List C
+
+1:Numbered List D
+
+1|Numbered List E
+
+Insert an invisible space before the word "Tabbed" to increase indent size:
+
+1)​Tabbed-Numbered List A
+
+1.​Tabbed-Numbered List B
+
+1-​Tabbed-Numbered List C
+
+1:​Tabbed-Numbered List D
+
+1|​Tabbed-Numbered List E
