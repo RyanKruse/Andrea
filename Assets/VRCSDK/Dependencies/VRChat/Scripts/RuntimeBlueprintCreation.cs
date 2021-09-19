@@ -125,22 +125,24 @@ namespace VRCSDK2
                         sharePublic.isOn = apiAvatar.releaseStatus.Contains("public");
 
                         tagFallback.isOn = apiAvatar.tags.Contains("author_quest_fallback");
+                        tagFallback.transform.parent.gameObject.SetActive(true);
+
                         switch (pipelineManager.fallbackStatus)
                         {
                             case PipelineManager.FallbackStatus.Valid:
-                                tagFallback.transform.parent.gameObject.SetActive(true);
+#if UNITY_ANDROID
                                 tagFallback.interactable = true;
                                 tagFallback.GetComponentInChildren<Text>().text = "Use for Fallback";
+#else
+                                tagFallback.interactable = false;
+                                tagFallback.GetComponentInChildren<Text>().text = "Use for Fallback (change only with Android upload)";
+#endif
                                 break;
                             case PipelineManager.FallbackStatus.InvalidPerformance:
                             case PipelineManager.FallbackStatus.InvalidRig:
-                                tagFallback.transform.parent.gameObject.SetActive(true);
                                 tagFallback.isOn = false; // need to remove tag on this upload, the updated version is not up-to-spec
                                 tagFallback.interactable = false;
-                                tagFallback.GetComponentInChildren<Text>().text = "(Not valid for Fallback use)";
-                                break;
-                            default:
-                                tagFallback.transform.parent.gameObject.SetActive(false);
+                                tagFallback.GetComponentInChildren<Text>().text = "Use for Fallback (avatar not valid, tag will be cleared)";
                                 break;
                         }
 
@@ -177,21 +179,23 @@ namespace VRCSDK2
                         PlayerPrefs.SetInt(firstTimeResize, 1);
                     }
 
+                    tagFallback.transform.parent.gameObject.SetActive(true);
                     switch (pipelineManager.fallbackStatus)
                     {
                         case PipelineManager.FallbackStatus.Valid:
-                            tagFallback.transform.parent.gameObject.SetActive(true);
+#if UNITY_ANDROID
                             tagFallback.interactable = true;
                             tagFallback.GetComponentInChildren<Text>().text = "Use for Fallback";
+#else
+                            tagFallback.interactable = false;
+                            tagFallback.GetComponentInChildren<Text>().text = "Use for Fallback (change only with Android upload)";
+#endif
                             break;
                         case PipelineManager.FallbackStatus.InvalidPerformance:
                         case PipelineManager.FallbackStatus.InvalidRig:
                             tagFallback.transform.parent.gameObject.SetActive(true);
                             tagFallback.interactable = false;
-                            tagFallback.GetComponentInChildren<Text>().text = "(Not valid for Fallback use)";
-                            break;
-                        default:
-                            tagFallback.transform.parent.gameObject.SetActive(false);
+                            tagFallback.GetComponentInChildren<Text>().text = "Use for Fallback (avatar not valid, tag will be cleared)";
                             break;
                     }
                 }

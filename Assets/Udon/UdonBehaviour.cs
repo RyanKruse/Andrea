@@ -47,7 +47,36 @@ namespace VRC.Udon
         [System.Obsolete("Use VRCObjectSync instead")]
         [PublicAPI]
         public bool AllowCollisionOwnershipTransfer = true;
+
+        [HideInInspector, System.Obsolete("Use SyncMethod instead")]
         public bool Reliable = false;
+
+        [SerializeField]
+        private VRC.SDKBase.Networking.SyncType _syncMethod = VRC.SDKBase.Networking.SyncType.Unknown;
+        public VRC.SDKBase.Networking.SyncType SyncMethod
+        {
+            get 
+            {
+                // Old Scene?
+                if (_syncMethod == VRC.SDKBase.Networking.SyncType.Unknown)
+                {
+#pragma warning disable 618
+                    return Reliable ? VRC.SDKBase.Networking.SyncType.Manual : VRC.SDKBase.Networking.SyncType.Continuous;
+#pragma warning restore 618
+                }
+                else
+                    return _syncMethod;
+            }
+            set
+            {
+                // All udon behaviours on one object must use the same sync method
+                foreach (var ub in gameObject.GetComponents<UdonBehaviour>())
+                    if (ub) ub._syncMethod = value;
+            }
+        }
+
+        public bool SyncIsContinuous => SyncMethod == VRC.SDKBase.Networking.SyncType.Continuous;
+        public bool SyncIsManual => SyncMethod == VRC.SDKBase.Networking.SyncType.Manual;
 
         #endregion
 
@@ -484,7 +513,7 @@ namespace VRC.Udon
 
         public void OnAnimatorIK(int layerIndex)
         {
-            RunEvent("_onAnimatorIk", ("index", layerIndex));
+            RunEvent("_onAnimatorIK", ("layerIndex", layerIndex));
         }
 
         internal void ProxyOnAnimatorMove()

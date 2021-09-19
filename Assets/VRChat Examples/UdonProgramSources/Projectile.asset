@@ -12,84 +12,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: Projectile
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: c681da84f0d50fe43af24b89d42389bb,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: f8f8ed33cbc88334ca7a96b63d04b65b,
     type: 2}
-  udonAssembly: ".data_start\r\n\r\n    .export textField\r\n    .export rigidbody\r\n   
-    .export force\r\n    \r\n    __instance_0: %UnityEngineUIText, null\r\n    __value_0:
-    %SystemString, null\r\n    __format_0: %SystemString, null\r\n    __arg0_0: %SystemObject,
-    null\r\n    __VRCPlayerApi_0: %VRCSDKBaseVRCPlayerApi, null\r\n    onPlayerCollisionEnterPlayer:
-    %VRCSDKBaseVRCPlayerApi, null\r\n    __instance_1: %VRCSDKBaseVRCPlayerApi, null\r\n   
-    __hand_0: %VRCSDKBaseVRC_PickupPickupHand, null\r\n    __duration_0: %SystemSingle,
-    null\r\n    __amplitude_0: %SystemSingle, null\r\n    __frequency_0: %SystemSingle,
-    null\r\n    __instance_2: %VRCSDKBaseVRCPlayerApi, null\r\n    __hand_1: %VRCSDKBaseVRC_PickupPickupHand,
-    null\r\n    __duration_1: %SystemSingle, null\r\n    __amplitude_1: %SystemSingle,
-    null\r\n    __frequency_1: %SystemSingle, null\r\n    __instance_3: %UnityEngineUIText,
-    null\r\n    __value_1: %SystemString, null\r\n    __format_1: %SystemString,
-    null\r\n    __arg0_1: %SystemObject, null\r\n    __VRCPlayerApi_1: %VRCSDKBaseVRCPlayerApi,
-    null\r\n    onPlayerCollisionExitPlayer: %VRCSDKBaseVRCPlayerApi, null\r\n   
-    __instance_4: %UnityEngineRigidbody, null\r\n    __value_2: %UnityEngineVector3,
-    null\r\n    __instance_5: %UnityEngineRigidbody, null\r\n    __value_3: %UnityEngineQuaternion,
-    null\r\n    __instance_6: %UnityEngineRigidbody, null\r\n    __value_4: %UnityEngineVector3,
-    null\r\n    __instance_7: %UnityEngineRigidbody, null\r\n    __value_5: %UnityEngineVector3,
-    null\r\n    __instance_8: %UnityEngineConstantForce, null\r\n    __value_6: %SystemBoolean,
-    null\r\n    __instance_9: %UnityEngineRigidbody, null\r\n    __value_7: %UnityEngineVector3,
-    null\r\n    __instance_A: %UnityEngineRigidbody, null\r\n    __value_8: %UnityEngineQuaternion,
-    null\r\n    __instance_B: %UnityEngineRigidbody, null\r\n    __value_9: %UnityEngineVector3,
-    null\r\n    __instance_C: %UnityEngineRigidbody, null\r\n    __value_A: %UnityEngineVector3,
-    null\r\n    __instance_D: %UnityEngineConstantForce, null\r\n    __value_B: %SystemBoolean,
-    null\r\n    __instance_E: %UnityEngineConstantForce, null\r\n    __value_C: %SystemBoolean,
-    null\r\n    __instance_F: %UnityEngineRigidbody, null\r\n    textField: %UnityEngineUIText,
-    null\r\n    rigidbody: %UnityEngineRigidbody, null\r\n    force: %UnityEngineConstantForce,
-    null\r\n    originalPosition: %UnityEngineVector3, null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n   
-    .export _onPlayerCollisionEnter\r\n    \r\n    _onPlayerCollisionEnter:\r\n   
-    \r\n        PUSH, textField\r\n        PUSH, __instance_0\r\n        COPY\r\n       
-    PUSH, onPlayerCollisionEnterPlayer\r\n        PUSH, __VRCPlayerApi_0\r\n       
-    COPY\r\n        PUSH, __VRCPlayerApi_0\r\n        PUSH, __arg0_0\r\n        EXTERN,
-    \"VRCSDKBaseVRCPlayerApi.__get_displayName__SystemString\"\r\n        PUSH, __format_0\r\n       
-    PUSH, __arg0_0\r\n        PUSH, __value_0\r\n        EXTERN, \"SystemString.__Format__SystemString_SystemObject__SystemString\"\r\n       
-    PUSH, __instance_0\r\n        PUSH, __value_0\r\n        EXTERN, \"UnityEngineUIText.__set_text__SystemString__SystemVoid\"\r\n       
-    PUSH, onPlayerCollisionEnterPlayer\r\n        PUSH, __instance_1\r\n        COPY\r\n       
-    PUSH, __instance_1\r\n        PUSH, __hand_0\r\n        PUSH, __duration_0\r\n       
-    PUSH, __amplitude_0\r\n        PUSH, __frequency_0\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__PlayHapticEventInHand__VRCSDKBaseVRC_PickupPickupHand_SystemSingle_SystemSingle_SystemSingle__SystemVoid\"\r\n       
-    PUSH, onPlayerCollisionEnterPlayer\r\n        PUSH, __instance_2\r\n        COPY\r\n       
-    PUSH, __instance_2\r\n        PUSH, __hand_1\r\n        PUSH, __duration_1\r\n       
-    PUSH, __amplitude_1\r\n        PUSH, __frequency_1\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__PlayHapticEventInHand__VRCSDKBaseVRC_PickupPickupHand_SystemSingle_SystemSingle_SystemSingle__SystemVoid\"\r\n       
-    JUMP, 0xFFFFFFFC\r\n    \r\n    .export _onPlayerCollisionExit\r\n    \r\n   
-    _onPlayerCollisionExit:\r\n    \r\n        PUSH, textField\r\n        PUSH, __instance_3\r\n       
-    COPY\r\n        PUSH, onPlayerCollisionExitPlayer\r\n        PUSH, __VRCPlayerApi_1\r\n       
-    COPY\r\n        PUSH, __VRCPlayerApi_1\r\n        PUSH, __arg0_1\r\n        EXTERN,
-    \"VRCSDKBaseVRCPlayerApi.__get_displayName__SystemString\"\r\n        PUSH, __format_1\r\n       
-    PUSH, __arg0_1\r\n        PUSH, __value_1\r\n        EXTERN, \"SystemString.__Format__SystemString_SystemObject__SystemString\"\r\n       
-    PUSH, __instance_3\r\n        PUSH, __value_1\r\n        EXTERN, \"UnityEngineUIText.__set_text__SystemString__SystemVoid\"\r\n       
-    PUSH, rigidbody\r\n        PUSH, __instance_4\r\n        COPY\r\n        PUSH,
-    __instance_4\r\n        PUSH, originalPosition\r\n        EXTERN, \"UnityEngineRigidbody.__set_position__UnityEngineVector3__SystemVoid\"\r\n       
-    PUSH, rigidbody\r\n        PUSH, __instance_5\r\n        COPY\r\n        PUSH,
-    __value_3\r\n        EXTERN, \"UnityEngineQuaternion.__get_identity__UnityEngineQuaternion\"\r\n       
-    PUSH, __instance_5\r\n        PUSH, __value_3\r\n        EXTERN, \"UnityEngineRigidbody.__set_rotation__UnityEngineQuaternion__SystemVoid\"\r\n       
-    PUSH, rigidbody\r\n        PUSH, __instance_6\r\n        COPY\r\n        PUSH,
-    __instance_6\r\n        PUSH, __value_4\r\n        EXTERN, \"UnityEngineRigidbody.__set_angularVelocity__UnityEngineVector3__SystemVoid\"\r\n       
-    PUSH, rigidbody\r\n        PUSH, __instance_7\r\n        COPY\r\n        PUSH,
-    __instance_7\r\n        PUSH, __value_5\r\n        EXTERN, \"UnityEngineRigidbody.__set_velocity__UnityEngineVector3__SystemVoid\"\r\n       
-    PUSH, force\r\n        PUSH, __instance_8\r\n        COPY\r\n        PUSH, __instance_8\r\n       
-    PUSH, __value_6\r\n        EXTERN, \"UnityEngineConstantForce.__set_enabled__SystemBoolean__SystemVoid\"\r\n       
-    JUMP, 0xFFFFFFFC\r\n    \r\n    .export Fire\r\n    \r\n    Fire:\r\n    \r\n       
-    PUSH, rigidbody\r\n        PUSH, __instance_9\r\n        COPY\r\n        PUSH,
-    __instance_9\r\n        PUSH, originalPosition\r\n        EXTERN, \"UnityEngineRigidbody.__set_position__UnityEngineVector3__SystemVoid\"\r\n       
-    PUSH, rigidbody\r\n        PUSH, __instance_A\r\n        COPY\r\n        PUSH,
-    __value_8\r\n        EXTERN, \"UnityEngineQuaternion.__get_identity__UnityEngineQuaternion\"\r\n       
-    PUSH, __instance_A\r\n        PUSH, __value_8\r\n        EXTERN, \"UnityEngineRigidbody.__set_rotation__UnityEngineQuaternion__SystemVoid\"\r\n       
-    PUSH, rigidbody\r\n        PUSH, __instance_B\r\n        COPY\r\n        PUSH,
-    __instance_B\r\n        PUSH, __value_9\r\n        EXTERN, \"UnityEngineRigidbody.__set_angularVelocity__UnityEngineVector3__SystemVoid\"\r\n       
-    PUSH, rigidbody\r\n        PUSH, __instance_C\r\n        COPY\r\n        PUSH,
-    __instance_C\r\n        PUSH, __value_A\r\n        EXTERN, \"UnityEngineRigidbody.__set_velocity__UnityEngineVector3__SystemVoid\"\r\n       
-    PUSH, force\r\n        PUSH, __instance_D\r\n        COPY\r\n        PUSH, __instance_D\r\n       
-    PUSH, __value_B\r\n        EXTERN, \"UnityEngineConstantForce.__set_enabled__SystemBoolean__SystemVoid\"\r\n       
-    PUSH, force\r\n        PUSH, __instance_E\r\n        COPY\r\n        PUSH, __instance_E\r\n       
-    PUSH, __value_C\r\n        EXTERN, \"UnityEngineConstantForce.__set_enabled__SystemBoolean__SystemVoid\"\r\n       
-    JUMP, 0xFFFFFFFC\r\n    \r\n    .export _start\r\n    \r\n    _start:\r\n   
-    \r\n        PUSH, rigidbody\r\n        PUSH, __instance_F\r\n        COPY\r\n       
-    PUSH, __instance_F\r\n        PUSH, originalPosition\r\n        EXTERN, \"UnityEngineRigidbody.__get_position__UnityEngineVector3\"\r\n       
-    JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+  udonAssembly: ".data_start\r\n\r\n    .export textField\r\n    .export rigidbody\r\n
+    \   .export force\r\n    \r\n    instance_0: %UnityEngineUIText, null\r\n    value_0:
+    %SystemString, null\r\n    format_0: %SystemString, null\r\n    arg0_0: %SystemObject,
+    null\r\n    VRCPlayerApi_0: %VRCSDKBaseVRCPlayerApi, null\r\n    onPlayerCollisionEnterPlayer:
+    %VRCSDKBaseVRCPlayerApi, null\r\n    instance_1: %VRCSDKBaseVRCPlayerApi, null\r\n
+    \   hand_0: %VRCSDKBaseVRC_PickupPickupHand, null\r\n    duration_0: %SystemSingle,
+    null\r\n    amplitude_0: %SystemSingle, null\r\n    frequency_0: %SystemSingle,
+    null\r\n    instance_2: %VRCSDKBaseVRCPlayerApi, null\r\n    hand_1: %VRCSDKBaseVRC_PickupPickupHand,
+    null\r\n    duration_1: %SystemSingle, null\r\n    amplitude_1: %SystemSingle,
+    null\r\n    frequency_1: %SystemSingle, null\r\n    instance_3: %UnityEngineUIText,
+    null\r\n    value_1: %SystemString, null\r\n    format_1: %SystemString, null\r\n
+    \   arg0_1: %SystemObject, null\r\n    VRCPlayerApi_1: %VRCSDKBaseVRCPlayerApi,
+    null\r\n    onPlayerCollisionExitPlayer: %VRCSDKBaseVRCPlayerApi, null\r\n    instance_4:
+    %UnityEngineRigidbody, null\r\n    value_2: %UnityEngineVector3, null\r\n    instance_5:
+    %UnityEngineRigidbody, null\r\n    value_3: %UnityEngineQuaternion, null\r\n    instance_6:
+    %UnityEngineRigidbody, null\r\n    value_4: %UnityEngineVector3, null\r\n    instance_7:
+    %UnityEngineRigidbody, null\r\n    value_5: %UnityEngineVector3, null\r\n    instance_8:
+    %UnityEngineConstantForce, null\r\n    value_6: %SystemBoolean, null\r\n    instance_9:
+    %UnityEngineRigidbody, null\r\n    value_7: %UnityEngineVector3, null\r\n    instance_A:
+    %UnityEngineRigidbody, null\r\n    value_8: %UnityEngineQuaternion, null\r\n    instance_B:
+    %UnityEngineRigidbody, null\r\n    value_9: %UnityEngineVector3, null\r\n    instance_C:
+    %UnityEngineRigidbody, null\r\n    value_A: %UnityEngineVector3, null\r\n    instance_D:
+    %UnityEngineConstantForce, null\r\n    value_B: %SystemBoolean, null\r\n    instance_E:
+    %UnityEngineConstantForce, null\r\n    value_C: %SystemBoolean, null\r\n    instance_F:
+    %UnityEngineRigidbody, null\r\n    textField: %UnityEngineUIText, null\r\n    rigidbody:
+    %UnityEngineRigidbody, null\r\n    force: %UnityEngineConstantForce, null\r\n
+    \   originalPosition: %UnityEngineVector3, null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n
+    \   .export _onPlayerCollisionEnter\r\n    \r\n    _onPlayerCollisionEnter:\r\n
+    \   \r\n        PUSH, textField\r\n        PUSH, instance_0\r\n        COPY\r\n
+    \       PUSH, onPlayerCollisionEnterPlayer\r\n        PUSH, VRCPlayerApi_0\r\n
+    \       COPY\r\n        PUSH, VRCPlayerApi_0\r\n        PUSH, arg0_0\r\n        EXTERN,
+    \"VRCSDKBaseVRCPlayerApi.__get_displayName__SystemString\"\r\n        PUSH, format_0\r\n
+    \       PUSH, arg0_0\r\n        PUSH, value_0\r\n        EXTERN, \"SystemString.__Format__SystemString_SystemObject__SystemString\"\r\n
+    \       PUSH, instance_0\r\n        PUSH, value_0\r\n        EXTERN, \"UnityEngineUIText.__set_text__SystemString__SystemVoid\"\r\n
+    \       PUSH, onPlayerCollisionEnterPlayer\r\n        PUSH, instance_1\r\n        COPY\r\n
+    \       PUSH, instance_1\r\n        PUSH, hand_0\r\n        PUSH, duration_0\r\n
+    \       PUSH, amplitude_0\r\n        PUSH, frequency_0\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__PlayHapticEventInHand__VRCSDKBaseVRC_PickupPickupHand_SystemSingle_SystemSingle_SystemSingle__SystemVoid\"\r\n
+    \       PUSH, onPlayerCollisionEnterPlayer\r\n        PUSH, instance_2\r\n        COPY\r\n
+    \       PUSH, instance_2\r\n        PUSH, hand_1\r\n        PUSH, duration_1\r\n
+    \       PUSH, amplitude_1\r\n        PUSH, frequency_1\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__PlayHapticEventInHand__VRCSDKBaseVRC_PickupPickupHand_SystemSingle_SystemSingle_SystemSingle__SystemVoid\"\r\n
+    \       JUMP, 0xFFFFFFFC\r\n    \r\n    .export _onPlayerCollisionExit\r\n    \r\n
+    \   _onPlayerCollisionExit:\r\n    \r\n        PUSH, textField\r\n        PUSH,
+    instance_3\r\n        COPY\r\n        PUSH, onPlayerCollisionExitPlayer\r\n        PUSH,
+    VRCPlayerApi_1\r\n        COPY\r\n        PUSH, VRCPlayerApi_1\r\n        PUSH,
+    arg0_1\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__get_displayName__SystemString\"\r\n
+    \       PUSH, format_1\r\n        PUSH, arg0_1\r\n        PUSH, value_1\r\n        EXTERN,
+    \"SystemString.__Format__SystemString_SystemObject__SystemString\"\r\n        PUSH,
+    instance_3\r\n        PUSH, value_1\r\n        EXTERN, \"UnityEngineUIText.__set_text__SystemString__SystemVoid\"\r\n
+    \       PUSH, rigidbody\r\n        PUSH, instance_4\r\n        COPY\r\n        PUSH,
+    instance_4\r\n        PUSH, originalPosition\r\n        EXTERN, \"UnityEngineRigidbody.__set_position__UnityEngineVector3__SystemVoid\"\r\n
+    \       PUSH, rigidbody\r\n        PUSH, instance_5\r\n        COPY\r\n        PUSH,
+    value_3\r\n        EXTERN, \"UnityEngineQuaternion.__get_identity__UnityEngineQuaternion\"\r\n
+    \       PUSH, instance_5\r\n        PUSH, value_3\r\n        EXTERN, \"UnityEngineRigidbody.__set_rotation__UnityEngineQuaternion__SystemVoid\"\r\n
+    \       PUSH, rigidbody\r\n        PUSH, instance_6\r\n        COPY\r\n        PUSH,
+    instance_6\r\n        PUSH, value_4\r\n        EXTERN, \"UnityEngineRigidbody.__set_angularVelocity__UnityEngineVector3__SystemVoid\"\r\n
+    \       PUSH, rigidbody\r\n        PUSH, instance_7\r\n        COPY\r\n        PUSH,
+    instance_7\r\n        PUSH, value_5\r\n        EXTERN, \"UnityEngineRigidbody.__set_velocity__UnityEngineVector3__SystemVoid\"\r\n
+    \       PUSH, force\r\n        PUSH, instance_8\r\n        COPY\r\n        PUSH,
+    instance_8\r\n        PUSH, value_6\r\n        EXTERN, \"UnityEngineConstantForce.__set_enabled__SystemBoolean__SystemVoid\"\r\n
+    \       JUMP, 0xFFFFFFFC\r\n    \r\n    .export Fire\r\n    \r\n    Fire:\r\n
+    \   \r\n        PUSH, rigidbody\r\n        PUSH, instance_9\r\n        COPY\r\n
+    \       PUSH, instance_9\r\n        PUSH, originalPosition\r\n        EXTERN,
+    \"UnityEngineRigidbody.__set_position__UnityEngineVector3__SystemVoid\"\r\n        PUSH,
+    rigidbody\r\n        PUSH, instance_A\r\n        COPY\r\n        PUSH, value_8\r\n
+    \       EXTERN, \"UnityEngineQuaternion.__get_identity__UnityEngineQuaternion\"\r\n
+    \       PUSH, instance_A\r\n        PUSH, value_8\r\n        EXTERN, \"UnityEngineRigidbody.__set_rotation__UnityEngineQuaternion__SystemVoid\"\r\n
+    \       PUSH, rigidbody\r\n        PUSH, instance_B\r\n        COPY\r\n        PUSH,
+    instance_B\r\n        PUSH, value_9\r\n        EXTERN, \"UnityEngineRigidbody.__set_angularVelocity__UnityEngineVector3__SystemVoid\"\r\n
+    \       PUSH, rigidbody\r\n        PUSH, instance_C\r\n        COPY\r\n        PUSH,
+    instance_C\r\n        PUSH, value_A\r\n        EXTERN, \"UnityEngineRigidbody.__set_velocity__UnityEngineVector3__SystemVoid\"\r\n
+    \       PUSH, force\r\n        PUSH, instance_D\r\n        COPY\r\n        PUSH,
+    instance_D\r\n        PUSH, value_B\r\n        EXTERN, \"UnityEngineConstantForce.__set_enabled__SystemBoolean__SystemVoid\"\r\n
+    \       PUSH, force\r\n        PUSH, instance_E\r\n        COPY\r\n        PUSH,
+    instance_E\r\n        PUSH, value_C\r\n        EXTERN, \"UnityEngineConstantForce.__set_enabled__SystemBoolean__SystemVoid\"\r\n
+    \       JUMP, 0xFFFFFFFC\r\n    \r\n    .export _start\r\n    \r\n    _start:\r\n
+    \   \r\n        PUSH, rigidbody\r\n        PUSH, instance_F\r\n        COPY\r\n
+    \       PUSH, instance_F\r\n        PUSH, originalPosition\r\n        EXTERN,
+    \"UnityEngineRigidbody.__get_position__UnityEngineVector3\"\r\n        JUMP, 0xFFFFFFFC\r\n
+    \   \r\n\r\n.code_end\r\n"
   assemblyError: 
   graphData:
     name: 
@@ -111,11 +114,9 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|textField
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: Event_OnPlayerCollisionEnter
@@ -245,11 +246,9 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|rigidbody
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: Variable_UnityEngineConstantForce
@@ -268,11 +267,9 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|force
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: Get_Variable
@@ -295,8 +292,7 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: 
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
     - fullName: Get_Variable
       uid: 4fb3cd62-e6e8-4ef7-9281-88300d6f0910
       position: {x: 1220, y: -160}
@@ -343,11 +339,9 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|originalPosition
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: Set_Variable
@@ -431,8 +425,7 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: 
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
     - fullName: UnityEngineRigidbody.__set_angularVelocity__UnityEngineVector3__SystemVoid
       uid: b7e7bd7f-6cc5-42c6-828f-5fe132bcb010
       position: {x: 1420, y: -110}

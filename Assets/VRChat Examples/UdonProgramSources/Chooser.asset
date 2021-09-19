@@ -12,92 +12,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: Chooser
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 41ab21e1b574d194eb25c06ef488f6a0,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 86a357a1d5655a34b9c289484e13a1fc,
     type: 2}
-  udonAssembly: ".data_start\r\n\r\n    .export objects\r\n    .export ActiveSceneLabel\r\n   
-    .sync currentIndex, none\r\n    \r\n    __instance_0: %VRCUdonUdonBehaviour,
-    this\r\n    __symbolName_0: %SystemString, null\r\n    __value_0: %SystemObject,
-    null\r\n    __Int32_0: %SystemInt32, null\r\n    __Int32_1: %SystemInt32, null\r\n   
-    __Int32_2: %SystemInt32, null\r\n    __Int32_3: %SystemInt32, null\r\n    __instance_1:
-    %UnityEngineGameObjectArray, null\r\n    __instance_2: %VRCUdonUdonBehaviour,
-    this\r\n    __Boolean_0: %SystemBoolean, null\r\n    __Int32_4: %SystemInt32,
-    null\r\n    __Int32_5: %SystemInt32, null\r\n    __instance_3: %VRCUdonUdonBehaviour,
-    this\r\n    __symbolName_1: %SystemString, null\r\n    __value_1: %SystemObject,
-    null\r\n    __Int32_8: %SystemInt32, null\r\n    __Int32_9: %SystemInt32, null\r\n   
-    __instance_4: %UnityEngineGameObjectArray, null\r\n    __instance_6: %VRCUdonUdonBehaviour,
-    this\r\n    __symbolName_2: %SystemString, null\r\n    __value_2: %SystemObject,
-    null\r\n    __Int32_6: %SystemInt32, null\r\n    __Int32_7: %SystemInt32, null\r\n   
-    __instance_5: %VRCUdonUdonBehaviour, this\r\n    __instance_7: %VRCUdonUdonBehaviour,
-    this\r\n    __target_0: %VRCUdonCommonInterfacesNetworkEventTarget, null\r\n   
-    __eventName_0: %SystemString, null\r\n    __instance_8: %VRCUdonUdonBehaviour,
-    this\r\n    __target_1: %VRCUdonCommonInterfacesNetworkEventTarget, null\r\n   
-    __eventName_1: %SystemString, null\r\n    __Boolean_1: %SystemBoolean, null\r\n   
-    __Int32_A: %SystemInt32, null\r\n    __Int32_B: %SystemInt32, null\r\n    _old_currentIndex:
-    %SystemInt32, null\r\n    __object_0: %SystemObject, null\r\n    __result_0:
-    %SystemBoolean, null\r\n    __instance_A: %UnityEngineGameObject, this\r\n   
-    __value_3: %SystemBoolean, null\r\n    __instance_9: %UnityEngineGameObjectArray,
-    null\r\n    __Int32_C: %SystemInt32, null\r\n    __instance_B: %UnityEngineUIText,
-    null\r\n    __value_4: %SystemString, null\r\n    __instance_C: %UnityEngineGameObject,
-    this\r\n    __instance_D: %UnityEngineGameObjectArray, null\r\n    __Int32_D:
-    %SystemInt32, null\r\n    __instance_E: %UnityEngineGameObject, this\r\n    __value_5:
-    %SystemBoolean, null\r\n    __instance_F: %UnityEngineGameObjectArray, null\r\n   
-    __Int32_E: %SystemInt32, null\r\n    __name_0: %SystemString, null\r\n    objects:
-    %UnityEngineGameObjectArray, null\r\n    currentIndex: %SystemInt32, null\r\n   
-    ActiveSceneLabel: %UnityEngineUIText, null\r\n    lastIndex: %SystemInt32, null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n   
-    .export ONext\r\n    \r\n    ONext:\r\n    \r\n        PUSH, currentIndex\r\n       
-    PUSH, __Int32_3\r\n        PUSH, __Int32_0\r\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\r\n       
-    PUSH, objects\r\n        PUSH, __instance_1\r\n        COPY\r\n        PUSH,
-    __instance_1\r\n        PUSH, __Int32_1\r\n        EXTERN, \"UnityEngineGameObjectArray.__get_Length__SystemInt32\"\r\n       
-    PUSH, __Int32_0\r\n        PUSH, __Int32_1\r\n        PUSH, __value_0\r\n       
-    EXTERN, \"SystemInt32.__op_Remainder__SystemInt32_SystemInt32__SystemInt32\"\r\n       
-    PUSH, __instance_0\r\n        PUSH, __symbolName_0\r\n        PUSH, __value_0\r\n       
-    EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\r\n       
-    PUSH, __instance_2\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__RequestSerialization__SystemVoid\"\r\n       
-    JUMP, 0xFFFFFFFC\r\n    \r\n    .export OPrevious\r\n    \r\n    OPrevious:\r\n   
-    \r\n        PUSH, currentIndex\r\n        PUSH, __Int32_7\r\n        PUSH, __Int32_4\r\n       
-    EXTERN, \"SystemInt32.__op_Subtraction__SystemInt32_SystemInt32__SystemInt32\"\r\n       
-    PUSH, __Int32_4\r\n        PUSH, __Int32_5\r\n        PUSH, __Boolean_0\r\n       
-    EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\r\n       
-    PUSH, __Boolean_0\r\n        JUMP_IF_FALSE, 0x00000178\r\n        PUSH, objects\r\n       
-    PUSH, __instance_4\r\n        COPY\r\n        PUSH, __instance_4\r\n        PUSH,
-    __Int32_8\r\n        EXTERN, \"UnityEngineGameObjectArray.__get_Length__SystemInt32\"\r\n       
-    PUSH, __Int32_8\r\n        PUSH, __Int32_9\r\n        PUSH, __value_1\r\n       
-    EXTERN, \"SystemInt32.__op_Subtraction__SystemInt32_SystemInt32__SystemInt32\"\r\n       
-    PUSH, __instance_3\r\n        PUSH, __symbolName_1\r\n        PUSH, __value_1\r\n       
-    EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\r\n       
-    PUSH, __instance_5\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__RequestSerialization__SystemVoid\"\r\n       
-    JUMP, 0x000001BC\r\n        PUSH, __Int32_4\r\n        PUSH, __value_2\r\n       
-    COPY\r\n        PUSH, __instance_6\r\n        PUSH, __symbolName_2\r\n       
-    PUSH, __Int32_4\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\r\n       
-    PUSH, __instance_5\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__RequestSerialization__SystemVoid\"\r\n       
-    JUMP, 0xFFFFFFFC\r\n    \r\n    .export Next\r\n    \r\n    Next:\r\n    \r\n       
-    PUSH, __instance_7\r\n        PUSH, __target_0\r\n        PUSH, __eventName_0\r\n       
-    EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\r\n       
-    JUMP, 0xFFFFFFFC\r\n    \r\n    .export Previous\r\n    \r\n    Previous:\r\n   
-    \r\n        PUSH, __instance_8\r\n        PUSH, __target_1\r\n        PUSH, __eventName_1\r\n       
-    EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\r\n       
-    JUMP, 0xFFFFFFFC\r\n    \r\n    .export _onVarChange_currentIndex\r\n    \r\n   
-    _onVarChange_currentIndex:\r\n    \r\n        PUSH, _old_currentIndex\r\n       
-    PUSH, __Int32_B\r\n        PUSH, __Boolean_1\r\n        EXTERN, \"SystemInt32.__op_GreaterThanOrEqual__SystemInt32_SystemInt32__SystemBoolean\"\r\n       
-    PUSH, __Boolean_1\r\n        JUMP_IF_FALSE, 0x000002F0\r\n        PUSH, objects\r\n       
-    PUSH, __instance_9\r\n        COPY\r\n        PUSH, __instance_9\r\n        PUSH,
-    _old_currentIndex\r\n        PUSH, __object_0\r\n        EXTERN, \"UnityEngineGameObjectArray.__Get__SystemInt32__UnityEngineGameObject\"\r\n       
-    PUSH, __object_0\r\n        PUSH, __result_0\r\n        EXTERN, \"VRCSDKBaseUtilities.__IsValid__SystemObject__SystemBoolean\"\r\n       
-    PUSH, __result_0\r\n        JUMP_IF_FALSE, 0x000002E8\r\n        PUSH, objects\r\n       
-    PUSH, __instance_9\r\n        COPY\r\n        PUSH, __object_0\r\n        PUSH,
-    __instance_A\r\n        COPY\r\n        PUSH, __object_0\r\n        PUSH, __value_3\r\n       
-    EXTERN, \"UnityEngineGameObject.__SetActive__SystemBoolean__SystemVoid\"\r\n       
-    JUMP, 0x000002E8\r\n        JUMP, 0x000002F0\r\n        PUSH, ActiveSceneLabel\r\n       
-    PUSH, __instance_B\r\n        COPY\r\n        PUSH, objects\r\n        PUSH,
-    __instance_D\r\n        COPY\r\n        PUSH, __instance_D\r\n        PUSH, currentIndex\r\n       
-    PUSH, __instance_C\r\n        EXTERN, \"UnityEngineGameObjectArray.__Get__SystemInt32__UnityEngineGameObject\"\r\n       
-    PUSH, __instance_C\r\n        PUSH, __value_4\r\n        EXTERN, \"UnityEngineGameObject.__get_name__SystemString\"\r\n       
-    PUSH, __instance_B\r\n        PUSH, __value_4\r\n        EXTERN, \"UnityEngineUIText.__set_text__SystemString__SystemVoid\"\r\n       
-    PUSH, objects\r\n        PUSH, __instance_F\r\n        COPY\r\n        PUSH,
-    __instance_F\r\n        PUSH, currentIndex\r\n        PUSH, __instance_E\r\n       
-    EXTERN, \"UnityEngineGameObjectArray.__Get__SystemInt32__UnityEngineGameObject\"\r\n       
-    PUSH, __instance_E\r\n        PUSH, __value_5\r\n        EXTERN, \"UnityEngineGameObject.__SetActive__SystemBoolean__SystemVoid\"\r\n       
-    JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+  udonAssembly: ".data_start\r\n\r\n    .export objects\r\n    .export ActiveSceneLabel\r\n
+    \   .sync currentIndex, none\r\n    \r\n    Int32_0: %SystemInt32, null\r\n    Int32_1:
+    %SystemInt32, null\r\n    Int32_2: %SystemInt32, null\r\n    Int32_3: %SystemInt32,
+    null\r\n    instance_0: %UnityEngineGameObjectArray, null\r\n    instance_1: %VRCUdonUdonBehaviour,
+    this\r\n    _old_currentIndex: %SystemInt32, null\r\n    instance_2: %VRCUdonUdonBehaviour,
+    this\r\n    Boolean_0: %SystemBoolean, null\r\n    Int32_4: %SystemInt32, null\r\n
+    \   Int32_5: %SystemInt32, null\r\n    Int32_8: %SystemInt32, null\r\n    Int32_9:
+    %SystemInt32, null\r\n    instance_3: %UnityEngineGameObjectArray, null\r\n    instance_4:
+    %VRCUdonUdonBehaviour, this\r\n    Int32_6: %SystemInt32, null\r\n    Int32_7:
+    %SystemInt32, null\r\n    instance_6: %VRCUdonUdonBehaviour, this\r\n    instance_5:
+    %VRCUdonUdonBehaviour, this\r\n    instance_7: %VRCUdonUdonBehaviour, this\r\n
+    \   target_0: %VRCUdonCommonInterfacesNetworkEventTarget, null\r\n    eventName_0:
+    %SystemString, null\r\n    instance_8: %VRCUdonUdonBehaviour, this\r\n    target_1:
+    %VRCUdonCommonInterfacesNetworkEventTarget, null\r\n    eventName_1: %SystemString,
+    null\r\n    Boolean_1: %SystemBoolean, null\r\n    Int32_A: %SystemInt32, null\r\n
+    \   Int32_B: %SystemInt32, null\r\n    object_0: %SystemObject, null\r\n    result_0:
+    %SystemBoolean, null\r\n    instance_A: %UnityEngineGameObject, this\r\n    value_0:
+    %SystemBoolean, null\r\n    instance_9: %UnityEngineGameObjectArray, null\r\n
+    \   Int32_C: %SystemInt32, null\r\n    instance_B: %UnityEngineUIText, null\r\n
+    \   value_1: %SystemString, null\r\n    instance_C: %UnityEngineGameObject, this\r\n
+    \   instance_D: %UnityEngineGameObjectArray, null\r\n    Int32_D: %SystemInt32,
+    null\r\n    instance_E: %UnityEngineGameObject, this\r\n    value_2: %SystemBoolean,
+    null\r\n    instance_F: %UnityEngineGameObjectArray, null\r\n    Int32_E: %SystemInt32,
+    null\r\n    name_0: %SystemString, null\r\n    objects: %UnityEngineGameObjectArray,
+    null\r\n    currentIndex: %SystemInt32, null\r\n    ActiveSceneLabel: %UnityEngineUIText,
+    null\r\n    lastIndex: %SystemInt32, null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n
+    \   .export ONext\r\n    \r\n    ONext:\r\n    \r\n        PUSH, currentIndex\r\n
+    \       PUSH, Int32_3\r\n        PUSH, Int32_0\r\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\r\n
+    \       PUSH, objects\r\n        PUSH, instance_0\r\n        COPY\r\n        PUSH,
+    instance_0\r\n        PUSH, Int32_1\r\n        EXTERN, \"UnityEngineGameObjectArray.__get_Length__SystemInt32\"\r\n
+    \       PUSH, Int32_0\r\n        PUSH, Int32_1\r\n        PUSH, currentIndex\r\n
+    \       EXTERN, \"SystemInt32.__op_Remainder__SystemInt32_SystemInt32__SystemInt32\"\r\n
+    \       PUSH, instance_1\r\n        PUSH, \"_onVarChange_currentIndex\"\r\n        EXTERN,
+    \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, currentIndex\r\n        PUSH, _old_currentIndex\r\n        COPY\r\n
+    \       PUSH, instance_2\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__RequestSerialization__SystemVoid\"\r\n
+    \       JUMP, 0xFFFFFFFC\r\n    \r\n    .export OPrevious\r\n    \r\n    OPrevious:\r\n
+    \   \r\n        PUSH, currentIndex\r\n        PUSH, Int32_7\r\n        PUSH, Int32_4\r\n
+    \       EXTERN, \"SystemInt32.__op_Subtraction__SystemInt32_SystemInt32__SystemInt32\"\r\n
+    \       PUSH, Int32_4\r\n        PUSH, Int32_5\r\n        PUSH, Boolean_0\r\n
+    \       EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\r\n
+    \       PUSH, Boolean_0\r\n        JUMP_IF_FALSE, 0x00000190\r\n        PUSH,
+    objects\r\n        PUSH, instance_3\r\n        COPY\r\n        PUSH, instance_3\r\n
+    \       PUSH, Int32_8\r\n        EXTERN, \"UnityEngineGameObjectArray.__get_Length__SystemInt32\"\r\n
+    \       PUSH, Int32_8\r\n        PUSH, Int32_9\r\n        PUSH, currentIndex\r\n
+    \       EXTERN, \"SystemInt32.__op_Subtraction__SystemInt32_SystemInt32__SystemInt32\"\r\n
+    \       PUSH, instance_4\r\n        PUSH, \"_onVarChange_currentIndex\"\r\n        EXTERN,
+    \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, currentIndex\r\n        PUSH, _old_currentIndex\r\n        COPY\r\n
+    \       PUSH, instance_5\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__RequestSerialization__SystemVoid\"\r\n
+    \       JUMP, 0x000001E0\r\n        PUSH, Int32_4\r\n        PUSH, currentIndex\r\n
+    \       COPY\r\n        PUSH, instance_6\r\n        PUSH, \"_onVarChange_currentIndex\"\r\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, currentIndex\r\n        PUSH, _old_currentIndex\r\n        COPY\r\n
+    \       PUSH, instance_5\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__RequestSerialization__SystemVoid\"\r\n
+    \       JUMP, 0xFFFFFFFC\r\n    \r\n    .export Next\r\n    \r\n    Next:\r\n
+    \   \r\n        PUSH, instance_7\r\n        PUSH, target_0\r\n        PUSH, eventName_0\r\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\r\n
+    \       JUMP, 0xFFFFFFFC\r\n    \r\n    .export Previous\r\n    \r\n    Previous:\r\n
+    \   \r\n        PUSH, instance_8\r\n        PUSH, target_1\r\n        PUSH, eventName_1\r\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\r\n
+    \       JUMP, 0xFFFFFFFC\r\n    \r\n    .export _onVarChange_currentIndex\r\n
+    \   \r\n    _onVarChange_currentIndex:\r\n    \r\n        PUSH, _old_currentIndex\r\n
+    \       PUSH, Int32_B\r\n        PUSH, Boolean_1\r\n        EXTERN, \"SystemInt32.__op_GreaterThanOrEqual__SystemInt32_SystemInt32__SystemBoolean\"\r\n
+    \       PUSH, Boolean_1\r\n        JUMP_IF_FALSE, 0x00000314\r\n        PUSH,
+    objects\r\n        PUSH, instance_9\r\n        COPY\r\n        PUSH, instance_9\r\n
+    \       PUSH, _old_currentIndex\r\n        PUSH, object_0\r\n        EXTERN, \"UnityEngineGameObjectArray.__Get__SystemInt32__UnityEngineGameObject\"\r\n
+    \       PUSH, object_0\r\n        PUSH, result_0\r\n        EXTERN, \"VRCSDKBaseUtilities.__IsValid__SystemObject__SystemBoolean\"\r\n
+    \       PUSH, result_0\r\n        JUMP_IF_FALSE, 0x0000030C\r\n        PUSH, objects\r\n
+    \       PUSH, instance_9\r\n        COPY\r\n        PUSH, object_0\r\n        PUSH,
+    instance_A\r\n        COPY\r\n        PUSH, object_0\r\n        PUSH, value_0\r\n
+    \       EXTERN, \"UnityEngineGameObject.__SetActive__SystemBoolean__SystemVoid\"\r\n
+    \       JUMP, 0x0000030C\r\n        JUMP, 0x00000314\r\n        PUSH, ActiveSceneLabel\r\n
+    \       PUSH, instance_B\r\n        COPY\r\n        PUSH, objects\r\n        PUSH,
+    instance_D\r\n        COPY\r\n        PUSH, instance_D\r\n        PUSH, currentIndex\r\n
+    \       PUSH, instance_C\r\n        EXTERN, \"UnityEngineGameObjectArray.__Get__SystemInt32__UnityEngineGameObject\"\r\n
+    \       PUSH, instance_C\r\n        PUSH, value_1\r\n        EXTERN, \"UnityEngineGameObject.__get_name__SystemString\"\r\n
+    \       PUSH, instance_B\r\n        PUSH, value_1\r\n        EXTERN, \"UnityEngineUIText.__set_text__SystemString__SystemVoid\"\r\n
+    \       PUSH, objects\r\n        PUSH, instance_F\r\n        COPY\r\n        PUSH,
+    instance_F\r\n        PUSH, currentIndex\r\n        PUSH, instance_E\r\n        EXTERN,
+    \"UnityEngineGameObjectArray.__Get__SystemInt32__UnityEngineGameObject\"\r\n        PUSH,
+    instance_E\r\n        PUSH, value_2\r\n        EXTERN, \"UnityEngineGameObject.__SetActive__SystemBoolean__SystemVoid\"\r\n
+    \       JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
   assemblyError: 
   graphData:
     name: 
@@ -119,11 +118,9 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|objects
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: Get_Variable
@@ -151,11 +148,9 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|currentIndex
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: Event_Custom
@@ -247,8 +242,7 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: 
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
     - fullName: Set_Variable
       uid: e518ff62-68ff-49af-9d5c-33b9bca3cf0e
       position: {x: 200, y: -350}
@@ -264,8 +258,7 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: 
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
     - fullName: SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean
       uid: 48b7726e-5967-43d9-b50e-825b1a6dc29e
       position: {x: -140, y: -120}
@@ -288,8 +281,7 @@ MonoBehaviour:
       - bdc67534-bf69-47d4-8414-ebdfec6bc491
       nodeValues:
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
     - fullName: SystemInt32.__op_Subtraction__SystemInt32_SystemInt32__SystemInt32
       uid: 892b82bd-9b41-41b0-84b4-80e80b0298e5
       position: {x: 20, y: -300}
@@ -317,8 +309,7 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: 
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
     - fullName: Get_Variable
       uid: 1918b7f3-2fe3-44a6-8c7f-ebfce361ab7a
       position: {x: -150, y: 840}
@@ -365,11 +356,9 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|ActiveSceneLabel
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: Get_Variable
@@ -406,8 +395,7 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: 
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
     - fullName: Get_Variable
       uid: f16ab31c-f3a5-4f80-ad6b-0c72e38b8e1b
       position: {x: -20, y: 1220}
@@ -509,8 +497,7 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: 
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
     - fullName: Variable_SystemInt32
       uid: 95d83063-7970-4962-8271-ac34d6edfac9
       position: {x: 0, y: 0}
@@ -527,11 +514,9 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|lastIndex
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: Event_Custom
@@ -615,8 +600,7 @@ MonoBehaviour:
       - 3f7eda8f-9e8f-436e-905f-911098fc7077
       nodeValues:
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
     - fullName: SystemInt32.__op_GreaterThanOrEqual__SystemInt32_SystemInt32__SystemBoolean
       uid: bf6bfe5e-b467-461e-82c6-5c629dffa1bf
       position: {x: -20, y: 350}

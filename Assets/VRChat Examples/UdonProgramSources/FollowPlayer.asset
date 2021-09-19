@@ -12,44 +12,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: FollowPlayer
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: a877c4e4d1e86214aa9629f5e6bbcb09,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 664f9649ed578f7409c856b1c490c395,
     type: 2}
-  udonAssembly: ".data_start\r\n\r\n    .export smoothPosition\r\n    .export target\r\n   
-    \r\n    __Boolean_0: %SystemBoolean, null\r\n    __Object_0: %SystemObject, null\r\n   
-    __Object_1: %SystemObject, null\r\n    __var_0: %SystemObject, null\r\n    __instance_0:
-    %UnityEngineTransform, this\r\n    __value_0: %UnityEngineVector3, null\r\n   
-    __a_0: %UnityEngineVector3, null\r\n    __b_0: %UnityEngineVector3, null\r\n   
-    __t_0: %SystemSingle, null\r\n    __instance_1: %UnityEngineTransform, this\r\n   
-    __Single_0: %SystemSingle, null\r\n    __Single_1: %SystemSingle, null\r\n   
-    __Single_2: %SystemSingle, null\r\n    __Vector3_0: %UnityEngineVector3, null\r\n   
-    __Vector3_1: %UnityEngineVector3, null\r\n    __TrackingData_0: %VRCSDKBaseVRCPlayerApiTrackingData,
-    null\r\n    __instance_2: %VRCSDKBaseVRCPlayerApi, null\r\n    __tt_0: %VRCSDKBaseVRCPlayerApiTrackingDataType,
-    null\r\n    __Single_3: %SystemSingle, null\r\n    __Single_4: %SystemSingle,
-    null\r\n    smoothPosition: %SystemSingle, null\r\n    target: %UnityEngineTransform,
-    this\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n    .export _lateUpdate\r\n   
-    \r\n    _lateUpdate:\r\n    \r\n        PUSH, __Object_0\r\n        EXTERN, \"VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi\"\r\n       
-    PUSH, __var_0\r\n        PUSH, __Object_1\r\n        COPY\r\n        PUSH, __Object_0\r\n       
-    PUSH, __Object_1\r\n        PUSH, __Boolean_0\r\n        EXTERN, \"SystemObject.__op_Inequality__SystemObject_SystemObject__SystemBoolean\"\r\n       
-    PUSH, __Boolean_0\r\n        JUMP_IF_FALSE, 0x000001D8\r\n        PUSH, target\r\n       
-    PUSH, __instance_0\r\n        COPY\r\n        PUSH, target\r\n        PUSH, __instance_1\r\n       
-    COPY\r\n        PUSH, __instance_1\r\n        PUSH, __a_0\r\n        EXTERN,
-    \"UnityEngineTransform.__get_position__UnityEngineVector3\"\r\n        PUSH,
-    __Object_0\r\n        PUSH, __instance_2\r\n        COPY\r\n        PUSH, __Object_0\r\n       
-    PUSH, __tt_0\r\n        PUSH, __TrackingData_0\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetTrackingData__VRCSDKBaseVRCPlayerApiTrackingDataType__VRCSDKBaseVRCPlayerApiTrackingData\"\r\n       
-    PUSH, __TrackingData_0\r\n        PUSH, __Vector3_0\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApiTrackingData.__get_position__UnityEngineVector3\"\r\n       
-    PUSH, __Vector3_0\r\n        PUSH, __Single_0\r\n        EXTERN, \"UnityEngineVector3.__get_x__SystemSingle\"\r\n       
-    PUSH, __Object_0\r\n        PUSH, __instance_2\r\n        COPY\r\n        PUSH,
-    __Vector3_0\r\n        PUSH, __Vector3_1\r\n        COPY\r\n        PUSH, __Vector3_0\r\n       
-    PUSH, __Single_2\r\n        EXTERN, \"UnityEngineVector3.__get_z__SystemSingle\"\r\n       
-    PUSH, __Single_0\r\n        PUSH, __Single_1\r\n        PUSH, __Single_2\r\n       
-    PUSH, __b_0\r\n        EXTERN, \"UnityEngineVector3.__ctor__SystemSingle_SystemSingle_SystemSingle__UnityEngineVector3\"\r\n       
-    PUSH, __Single_3\r\n        EXTERN, \"UnityEngineTime.__get_deltaTime__SystemSingle\"\r\n       
-    PUSH, __Single_3\r\n        PUSH, smoothPosition\r\n        PUSH, __t_0\r\n       
-    EXTERN, \"SystemSingle.__op_Multiplication__SystemSingle_SystemSingle__SystemSingle\"\r\n       
-    PUSH, __a_0\r\n        PUSH, __b_0\r\n        PUSH, __t_0\r\n        PUSH, __value_0\r\n       
-    EXTERN, \"UnityEngineVector3.__Lerp__UnityEngineVector3_UnityEngineVector3_SystemSingle__UnityEngineVector3\"\r\n       
-    PUSH, __instance_0\r\n        PUSH, __value_0\r\n        EXTERN, \"UnityEngineTransform.__set_position__UnityEngineVector3__SystemVoid\"\r\n       
-    JUMP, 0x000001D8\r\n        JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+  udonAssembly: ".data_start\r\n\r\n    .export smoothPosition\r\n    .export target\r\n
+    \   \r\n    Boolean_0: %SystemBoolean, null\r\n    Object_0: %SystemObject, null\r\n
+    \   Object_1: %SystemObject, null\r\n    var_0: %SystemObject, null\r\n    instance_0:
+    %UnityEngineTransform, this\r\n    value_0: %UnityEngineVector3, null\r\n    a_0:
+    %UnityEngineVector3, null\r\n    b_0: %UnityEngineVector3, null\r\n    t_0: %SystemSingle,
+    null\r\n    instance_1: %UnityEngineTransform, this\r\n    Single_0: %SystemSingle,
+    null\r\n    Single_1: %SystemSingle, null\r\n    Single_2: %SystemSingle, null\r\n
+    \   Vector3_0: %UnityEngineVector3, null\r\n    Vector3_1: %UnityEngineVector3,
+    null\r\n    TrackingData_0: %VRCSDKBaseVRCPlayerApiTrackingData, null\r\n    instance_2:
+    %VRCSDKBaseVRCPlayerApi, null\r\n    tt_0: %VRCSDKBaseVRCPlayerApiTrackingDataType,
+    null\r\n    Single_3: %SystemSingle, null\r\n    Single_4: %SystemSingle, null\r\n
+    \   smoothPosition: %SystemSingle, null\r\n    target: %UnityEngineTransform,
+    this\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n    .export _lateUpdate\r\n    \r\n
+    \   _lateUpdate:\r\n    \r\n        PUSH, Object_0\r\n        EXTERN, \"VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi\"\r\n
+    \       PUSH, var_0\r\n        PUSH, Object_1\r\n        COPY\r\n        PUSH,
+    Object_0\r\n        PUSH, Object_1\r\n        PUSH, Boolean_0\r\n        EXTERN,
+    \"SystemObject.__op_Inequality__SystemObject_SystemObject__SystemBoolean\"\r\n
+    \       PUSH, Boolean_0\r\n        JUMP_IF_FALSE, 0x000001D8\r\n        PUSH,
+    target\r\n        PUSH, instance_0\r\n        COPY\r\n        PUSH, target\r\n
+    \       PUSH, instance_1\r\n        COPY\r\n        PUSH, instance_1\r\n        PUSH,
+    a_0\r\n        EXTERN, \"UnityEngineTransform.__get_position__UnityEngineVector3\"\r\n
+    \       PUSH, Object_0\r\n        PUSH, instance_2\r\n        COPY\r\n        PUSH,
+    Object_0\r\n        PUSH, tt_0\r\n        PUSH, TrackingData_0\r\n        EXTERN,
+    \"VRCSDKBaseVRCPlayerApi.__GetTrackingData__VRCSDKBaseVRCPlayerApiTrackingDataType__VRCSDKBaseVRCPlayerApiTrackingData\"\r\n
+    \       PUSH, TrackingData_0\r\n        PUSH, Vector3_0\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApiTrackingData.__get_position__UnityEngineVector3\"\r\n
+    \       PUSH, Vector3_0\r\n        PUSH, Single_0\r\n        EXTERN, \"UnityEngineVector3.__get_x__SystemSingle\"\r\n
+    \       PUSH, Object_0\r\n        PUSH, instance_2\r\n        COPY\r\n        PUSH,
+    Vector3_0\r\n        PUSH, Vector3_1\r\n        COPY\r\n        PUSH, Vector3_0\r\n
+    \       PUSH, Single_2\r\n        EXTERN, \"UnityEngineVector3.__get_z__SystemSingle\"\r\n
+    \       PUSH, Single_0\r\n        PUSH, Single_1\r\n        PUSH, Single_2\r\n
+    \       PUSH, b_0\r\n        EXTERN, \"UnityEngineVector3.__ctor__SystemSingle_SystemSingle_SystemSingle__UnityEngineVector3\"\r\n
+    \       PUSH, Single_3\r\n        EXTERN, \"UnityEngineTime.__get_deltaTime__SystemSingle\"\r\n
+    \       PUSH, Single_3\r\n        PUSH, smoothPosition\r\n        PUSH, t_0\r\n
+    \       EXTERN, \"SystemSingle.__op_Multiplication__SystemSingle_SystemSingle__SystemSingle\"\r\n
+    \       PUSH, a_0\r\n        PUSH, b_0\r\n        PUSH, t_0\r\n        PUSH, value_0\r\n
+    \       EXTERN, \"UnityEngineVector3.__Lerp__UnityEngineVector3_UnityEngineVector3_SystemSingle__UnityEngineVector3\"\r\n
+    \       PUSH, instance_0\r\n        PUSH, value_0\r\n        EXTERN, \"UnityEngineTransform.__set_position__UnityEngineVector3__SystemVoid\"\r\n
+    \       JUMP, 0x000001D8\r\n        JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
   assemblyError: 
   graphData:
     name: 
@@ -98,8 +100,7 @@ MonoBehaviour:
       - 1ab4f547-9bf1-40c8-a10b-cafbc614ff9a
       nodeValues:
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
     - fullName: Variable_SystemSingle
       uid: 263c594f-66d7-4fbb-8407-fbac59a4dbce
       position: {x: -1302.5, y: -952.5}
@@ -116,11 +117,9 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|smoothPosition
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: UnityEngineVector3.__Lerp__UnityEngineVector3_UnityEngineVector3_SystemSingle__UnityEngineVector3
@@ -183,11 +182,9 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|target
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: Get_Variable

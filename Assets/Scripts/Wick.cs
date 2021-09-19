@@ -104,7 +104,10 @@ public class Wick : MonoBehaviour
 
     private void Update()
     {
-        if (!_isExecuteCompiler) return;
+        if (!_isExecuteCompiler)
+        {
+            return;
+        }
 
         if (_updateIndex > 10)
         {

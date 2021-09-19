@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: SendEventOnMouseDown
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: fe75cedda8eb878478bfe91f3cd960db,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 22692bfecc079394d86060b2be313d2b,
     type: 2}
-  udonAssembly: ".data_start\r\n\r\n    .export eventName\r\n    .export target\r\n   
-    \r\n    __instance_0: %VRCUdonUdonBehaviour, this\r\n    __eventName_0: %SystemString,
+  udonAssembly: ".data_start\r\n\r\n    .export eventName\r\n    .export target\r\n
+    \   \r\n    instance_0: %VRCUdonUdonBehaviour, this\r\n    eventName_0: %SystemString,
     null\r\n    eventName: %SystemString, null\r\n    target: %VRCUdonUdonBehaviour,
-    this\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n    .export _onMouseDown\r\n   
-    \r\n    _onMouseDown:\r\n    \r\n        PUSH, target\r\n        PUSH, __instance_0\r\n       
-    COPY\r\n        PUSH, eventName\r\n        PUSH, __eventName_0\r\n        COPY\r\n       
-    PUSH, __instance_0\r\n        PUSH, __eventName_0\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n       
-    JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+    this\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n    .export _onMouseDown\r\n    \r\n
+    \   _onMouseDown:\r\n    \r\n        PUSH, target\r\n        PUSH, instance_0\r\n
+    \       COPY\r\n        PUSH, eventName\r\n        PUSH, eventName_0\r\n        COPY\r\n
+    \       PUSH, instance_0\r\n        PUSH, eventName_0\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
   assemblyError: 
   graphData:
     name: 
@@ -43,11 +43,9 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|eventName
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: Event_OnMouseDown
@@ -95,11 +93,9 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|target
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|True
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
       - unityObjectValue: {fileID: 0}
-        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
       - unityObjectValue: {fileID: 0}
         stringValue: 
     - fullName: Get_Variable

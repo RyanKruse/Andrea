@@ -30,11 +30,15 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private int _defaultFontSizeIndex;
     [SerializeField] private int _defaultFontTypeIndex;
     [SerializeField] private int _defaultBookIndex;
+    [SerializeField] private int _defaultTurnPageIndex;
     [SerializeField] private string _defaultOrientation;
     [SerializeField] private TextAsset _styleSheetTextAsset;
     [SerializeField] private VRC_Pickup _candleVRCPickup;
+    [SerializeField] private AudioSource _candleAudioSource;
     [SerializeField] private GameObject _candleGameObject;
     [SerializeField] private GameObject _mainMenuGameObject;
+    [SerializeField] private GameObject _confirmationMenuGameObject;
+    [SerializeField] private GameObject _optionsMenuGameObject;
     [SerializeField] private GameObject _helveticaTMPGameObject;
     [SerializeField] private GameObject _helveticaCloneTMPGameObject;
     [SerializeField] private GameObject _tahomaTMPGameObject;
@@ -51,6 +55,16 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private TextMeshProUGUI _verticalPercentageInfoTMP;
     [SerializeField] private TextMeshProUGUI _horizontalPageInfoTMP;
     [SerializeField] private TextMeshProUGUI _horizontalPercentageInfoTMP;
+    [SerializeField] private TextMeshProUGUI[] _fontSizeTextList;
+    [SerializeField] private TextMeshProUGUI[] _fontTypeTextList;
+    [SerializeField] private TextMeshProUGUI[] _tabletScaleTextList;
+    [SerializeField] private TextMeshProUGUI[] _tabletOrientationTextList;
+    [SerializeField] private AudioClip _softSwipeAudio;
+    [SerializeField] private AudioClip _hardSwipeAudio;
+    [SerializeField] private AudioClip _clickAudio;
+    [SerializeField] private AudioClip _optionsAudio;
+    [SerializeField] private AudioClip _selectBookAudio;
+    [SerializeField] private AudioClip _backAudio;
 
     [Header("Lists that are already pre-defined (Set By C# Script).")]
     [SerializeField] private int[] _header1FontSizePercentList = { 190, 175, 160 };
@@ -61,7 +75,7 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private char[] _bracketCharList = { ')', '.', '-', ':', '|', '•' };
     [SerializeField] private string[] _fontTypeList = { "Helvetica Neue SDF", "Tahoma Regular font SDF", "BaskervilleBT SDF" };
 
-    [Header("Variables that signal the state of Candle (Don't Populate).")] 
+    [Header("Variables that signal the state of Candle (Don't Populate).")]
     [SerializeField] private int _mainBlockIndex;
     [SerializeField] private int _mainFontSize;
     [SerializeField] private int _mainFontSizeIndex;
@@ -69,6 +83,7 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private int _mainPageIndex;
     [SerializeField] private int _mainCharZeroIndex;
     [SerializeField] private int _mainFontTypeIndex;
+    [SerializeField] private int _mainTurnPageIndex;
     [SerializeField] private string _mainFontType;
     [SerializeField] private string _mainOrientation;
     [SerializeField] private string _mainStatusCode;
@@ -171,11 +186,14 @@ public class Candle : UdonSharpBehaviour
     private void DefineMainVariables()
     {
         _mainMenuGameObject.SetActive(true);
+        _confirmationMenuGameObject.SetActive(false);
+        _optionsMenuGameObject.SetActive(false);
         _mainTextList = Wax.GetTextOrBlock(_defaultBookIndex, true);
         _mainBlockList = Wax.GetTextOrBlock(_defaultBookIndex, false);
         _mainBlockIndex = Mathf.Clamp(_defaultBlockIndex, 0, _mainTextList.Length - 1);
         _mainFontSize = _fontSizeList[_defaultFontSizeIndex];
         _mainFontSizeIndex = _defaultFontSizeIndex;
+        _mainTurnPageIndex = _defaultTurnPageIndex;
         _mainFontType = _fontTypeList[_defaultFontTypeIndex].Trim(_badCharList);
         _mainFontTypeIndex = _defaultFontTypeIndex;
         _mainOrientation = _defaultOrientation;
@@ -219,7 +237,7 @@ public class Candle : UdonSharpBehaviour
             _mainCloneTMP = _helveticaCloneTMP;
             _mainTMPGameObject = _helveticaTMPGameObject;
             _mainCloneTMPGameObject = _helveticaCloneTMPGameObject;
-        }   
+        }
         else if (_defaultFontTypeIndex == 1)
         {
             CopyRectTransform(_tahomaTMP, _tahomaCloneTMP);
@@ -361,7 +379,7 @@ public class Candle : UdonSharpBehaviour
         {
             _mainTMP.text = _mainTMP.text.Replace(_styleSheetNameList[_index], _styleSheetTagList[_index]);
         }
-        
+
         // Define variables.
         bool _isAfterNewLine = false;
         bool _isBullet = false;
@@ -641,7 +659,7 @@ public class Candle : UdonSharpBehaviour
                     // Error out code.
                     else if (_richTextString.Length < 3)
                     {
-                         Debug.Log($"Error: Rich Command ({_richTextString}) wasn't matched! Was capitalization accidently used (<B> instead of <b>)?");
+                        Debug.Log($"Error: Rich Command ({_richTextString}) wasn't matched! Was capitalization accidently used (<B> instead of <b>)?");
                         _richTextString.Substring(0, Int32.MaxValue);
                     }
 
@@ -777,7 +795,7 @@ public class Candle : UdonSharpBehaviour
         {
             IncrementPageInput();
             FormatPageInput();
-            RotatePageInput();
+            OrientateTablet("0");
         }
     }
 
@@ -801,6 +819,9 @@ public class Candle : UdonSharpBehaviour
 
     private void IncrementPageInput()
     {
+        // Do not turn page if another menu is active.
+        if (_optionsMenuGameObject.activeSelf || _mainMenuGameObject.activeSelf || _confirmationMenuGameObject.activeSelf) return;
+
         // Desktop input for turning page left or right.
         if (!_isHaltPageTurn && Input.GetKeyDown("[3]") || Input.GetKey("[*]") || (Input.GetAxis("Mouse ScrollWheel") < 0f && _isScrollWheelActive))
         {
@@ -817,23 +838,31 @@ public class Candle : UdonSharpBehaviour
         if (Networking.LocalPlayer.IsUserInVR())
         {
             // Disable active controls if trigger is not pressed hard enough.
-            if (Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") <= 0.26f && _isRightTriggerActive)
+            if (_isRightTriggerActive && ((_mainTurnPageIndex == 0 && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") <= 0.26f) ||
+                (_mainTurnPageIndex == 2 && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") <= 0.26f) ||
+                (_mainTurnPageIndex == 1 && (Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") <= 0.26f || Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") <= 0.26f))))
             {
                 _isRightTriggerActive = false;
             }
-            else if (Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryIndexTrigger") <= 0.26f && _isLeftTriggerActive)
+            else if (_isLeftTriggerActive && ((_mainTurnPageIndex == 0 && Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryIndexTrigger") <= 0.26f) ||
+                (_mainTurnPageIndex == 2 && Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryHandTrigger") <= 0.26f) ||
+                (_mainTurnPageIndex == 1 && (Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryHandTrigger") <= 0.26f || Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryIndexTrigger") <= 0.26f))))
             {
                 _isLeftTriggerActive = false;
             }
 
             // Enable active controls is trigger is pressed hard enough.
-            if (Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") >= 0.28f && !_isRightTriggerActive)
+            else if (!_isRightTriggerActive && ((_mainTurnPageIndex == 0 && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") >= 0.28f) ||
+                (_mainTurnPageIndex == 2 && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") >= 0.28f) ||
+                (_mainTurnPageIndex == 1 && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") >= 0.28f && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") >= 0.28f)))
             {
                 _isRightTriggerActive = true;
                 _mainPageIndex++;
                 DefinePage(_mainPageIndex, true);
             }
-            else if (Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryIndexTrigger") >= 0.28f && !_isLeftTriggerActive)
+            else if (!_isLeftTriggerActive && ((_mainTurnPageIndex == 0 && Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryIndexTrigger") >= 0.28f) ||
+                (_mainTurnPageIndex == 2 && Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryHandTrigger") >= 0.28f) ||
+                (_mainTurnPageIndex == 1 && Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryHandTrigger") >= 0.28f && Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryIndexTrigger") >= 0.28f)))
             {
                 _isLeftTriggerActive = true;
                 _mainPageIndex--;
@@ -851,27 +880,17 @@ public class Candle : UdonSharpBehaviour
         {
             _isScrollWheelActive = !_isScrollWheelActive;
         }
-        
+
         // Change text font size.
         else if (Input.GetKeyDown("[4]"))
         {
-            _defaultFontSizeIndex = (_defaultFontSizeIndex + 1) % _fontSizeList.Length;
-            _mainFontSizeIndex = _defaultFontSizeIndex;
-            _mainFontSize = _fontSizeList[_defaultFontSizeIndex];
-            _mainTMP.text = "";
-            Calibrate(0);
-            _isOverflowAuditDefinePage = true;
+            ChangeFontSize((_defaultFontSizeIndex + 1) % _fontSizeList.Length);
         }
-        
+
         // Change text font type.
         else if (Input.GetKeyDown("[6]"))
         {
-            _defaultFontTypeIndex = (_defaultFontTypeIndex + 1) % _fontTypeList.Length;
-            _mainFontTypeIndex = _defaultFontTypeIndex;
-            _mainFontType = _fontTypeList[_defaultFontTypeIndex].Trim(_badCharList);
-            _mainTMP.text = "";
-            Calibrate(0);
-            _isOverflowAuditDefinePage = true;
+            ChangeFontType((_defaultFontTypeIndex + 1) % _fontTypeList.Length);
         }
 
         // Expand tablet scale.
@@ -899,17 +918,59 @@ public class Candle : UdonSharpBehaviour
         }
     }
 
-    private void RotatePageInput()  // Parallel Code.
+    private void ChangeFontSize(int fontSizeIndex)
     {
-        if (_isRejectNumPadInputs) return;
+        PlayAudio(_clickAudio);
+
+        _defaultFontSizeIndex = fontSizeIndex;
+        _mainFontSizeIndex = _defaultFontSizeIndex;
+        _mainFontSize = _fontSizeList[_defaultFontSizeIndex];
+
+        if (!_mainMenuGameObject.activeSelf)
+        {
+            _mainTMP.text = "";
+            Calibrate(0);
+            _isOverflowAuditDefinePage = true;
+        }
+    }
+
+    private void ChangeFontType(int fontTypeIndex)
+    {
+        PlayAudio(_clickAudio);
+
+        _defaultFontTypeIndex = fontTypeIndex;
+        _mainFontTypeIndex = _defaultFontTypeIndex;
+        _mainFontType = _fontTypeList[_defaultFontTypeIndex].Trim(_badCharList);
+
+        if (!_mainMenuGameObject.activeSelf)
+        {
+            _mainTMP.text = "";
+            Calibrate(0);
+            _isOverflowAuditDefinePage = true;
+        }
+    }
+
+    private void ChangeTabletSize(float scaleSize)
+    {
+        PlayAudio(_clickAudio);
+
+        _candleGameObject.transform.localScale = new Vector3(scaleSize, scaleSize, scaleSize);
+    }
+
+    private void OrientateTablet(string forceOrientate)  // Parallel Code.
+    {
+        if (_isRejectNumPadInputs && forceOrientate == "0") return;
 
         // Rotate the tablet orientation. 
-        if (Input.GetKeyDown("[0]"))
+        if (Input.GetKeyDown("[0]") || forceOrientate != "0")
         {
+            PlayAudio(_clickAudio);
+
+            if (forceOrientate == _mainOrientation) return;
+
             // Define variables.
             int _tempPageIndex = _mainPageIndex;
             _mainPageIndex = 0;
-            _mainTMP.text = "";
             _mainPageInfoTMP.text = "";
             _mainPercentageInfoTMP.text = "";
             RectTransform _rectTransform = _mainTMP.GetComponent<RectTransform>();
@@ -951,11 +1012,17 @@ public class Candle : UdonSharpBehaviour
             _rectTransformClone.sizeDelta = _rectTransform.sizeDelta;
             _rectTransformClone.rotation = _rectTransform.rotation;
             _rectTransformClone.localPosition = _rectTransform.localPosition;
-            Calibrate(0);
 
-            // Overwrites endCalibrationMemory in Calibrate().
-            _endCalibrationPageIndex = Mathf.Clamp(_tempPageIndex, 0, _mainPageLength - 1);
-            _isOverflowAuditDefinePage = true;
+            if (!_mainMenuGameObject.activeSelf)
+            {
+                _mainTMP.text = "";
+
+                Calibrate(0);
+
+                // Overwrites endCalibrationMemory in Calibrate().
+                _endCalibrationPageIndex = Mathf.Clamp(_tempPageIndex, 0, _mainPageLength - 1);
+                _isOverflowAuditDefinePage = true;
+            }
         }
     }
 
@@ -1006,6 +1073,8 @@ public class Candle : UdonSharpBehaviour
             }
         }
 
+        PlayAudio(_softSwipeAudio);
+
         // Populate the text.
         _mainTMP.text += _mainText.text.Substring(_mainPageIndex == 0 ? 0 : _lastCharSliceList[_mainPageIndex] + 1, _lastCharSliceList[_mainPageIndex + 1] - _lastCharSliceList[_mainPageIndex]);
 
@@ -1046,6 +1115,8 @@ public class Candle : UdonSharpBehaviour
         if (_mainBlockIndex == _mainTextList.Length - 1 && isIncrement) return;
 
         // Page has exceeded bounds, so change text blocks.
+        PlayAudio(_hardSwipeAudio);
+
         _mainTMP.text = "";
         Calibrate(isIncrement ? 1 : -1);
         _isOverflowAuditDefinePage = true;
@@ -1180,6 +1251,8 @@ public class Candle : UdonSharpBehaviour
     public void CalibrateMemory(int index)
     {
         // Called by memory script for processing.
+        PlayAudio(_selectBookAudio);
+
         _mainPageIndex = 0;
         _mainBlockIndex = _defaultBlockIndex;
         _mainTextList = Wax.GetTextOrBlock(index, true);
@@ -1196,13 +1269,172 @@ public class Candle : UdonSharpBehaviour
     public void BackButton()
     {
         // Called by clicking on the back button.
-        _isBookPreloaded = false;
-        _mainMenuGameObject.SetActive(true);
-        _mainPercentageInfoTMP.text = "0%";
+        PlayAudio(_backAudio);
+
+        if (_optionsMenuGameObject.activeSelf)
+        {
+            _optionsMenuGameObject.SetActive(false);
+        }
+        else if (_confirmationMenuGameObject.activeSelf)
+        {
+            _confirmationMenuGameObject.SetActive(false);
+        }
+        else if (!_mainMenuGameObject.activeSelf)
+        {
+            _confirmationMenuGameObject.SetActive(true);
+        }
+        else
+        {
+            _isBookPreloaded = false;
+            _mainMenuGameObject.SetActive(true);
+            _mainPercentageInfoTMP.text = "0%";
+        }
     }
 
-    public void CatalogButton()
+    public void OptionsButton()
     {
         // Called by clicking on the catalog button.
+        PlayAudio(_optionsAudio);
+
+        if (_optionsMenuGameObject.activeSelf)
+        {
+            _optionsMenuGameObject.SetActive(false);
+        }
+        else
+        {
+            _optionsMenuGameObject.SetActive(true);
+        }
+    }
+
+    public void SmallSize()
+    {
+        ChangeFontSize(0);
+    }
+
+    public void MediumSize()
+    {
+        ChangeFontSize(1);
+    }
+
+    public void LargeSize()
+    {
+        ChangeFontSize(2);
+    }
+
+    public void HelveticaType()
+    {
+        ChangeFontType(0);
+    }
+
+    public void TahomaType()
+    {
+        ChangeFontType(1);
+    }
+
+    public void BaskervilleType()
+    {
+        ChangeFontType(2);
+    }
+
+    public void SmallScale()
+    {
+        ChangeTabletSize(0.15f);
+    }
+
+    public void MediumScale()
+    {
+        ChangeTabletSize(0.20f);
+    }
+
+    public void LargeScale()
+    {
+        ChangeTabletSize(0.25f);
+    }
+
+    public void VerticalOrientation()
+    {
+        OrientateTablet("V");
+    }
+
+    public void HorizontalOrientation()
+    {
+        OrientateTablet("H");
+    }
+
+    public void EnabledPickup()
+    {
+        PlayAudio(_clickAudio);
+
+        _candleVRCPickup.pickupable = true;
+        _candleGameObject.GetComponent<BoxCollider>().enabled = true;
+    }
+
+    public void DisabledPickup()
+    {
+        PlayAudio(_clickAudio);
+
+        _candleVRCPickup.pickupable = false;
+        _candleGameObject.GetComponent<BoxCollider>().enabled = false;
+    }
+
+    public void EnabledMovement()
+    {
+        PlayAudio(_clickAudio);
+
+        Networking.LocalPlayer.Immobilize(false);
+    }
+
+    public void DisabledMovement()
+    {
+        PlayAudio(_clickAudio);
+
+        Networking.LocalPlayer.Immobilize(true);
+    }
+
+    public void TriggerTurnPage()
+    {
+        PlayAudio(_clickAudio);
+
+        _defaultTurnPageIndex = 0;
+        _mainTurnPageIndex = _defaultTurnPageIndex;
+    }
+
+    public void BothTurnPage()
+    {
+        PlayAudio(_clickAudio);
+
+        _defaultTurnPageIndex = 1;
+        _mainTurnPageIndex = _defaultTurnPageIndex;
+    }
+
+    public void GripTurnPage()
+    {
+        PlayAudio(_clickAudio);
+
+        _defaultTurnPageIndex = 2;
+        _mainTurnPageIndex = _defaultTurnPageIndex;
+    }
+
+    public void YesConfirm()
+    {
+        PlayAudio(_clickAudio);
+
+        _mainMenuGameObject.SetActive(true);
+        _confirmationMenuGameObject.SetActive(false);
+        BackButton();
+    }
+
+    public void NoConfirm()
+    {
+        PlayAudio(_clickAudio);
+
+        _confirmationMenuGameObject.SetActive(false);
+    }
+
+    private void PlayAudio(AudioClip clip)
+    {
+        if (_candleAudioSource.isPlaying && clip == _softSwipeAudio) return;
+        _candleAudioSource.clip = clip;
+        _candleAudioSource.Play();
     }
 }
