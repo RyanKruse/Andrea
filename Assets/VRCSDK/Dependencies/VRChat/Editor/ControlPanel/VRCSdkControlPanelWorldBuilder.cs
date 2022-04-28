@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if !VRC_CLIENT
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using VRC.SDKBase.Editor.Validation;
 using Object = UnityEngine.Object;
 
 namespace VRC.SDKBase.Editor
@@ -435,11 +437,12 @@ namespace VRC.SDKBase.Editor
             }
 
             string vrcFilePath = UnityWebRequest.UnEscapeURL(EditorPrefs.GetString("lastVRCPath"));
+            bool isMobilePlatform = ValidationEditorHelpers.IsMobilePlatform();
             if (!string.IsNullOrEmpty(vrcFilePath) &&
-                ValidationHelpers.CheckIfAssetBundleFileTooLarge(ContentType.World, vrcFilePath, out int fileSize))
+                ValidationHelpers.CheckIfAssetBundleFileTooLarge(ContentType.World, vrcFilePath, out int fileSize, isMobilePlatform))
             {
                 _builder.OnGUIWarning(scene,
-                    ValidationHelpers.GetAssetBundleOverSizeLimitMessageSDKWarning(ContentType.World, fileSize), null,
+                    ValidationHelpers.GetAssetBundleOverSizeLimitMessageSDKWarning(ContentType.World, fileSize, isMobilePlatform), null,
                     null);
             }
 
@@ -715,3 +718,4 @@ namespace VRC.SDKBase.Editor
 
     }
 }
+#endif

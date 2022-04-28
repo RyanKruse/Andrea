@@ -1417,8 +1417,6 @@ public class Candle : UdonSharpBehaviour
 
     public void YesConfirm()
     {
-        PlayAudio(_clickAudio);
-
         _mainMenuGameObject.SetActive(true);
         _confirmationMenuGameObject.SetActive(false);
         BackButton();
@@ -1426,8 +1424,6 @@ public class Candle : UdonSharpBehaviour
 
     public void NoConfirm()
     {
-        PlayAudio(_clickAudio);
-
         _confirmationMenuGameObject.SetActive(false);
     }
 

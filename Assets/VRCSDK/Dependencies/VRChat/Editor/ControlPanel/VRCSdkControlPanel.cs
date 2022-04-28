@@ -166,7 +166,7 @@ public partial class VRCSdkControlPanel : EditorWindow
         }
 
         if (_bannerImage == null)
-            _bannerImage = AssetDatabase.LoadAssetAtPath("Assets/VRCSDK/Dependencies/VRChat/SdkGraphics/SDK_Panel_Banner.png", typeof(Texture2D)) as Texture2D;
+            _bannerImage = Resources.Load<Texture2D>("SDK_Panel_Banner");
 
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
