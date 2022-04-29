@@ -4,6 +4,13 @@
 // GitHub: https://github.com/RyanKruse/Candle
 // Prefab: https://clearly.booth.pm/items/3258223
 
+// Z-Fighting on screen.
+// Z-Fighting on map corners.
+// Buttons don't work.
+// Material reflects light variously.
+// Sprites don't match model or screen.
+
+
 using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
@@ -200,8 +207,8 @@ public class Candle : UdonSharpBehaviour
         _mainPageInfoTMP = _verticalPageInfoTMP;
         _mainPercentageInfoTMP = _verticalPercentageInfoTMP;
         _overflowPageIndex = -1;
-        _horizontalPageInfoTMP.text = "";
-        _horizontalPercentageInfoTMP.text = "";
+        // _horizontalPageInfoTMP.text = "";
+        // _horizontalPercentageInfoTMP.text = "";
     }
 
     private void ExecuteCalibration()
@@ -988,8 +995,8 @@ public class Candle : UdonSharpBehaviour
                 {
                     _candleGameObject.transform.Rotate(new Vector3(0f, 0f, 90f));
                 }
-                _mainPageInfoTMP = _horizontalPageInfoTMP;
-                _mainPercentageInfoTMP = _horizontalPercentageInfoTMP;
+                // _mainPageInfoTMP = _horizontalPageInfoTMP;
+                // _mainPercentageInfoTMP = _horizontalPercentageInfoTMP;
 
             }
             else if (_mainOrientation == "H")
