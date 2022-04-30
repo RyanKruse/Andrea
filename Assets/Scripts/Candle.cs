@@ -4,7 +4,6 @@
 // GitHub: https://github.com/RyanKruse/Andrea
 // Booth: https://clearly.booth.pm/
 
-// No issues.
 
 
 using UdonSharp;
@@ -978,6 +977,8 @@ public class Candle : UdonSharpBehaviour
 
     private void OrientateTablet(string forceOrientate)  // Parallel Code.
     {
+        return;  // Removing orientation logistics.
+
         if (_isRejectNumPadInputs && forceOrientate == "0") return;
 
         // Rotate the tablet orientation. 
