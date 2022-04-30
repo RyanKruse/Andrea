@@ -1,14 +1,10 @@
 ﻿// Author: Ryan Kruse
 // VRChat: Clearly
 // Discord: Clearly#3238
-// GitHub: https://github.com/RyanKruse/Candle
-// Prefab: https://clearly.booth.pm/items/3258223
+// GitHub: https://github.com/RyanKruse/Andrea
+// Booth: https://clearly.booth.pm/
 
-// Z-Fighting on screen.
-// Z-Fighting on map corners.
-// Buttons don't work.
-// Material reflects light variously.
-// Sprites don't match model or screen.
+// No issues.
 
 
 using UdonSharp;
@@ -125,6 +121,10 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private bool _isRightTriggerActive;
     [SerializeField] private bool _isLeftTriggerActive;
 
+    // JUNK VARIABLES:
+    private float time = 0.0f;
+    public float interpolationPeriod = 5f;
+
     private void Start()
     {
         if (_isDontExecuteScript) return;
@@ -207,6 +207,7 @@ public class Candle : UdonSharpBehaviour
         _mainPageInfoTMP = _verticalPageInfoTMP;
         _mainPercentageInfoTMP = _verticalPercentageInfoTMP;
         _overflowPageIndex = -1;
+        HomeInfo();
         // _horizontalPageInfoTMP.text = "";
         // _horizontalPercentageInfoTMP.text = "";
     }
@@ -804,6 +805,17 @@ public class Candle : UdonSharpBehaviour
             FormatPageInput();
             OrientateTablet("0");
         }
+
+        time += Time.deltaTime;
+        if (time >= interpolationPeriod)
+        {
+            time = time - interpolationPeriod;
+
+            if (_mainMenuGameObject.activeSelf)
+            {
+                HomeInfo();
+            }
+        }
     }
 
     private bool ProcessRichTextOverflow()
@@ -1294,8 +1306,14 @@ public class Candle : UdonSharpBehaviour
         {
             _isBookPreloaded = false;
             _mainMenuGameObject.SetActive(true);
-            _mainPercentageInfoTMP.text = "0%";
+            HomeInfo();
         }
+    }
+
+    public void HomeInfo()
+    {
+        _mainPercentageInfoTMP.text = DateTime.Now.ToShortTimeString();
+        _verticalPageInfoTMP.text = "Home";
     }
 
     public void OptionsButton()
