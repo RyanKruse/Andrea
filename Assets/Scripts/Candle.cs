@@ -38,9 +38,12 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private VRC_Pickup _candleVRCPickup;
     [SerializeField] private AudioSource _candleAudioSource;
     [SerializeField] private GameObject _candleGameObject;
+    [SerializeField] private GameObject _compilerGameObject;
+    [SerializeField] private GameObject _readingScreenGameObject;
     [SerializeField] private GameObject _mainMenuGameObject;
     [SerializeField] private GameObject _confirmationMenuGameObject;
     [SerializeField] private GameObject _optionsMenuGameObject;
+    [SerializeField] private GameObject _blankScreenGameObject;
     [SerializeField] private GameObject _helveticaTMPGameObject;
     [SerializeField] private GameObject _helveticaCloneTMPGameObject;
     [SerializeField] private GameObject _tahomaTMPGameObject;
@@ -53,6 +56,7 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private TextMeshProUGUI _tahomaCloneTMP;
     [SerializeField] private TextMeshProUGUI _baskervilleTMP;
     [SerializeField] private TextMeshProUGUI _baskervilleCloneTMP;
+    [SerializeField] private TextMeshProUGUI _blankTahomaTMP;
     [SerializeField] private TextMeshProUGUI _verticalPageInfoTMP;
     [SerializeField] private TextMeshProUGUI _verticalPercentageInfoTMP;
     [SerializeField] private TextMeshProUGUI _horizontalPageInfoTMP;
@@ -72,7 +76,7 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private int[] _header1FontSizePercentList = { 190, 175, 160 };
     [SerializeField] private int[] _header2FontSizePercentList = { 140, 128, 120 };
     [SerializeField] private int[] _header3FontSizePercentList = { 118, 115, 112 };
-    [SerializeField] private int[] _fontSizeList = { 30, 35, 40 };
+    [SerializeField] private int[] _fontSizeList = { 26, 30, 35 };
     [SerializeField] private char[] _badCharList = { '\n', ' ', '\t' };
     [SerializeField] private char[] _bracketCharList = { ')', '.', '-', ':', '|', '•' };
     [SerializeField] private string[] _fontTypeList = { "Helvetica Neue SDF", "Tahoma Regular font SDF", "BaskervilleBT SDF" };
@@ -97,6 +101,7 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private GameObject _mainCloneTMPGameObject;
     [SerializeField] private TextMeshProUGUI _mainTMP;
     [SerializeField] private TextMeshProUGUI _mainCloneTMP;
+    [SerializeField] private TextMeshProUGUI _mainPreviousCloneTMP;
     [SerializeField] private TextMeshProUGUI _mainPageInfoTMP;
     [SerializeField] private TextMeshProUGUI _mainPercentageInfoTMP;
 
@@ -123,6 +128,12 @@ public class Candle : UdonSharpBehaviour
     // JUNK VARIABLES:
     private float time = 0.0f;
     public float interpolationPeriod = 5f;
+    private Color _defaultColor;
+    public Color _turnPageColor;
+    private int _cloneTimer;
+    private float tick = 0f;
+    private float TICK_CYCLE_TIME = 0.01f;
+    public int _cloneDelay;
 
     private void Start()
     {
@@ -130,6 +141,15 @@ public class Candle : UdonSharpBehaviour
         PopulateStyleSheet(_styleSheetTextAsset);
         DefineMainVariables();
         ExecuteCalibration();
+
+        // JUNK CODE:
+        // _defaultColor = _readingScreenGameObject.GetComponent<Image>().color;
+        // _blankScreenGameObject.SetActive(false);
+        if (Networking.LocalPlayer.displayName != "Local Player 1")
+        {
+            Debug.Log($"Playername: {Networking.LocalPlayer.displayName}");
+            _compilerGameObject.SetActive(false);
+        }
     }
 
     public void PopulateStyleSheet(TextAsset styleSheetTextAsset)  // Parallel Code.
@@ -235,7 +255,12 @@ public class Candle : UdonSharpBehaviour
         if (_mainTMP != null)
         {
             _mainTMP.text = "";
-            _mainCloneTMP.text = "";
+            // We want clone to appear when changing chapters.
+            // We don't want clone to appear when changing font types.
+            if (!_isOverflowAuditDefinePage)
+            {
+                // _mainCloneTMP.text = "";
+            }
         }
         if (_defaultFontTypeIndex == 0)
         {
@@ -332,7 +357,12 @@ public class Candle : UdonSharpBehaviour
         _endCalibrationPageIndex = _mainPageIndex;
         _mainPageIndex = _overflowPageIndex;
         _mainTMPGameObject.SetActive(false);
-        _mainCloneTMPGameObject.SetActive(false);
+
+        // We want clone to appear when changing chapters.
+        if (!_isOverflowAuditDefinePage)
+        {
+            // _mainCloneTMPGameObject.SetActive(false);
+        }
     }
 
     private void LoopOverflowAudit()
@@ -805,6 +835,31 @@ public class Candle : UdonSharpBehaviour
             OrientateTablet("0");
         }
 
+        // Junk Code:
+        tick += Time.deltaTime;
+        while (tick >= TICK_CYCLE_TIME)
+        {
+            tick -= TICK_CYCLE_TIME;
+            if (_mainTMP != null)
+            {
+                if (_mainTMP.text != _mainCloneTMP.text) // ||
+                    //_mainTMP.text != _mainPreviousCloneTMP.text)
+                {
+                    _cloneTimer++;
+                    if (_cloneTimer >= _cloneDelay)  // Hundreths of Second.
+                    {
+                        _cloneTimer = 0;
+                        _mainCloneTMP.text = _mainTMP.text;
+                        if (_mainPreviousCloneTMP != null)
+                        {
+                            _mainPreviousCloneTMP.text = "";
+                        }
+                    }
+                }
+            }
+        }
+
+        // Junk Code:
         time += Time.deltaTime;
         if (time >= interpolationPeriod)
         {
@@ -963,6 +1018,10 @@ public class Candle : UdonSharpBehaviour
         if (!_mainMenuGameObject.activeSelf)
         {
             _mainTMP.text = "";
+
+            // We clear clone text when changing font types.
+            _mainPreviousCloneTMP = _mainCloneTMP;
+
             Calibrate(0);
             _isOverflowAuditDefinePage = true;
         }
@@ -1048,6 +1107,10 @@ public class Candle : UdonSharpBehaviour
 
     private void DefinePage(int pageIndexUnclamped, bool isIncrement)
     {
+        // Junk Code:
+        // _blankScreenGameObject.SetActive(true);
+        // _blankTahomaTMP.text = _mainTMP.text;
+
         // Detect if page has exceeded block bounds.
         _mainPageIndex = Mathf.Clamp(_mainPageIndex, 0, _mainPageLength - 1);
         if (pageIndexUnclamped != _mainPageIndex)
@@ -1115,7 +1178,7 @@ public class Candle : UdonSharpBehaviour
         _mainTMP.text = _mainTMP.text.Replace("##", $"<align=\"center\"><size=125><sprite name=\"Image_4\"></size><align=\"justified\">\n");  // Cutoff Picture Bottom.
 
         // Clone copies the main text.
-        _mainCloneTMP.text = _mainTMP.text;
+        // _mainCloneTMP.text = _mainTMP.text;
 
         // Rare scenario where next page doesn't display any text. Call itself again which will increment the block.
         if (IsPageEmpty())
@@ -1306,6 +1369,8 @@ public class Candle : UdonSharpBehaviour
         else
         {
             _isBookPreloaded = false;
+            _mainTMP.text = "";
+            _mainCloneTMP.text = "";
             _mainMenuGameObject.SetActive(true);
             HomeInfo();
         }
@@ -1349,32 +1414,41 @@ public class Candle : UdonSharpBehaviour
 
     public void HelveticaType()
     {
-        ChangeFontType(0);
+        if (_defaultFontTypeIndex != 0)
+        {
+            ChangeFontType(0);
+        }
     }
 
     public void TahomaType()
     {
-        ChangeFontType(1);
+        if (_defaultFontTypeIndex != 1)
+        {
+            ChangeFontType(1);
+        }
     }
 
     public void BaskervilleType()
     {
-        ChangeFontType(2);
+        if (_defaultFontTypeIndex != 2)
+        {
+            ChangeFontType(2);
+        }
     }
 
     public void SmallScale()
     {
-        ChangeTabletSize(0.15f);
+        ChangeTabletSize(0.23f);
     }
 
     public void MediumScale()
     {
-        ChangeTabletSize(0.20f);
+        ChangeTabletSize(0.30f);
     }
 
     public void LargeScale()
     {
-        ChangeTabletSize(0.25f);
+        ChangeTabletSize(0.37f);
     }
 
     public void VerticalOrientation()

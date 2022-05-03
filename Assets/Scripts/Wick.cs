@@ -45,7 +45,7 @@ public class Wick : MonoBehaviour
     [SerializeField] private int[] _header1FontSizePercentList = { 190, 175, 160 };
     [SerializeField] private int[] _header2FontSizePercentList = { 140, 128, 120 };
     [SerializeField] private int[] _header3FontSizePercentList = { 118, 115, 112 };
-    [SerializeField] private int[] _fontSizeList = { 30, 35, 40 };
+    [SerializeField] private int[] _fontSizeList = { 26, 30, 35 };
     [SerializeField] private char[] _bracketCharList = { ')', '.', '-', ':', '|', '•' };
     [SerializeField] private string[] _tabletOrientationList = { "V", "H" };
     [SerializeField] private string[] _fontTypeList = { "Helvetica Neue SDF", "Tahoma Regular font SDF", "BaskervilleBT SDF" };
@@ -106,6 +106,7 @@ public class Wick : MonoBehaviour
     {
         if (!_isExecuteCompiler)
         {
+            gameObject.SetActive(false);
             return;
         }
 
