@@ -56,8 +56,12 @@ public class Wick : MonoBehaviour
     [SerializeField] private string[] _styleSheetNameList;
     [SerializeField] private string[] _styleSheetTagList;
     [SerializeField] private string[] _textFilePath;
+    [SerializeField] private string[] _bookTitleList;
     [SerializeField] private int _charTransformIndex;
     [SerializeField] private char _charTransformElement;
+    [SerializeField] private int _locationHeight;
+    [SerializeField] private int _blockHeight;
+    [SerializeField] private int _maxHeight;
 
     private void DelayedStart()
     {
@@ -70,6 +74,10 @@ public class Wick : MonoBehaviour
 
     private void DefineMainVariables()
     {
+        _locationHeight = 0;
+        _blockHeight = 0;
+        _maxHeight = 0;
+
         // Ensures whether we restrict the execution or not.
         if (_maxBlockRestrict < 0 || !_isMaxBlockRestrict)
         {
@@ -92,11 +100,14 @@ public class Wick : MonoBehaviour
         var _directoryInfo = new DirectoryInfo($"{Application.dataPath}/Books");
         var _fileInfo = _directoryInfo.GetFiles();
         _textFilePath = new string[_fileInfo.Length];
+        _bookTitleList = new string[_fileInfo.Length];
+
         for (int _index = 0; _index < _fileInfo.Length; _index++)
         {
             var _file = _fileInfo[_index];
             string _path = _file.ToString().Substring(0, _file.ToString().IndexOf(".meta")) + "/Texts";
             _textFilePath[_index] = _path.Replace('\\', '/');
+            _bookTitleList[_index] = _file.Name.Substring(_file.Name.IndexOf('-') + 2, _file.Name.IndexOf(".meta") - 5);
 
             // Debug.Log($"File: {_file.Name} | Directory: {_file.Directory} | Directory Name: {_file.DirectoryName}");
         }
@@ -238,6 +249,14 @@ public class Wick : MonoBehaviour
             // Debug.Log($"Block Path Index {_index / 2}: {_blockPathList[_index / 2]}");
         }
 
+        // Identify how many total characters are in the book.
+        for (int _textPathIndex = 0; _textPathIndex < _textPathList.Length; _textPathIndex++)
+        {
+            StreamReader _streamReader = new StreamReader(_textPathList[_textPathIndex]);
+            string _textContent = _streamReader.ReadToEnd();
+            _maxHeight += _textContent.Length - 1;
+        }
+
         // Loop to populate block paths.
         for (int _textPathIndex = 0; _textPathIndex < _textPathList.Length; _textPathIndex++)
         {
@@ -249,6 +268,14 @@ public class Wick : MonoBehaviour
             StreamReader _streamReader = new StreamReader(_textPathList[_textPathIndex]);
             string _textContent = _streamReader.ReadToEnd();
             _streamReader.Close();
+
+            // Record the loc and percentage height.
+            StreamWriter _streamWriter = new StreamWriter(_blockPathList[_textPathIndex], true);
+            _blockHeight = _textContent.Length - 1;
+            _streamWriter.WriteLine($"{_bookTitleList[_defaultBookIndex]}");
+            _streamWriter.WriteLine($"LH:{_locationHeight},BH:{_blockHeight},MH:{_maxHeight}");
+            _locationHeight += _textContent.Length - 1;
+            _streamWriter.Close();
 
             // Loops over tablet orientation.
             foreach (string _tabletOrientation in _tabletOrientationList)
@@ -274,6 +301,8 @@ public class Wick : MonoBehaviour
                 _rectTransform.sizeDelta = new Vector2(_rectTransform.rect.height, _rectTransform.rect.width);
             }
         }
+
+        // Once we get here, Unity should be unfrozen. All code executed.
     }
 
     private void PopulateBlock(string[] blockPathList, string textContent, int fontSizeIndex, int fontTypeIndex, int textPathIndex, int fontSize, string tabletOrientation, TMP_FontAsset fontTypeAsset)

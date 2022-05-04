@@ -43,7 +43,8 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private GameObject _mainMenuGameObject;
     [SerializeField] private GameObject _confirmationMenuGameObject;
     [SerializeField] private GameObject _optionsMenuGameObject;
-    [SerializeField] private GameObject _blankScreenGameObject;
+    // [SerializeField] private GameObject _blankScreenGameObject;
+    [SerializeField] private GameObject _backButtonGameObject;
     [SerializeField] private GameObject _helveticaTMPGameObject;
     [SerializeField] private GameObject _helveticaCloneTMPGameObject;
     [SerializeField] private GameObject _tahomaTMPGameObject;
@@ -56,10 +57,21 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private TextMeshProUGUI _tahomaCloneTMP;
     [SerializeField] private TextMeshProUGUI _baskervilleTMP;
     [SerializeField] private TextMeshProUGUI _baskervilleCloneTMP;
-    [SerializeField] private TextMeshProUGUI _blankTahomaTMP;
-    [SerializeField] private TextMeshProUGUI _verticalPageInfoTMP;
-    [SerializeField] private TextMeshProUGUI _verticalPercentageInfoTMP;
+    // [SerializeField] private TextMeshProUGUI _blankTahomaTMP;
+    [SerializeField] private TextMeshProUGUI _bottomLeftTMP;
+    [SerializeField] private TextMeshProUGUI _bottomLeftCloneTMP;
+    [SerializeField] private TextMeshProUGUI _bottomCenterTMP;
+    [SerializeField] private TextMeshProUGUI _bottomCenterCloneTMP;
+    [SerializeField] private TextMeshProUGUI _bottomRightTMP;
+    [SerializeField] private TextMeshProUGUI _bottomRightCloneTMP;
+    [SerializeField] private TextMeshProUGUI _topLeftTMP;
+    [SerializeField] private TextMeshProUGUI _topLeftCloneTMP;
+    [SerializeField] private TextMeshProUGUI _topCenterTMP;
+    [SerializeField] private TextMeshProUGUI _topCenterCloneTMP;
+    [SerializeField] private TextMeshProUGUI _topRightTMP;
+    [SerializeField] private TextMeshProUGUI _topRightCloneTMP;
     [SerializeField] private TextMeshProUGUI _horizontalPageInfoTMP;
+    [SerializeField] private TextMeshProUGUI _horizontalLocationInfoTMP;
     [SerializeField] private TextMeshProUGUI _horizontalPercentageInfoTMP;
     [SerializeField] private TextMeshProUGUI[] _fontSizeTextList;
     [SerializeField] private TextMeshProUGUI[] _fontTypeTextList;
@@ -80,6 +92,7 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private char[] _badCharList = { '\n', ' ', '\t' };
     [SerializeField] private char[] _bracketCharList = { ')', '.', '-', ':', '|', '•' };
     [SerializeField] private string[] _fontTypeList = { "Helvetica Neue SDF", "Tahoma Regular font SDF", "BaskervilleBT SDF" };
+    [SerializeField] private string[] _locationCodeList = { "LH:", "BH:", "MH:" };
 
     [Header("Variables that signal the state of Candle (Don't Populate).")]
     [SerializeField] private int _mainBlockIndex;
@@ -102,8 +115,6 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private TextMeshProUGUI _mainTMP;
     [SerializeField] private TextMeshProUGUI _mainCloneTMP;
     [SerializeField] private TextMeshProUGUI _mainPreviousCloneTMP;
-    [SerializeField] private TextMeshProUGUI _mainPageInfoTMP;
-    [SerializeField] private TextMeshProUGUI _mainPercentageInfoTMP;
 
     [Header("Variables that are utilized in the entire workflow (Don't Populate).")]
     [SerializeField] private bool _isOverflowAuditDefinePage;
@@ -134,6 +145,11 @@ public class Candle : UdonSharpBehaviour
     private float tick = 0f;
     private float TICK_CYCLE_TIME = 0.01f;
     public int _cloneDelay;
+    [SerializeField] private int _locationHeight;
+    [SerializeField] private int _blockHeight;
+    [SerializeField] private int _maxHeight;
+    [SerializeField] private int _adjustedLocationHeight;
+    [SerializeField] private int _adjustedMaxHeight;
 
     private void Start()
     {
@@ -145,6 +161,7 @@ public class Candle : UdonSharpBehaviour
         // JUNK CODE:
         // _defaultColor = _readingScreenGameObject.GetComponent<Image>().color;
         // _blankScreenGameObject.SetActive(false);
+        HomeInfo();
         if (Networking.LocalPlayer.displayName != "Local Player 1")
         {
             Debug.Log($"Playername: {Networking.LocalPlayer.displayName}");
@@ -214,6 +231,9 @@ public class Candle : UdonSharpBehaviour
         _mainMenuGameObject.SetActive(true);
         _confirmationMenuGameObject.SetActive(false);
         _optionsMenuGameObject.SetActive(false);
+        _backButtonGameObject.SetActive(false);
+        _topLeftTMP.gameObject.SetActive(false);
+        _topLeftCloneTMP.gameObject.SetActive(false);
         _mainTextList = Wax.GetTextOrBlock(_defaultBookIndex, true);
         _mainBlockList = Wax.GetTextOrBlock(_defaultBookIndex, false);
         _mainBlockIndex = Mathf.Clamp(_defaultBlockIndex, 0, _mainTextList.Length - 1);
@@ -223,8 +243,6 @@ public class Candle : UdonSharpBehaviour
         _mainFontType = _fontTypeList[_defaultFontTypeIndex].Trim(_badCharList);
         _mainFontTypeIndex = _defaultFontTypeIndex;
         _mainOrientation = _defaultOrientation;
-        _mainPageInfoTMP = _verticalPageInfoTMP;
-        _mainPercentageInfoTMP = _verticalPercentageInfoTMP;
         _overflowPageIndex = -1;
         HomeInfo();
         // _horizontalPageInfoTMP.text = "";
@@ -236,7 +254,12 @@ public class Candle : UdonSharpBehaviour
         if (_isBookPreloaded)
         {
             Calibrate(0);
+            _topCenterTMP.text = $"{_mainBlock.text.Substring(0, _mainBlock.text.IndexOf('\n'))}";
+            _topCenterCloneTMP.text = _topCenterTMP.text;
             _mainMenuGameObject.SetActive(false);
+            _backButtonGameObject.SetActive(true);
+            _topLeftTMP.gameObject.SetActive(true);
+            _topLeftCloneTMP.gameObject.SetActive(true);
             _isOverflowAuditDefinePage = true;
         }
     }
@@ -245,6 +268,7 @@ public class Candle : UdonSharpBehaviour
     {
         DefineMainTMP();
         DefineMainFiles(blockIncrementValue);
+        DefineLocation();
         DefineMainPageLength();
         PopulateLastCharSliceList();
         PrepareOverflowAudit();
@@ -255,12 +279,6 @@ public class Candle : UdonSharpBehaviour
         if (_mainTMP != null)
         {
             _mainTMP.text = "";
-            // We want clone to appear when changing chapters.
-            // We don't want clone to appear when changing font types.
-            if (!_isOverflowAuditDefinePage)
-            {
-                // _mainCloneTMP.text = "";
-            }
         }
         if (_defaultFontTypeIndex == 0)
         {
@@ -308,6 +326,20 @@ public class Candle : UdonSharpBehaviour
         _mainBlockIndex += blockIncrementValue;
         _mainText = _mainTextList[_mainBlockIndex];
         _mainBlock = _mainBlockList[_mainBlockIndex];
+    }
+
+    private void DefineLocation()
+    {
+        // Junk Code:
+        int _startLocationIndex = _mainBlock.text.IndexOf(_locationCodeList[0]) + _locationCodeList[0].Length;
+        int _endLocationIndex = _mainBlock.text.IndexOf(_locationCodeList[1]) - 1;
+        _locationHeight = Convert.ToInt32(_mainBlock.text.Substring(_startLocationIndex, _endLocationIndex - _startLocationIndex));
+        _startLocationIndex = _mainBlock.text.IndexOf(_locationCodeList[1]) + _locationCodeList[1].Length;
+        _endLocationIndex = _mainBlock.text.IndexOf(_locationCodeList[2]) - 1;
+        _blockHeight = Convert.ToInt32(_mainBlock.text.Substring(_startLocationIndex, _endLocationIndex - _startLocationIndex));
+        _startLocationIndex = _mainBlock.text.IndexOf(_locationCodeList[2]) + _locationCodeList[2].Length;
+        _endLocationIndex = _mainBlock.text.IndexOf('\n', _startLocationIndex) - 1;
+        _maxHeight = Convert.ToInt32(_mainBlock.text.Substring(_startLocationIndex, _endLocationIndex - _startLocationIndex));
     }
 
     private void DefineMainPageLength()
@@ -860,6 +892,7 @@ public class Candle : UdonSharpBehaviour
         }
 
         // Junk Code:
+        /*
         time += Time.deltaTime;
         if (time >= interpolationPeriod)
         {
@@ -870,6 +903,7 @@ public class Candle : UdonSharpBehaviour
                 HomeInfo();
             }
         }
+        */
     }
 
     private bool ProcessRichTextOverflow()
@@ -877,7 +911,8 @@ public class Candle : UdonSharpBehaviour
         // Calculate rich-text overflows for the new text block.
         if (_overflowPageIndex >= 0)
         {
-            _mainPageInfoTMP.text = $"LOADING... ({(_mainPageLength == 1 ? 100 : _mainPageIndex * 100 / (_mainPageLength - 1))}%)";
+            // Removed for now, distracts from reading.
+            // _mainCenterInfoTMP.text = $"LOADING... ({(_mainPageLength == 1 ? 100 : _mainPageIndex * 100 / (_mainPageLength - 1))}%)";
             LoopOverflowAudit();
 
             // Overflow audits are complete.
@@ -1050,8 +1085,8 @@ public class Candle : UdonSharpBehaviour
             // Define variables.
             int _tempPageIndex = _mainPageIndex;
             _mainPageIndex = 0;
-            _mainPageInfoTMP.text = "";
-            _mainPercentageInfoTMP.text = "";
+            _bottomLeftTMP.text = "";
+            _bottomRightTMP.text = "";
             RectTransform _rectTransform = _mainTMP.GetComponent<RectTransform>();
             _rectTransform.sizeDelta = new Vector2(_rectTransform.rect.height, _rectTransform.rect.width);
 
@@ -1082,8 +1117,8 @@ public class Candle : UdonSharpBehaviour
                 {
                     _candleGameObject.transform.Rotate(new Vector3(0f, 0f, -90f));
                 }
-                _mainPageInfoTMP = _verticalPageInfoTMP;
-                _mainPercentageInfoTMP = _verticalPercentageInfoTMP;
+                // _mainBottomLeftTMP = _bottomLeftTMP;
+                // _mainPercentageInfoTMP = _bottomRightTMP;
             }
 
             // Have clone mimic the main text component.
@@ -1166,7 +1201,6 @@ public class Candle : UdonSharpBehaviour
         ReplaceRichText();
         RemoveImageRichText();
         FlushLastCharText();
-        RefreshBottomGUI();
 
         // Insert all rich-text.
         if (_mainPageIndex > 0)
@@ -1186,7 +1220,50 @@ public class Candle : UdonSharpBehaviour
             _mainTMP.text = "";
             _mainPageIndex += isIncrement ? 1 : -1;
             DefinePage(_mainPageIndex, isIncrement);
+            return;
         }
+
+        // Junk Code (replaces RefreshBottomGUI() function):
+        int _locCurrent = Convert.ToInt32(Math.Max(1, Math.Floor((_locationHeight + _lastCharSliceList[_mainPageIndex]) / 100f)));
+        string _locStringRaw = $"Loc {_locCurrent}";
+
+        // If on page index 0, need to check last page index of previous block to see if same locString.
+        // If same locString, need to drill in while loops checking the last page indexes of each prior until they do not match.
+        // After that, add +1 to the locString for each positive drill that occured. 
+        // Same logic applies to the pages as well.
+        // Urgently need to remove when looping on overflow page index.
+        int _drillDepth = 1;
+        if (_mainPageIndex == 0)
+        {
+            while (_mainBlockIndex - _drillDepth >= 0)
+            {
+                _mainBlock = _mainBlockList[_mainBlockIndex - _drillDepth];
+                int _startLocationIndex = _mainBlock.text.IndexOf(_locationCodeList[0]) + _locationCodeList[0].Length;
+                int _endLocationIndex = _mainBlock.text.IndexOf(_locationCodeList[1]) - 1;
+                int _drillBlockHeight = Convert.ToInt32(_mainBlock.text.Substring(_startLocationIndex, _endLocationIndex - _startLocationIndex));
+                if (Math.Floor(_locationHeight / 100f) != Math.Floor(_drillBlockHeight / 100f))
+                {
+                    break;
+                }
+                _drillDepth++;
+            }
+        }
+        else
+        {
+            while (_mainPageIndex - _drillDepth >= 0)
+            {
+                int _drillPageHeight = _lastCharSliceList[_mainPageIndex - _drillDepth];
+                if (Math.Floor(_locationHeight / 100f) != Math.Floor(_drillPageHeight / 100f))
+                {
+                    break;
+                }
+                _drillDepth++;
+            }
+        }
+        _adjustedLocationHeight = _locCurrent + _drillDepth - 1;
+        _bottomLeftTMP.text = $"Loc {_adjustedLocationHeight}";
+        _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
+        RefreshBottomGUI();
     }
 
     private void ChangeBlock(bool isIncrement)
@@ -1210,17 +1287,36 @@ public class Candle : UdonSharpBehaviour
 
     private void RefreshBottomGUI()
     {
+        // Junk Code:
         // Refreshes the GUI text on the bottom of the page.
+
+        /*
+        // Display chapter header.
         string _blockName = _mainTextList[_mainBlockIndex].name;
         if (_blockName.IndexOf('-') >= 0)
         {
-            _mainPageInfoTMP.text = $"{_blockName.Substring(_blockName.IndexOf('-') + 2)}";
+            _mainCenterInfoTMP.text = $"{_blockName.Substring(_blockName.IndexOf('-') + 2)}";
         }
         else
         {
-            _mainPageInfoTMP.text = $"{_blockName}";
+            _mainCenterInfoTMP.text = $"{_blockName}";
         }
-        _mainPercentageInfoTMP.text = $"{(_mainPageLength == 1 ? 100 : _mainPageIndex * 100 / (_mainPageLength - 1))}%";
+        */
+
+        // Display how far we are into the book percentage-wise.
+        _adjustedMaxHeight = Convert.ToInt32(Math.Floor(_maxHeight / 100f));  // Convert.ToInt32(Math.Floor(_maxHeight / 100f));
+
+        double _checkMath = Math.Floor((double)_adjustedLocationHeight * 100 / (double)_adjustedMaxHeight);
+
+        // _mainCenterInfoTMP.text = "";  // Loop overflow audits complete.
+
+        // Debug.Log($"Percent Complete: {_checkMath}%"); // 
+        // _mainCenterInfoTMP.text = $"{_checkMath}%";
+        _bottomRightTMP.text = $"{ (_mainBlockIndex == 0 ? 0 : Convert.ToInt32(Math.Max(1, _checkMath))) }%";
+        _bottomRightCloneTMP.text = _bottomRightTMP.text;
+        // $"{Math.Round((double)_adjustedLocationHeight / (double)_adjustedMaxHeight) * 100}";  // $"{(Math.Min(_adjustedLocationHeight, _adjustedMaxHeight) / _adjustedMaxHeight) * 100f}%";
+
+        // Chapter Progress: _mainPercentageInfoTMP.text = $"{(_mainPageLength == 1 ? 100 : _mainPageIndex * 100 / (_mainPageLength - 1))}%";
     }
 
     private void RemoveImageRichText()  // Parallel Code.
@@ -1372,14 +1468,24 @@ public class Candle : UdonSharpBehaviour
             _mainTMP.text = "";
             _mainCloneTMP.text = "";
             _mainMenuGameObject.SetActive(true);
+            _backButtonGameObject.SetActive(false);
+            _topLeftTMP.gameObject.SetActive(false);
+            _topLeftCloneTMP.gameObject.SetActive(false);
             HomeInfo();
         }
     }
 
     public void HomeInfo()
     {
-        _mainPercentageInfoTMP.text = DateTime.Now.ToShortTimeString();
-        _verticalPageInfoTMP.text = "Home";
+        // _mainPercentageInfoTMP.text = DateTime.Now.ToShortTimeString();
+
+        // Junk Code: Keep displays to a minimum.
+        _topCenterTMP.text = "Home";
+        _topCenterCloneTMP.text = _topCenterTMP.text;
+        _bottomLeftTMP.text = "";
+        _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
+        _bottomRightTMP.text = "";
+        _bottomRightCloneTMP.text = _bottomRightTMP.text;
     }
 
     public void OptionsButton()
@@ -1519,6 +1625,9 @@ public class Candle : UdonSharpBehaviour
     {
         _mainMenuGameObject.SetActive(true);
         _confirmationMenuGameObject.SetActive(false);
+        _backButtonGameObject.SetActive(false);
+        _topLeftTMP.gameObject.SetActive(false);
+        _topLeftCloneTMP.gameObject.SetActive(false);
         BackButton();
     }
 
