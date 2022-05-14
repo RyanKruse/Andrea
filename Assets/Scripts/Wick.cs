@@ -27,7 +27,7 @@ public class Wick : MonoBehaviour
     [SerializeField] private bool _isFixedFontSizeOnly;
     [SerializeField] private bool _isFixedFontTypeOnly;
     [SerializeField] private bool _isSkipOrientation;
-    [SerializeField] private int _fixedFontIndex;
+    [SerializeField] private int _fixedFontSize;
     [SerializeField] private int _fixedFontType;
     [SerializeField] private int _fixedBlock;
     [SerializeField] private int _maxBlockRestrict;
@@ -48,7 +48,6 @@ public class Wick : MonoBehaviour
     [SerializeField] private int[] _fontSizeList = { 26, 30, 35 };
     [SerializeField] private char[] _bracketCharList = { ')', '.', '-', ':', '|', '•' };
     [SerializeField] private string[] _tabletOrientationList = { "V", "H" };
-    [SerializeField] private string[] _fontTypeList = { "Helvetica Neue SDF", "Tahoma Regular font SDF", "BaskervilleBT SDF" };
 
     [Header("Variables that are utilized in the entire workflow (Don't Populate).")]
     [SerializeField] private int _updateIndex;
@@ -290,9 +289,13 @@ public class Wick : MonoBehaviour
                 // Loops over font size.
                 for (int _fontSizeIndex = 0; _fontSizeIndex < _fontSizeList.Length; _fontSizeIndex++)
                 {
+                    if (_fontSizeList[_fontSizeIndex] == 0) continue;
+
                     // Loops over font type.
-                    for (int _fontTypeIndex = 0; _fontTypeIndex < _fontTypeList.Length; _fontTypeIndex++)
+                    for (int _fontTypeIndex = 0; _fontTypeIndex < _fontTypeAssetList.Length; _fontTypeIndex++)
                     {
+                        if (!_fontTypeAssetList[_fontTypeIndex]) continue;
+
                         PopulateBlock(_blockPathList, _textContent, _fontSizeIndex, _fontTypeIndex, _textPathIndex, _fontSizeList[_fontSizeIndex], _tabletOrientation, _fontTypeAssetList[_fontTypeIndex]);
                     }
                 }
@@ -307,7 +310,7 @@ public class Wick : MonoBehaviour
 
     private void PopulateBlock(string[] blockPathList, string textContent, int fontSizeIndex, int fontTypeIndex, int textPathIndex, int fontSize, string tabletOrientation, TMP_FontAsset fontTypeAsset)
     {
-        if ((_isFixedFontSizeOnly && fontSizeIndex != _fixedFontIndex) ||
+        if ((_isFixedFontSizeOnly && fontSizeIndex != _fixedFontSize) ||
             (_isFixedFontTypeOnly && fontTypeIndex != _fixedFontType)) return;
 
         // Debug.Log($"blockPathList: {blockPathList} | textContent: {textContent} | fontSizeIndex: {fontSizeIndex} | fontTypeIndex: {fontTypeIndex} | textPathIndex: {textPathIndex} | fontSize: {fontSize} | tabletOrientation: {tabletOrientation} | fontTypeAsset: {fontTypeAsset}");
@@ -369,6 +372,9 @@ public class Wick : MonoBehaviour
                     }
 
                     // Count rich texts.
+                    // If you see an error here, that means a '<' or '>' symbol was not matched in the text.
+                    // Double check the text to ensure that this symbol only appears for rich-text commands.
+                    // Double check the text to ensure that this symobol isn't accidently missing for one of the rich-text commands.
                     if (textContent[_index] == '<' || textContent[_index] == '>')
                     {
                         _isRichText = !_isRichText;

@@ -45,18 +45,22 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private GameObject _optionsMenuGameObject;
     // [SerializeField] private GameObject _blankScreenGameObject;
     [SerializeField] private GameObject _backButtonGameObject;
-    [SerializeField] private GameObject _helveticaTMPGameObject;
-    [SerializeField] private GameObject _helveticaCloneTMPGameObject;
-    [SerializeField] private GameObject _tahomaTMPGameObject;
-    [SerializeField] private GameObject _tahomaCloneTMPGameObject;
-    [SerializeField] private GameObject _baskervilleTMPGameObject;
-    [SerializeField] private GameObject _baskervilleCloneTMPGameObject;
     [SerializeField] private TextMeshProUGUI _helveticaTMP;
     [SerializeField] private TextMeshProUGUI _helveticaCloneTMP;
     [SerializeField] private TextMeshProUGUI _tahomaTMP;
     [SerializeField] private TextMeshProUGUI _tahomaCloneTMP;
     [SerializeField] private TextMeshProUGUI _baskervilleTMP;
     [SerializeField] private TextMeshProUGUI _baskervilleCloneTMP;
+    [SerializeField] private TextMeshProUGUI _timesTMP;
+    [SerializeField] private TextMeshProUGUI _timesCloneTMP;
+    [SerializeField] private TextMeshProUGUI _verdanaTMP;
+    [SerializeField] private TextMeshProUGUI _verdanaCloneTMP;
+    [SerializeField] private TextMeshProUGUI _avenirTMP;
+    [SerializeField] private TextMeshProUGUI _avenirCloneTMP;
+    [SerializeField] private TextMeshProUGUI _notoSansTMP;
+    [SerializeField] private TextMeshProUGUI _notoSansCloneTMP;
+    [SerializeField] private TextMeshProUGUI _notoSerifTMP;
+    [SerializeField] private TextMeshProUGUI _notoSerifCloneTMP;
     // [SerializeField] private TextMeshProUGUI _blankTahomaTMP;
     [SerializeField] private TextMeshProUGUI _bottomLeftTMP;
     [SerializeField] private TextMeshProUGUI _bottomLeftCloneTMP;
@@ -91,7 +95,8 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private int[] _fontSizeList = { 26, 30, 35 };
     [SerializeField] private char[] _badCharList = { '\n', ' ', '\t' };
     [SerializeField] private char[] _bracketCharList = { ')', '.', '-', ':', '|', '•' };
-    [SerializeField] private string[] _fontTypeList = { "Helvetica Neue SDF", "Tahoma Regular font SDF", "BaskervilleBT SDF" };
+    [SerializeField] private string[] _fontTypeList = { "Helvetica SDF", "Tahoma SDF", "Baskerville SDF", "Times SDF", 
+        "Verdana SDF", "Avenir SDF", "Noto Sans SDF", "Noto Serif SDF" };
     [SerializeField] private string[] _locationCodeList = { "LH:", "BH:", "MH:" };
 
     [Header("Variables that signal the state of Candle (Don't Populate).")]
@@ -110,8 +115,6 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private TextAsset _mainBlock;
     [SerializeField] private TextAsset[] _mainTextList;
     [SerializeField] private TextAsset[] _mainBlockList;
-    [SerializeField] private GameObject _mainTMPGameObject;
-    [SerializeField] private GameObject _mainCloneTMPGameObject;
     [SerializeField] private TextMeshProUGUI _mainTMP;
     [SerializeField] private TextMeshProUGUI _mainCloneTMP;
     [SerializeField] private TextMeshProUGUI _mainPreviousCloneTMP;
@@ -274,35 +277,59 @@ public class Candle : UdonSharpBehaviour
         PrepareOverflowAudit();
     }
 
+    // Changing font types too fast breaks the clones.
+    // Scrolling too fast skips the clones.
+    // Le problem with the font types on asian characters.
+    // Need to test fallbacks on font type indexes 0 - 5. 
+    // Maybe restrict fonts when bad characters detected? 
+
     private void DefineMainTMP()
     {
+        // Can simplify this by getting direct expressions stored in list instead.
         if (_mainTMP != null)
         {
             _mainTMP.text = "";
         }
         if (_defaultFontTypeIndex == 0)
         {
-            CopyRectTransform(_helveticaTMP, _helveticaCloneTMP);
+            // CopyRectTransform(_helveticaTMP, _helveticaCloneTMP);
             _mainTMP = _helveticaTMP;
             _mainCloneTMP = _helveticaCloneTMP;
-            _mainTMPGameObject = _helveticaTMPGameObject;
-            _mainCloneTMPGameObject = _helveticaCloneTMPGameObject;
         }
         else if (_defaultFontTypeIndex == 1)
         {
-            CopyRectTransform(_tahomaTMP, _tahomaCloneTMP);
             _mainTMP = _tahomaTMP;
             _mainCloneTMP = _tahomaCloneTMP;
-            _mainTMPGameObject = _tahomaTMPGameObject;
-            _mainCloneTMPGameObject = _tahomaCloneTMPGameObject;
         }
         else if (_defaultFontTypeIndex == 2)
         {
-            CopyRectTransform(_baskervilleTMP, _baskervilleCloneTMP);
             _mainTMP = _baskervilleTMP;
             _mainCloneTMP = _baskervilleCloneTMP;
-            _mainTMPGameObject = _baskervilleTMPGameObject;
-            _mainCloneTMPGameObject = _baskervilleCloneTMPGameObject;
+        }
+        else if (_defaultFontTypeIndex == 3)
+        {
+            _mainTMP = _timesTMP;
+            _mainCloneTMP = _timesCloneTMP;
+        }
+        else if (_defaultFontTypeIndex == 4)
+        {
+            _mainTMP = _verdanaTMP;
+            _mainCloneTMP = _verdanaCloneTMP;
+        }
+        else if (_defaultFontTypeIndex == 5)
+        {
+            _mainTMP = _avenirTMP;
+            _mainCloneTMP = _avenirCloneTMP;
+        }
+        else if (_defaultFontTypeIndex == 6)
+        {
+            _mainTMP = _notoSansTMP;
+            _mainCloneTMP = _notoSansCloneTMP;
+        }
+        else if (_defaultFontTypeIndex == 7)
+        {
+            _mainTMP = _notoSerifTMP;
+            _mainCloneTMP = _notoSerifCloneTMP;
         }
     }
 
@@ -388,7 +415,7 @@ public class Candle : UdonSharpBehaviour
         _overflowPageIndex = 0;
         _endCalibrationPageIndex = _mainPageIndex;
         _mainPageIndex = _overflowPageIndex;
-        _mainTMPGameObject.SetActive(false);
+        _mainTMP.gameObject.SetActive(false);
 
         // We want clone to appear when changing chapters.
         if (!_isOverflowAuditDefinePage)
@@ -437,8 +464,8 @@ public class Candle : UdonSharpBehaviour
             DefinePage(_mainPageIndex, true);
             _isOverflowAuditDefinePage = false;
         }
-        _mainTMPGameObject.SetActive(true);
-        _mainCloneTMPGameObject.SetActive(true);
+        _mainTMP.gameObject.SetActive(true);
+        _mainCloneTMP.gameObject.SetActive(true);
     }
 
     private void DecompressRichText(bool isAppendNewLine)
