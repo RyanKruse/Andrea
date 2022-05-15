@@ -1,14 +1,9 @@
 ﻿// Author: Ryan Kruse
 // VRChat: Clearly
-// Discord: Clearly#3238
+// Discord: Clearly Ryan#3238
 // GitHub: https://github.com/RyanKruse/Andrea
 // Booth: https://clearly.booth.pm/
 
-
-// Changing font types too fast breaks the clones.
-// Scrolling too fast skips the clones.
-// Scroll bar on main page (works in VR).
-// Last font type and font size index on Japanese block (block index: 2). Overflow?
 
 
 using UdonSharp;
