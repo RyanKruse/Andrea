@@ -1,0 +1,21 @@
+
+
+Language Packs & Fallbacks:
+
+The Korean language pack actually contains both Korean, Japanese, and Chinese characters encoded in the language pack. 
+Use this language pack as a substitute for 3 languages. It saves 30 MB from the download size had all 3 languages been added instead. 
+If you see text not being displayed, then try swapping the language packs around or adding more fallbacks.
+
+More fallbacks increase the download size for the prefab. The memory size of each language pack varies - choose only what's necessary.
+All fallbacks should be added to the Noto Sans and Noto Serif SDF files. These are the main language packs to handle fallbacks.
+There are several dozen language packs pre-downloaded. They are located in the Noto Sans Addons and Noto Serif Addons folders.
+
+When modifying an SDF file, you may need to drag-and-drop the SDF files into the inspectors components again (where they are populated) to update them.
+Modifications include changing the fallbacks, atlas sizes, multi-atlas options, etc.
+Deleting an SDF file and recompiling a new one from the original font type file requires drag-and-drop into the inspectors components again.
+
+Do not rename font type files (.ttf, .otf) until the font SDF files (.asset) have been generated.
+Generating an font SDF file from a renamed font type file will create a mismatch and lead to run-time errors.
+Once the SDF file has been generated, it is safe to rename files (.ttf, .otf, .asset).
+You can generate a dynamic SDF file from a font type automatically by pressing CTRL + SHIFT + F12.
+

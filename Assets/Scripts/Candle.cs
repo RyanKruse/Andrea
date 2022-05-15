@@ -5,6 +5,11 @@
 // Booth: https://clearly.booth.pm/
 
 
+// Changing font types too fast breaks the clones.
+// Scrolling too fast skips the clones.
+// Scroll bar on main page (works in VR).
+// Last font type and font size index on Japanese block (block index: 2). Overflow?
+
 
 using UdonSharp;
 using UnityEngine;
@@ -89,10 +94,10 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private AudioClip _backAudio;
 
     [Header("Lists that are already pre-defined (Set By C# Script).")]
-    [SerializeField] private int[] _header1FontSizePercentList = { 190, 175, 160 };
-    [SerializeField] private int[] _header2FontSizePercentList = { 140, 128, 120 };
-    [SerializeField] private int[] _header3FontSizePercentList = { 118, 115, 112 };
-    [SerializeField] private int[] _fontSizeList = { 26, 30, 35 };
+    [SerializeField] private int[] _header1FontSizePercentList = { 190, 175, 160, 150 };
+    [SerializeField] private int[] _header2FontSizePercentList = { 140, 128, 120, 115 };
+    [SerializeField] private int[] _header3FontSizePercentList = { 118, 115, 112, 110 };
+    [SerializeField] private int[] _fontSizeList = { 26, 30, 35, 40 };
     [SerializeField] private char[] _badCharList = { '\n', ' ', '\t' };
     [SerializeField] private char[] _bracketCharList = { ')', '.', '-', ':', '|', '•' };
     [SerializeField] private string[] _fontTypeList = { "Helvetica SDF", "Tahoma SDF", "Baskerville SDF", "Times SDF", 
@@ -276,12 +281,6 @@ public class Candle : UdonSharpBehaviour
         PopulateLastCharSliceList();
         PrepareOverflowAudit();
     }
-
-    // Changing font types too fast breaks the clones.
-    // Scrolling too fast skips the clones.
-    // Le problem with the font types on asian characters.
-    // Need to test fallbacks on font type indexes 0 - 5. 
-    // Maybe restrict fonts when bad characters detected? 
 
     private void DefineMainTMP()
     {

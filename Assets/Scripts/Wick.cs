@@ -42,10 +42,10 @@ public class Wick : MonoBehaviour
     [SerializeField] private TMP_FontAsset[] _fontTypeAssetList;
 
     [Header("Lists that are already pre-defined (Set By C# Script).")]
-    [SerializeField] private int[] _header1FontSizePercentList = { 190, 175, 160 };
-    [SerializeField] private int[] _header2FontSizePercentList = { 140, 128, 120 };
-    [SerializeField] private int[] _header3FontSizePercentList = { 118, 115, 112 };
-    [SerializeField] private int[] _fontSizeList = { 26, 30, 35 };
+    [SerializeField] private int[] _header1FontSizePercentList = { 190, 175, 160, 150};
+    [SerializeField] private int[] _header2FontSizePercentList = { 140, 128, 120, 115 };
+    [SerializeField] private int[] _header3FontSizePercentList = { 118, 115, 112, 110 };
+    [SerializeField] private int[] _fontSizeList = { 26, 30, 35, 40 };
     [SerializeField] private char[] _bracketCharList = { ')', '.', '-', ':', '|', '•' };
     [SerializeField] private string[] _tabletOrientationList = { "V", "H" };
 
