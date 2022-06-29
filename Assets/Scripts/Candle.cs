@@ -49,18 +49,14 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private TextMeshProUGUI _helveticaCloneTMP;
     [SerializeField] private TextMeshProUGUI _tahomaTMP;
     [SerializeField] private TextMeshProUGUI _tahomaCloneTMP;
-    [SerializeField] private TextMeshProUGUI _baskervilleTMP;
-    [SerializeField] private TextMeshProUGUI _baskervilleCloneTMP;
+    [SerializeField] private TextMeshProUGUI _notoSerifTMP;
+    [SerializeField] private TextMeshProUGUI _notoSerifCloneTMP;
     [SerializeField] private TextMeshProUGUI _timesTMP;
     [SerializeField] private TextMeshProUGUI _timesCloneTMP;
     [SerializeField] private TextMeshProUGUI _verdanaTMP;
     [SerializeField] private TextMeshProUGUI _verdanaCloneTMP;
     [SerializeField] private TextMeshProUGUI _avenirTMP;
     [SerializeField] private TextMeshProUGUI _avenirCloneTMP;
-    [SerializeField] private TextMeshProUGUI _notoSansTMP;
-    [SerializeField] private TextMeshProUGUI _notoSansCloneTMP;
-    [SerializeField] private TextMeshProUGUI _notoSerifTMP;
-    [SerializeField] private TextMeshProUGUI _notoSerifCloneTMP;
     // [SerializeField] private TextMeshProUGUI _blankTahomaTMP;
     [SerializeField] private TextMeshProUGUI _bottomLeftTMP;
     [SerializeField] private TextMeshProUGUI _bottomLeftCloneTMP;
@@ -88,15 +84,14 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private AudioClip _selectBookAudio;
     [SerializeField] private AudioClip _backAudio;
 
-    [Header("Lists that are already pre-defined (Set By C# Script).")]
-    [SerializeField] private int[] _header1FontSizePercentList = { 190, 175, 160, 150 };
-    [SerializeField] private int[] _header2FontSizePercentList = { 140, 128, 120, 115 };
-    [SerializeField] private int[] _header3FontSizePercentList = { 118, 115, 112, 110 };
-    [SerializeField] private int[] _fontSizeList = { 26, 30, 35, 40 };
+    [Header("Lists that are already pre-defined (Populate).")]
+    [SerializeField] private int[] _header1FontSizePercentList = { 175, 160, 150 };
+    [SerializeField] private int[] _header2FontSizePercentList = { 128, 120, 115 };
+    [SerializeField] private int[] _header3FontSizePercentList = { 115, 112, 110 };
+    [SerializeField] private int[] _fontSizeList = { 30, 35, 40 };
     [SerializeField] private char[] _badCharList = { '\n', ' ', '\t' };
     [SerializeField] private char[] _bracketCharList = { ')', '.', '-', ':', '|', '•' };
-    [SerializeField] private string[] _fontTypeList = { "Helvetica SDF", "Tahoma SDF", "Baskerville SDF", "Times SDF", 
-        "Verdana SDF", "Avenir SDF", "Noto Sans SDF", "Noto Serif SDF" };
+    [SerializeField] private string[] _fontTypeList = { "Helvetica SDF", "Tahoma SDF", "Noto Serif SDF", "Times SDF", "Verdana SDF", "Avenir SDF"};
     [SerializeField] private string[] _locationCodeList = { "LH:", "BH:", "MH:" };
 
     [Header("Variables that signal the state of Candle (Don't Populate).")]
@@ -140,7 +135,7 @@ public class Candle : UdonSharpBehaviour
     [SerializeField] private bool _isLeftTriggerActive;
 
     // JUNK VARIABLES:
-    private float time = 0.0f;
+    // private float time = 0.0f;
     public float interpolationPeriod = 5f;
     private Color _defaultColor;
     public Color _turnPageColor;
@@ -297,8 +292,8 @@ public class Candle : UdonSharpBehaviour
         }
         else if (_defaultFontTypeIndex == 2)
         {
-            _mainTMP = _baskervilleTMP;
-            _mainCloneTMP = _baskervilleCloneTMP;
+            _mainTMP = _notoSerifTMP;
+            _mainCloneTMP = _notoSerifCloneTMP;
         }
         else if (_defaultFontTypeIndex == 3)
         {
@@ -314,16 +309,6 @@ public class Candle : UdonSharpBehaviour
         {
             _mainTMP = _avenirTMP;
             _mainCloneTMP = _avenirCloneTMP;
-        }
-        else if (_defaultFontTypeIndex == 6)
-        {
-            _mainTMP = _notoSansTMP;
-            _mainCloneTMP = _notoSansCloneTMP;
-        }
-        else if (_defaultFontTypeIndex == 7)
-        {
-            _mainTMP = _notoSerifTMP;
-            _mainCloneTMP = _notoSerifCloneTMP;
         }
     }
 
@@ -1005,19 +990,19 @@ public class Candle : UdonSharpBehaviour
         if (_isRejectNumPadInputs) return;
 
         // Activate mouse scroll wheel for incrementing pages.
-        if (Input.GetKeyDown("[5]"))
+        if (Input.GetKeyDown("[5]") || Input.GetKeyDown("5"))
         {
             _isScrollWheelActive = !_isScrollWheelActive;
         }
 
         // Change text font size.
-        else if (Input.GetKeyDown("[4]"))
+        else if (Input.GetKeyDown("[4]") || Input.GetKeyDown("4"))
         {
             ChangeFontSize((_defaultFontSizeIndex + 1) % _fontSizeList.Length);
         }
 
         // Change text font type.
-        else if (Input.GetKeyDown("[6]"))
+        else if (Input.GetKeyDown("[6]") || Input.GetKeyDown("6"))
         {
             ChangeFontType((_defaultFontTypeIndex + 1) % _fontTypeList.Length);
         }
@@ -1059,6 +1044,8 @@ public class Candle : UdonSharpBehaviour
         {
             _mainTMP.text = "";
             Calibrate(0);
+            // Need to add loc logistics (find nearest loc before and after calibration)
+
             _isOverflowAuditDefinePage = true;
         }
     }
@@ -1079,6 +1066,8 @@ public class Candle : UdonSharpBehaviour
             _mainPreviousCloneTMP = _mainCloneTMP;
 
             Calibrate(0);
+            // Need to add loc logistics (find nearest loc before and after calibration)
+
             _isOverflowAuditDefinePage = true;
         }
     }
@@ -1093,7 +1082,7 @@ public class Candle : UdonSharpBehaviour
     private void OrientateTablet(string forceOrientate)  // Parallel Code.
     {
         return;  // Removing orientation logistics.
-
+        /*
         if (_isRejectNumPadInputs && forceOrientate == "0") return;
 
         // Rotate the tablet orientation. 
@@ -1159,6 +1148,7 @@ public class Candle : UdonSharpBehaviour
                 _isOverflowAuditDefinePage = true;
             }
         }
+        */
     }
 
     private void DefinePage(int pageIndexUnclamped, bool isIncrement)
@@ -1244,47 +1234,72 @@ public class Candle : UdonSharpBehaviour
             return;
         }
 
-        // Junk Code (replaces RefreshBottomGUI() function):
-        int _locCurrent = Convert.ToInt32(Math.Max(1, Math.Floor((_locationHeight + _lastCharSliceList[_mainPageIndex]) / 100f)));
-        string _locStringRaw = $"Loc {_locCurrent}";
+        if (_overflowPageIndex == -1)
+        {
+            // Junk Code (replaces RefreshBottomGUI() function):
+            int _locCurrent = Convert.ToInt32(Math.Max(1, Math.Floor((_locationHeight + _lastCharSliceList[_mainPageIndex]) / 100f)));
+            string _locStringRaw = $"Loc {_locCurrent}";
 
-        // If on page index 0, need to check last page index of previous block to see if same locString.
-        // If same locString, need to drill in while loops checking the last page indexes of each prior until they do not match.
-        // After that, add +1 to the locString for each positive drill that occured. 
-        // Same logic applies to the pages as well.
-        // Urgently need to remove when looping on overflow page index.
-        int _drillDepth = 1;
-        if (_mainPageIndex == 0)
-        {
-            while (_mainBlockIndex - _drillDepth >= 0)
+            // If on page index 0, need to check last page index of previous block to see if same locString.
+            // If same locString, need to drill in while loops checking the last page indexes of each prior until they do not match.
+            // After that, add +1 to the locString for each positive drill that occured. 
+            // Same logic applies to the pages as well.
+            // Urgently need to remove when looping on overflow page index.]
+
+            int _drillDepth = 1;
+
+            // Debug.Log($"Drill Depth Loop Activated.");
+
+            if (_mainPageIndex == 0)
             {
-                _mainBlock = _mainBlockList[_mainBlockIndex - _drillDepth];
-                int _startLocationIndex = _mainBlock.text.IndexOf(_locationCodeList[0]) + _locationCodeList[0].Length;
-                int _endLocationIndex = _mainBlock.text.IndexOf(_locationCodeList[1]) - 1;
-                int _drillBlockHeight = Convert.ToInt32(_mainBlock.text.Substring(_startLocationIndex, _endLocationIndex - _startLocationIndex));
-                if (Math.Floor(_locationHeight / 100f) != Math.Floor(_drillBlockHeight / 100f))
+                // Check to make sure we're not on block 0. Can't drill past it.
+                while (_mainBlockIndex - _drillDepth >= 0)
                 {
-                    break;
+                    // Get the block contents of the previous block.
+                    _mainBlock = _mainBlockList[_mainBlockIndex - _drillDepth];
+
+                    // Gets the exact global location index of last character in the block.
+                    int _startLocationIndex = _mainBlock.text.IndexOf(_locationCodeList[0]) + _locationCodeList[0].Length;
+
+                    int _endLocationIndex = _mainBlock.text.IndexOf(_locationCodeList[1]) - 1;
+
+
+                    int _locationHeightOfDrilledBlock = Convert.ToInt32(_mainBlock.text.Substring(_startLocationIndex, _endLocationIndex - _startLocationIndex));
+
+                    // Gets the exact global block index of last character in the block.
+                    int _startLocationIndex2 = _mainBlock.text.IndexOf(_locationCodeList[1]) + _locationCodeList[1].Length;
+
+                    int _endLocationIndex2 = _mainBlock.text.IndexOf(_locationCodeList[2]) - 1;
+
+
+                    int _blockHeightOfDrilledBlock = Convert.ToInt32(_mainBlock.text.Substring(_startLocationIndex2, _endLocationIndex2 - _startLocationIndex2));
+
+                    // Debug.Log($"_mainBlock: Skipped | _startLocationIndex: {_startLocationIndex} | _endLocationIndex: {_endLocationIndex} | _locationHeightOfDrilledBlock: {_locationHeightOfDrilledBlock} | _locationHeight: {_locationHeight} | _drillDepth: {_drillDepth}");
+
+                    if (Math.Floor(_locationHeight / 100f) != Math.Floor((_locationHeightOfDrilledBlock + _blockHeightOfDrilledBlock) / 100f))
+                    {
+                        break;
+                    }
+                    _drillDepth++;
                 }
-                _drillDepth++;
             }
-        }
-        else
-        {
-            while (_mainPageIndex - _drillDepth >= 0)
+            else
             {
-                int _drillPageHeight = _lastCharSliceList[_mainPageIndex - _drillDepth];
-                if (Math.Floor(_locationHeight / 100f) != Math.Floor(_drillPageHeight / 100f))
+                while (_mainPageIndex - _drillDepth >= 0)
                 {
-                    break;
+                    if (Math.Floor(_lastCharSliceList[_mainPageIndex] / 100f) != Math.Floor(_lastCharSliceList[_mainPageIndex - _drillDepth] / 100f))
+                    {
+                        break;
+                    }
+                    _drillDepth++;
                 }
-                _drillDepth++;
             }
+
+            _adjustedLocationHeight = _locCurrent + _drillDepth - 1;
+            _bottomLeftTMP.text = $"Loc {_adjustedLocationHeight}";
+            _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
+            RefreshBottomGUI();
         }
-        _adjustedLocationHeight = _locCurrent + _drillDepth - 1;
-        _bottomLeftTMP.text = $"Loc {_adjustedLocationHeight}";
-        _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
-        RefreshBottomGUI();
     }
 
     private void ChangeBlock(bool isIncrement)
@@ -1316,24 +1331,40 @@ public class Candle : UdonSharpBehaviour
         string _blockName = _mainTextList[_mainBlockIndex].name;
         if (_blockName.IndexOf('-') >= 0)
         {
-            _mainCenterInfoTMP.text = $"{_blockName.Substring(_blockName.IndexOf('-') + 2)}";
+            _bottomCenterTMP.text = $"{_blockName.Substring(_blockName.IndexOf('-') + 2)}";
+            _bottomCenterCloneTMP.text = $"{_blockName.Substring(_blockName.IndexOf('-') + 2)}";
         }
         else
         {
-            _mainCenterInfoTMP.text = $"{_blockName}";
+            _bottomCenterTMP.text = $"{_blockName}";
+            _bottomCenterCloneTMP.text = $"{_blockName}";
         }
         */
 
         // Display how far we are into the book percentage-wise.
         _adjustedMaxHeight = Convert.ToInt32(Math.Floor(_maxHeight / 100f));  // Convert.ToInt32(Math.Floor(_maxHeight / 100f));
 
-        double _checkMath = Math.Floor((double)_adjustedLocationHeight * 100 / (double)_adjustedMaxHeight);
+        double _checkMath = Math.Min(Math.Ceiling((double)_adjustedLocationHeight * 99 / (double)_adjustedMaxHeight), 99);
 
         // _mainCenterInfoTMP.text = "";  // Loop overflow audits complete.
 
         // Debug.Log($"Percent Complete: {_checkMath}%"); // 
         // _mainCenterInfoTMP.text = $"{_checkMath}%";
-        _bottomRightTMP.text = $"{ (_mainBlockIndex == 0 ? 0 : Convert.ToInt32(Math.Max(1, _checkMath))) }%";
+        // _bottomRightTMP.text = $"{ (_mainBlockIndex == 0 ? 0 : Convert.ToInt32(Math.Max(1, _checkMath))) }%";
+
+        if (_mainBlockIndex == _mainTextList.Length - 1 && _mainPageIndex == _mainPageLength - 1)
+        {
+            _bottomCenterTMP.text = "★";
+            _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
+            _bottomRightTMP.text = "100%";
+        }
+        else
+        {
+            _bottomCenterTMP.text = "";
+            _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
+            _bottomRightTMP.text = $"{Convert.ToInt32(Math.Max(1, _checkMath))}%";
+        }
+
         _bottomRightCloneTMP.text = _bottomRightTMP.text;
         // $"{Math.Round((double)_adjustedLocationHeight / (double)_adjustedMaxHeight) * 100}";  // $"{(Math.Min(_adjustedLocationHeight, _adjustedMaxHeight) / _adjustedMaxHeight) * 100f}%";
 
@@ -1505,8 +1536,11 @@ public class Candle : UdonSharpBehaviour
         _topCenterCloneTMP.text = _topCenterTMP.text;
         _bottomLeftTMP.text = "";
         _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
+        _bottomCenterTMP.text = "";
+        _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
         _bottomRightTMP.text = "";
         _bottomRightCloneTMP.text = _bottomRightTMP.text;
+
     }
 
     public void OptionsButton()
@@ -1555,11 +1589,35 @@ public class Candle : UdonSharpBehaviour
         }
     }
 
-    public void BaskervilleType()
+    public void NotoSerifType()
     {
         if (_defaultFontTypeIndex != 2)
         {
             ChangeFontType(2);
+        }
+    }
+
+    public void TimesType()
+    {
+        if (_defaultFontTypeIndex != 3)
+        {
+            ChangeFontType(3);
+        }
+    }
+
+    public void VerdanaType()
+    {
+        if (_defaultFontTypeIndex != 4)
+        {
+            ChangeFontType(4);
+        }
+    }
+
+    public void AvenirType()
+    {
+        if (_defaultFontTypeIndex != 5)
+        {
+            ChangeFontType(5);
         }
     }
 

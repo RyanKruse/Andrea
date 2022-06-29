@@ -124,6 +124,7 @@ MonoBehaviour:
   m_SourceFontFile: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
   m_AtlasPopulationMode: 1
   m_FaceInfo:
+    m_FaceIndex: 0
     m_FamilyName: Electronic Highway Sign
     m_StyleName: Regular
     m_PointSize: 144
@@ -1589,6 +1590,7 @@ MonoBehaviour:
   - {fileID: 28981121099961358}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
+  m_ClearDynamicDataOnBuild: 0
   m_UsedGlyphRects:
   - m_X: 0
     m_Y: 0
@@ -2056,7 +2058,8 @@ MonoBehaviour:
   m_FontFeatureTable:
     m_GlyphPairAdjustmentRecords: []
   fallbackFontAssets: []
-  m_FallbackFontAssetTable: []
+  m_FallbackFontAssetTable:
+  - {fileID: 11400000, guid: 0040437dd756bb748bc9a65c889e5120, type: 2}
   m_CreationSettings:
     sourceFontFileName: 
     sourceFontFileGUID: 8a2b9e2a607dd2143b58c44bc32410b4
@@ -2141,6 +2144,8 @@ Texture2D:
   m_TextureFormat: 1
   m_MipCount: 1
   m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_IsPreProcessed: 0
   m_StreamingMipmaps: 0
   m_StreamingMipmapsPriority: 0
   m_AlphaIsTransparency: 0

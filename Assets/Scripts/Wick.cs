@@ -42,10 +42,10 @@ public class Wick : MonoBehaviour
     [SerializeField] private TMP_FontAsset[] _fontTypeAssetList;
 
     [Header("Lists that are already pre-defined (Set By C# Script).")]
-    [SerializeField] private int[] _header1FontSizePercentList = { 190, 175, 160, 150};
-    [SerializeField] private int[] _header2FontSizePercentList = { 140, 128, 120, 115 };
-    [SerializeField] private int[] _header3FontSizePercentList = { 118, 115, 112, 110 };
-    [SerializeField] private int[] _fontSizeList = { 26, 30, 35, 40 };
+    [SerializeField] private int[] _header1FontSizePercentList = { 175, 160, 150};
+    [SerializeField] private int[] _header2FontSizePercentList = { 128, 120, 115 };
+    [SerializeField] private int[] _header3FontSizePercentList = { 115, 112, 110 };
+    [SerializeField] private int[] _fontSizeList = { 30, 35, 40 };
     [SerializeField] private char[] _bracketCharList = { ')', '.', '-', ':', '|', '•' };
     [SerializeField] private string[] _tabletOrientationList = { "V", "H" };
 
@@ -61,14 +61,31 @@ public class Wick : MonoBehaviour
     [SerializeField] private int _locationHeight;
     [SerializeField] private int _blockHeight;
     [SerializeField] private int _maxHeight;
+    [SerializeField] private int _defaultBookIndexCounter;
 
     private void DelayedStart()
     {
         // This executes after 10 frames have passed since Start().
-        DefineMainVariables();
-        PopulateStyleSheet();
-        PopulateTextPaths();
-        CompileBook();
+        if (_defaultBookIndex != -1)
+        {
+            DefineMainVariables();
+            PopulateStyleSheet();
+            PopulateTextPaths();
+            CompileBook();
+        }
+        else
+        {
+            _defaultBookIndex = 0;
+            // Runs until we error out.
+            while (_defaultBookIndex < 100)
+            {
+                DefineMainVariables();
+                PopulateStyleSheet();
+                PopulateTextPaths();
+                CompileBook();
+                _defaultBookIndex++;
+            }
+        }
     }
 
     private void DefineMainVariables()
