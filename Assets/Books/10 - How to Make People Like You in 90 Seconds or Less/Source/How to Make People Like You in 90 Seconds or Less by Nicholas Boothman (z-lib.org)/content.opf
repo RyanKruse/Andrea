@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="uuid_id">
+  <metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta name="calibre:rating" content="0.00"/>
+    <meta name="calibre:series_index" content="1"/>
+    <dc:language>UND</dc:language>
+    <dc:creator opf:file-as="Nicholas, Boothman," opf:role="aut">Boothman, Nicholas</dc:creator>
+    <meta name="calibre:timestamp" content="2010-06-03T17:06:35.918000+00:00"/>
+    <dc:title>How to Make People Like You In 90 Seconds Or Less</dc:title>
+    <meta name="cover" content="cover"/>
+    <dc:date>2010-06-03T04:00:00+00:00</dc:date>
+    <dc:contributor opf:role="bkp">calibre (0.6.52) [http://calibre-ebook.com]</dc:contributor>
+    <dc:identifier opf:scheme="ISBN">076111940X</dc:identifier>
+    <dc:identifier id="uuid_id" opf:scheme="uuid">10a9af01-b764-4190-b9c1-6f3db69b6eba</dc:identifier>
+  </metadata>
+  <manifest>
+    <item href="OEBPS/part1.xhtml" id="part1" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part10.xhtml" id="part10" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part11.xhtml" id="part11" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part12.xhtml" id="part12" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part13.xhtml" id="part13" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part14.xhtml" id="part14" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part15.xhtml" id="part15" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part16.xhtml" id="part16" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part17.xhtml" id="part17" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part18.xhtml" id="part18" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part19.xhtml" id="part19" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part2.xhtml" id="part2" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part20.xhtml" id="part20" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part21.xhtml" id="part21" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part22.xhtml" id="part22" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part23.xhtml" id="part23" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part24.xhtml" id="part24" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part25.xhtml" id="part25" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part26.xhtml" id="part26" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part27.xhtml" id="part27" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part28.xhtml" id="part28" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part29.xhtml" id="part29" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part3.xhtml" id="part3" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part30.xhtml" id="part30" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part31.xhtml" id="part31" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part32.xhtml" id="part32" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part33.xhtml" id="part33" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part34.xhtml" id="part34" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part35.xhtml" id="part35" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part36.xhtml" id="part36" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part37.xhtml" id="part37" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part38.xhtml" id="part38" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part39.xhtml" id="part39" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part4.xhtml" id="part4" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part40.xhtml" id="part40" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part5.xhtml" id="part5" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part6.xhtml" id="part6" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part7.xhtml" id="part7" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part8.xhtml" id="part8" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/part9.xhtml" id="part9" media-type="application/xhtml+xml"/>
+    <item href="OEBPS/title.xhtml" id="title" media-type="application/xhtml+xml"/>
+    <item href="cover.jpeg" id="cover" media-type="image/jpeg"/>
+    <item href="stylesheet.css" id="css" media-type="text/css"/>
+    <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" media-type="application/x-dtbncx+xml" id="ncx"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="titlepage"/>
+    <itemref idref="title"/>
+    <itemref idref="part1"/>
+    <itemref idref="part2"/>
+    <itemref idref="part3"/>
+    <itemref idref="part4"/>
+    <itemref idref="part5"/>
+    <itemref idref="part6"/>
+    <itemref idref="part7"/>
+    <itemref idref="part8"/>
+    <itemref idref="part9"/>
+    <itemref idref="part10"/>
+    <itemref idref="part11"/>
+    <itemref idref="part12"/>
+    <itemref idref="part13"/>
+    <itemref idref="part14"/>
+    <itemref idref="part15"/>
+    <itemref idref="part16"/>
+    <itemref idref="part17"/>
+    <itemref idref="part18"/>
+    <itemref idref="part19"/>
+    <itemref idref="part20"/>
+    <itemref idref="part21"/>
+    <itemref idref="part22"/>
+    <itemref idref="part23"/>
+    <itemref idref="part24"/>
+    <itemref idref="part25"/>
+    <itemref idref="part26"/>
+    <itemref idref="part27"/>
+    <itemref idref="part28"/>
+    <itemref idref="part29"/>
+    <itemref idref="part30"/>
+    <itemref idref="part31"/>
+    <itemref idref="part32"/>
+    <itemref idref="part33"/>
+    <itemref idref="part34"/>
+    <itemref idref="part35"/>
+    <itemref idref="part36"/>
+    <itemref idref="part37"/>
+    <itemref idref="part38"/>
+    <itemref idref="part39"/>
+    <itemref idref="part40"/>
+  </spine>
+  <guide>
+    <reference href="titlepage.xhtml" type="cover" title="Cover"/>
+  </guide>
+</package>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
+<head>
+<meta name="dtb:uid" content="9781501111129"/>
+<meta name="dtb:depth" content="1"/>
+<meta name="dtb:totalPageCount" content="0"/>
+<meta name="dtb:maxPageNumber" content="0"/>
+</head>
+<docTitle>
+<text>Grit</text>
+</docTitle>
+<navMap>
+<navPoint id="i1" playOrder="1">
+<navLabel>
+<text>Cover</text>
+</navLabel>
+<content src="xhtml/cover.html"/>
+</navPoint>
+<navPoint id="i2" playOrder="2">
+<navLabel>
+<text>Dedication</text>
+</navLabel>
+<content src="xhtml/ded.html"/>
+</navPoint>
+<navPoint id="i3" playOrder="3">
+<navLabel>
+<text>Preface</text>
+</navLabel>
+<content src="xhtml/pref01.html"/>
+</navPoint>
+<navPoint id="i4" playOrder="4">
+<navLabel>
+<text>Part I: What Grit Is and Why It Matters</text>
+</navLabel>
+<content src="xhtml/part01.html"/>
+<navPoint id="i5" playOrder="5">
+<navLabel>
+<text>Chapter 1: Showing Up</text>
+</navLabel>
+<content src="xhtml/ch01.html"/>
+</navPoint>
+<navPoint id="i6" playOrder="6">
+<navLabel>
+<text>Chapter 2: Distracted by Talent</text>
+</navLabel>
+<content src="xhtml/ch02.html"/>
+</navPoint>
+<navPoint id="i7" playOrder="7">
+<navLabel>
+<text>Chapter 3: Effort Counts Twice</text>
+</navLabel>
+<content src="xhtml/ch03.html"/>
+</navPoint>
+<navPoint id="i8" playOrder="8">
+<navLabel>
+<text>Chapter 4: How Gritty Are You?</text>
+</navLabel>
+<content src="xhtml/ch04.html"/>
+</navPoint>
+<navPoint id="i9" playOrder="9">
+<navLabel>
+<text>Chapter 5: Grit Grows</text>
+</navLabel>
+<content src="xhtml/ch05.html"/>
+</navPoint>
+</navPoint>
+<navPoint id="i10" playOrder="10">
+<navLabel>
+<text>Part II: Growing Grit from the Inside Out</text>
+</navLabel>
+<content src="xhtml/part02.html"/>
+<navPoint id="i11" playOrder="11">
+<navLabel>
+<text>Chapter 6: Interest</text>
+</navLabel>
+<content src="xhtml/ch06.html"/>
+</navPoint>
+<navPoint id="i12" playOrder="12">
+<navLabel>
+<text>Chapter 7: Practice</text>
+</navLabel>
+<content src="xhtml/ch07.html"/>
+</navPoint>
+<navPoint id="i13" playOrder="13">
+<navLabel>
+<text>Chapter 8: Purpose</text>
+</navLabel>
+<content src="xhtml/ch08.html"/>
+</navPoint>
+<navPoint id="i14" playOrder="14">
+<navLabel>
+<text>Chapter 9: Hope</text>
+</navLabel>
+<content src="xhtml/ch09.html"/>
+</navPoint>
+</navPoint>
+<navPoint id="i15" playOrder="15">
+<navLabel>
+<text>Part III: Growing Grit from the Outside In</text>
+</navLabel>
+<content src="xhtml/part03.html"/>
+<navPoint id="i16" playOrder="16">
+<navLabel>
+<text>Chapter 10: Parenting For Grit</text>
+</navLabel>
+<content src="xhtml/ch10.html"/>
+</navPoint>
+<navPoint id="i17" playOrder="17">
+<navLabel>
+<text>Chapter 11: The Playing Fields of Grit</text>
+</navLabel>
+<content src="xhtml/ch11.html"/>
+</navPoint>
+<navPoint id="i18" playOrder="18">
+<navLabel>
+<text>Chapter 12: A Culture of Grit</text>
+</navLabel>
+<content src="xhtml/ch12.html"/>
+</navPoint>
+<navPoint id="i19" playOrder="19">
+<navLabel>
+<text>Chapter 13: Conclusion</text>
+</navLabel>
+<content src="xhtml/ch13.html"/>
+</navPoint>
+</navPoint>
+<navPoint id="i20" playOrder="20">
+<navLabel>
+<text>Acknowledgments</text>
+</navLabel>
+<content src="xhtml/ack.html"/>
+</navPoint>
+<navPoint id="i21" playOrder="21">
+<navLabel>
+<text>Recommended Reading</text>
+</navLabel>
+<content src="xhtml/back01.html"/>
+</navPoint>
+<navPoint id="i22" playOrder="22">
+<navLabel>
+<text>About the Author</text>
+</navLabel>
+<content src="xhtml/author.html"/>
+</navPoint>
+<navPoint id="i23" playOrder="23">
+<navLabel>
+<text>Notes</text>
+</navLabel>
+<content src="xhtml/notes.html"/>
+</navPoint>
+<navPoint id="i24" playOrder="24">
+<navLabel>
+<text>Index</text>
+</navLabel>
+<content src="xhtml/index.html"/>
+</navPoint>
+<navPoint id="i25" playOrder="25">
+<navLabel>
+<text>Copyright</text>
+</navLabel>
+<content src="xhtml/copy.html"/>
+</navPoint>
+</navMap>
+</ncx>

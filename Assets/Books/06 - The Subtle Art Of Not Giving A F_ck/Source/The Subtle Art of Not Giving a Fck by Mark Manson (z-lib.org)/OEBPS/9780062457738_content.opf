@@ -1,0 +1,71 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="3.0" xml:lang="en">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+<dc:creator opf:role="aut" opf:file-as="Manson, Mark">Mark Manson</dc:creator>
+<meta name="cover" content="x9780062457738_Cover.jpg"/>
+<dc:title>The Subtle Art of Not Giving a F*ck</dc:title>
+<dc:date>2016-08-07T23:00:00+00:00</dc:date>
+<dc:identifier id="bookid">9780062457738</dc:identifier>
+<dc:rights>All rights reserved</dc:rights>
+<dc:publisher>HarperCollins</dc:publisher>
+<meta property="dcterms:modified">2016-08-08T03:10:11Z</meta>
+<meta name="cover" content="cover-image"/>
+<description xmlns="http://purl.org/dc/elements/1.1/">&lt;p&gt;In this generation-defining self-help guide, a superstar blogger cuts through the crap to show us how to stop trying to be "positive" all the time so that we can truly become better, happier people.&lt;/p&gt;&lt;p&gt;For decades, we've been told that positive thinking is the key to a happy, rich life. "F**k positivity," Mark Manson says. "Let's be honest, shit is f**ked and we have to live with it." In his wildly popular Internet blog, Mason doesn't sugarcoat or equivocate. He tells it like it is&amp;#8212;a dose of raw, refreshing, honest truth that is sorely lacking today. The Subtle Art of Not Giving a F**k is his antidote to the coddling, let's-all-feel-good mindset that has infected American society and spoiled a generation, rewarding them with gold medals just for showing up. &lt;/p&gt;&lt;p&gt;Manson makes the argument, backed both by academic research and well-timed poop jokes, that improving our lives hinges not on our ability to turn lemons into lemonade, but on learning to stomach lemons...</description>
+<meta name="calibre:title_sort" content="The Subtle Art of Not Giving a F*ck"/>
+<dc:contributor opf:role="bkp">calibre (2.50.0) [http://calibre-ebook.com]</dc:contributor>
+<meta name="calibre:author_link_map" content="{&quot;Mark Manson&quot;: &quot;&quot;}"/>
+<dc:language>en</dc:language>
+<dc:identifier opf:scheme="calibre">1b7605e3-8e03-474e-855d-0aeede6c96b1</dc:identifier>
+</metadata>
+<manifest>
+<item href="text/9780062457738_Cover.xhtml" id="cover" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_Title.xhtml" id="x9780062457738" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_Chapter_1.xhtml" id="x9780062457738-2" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_Chapter_2.xhtml" id="x9780062457738-3" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_Chapter_3.xhtml" id="x9780062457738-4" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_Chapter_4.xhtml" id="x9780062457738-5" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_Chapter_5.xhtml" id="x9780062457738-6" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_Chapter_6.xhtml" id="x9780062457738-7" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_Chapter_7.xhtml" id="x9780062457738-8" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_Chapter_8.xhtml" id="x9780062457738-9" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_Chapter_9.xhtml" id="x9780062457738-10" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_Acknowledgments.xhtml" id="x9780062457738-11" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_BA1.xhtml" id="BA1" media-type="application/xhtml+xml"/>
+<item href="text/About_the_Author.xhtml" id="x9780062457738-12" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_Credits.xhtml" id="x9780062457738-13" media-type="application/xhtml+xml"/>
+<item href="text/9780062457738_Copyright.xhtml" id="x9780062457738-14" media-type="application/xhtml+xml"/>
+<item href="text/About_the_Publisher.xhtml" id="x9780062457738-15" media-type="application/xhtml+xml"/>
+<item href="9780062457738_toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+<item href="text/nav.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+<item href="styles/9780062457738_template.css" id="x9780062457738_Template.css" media-type="text/css"/>
+<item href="images/9780062457738_Cover.jpg" id="cover-image" media-type="image/jpeg" properties="cover-image"/>
+<item href="images/HO_cip.jpg" id="HO_cip.jpg" media-type="image/jpeg"/>
+<item href="images/bookperk-boba-V1.jpg" id="bookperk-boba-V1.jpg" media-type="image/jpeg"/>
+<item href="images/Titlepage.jpg" id="Titlepage.jpg" media-type="image/jpeg"/>
+</manifest>
+<spine toc="ncx">
+<itemref idref="cover"/>
+<itemref idref="x9780062457738"/>
+<itemref idref="toc"/>
+<itemref idref="x9780062457738-2"/>
+<itemref idref="x9780062457738-3"/>
+<itemref idref="x9780062457738-4"/>
+<itemref idref="x9780062457738-5"/>
+<itemref idref="x9780062457738-6"/>
+<itemref idref="x9780062457738-7"/>
+<itemref idref="x9780062457738-8"/>
+<itemref idref="x9780062457738-9"/>
+<itemref idref="x9780062457738-10"/>
+<itemref idref="x9780062457738-11"/>
+<itemref idref="x9780062457738-12"/>
+<itemref idref="BA1"/>
+<itemref idref="x9780062457738-13"/>
+<itemref idref="x9780062457738-14"/>
+<itemref idref="x9780062457738-15"/>
+</spine>
+<guide>
+<reference href="text/9780062457738_Cover.xhtml" title="Cover Image" type="cover"/>
+<reference href="text/nav.xhtml" title="Table of Contents" type="toc"/>
+<reference href="text/9780062457738_Title.xhtml" title="Start" type="text"/>
+</guide>
+</package>

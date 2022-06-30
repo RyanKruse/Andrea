@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
+<head>
+<meta name="dtb:uid" content="9780007369867"/>
+<meta name="dtb:depth" content="2"/>
+<meta name="dtb:totalPageCount" content="352"/>
+<meta name="dtb:maxPageNumber" content="352"/>
+</head>
+<docTitle><text>How to Talk to Anyone</text></docTitle>
+<docAuthor><text>Leil Lowndes</text></docAuthor>
+<navMap>
+<navPoint id="ncx1" playOrder="1"><navLabel><text>Title Page</text></navLabel><content src="xhtml/title.html"/></navPoint>
+<navPoint id="ncx2" playOrder="2"><navLabel><text>Also by Leil Lowndes</text></navLabel><content src="xhtml/also_by.html"/></navPoint>
+<navPoint id="ncx3" playOrder="3"><navLabel><text>Contents</text></navLabel><content src="xhtml/contents.html"/></navPoint>
+<navPoint id="ncx4" playOrder="4"><navLabel><text>Preface: Having it All</text></navLabel><content src="xhtml/preface.html#pre"/></navPoint>
+<navPoint id="ncx5" playOrder="5"><navLabel><text>Part One: You Only have Ten Seconds to Show You&#8217;re a Somebody</text></navLabel><content src="xhtml/part01.html"/>
+<navPoint id="ncx6" playOrder="6"><navLabel><text>The Incredible, Inescapable, Unique Essence of You</text></navLabel><content src="xhtml/part01.html#part01"/></navPoint>
+<navPoint id="ncx7" playOrder="7"><navLabel><text>1 The Flooding Smile</text></navLabel><content src="xhtml/chapter01.html#ch1"/></navPoint>
+<navPoint id="ncx8" playOrder="8"><navLabel><text>2 Sticky Eyes</text></navLabel><content src="xhtml/chapter02.html#ch2"/></navPoint>
+<navPoint id="ncx9" playOrder="9"><navLabel><text>3 Epoxy Eyes</text></navLabel><content src="xhtml/chapter03.html#ch3"/></navPoint>
+<navPoint id="ncx10" playOrder="10"><navLabel><text>4 Hang by Your Teeth</text></navLabel><content src="xhtml/chapter04.html#ch4"/></navPoint>
+<navPoint id="ncx11" playOrder="11"><navLabel><text>5 The Big-baby Pivot</text></navLabel><content src="xhtml/chapter05.html#ch5"/></navPoint>
+<navPoint id="ncx12" playOrder="12"><navLabel><text>6 Hello Old Friend</text></navLabel><content src="xhtml/chapter06.html#ch6"/></navPoint>
+<navPoint id="ncx13" playOrder="13"><navLabel><text>7 Limit the Fidget</text></navLabel><content src="xhtml/chapter07.html#ch7"/></navPoint>
+<navPoint id="ncx14" playOrder="14"><navLabel><text>8 Hans&#8217;s Horse Sense</text></navLabel><content src="xhtml/chapter08.html#ch8"/></navPoint>
+<navPoint id="ncx15" playOrder="15"><navLabel><text>9 Watch the Scene Before You Make the Scene</text></navLabel><content src="xhtml/chapter09.html#ch9"/></navPoint></navPoint>
+<navPoint id="ncx16" playOrder="16"><navLabel><text>Part Two: What Do I Say After I Say &#8216;Hello&#8217;?</text></navLabel><content src="xhtml/part02.html"/>
+<navPoint id="ncx17" playOrder="17"><navLabel><text>Small Talk, Your Verbal Welcome Mat</text></navLabel><content src="xhtml/part02.html#part02"/></navPoint>
+<navPoint id="ncx18" playOrder="18"><navLabel><text>10 The Mood Match</text></navLabel><content src="xhtml/chapter10.html#ch10"/></navPoint>
+<navPoint id="ncx19" playOrder="19"><navLabel><text>11 Prosaic with Passion</text></navLabel><content src="xhtml/chapter11.html#ch11"/></navPoint>
+<navPoint id="ncx20" playOrder="20"><navLabel><text>12 Always Wear a Whatzit</text></navLabel><content src="xhtml/chapter12.html#ch12"/></navPoint>
+<navPoint id="ncx21" playOrder="21"><navLabel><text>13 Whoozat?</text></navLabel><content src="xhtml/chapter13.html#ch13"/></navPoint>
+<navPoint id="ncx22" playOrder="22"><navLabel><text>14 Eavesdrop in</text></navLabel><content src="xhtml/chapter14.html#ch14"/></navPoint>
+<navPoint id="ncx23" playOrder="23"><navLabel><text>15 Never the Naked City</text></navLabel><content src="xhtml/chapter15.html#ch15"/></navPoint>
+<navPoint id="ncx24" playOrder="24"><navLabel><text>16 Never the Naked Job</text></navLabel><content src="xhtml/chapter16.html#ch16"/></navPoint>
+<navPoint id="ncx25" playOrder="25"><navLabel><text>17 Never the Naked Introduction</text></navLabel><content src="xhtml/chapter17.html#ch17"/></navPoint>
+<navPoint id="ncx26" playOrder="26"><navLabel><text>18 Be a Word Detective</text></navLabel><content src="xhtml/chapter18.html#ch18"/></navPoint>
+<navPoint id="ncx27" playOrder="27"><navLabel><text>19 The Swivelling Spotlight</text></navLabel><content src="xhtml/chapter19.html#ch19"/></navPoint>
+<navPoint id="ncx28" playOrder="28"><navLabel><text>20 Parroting</text></navLabel><content src="xhtml/chapter20.html#ch20"/></navPoint>
+<navPoint id="ncx29" playOrder="29"><navLabel><text>21 Encore!</text></navLabel><content src="xhtml/chapter21.html#ch21"/></navPoint>
+<navPoint id="ncx30" playOrder="30"><navLabel><text>22 Ac-cen-tu-ate the Pos-i-tive</text></navLabel><content src="xhtml/chapter22.html#ch22"/></navPoint>
+<navPoint id="ncx31" playOrder="31"><navLabel><text>23 The Latest News &#8230; Don&#8217;t Leave Home Without it</text></navLabel><content src="xhtml/chapter23.html#ch23"/></navPoint></navPoint>
+<navPoint id="ncx32" playOrder="32"><navLabel><text>Part Three: How to Talk Like the Big Boys &#8217;n&#8217; Girls</text></navLabel><content src="xhtml/part03.html"/>
+<navPoint id="ncx33" playOrder="33"><navLabel><text>Welcome to the Human Jungle</text></navLabel><content src="xhtml/part03.html#part03"/></navPoint>
+<navPoint id="ncx34" playOrder="34"><navLabel><text>24 What do You do &#8211; NOT!</text></navLabel><content src="xhtml/chapter24.html#ch24"/></navPoint>
+<navPoint id="ncx35" playOrder="35"><navLabel><text>25 The Nutshell Resume</text></navLabel><content src="xhtml/chapter25.html#ch25"/></navPoint>
+<navPoint id="ncx36" playOrder="36"><navLabel><text>26 Your Personal Thesaurus</text></navLabel><content src="xhtml/chapter26.html#ch26"/></navPoint>
+<navPoint id="ncx37" playOrder="37"><navLabel><text>27 Kill the Quick &#8216;Me, Too!&#8217;</text></navLabel><content src="xhtml/chapter27.html#ch27"/></navPoint>
+<navPoint id="ncx38" playOrder="38"><navLabel><text>28 Comm-YOU-nication</text></navLabel><content src="xhtml/chapter28.html#ch28"/></navPoint>
+<navPoint id="ncx39" playOrder="39"><navLabel><text>29 The Exclusive Smile</text></navLabel><content src="xhtml/chapter29.html#ch29"/></navPoint>
+<navPoint id="ncx40" playOrder="40"><navLabel><text>30 Don&#8217;t Touch a Clich&#233; with a Ten-foot Pole</text></navLabel><content src="xhtml/chapter30.html#ch30"/></navPoint>
+<navPoint id="ncx41" playOrder="41"><navLabel><text>31 Use Jawsmith&#8217;s Jive</text></navLabel><content src="xhtml/chapter31.html#ch31"/></navPoint>
+<navPoint id="ncx42" playOrder="42"><navLabel><text>32 Call a Spade a Spade</text></navLabel><content src="xhtml/chapter32.html#ch32"/></navPoint>
+<navPoint id="ncx43" playOrder="43"><navLabel><text>33 Trash the Teasing</text></navLabel><content src="xhtml/chapter33.html#ch33"/></navPoint>
+<navPoint id="ncx44" playOrder="44"><navLabel><text>34 It&#8217;s the Receiver&#8217;s Ball</text></navLabel><content src="xhtml/chapter34.html#ch34"/></navPoint>
+<navPoint id="ncx45" playOrder="45"><navLabel><text>35 The Broken Record</text></navLabel><content src="xhtml/chapter35.html#ch35"/></navPoint>
+<navPoint id="ncx46" playOrder="46"><navLabel><text>36 Big Shots Don&#8217;t Slobber</text></navLabel><content src="xhtml/chapter36.html#ch36"/></navPoint>
+<navPoint id="ncx47" playOrder="47"><navLabel><text>37 Never the Naked Thank You</text></navLabel><content src="xhtml/chapter37.html#ch37"/></navPoint></navPoint>
+<navPoint id="ncx48" playOrder="48"><navLabel><text>Part Four: How to be an Insider in Any Crowd</text></navLabel><content src="xhtml/part04.html"/>
+<navPoint id="ncx49" playOrder="49"><navLabel><text>What are They All Talking About?</text></navLabel><content src="xhtml/part04.html#part04"/></navPoint>
+<navPoint id="ncx50" playOrder="50"><navLabel><text>38 Scramble Therapy</text></navLabel><content src="xhtml/chapter38.html#ch38"/></navPoint>
+<navPoint id="ncx51" playOrder="51"><navLabel><text>39 Learn a Little Gobbledygook</text></navLabel><content src="xhtml/chapter39.html#ch39"/></navPoint>
+<navPoint id="ncx52" playOrder="52"><navLabel><text>40 Baring their Hot Button</text></navLabel><content src="xhtml/chapter40.html#ch40"/></navPoint>
+<navPoint id="ncx53" playOrder="53"><navLabel><text>41 Read their Rags</text></navLabel><content src="xhtml/chapter41.html#ch41"/></navPoint>
+<navPoint id="ncx54" playOrder="54"><navLabel><text>42 Clear &#8216;Custom&#8217;</text></navLabel><content src="xhtml/chapter42.html#ch42"/></navPoint>
+<navPoint id="ncx55" playOrder="55"><navLabel><text>43 Bluffing for Bargains</text></navLabel><content src="xhtml/chapter43.html#ch43"/></navPoint></navPoint>
+<navPoint id="ncx56" playOrder="56"><navLabel><text>Part Five: Why, We&#8217;re Just Alike!</text></navLabel><content src="xhtml/part05.html"/>
+<navPoint id="ncx57" playOrder="57"><navLabel><text>We&#8217;re like Peas in a Pod</text></navLabel><content src="xhtml/part05.html#part05"/></navPoint>
+<navPoint id="ncx58" playOrder="58"><navLabel><text>44 Be a Copycat</text></navLabel><content src="xhtml/chapter44.html#ch44"/></navPoint>
+<navPoint id="ncx59" playOrder="59"><navLabel><text>45 Echoing</text></navLabel><content src="xhtml/chapter45.html#ch45"/></navPoint>
+<navPoint id="ncx60" playOrder="60"><navLabel><text>46 Potent Imaging</text></navLabel><content src="xhtml/chapter46.html#ch46"/></navPoint>
+<navPoint id="ncx61" playOrder="61"><navLabel><text>47 Employ Empathizers</text></navLabel><content src="xhtml/chapter47.html#ch47"/></navPoint>
+<navPoint id="ncx62" playOrder="62"><navLabel><text>48 Anatomically Correct Empathizers</text></navLabel><content src="xhtml/chapter48.html#ch48"/></navPoint>
+<navPoint id="ncx63" playOrder="63"><navLabel><text>49 The Premature We</text></navLabel><content src="xhtml/chapter49.html#ch49"/></navPoint>
+<navPoint id="ncx64" playOrder="64"><navLabel><text>50 Instant History</text></navLabel><content src="xhtml/chapter50.html#ch50"/></navPoint></navPoint>
+<navPoint id="ncx65" playOrder="65"><navLabel><text>Part Six: The Power of Praise, the Folly of Flattery</text></navLabel><content src="xhtml/part06.html"/>
+<navPoint id="ncx66" playOrder="66"><navLabel><text>Praise Reappraised</text></navLabel><content src="xhtml/part06.html#part06"/></navPoint>
+<navPoint id="ncx67" playOrder="67"><navLabel><text>51 Grapevine Glory</text></navLabel><content src="xhtml/chapter51.html#ch51"/></navPoint>
+<navPoint id="ncx68" playOrder="68"><navLabel><text>52 Carrier Pigeon Kudos</text></navLabel><content src="xhtml/chapter52.html#ch52"/></navPoint>
+<navPoint id="ncx69" playOrder="69"><navLabel><text>53 Implied Magnificence</text></navLabel><content src="xhtml/chapter53.html#ch53"/></navPoint>
+<navPoint id="ncx70" playOrder="70"><navLabel><text>54 Accidental Adulation</text></navLabel><content src="xhtml/chapter54.html#ch54"/></navPoint>
+<navPoint id="ncx71" playOrder="71"><navLabel><text>55 The Killer Compliment</text></navLabel><content src="xhtml/chapter55.html#ch55"/></navPoint>
+<navPoint id="ncx72" playOrder="72"><navLabel><text>56 Little Strokes</text></navLabel><content src="xhtml/chapter56.html#ch56"/></navPoint>
+<navPoint id="ncx73" playOrder="73"><navLabel><text>57 The Knee-jerk &#8216;Wow!&#8217;</text></navLabel><content src="xhtml/chapter57.html#ch57"/></navPoint>
+<navPoint id="ncx74" playOrder="74"><navLabel><text>58 Boomeranging</text></navLabel><content src="xhtml/chapter58.html#ch58"/></navPoint>
+<navPoint id="ncx75" playOrder="75"><navLabel><text>59 The Tombstone Game</text></navLabel><content src="xhtml/chapter59.html#ch59"/></navPoint></navPoint>
+<navPoint id="ncx76" playOrder="76"><navLabel><text>Part Seven: Direct Dial their Hearts</text></navLabel><content src="xhtml/part07.html"/>
+<navPoint id="ncx77" playOrder="77"><navLabel><text>How to be a Hit in Another Show</text></navLabel><content src="xhtml/part07.html#part07"/></navPoint>
+<navPoint id="ncx78" playOrder="78"><navLabel><text>60 Talking Gestures</text></navLabel><content src="xhtml/chapter60.html#ch60"/></navPoint>
+<navPoint id="ncx79" playOrder="79"><navLabel><text>61 Name Shower</text></navLabel><content src="xhtml/chapter61.html#ch61"/></navPoint>
+<navPoint id="ncx80" playOrder="80"><navLabel><text>62 Oh Wow, it&#8217;s You!&#8217;</text></navLabel><content src="xhtml/chapter62.html#ch62"/></navPoint>
+<navPoint id="ncx81" playOrder="81"><navLabel><text>63 The Sneaky Screen</text></navLabel><content src="xhtml/chapter63.html#ch63"/></navPoint>
+<navPoint id="ncx82" playOrder="82"><navLabel><text>64 Salute the Spouse</text></navLabel><content src="xhtml/chapter64.html#ch64"/></navPoint>
+<navPoint id="ncx83" playOrder="83"><navLabel><text>65 What Colour is Your Time?</text></navLabel><content src="xhtml/chapter65.html#ch65"/></navPoint>
+<navPoint id="ncx84" playOrder="84"><navLabel><text>66 Constantly Changing Outgoing Message</text></navLabel><content src="xhtml/chapter66.html#ch66"/></navPoint>
+<navPoint id="ncx85" playOrder="85"><navLabel><text>67 Your Ten-second Audition</text></navLabel><content src="xhtml/chapter67.html#ch67"/></navPoint>
+<navPoint id="ncx86" playOrder="86"><navLabel><text>68 The Ho-hum Caper</text></navLabel><content src="xhtml/chapter68.html#ch68"/></navPoint>
+<navPoint id="ncx87" playOrder="87"><navLabel><text>69 &#8216;I Hear Your Other Line&#8217;</text></navLabel><content src="xhtml/chapter69.html#ch69"/></navPoint>
+<navPoint id="ncx88" playOrder="88"><navLabel><text>70 Instant Replay</text></navLabel><content src="xhtml/chapter70.html#ch70"/></navPoint></navPoint>
+<navPoint id="ncx89" playOrder="89"><navLabel><text>Part Eight: How to Work a Party Like a Politician Works a Room</text></navLabel><content src="xhtml/part08.html"/>
+<navPoint id="ncx90" playOrder="90"><navLabel><text>The Politician&#8217;s Six-point Party Checklist</text></navLabel><content src="xhtml/part08.html#part08"/></navPoint>
+<navPoint id="ncx91" playOrder="91"><navLabel><text>71 Munching or Mingling</text></navLabel><content src="xhtml/chapter71.html#ch71"/></navPoint>
+<navPoint id="ncx92" playOrder="92"><navLabel><text>72 Rubberneck the Room</text></navLabel><content src="xhtml/chapter72.html#ch72"/></navPoint>
+<navPoint id="ncx93" playOrder="93"><navLabel><text>73 Be the Chooser, Not the Choosee</text></navLabel><content src="xhtml/chapter73.html#ch73"/></navPoint>
+<navPoint id="ncx94" playOrder="94"><navLabel><text>74 Come-hither Hands</text></navLabel><content src="xhtml/chapter74.html#ch74"/></navPoint>
+<navPoint id="ncx95" playOrder="95"><navLabel><text>75 Tracking</text></navLabel><content src="xhtml/chapter75.html#ch75"/></navPoint>
+<navPoint id="ncx96" playOrder="96"><navLabel><text>76 The Business Card Dossier</text></navLabel><content src="xhtml/chapter76.html#ch76"/></navPoint>
+<navPoint id="ncx97" playOrder="97"><navLabel><text>77 Eyeball Selling</text></navLabel><content src="xhtml/chapter77.html#ch77"/></navPoint></navPoint>
+<navPoint id="ncx98" playOrder="98"><navLabel><text>Part Nine: Little Tricks of Big Winners</text></navLabel><content src="xhtml/part09.html"/>
+<navPoint id="ncx99" playOrder="99"><navLabel><text>The Most Treacherous Glass Ceiling of All</text></navLabel><content src="xhtml/part09.html#part09"/></navPoint>
+<navPoint id="ncx100" playOrder="100"><navLabel><text>78 See No Bloopers, Hear No Bloopers</text></navLabel><content src="xhtml/chapter78.html#ch78"/></navPoint>
+<navPoint id="ncx101" playOrder="101"><navLabel><text>79 Lend a Helping Tongue</text></navLabel><content src="xhtml/chapter79.html#ch79"/></navPoint>
+<navPoint id="ncx102" playOrder="102"><navLabel><text>80 Bare the Buried WIIFM</text></navLabel><content src="xhtml/chapter80.html#ch80"/></navPoint>
+<navPoint id="ncx103" playOrder="103"><navLabel><text>81 Let &#8217;em Savour the Favour</text></navLabel><content src="xhtml/chapter81.html#ch81"/></navPoint>
+<navPoint id="ncx104" playOrder="104"><navLabel><text>82 Tit for (Wait &#8230; Wait) Tat</text></navLabel><content src="xhtml/chapter82.html#ch82"/></navPoint>
+<navPoint id="ncx105" playOrder="105"><navLabel><text>83 Parties are for Pratter</text></navLabel><content src="xhtml/chapter83.html#ch83"/></navPoint>
+<navPoint id="ncx106" playOrder="106"><navLabel><text>84 Dinner&#8217;s for Dining</text></navLabel><content src="xhtml/chapter84.html#ch84"/></navPoint>
+<navPoint id="ncx107" playOrder="107"><navLabel><text>85 Chance Encounters are for Chitchat</text></navLabel><content src="xhtml/chapter85.html#ch85"/></navPoint>
+<navPoint id="ncx108" playOrder="108"><navLabel><text>86 Empty their Tanks</text></navLabel><content src="xhtml/chapter86.html#ch86"/></navPoint>
+<navPoint id="ncx109" playOrder="109"><navLabel><text>87 Echo the EMO</text></navLabel><content src="xhtml/chapter87.html#ch87"/></navPoint>
+<navPoint id="ncx110" playOrder="110"><navLabel><text>88 My Goof, your Gain</text></navLabel><content src="xhtml/chapter88.html#ch88"/></navPoint>
+<navPoint id="ncx111" playOrder="111"><navLabel><text>89 Leave an Escape Hatch</text></navLabel><content src="xhtml/chapter89.html#ch89"/></navPoint>
+<navPoint id="ncx112" playOrder="112"><navLabel><text>90 Buttercups for their Boss</text></navLabel><content src="xhtml/chapter90.html#ch90"/></navPoint>
+<navPoint id="ncx113" playOrder="113"><navLabel><text>91 Lead the Listeners</text></navLabel><content src="xhtml/chapter91.html#ch91"/></navPoint>
+<navPoint id="ncx114" playOrder="114"><navLabel><text>92 The Great Scorecard in the Sky</text></navLabel><content src="xhtml/chapter92.html#ch92"/></navPoint></navPoint>
+
+<navPoint id="ncx116a" playOrder="115"><navLabel><text>Back Ads</text></navLabel><content src="xhtml/back_ad.html#backada"/></navPoint>
+<navPoint id="ncx116" playOrder="116"><navLabel><text>A Final Word: Your Destiny</text></navLabel><content src="xhtml/back01.html#back1"/></navPoint>
+<navPoint id="ncx117" playOrder="117"><navLabel><text>Notes</text></navLabel><content src="xhtml/notes.html#note1"/></navPoint>
+<navPoint id="ncx118" playOrder="118"><navLabel><text>Select Bibliography</text></navLabel><content src="xhtml/biblio.html#biblio1"/></navPoint>
+<navPoint id="ncx119" playOrder="119"><navLabel><text>About the Author</text></navLabel><content src="xhtml/about_author.html#about1"/></navPoint>
+<navPoint id="ncx120" playOrder="120"><navLabel><text>Copyright</text></navLabel><content src="xhtml/copyright.html"/></navPoint>
+<navPoint id="ncx120a" playOrder="121"><navLabel><text>About the Publisher</text></navLabel><content src="xhtml/about_publisher.html#atp01"/></navPoint>
+</navMap>
+</ncx>

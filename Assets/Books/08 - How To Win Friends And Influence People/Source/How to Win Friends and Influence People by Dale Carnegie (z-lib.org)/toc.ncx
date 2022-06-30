@@ -1,0 +1,579 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
+  <head>
+    <meta content="2b9499ce-a83a-4ec7-b13b-fd56a5dcfa0f" name="dtb:uid"/>
+    <meta content="3" name="dtb:depth"/>
+    <meta content="calibre (0.7.14)" name="dtb:generator"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>How to Win Friends and Influence People</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="2d038fc3-bd3f-490a-92cf-3df6a3de7c19" playOrder="1">
+      <navLabel>
+        <text>HOW TO</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_002.htm#calibre_toc_1"/>
+    </navPoint>
+    <navPoint id="bdba7b8e-32c2-45a2-91bf-5542cc23b998" playOrder="2">
+      <navLabel>
+        <text>Win</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_002.htm#calibre_toc_3"/>
+    </navPoint>
+    <navPoint id="5b85d022-f2c7-45bd-9f1c-6ced50e421d1" playOrder="3">
+      <navLabel>
+        <text>Friends</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_002.htm#calibre_toc_4"/>
+    </navPoint>
+    <navPoint id="61c471c1-4977-4b01-84d5-3b023ba244a0" playOrder="4">
+      <navLabel>
+        <text>AND</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_002.htm#calibre_toc_5"/>
+    </navPoint>
+    <navPoint id="6ed98829-7ccf-435a-a063-5a438d24677b" playOrder="5">
+      <navLabel>
+        <text>Influence</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_002.htm#calibre_toc_6"/>
+    </navPoint>
+    <navPoint id="06f992ff-31be-47a9-924e-ae72f355f42d" playOrder="6">
+      <navLabel>
+        <text>People</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_002.htm#calibre_toc_7"/>
+      <navPoint id="f0e77f21-4f55-4c99-b752-d5e5cddd0a18" playOrder="7">
+        <navLabel>
+          <text>REVISED EDITION</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_002.htm#calibre_toc_51"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="9be2ec23-ef55-4dfd-887c-71b295949cba" playOrder="8">
+      <navLabel>
+        <text>Dale</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_002.htm#calibre_toc_8"/>
+    </navPoint>
+    <navPoint id="5bd5fb7d-f55f-4b06-a23e-9efdd98e54b0" playOrder="9">
+      <navLabel>
+        <text>Carnegie</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_002.htm#calibre_toc_9"/>
+      <navPoint id="549f761f-6b7b-4110-8d7b-61b42d98673e" playOrder="10">
+        <navLabel>
+          <text>Dale Carnegie</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_008.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="dc58cc27-5bf4-41a4-bf66-8bb0d1395156" playOrder="10">
+      <navLabel>
+        <text>1</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_11"/>
+      <navPoint id="f753c5c1-a8ac-44fc-a0c3-d983c45ba6e2" playOrder="11">
+        <navLabel>
+          <text>“IF YOU WANT TO GATHER</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_011.htm"/>
+      </navPoint>
+      <navPoint id="7aecfc4d-d971-4b8f-89f7-fe3340e85ed2" playOrder="12">
+        <navLabel>
+          <text>HONEY, DON’T KICK OVER THE</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_012.htm"/>
+      </navPoint>
+      <navPoint id="86e3fda2-075a-49e2-9160-bd828cb1b011" playOrder="13">
+        <navLabel>
+          <text>BEEHIVE”</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_013.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="cc4630a5-9ea2-4b72-8c1c-0ac11b00a5c0" playOrder="14">
+      <navLabel>
+        <text>2</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_12"/>
+      <navPoint id="0990e3ec-2b0d-4d87-b234-cdfbf9772dd9" playOrder="14">
+        <navLabel>
+          <text>THE BIG SECRET OF DEALING WITH</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_017.htm"/>
+      </navPoint>
+      <navPoint id="1765efe3-0778-4eab-9556-8de33f02c6ee" playOrder="15">
+        <navLabel>
+          <text>PEOPLE</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_018.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="eadec028-ec44-48e1-a5ba-287c6a7d6eab" playOrder="17">
+      <navLabel>
+        <text>3</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_13"/>
+      <navPoint id="d691705b-7501-4de0-9e25-2a7aa7cc2929" playOrder="16">
+        <navLabel>
+          <text>“HE WHO CAN DO THIS HAS THE</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_024.htm"/>
+      </navPoint>
+      <navPoint id="88386e89-f41a-4969-8f3e-290713a6ddc0" playOrder="17">
+        <navLabel>
+          <text>WHOLE WORLD WITH HIM.</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_025.htm"/>
+      </navPoint>
+      <navPoint id="1e84ef13-1e7c-4b6d-a877-6faf3ec80ecb" playOrder="18">
+        <navLabel>
+          <text>HE WHO CANNOT WALKS</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_026.htm"/>
+      </navPoint>
+      <navPoint id="f2337c9e-5f84-4458-b2d1-a8d6bebcd9b8" playOrder="19">
+        <navLabel>
+          <text>A LONELY WAY”</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_027.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="ff30fb65-584d-4437-9a6f-29b607b50d40" playOrder="22">
+      <navLabel>
+        <text>1</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_14"/>
+      <navPoint id="7ed78496-943c-4269-a08c-edce65544144" playOrder="20">
+        <navLabel>
+          <text>DO THIS AND YOU’LL BE WELCOME</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_041.htm"/>
+      </navPoint>
+      <navPoint id="e0fe48ac-3c02-41e3-becb-e26497f8fec8" playOrder="21">
+        <navLabel>
+          <text>ANYWHERE</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_042.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="3ff29f38-9b80-4287-ba80-dc23108aba4b" playOrder="25">
+      <navLabel>
+        <text>2</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_16"/>
+      <navPoint id="e2eba018-976c-40c0-91c3-14f8b7bfeee6" playOrder="22">
+        <navLabel>
+          <text>A SIMPLE WAY TO MAKE A GOOD</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_046.htm"/>
+      </navPoint>
+      <navPoint id="a788f787-a1ff-4cd6-9e84-84a20aa2873c" playOrder="23">
+        <navLabel>
+          <text>FIRST IMPRESSION</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_047.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="183a3152-5b4f-4772-a52d-0b694c31f490" playOrder="28">
+      <navLabel>
+        <text>3</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_17"/>
+      <navPoint id="7a5491eb-71e5-4ed2-8e48-d7babf0b77a9" playOrder="24">
+        <navLabel>
+          <text>IF YOU DON’T DO THIS, YOU ARE</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_050.htm"/>
+      </navPoint>
+      <navPoint id="b3ea58cf-9f47-419d-9fa0-bc6874700178" playOrder="25">
+        <navLabel>
+          <text>HEADED FOR TROUBLE</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_051.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="2fa973b8-607b-4cb7-b162-65b255238fea" playOrder="31">
+      <navLabel>
+        <text>4</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_18"/>
+      <navPoint id="8840b26b-6bf8-4224-a7ca-19381d67b688" playOrder="26">
+        <navLabel>
+          <text>AN EASY WAY TO BECOME A</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_056.htm"/>
+      </navPoint>
+      <navPoint id="1a934d10-decd-4e35-8d3a-251c6f08c69d" playOrder="27">
+        <navLabel>
+          <text>GOOD CONVERSATIONALIST</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_057.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="1a1b204a-261e-4b73-a1ff-2c9eae398fcb" playOrder="34">
+      <navLabel>
+        <text>5</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_19"/>
+      <navPoint id="9ac32d98-71c6-45c1-8d4e-81be8391ee03" playOrder="28">
+        <navLabel>
+          <text>HOW TO INTEREST PEOPLE</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_062.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="dab45e0b-9a61-4345-81fc-0ee4adae806e" playOrder="36">
+      <navLabel>
+        <text>6</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_21"/>
+      <navPoint id="4cea7f09-2fac-48da-81ae-292ce3ed7fa0" playOrder="29">
+        <navLabel>
+          <text>HOW TO MAKE PEOPLE LIKE YOU</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_066.htm"/>
+      </navPoint>
+      <navPoint id="83af8d9f-d5a4-4259-9af3-cb3908f058fa" playOrder="30">
+        <navLabel>
+          <text>INSTANTLY</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_067.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="7686f178-c548-44b8-a5d5-d90fd1640111" playOrder="39">
+      <navLabel>
+        <text>1</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_23"/>
+      <navPoint id="d5f594c9-f574-4547-9c69-5d92b725dd98" playOrder="31">
+        <navLabel>
+          <text>YOU CAN’T WIN AN ARGUMENT</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_082.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="1b57e318-1ad8-4acc-b1e1-3445ee17f4a3" playOrder="41">
+      <navLabel>
+        <text>2</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_25"/>
+      <navPoint id="42ac50fe-cb87-44f7-90bd-13df32ca30ee" playOrder="32">
+        <navLabel>
+          <text>A SURE WAY OF MAKING ENEMIES</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_085.htm"/>
+      </navPoint>
+      <navPoint id="4f29bfe8-c472-4bbd-a415-ae26b0cb119f" playOrder="33">
+        <navLabel>
+          <text>-AND HOW TO AVOID IT</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_086.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="44cf7bf6-9f19-4eab-b65b-718ffc6fc950" playOrder="44">
+      <navLabel>
+        <text>3</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_27"/>
+      <navPoint id="437fd7d9-9365-447e-830b-256cddef4211" playOrder="34">
+        <navLabel>
+          <text>IF YOU’RE WRONG, ADMIT IT</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_088.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="ab49197a-33b3-408f-97ab-3e1602357024" playOrder="46">
+      <navLabel>
+        <text>4</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_28"/>
+      <navPoint id="88d0ea02-6586-4da2-8477-f1bf6a71125f" playOrder="35">
+        <navLabel>
+          <text>A DROP OF HONEY</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_091.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="eaf41189-c11f-48e3-84d5-021655608b58" playOrder="48">
+      <navLabel>
+        <text>5</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_29"/>
+      <navPoint id="93d92de4-c174-473f-9ba6-6b75220e1d68" playOrder="36">
+        <navLabel>
+          <text>THE SECRET OF SOCRATES</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_094.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="bef038dc-a1bb-4faf-a144-803d6fa6b743" playOrder="50">
+      <navLabel>
+        <text>6</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_30"/>
+      <navPoint id="14762d53-6362-43ec-aafa-a2812c3b6df0" playOrder="37">
+        <navLabel>
+          <text>THE SAFETY VALVE IN HANDLING</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_098.htm"/>
+      </navPoint>
+      <navPoint id="3fab1d54-95a9-4b1c-8fed-0f0e2c286cf6" playOrder="38">
+        <navLabel>
+          <text>COMPLAINTS</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_099.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="e1cbb1d6-50dd-404c-856c-7d687db8017c" playOrder="53">
+      <navLabel>
+        <text>7</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_32"/>
+      <navPoint id="bdeb3412-7567-4f4b-8038-c00d910a3451" playOrder="39">
+        <navLabel>
+          <text>HOW TO GET COOPERATION</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_104.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="0d2cf243-b94b-4f12-af3a-97abec90c596" playOrder="55">
+      <navLabel>
+        <text>8</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_33"/>
+      <navPoint id="341f988b-6dd8-4b8a-8fa8-990a00fe3bf8" playOrder="40">
+        <navLabel>
+          <text>A FORMULA THAT WILL WORK</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_109.htm"/>
+      </navPoint>
+      <navPoint id="29b4a2f0-226d-4625-96ff-25bf122c874b" playOrder="41">
+        <navLabel>
+          <text>WONDERS FOR YOU</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_110.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="64e33ff2-60c9-48ad-9a95-3012d07da918" playOrder="58">
+      <navLabel>
+        <text>9</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_34"/>
+      <navPoint id="bdfe5284-7570-4ac7-b438-48c3a68eb3ac" playOrder="42">
+        <navLabel>
+          <text>WHAT EVERYBODY WANTS</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_114.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="22b9e436-32a9-4482-b8d6-65e197381d6d" playOrder="60">
+      <navLabel>
+        <text>10</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_36"/>
+      <navPoint id="1599450a-b9ed-4036-a461-c73ded19a65a" playOrder="43">
+        <navLabel>
+          <text>AN APPEAL THAT EVERYBODY LIKES</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_119.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="ece720d5-bb7b-498a-894d-fc84a3ecc4b5" playOrder="62">
+      <navLabel>
+        <text>11</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_38"/>
+      <navPoint id="b4644297-07f3-4a58-affc-398c706a2991" playOrder="44">
+        <navLabel>
+          <text>THE MOVIES DO IT. TV DOES IT.</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_122.htm"/>
+      </navPoint>
+      <navPoint id="1240cac7-3660-4b28-b2f3-d3f49616b754" playOrder="45">
+        <navLabel>
+          <text>WHY DON’T YOU DO IT?</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_123.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="71387bce-28ad-4b99-b7ca-3c9dca8be0fd" playOrder="65">
+      <navLabel>
+        <text>12</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_39"/>
+      <navPoint id="96f30e3c-4906-4367-aa24-d2b8b272786f" playOrder="46">
+        <navLabel>
+          <text>WHEN NOTHING ELSE WORKS,</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_127.htm"/>
+      </navPoint>
+      <navPoint id="9710ead8-8a81-4ae7-a0e0-ef6abaf5d531" playOrder="47">
+        <navLabel>
+          <text>TRY THIS</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_128.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="a8077d62-63f4-4472-80eb-392193462b94" playOrder="68">
+      <navLabel>
+        <text>1</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_40"/>
+      <navPoint id="f41fa610-83e2-4dff-9348-82c384fdb15b" playOrder="48">
+        <navLabel>
+          <text>IF YOU MUST FIND FAULT, THIS IS</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_139.htm"/>
+      </navPoint>
+      <navPoint id="77536f2d-3385-40f5-b1c9-eaf88568ba6b" playOrder="49">
+        <navLabel>
+          <text>THE WAY TO BEGIN</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_140.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="3578855f-26d0-4cca-b9c1-7d9fd98227f0" playOrder="71">
+      <navLabel>
+        <text>2</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_41"/>
+      <navPoint id="e733e56a-b4f6-43e9-b171-06c6c2863892" playOrder="50">
+        <navLabel>
+          <text>HOW TO CRITICIZE-AND NOT BE</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_144.htm"/>
+      </navPoint>
+      <navPoint id="88330342-7dcd-4750-9028-f672263874a8" playOrder="51">
+        <navLabel>
+          <text>HATED FOR IT</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_145.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="5f2bb8fb-ff59-446b-8709-6f374651de74" playOrder="74">
+      <navLabel>
+        <text>3</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_42"/>
+      <navPoint id="22b91c01-77c6-4d92-9744-579849bafe71" playOrder="52">
+        <navLabel>
+          <text>TALK ABOUT YOUR OWN</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_149.htm"/>
+      </navPoint>
+      <navPoint id="7bc41b93-c455-43b8-b1d2-651898077b7d" playOrder="53">
+        <navLabel>
+          <text>MISTAKES FIRST</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_150.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="6b0f94e5-8a7d-4073-8df5-c0df86fb8309" playOrder="77">
+      <navLabel>
+        <text>4</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_43"/>
+      <navPoint id="f5a476b3-46e9-4c41-8397-cb9b75acf02a" playOrder="54">
+        <navLabel>
+          <text>NO ONE LIKES TO</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_155.htm"/>
+      </navPoint>
+      <navPoint id="31e66b83-f366-44c2-8659-c0266058316a" playOrder="55">
+        <navLabel>
+          <text>TAKE ORDERS</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_156.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="e3465cb0-2ab5-47b8-9fec-3f4bdd6b87b6" playOrder="80">
+      <navLabel>
+        <text>5</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_44"/>
+      <navPoint id="d9f8492c-d56b-48a3-8aa4-9f808f5c67c1" playOrder="56">
+        <navLabel>
+          <text>LET THE OTHER PERSON SAVE FACE</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_159.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="cbac7e6f-6505-4486-91ce-d2e41133ba15" playOrder="82">
+      <navLabel>
+        <text>6</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_45"/>
+      <navPoint id="c8961fc3-ee6c-4793-803e-b2dff9ed3b51" playOrder="57">
+        <navLabel>
+          <text>HOW TO SPUR PEOPLE ON</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_162.htm"/>
+      </navPoint>
+      <navPoint id="a02f5dc2-48c9-4944-99a0-c17b35c48768" playOrder="58">
+        <navLabel>
+          <text>TO SUCCESS</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_163.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="df112728-083b-4a52-be31-9cf33554ccc0" playOrder="85">
+      <navLabel>
+        <text>7</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_47"/>
+      <navPoint id="962a911a-6aa9-43e2-9ea4-5c961d82b142" playOrder="59">
+        <navLabel>
+          <text>GIVE A DOG A GOOD NAME</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_168.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="20d293db-9968-4098-94be-860dcf402a06" playOrder="87">
+      <navLabel>
+        <text>8</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_48"/>
+      <navPoint id="c5b9e6bf-bc4d-47b4-81ce-e67fd2719a7c" playOrder="60">
+        <navLabel>
+          <text>MAKE THE FAULT SEEM</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_173.htm"/>
+      </navPoint>
+      <navPoint id="eebd613d-4ba6-41a9-9cb7-df34c37dd22a" playOrder="61">
+        <navLabel>
+          <text>EASY TO CORRECT</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_174.htm"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="dd741bdb-52ab-498b-9e72-0dcd3a374ac6" playOrder="90">
+      <navLabel>
+        <text>9</text>
+      </navLabel>
+      <content src="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm#calibre_toc_49"/>
+      <navPoint id="e7e8a0b8-1c86-45f9-9f54-2cef19b857eb" playOrder="62">
+        <navLabel>
+          <text>MAKING PEOPLE GLAD TO DO</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_179.htm"/>
+      </navPoint>
+      <navPoint id="0312a013-d553-4505-aae5-84d6d0187c75" playOrder="63">
+        <navLabel>
+          <text>WHAT YOU WANT</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_180.htm"/>
+      </navPoint>
+      <navPoint id="77ed07f4-6254-4a0c-a7e8-dcb43cc63496" playOrder="64">
+        <navLabel>
+          <text>by Lowell Thomas</text>
+        </navLabel>
+        <content src="Carnegie, Dale - How To Win Friends and Influence People_split_195.htm#calibre_toc_144"/>
+      </navPoint>
+    </navPoint>
+  </navMap>
+</ncx>

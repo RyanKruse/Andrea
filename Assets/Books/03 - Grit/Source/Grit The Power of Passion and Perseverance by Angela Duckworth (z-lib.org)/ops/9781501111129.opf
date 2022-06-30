@@ -1,0 +1,121 @@
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="p9781501111129" version="2.0">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+<dc:title>Grit</dc:title>
+<dc:creator>Angela Duckworth</dc:creator>
+<dc:identifier id="p9781501111129">9781501111129</dc:identifier>
+<dc:language>En</dc:language>
+<dc:publisher>Scribner</dc:publisher>
+<meta content="my-cover-image" name="cover"/>
+<description xmlns="http://purl.org/dc/elements/1.1/">In this must-read book for anyone striving to succeed, pioneering psychologist Angela Duckworth shows parents, students, educators, athletes, and business people&amp;#8212;both seasoned and new&amp;#8212;that the secret to outstanding achievement is not talent but a special blend of passion and persistence she calls "grit."&lt;BR&gt;Drawing on her own powerful story as the daughter of a scientist who frequently noted her lack of "genius," Duckworth, now a celebrated researcher and professor, describes her early eye-opening stints in teaching, business consulting, and neuroscience, which led to the hypothesis that what really drives success is not "genius" but a unique combination of passion and long-term perseverance.&lt;BR&gt; &lt;BR&gt;In &lt;i&gt;Grit&lt;/i&gt;, she takes readers into the field to visit cadets struggling through their first days at West Point, teachers working in some of the toughest schools, and young finalists in the National Spelling Bee. She also mines fascinating insights from history and...</description>
+</metadata>
+<manifest>
+<item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+<item href="styles/9781501111129.css" id="css" media-type="text/css"/>
+<item href="images/9781501111129.jpg" id="my-cover-image" media-type="image/jpeg"/>
+<item href="fonts/FairfieldLTStd-Bold.otf" id="font1" media-type="application/x-font-otf"/>
+<item href="fonts/FairfieldLTStd-BoldItalic.otf" id="font2" media-type="application/x-font-otf"/>
+<item href="fonts/FairfieldLTStd-Light.otf" id="font3" media-type="application/x-font-otf"/>
+<item href="fonts/FairfieldLTStd-LightItalic.otf" id="font4" media-type="application/x-font-otf"/>
+<item href="fonts/FuturaStd-Medium.otf" id="font5" media-type="application/x-font-otf"/>
+<item href="fonts/FuturaStd-MediumOblique.otf" id="font6" media-type="application/x-font-otf"/>
+<item href="fonts/FuturaStd-Book.otf" id="font7" media-type="application/x-font-otf"/>
+<item href="fonts/FuturaStd-BookOblique.otf" id="font8" media-type="application/x-font-otf"/>
+<item href="fonts/GoudySansStd-Book.otf" id="font9" media-type="application/x-font-otf"/>
+<item href="fonts/GoudySansStd-Medium.otf" id="font10" media-type="application/x-font-otf"/>
+<item href="fonts/FuturaStd-Bold.otf" id="font11" media-type="application/x-font-otf"/>
+<item href="fonts/FuturaStd-BoldOblique.otf" id="font12" media-type="application/x-font-otf"/>
+<item href="fonts/TradeGothicLTStd-BdCn20.otf" id="font13" media-type="application/x-font-otf"/>
+<item href="fonts/TradeGothicLTStd-Cn18.otf" id="font14" media-type="application/x-font-otf"/>
+<item href="xhtml/praise.html" id="praise" media-type="application/xhtml+xml"/>
+<item href="xhtml/ack.html" id="ack" media-type="application/xhtml+xml"/>
+<item href="xhtml/author.html" id="author" media-type="application/xhtml+xml"/>
+<item href="xhtml/back01.html" id="back01" media-type="application/xhtml+xml"/>
+<item href="xhtml/ch01.html" id="ch01" media-type="application/xhtml+xml"/>
+<item href="xhtml/ch02.html" id="ch02" media-type="application/xhtml+xml"/>
+<item href="xhtml/ch03.html" id="ch03" media-type="application/xhtml+xml"/>
+<item href="xhtml/ch04.html" id="ch04" media-type="application/xhtml+xml"/>
+<item href="xhtml/ch05.html" id="ch05" media-type="application/xhtml+xml"/>
+<item href="xhtml/ch06.html" id="ch06" media-type="application/xhtml+xml"/>
+<item href="xhtml/ch07.html" id="ch07" media-type="application/xhtml+xml"/>
+<item href="xhtml/ch08.html" id="ch08" media-type="application/xhtml+xml"/>
+<item href="xhtml/ch09.html" id="ch09" media-type="application/xhtml+xml"/>
+<item href="xhtml/ch10.html" id="ch10" media-type="application/xhtml+xml"/>
+<item href="xhtml/ch11.html" id="ch11" media-type="application/xhtml+xml"/>
+<item href="xhtml/ch12.html" id="ch12" media-type="application/xhtml+xml"/>
+<item href="xhtml/ch13.html" id="ch13" media-type="application/xhtml+xml"/>
+<item href="xhtml/copy.html" id="copy" media-type="application/xhtml+xml"/>
+<item href="xhtml/cover.html" id="cover" media-type="application/xhtml+xml"/>
+<item href="xhtml/ded.html" id="ded" media-type="application/xhtml+xml"/>
+<item href="xhtml/ebookregback.html" id="ebookregback" media-type="application/xhtml+xml"/>
+<item href="xhtml/ebookregfront.html" id="ebookregfront" media-type="application/xhtml+xml"/>
+<item href="xhtml/index.html" id="index" media-type="application/xhtml+xml"/>
+<item href="xhtml/notes.html" id="notes" media-type="application/xhtml+xml"/>
+<item href="xhtml/part01.html" id="part01" media-type="application/xhtml+xml"/>
+<item href="xhtml/part02.html" id="part02" media-type="application/xhtml+xml"/>
+<item href="xhtml/part03.html" id="part03" media-type="application/xhtml+xml"/>
+<item href="xhtml/pref01.html" id="pref01" media-type="application/xhtml+xml"/>
+<item href="xhtml/title.html" id="title" media-type="application/xhtml+xml"/>
+<item href="xhtml/cont.html" id="cont" media-type="application/xhtml+xml"/>
+<item href="images/03fig01.jpg" id="image01" media-type="image/jpeg"/>
+<item href="images/03fig02.jpg" id="image02" media-type="image/jpeg"/>
+<item href="images/04fig01.jpg" id="image03" media-type="image/jpeg"/>
+<item href="images/04fig02.jpg" id="image04" media-type="image/jpeg"/>
+<item href="images/04fig03.jpg" id="image05" media-type="image/jpeg"/>
+<item href="images/04fig04.jpg" id="image06" media-type="image/jpeg"/>
+<item href="images/04fig05.jpg" id="image07" media-type="image/jpeg"/>
+<item href="images/04fig06.jpg" id="image08" media-type="image/jpeg"/>
+<item href="images/04fig07.jpg" id="image09" media-type="image/jpeg"/>
+<item href="images/04fig08.jpg" id="image10" media-type="image/jpeg"/>
+<item href="images/05fig01.jpg" id="image11" media-type="image/jpeg"/>
+<item href="images/07fig01.jpg" id="image12" media-type="image/jpeg"/>
+<item href="images/08fig01.jpg" id="image13" media-type="image/jpeg"/>
+<item href="images/09fig01.jpg" id="image14" media-type="image/jpeg"/>
+<item href="images/10fig01.jpg" id="image15" media-type="image/jpeg"/>
+<item href="images/13fig01.jpg" id="image16" media-type="image/jpeg"/>
+<item href="images/author.jpg" id="image17" media-type="image/jpeg"/>
+<item href="images/logo.jpg" id="image18" media-type="image/jpeg"/>
+<item href="images/notes.jpg" id="image19" media-type="image/jpeg"/>
+<item href="images/notes_1.jpg" id="image20" media-type="image/jpeg"/>
+<item href="images/tabbox.jpg" id="image21" media-type="image/jpeg"/>
+<item href="images/title.jpg" id="image22" media-type="image/jpeg"/>
+<item href="images/common.jpg" id="image23" media-type="image/jpeg"/>
+<item href="images/commonp.jpg" id="image24" media-type="image/jpeg"/>
+</manifest>
+<spine toc="ncx">
+<itemref idref="cover"/>
+<itemref idref="praise"/>
+<itemref idref="ebookregfront"/>
+<itemref idref="title"/>
+<itemref idref="cont"/>
+<itemref idref="ded"/>
+<itemref idref="pref01"/>
+<itemref idref="part01"/>
+<itemref idref="ch01"/>
+<itemref idref="ch02"/>
+<itemref idref="ch03"/>
+<itemref idref="ch04"/>
+<itemref idref="ch05"/>
+<itemref idref="part02"/>
+<itemref idref="ch06"/>
+<itemref idref="ch07"/>
+<itemref idref="ch08"/>
+<itemref idref="ch09"/>
+<itemref idref="part03"/>
+<itemref idref="ch10"/>
+<itemref idref="ch11"/>
+<itemref idref="ch12"/>
+<itemref idref="ch13"/>
+<itemref idref="ack"/>
+<itemref idref="back01"/>
+<itemref idref="author"/>
+<itemref idref="ebookregback"/>
+<itemref idref="notes"/>
+<itemref idref="index"/>
+<itemref idref="copy"/>
+</spine>
+<guide>
+	<reference href="xhtml/cont.html" title="Contents" type="toc"/>
+	<reference href="xhtml/cover.html" title="Cover" type="cover"/>
+	<reference href="xhtml/cover.html" title="SRL" type="text"/>
+</guide>
+</package>

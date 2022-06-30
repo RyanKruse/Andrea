@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="UND">
+  <head>
+    <meta content="10a9af01-b764-4190-b9c1-6f3db69b6eba" name="dtb:uid"/>
+    <meta content="2" name="dtb:depth"/>
+    <meta content="calibre (0.6.52)" name="dtb:generator"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>How to Make People Like You In 90 Seconds Or Less</text>
+  </docTitle>
+  <navMap>
+    <navPoint class="chapter" id="part1" playOrder="1">
+      <navLabel>
+        <text>How to Make People Like You In 90 Seconds Or Less</text>
+      </navLabel>
+      <content src="OEBPS/part1.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part2" playOrder="2">
+      <navLabel>
+        <text>The Benefits of Connecting</text>
+      </navLabel>
+      <content src="OEBPS/part2.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part3" playOrder="3">
+      <navLabel>
+        <text>Connect and Feel Safe</text>
+      </navLabel>
+      <content src="OEBPS/part3.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part4" playOrder="4">
+      <navLabel>
+        <text>Connect and Feel Love</text>
+      </navLabel>
+      <content src="OEBPS/part4.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part5" playOrder="5">
+      <navLabel>
+        <text>Why Likability Works</text>
+      </navLabel>
+      <content src="OEBPS/part5.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part6" playOrder="6">
+      <navLabel>
+        <text>The Greeting</text>
+      </navLabel>
+      <content src="OEBPS/part6.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part7" playOrder="7">
+      <navLabel>
+        <text>Firing Energy</text>
+      </navLabel>
+      <content src="OEBPS/part7.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part8" playOrder="8">
+      <navLabel>
+        <text>Establishing Rapport</text>
+      </navLabel>
+      <content src="OEBPS/part8.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part9" playOrder="9">
+      <navLabel>
+        <text>Communicating</text>
+      </navLabel>
+      <content src="OEBPS/part9.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part10" playOrder="10">
+      <navLabel>
+        <text>Natural Rapport</text>
+      </navLabel>
+      <content src="OEBPS/part10.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part11" playOrder="11">
+      <navLabel>
+        <text>Rapport by Chance</text>
+      </navLabel>
+      <content src="OEBPS/part11.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part12" playOrder="12">
+      <navLabel>
+        <text>Rapport by Design</text>
+      </navLabel>
+      <content src="OEBPS/part12.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part13" playOrder="13">
+      <navLabel>
+        <text>A Really Useful Attitude</text>
+      </navLabel>
+      <content src="OEBPS/part13.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part14" playOrder="14">
+      <navLabel>
+        <text>A Really Useless Attitude</text>
+      </navLabel>
+      <content src="OEBPS/part14.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part15" playOrder="15">
+      <navLabel>
+        <text>Triggering Happy Memories</text>
+      </navLabel>
+      <content src="OEBPS/part15.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part16" playOrder="16">
+      <navLabel>
+        <text>Body Language</text>
+      </navLabel>
+      <content src="OEBPS/part16.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part17" playOrder="17">
+      <navLabel>
+        <text>Open Body Language</text>
+      </navLabel>
+      <content src="OEBPS/part17.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part18" playOrder="18">
+      <navLabel>
+        <text>Closed Body Language</text>
+      </navLabel>
+      <content src="OEBPS/part18.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part19" playOrder="19">
+      <navLabel>
+        <text>Smaller Gestures</text>
+      </navLabel>
+      <content src="OEBPS/part19.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part20" playOrder="20">
+      <navLabel>
+        <text>Words vs. Tone</text>
+      </navLabel>
+      <content src="OEBPS/part20.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part21" playOrder="21">
+      <navLabel>
+        <text>Being Yourself</text>
+      </navLabel>
+      <content src="OEBPS/part21.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part22" playOrder="22">
+      <navLabel>
+        <text>The Art of Synchronizing</text>
+      </navLabel>
+      <content src="OEBPS/part22.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part23" playOrder="23">
+      <navLabel>
+        <text>Synchronizing Attitude</text>
+      </navLabel>
+      <content src="OEBPS/part23.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part24" playOrder="24">
+      <navLabel>
+        <text>DOING WHAT COMES NATURALLY</text>
+      </navLabel>
+      <content src="OEBPS/part24.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part25" playOrder="25">
+      <navLabel>
+        <text>In and Out of Sync</text>
+      </navLabel>
+      <content src="OEBPS/part25.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part26" playOrder="26">
+      <navLabel>
+        <text>Synchronizing Voice</text>
+      </navLabel>
+      <content src="OEBPS/part26.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part27" playOrder="27">
+      <navLabel>
+        <text>Free Information</text>
+      </navLabel>
+      <content src="OEBPS/part27.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part28" playOrder="28">
+      <navLabel>
+        <text>Active Listening</text>
+      </navLabel>
+      <content src="OEBPS/part28.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part29" playOrder="29">
+      <navLabel>
+        <text>Give and Take</text>
+      </navLabel>
+      <content src="OEBPS/part29.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part30" playOrder="30">
+      <navLabel>
+        <text>Handling Compliments</text>
+      </navLabel>
+      <content src="OEBPS/part30.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part31" playOrder="31">
+      <navLabel>
+        <text>Sound Effects</text>
+      </navLabel>
+      <content src="OEBPS/part31.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part32" playOrder="32">
+      <navLabel>
+        <text>Avoiding the Pitfalls</text>
+      </navLabel>
+      <content src="OEBPS/part32.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part33" playOrder="33">
+      <navLabel>
+        <text>Tuning In to Sensory Preferences</text>
+      </navLabel>
+      <content src="OEBPS/part33.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part34" playOrder="34">
+      <navLabel>
+        <text>Sensory Preference Profiles</text>
+      </navLabel>
+      <content src="OEBPS/part34.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part35" playOrder="35">
+      <navLabel>
+        <text>Visuals</text>
+      </navLabel>
+      <content src="OEBPS/part35.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part36" playOrder="36">
+      <navLabel>
+        <text>Kinesthetics</text>
+      </navLabel>
+      <content src="OEBPS/part36.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part37" playOrder="37">
+      <navLabel>
+        <text>Matches and Mismatches</text>
+      </navLabel>
+      <content src="OEBPS/part37.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part38" playOrder="38">
+      <navLabel>
+        <text>Visual Words</text>
+      </navLabel>
+      <content src="OEBPS/part38.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part39" playOrder="39">
+      <navLabel>
+        <text>Kinesthetic Words</text>
+      </navLabel>
+      <content src="OEBPS/part39.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="part40" playOrder="40">
+      <navLabel>
+        <text>Brain Lock</text>
+      </navLabel>
+      <content src="OEBPS/part40.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>

@@ -1,0 +1,130 @@
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="p9780814414033" version="2.0">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<dc:title>Just Listen</dc:title>
+	<dc:creator>Mark Goulston</dc:creator>
+	<dc:date>2007</dc:date>
+	<dc:identifier id="p9780814414033">9780814414033</dc:identifier>
+	<dc:coverage/>
+	<dc:language>en</dc:language>
+	<dc:type>Text</dc:type>
+	<dc:format>256</dc:format>
+	<dc:rights>All rights reserved</dc:rights>
+	<dc:publisher>AMACOM Books</dc:publisher>
+<meta content="cover-image" name="cover"/>
+<description xmlns="http://purl.org/dc/elements/1.1/">&lt;p&gt;Foreword by Keith Ferrazzi, author of Never Eat Alone and Who's Got Your Back? The first make-or-break step in persuading anyone to do any thing is getting them to hear you out. Whether the person is a harried colleague, a stressed-out client, or an insecure spouse, things will go from bad to worse if you can't break through emotional barricades. Drawing on his experience as a psychiatrist, business con sultant, and coach, and backed by the latest scientific research, author Mark Goulston shares simple but powerful techniques readers can use to really get through to people-whether they're coworkers, friends, strangers, or enemies. Just Listen reveals how to:&lt;li&gt;Make a powerful and positive first impression&lt;li&gt;Listen effectively&lt;li&gt;Make even a total stranger-a potential client, perhaps-feel "felt"&lt;li&gt;Talk an angry or aggressive person away from an instinctual, unproductive reaction and toward a more rational mindset&lt;li&gt;Achieve buy-in, the linchpin of all...</description>
+</metadata>
+<manifest>
+	<item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+	<item href="xhtml/cover.html" id="cover" media-type="application/xhtml+xml"/>	
+	<item href="xhtml/ch00_fm01_frontmatter.html" id="ch00_fm01_frontmatter" media-type="application/xhtml+xml"/>
+	<item href="xhtml/ch00_fm02_half.html" id="ch00_fm02_half" media-type="application/xhtml+xml"/>
+	<item href="xhtml/ch00_fm03_title.html" id="ch00_fm03_title" media-type="application/xhtml+xml"/>
+	<item href="xhtml/ch00_fm04_copyright.html" id="ch00_fm04_copyright" media-type="application/xhtml+xml"/>
+	<item href="xhtml/ch00_fm05_dedication.html" id="ch00_fm05_dedication" media-type="application/xhtml+xml"/>
+	<item href="xhtml/ch00_fm06_contents.html" id="ch00_fm06_contents" media-type="application/xhtml+xml"/>
+	<item href="xhtml/ch00_fm07_for.html" id="ch00_fm07_for" media-type="application/xhtml+xml"/>
+	<item href="xhtml/ch00_fm08_ack.html" id="ch00_fm08_ack" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part01.html" id="part01" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter01.html" id="chapter01" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter02.html" id="chapter02" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part02.html" id="part02" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter03.html" id="chapter03" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter04.html" id="chapter04" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter05.html" id="chapter05" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter06.html" id="chapter06" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter07.html" id="chapter07" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter08.html" id="chapter08" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter09.html" id="chapter09" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter10.html" id="chapter10" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter11.html" id="chapter11" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part03.html" id="part03" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter12.html" id="chapter12" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter13.html" id="chapter13" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter14.html" id="chapter14" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter15.html" id="chapter15" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter16.html" id="chapter16" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter17.html" id="chapter17" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter18.html" id="chapter18" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter19.html" id="chapter19" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter20.html" id="chapter20" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter21.html" id="chapter21" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter22.html" id="chapter22" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter23.html" id="chapter23" media-type="application/xhtml+xml"/>
+	<item href="xhtml/part04.html" id="part04" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter24.html" id="chapter24" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter25.html" id="chapter25" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter26.html" id="chapter26" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter27.html" id="chapter27" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter28.html" id="chapter28" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter29.html" id="chapter29" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter30.html" id="chapter30" media-type="application/xhtml+xml"/>
+	<item href="xhtml/backmatter01.html" id="backmatter01" media-type="application/xhtml+xml"/>
+	<item href="xhtml/backmatter02.html" id="backmatter02" media-type="application/xhtml+xml"/>
+	<item href="xhtml/backmatter03.html" id="backmatter03" media-type="application/xhtml+xml"/>
+	<item href="xhtml/backmatter04.html" id="backmatter04" media-type="application/xhtml+xml"/>
+	<item href="styles/page-template.xpgt" id="pt" media-type="application/vnd.adobe-page-template+xml"/>
+	<item href="styles/9780814414033.css" id="stylesheet" media-type="text/css"/>
+	<item href="images/9780814414033.jpg" id="cover-image" media-type="image/jpeg"/>
+	<item href="images/pub.jpg" id="pub" media-type="image/jpeg"/>
+	<item href="images/box.jpg" id="box" media-type="image/jpeg"/>
+	<item href="images/line.jpg" id="line" media-type="image/jpeg"/>
+	<item href="images/arrow.jpg" id="arrow" media-type="image/jpeg"/>
+	<item href="images/f0009-01.jpg" id="f0009-01" media-type="image/jpeg"/>
+        <item href="fonts/CharisSILB.ttf" id="font1" media-type="application/x-font-ttf"/>
+        <item href="fonts/CharisSILBI.ttf" id="font2" media-type="application/x-font-ttf"/>
+        <item href="fonts/CharisSILI.ttf" id="font3" media-type="application/x-font-ttf"/>
+        <item href="fonts/CharisSILR.ttf" id="font4" media-type="application/x-font-ttf"/>
+</manifest>
+<spine toc="ncx">
+	<itemref idref="cover" linear="no"/>
+	<itemref idref="ch00_fm01_frontmatter"/>
+	<itemref idref="ch00_fm02_half"/>
+	<itemref idref="ch00_fm03_title"/>
+	<itemref idref="ch00_fm04_copyright"/>
+	<itemref idref="ch00_fm05_dedication"/>
+	<itemref idref="ch00_fm06_contents"/>
+	<itemref idref="ch00_fm07_for"/>
+	<itemref idref="ch00_fm08_ack"/>
+	<itemref idref="part01"/>
+	<itemref idref="chapter01"/>
+	<itemref idref="chapter02"/>
+	<itemref idref="part02"/>
+	<itemref idref="chapter03"/>
+	<itemref idref="chapter04"/>
+	<itemref idref="chapter05"/>
+	<itemref idref="chapter06"/>
+	<itemref idref="chapter07"/>
+	<itemref idref="chapter08"/>
+	<itemref idref="chapter09"/>
+	<itemref idref="chapter10"/>
+	<itemref idref="chapter11"/>
+	<itemref idref="part03"/>
+	<itemref idref="chapter12"/>
+	<itemref idref="chapter13"/>
+	<itemref idref="chapter14"/>
+	<itemref idref="chapter15"/>
+	<itemref idref="chapter16"/>
+	<itemref idref="chapter17"/>
+	<itemref idref="chapter18"/>
+	<itemref idref="chapter19"/>
+	<itemref idref="chapter20"/>
+	<itemref idref="chapter21"/>
+	<itemref idref="chapter22"/>
+	<itemref idref="chapter23"/>
+	<itemref idref="part04"/>
+	<itemref idref="chapter24"/>
+	<itemref idref="chapter25"/>
+	<itemref idref="chapter26"/>
+	<itemref idref="chapter27"/>
+	<itemref idref="chapter28"/>
+	<itemref idref="chapter29"/>
+	<itemref idref="chapter30"/>
+	<itemref idref="backmatter01"/>
+	<itemref idref="backmatter02"/>
+	<itemref idref="backmatter03"/>
+	<itemref idref="backmatter04"/>
+</spine>
+  <guide>
+  <reference href="xhtml/ch00_fm06_contents.html" title="Contents" type="toc"/>
+  </guide>
+</package>

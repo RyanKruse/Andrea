@@ -20,10 +20,54 @@ You can generate a dynamic SDF file from a font type automatically by pressing C
 Save 20 mb on world download size by removing all fallbacks from text using Noto Sans. When using compiler with books that have such texts, need to re-add them. 
 
 TODO:
-
+Format all 16 books. Skip foreign language books.
 Changing font types too fast breaks the clones.
 Scrolling too fast skips the clones.
 Scroll bar on main page (works in VR).
+
+Something broken with images around Loc 785, Loc 1325, 2973 re-add paragraphs? in 7 Habits.
+Loc 1960, Loc 2364, 2729, 3099, 3111, 4419, 5107, 5698 is strange on end clipping (wide text).
+Loc 6276 needs to be broken up (huge word combo)
+Quotes from questions asked on last chapters needs to be consistent in interviews.
+Loc 6538 doesn't cut correctly?
+Very last block doesn't load - errors out.
+
+Re-add the proof-of-concept GUI. Allow rolling. 
 	
 Changing font size and type snaps to closest Loc.
 	Functions ChangeFontSize and ChangeFontType.
+
+
+
+General Structure.
+
+Row A - Life Improvement
+7 Habits of Highly Effective People
+Mindset
+Atomic Habits
+Grit
+The Power of Habit
+Deep Work
+The Subtle Art of Not Giving a F_ck
+Start With Why
+
+Row B - Social Skills
+How to Win Friends and Influence People
+The Charisma Myth
+How to Make People Like You
+Just Listen
+How to Talk to Anyone
+Influence
+Social Skills Guidebook
+Quiet
+
+Creating Book Button Images
+
+Resize all to 523x - 800x - Image.
+Expand Canvas to 549x - 826x - Canvas.
+Add 13 Size Rounded Border. 	
+Remove Corners.
+Save Compressed PNG.
+Create sprite.
+Add Image to buttons.
+Buttons are all 348x - 529x - Button.

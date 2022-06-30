@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="eng">
+  <head>
+    <meta content="47ae37b0-35bc-4322-a3ae-0c00ad36574f" name="dtb:uid"/>
+    <meta content="3" name="dtb:depth"/>
+    <meta content="calibre (3.40.1)" name="dtb:generator"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>Mindset - Updated Edition: Changing The Way You think To Fulfil Your Potential</text>
+  </docTitle>
+  <navMap>
+    <navPoint class="chapter" id="num_1" playOrder="0">
+      <navLabel>
+        <text>Title</text>
+      </navLabel>
+      <content src="text/part0001.html#UGI0-6d243c1889d04110922f41699941ecb5"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_2" playOrder="1">
+      <navLabel>
+        <text>Copyright</text>
+      </navLabel>
+      <content src="text/part0002.html#1T140-6d243c1889d04110922f41699941ecb5"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_3" playOrder="2">
+      <navLabel>
+        <text>Contents</text>
+      </navLabel>
+      <content src="text/part0003.html#2RHM0-6d243c1889d04110922f41699941ecb5"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_4" playOrder="1">
+      <navLabel>
+        <text>Introduction</text>
+      </navLabel>
+      <content src="text/part0004.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_5" playOrder="2">
+      <navLabel>
+        <text>1. The Mindsets</text>
+      </navLabel>
+      <content src="text/part0005.html"/>
+      <navPoint class="chapter" id="num_6" playOrder="3">
+        <navLabel>
+          <text>Why Do People Differ?</text>
+        </navLabel>
+        <content src="text/part0005.html#ch1sec1"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_7" playOrder="4">
+        <navLabel>
+          <text>What Does All This Mean for You? The Two Mindsets</text>
+        </navLabel>
+        <content src="text/part0005.html#ch1sec2"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_8" playOrder="5">
+        <navLabel>
+          <text>A View from the Two Mindsets</text>
+        </navLabel>
+        <content src="text/part0005.html#ch1sec3"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_9" playOrder="6">
+        <navLabel>
+          <text>So, What’s New?</text>
+        </navLabel>
+        <content src="text/part0005.html#ch1sec4"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_10" playOrder="7">
+        <navLabel>
+          <text>Self-Insight: Who Has Accurate Views of Their Assets and Limitations?</text>
+        </navLabel>
+        <content src="text/part0005.html#ch1sec5"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_11" playOrder="8">
+        <navLabel>
+          <text>What’s in Store</text>
+        </navLabel>
+        <content src="text/part0005.html#ch1sec6"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="num_12" playOrder="9">
+      <navLabel>
+        <text>2. Inside the Mindsets</text>
+      </navLabel>
+      <content src="text/part0006.html"/>
+      <navPoint class="chapter" id="num_13" playOrder="10">
+        <navLabel>
+          <text>Is Success About Learning—Or Proving You’re Smart?</text>
+        </navLabel>
+        <content src="text/part0006.html#ch2sec1"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_14" playOrder="11">
+        <navLabel>
+          <text>Mindsets Change the Meaning of Failure</text>
+        </navLabel>
+        <content src="text/part0006.html#ch2sec2"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_15" playOrder="12">
+        <navLabel>
+          <text>Mindsets Change the Meaning of Effort</text>
+        </navLabel>
+        <content src="text/part0006.html#ch2sec3"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_16" playOrder="13">
+        <navLabel>
+          <text>Questions and Answers</text>
+        </navLabel>
+        <content src="text/part0006.html#ch2sec4"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="num_17" playOrder="14">
+      <navLabel>
+        <text>3. The Truth About Ability and Accomplishment</text>
+      </navLabel>
+      <content src="text/part0007_split_000.html"/>
+      <navPoint class="chapter" id="num_18" playOrder="15">
+        <navLabel>
+          <text>Mindset and School Achievement</text>
+        </navLabel>
+        <content src="text/part0007_split_000.html#ch3sec1"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_19" playOrder="16">
+        <navLabel>
+          <text>Is Artistic Ability a Gift?</text>
+        </navLabel>
+        <content src="text/part0007_split_000.html#ch3sec2"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_20" playOrder="17">
+        <navLabel>
+          <text>The Danger of Praise and Positive Labels</text>
+        </navLabel>
+        <content src="text/part0007_split_001.html#ch3sec3"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_21" playOrder="18">
+        <navLabel>
+          <text>Negative Labels and How They Work</text>
+        </navLabel>
+        <content src="text/part0007_split_001.html#ch3sec4"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="num_22" playOrder="19">
+      <navLabel>
+        <text>4. Sports: The Mindset of a Champion</text>
+      </navLabel>
+      <content src="text/part0008.html"/>
+      <navPoint class="chapter" id="num_23" playOrder="20">
+        <navLabel>
+          <text>The Idea of the Natural</text>
+        </navLabel>
+        <content src="text/part0008.html#ch4sec1"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_24" playOrder="21">
+        <navLabel>
+          <text>“Character”</text>
+        </navLabel>
+        <content src="text/part0008.html#ch4sec2"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_25" playOrder="22">
+        <navLabel>
+          <text>What Is Success?</text>
+        </navLabel>
+        <content src="text/part0008.html#ch4sec3"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_26" playOrder="23">
+        <navLabel>
+          <text>What Is Failure?</text>
+        </navLabel>
+        <content src="text/part0008.html#ch4sec4"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_27" playOrder="24">
+        <navLabel>
+          <text>Taking Charge of Success</text>
+        </navLabel>
+        <content src="text/part0008.html#ch4sec5"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_28" playOrder="25">
+        <navLabel>
+          <text>What Does It Mean to Be a Star?</text>
+        </navLabel>
+        <content src="text/part0008.html#ch4sec6"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_29" playOrder="26">
+        <navLabel>
+          <text>Hearing the Mindsets</text>
+        </navLabel>
+        <content src="text/part0008.html#ch4sec7"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="num_30" playOrder="27">
+      <navLabel>
+        <text>5. Business: Mindset and Leadership</text>
+      </navLabel>
+      <content src="text/part0009.html"/>
+      <navPoint class="chapter" id="num_31" playOrder="28">
+        <navLabel>
+          <text>Enron and the Talent Mindset</text>
+        </navLabel>
+        <content src="text/part0009.html#ch5sec1"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_32" playOrder="29">
+        <navLabel>
+          <text>Organizations That Grow</text>
+        </navLabel>
+        <content src="text/part0009.html#ch5sec2"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_33" playOrder="30">
+        <navLabel>
+          <text>A Study of Mindset and Management Decisions</text>
+        </navLabel>
+        <content src="text/part0009.html#ch5sec3"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_34" playOrder="31">
+        <navLabel>
+          <text>Leadership and the Fixed Mindset</text>
+        </navLabel>
+        <content src="text/part0009.html#ch5sec4"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_35" playOrder="32">
+        <navLabel>
+          <text>Fixed-Mindset Leaders in Action</text>
+        </navLabel>
+        <content src="text/part0009.html#ch5sec5"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_36" playOrder="33">
+        <navLabel>
+          <text>Growth-Mindset Leaders in Action</text>
+        </navLabel>
+        <content src="text/part0009.html#ch5sec6"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_37" playOrder="34">
+        <navLabel>
+          <text>A Study of Group Processes</text>
+        </navLabel>
+        <content src="text/part0009.html#ch5sec7"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_38" playOrder="35">
+        <navLabel>
+          <text>Groupthink Versus We Think</text>
+        </navLabel>
+        <content src="text/part0009.html#ch5sec8"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_39" playOrder="36">
+        <navLabel>
+          <text>The Praised Generation Hits the Workforce</text>
+        </navLabel>
+        <content src="text/part0009.html#ch5sec9"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_40" playOrder="37">
+        <navLabel>
+          <text>Are Negotiators Born or Made?</text>
+        </navLabel>
+        <content src="text/part0009.html#ch5sec10"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_41" playOrder="38">
+        <navLabel>
+          <text>Corporate Training: Are Managers Born or Made?</text>
+        </navLabel>
+        <content src="text/part0009.html#ch5sec11"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_42" playOrder="39">
+        <navLabel>
+          <text>Are Leaders Born or Made?</text>
+        </navLabel>
+        <content src="text/part0009.html#ch5sec12"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_43" playOrder="40">
+        <navLabel>
+          <text>Organizational Mindsets</text>
+        </navLabel>
+        <content src="text/part0009.html#ch5sec13"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="num_44" playOrder="41">
+      <navLabel>
+        <text>6. Relationships: Mindsets in Love (or not)</text>
+      </navLabel>
+      <content src="text/part0010.html"/>
+      <navPoint class="chapter" id="num_45" playOrder="42">
+        <navLabel>
+          <text>Relationships Are Different</text>
+        </navLabel>
+        <content src="text/part0010.html#ch6sec1"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_46" playOrder="43">
+        <navLabel>
+          <text>Mindsets Falling in Love</text>
+        </navLabel>
+        <content src="text/part0010.html#ch6sec2"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_47" playOrder="44">
+        <navLabel>
+          <text>The Partner as Enemy</text>
+        </navLabel>
+        <content src="text/part0010.html#ch6sec3"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_48" playOrder="45">
+        <navLabel>
+          <text>Competition: Who’s the Greatest?</text>
+        </navLabel>
+        <content src="text/part0010.html#ch6sec4"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_49" playOrder="46">
+        <navLabel>
+          <text>Developing in Relationships</text>
+        </navLabel>
+        <content src="text/part0010.html#ch6sec5"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_50" playOrder="47">
+        <navLabel>
+          <text>Friendship</text>
+        </navLabel>
+        <content src="text/part0010.html#ch6sec6"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_51" playOrder="48">
+        <navLabel>
+          <text>Shyness</text>
+        </navLabel>
+        <content src="text/part0010.html#ch6sec7"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_52" playOrder="49">
+        <navLabel>
+          <text>Bullies and Victims: Revenge Revisited</text>
+        </navLabel>
+        <content src="text/part0010.html#ch6sec8"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="num_53" playOrder="50">
+      <navLabel>
+        <text>7. Parents, Teachers, and Coaches: Where do Mindsets Come From?</text>
+      </navLabel>
+      <content src="text/part0011.html"/>
+      <navPoint class="chapter" id="num_54" playOrder="51">
+        <navLabel>
+          <text>Parents (and Teachers): Messages About Success and Failure</text>
+        </navLabel>
+        <content src="text/part0011.html#ch7sec1"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_55" playOrder="52">
+        <navLabel>
+          <text>Teachers (and Parents): What Makes a Great Teacher (or Parent)?</text>
+        </navLabel>
+        <content src="text/part0011.html#ch7sec2"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_56" playOrder="53">
+        <navLabel>
+          <text>Coaches: Winning Through Mindset</text>
+        </navLabel>
+        <content src="text/part0011.html#ch7sec3"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_57" playOrder="54">
+        <navLabel>
+          <text>False Growth Mindset</text>
+        </navLabel>
+        <content src="text/part0011.html#ch7sec4"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_58" playOrder="55">
+        <navLabel>
+          <text>Our Legacy</text>
+        </navLabel>
+        <content src="text/part0011.html#ch7sec5"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="num_59" playOrder="56">
+      <navLabel>
+        <text>8. Changing Mindsets</text>
+      </navLabel>
+      <content src="text/part0012.html"/>
+      <navPoint class="chapter" id="num_60" playOrder="57">
+        <navLabel>
+          <text>The Nature of Change</text>
+        </navLabel>
+        <content src="text/part0012.html#ch8sec1"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_61" playOrder="58">
+        <navLabel>
+          <text>The Mindset Lectures</text>
+        </navLabel>
+        <content src="text/part0012.html#ch8sec2"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_62" playOrder="59">
+        <navLabel>
+          <text>A Mindset Workshop</text>
+        </navLabel>
+        <content src="text/part0012.html#ch8sec3"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_63" playOrder="60">
+        <navLabel>
+          <text>Brainology</text>
+        </navLabel>
+        <content src="text/part0012.html#ch8sec4"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_64" playOrder="61">
+        <navLabel>
+          <text>More About Change</text>
+        </navLabel>
+        <content src="text/part0012.html#ch8sec5"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_65" playOrder="62">
+        <navLabel>
+          <text>Opening Yourself Up to Growth</text>
+        </navLabel>
+        <content src="text/part0012.html#ch8sec6"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_66" playOrder="63">
+        <navLabel>
+          <text>People Who Don’t Want to Change</text>
+        </navLabel>
+        <content src="text/part0012.html#ch8sec7"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_67" playOrder="64">
+        <navLabel>
+          <text>Changing Your Child’s Mindset</text>
+        </navLabel>
+        <content src="text/part0012.html#ch8sec8"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_68" playOrder="65">
+        <navLabel>
+          <text>Mindset and Willpower</text>
+        </navLabel>
+        <content src="text/part0012.html#ch8sec9"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_69" playOrder="66">
+        <navLabel>
+          <text>Maintaining Change</text>
+        </navLabel>
+        <content src="text/part0012.html#ch8sec10"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_70" playOrder="67">
+        <navLabel>
+          <text>The Journey to a (True) Growth Mindset</text>
+        </navLabel>
+        <content src="text/part0012.html#ch8sec11"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_71" playOrder="68">
+        <navLabel>
+          <text>Learn and Help Learn</text>
+        </navLabel>
+        <content src="text/part0012.html#ch8sec12"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_72" playOrder="69">
+        <navLabel>
+          <text>The Road Ahead</text>
+        </navLabel>
+        <content src="text/part0012.html#ch8sec13"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="num_73" playOrder="70">
+      <navLabel>
+        <text>Notes</text>
+      </navLabel>
+      <content src="text/part0013.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_74" playOrder="71">
+      <navLabel>
+        <text>Recommended Books</text>
+      </navLabel>
+      <content src="text/part0014.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_75" playOrder="72">
+      <navLabel>
+        <text>Index</text>
+      </navLabel>
+      <content src="text/part0015.html"/>
+    </navPoint>
+  </navMap>
+</ncx>

@@ -1,4 +1,4 @@
-﻿    This document is a work-in-progress. 
+    This document is a work-in-progress. 
     Do not utilize.
     
     // READING MODE: DAY-TIME | NIGHT-TIME
@@ -32,6 +32,16 @@
      * Convert body-text lists to actual lists (discretionary)
      
     Cleanup.
+     * Ensure that <q2> or <h2> appear after a period, not before it. 
+     * Set quote logic at start and end of chapter as Block Index #2.
+     * <t> everywhere (including images) except first paragraph block and paragraph blocks after * * *. 
+     * Lower-case the letters between smallcaps clamp (CTRL+U)
+     * Q5 is when you use quotes in text blocks with a tabbed start (small quotes).
+     * Q2 for all italic quotes. 
+     * Replace all <br/> with a space.
+     * Check the first sentences of each <h3> because the sentences sometimes got nuked.
+
+
      * Split huge words: counterproduct | overgeneral | counterexample | straightforward | troubleshoot | counterintuitive | semiprofession
      * Remove any corruptable characters: ’ → ' | “ → " | ” → " | < | > | ~
      * Remove spaces after blank paragraphs: '\n ' → '\n'

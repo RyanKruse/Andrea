@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Книга: The Power of Habit</title>
+    <meta content="Duhigg Charles" name="Author"/>
+    <meta content="Автор: Duhigg Charles, Книга: The Power of Habit, Жанр: проза" name="description"/>
+    <meta content="6 months" name="revisit"/>
+    <script type="text/javascript">
+
+var xmlHttp = false;
+/*@cc_on @*/
+/*@if (@_jscript_version &gt;= 5)
+try {
+  xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+} catch (e) {
+  try {
+    xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+  } catch (e2) {
+    xmlHttp = false;
+  }
+}
+@end @*/
+
+if (!xmlHttp &amp;&amp; typeof XMLHttpRequest != 'undefined') {
+  xmlHttp = new XMLHttpRequest();
+}
+
+function Get_Cookie( name )
+{
+	var start = document.cookie.indexOf( name + "=" );
+	var len = start + name.length + 1;
+	if ( ( !start ) &amp;&amp; ( name != document.cookie.substring( 0, name.length ) ) ) {return null;}
+	if ( start == -1 ) return null;
+	var end = document.cookie.indexOf( ";", len );
+	if ( end == -1 ) end = document.cookie.length;
+	return unescape( document.cookie.substring( len, end ) );
+} 
+
+function hidelayer( layer_ref )
+{
+  state = 'hidden';
+  if (document.all) { //IS IE 4 or 5 (or 6 beta)
+    eval( "if( document.all." + layer_ref +" ) document.all." + layer_ref + ".style.visibility = state");
+  }
+  if (document.layers) { //IS NETSCAPE 4 or below
+    if( document.layers[layer_ref] ) document.layers[layer_ref].visibility = state;
+  }
+  if (document.getElementById &amp;&amp; !document.all) {
+    maxwell_smart = document.getElementById(layer_ref);
+    if( maxwell_smart ) maxwell_smart.style.visibility = state;
+  }
+}
+
+function showlayer( layer_ref )
+{
+  state = 'visible';
+  if (document.all) { //IS IE 4 or 5 (or 6 beta)
+    eval( "if( document.all." + layer_ref +" ) document.all." + layer_ref + ".style.visibility = state");
+  }
+  if (document.layers) { //IS NETSCAPE 4 or below
+    if( document.layers[layer_ref] ) document.layers[layer_ref].visibility = state;
+  }
+  if (document.getElementById &amp;&amp; !document.all) {
+    maxwell_smart = document.getElementById(layer_ref);
+    if( maxwell_smart ) maxwell_smart.style.visibility = state;
+  }
+}
+
+
+function GotoContent()
+{
+	window.location.replace("#label"+document.bookfooter.contents.value);
+}
+
+function getBodyScrollTop()
+{
+  return self.pageYOffset || 
+    (document.documentElement &amp;&amp; document.documentElement.scrollTop) || 
+    (document.body &amp;&amp; document.body.scrollTop);
+}
+
+function getDocumentHeight()
+{
+  return (document.body.scrollHeight &gt; document.body.offsetHeight)?
+    document.body.scrollHeight:
+    document.body.offsetHeight;
+}
+
+var timeoutpid=0;
+function ServerStatus()
+{
+   if (xmlHttp.readyState == 4)
+   {
+   		var response = xmlHttp.responseText;
+   		if( response.length&gt;2 )
+   		{
+			document.getElementById('note').innerHTML = '&lt;br&gt;'+response;
+			showlayer('note');
+			clearTimeout(timeoutpid);
+			timeoutpid=setTimeout("document.getElementById('note').innerHTML = ''; hidelayer('note');",10000);
+		}
+   }
+}
+
+
+function SavePosition()
+{
+	var pos=getBodyScrollTop();
+	var height=getDocumentHeight();
+	var percent=Math.round(pos*100000/height);
+	var url = "/saveBookPos.php?book=1008062&amp;pos="+percent;
+	document.cookie="booklastposition1008062="+percent+"; path=/; expires=Mon, 01-Jan-2050 00:00:00 GMT";
+
+}
+
+function RestorePosition( ppos )
+{
+	var percent=Get_Cookie('booklastposition1008062');
+	if( ppos  )
+	{
+		percent=ppos;
+		//alert('restore '+percent+'/'+ppos);
+	}
+	else
+	{
+		if( Get_Cookie('bgColor') ) document.bgColor='#'+Get_Cookie('bgColor');
+		if( Get_Cookie('fgColor') ) document.fgColor='#'+Get_Cookie('fgColor');
+		var b=document.getElementsByTagName('p');
+		var fontSize=Get_Cookie('fontSize');
+		if( fontSize )
+		{
+			for( i=0; i&lt;b.length; i++ )
+			{
+				b[i].style.fontSize = fontSize+'px';
+			}
+		
+		}
+	}
+	var height=getDocumentHeight();
+	var pos=Math.round(percent*height/100000);
+	if( percent&gt;0 ) document.body.scrollTop=pos;
+	document.getElementById('note').innerHTML = '';
+}
+
+function ReaderSettings()
+{
+	var bcolor=document.bookfooter.backgroundcolor.value;
+	if( bcolor.length==6 )
+	{
+		document.bgColor="#"+bcolor;
+		document.cookie="bgColor="+bcolor+"; path=/; expires=Mon, 01-Jan-2050 00:00:00 GMT";
+	}
+	var fcolor=document.bookfooter.textcolor.value;
+	if( fcolor.length==6 )
+	{
+		document.fgColor="#"+fcolor;
+		document.cookie="fgColor="+fcolor+"; path=/; expires=Mon, 01-Jan-2050 00:00:00 GMT";
+	}
+	var fsize=document.bookfooter.fsize.value;
+	if( fsize&gt;4 )
+	{
+		var pos=getBodyScrollTop();
+		var height=getDocumentHeight();
+		var percent=Math.round(pos*100000/height);
+		var b=document.getElementsByTagName('p');
+		for( i=0; i&lt;b.length; i++ ) 
+		{
+			b[i].style.fontSize = fsize+"px";
+		
+		}
+		if( percent==0 ) percent=1;
+		setTimeout("RestorePosition("+percent+")",500);
+		document.cookie="fontSize="+fsize+"; path=/; expires=Mon, 01-Jan-2050 00:00:00 GMT";
+	}
+
+}
+
+function DisplaySettings( id )
+{
+	state='unknown';
+	if (document.all) { //IS IE 4 or 5 (or 6 beta)
+    	eval( "if( document.all." + id +" ) state=document.all." + id + ".style.display");
+    }
+	if (document.layers) { //IS NETSCAPE 4 or below
+    	if( document.layers[id] ) state=document.layers[id].display;
+	}
+	if (document.getElementById &amp;&amp; !document.all) {
+    	maxwell_smart = document.getElementById(id);
+    	if( maxwell_smart ) state=maxwell_smart.style.display;
+	}
+	if( state == 'none' ) state='inline';
+	else state='none'; 
+	if (document.all) { 
+    	eval( "if( document.all." + id +" ) document.all." + id + ".style.display = state");
+	}
+	if (document.layers) {
+    	if( document.layers[id] ) document.layers[id].display = state;
+	}
+	if (document.getElementById &amp;&amp; !document.all) {
+    	maxwell_smart = document.getElementById(id);
+    	if( maxwell_smart ) maxwell_smart.style.display = state;
+	}
+}
+
+function tableruler()
+{
+	return 0;
+}
+
+</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="page_styles.css" type="text/css" rel="stylesheet"/>
+</head>
+  <body onscroll="SavePosition();" onload="RestorePosition();" onunload="SavePosition();" class="calibre">
+<div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">On March 18, 2006, Angie Bachmann flew to a casino at Harrah’s invitation. By then, her bank account was almost empty. When she tried to calculate how much she had lost over her lifetime, she put the figure at about $900,000. She had told Harrah’s that she was almost broke, but the man on the phone said to come anyway. They would give her a line of credit, he said.</p>
+
+<p class="calibre2">“It felt like I couldn’t say no, like whenever they dangled the smallest temptation in front of me, my brain would shut off. I know that sounds like an excuse, but they always promised it would be different this time, and I knew no matter how much I fought against it, I was eventually going to give in.”</p>
+
+<p class="calibre2">She brought the last of her money with her. She started playing $400 a hand, two hands at a time. If she could get up a little bit, she told herself, just $100,000, she could quit and have something to give her kids. Her husband joined her for a while, but at midnight he went to bed. Around 2 A.M., the money she had come with was gone. A Harrah’s employee gave her a promissory note to sign. Six times she signed for more cash, for a total of $125,000.</p>
+
+<p class="calibre2">At about six in the morning, she hit a hot streak and her piles of chips began to grow. A crowd gathered. She did a quick tally: not quite enough to pay off the notes she had signed, but if she kept playing smart, she would come out on top, and then quit for good. She won five times in a row. She only needed to win $20,000 more to pull ahead. Then the dealer hit 21. Then he hit it again. A few hands later, he hit it a third time. By ten in the morning, all her chips were gone. She asked for more credit, but the casino said no.</p>
+
+<p class="calibre2">Bachmann left the table dazed and walked to her suite. It felt like the floor was shaking. She trailed a hand along the wall so that if she fell, she’d know which way to lean. When she got to the room, her husband was waiting for her.</p>
+
+<p class="calibre2">“It’s all gone,” she told him.</p>
+
+<p class="calibre2">“Why don’t you take a shower and go to bed?” he said. “It’s okay. You’ve lost before.”</p>
+
+<p class="calibre2">“It’s all gone,” she said.</p>
+
+<p class="calibre2">“What do you mean?”</p>
+
+<p class="calibre2">“The money is gone,” she said. “All of it.”</p>
+
+<p class="calibre2">“At least we still have the house,” he said.</p>
+
+<p class="calibre2">She didn’t tell him that she’d taken out a line of credit on their home months earlier and had gambled it away.</p>
+
+<p class="calibre2"><strong class="calibre4">IV.</strong></p>
+
+<p class="calibre2">Brian Thomas murdered his wife. Angie Bachmann squandered her inheritance. Is there a difference in how society should assign responsibility?</p>
+
+<p class="calibre2">Thomas’s lawyer argued that his client wasn’t culpable for his wife’s death because he acted unconsciously, automatically, his reaction cued by the belief that an intruder was attacking. He never <em class="calibre3">chose</em> to kill, his lawyer said, and so he shouldn’t be held responsible for her death. By the same logic, Bachmann—as we know from Reza Habib’s research on the brains of problem gamblers—was also driven by powerful cravings. She may have made a choice that first day when she got dressed up and decided to spend the afternoon in a casino, and perhaps in the weeks or months that followed. But years later, by the time she was losing $250,000 in a single night, after she was so desperate to fight the urges that she moved to a state where gambling wasn’t legal, she was no longer making conscious decisions. “Historically, in neuroscience, we’ve said that people with brain damage lose some of their free will,” said Habib. “But when a pathological gambler sees a casino, it seems very similar. It seems like they’re acting without choice.”<sup class="calibre5">9.28</sup></p>
+
+<p class="calibre2">Thomas’s lawyer argued, in a manner that everyone believed, that his client had made a terrible mistake and would carry the guilt of it for life. However, isn’t it clear that Bachmann feels much the same way? “I feel so guilty, so ashamed of what I’ve done,” she told me. “I feel like I’ve let everyone down. I know that I’ll never be able to make up for this, no matter what I do.”</p>
+
+<p class="calibre2">That said, there is one critical distinction between the cases of Thomas and Bachmann: Thomas murdered an innocent person. He committed what has always been the gravest of crimes. Angie Bachmann lost money. The only victims were herself, her family, and a $27 billion company that loaned her $125,000.</p>
+
+<p class="calibre2">Thomas was set free by society. Bachmann was held accountable for her deeds.</p>
+
+<p class="calibre2">Ten months after Bachmann lost everything, Harrah’s tried to collect from her bank. The promissory notes she signed bounced, and so Harrah’s sued her, demanding Bachmann pay her debts and an additional $375,000 in penalties—a civil punishment, in effect, for committing a crime. She countersued, claiming that by extending her credit, free suites, and booze, Harrah’s had preyed on someone they knew had no control over her habits. Her case went all the way to the state Supreme Court. Bachmann’s lawyer—echoing the arguments that Thomas’s attorney had made on the murderer’s behalf—said that she shouldn’t be held culpable because she had been reacting automatically to temptations that Harrah’s put in front of her. Once the offers started rolling in, he argued, once she walked into the casino, her habits took over and it was impossible for her to control her behavior.</p>
+
+<p class="calibre2">The justices, acting on behalf of society, said Bachmann was wrong. “There is no common law duty obligating a casino operator to refrain from attempting to entice or contact gamblers that it knows or should know are compulsive gamblers,” the court wrote. The state had a “voluntary exclusion program” in which any person could ask for their name to be placed upon a list that required casinos to bar them from playing, and “the existence of the voluntary exclusion program suggests the legislature intended pathological gamblers to take personal responsibility to prevent and protect themselves against compulsive gambling,” wrote Justice Robert Rucker.</p>
+
+<p class="calibre2">Perhaps the difference in outcomes for Thomas and Bachmann is fair. After all, it’s easier to sympathize with a devastated widower than a housewife who threw everything away.</p>
+
+<p class="calibre2"><em class="calibre3">Why</em> is it easier, though? Why does it seem the bereaved husband is a victim, while the bankrupt gambler got her just deserts? Why do some habits seem like they should be so easy to control, while others seem out of reach?</p>
+
+<p class="calibre2">More important, is it right to make a distinction in the first place?</p>
+
+<p class="calibre2">“Some thinkers,” Aristotle wrote in <em class="calibre3">Nicomachean Ethics,</em> “hold that it is by nature that people become good, others that it is by habit, and others that it is by instruction.” For Aristotle, habits reigned supreme. The behaviors that occur unthinkingly are the evidence of our truest selves, he said. So “just as a piece of land has to be prepared beforehand if it is to nourish the seed, so the mind of the pupil has to be prepared in its habits if it is to enjoy and dislike the right things.”</p>
+
+<p class="calibre2">Habits are not as simple as they appear. As I’ve tried to demonstrate throughout this book, habits—even once they are rooted in our minds—aren’t destiny. We can choose our habits, once we know how. Everything we know about habits, from neurologists studying amnesiacs and organizational experts remaking companies, is that any of them can be changed, if you understand how they function.</p>
+
+<p class="calibre2">Hundreds of habits influence our days—they guide how we get dressed in the morning, talk to our kids, and fall asleep at night; they impact what we eat for lunch, how we do business, and whether we exercise or have a beer after work. Each of them has a different cue and offers a unique reward. Some are simple and others are complex, drawing upon emotional triggers and offering subtle neurochemical prizes. But every habit, no matter its complexity, is malleable. The most addicted alcoholics can become sober. The most dysfunctional companies can transform themselves. A high school dropout can become a successful manager.</p>
+
+<p class="calibre2">However, to modify a habit, you must <em class="calibre3">decide</em> to change it. You must consciously accept the hard work of identifying the cues and rewards that drive the habits’ routines, and find alternatives. You must know you have control and be self-conscious enough to use it—and every chapter in this book is devoted to illustrating a different aspect of why that control is real.</p>
+
+<p class="calibre2">So though both Angie Bachmann and Brian Thomas made variations on the same claim—that they acted out of habit, that they had no control over their actions because those behaviors unfolded automatically—it seems fair that they should be treated differently. It is just that Angie Bachmann should be held accountable and that Brian Thomas should go free because Thomas never knew the patterns that drove him to kill existed in the first place—much less that he could master them. Bachmann, on the other hand, was aware of her habits. And once you know a habit exists, you have the responsibility to change it. If she had tried a bit harder, perhaps she could have reined them in. Others have done so, even in the face of greater temptations.</p>
+
+<p class="calibre2">That, in some ways, is the point of this book. Perhaps a sleepwalking murderer can plausibly argue he wasn’t aware of his habit, and so he doesn’t bear responsibility for his crime. But almost all the other patterns that exist in most people’s lives—how we eat and sleep and talk to our kids, how we unthinkingly spend our time, attention, and money—those <em class="calibre3">are</em> habits that we know exist. And once you understand that habits can change, you have the freedom—and the responsibility—to remake them. Once you understand that habits can be rebuilt, the power of habit becomes easier to grasp, and the only option left is to get to work.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">“All our life,” William James told us in the prologue, “so far as it has definite form, is but a mass of habits—practical, emotional, and intellectual—systematically organized for our weal or woe, and bearing us irresistibly toward our destiny, whatever the latter may be.”<sup class="calibre5">9.29</sup></p>
+
+<p class="calibre2">James, who died in 1910, hailed from an accomplished family. His father was a wealthy and prominent theologian. His brother, Henry, was a brilliant, successful writer whose novels are still studied today. William, into his thirties, was the unaccomplished one in the family. He was sick as a child. He wanted to become a painter, and then enrolled in medical school, then left to join an expedition up the Amazon River. Then he quit that, as well. He chastised himself in his diary for not being good at anything. What’s more, he wasn’t certain if he could get better. In medical school, he had visited a hospital for the insane and had seen a man hurling himself against a wall. The patient, a doctor explained, suffered from hallucinations. James didn’t say that he often felt like he shared more in common with the patients than his fellow physicians.</p>
+
+<p class="calibre2">“Today I about touched bottom, and perceive plainly that I must face the choice with open eyes,” James wrote in his diary in 1870, when he was twenty-eight years old. “Shall I frankly throw the moral business overboard, as one unsuited to my innate aptitudes?”</p>
+
+<p class="calibre2">Is suicide, in other words, a better choice?</p>
+
+<p class="calibre2">Two months later, James made a decision. Before doing anything rash, he would conduct a yearlong experiment. He would spend twelve months believing that he had control over himself and his destiny, that he could become better, that he had the free will to change. There was no proof that it was true. But he would free himself to <em class="calibre3">believe,</em> all evidence to the contrary, that change was possible. “I think that yesterday was a crisis in my life,” he wrote in his diary. Regarding his ability to change, “I will assume for the present—until next year—that it is no illusion. My first act of free will shall be to believe in free will.”</p>
+
+<p class="calibre2">Over the next year, he practiced every day. In his diary, he wrote as if his control over himself and his choices was never in question. He got married. He started teaching at Harvard. He began spending time with Oliver Wendell Holmes, Jr., who would go on to become a Supreme Court justice, and Charles Sanders Peirce, a pioneer in the study of semiotics, in a discussion group they called the Metaphysical Club.<sup class="calibre5">9.30</sup> Two years after writing his diary entry, James sent a letter to the philosopher Charles Renouvier, who had expounded at length on free will. “I must not lose this opportunity of telling you of the admiration and gratitude which have been excited in me by the reading of your <em class="calibre3">Essais</em>,” James wrote. “Thanks to you I possess for the first time an intelligible and reasonable conception of freedom.… I can say that through that philosophy I am beginning to experience a rebirth of the moral life; and I can assure you, sir, that this is no small thing.”</p>
+
+<p class="calibre2">Later, he would famously write that the will to believe is the most important ingredient in creating belief in change. And that one of the most important methods for creating that belief was habits. Habits, he noted, are what allow us to “do a thing with difficulty the first time, but soon do it more and more easily, and finally, with sufficient practice, do it semi-mechanically, or with hardly any consciousness at all.” Once we choose who we want to be, people grow “to the way in which they have been exercised, just as a sheet of paper or a coat, once creased or folded, tends to fall forever afterward into the same identical folds.”</p>
+
+<p class="calibre2">If you believe you can change—if you make it a habit—the change becomes real. This is the real power of habit: the insight that your habits are what you choose them to be. Once that choice occurs—and becomes automatic—it’s not only real, it starts to seem inevitable, the thing, as James wrote, that bears “us irresistibly toward our destiny, whatever the latter may be.”</p>
+
+<p class="calibre2">The way we habitually think of our surroundings and ourselves create the worlds that each of us inhabit. “There are these two young fish swimming along and they happen to meet an older fish swimming the other way, who nods at them and says ‘Morning, boys. How’s the water?’ ” the writer David Foster Wallace told a class of graduating college students in 2005. “And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes ‘What the hell is water?’ ”</p>
+
+<p class="calibre2">The water is habits, the unthinking choices and invisible decisions that surround us every day—and which, just by looking at them, become visible again.</p>
+
+<p class="calibre2">Throughout his life, William James wrote about habits and their central role in creating happiness and success. He eventually devoted an entire chapter in his masterpiece <em class="calibre3">The Principles of Psychology</em> to the topic. Water, he said, is the most apt analogy for how a habit works. Water “hollows out for itself a channel, which grows broader and deeper; and, after having ceased to flow, it resumes, when it flows again, the path traced by itself before.”<sup class="calibre5">9.31</sup></p>
+
+<p class="calibre2">You now know how to redirect that path. You now have the power to swim.</p>
+
+<p class="calibre2"><sup class="calibre5">1</sup>It may seem irrational for anyone to believe they can beat the house in a casino. However, as regular gamblers know, it is possible to consistently win, particularly at games such as blackjack. Don Johnson of Bensalem, Pennsylvania, for instance, won a reported $15.1 million at blackjack over a six-month span starting in 2010. The house always wins in the aggregate because so many gamblers bet in a manner that doesn’t maximize their odds, and most people do not have enough money to see themselves through losses. A gambler can consistently win over time, though, if he or she has memorized the complicated formulas and odds that guide how each hand should be played. Most players, however, don’t have the discipline or mathematical skills to beat the house.</p>
+
+<p class="calibre2"><sup class="calibre5">2</sup>Harrah’s—now known as Caesars Entertainment—disputes some of Bachmann’s allegations. Their comments can be found in the notes.</p>
+
+<p class="calibre2"><sup class="calibre5">3</sup>In the late 1990s, one of the largest slot machine manufacturers hired a former video game executive to help them design new slots. That executive’s insight was to program machines to deliver more near wins. Now, almost every slot contains numerous twists—such as free spins and sounds that erupt when icons almost align—as well as small payouts that make players feel like they are winning when, in truth, they are putting in more money than they are getting back. “No other form of gambling manipulates the human mind as beautifully as these machines,” an addictive-disorder researcher at the University of Connecticut School of Medicine told a <em class="calibre3">New York Times</em> reporter in 2004.</p>
+
+<p class="calibre2"><strong class="calibre4">APPENDIX</strong></p><p class="content" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre2"><strong class="calibre4">A Reader’s Guide to Using These Ideas</strong></p>
+
+<p class="calibre2">The difficult thing about studying the science of habits is that most people, when they hear about this field of research, want to know the secret formula for quickly changing any habit. If scientists have discovered how these patterns work, then it stands to reason that they must have also found a recipe for rapid change, right?</p>
+
+<p class="calibre2">If only it were that easy.</p>
+
+<p class="calibre2">It’s not that formulas don’t exist. The problem is that there isn’t one formula for changing habits. There are thousands.</p>
+
+<p class="calibre2">Individuals and habits are all different, and so the specifics of diagnosing and changing the patterns in our lives differ from person to person and behavior to behavior. Giving up cigarettes is different from curbing overeating, which is different from changing how you communicate with your spouse, which is different from how you prioritize tasks at work. What’s more, each person’s habits are driven by different cravings.</p>
+
+<p class="calibre2">As a result, this book doesn’t contain one prescription. Rather, I hoped to deliver something else: a framework for understanding how habits work and a guide to experimenting with how they might change. Some habits yield easily to analysis and influence. Others are more complex and obstinate, and require prolonged study. And for others, change is a process that never fully concludes.</p>
+
+<p class="calibre2">But that doesn’t mean it can’t occur. Each chapter in this book explains a different aspect of why habits exist and how they function. The framework described in this appendix is an attempt to distill, in a very basic way, the tactics that researchers have found for diagnosing and shaping habits within our own lives. This isn’t meant to be comprehensive. This is merely a practical guide, a place to start. And paired with deeper lessons from this book’s chapters, it’s a manual for where to go next.</p>
+
+<p class="calibre2">Change might not be fast and it isn’t always easy. But with time and effort, almost any habit can be reshaped.</p>
+
+<p class="calibre2">THE FRAMEWORK:</p>
+
+<p class="calibre2">• Identify the routine</p>
+
+<p class="calibre2">• Experiment with rewards</p>
+
+<p class="calibre2">• Isolate the cue</p>
+
+<p class="calibre2">• Have a plan</p>
+
+<p class="calibre2"><strong class="calibre4">STEP ONE: IDENTIFY THE ROUTINE</strong></p>
+
+<p class="calibre2">The MIT researchers in chapter 1 discovered a simple neurological loop at the core of every habit, a loop that consists of three parts: a cue, a routine, and a reward.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">To understand your own habits, you need to identify the components of your loops. Once you have diagnosed the habit loop of a particular behavior, you can look for ways to supplant old vices with new routines.</p>
+
+<p class="calibre2">As an example, let’s say you have a bad habit, like I did when I started researching this book, of going to the cafeteria and buying a chocolate chip cookie every afternoon. Let’s say this habit has caused you to gain a few pounds. In fact, let’s say this habit has caused you to gain exactly eight pounds, and that your wife has made a few pointed comments. You’ve tried to force yourself to stop—you even went so far as to put a Post-it on your computer that reads no more cookies.</p>
+
+<p class="calibre2">But every afternoon you manage to ignore that note, get up, wander toward the cafeteria, buy a cookie, and, while chatting with colleagues around the cash register, eat it. It feels good, and then it feels bad. Tomorrow, you promise yourself, you’ll muster the willpower to resist. Tomorrow will be different.</p>
+
+<p class="calibre2">But tomorrow the habit takes hold again.</p>
+
+<p class="calibre2">How do you start diagnosing and then changing this behavior? By figuring out the habit loop. And the first step is to identify the routine. In this cookie scenario—as with most habits—the routine is the most obvious aspect: It’s the behavior you want to change. Your routine is that you get up from your desk in the afternoon, walk to the cafeteria, buy a chocolate chip cookie, and eat it while chatting with friends. So that’s what you put into the loop:</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Next, some less obvious questions: What’s the cue for this routine? Is it hunger? Boredom? Low blood sugar? That you need a break before plunging into another task?</p>
+
+<p class="calibre2">And what’s the reward? The cookie itself? The change of scenery? The temporary distraction? Socializing with colleagues? Or the burst of energy that comes from that blast of sugar?</p>
+
+<p class="calibre2">To figure this out, you’ll need to do a little experimentation.</p>
+
+<p class="calibre2"><strong class="calibre4">STEP TWO: EXPERIMENT WITH REWARDS</strong></p>
+
+<p class="calibre2">Rewards are powerful because they satisfy cravings. But we’re often not conscious of the cravings that drive our behaviors. When the Febreze marketing team discovered that consumers desired a fresh scent at the end of a cleaning ritual, for example, they had found a craving that no one even knew existed. It was hiding in plain sight. Most cravings are like this: obvious in retrospect, but incredibly hard to see when we are under their sway.</p>
+
+<p class="calibre2">To figure out which cravings are driving particular habits, it’s useful to experiment with different rewards. This might take a few days, or a week, or longer. During that period, you shouldn’t feel any pressure to make a real change—think of yourself as a scientist in the data collection stage.</p>
+
+<p class="calibre2">On the first day of your experiment, when you feel the urge to go to the cafeteria and buy a cookie, adjust your routine so it delivers a different reward. For instance, instead of walking to the cafeteria, go outside, walk around the block, and then go back to your desk without eating anything. The next day, go to the cafeteria and buy a donut, or a candy bar, and eat it at your desk. The next day, go to the cafeteria, buy an apple, and eat it while chatting with your friends. Then, try a cup of coffee. Then, instead of going to the cafeteria, walk over to your friend’s office and gossip for a few minutes and go back to your desk.</p>
+
+<p class="calibre2">You get the idea. What you choose to do <em class="calibre3">instead</em> of buying a cookie isn’t important. The point is to test different hypotheses to determine which craving is driving your routine. Are you craving the cookie itself, or a break from work? If it’s the cookie, is it because you’re hungry? (In which case the apple should work just as well.) Or is it because you want the burst of energy the cookie provides? (And so the coffee should suffice.) Or are you wandering up to the cafeteria as an excuse to socialize, and the cookie is just a convenient excuse? (If so, walking to someone’s desk and gossiping for a few minutes should satisfy the urge.)</p>
+
+<p class="calibre2">As you test four or five different rewards, you can use an old trick to look for patterns: After each activity, jot down on a piece of paper the first three things that come to mind when you get back to your desk. They can be emotions, random thoughts, reflections on how you’re feeling, or just the first three words that pop into your head.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Then, set an alarm on your watch or computer for fifteen minutes. When it goes off, ask yourself: Do you still feel the urge for that cookie?</p>
+
+<p class="calibre2">The reason why it’s important to write down three things—even if they are meaningless words—is twofold. First, it forces a momentary awareness of what you are thinking or feeling. Just as Mandy, the nail biter in chapter 3, carried around a note card filled with hash marks to force her into awareness of her habitual urges, so writing three words forces a moment of attention. What’s more, studies show that writing down a few words helps in later recalling what you were thinking at that moment. At the end of the experiment, when you review your notes, it will be much easier to remember what you were thinking and feeling at that precise instant, because your scribbled words will trigger a wave of recollection.</p>
+
+<p class="calibre2">And why the fifteen-minute alarm? Because the point of these tests is to determine the reward you’re craving. If, fifteen minutes after eating a donut, you <em class="calibre3">still</em> feel an urge to get up and go to the cafeteria, then your habit isn’t motivated by a sugar craving. If, after gossiping at a colleague’s desk, you still want a cookie, then the need for human contact isn’t what’s driving your behavior.</p>
+
+<p class="calibre2">On the other hand, if fifteen minutes after chatting with a friend, you find it easy to get back to work, then you’ve identified the reward—temporary distraction and socialization—that your habit sought to satisfy.</p>
+
+<p class="calibre2">By experimenting with different rewards, you can isolate what you are <em class="calibre3">actually</em> craving, which is essential in redesigning the habit.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Once you’ve figured out the routine and the reward, what remains is identifying the cue.</p>
+
+<p class="calibre2"><strong class="calibre4">STEP THREE: ISOLATE THE CUE</strong></p>
+
+<p class="calibre2">About a decade ago, a psychologist at the University of Western Ontario tried to answer a question that had bewildered social scientists for years: Why do some eyewitnesses of crimes misremember what they see, while other recall events accurately?</p>
+
+<p class="calibre2">The recollections of eyewitnesses, of course, are incredibly important. And yet studies indicate that eyewitnesses often misremember what they observe. They insist that the thief was a man, for instance, when she was wearing a skirt; or that the crime occurred at dusk, even though police reports say it happened at 2:00 in the afternoon. Other eyewitnesses, on the other hand, can remember the crimes they’ve seen with near-perfect recall.</p>
+
+<p class="calibre2">Dozens of studies have examined this phenomena, trying to determine why some people are better eyewitnesses than others. Researchers theorized that some people simply have better memories, or that a crime that occurs in a familiar place is easier to recall. But those theories didn’t test out—people with strong and weak memories, or more and less familiarity with the scene of a crime, were equally liable to misremember what took place.</p>
+
+<p class="calibre2">The psychologist at the University of Western Ontario took a different approach. She wondered if researchers were making a mistake by focusing on what questioners and witnesses had said, rather than <em class="calibre3">how</em> they were saying it. She suspected there were subtle cues that were influencing the questioning process. But when she watched videotape after videotape of witness interviews, looking for these cues, she couldn’t see anything. There was so much activity in each interview—all the facial expressions, the different ways the questions were posed, the fluctuating emotions—that she couldn’t detect any patterns.</p>
+
+<p class="calibre2">So she came up with an idea: She made a list of a few elements she would focus on—the questioners’ tone, the facial expressions of the witness, and how close the witness and the questioner were sitting to each other. Then she removed any information that would distract her from those elements. She turned down the volume on the television so instead of hearing words, all she could detect was the tone of the questioner’s voice. She taped a sheet of paper over the questioner’s face, so all she could see was the witnesses’ expressions. She held a tape measure to the screen to measure their distance from each other.</p>
+
+<p class="calibre2">And once she started studying these specific elements, patterns leapt out. She saw that witnesses who misremembered facts usually were questioned by cops who used a gentle, friendly tone. When witnesses smiled more, or sat closer to the person asking the questions, they were more likely to misremember.</p>
+
+<p class="calibre2">In other words, when environmental cues said “we are friends”—a gentle tone, a smiling face—the witnesses were more likely to misremember what had occurred. Perhaps it was because, subconsciously, those friendship cues triggered a habit to please the questioner.</p>
+
+<p class="calibre2">But the importance of this experiment is that those same tapes had been watched by dozens of other researchers. Lots of smart people had seen the same patterns, but no one had recognized them before. Because there was <em class="calibre3">too much</em> information in each tape to see a subtle cue.</p>
+
+<p class="calibre2">Once the psychologist decided to focus on only three categories of behavior, however, and eliminate the extraneous information, the patterns leapt out.</p>
+
+<p class="calibre2">Our lives are the same way. The reason why it is so hard to identify the cues that trigger our habits is because there is too much information bombarding us as our behaviors unfold. Ask yourself, do you eat breakfast at a certain time each day because you are hungry? Or because the clock says 7:30? Or because your kids have started eating? Or because you’re dressed, and that’s when the breakfast habit kicks in?</p>
+
+<p class="calibre2">When you automatically turn your car left while driving to work, what triggers that behavior? A street sign? A particular tree? The knowledge that this is, in fact, the correct route? All of them together? When you’re driving your kid to school and you find that you’ve absentmindedly started taking the route to work—rather than to the school—what caused the mistake? What was the cue that caused the “drive to work” habit to kick in, rather than the “drive to school” pattern?</p>
+
+<p class="calibre2">To identify a cue amid the noise, we can use the same system as the psychologist: Identify categories of behaviors ahead of time to scrutinize in order to see patterns. Luckily, science offers some help in this regard. Experiments have shown that almost all habitual cues fit into one of five categories:</p>
+
+<p class="calibre2">Location</p>
+
+<p class="calibre2">Time</p>
+
+<p class="calibre2">Emotional state</p>
+
+<p class="calibre2">Other people</p>
+
+<p class="calibre2">Immediately preceding action</p>
+
+<p class="calibre2">So if you’re trying to figure out the cue for the “going to the cafeteria and buying a chocolate chip cookie” habit, you write down five things the moment the urge hits (these are my actual notes from when I was trying to diagnose my habit):</p>
+
+<p class="calibre2">Where are you? (sitting at my desk)</p>
+
+<p class="calibre2">What time is it? (3:36</p>
+
+<p class="calibre2">P.M</p>
+
+<p class="calibre2">.)</p>
+
+<p class="calibre2">What’s your emotional state? (bored)</p>
+
+<p class="calibre2">Who else is around? (no one)</p>
+
+<p class="calibre2">What action preceded the urge? (answered an email)</p>
+
+<p class="calibre2">The next day:</p>
+
+<p class="calibre2">Where are you? (walking back from the copier)</p>
+
+<p class="calibre2">What time is it? (3:18</p>
+
+<p class="calibre2">P.M</p>
+
+<p class="calibre2">.)</p>
+
+<p class="calibre2">What’s your emotional state? (happy)</p>
+
+<p class="calibre2">Who else is around? (Jim from Sports)</p>
+
+<p class="calibre2">What action preceded the urge? (made a photocopy)</p>
+
+<p class="calibre2">The third day:</p>
+
+<p class="calibre2">Where are you? (conference room)</p>
+
+<p class="calibre2">What time is it? (3:41</p>
+
+<p class="calibre2">P.M</p>
+
+<p class="calibre2">.)</p>
+
+<p class="calibre2">What’s your emotional state? (tired, excited about the project I’m working on)</p>
+
+<p class="calibre2">Who else is around? (editors who are coming to this meeting)</p>
+
+<p class="calibre2">What action preceded the urge? (I sat down because the meeting is about to start)</p>
+
+<p class="calibre2">Three days in, it was pretty clear which cue was triggering my cookie habit—I felt an urge to get a snack at a certain time of day. I had already figured out, in step two, that it wasn’t hunger driving my behavior. The reward I was seeking was a temporary distraction—the kind that comes from gossiping with a friend. And the habit, I now knew, was triggered between 3:00 and 4:00.</p>
+
+<p class="calibre2"></p></body></html>

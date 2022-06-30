@@ -451,7 +451,7 @@ public class Wick : MonoBehaviour
                 // Debug.Log($"LOOP TERMINATED. REMOVED ({_index}) RICH-TEXT IMAGE COMMANDS.");
                 break;
             }
-            int _end = _mainTMP.text.IndexOf("jpg\">", _start) + "jpg\">".Length + 2;
+            int _end = _mainTMP.text.IndexOf("g\">", _start) + "g\">".Length + 2;
             // Add +1 to account for the new line... but can't since newline is not in rich-text brackets.
             _mainTMP.text = _mainTMP.text.Remove(_start, _end - _start);
 

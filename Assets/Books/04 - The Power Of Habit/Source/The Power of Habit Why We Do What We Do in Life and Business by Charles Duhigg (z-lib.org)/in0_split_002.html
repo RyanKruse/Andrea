@@ -1,0 +1,995 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Книга: The Power of Habit</title>
+    <meta content="Duhigg Charles" name="Author"/>
+    <meta content="Автор: Duhigg Charles, Книга: The Power of Habit, Жанр: проза" name="description"/>
+    <meta content="6 months" name="revisit"/>
+    <script type="text/javascript">
+
+var xmlHttp = false;
+/*@cc_on @*/
+/*@if (@_jscript_version &gt;= 5)
+try {
+  xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+} catch (e) {
+  try {
+    xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+  } catch (e2) {
+    xmlHttp = false;
+  }
+}
+@end @*/
+
+if (!xmlHttp &amp;&amp; typeof XMLHttpRequest != 'undefined') {
+  xmlHttp = new XMLHttpRequest();
+}
+
+function Get_Cookie( name )
+{
+	var start = document.cookie.indexOf( name + "=" );
+	var len = start + name.length + 1;
+	if ( ( !start ) &amp;&amp; ( name != document.cookie.substring( 0, name.length ) ) ) {return null;}
+	if ( start == -1 ) return null;
+	var end = document.cookie.indexOf( ";", len );
+	if ( end == -1 ) end = document.cookie.length;
+	return unescape( document.cookie.substring( len, end ) );
+} 
+
+function hidelayer( layer_ref )
+{
+  state = 'hidden';
+  if (document.all) { //IS IE 4 or 5 (or 6 beta)
+    eval( "if( document.all." + layer_ref +" ) document.all." + layer_ref + ".style.visibility = state");
+  }
+  if (document.layers) { //IS NETSCAPE 4 or below
+    if( document.layers[layer_ref] ) document.layers[layer_ref].visibility = state;
+  }
+  if (document.getElementById &amp;&amp; !document.all) {
+    maxwell_smart = document.getElementById(layer_ref);
+    if( maxwell_smart ) maxwell_smart.style.visibility = state;
+  }
+}
+
+function showlayer( layer_ref )
+{
+  state = 'visible';
+  if (document.all) { //IS IE 4 or 5 (or 6 beta)
+    eval( "if( document.all." + layer_ref +" ) document.all." + layer_ref + ".style.visibility = state");
+  }
+  if (document.layers) { //IS NETSCAPE 4 or below
+    if( document.layers[layer_ref] ) document.layers[layer_ref].visibility = state;
+  }
+  if (document.getElementById &amp;&amp; !document.all) {
+    maxwell_smart = document.getElementById(layer_ref);
+    if( maxwell_smart ) maxwell_smart.style.visibility = state;
+  }
+}
+
+
+function GotoContent()
+{
+	window.location.replace("#label"+document.bookfooter.contents.value);
+}
+
+function getBodyScrollTop()
+{
+  return self.pageYOffset || 
+    (document.documentElement &amp;&amp; document.documentElement.scrollTop) || 
+    (document.body &amp;&amp; document.body.scrollTop);
+}
+
+function getDocumentHeight()
+{
+  return (document.body.scrollHeight &gt; document.body.offsetHeight)?
+    document.body.scrollHeight:
+    document.body.offsetHeight;
+}
+
+var timeoutpid=0;
+function ServerStatus()
+{
+   if (xmlHttp.readyState == 4)
+   {
+   		var response = xmlHttp.responseText;
+   		if( response.length&gt;2 )
+   		{
+			document.getElementById('note').innerHTML = '&lt;br&gt;'+response;
+			showlayer('note');
+			clearTimeout(timeoutpid);
+			timeoutpid=setTimeout("document.getElementById('note').innerHTML = ''; hidelayer('note');",10000);
+		}
+   }
+}
+
+
+function SavePosition()
+{
+	var pos=getBodyScrollTop();
+	var height=getDocumentHeight();
+	var percent=Math.round(pos*100000/height);
+	var url = "/saveBookPos.php?book=1008062&amp;pos="+percent;
+	document.cookie="booklastposition1008062="+percent+"; path=/; expires=Mon, 01-Jan-2050 00:00:00 GMT";
+
+}
+
+function RestorePosition( ppos )
+{
+	var percent=Get_Cookie('booklastposition1008062');
+	if( ppos  )
+	{
+		percent=ppos;
+		//alert('restore '+percent+'/'+ppos);
+	}
+	else
+	{
+		if( Get_Cookie('bgColor') ) document.bgColor='#'+Get_Cookie('bgColor');
+		if( Get_Cookie('fgColor') ) document.fgColor='#'+Get_Cookie('fgColor');
+		var b=document.getElementsByTagName('p');
+		var fontSize=Get_Cookie('fontSize');
+		if( fontSize )
+		{
+			for( i=0; i&lt;b.length; i++ )
+			{
+				b[i].style.fontSize = fontSize+'px';
+			}
+		
+		}
+	}
+	var height=getDocumentHeight();
+	var pos=Math.round(percent*height/100000);
+	if( percent&gt;0 ) document.body.scrollTop=pos;
+	document.getElementById('note').innerHTML = '';
+}
+
+function ReaderSettings()
+{
+	var bcolor=document.bookfooter.backgroundcolor.value;
+	if( bcolor.length==6 )
+	{
+		document.bgColor="#"+bcolor;
+		document.cookie="bgColor="+bcolor+"; path=/; expires=Mon, 01-Jan-2050 00:00:00 GMT";
+	}
+	var fcolor=document.bookfooter.textcolor.value;
+	if( fcolor.length==6 )
+	{
+		document.fgColor="#"+fcolor;
+		document.cookie="fgColor="+fcolor+"; path=/; expires=Mon, 01-Jan-2050 00:00:00 GMT";
+	}
+	var fsize=document.bookfooter.fsize.value;
+	if( fsize&gt;4 )
+	{
+		var pos=getBodyScrollTop();
+		var height=getDocumentHeight();
+		var percent=Math.round(pos*100000/height);
+		var b=document.getElementsByTagName('p');
+		for( i=0; i&lt;b.length; i++ ) 
+		{
+			b[i].style.fontSize = fsize+"px";
+		
+		}
+		if( percent==0 ) percent=1;
+		setTimeout("RestorePosition("+percent+")",500);
+		document.cookie="fontSize="+fsize+"; path=/; expires=Mon, 01-Jan-2050 00:00:00 GMT";
+	}
+
+}
+
+function DisplaySettings( id )
+{
+	state='unknown';
+	if (document.all) { //IS IE 4 or 5 (or 6 beta)
+    	eval( "if( document.all." + id +" ) state=document.all." + id + ".style.display");
+    }
+	if (document.layers) { //IS NETSCAPE 4 or below
+    	if( document.layers[id] ) state=document.layers[id].display;
+	}
+	if (document.getElementById &amp;&amp; !document.all) {
+    	maxwell_smart = document.getElementById(id);
+    	if( maxwell_smart ) state=maxwell_smart.style.display;
+	}
+	if( state == 'none' ) state='inline';
+	else state='none'; 
+	if (document.all) { 
+    	eval( "if( document.all." + id +" ) document.all." + id + ".style.display = state");
+	}
+	if (document.layers) {
+    	if( document.layers[id] ) document.layers[id].display = state;
+	}
+	if (document.getElementById &amp;&amp; !document.all) {
+    	maxwell_smart = document.getElementById(id);
+    	if( maxwell_smart ) maxwell_smart.style.display = state;
+	}
+}
+
+function tableruler()
+{
+	return 0;
+}
+
+</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="page_styles.css" type="text/css" rel="stylesheet"/>
+</head>
+  <body onscroll="SavePosition();" onload="RestorePosition();" onunload="SavePosition();" class="calibre">
+<p class="calibre2">But among the most important benefits of routines is that they create truces between potentially warring groups or individuals within an organization.<sup class="calibre5">6.22</sup></p>
+
+<p class="calibre2">Most economists are accustomed to treating companies as idyllic places where everyone is devoted to a common goal: making as much money as possible. Nelson and Winter pointed out that, in the real world, that’s not how things work at all. Companies aren’t big happy families where everyone plays together nicely. Rather, most workplaces are made up of fiefdoms where executives compete for power and credit, often in hidden skirmishes that make their own performances appear superior and their rivals’ seem worse. Divisions compete for resources and sabotage each other to steal glory. Bosses pit their subordinates against one another so that no one can mount a coup.</p>
+
+<p class="calibre2">Companies aren’t families. They’re battlefields in a civil war.</p>
+
+<p class="calibre2">Yet despite this capacity for internecine warfare, most companies roll along relatively peacefully, year after year, because they have routines—habits—that create truces that allow everyone to set aside their rivalries long enough to get a day’s work done.</p>
+
+<p class="calibre2">Organizational habits offer a basic promise: If you follow the established patterns and abide by the truce, then rivalries won’t destroy the company, the profits will roll in, and, eventually, everyone will get rich. A salesperson, for example, knows she can boost her bonus by giving favored customers hefty discounts in exchange for larger orders. But she also knows that if every salesperson gives away hefty discounts, the firm will go bankrupt and there won’t be any bonuses to hand out. So a routine emerges: The salespeople all get together every January and agree to limit how many discounts they offer in order to protect the company’s profits, and at the end of the year everyone gets a raise.</p>
+
+<p class="calibre2">Or take a young executive gunning for vice president who, with one quiet phone call to a major customer, could kill a sale and sabotage a colleague’s division, taking him out of the running for the promotion. The problem with sabotage is that even if it’s good for you, it’s usually bad for the firm. So at most companies, an unspoken compact emerges: It’s okay to be ambitious, but if you play <em class="calibre3">too</em> rough, your peers will unite against you. On the other hand, if you focus on boosting your own department, rather than undermining your rival, you’ll probably get taken care of over time.<sup class="calibre5">6.23</sup></p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">ROUTINES CREATE TRUCES THAT ALLOW WORK TO GET DONE</p>
+
+<p class="calibre2">Routines and truces offer a type of rough organizational justice, and because of them, Nelson and Winter wrote, conflict within companies usually “follows largely predictable paths and stays within predictable bounds that are consistent with the ongoing routine.… The usual amount of work gets done, reprimands and compliments are delivered with the usual frequency.… Nobody is trying to steer the organizational ship into a sharp turn in the hope of throwing a rival overboard.”<sup class="calibre5">6.24</sup></p>
+
+<p class="calibre2">Most of the time, routines and truces work perfectly. Rivalries still exist, of course, but because of institutional habits, they’re kept within bounds and the business thrives.</p>
+
+<p class="calibre2">However, sometimes even a truce proves insufficient. Sometimes, as Rhode Island Hospital discovered, an unstable peace can be as destructive as any civil war.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Somewhere in your office, buried in a desk drawer, there’s probably a handbook you received on your first day of work. It contains expense forms and rules about vacations, insurance options, and the company’s organizational chart. It has brightly colored graphs describing different health care plans, a list of relevant phone numbers, and instructions on how to access your email or enroll in the 401(k).</p>
+
+<p class="calibre2">Now, imagine what you would tell a new colleague who asked for advice about how to <em class="calibre3">succeed</em> at your firm. Your recommendations probably wouldn’t contain anything you’d find in the company’s handbook. Instead, the tips you would pass along—who is trustworthy; which secretaries have more clout than their bosses; how to manipulate the bureaucracy to get something done—are the habits you rely on every day to survive. If you could somehow diagram all your work habits—and the informal power structures, relationships, alliances, and conflicts they represent—and then overlay your diagram with diagrams prepared by your colleagues, it would create a map of your firm’s secret hierarchy, a guide to who knows how to make things happen and who never seems to get ahead of the ball.</p>
+
+<p class="calibre2">Nelson and Winter’s routines—and the truces they make possible—are critical to every kind of business. One study from Utrecht University in the Netherlands, for instance, looked at routines within the world of high fashion. To survive, every fashion designer has to possess some basic skills: creativity and a flair for haute couture as a start. But that’s not enough to succeed.<sup class="calibre5">6.25</sup> What makes the difference between success or failure are a designer’s routines—whether they have a system for getting Italian broadcloth before wholesalers’ stocks sell out, a process for finding the best zipper and button seamstresses, a routine for shipping a dress to a store in ten days, rather than three weeks. Fashion is such a complicated business that, without the right processes, a new company will get bogged down with logistics, and once that happens, creativity ceases to matter.</p>
+
+<p class="calibre2">And which new designers are most likely to have the right habits? The ones who have formed the right truces and found the right alliances.<sup class="calibre5">6.26</sup> Truces are so important that new fashion labels usually succeed only if they are headed by people who left <em class="calibre3">other</em> fashion companies on good terms.</p>
+
+<p class="calibre2">Some might think Nelson and Winter were writing a book on dry economic theory. But what they really produced was a guide to surviving in corporate America.</p>
+
+<p class="calibre2">What’s more, Nelson and Winter’s theories also explain why things went so wrong at Rhode Island Hospital. The hospital had routines that created an uneasy peace between nurses and doctors—the whiteboards, for instance, and the warnings nurses whispered to one another were habits that established a baseline truce. These delicate pacts allowed the organization to function most of the time. But truces are only durable when they create real justice. If a truce is unbalanced—if the peace isn’t real—then the routines often fail when they are needed most.</p>
+
+<p class="calibre2">The critical issue at Rhode Island Hospital was that the nurses were the only ones giving up power to strike a truce. It was the nurses who double-checked patients’ medications and made extra efforts to write clearly on charts; the nurses who absorbed abuse from stressed-out doctors; the nurses who helped separate kind physicians from the despots, so the rest of the staff knew who tolerated operating-room suggestions and who would explode if you opened your mouth. The doctors often didn’t bother to learn the nurses’ names. “The doctors were in charge, and we were underlings,” one nurse told me. “We tucked our tails and survived.”</p>
+
+<p class="calibre2">The truces at Rhode Island Hospital were one-sided. So at those crucial moments—when, for instance, a surgeon was about to make a hasty incision and a nurse tried to intervene—the routines that could have prevented the accident crumbled, and the wrong side of an eighty-six-year-old man’s head was opened up.</p>
+
+<p class="calibre2">Some might suggest that the solution is more equitable truces. That if the hospital’s leadership did a better job of allocating authority, a healthier balance of power might emerge and nurses and doctors would be forced into a mutual respect.</p>
+
+<p class="calibre2">That’s a good start. Unfortunately, it isn’t enough. Creating successful organizations isn’t just a matter of balancing authority. For an organization to work, leaders must cultivate habits that both create a real and balanced peace and, paradoxically, make it absolutely clear who’s in charge.</p>
+
+<p class="calibre2"><strong class="calibre4">III.</strong></p>
+
+<p class="calibre2">Philip Brickell, a forty-three-year-old employee of the London Underground, was inside the cavernous main hall of the King’s Cross subway station on a November evening in 1987 when a commuter stopped him as he was collecting tickets and said there was a burning tissue at the bottom of a nearby escalator.<sup class="calibre5">6.27</sup><sup class="calibre5">, </sup><sup class="calibre5">6.28</sup></p>
+
+<p class="calibre2">King’s Cross was one of the largest, grandest, and most heavily trafficked of London’s subway stops, a labyrinth of deep escalators, passageways, and tunnels, some of which were almost a century old. The station’s escalators, in particular, were famous for their size and age. Some stretched as many as five stories into the ground and were built of wooden slats and rubber handrails, the same materials used to construct them decades earlier. More than a quarter million passengers passed through King’s Cross every day on six different train lines. During evening rush hour, the station’s ticketing hall was a sea of people hurrying beneath a ceiling repainted so many times that no one could recall its original hue.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">The burning tissue, the passenger said, was at the bottom of one of the station’s longest escalators, servicing the Piccadilly line. Brickell immediately left his position, rode the escalator down to the platform, found the smoldering wad of tissue, and, with a rolled-up magazine, beat out the fire. Then he returned to his post.</p>
+
+<p class="calibre2">Brickell didn’t investigate further. He didn’t try to figure out why the tissue was burning or if it might have flown off of a larger fire somewhere else within the station. He didn’t mention the incident to another employee or call the fire department. A separate department handled fire safety, and Brickell, in keeping with the strict divisions that ruled the Underground, knew better than to step on anyone’s toes. Besides, even if he <em class="calibre3">had</em> investigated the possibility of a fire, he wouldn’t have known what to do with any information he learned. The tightly prescribed chain of command at the Underground prohibited him from contacting another department without a superior’s direct authorization. And the Underground’s routines—handed down from employee to employee—told him that he should never, under any circumstances, refer out loud to <em class="calibre3">anything</em> inside a station as a “fire,” lest commuters become panicked. It wasn’t how things were done.</p>
+
+<p class="calibre2">The Underground was governed by a sort of theoretical rule book that no one had ever seen or read—and that didn’t, in fact, exist except in the unwritten rules that shaped every employee’s life. For decades, the Underground had been run by the “Four Barons”—the chiefs of civil, signal, electrical, and mechanical engineering—and within each of their departments, there were bosses and subbosses who all jealously guarded their authority. The trains ran on time because all nineteen thousand Underground employees cooperated in a delicate system that passed passengers and trains among dozens—sometimes hundreds—of hands all day long. But that cooperation depended upon a balance of power between each of the four departments and all their lieutenants that, itself, relied upon thousands of habits that employees adhered to. These habits created a truce among the Four Barons and their deputies. And from that truce arose policies that told Brickell: Looking for fires isn’t your job. Don’t overstep your bounds.</p>
+
+<p class="calibre2">“Even at the highest level, one director was unlikely to trespass on the territory of another,” an investigator would later note. “Thus, the engineering director did not concern himself with whether the operating staff were properly trained in fire safety and evacuation procedures because he considered those matters to be the province of the Operations Directorate.”</p>
+
+<p class="calibre2">So Brickell didn’t say anything about the burning tissue. In other circumstances, it might have been an unimportant detail. In this case, the tissue was a stray warning—a bit of fuel that had escaped from a larger, hidden blaze—that would show how perilous even perfectly balanced truces can become if they aren’t designed just right.<sup class="calibre5">6.29</sup></p>
+
+<p class="calibre2">Fifteen minutes after Brickell returned to his booth, another passenger noticed a wisp of smoke as he rode up the Piccadilly escalator; he mentioned it to an Underground employee. The King’s Cross safety inspector, Christopher Hayes, was eventually roused to investigate. A third passenger, seeing smoke and a glow from underneath the escalator’s stairs, hit an emergency stop button and began shouting at passengers to exit the escalator. A policeman saw a slight smoky haze inside the escalator’s long tunnel, and, halfway down, flames beginning to dart above the steps.</p>
+
+<p class="calibre2">Yet the safety inspector, Hayes, didn’t call the London Fire Brigade. He hadn’t seen any smoke himself, and another of the Underground’s unwritten rules was that the fire department should never be contacted unless absolutely necessary. The policeman who had noticed the haze, however, figured he should contact headquarters. His radio didn’t work underground, so he walked up a long staircase into the outdoors and called his superiors, who eventually passed word to the fire department. At 7:36 p.m.—twenty-two minutes after Brickell was alerted to the flaming tissue—the fire brigade received a call: “Small fire at King’s Cross.” Commuters were pushing past the policeman as he stood outside, speaking on his radio. They were rushing into the station, down into the tunnels, focused on getting home for dinner.</p>
+
+<p class="calibre2">Within minutes, many of them would be dead.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">At 7:36 P.M., an Underground worker roped off entry to the Piccadilly escalator and another started diverting people to a different stairway. New trains were arriving every few minutes. The platforms where passengers exited subway cars were crowded. A bottleneck started building at the bottom of an open staircase.</p>
+
+<p class="calibre2">Hayes, the safety inspector, went into a passageway that led to the Piccadilly escalator’s machine room. In the dark, there was a set of controls for a sprinkler system specifically designed to fight fires on escalators. It had been installed years earlier, after a fire in another station had led to a series of dire reports about the risks of a sudden blaze. More than two dozen studies and reprimands had said that the Underground was unprepared for fires, and that staff needed to be trained in how to use sprinklers and fire extinguishers, which were positioned on every train platform. Two years earlier the deputy assistant chief of the London Fire Brigade had written to the operations director for railways, complaining about subway workers’ safety habits.</p>
+
+<p class="calibre2">“I am gravely concerned,” the letter read. “I cannot urge too strongly that … clear instructions be given that on any suspicion of fire, the Fire Brigade be called without delay. This could save lives.”</p>
+
+<p class="calibre2">However, Hayes, the safety inspector, never saw that letter because it was sent to a separate division from the one he worked within, and the Underground’s policies were never rewritten to reflect the warning. No one inside King’s Cross understood how to use the escalator sprinkler system or was authorized to use the extinguishers, because another department controlled them. Hayes completely forgot the sprinkler system existed. The truces ruling the Underground made sure everyone knew their place, but they left no room for learning about anything outside what you were assigned to know. Hayes ran past the sprinkler controls without so much as a glance.</p>
+
+<p class="calibre2">When he reached the machine room, he was nearly overcome by heat. The fire was already too big to fight. He ran back to the main hall. There was a line of people standing at the ticket machines and hundreds of people milling about the room, walking to platforms or leaving the station. Hayes found a policeman.</p>
+
+<p class="calibre2">“We’ve got to stop the trains and get everyone out of here,” he told him. “The fire is out of control. It’s going everywhere.”</p>
+
+<p class="calibre2">At 7:42 P.M.—almost a half hour after the burning tissue—the first fireman arrived at King’s Cross. As he entered the ticketing hall he saw dense black smoke starting to snake along the ceiling. The escalator’s rubber handrails had begun to burn. As the acrid smell of burning rubber spread, commuters in the ticketing hall began to recognize that something was wrong. They moved toward the exits as firemen waded through the crowd, fighting against the tide.</p>
+
+<p class="calibre2">Below, the fire was spreading. The entire escalator was now aflame, producing a superheated gas that rose to the top of the shaft enclosing the escalator, where it was trapped against the tunnel’s ceiling, which was covered with about twenty layers of old paint. A few years earlier, the Underground’s director of operations had suggested that all this paint might pose a fire hazard. Perhaps, he said, the old layers should be removed before a new one is applied?</p>
+
+<p class="calibre2">Painting protocols were not in his purview, however. Paint responsibility resided with the maintenance department, whose chief politely thanked his colleague for the recommendation, and then noted that if he wanted to interfere with other departments, the favor would be swiftly returned.</p>
+
+<p class="calibre2">The director of operations withdrew his recommendation.</p>
+
+<p class="calibre2">As the superheated gases pooled along the ceiling of the escalator shaft, all those old layers of paint began absorbing the warmth. As each new train arrived, it pushed a fresh gust of oxygen into the station, feeding the fire like a bellows.</p>
+
+<p class="calibre2">At 7:43 P.M., a train arrived and a salesman named Mark Silver exited. He knew immediately that something was wrong. The air was hazy, the platform packed with people. Smoke wafted around where he was standing, curling around the train cars as they sat on the tracks. He turned to reenter the train, but the doors had closed. He hammered on the windows, but there was an unofficial policy to avoid tardiness: Once the doors were sealed, they did not open again. Up and down the platform, Silver and other passengers screamed at the driver to open the doors. The signal light changed to green, and the train pulled away. One woman jumped on the tracks, running after the train as it moved into the tunnel. “Let me in!” she screamed.</p>
+
+<p class="calibre2">Silver walked down the platform, to where a policeman was directing everyone away from the Piccadilly escalator and to another stairway. There were crowds of panicked people waiting to get upstairs. They could all smell the smoke, and everyone was packed together. It felt hot—either from the fire or the crush of people, Silver wasn’t sure. He finally got to the bottom of an escalator that had been turned off. As he climbed toward the ticketing hall, he could feel his legs burning from heat coming through a fifteen-foot wall separating him from the Piccadilly shaft. “I looked up and saw the walls and ceiling sizzling,” he later said.</p>
+
+<p class="calibre2">At 7:45 P.M., an arriving train forced a large gust of air into the station. As the oxygen fed the fire, the blaze in the Piccadilly escalator roared. The superheated gases along the ceiling of the shaft, fueled by fire below and sizzling paint above, reached a combustion temperature, known as a “flashover point.” At that moment, everything inside the shaft—the paint, the wooden escalator stairs, and any other available fuel—ignited in a fiery blast. The force of the sudden incineration acted the explosion of gunpowder at the base of a rifle barrel. It began pushing the fire upward through the long shaft, absorbing more heat and velocity as the blaze expanded until it shot out of the tunnel and into the ticketing hall in a wall of flames that set metal, tile, and flesh on fire. The temperature inside the hall shot up 150 degrees in half a second. A policeman riding one of the side escalators later told investigators that he saw “a jet of flame that shot up and then collected into a kind of ball.” There were nearly fifty people inside the hall at the time.</p>
+
+<p class="calibre2">Aboveground, on the street, a passerby felt heat explode from one of the subway’s exits, saw a passenger stagger out, and ran to help. “I got hold of his right hand with my right hand but as our hands touched I could feel his was red hot and some of the skin came off in my hand,” the rescuer said. A policeman who was entering the ticketing hall as the explosion occurred later told reporters, from a hospital bed, that “a fireball hit me in the face and knocked me off my feet. My hands caught fire. They were just melting.”</p>
+
+<p class="calibre2">He was one of the last people to exit the hall alive.</p>
+
+<p class="calibre2">Shortly after the explosion, dozens of fire trucks arrived. But because the fire department’s rules instructed them to connect their hoses to street-level hydrants, rather than those installed by the Underground inside the station, and because none of the subway employees had blueprints showing the station’s layout—all the plans were in an office that was locked, and none of the ticketing agents or the station manager had keys—it took hours to extinguish the flames.</p>
+
+<p class="calibre2">When the blaze was finally put out at 1:46 A.M.—six hours after the burning tissue was noticed—the toll stood at thirty-one dead and dozens injured.</p>
+
+<p class="calibre2">“Why did they send me straight into the fire?” a twenty-year-old music teacher asked the next day from a hospital bed. “I could see them burning. I could hear them screaming. Why didn’t someone take charge?”<sup class="calibre5">6.30</sup></p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">To answer those questions, consider a few of the truces the London Underground relied upon to function:</p>
+
+<p class="calibre2">Ticketing clerks were warned that their jurisdiction was strictly limited to selling tickets, so if they saw a burning tissue, they didn’t warn anyone for fear of overstepping their bounds.</p>
+
+<p class="calibre2">Station employees weren’t trained how to use the sprinkler system or extinguishers, because that equipment was overseen by a different division.</p>
+
+<p class="calibre2">The station’s safety inspector never saw a letter from the London Fire Brigade warning about fire risks because it was sent to the operations director, and information like that wasn’t shared across divisions.</p>
+
+<p class="calibre2">Employees were instructed only to contact the fire brigade as a last resort, so as not to panic commuters unnecessarily.</p>
+
+<p class="calibre2">The fire brigade insisted on using its own street-level hydrants, ignoring pipes in the ticketing hall that could have delivered water, because they had been ordered not to use equipment installed by other agencies.</p>
+
+<p class="calibre2">In some ways, each of these informal rules, on its own, makes a certain amount of sense. For instance, the habits that kept ticketing clerks focused on selling tickets instead of doing anything else—including keeping an eye out for warning signs of fire—existed because, years earlier, the Underground had problems with understaffed kiosks. Clerks kept leaving their posts to pick up trash or point tourists toward their trains, and as a result, long lines would form. So clerks were ordered to stay in their booths, sell tickets, and not worry about anything else. It worked. Lines disappeared. If clerks saw something amiss outside their kiosks—beyond their scope of responsibility—they minded their own business.</p>
+
+<p class="calibre2">And the fire brigade’s habit of insisting on their own equipment? That was a result of an incident, a decade earlier, when a fire had raged in another station as firemen wasted precious minutes trying to hook up their hoses to unfamiliar pipes. Afterward, everyone decided it was best to stick with what they knew.</p>
+
+<p class="calibre2">None of these routines, in other words, were arbitrary. Each was designed for a reason. The Underground was so vast and complicated that it could operate smoothly only if truces smoothed over potential obstacles. Unlike at Rhode Island Hospital, each truce created a genuine balance of power. No department had the upper hand.</p>
+
+<p class="calibre2">Yet thirty-one people died.</p>
+
+<p class="calibre2">The London Underground’s routines and truces all seemed logical until a fire erupted. At which point, an awful truth emerged: No one person, department, or baron had ultimate responsibility for passengers’ safety.<sup class="calibre5">6.31</sup></p>
+
+<p class="calibre2">Sometimes, one priority—or one department or one person or one goal—<em class="calibre3">needs</em> to overshadow everything else, though it might be unpopular or threaten the balance of power that keeps trains running on time. Sometimes, a truce can create dangers that outweigh any peace.</p>
+
+<p class="calibre2">There’s a paradox in this observation, of course. How can an organization implement habits that balance authority and, at the same time, choose a person or goal that rises above everyone else? How do nurses and doctors share authority while still making it clear who is in charge? How does a subway system avoid becoming bogged down in turf battles while making sure safety is still a priority, even if that means lines of authority must be redrawn?</p>
+
+<p class="calibre2">The answer lies in seizing the same advantage that Tony Dungy encountered when he took over the woeful Bucs and Paul O’Neill discovered when he became CEO of flailing Alcoa. It’s the same opportunity Howard Schultz exploited when he returned to a flagging Starbucks in 2007. All those leaders seized the possibilities created by a crisis. During turmoil, organizational habits become malleable enough to both assign responsibility and create a more equitable balance of power. Crises are so valuable, in fact, that sometimes it’s worth stirring up a sense of looming catastrophe rather than letting it die down.</p>
+
+<p class="calibre2"><strong class="calibre4">IV.</strong></p>
+
+<p class="calibre2">Four months after the elderly man with the botched skull surgery died at Rhode Island Hospital, another surgeon at the hospital committed a similar error, operating on the wrong section of another patient’s head. The state’s health department reprimanded the facility and fined it $50,000. Eighteen months later, a surgeon operated on the wrong part of a child’s mouth during a cleft palate surgery. Five months after that, a surgeon operated on a patient’s wrong finger. Ten months after that, a drill bit was left inside a man’s head. For these transgressions, the hospital was fined another $450,000.<sup class="calibre5">6.32</sup></p>
+
+<p class="calibre2">Rhode Island Hospital is not the only medical institution where such accidents happen, of course, but they were unlucky enough to become the poster child for such mistakes. Local newspapers printed detailed stories of each incident. Television stations set up camp outside the hospital. The national media joined in, too. “The problem’s not going away,” a vice president of the national hospital accreditation organization told an Associated Press reporter.<sup class="calibre5">6.33</sup> Rhode Island Hospital, the state’s medical authorities declared to reporters, was a facility in chaos.</p>
+
+<p class="calibre2">“It felt like working in a war zone,” a nurse told me. “There were TV reporters ambushing doctors as they walked to their cars. One little boy asked me to make sure the doctor wouldn’t accidentally cut off his arm during surgery. It felt like everything was out of control.”<sup class="calibre5">6.34</sup></p>
+
+<p class="calibre2">As critics and the media piled on, a sense of crisis emerged within the hospital.<sup class="calibre5">6.35</sup> Some administrators started worrying that the facility would lose its accreditation. Others became defensive, attacking the television stations for singling them out. “I found a button that said ‘Scapegoat’ that I was going to wear to work,” one doctor told me. “My wife said that was a bad idea.”</p>
+
+<p class="calibre2">Then an administrator, Dr. Mary Reich Cooper, who had become chief quality officer a few weeks before the eighty-six-year-old man’s death, spoke up. In meetings with the hospital’s administrators and staff, Cooper said that they were looking at the situation all wrong.</p>
+
+<p class="calibre2">All this criticism wasn’t a bad thing, she said. In fact, the hospital had been given an opportunity that few organizations ever received.</p>
+
+<p class="calibre2">“I saw this as an opening,” Dr. Cooper told me. “There’s a long history of hospitals trying to attack these problems and failing. Sometimes people need a jolt, and all the bad publicity was a <em class="calibre3">serious</em> jolt. It gave us a chance to reexamine everything.”</p>
+
+<p class="calibre2">Rhode Island Hospital shut down all elective surgery units for an entire day—a huge expense—and put the entire staff through an intensive training program that emphasized teamwork and stressed the importance of empowering nurses and medical staff. The chief of neurosurgery resigned and a new leader was selected. The hospital invited the Center for Transforming Healthcare—a coalition of leading medical institutions—to help redesign its surgical safeguards. Administrators installed video cameras in operating rooms to make sure time-outs occurred and checklists were mandated for every surgery.<sup class="calibre5">6.36</sup> A computerized system allowed any hospital employee to anonymously report problems that endangered patient health.<sup class="calibre5">6.37</sup></p>
+
+<p class="calibre2">Some of those initiatives had been proposed at Rhode Island Hospital in previous years, but they had always been struck down. Doctors and nurses didn’t want people recording their surgeries or other hospitals telling them how to do their jobs.</p>
+
+<p class="calibre2">But once a sense of crisis gripped Rhode Island Hospital, everyone became more open to change.<sup class="calibre5">6.38</sup></p>
+
+<p class="calibre2">Other hospitals have made similar shifts in the wake of mistakes and have brought down error rates that just years earlier had seemed immune to improvement.<sup class="calibre5">6.39</sup> Like Rhode Island Hospital, these institutions have found that reform is usually possible only once a sense of crisis takes hold. For instance, one of Harvard University’s teaching hospitals, Beth Israel Deaconess Medical Center, went through a spate of errors and internal battles in the late 1990s that spilled into newspaper articles and ugly shouting matches between nurses and administrators at public meetings. There was talk among some state officials of forcing the hospital to close departments until they could prove the mistakes would stop. Then the hospital, under attack, coalesced around solutions to change its culture. Part of the answer was “safety rounds,” in which, every three months, a senior physician discussed a particular surgery or diagnosis and described, in painstaking detail, a mistake or near miss to an audience of hundreds of her or his peers.</p>
+
+<p class="calibre2">“It’s excruciating to admit a mistake publicly,” said Dr. Donald Moorman, until recently Beth Israel Deaconess’s associate surgeon in chief. “Twenty years ago, doctors wouldn’t do it. But a real sense of panic has spread through hospitals now, and even the best surgeons are willing to talk about how close they came to a big error. The culture of medicine is changing.”</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Good leaders seize crises to remake organizational habits. NASA administrators, for instance, tried for years to improve the agency’s safety habits, but those efforts were unsuccessful until the space shuttle <em class="calibre3">Challenger</em> exploded in 1986. In the wake of that tragedy, the organization was able to overhaul how it enforced quality standards.<sup class="calibre5">6.40</sup> Airline pilots, too, spent years trying to convince plane manufacturers and air traffic controllers to redesign how cockpits were laid out and traffic controllers communicated. Then, a runway error on the Spanish island of Tenerife in 1977 killed 583 people and, within five years, cockpit design, runway procedures, and air traffic controller communication routines were overhauled.<sup class="calibre5">6.41</sup></p>
+
+<p class="calibre2">In fact, crises are such valuable opportunities that a wise leader often prolongs a sense of emergency on purpose. That’s exactly what occurred after the King’s Cross station fire. Five days after the blaze, the British secretary of state appointed a special investigator, Desmond Fennell, to study the incident. Fennell began by interviewing the Underground’s leadership, and quickly discovered that everyone had known—for years—that fire safety was a serious problem, and yet nothing had changed. Some administrators had proposed new hierarchies that would have clarified responsibility for fire prevention. Others had proposed giving station managers more power so that they could bridge departmental divides. None of those reforms had been implemented.</p>
+
+<p class="calibre2">When Fennell began suggesting changes of his own, he saw the same kinds of roadblocks—department chiefs refusing to take responsibility or undercutting him with whispered threats to their subordinates—start to emerge.</p>
+
+<p class="calibre2">So he decided to turn his inquiry into a media circus.</p>
+
+<p class="calibre2">He called for public hearings that lasted ninety-one days and revealed an organization that had ignored multiple warnings of risks. He implied to newspaper reporters that commuters were in grave danger whenever they rode the subway. He cross-examined dozens of witnesses who described an organization where turf battles mattered more than commuter safety. His final report, released almost a year after the fire, was a scathing, 250-page indictment of the Underground portraying an organization crippled by bureaucratic ineptitude. “Having set out as an Investigation into the events of one night,” Fennell wrote, the report’s “scope was necessarily enlarged into the examination of a system.” He concluded with pages and pages of stinging criticisms and recommendations that, essentially, suggested much of the organization was either incompetent or corrupt.</p>
+
+<p class="calibre2">The response was instantaneous and overwhelming. Commuters picketed the Underground’s offices. The organization’s leadership was fired. A slew of new laws were passed and the culture of the Underground was overhauled. Today, every station has a manager whose primary responsibility is passenger safety, and every employee has an obligation to communicate at the smallest hint of risk. All the trains still run on time. But the Underground’s habits and truces have adjusted just enough to make it clear who has ultimate responsibility for fire prevention, and everyone is empowered to act, regardless of whose toes they might step on.</p>
+
+<p class="calibre2">The same kinds of shifts are possible at any company where institutional habits—through thoughtlessness or neglect—have created toxic truces. A company with dysfunctional habits can’t turn around simply because a leader orders it. Rather, wise executives seek out moments of crisis—or create the perception of crisis—and cultivate the sense that <em class="calibre3">something must change,</em> until everyone is finally ready to overhaul the patterns they live with each day.</p>
+
+<p class="calibre2">“You never want a serious crisis to go to waste,” Rahm Emanuel told a conference of chief executives in the wake of the 2008 global financial meltdown, soon after he was appointed as President Obama’s chief of staff. “This crisis provides the opportunity for us to do things that you could not do before.” Soon afterward, the Obama administration convinced a once-reluctant Congress to pass the president’s $787 billion stimulus plan. Congress also passed Obama’s health care reform law, reworked consumer protection laws, and approved dozens of other statutes, from expanding children’s health insurance to giving women new opportunities to sue over wage discrimination. It was one of the biggest policy overhauls since the Great Society and the New Deal, and it happened because, in the aftermath of a financial catastrophe, lawmakers saw opportunity.</p>
+
+<p class="calibre2">Something similar happened at Rhode Island Hospital in the wake of the eighty-six-year-old man’s death and the other surgical errors. Since the hospital’s new safety procedures were fully implemented in 2009, no wrong-site errors have occurred. The hospital recently earned a Beacon Award, the most prestigious recognition of critical care nursing, and honors from the American College of Surgeons for the quality of cancer care.</p>
+
+<p class="calibre2">More important, say the nurses and doctors who work there, Rhode Island Hospital feels like a completely different place.</p>
+
+<p class="calibre2">In 2010, a young nurse named Allison Ward walked into an operating room to assist on a routine surgery. She had started working in the OR a year earlier. She was the youngest and least experienced person in the room. Before the surgery began, the entire surgical team gathered over the unconscious patient for a time-out. The surgeon read from a checklist, posted on the wall, which detailed every step of the operation.</p>
+
+<p class="calibre2">“Okay, final step,” he said before he picked up his scalpel. “Does anyone have any concerns before we start?”</p>
+
+<p class="calibre2">The doctor had performed hundreds of these surgeries. He had an office full of degrees and awards.</p>
+
+<p class="calibre2">“Doctor,” the twenty-seven-year-old Ward said, “I want to remind everyone that we have to pause before the first and second procedures. You didn’t mention that, and I just want to make sure we remember.”</p>
+
+<p class="calibre2">It was the type of comment that, a few years ago, might have earned her a rebuke. Or ended her career.</p>
+
+<p class="calibre2">“Thanks for adding that,” the surgeon said. “I’ll remember to mention it next time.</p>
+
+<p class="calibre2">“Okay,” he said, “let’s start.”</p>
+
+<p class="calibre2">“I know this hospital has gone through some hard periods,” Ward later told me. “But it’s really cooperative now. Our training, all the role models—the whole culture of the hospital is focused on teamwork. I feel like I can say anything. It’s an amazing place to work.”</p>
+
+<p class="calibre2"><sup class="calibre5">1</sup> The reporting in this chapter is based upon interviews with multiple people working at Rhode Island Hospital and involved in this incident some of whom provided different accounts of events. For details on responses from hospital representatives and the surgeon involved, please see the notes.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p><p class="content" style="margin:0pt; border:0pt; height:1em"> </p><p class="content" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre2"><strong class="calibre4">HOW TARGET KNOWS WHAT YOU WANT BEFORE YOU DO</strong></p><p class="content" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre2"><strong class="calibre4">When Companies Predict (and Manipulate) Habits</strong></p>
+
+<p class="calibre2"><strong class="calibre4">I.</strong></p>
+
+<p class="calibre2">Andrew Pole had just started working as a data expert for Target when a few colleagues from the marketing department stopped by his desk one day and asked the kind of question Pole had been born to answer:</p>
+
+<p class="calibre2">“Can your computers figure out which customers are pregnant, even if they don’t want us to know?”</p>
+
+<p class="calibre2">Pole was a statistician. His entire life revolved around using data to understand people. He had grown up in a small North Dakota town, and while his friends were attending 4-H or building model rockets, Pole was playing with computers. After college, he got a graduate degree in statistics and then another in economics, and while most of his classmates in the econ program at the University of Missouri were headed to insurance companies or government bureaucracies, Pole was on a different track. He’d become obsessed with the ways economists were using pattern analysis to explain human behavior. Pole, in fact, had tried his hand at a few informal experiments himself. He once threw a party and polled everyone on their favorite jokes, and then attempted to create a mathematical model for the perfect one-liner. He had sought to calculate the exact amount of beer he needed to drink in order to work up the confidence to talk to women at parties, but not so much that he would make a fool of himself. (That particular study never seemed to come out right.)</p>
+
+<p class="calibre2">But those experiments were child’s play, he knew, to how corporate America was using data to scrutinize people’s lives. Pole wanted in. So when he graduated and heard that Hallmark, the greeting card company, was looking to hire statisticians in Kansas City, he submitted an application and was soon spending his days scouring sales data to determine if pictures of pandas or elephants sold more birthday cards, and if “What Happens at Grandma’s Stays at Grandma’s” is funnier in red or blue ink. It was heaven.</p>
+
+<p class="calibre2">Six years later, in 2002, when Pole learned that Target was looking for number crunchers, he made the jump. Target, he knew, was a whole other magnitude when it came to data collection. Every year, millions of shoppers walked into Target’s 1,147 stores and handed over terabytes of information about themselves. Most had no idea they were doing it. They used their customer loyalty cards, redeemed coupons they had received in the mail, or used a credit card, unaware that Target could then link their purchases to an individualized demographic profile.</p>
+
+<p class="calibre2">To a statistician, this data was a magic window for peering into customers’ preferences. Target sold everything from groceries to clothing, electronics and lawn furniture, and by closely tracking people’s buying habits, the company’s analysts could predict what was occurring within their homes. Someone’s buying new towels, sheets, silverware, pans, and frozen dinners? They probably just bought a new house—or are getting a divorce. A cart loaded up with bug spray, kids’ underwear, a flashlight, lots of batteries, <em class="calibre3">Real Simple,</em> and a bottle of Chardonnay? Summer camp is around the corner and Mom can hardly wait.</p>
+
+<p class="calibre2">Working at Target offered Pole a chance to study the most complicated of creatures—the American shopper—in its natural habitat. His job was to build mathematical models that could crawl through data and determine which households contained kids and which were dedicated bachelors; which shoppers loved the outdoors and who was more interested in ice cream and romance novels. Pole’s mandate was to become a mathematical mind reader, deciphering shoppers’ habits in order to convince them to spend more.</p>
+
+<p class="calibre2">Then, one afternoon, a few of Pole’s colleagues from the marketing department stopped by his desk. They were trying to figure out which of Target’s customers were pregnant based on their buying patterns, they said. Pregnant women and new parents, after all, are the holy grail of retail. There is almost no more profitable, product-hungry, price-insensitive group in existence. It’s not just diapers and wipes. People with infants are so tired that they’ll buy everything they need—juice and toilet paper, socks and magazines—wherever they purchase their bottles and formula. What’s more, if a new parent starts shopping at Target, they’ll keep coming back for years.</p>
+
+<p class="calibre2">Figuring out who was pregnant, in other words, could make Target millions of dollars.</p>
+
+<p class="calibre2">Pole was intrigued. What better challenge for a statistical fortune-teller than not only getting inside shoppers’ minds, but their bedrooms?</p>
+
+<p class="calibre2">By the time the project was done, Pole would learn some important lessons about the dangers of preying on people’s most intimate habits. He would learn, for example, that hiding what you know is sometimes as important as knowing it, and that not all women are enthusiastic about a computer program scrutinizing their reproductive plans.</p>
+
+<p class="calibre2">Not everyone, it turns out, thinks mathematical mind reading is cool.</p>
+
+<p class="calibre2">“I guess outsiders could say this is a little bit like Big Brother,” Pole told me. “That makes some people uncomfortable.”</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Once upon a time, a company like Target would never have hired a guy like Andrew Pole. As little as twenty years ago retailers didn’t do this kind of intensely data-driven analysis. Instead, Target, as well as grocery stores, shopping malls, greeting card sellers, clothing retailers, and other firms, tried to peer inside consumers’ heads the old-fashioned way: by hiring psychologists who peddled vaguely scientific tactics they claimed could make customers spend more.</p>
+
+<p class="calibre2">Some of those methods are still in use today. If you walk into a Walmart, Home Depot, or your local shopping center and look closely, you’ll see retailing tricks that have been around for decades, each designed to exploit your shopping subconscious.</p>
+
+<p class="calibre2">Take, for instance, how you buy food.</p>
+
+<p class="calibre2">Chances are, the first things you see upon entering your grocery store are fruits and vegetables arranged in attractive, bountiful piles. If you think about it, positioning produce at the front of a store doesn’t make much sense, because fruits and vegetables bruise easily at the bottom of a shopping cart; logically, they should be situated by the registers, so they come at the end of a trip. But as marketers and psychologists figured out long ago, if we <em class="calibre3">start</em> our shopping sprees by loading up on healthy stuff, we’re much more likely to buy Doritos, Oreos, and frozen pizza when we encounter them later on. The burst of subconscious virtuousness that comes from first buying butternut squash makes it easier to put a pint of ice cream in the cart later.</p>
+
+<p class="calibre2">Or take the way most of us turn to the right after entering a store. (Did you know you turn right? It’s almost certain you do. There are thousands of hours of videotapes showing shoppers turning right once they clear the front doors.) As a result of this tendency, retailers fill the right side of the store with the most profitable products they’re hoping you’ll buy right off the bat. Or consider cereal and soups: When they’re shelved out of alphabetical order and seemingly at random, our instinct is to linger a bit longer and look at a wider selection. So you’ll rarely find Raisin Bran next to Rice Chex. Instead, you’ll have to search the shelves for the cereal you want, and maybe get tempted to grab an extra box of another brand.<sup class="calibre5">7.1</sup></p>
+
+<p class="calibre2">The problem with these tactics, however, is that they treat each shopper exactly the same. They’re fairly primitive, one-size-fits-all solutions for triggering buying habits.</p>
+
+<p class="calibre2">In the past two decades, however, as the retail marketplace has become more and more competitive, chains such as Target began to understand they couldn’t rely on the same old bag of tricks. The only way to increase profits was to figure out each individual shopper’s habits and to market to people one by one, with personalized pitches designed to appeal to customers’ unique buying preferences.</p>
+
+<p class="calibre2">In part, this realization came from a growing awareness of how powerfully habits influence almost every shopping decision. A series of experiments convinced marketers that if they managed to understand a particular shopper’s habits, they could get them to buy almost anything.<sup class="calibre5">7.2</sup> One study tape-recorded consumers as they walked through grocery stores. Researchers wanted to know how people made buying decisions. In particular, they looked for shoppers who had come with shopping lists—who, theoretically, had decided ahead of time what they wanted to get.</p>
+
+<p class="calibre2">What they discovered was that despite those lists, more than 50 percent of purchasing decisions occurred at the moment a customer saw a product on the shelf, because, despite shoppers’ best intentions, their habits were stronger than their written intentions. “Let’s see,” one shopper muttered to himself as he walked through a store. “Here are the chips. I will skip them. Wait a minute. Oh! The Lay’s potato chips are on sale!” He put a bag in his cart.<sup class="calibre5">7.3</sup> Some shoppers bought the same brands, month after month, even if they admitted they didn’t like the product very much (“I’m not crazy about Folgers, but it’s what I buy, you know? What else is there?” one woman said as she stood in front of a shelf containing dozens of other coffee brands). Shoppers bought roughly the same amount of food each time they went shopping, even if they had pledged to cut back.</p>
+
+<p class="calibre2">“Consumers sometimes act like creatures of habit, automatically repeating past behavior with little regard to current goals,” two psychologists at the University of Southern California wrote in 2009.<sup class="calibre5">7.4</sup></p>
+
+<p class="calibre2">The surprising aspect of these studies, however, was that even though everyone relied on habits to guide their purchases, each person’s habits were different. The guy who liked potato chips bought a bag every time, but the Folgers woman never went down the potato chip aisle. There were people who bought milk whenever they shopped—even if they had plenty at home—and there were people who always purchased desserts when they said they were trying to lose weight. But the milk buyers and the dessert addicts didn’t usually overlap.</p>
+
+<p class="calibre2">The habits were unique to each person.</p>
+
+<p class="calibre2">Target wanted to take advantage of those individual quirks. But when millions of people walk through your doors every day, how do you keep track of their preferences and shopping patterns?</p>
+
+<p class="calibre2">You collect data. Enormous, almost inconceivably large amounts of data.</p>
+
+<p class="calibre2">Starting a little over a decade ago, Target began building a vast data warehouse that assigned every shopper an identification code—known internally as the “Guest ID number”—that kept tabs on how each person shopped. When a customer used a Target-issued credit card, handed over a frequent-buyer tag at the register, redeemed a coupon that was mailed to their house, filled out a survey, mailed in a refund, phoned the customer help line, opened an email from Target, visited Target.com, or purchased anything online, the company’s computers took note. A record of each purchase was linked to that shopper’s Guest ID number along with information on everything else they’d ever bought.</p>
+
+<p class="calibre2">Also linked to that Guest ID number was demographic information that Target collected or purchased from other firms, including the shopper’s age, whether they were married and had kids, which part of town they lived in, how long it took them to drive to the store, an estimate of how much money they earned, if they’d moved recently, which websites they visited, the credit cards they carried in their wallet, and their home and mobile phone numbers. Target can purchase data that indicates a shopper’s ethnicity, their job history, what magazines they read, if they have ever declared bankruptcy, the year they bought (or lost) their house, where they went to college or graduate school, and whether they prefer certain brands of coffee, toilet paper, cereal, or applesauce.</p>
+
+<p class="calibre2">There are data peddlers such as InfiniGraph that “listen” to shoppers’ online conversations on message boards and Internet forums, and track which products people mention favorably. A firm named Rapleaf sells information on shoppers’ political leanings, reading habits, charitable giving, the number of cars they own, and whether they prefer religious news or deals on cigarettes.<sup class="calibre5">7.5</sup> Other companies analyze photos that consumers post online, cataloging if they are obese or skinny, short or tall, hairy or bald, and what kinds of products they might want to buy as a result. (Target, in a statement, declined to indicate what demographic companies it does business with and what kinds of information it studies.)</p>
+
+<p class="calibre2">“It used to be that companies only knew what their customers <em class="calibre3">wanted</em> them to know,” said Tom Davenport, one of the leading researchers on how businesses use data and analytics. “That world is far behind us. You’d be shocked how much information is out there—and every company buys it, because it’s the only way to survive.”</p>
+
+<p class="calibre2">If you use your Target credit card to purchase a box of Popsicles once a week, usually around 6:30 p.m. on a weekday, and megasized trash bags every July and October, Target’s statisticians and computer programs will determine that you have kids at home, tend to stop for groceries on your way back from work, and have a lawn that needs mowing in the summer and trees that drop leaves in the fall. It will look at your other shopping patterns and notice that you sometimes buy cereal, but never purchase milk—which means that you must be buying it somewhere else. So Target will mail you coupons for 2 percent milk, as well as for chocolate sprinkles, school supplies, lawn furniture, rakes, and—since it’s likely you’ll want to relax after a long day at work—beer. The company will guess what you habitually buy, and then try to convince you to get it at Target. The firm has the capacity to personalize the ads and coupons it sends to every customer, even though you’ll probably never realize you’ve received a different flyer in the mail than your neighbors.</p>
+
+<p class="calibre2">“With the Guest ID, we have your name, address, and tender, we know you’ve got a Target Visa, a debit card, and we can tie that to your store purchases,” Pole told an audience of retail statisticians at a conference in 2010. The company can link about half of all in-store sales to a specific person, almost all online sales, and about a quarter of online browsing.</p>
+
+<p class="calibre2">At that conference, Pole flashed a slide showing a sample of the data Target collects, a diagram that caused someone in the audience to whistle in wonder when it appeared on the screen:<sup class="calibre5">7.6</sup></p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">The problem with all this data, however, is that it’s meaningless without statisticians to make sense of it. To a layperson, two shoppers who both buy orange juice look the same. It requires a special kind of mathematician to figure out that one of them is a thirty-four-year-old woman purchasing juice for her kids (and thus might appreciate a coupon for a Thomas the Tank Engine DVD) and the other is a twenty-eight-year-old bachelor who drinks juice after going for a run (and thus might respond to discounts on sneakers). Pole and the fifty other members of Target’s Guest Data and Analytical Services department were the ones who found the habits hidden in the facts.</p>
+
+<p class="calibre2">“We call it the ‘guest portrait,’ ” Pole told me. “The more I know about someone, the better I can guess their buying patterns. I’m not going to guess everything about you every time, but I’ll be right more often than I’m wrong.”</p>
+
+<p class="calibre2">By the time Pole joined Target in 2002, the analytics department had already built computer programs to identify households containing children and, come each November, send their parents catalogs of bicycles and scooters that would look perfect under the Christmas tree, as well as coupons for school supplies in September and advertisements for pool toys in June. The computers looked for shoppers buying bikinis in April, and sent them coupons for sunscreen in July and weight-loss books in December. If it wanted, Target could send each customer a coupon book filled with discounts for products they were fairly certain the shoppers were going to buy, because they had already purchased those exact items before.</p>
+
+<p class="calibre2">Target isn’t alone in its desire to predict consumers’ habits. Almost every major retailer, including Amazon.com, Best Buy, Kroger supermarkets, 1-800-Flowers, Olive Garden, Anheuser-Busch, the U.S. Postal Service, Fidelity Investments, Hewlett-Packard, Bank of America, Capital One, and hundreds of others, have “predictive analytics” departments devoted to figuring out consumers’ preferences. “But Target has always been one of the smartest at this,” said Eric Siegel, who runs a conference called Predictive Analytics World. “The data doesn’t mean anything on its own. Target’s good at figuring out the really clever questions.”</p>
+
+<p class="calibre2">It doesn’t take a genius to know that someone buying cereal probably also needs milk. But there were other, much harder—and more profitable—questions to be answered.</p>
+
+<p class="calibre2">Which is why, a few weeks after Pole was hired, his colleagues asked if it was possible to determine who was pregnant, even if that woman didn’t want anyone to know.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">In 1984, a visiting professor at UCLA named Alan Andreasen published a paper that set out to answer a basic question: Why do some people suddenly change their shopping routines?</p>
+
+<p class="calibre2">Andreasen’s team had spent the previous year conducting telephone surveys with consumers around Los Angeles, interrogating them about their recent shopping trips. Whenever someone answered the phone, the scientists would barrage them with questions about which brands of toothpaste and soap they had purchased and if their preferences had shifted. All told, they interviewed almost three hundred people. Like other researchers, they found that most people bought the same brands of cereal and deodorant week after week. Habits reigned supreme.</p>
+
+<p class="calibre2">Except when they didn’t.</p>
+
+<p class="calibre2">For instance, 10.5 percent of the people Andreasen surveyed had switched toothpaste brands in the previous six months. More than 15 percent had started buying a new kind of laundry detergent.</p>
+
+<p class="calibre2">Andreasen wanted to know why these people had deviated from their usual patterns. What he discovered has become a pillar of modern marketing theory: People’s buying habits are more likely to change when they go through a major life event. When someone gets married, for example, they’re more likely to start buying a new type of coffee. When they move into a new house, they’re more apt to purchase a different kind of cereal. When they get divorced, there’s a higher chance they’ll start buying different brands of beer.<sup class="calibre5">7.7</sup> Consumers going through major life events often don’t notice, or care, that their shopping patterns have shifted. However, retailers notice, and they care quite a bit.<sup class="calibre5">7.8</sup></p>
+
+<p class="calibre2">“Changing residence, getting married or divorced, losing or changing a job, having someone enter or leave the household,” Andreasen wrote, are life changes that make consumers more “vulnerable to intervention by marketers.”</p>
+
+<p class="calibre2">And what’s the biggest life event for most people? What causes the greatest disruption and “vulnerability to marketing interventions”? Having a baby. There’s almost no greater upheaval for most customers than the arrival of a child. As a result, new parents’ habits are more flexible at that moment than at almost any other period in an adult’s life.</p>
+
+<p class="calibre2">So for companies, pregnant women are gold mines.</p>
+
+<p class="calibre2">New parents buy lots of stuff—diapers and wipes, cribs and Onesies, blankets and bottles—that stores such as Target sell at a significant profit. One survey conducted in 2010 estimated that the average parent spends $6,800 on baby items before a child’s first birthday.<sup class="calibre5">7.9</sup></p>
+
+<p class="calibre2">But that’s just the tip of the shopping iceberg. Those initial expenditures are peanuts compared with the profits a store can earn by taking advantage of a new parent’s shifting shopping habits. If exhausted moms and sleep-deprived dads start purchasing baby formula and diapers at Target, they’ll start buying their groceries, cleaning supplies, towels, underwear, and—well, the sky’s the limit—from Target as well. Because it’s easy. To a new parent, easy matters most of all.</p>
+
+<p class="calibre2">“As soon as we get them buying diapers from us, they’re going to start buying everything else, too,” Pole told me. “If you’re rushing through the store, looking for bottles, and you pass orange juice, you’ll grab a carton. Oh, and there’s that new DVD I want. Soon, you’ll be buying cereal and paper towels from us, and keep coming back.”</p>
+
+<p class="calibre2">New parents are so valuable that major retailers will do almost anything to find them, including going inside maternity wards, even if their products have nothing to do with infants. One New York hospital, for instance, provides every new mother with a gift bag containing samples of hair gel, face wash, shaving cream, an energy bar, shampoo, and a soft-cotton T-shirt. Inside are coupons for an online photo service, hand soap, and a local gym. There are also samples of diapers and baby lotions, but they’re lost among the nonbaby supplies. In 580 hospitals across the United States, new mothers get gifts from the Walt Disney Company, which in 2010 started a division specifically aimed at marketing to the parents of infants. Procter &amp; Gamble, Fisher-Price, and other firms have similar giveaway programs. Disney estimates the North American new baby market is worth $36.3 billion a year.<sup class="calibre5">7.10</sup></p>
+
+<p class="calibre2">But for companies such as Target, approaching new moms in the maternity ward is, in some senses, too late. By then, they’re already on everyone else’s radar screen. Target didn’t want to compete with Disney and Procter &amp; Gamble; they wanted to beat them. Target’s goal was to start marketing to parents <em class="calibre3">before</em> the baby arrived—which is why Andrew Pole’s colleagues approached him that day to ask about building a pregnancy-prediction algorithm. If they could identify expecting mothers as early as their second trimester, they could capture them before anyone else.</p>
+
+<p class="calibre2">The only problem was that figuring out which customers are pregnant is harder than it seems. Target had a baby shower registry, and that helped identify some pregnant women—and what’s more, all those soon-to-be mothers willingly handed over valuable information, like their due dates, that let the company know when to send them coupons for prenatal vitamins or diapers. But only a fraction of Target’s pregnant customers used the registry.</p>
+
+<p class="calibre2">Then there were other customers who executives <em class="calibre3">suspected</em> were pregnant because they purchased maternity clothing, nursery furniture, and boxes of diapers. Suspecting and knowing, however, are two different things. How do you know whether someone buying diapers is pregnant or buying a gift for a pregnant friend? What’s more, timing matters. A coupon that’s useful a month before the due date might get put in the trash a few weeks after the baby arrives.</p>
+
+<p class="calibre2">Pole started working on the problem by scouring the information in Target’s baby shower registry, which let him observe how the average woman’s shopping habits changed as her due date approached. The registry was like a laboratory where he could test hunches. Each expectant mother handed over her name, her spouse’s name, and her due date. Target’s data warehouse could link that information to the family’s Guest IDs. As a result, whenever one of these women purchased something in a store or online, Pole, using the due date the woman provided, could plot the trimester in which the purchase occurred. Before long, he was picking up patterns.</p>
+
+<p class="calibre2">Expectant mothers, he discovered, shopped in fairly predictable ways. Take, for example, lotions. Lots of people buy lotion, but a Target data analyst noticed that women on the baby registry were buying unusually large quantities of unscented lotion around the beginning of their second trimester. Another analyst noted that sometime in the first twenty weeks, many pregnant women loaded up on vitamins, such as calcium, magnesium, and zinc. Lots of shoppers purchase soap and cotton balls every month, but when someone suddenly starts buying lots of scent-free soap and cotton balls, in addition to hand sanitizers and an astounding number of washcloths, all at once, a few months after buying lotions and magnesium and zinc, it signals they are getting close to their delivery date.</p>
+
+<p class="calibre2">As Pole’s computer program crawled through the data, he was able to identify about twenty-five different products that, when analyzed together, allowed him to, in a sense, peer inside a woman’s womb. Most important, he could guess what trimester she was in—and estimate her due date—so Target could send her coupons when she was on the brink of making new purchases. By the time Pole was done, his program could assign almost any regular shopper a “pregnancy prediction” score.</p>
+
+<p class="calibre2">Jenny Ward, a twenty-three-year-old in Atlanta who bought cocoa butter lotion, a purse large enough to double as a diaper bag, zinc, magnesium, and a bright blue rug? There’s an 87 percent chance that she’s pregnant and that her delivery date is sometime in late August.<sup class="calibre5">7.11</sup> Liz Alter in Brooklyn, a thirty-five-year-old who purchased five packs of washcloths, a bottle of “sensitive skin” laundry detergent, baggy jeans, vitamins containing DHA, and a slew of moisturizers? She’s got a 96 percent chance of pregnancy, and she’ll probably give birth in early May. Caitlin Pike, a thirty-nine-year-old in San Francisco who purchased a $250 stroller, but nothing else? She’s probably buying for a friend’s baby shower. Besides, her demographic data shows she got divorced two years ago.</p>
+
+<p class="calibre2">Pole applied his program to every shopper in Target’s database. When it was done, he had a list of hundreds of thousands of women who were likely to be pregnant that Target could inundate with advertisements for diapers, lotions, cribs, wipes, and maternity clothing at times when their shopping habits were particularly flexible. If a fraction of those women or their husbands started doing their shopping at Target, it would add millions to the company’s bottom line.</p>
+
+<p class="calibre2">Then, just as this advertising avalanche was about to begin, someone within the marketing department asked a question: How are women going to react when they figure out how much Target knows?</p>
+
+<p class="calibre2">“If we send someone a catalog and say, ‘Congratulations on your first child!’ and they’ve never told us they’re pregnant, that’s going to make some people uncomfortable,” Pole told me. “We are very conservative about compliance with all privacy laws. But even if you’re following the law, you can do things where people get queasy.”</p>
+
+<p class="calibre2">There’s good reason for such worries. About a year after Pole created his pregnancy prediction model, a man walked into a Minnesota Target and demanded to see the manager. He was clutching an advertisement. He was very angry.</p>
+
+<p class="calibre2">“My daughter got this in the mail!” he said. “She’s still in high school, and you’re sending her coupons for baby clothes and cribs? Are you trying to <em class="calibre3">encourage</em> her to get pregnant?”</p>
+
+<p class="calibre2">The manager didn’t have any idea what the man was talking about. He looked at the mailer. Sure enough, it was addressed to the man’s daughter and contained advertisements for maternity clothing, nursery furniture, and pictures of smiling infants gazing into their mothers’ eyes.</p>
+
+<p class="calibre2">The manager apologized profusely, and then called, a few days later, to apologize again.</p>
+
+<p class="calibre2">The father was somewhat abashed.</p>
+
+<p class="calibre2">“I had a talk with my daughter,” he said. “It turns out there’s been some activities in my house I haven’t been completely aware of.” He took a deep breath. “She’s due in August. I owe you an apology.”</p>
+
+<p class="calibre2">Target is not the only firm to have raised concerns among consumers. Other companies have been attacked for using data in far less intrusive ways. In 2011, for instance, a New York resident sued McDonald’s, CBS, Mazda, and Microsoft, alleging those companies’ advertising agency monitored people’s Internet usage to profile their buying habits.<sup class="calibre5">7.12</sup> There are ongoing class action lawsuits in California against Target, Walmart, Victoria’s Secret, and other retail chains for asking customers to give their zip codes when they use credit cards, and then using that information to ferret out their mailing addresses.<sup class="calibre5">7.13</sup></p>
+
+<p class="calibre2">Using data to predict a woman’s pregnancy, Pole and his colleagues knew, was a potential public relations disaster. So how could they get their advertisements into expectant mothers’ hands without making it appear they were spying on them? How do you take advantage of someone’s habits without letting them know you’re studying every detail of their lives?<sup class="calibre5">1</sup></p>
+
+<p class="calibre2"><strong class="calibre4">II.</strong></p>
+
+<p class="calibre2">In the summer of 2003, a promotion executive at Arista Records named Steve Bartels began calling up radio DJs to tell them about a new song he was certain they would love. It was called “Hey Ya!” by the hip-hop group OutKast.</p>
+
+<p class="calibre2">“Hey Ya!” was an upbeat fusion of funk, rock, and hip-hop with a dollop of Big Band swing, from one of the most popular bands on earth. It sounded like nothing else on the radio. “It made the hair on my arms stand up the first time I heard it,” Bartels told me. “It <em class="calibre3">sounded</em> like a hit, like the kind of song you’d be hearing at bar mitzvahs and proms for years.” Around the Arista offices, executives sang the chorus—“shake it like a Polaroid picture”—to one another in the hallways. <em class="calibre3">This song,</em> they all agreed, <em class="calibre3">is going to be huge.</em></p>
+
+<p class="calibre2">That certainty wasn’t based solely on intuition. At the time, the record business was undergoing a transformation similar to the data-driven shifts occurring at Target and elsewhere. Just as retailers were using computer algorithms to forecast shoppers’ habits, music and radio executives were using computer programs to forecast listeners’ habits. A company named Polyphonic HMI—a collection of artificial intelligence experts and statisticians based in Spain—had created a program called Hit Song Science that analyzed the mathematical characteristics of a tune and predicted its popularity. By comparing the tempo, pitch, melody, chord progression, and other factors of a particular song against the thousands of hits stored in Polyphonic HMI’s database, Hit Song Science could deliver a score that forecasted if a tune was likely to succeed.<sup class="calibre5">7.14</sup></p>
+
+<p class="calibre2">The program had predicted that Norah Jones’s <em class="calibre3">Come Away with</em>
+<em class="calibre3">Me,</em> for instance, would be a hit after most of the industry had dismissed the album. (It went on to sell ten million copies and win eight Grammys.) It had predicted that “Why Don’t You and I” by Santana would be popular, despite DJs’ doubts. (It reached number three on the <em class="calibre3">Billboard</em> Top 40 list.)</p>
+
+<p class="calibre2">When executives at radio stations ran “Hey Ya!” through Hit Song Science, it did well. In fact, it did better than well: The score was among the highest anyone had ever seen.</p>
+
+<p class="calibre2">“Hey Ya!,” according to the algorithm, was going to be a monster hit.</p>
+
+<p class="calibre2">On September 4, 2003, in the prominent slot of 7:15 p.m., the Top 40 station WIOQ in Philadelphia started playing “Hey Ya!” on the radio. It aired the song seven more times that week, and a total of thirty-seven times throughout the month.<sup class="calibre5">7.15</sup></p>
+
+<p class="calibre2">At the time, a company named Arbitron was testing a new technology that made it possible to figure out how many people were listening to a particular radio station at a given moment, and how many switched channels during a specific song. WIOQ was one of the stations included in the test. The station’s executives were certain “Hey Ya!” would keep listeners glued to their radios.</p>
+
+<p class="calibre2">Then the data came back.</p>
+
+<p class="calibre2">Listeners didn’t just dislike “Hey Ya!” They hated it according to the data.<sup class="calibre5">7.16</sup> They hated it so much that nearly a third of them changed the station within the first thirty seconds of the song. It wasn’t only at WIOQ, either. Across the nation, at radio stations in Chicago, Los Angeles, Phoenix, and Seattle, whenever “Hey Ya!” came on, huge numbers of listeners would click off.</p>
+
+<p class="calibre2">“I thought it was a great song the first time I heard it,” said John Garabedian, the host of a syndicated Top 40 radio show heard by more than two million people each weekend. “But it didn’t sound like other songs, and so some people went nuts when it came on. One guy told me it was the worst thing he had ever heard.</p>
+
+<p class="calibre2">“People listen to Top 40 because they want to hear their favorite songs or songs that sound just like their favorite songs. When something different comes on, they’re offended. They don’t want anything unfamiliar.”</p>
+
+<p class="calibre2">Arista had spent a lot of money promoting “Hey Ya!” The music and radio industries needed it to be a success. Hit songs are worth a fortune—not only because people buy the song itself, but also because a hit can convince listeners to abandon video games and the Internet for radio. A hit can sell sports cars on television and clothing inside trendy stores. Hit songs are at the root of dozens of spending habits that advertisers, TV stations, bars, dance clubs—even technology firms such as Apple—rely on.</p>
+
+<p class="calibre2">Now, one of the most highly anticipated songs—a tune that the algorithms had predicted would become the song of the year—was flailing. Radio executives were desperate to find something that would make “Hey Ya!” into a hit.<sup class="calibre5">7.17</sup></p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">That question—how do you make a song into a hit?—has been puzzling the music industry ever since it began, but it’s only in the past few decades that people have tried to arrive at scientific answers. One of the pioneers was a onetime station manager named Rich Meyer who, in 1985, with his wife, Nancy, started a company called Mediabase in the basement of their Chicago home. They would wake up every morning, pick up a package of tapes of stations that had been recorded the previous day in various cities, and count and analyze every song that had been played. Meyer would then publish a weekly newsletter tracking which tunes were rising or declining in popularity.</p>
+
+<p class="calibre2">In his first few years, the newsletter had only about a hundred subscribers, and Meyer and his wife struggled to keep the company afloat. However, as more and more stations began using Meyer’s insights to increase their audiences—and, in particular, studying the formulas he devised to explain listening trends—his newsletter, the data sold by Mediabase, and then similar services provided by a growing industry of data-focused consultants, overhauled how radio stations were run.</p>
+
+<p class="calibre2">One of the puzzles Meyer most loved was figuring out why, during some songs, listeners never seemed to change the radio dial. Among DJs, these songs are known as “sticky.” Meyer had tracked hundreds of sticky songs over the years, trying to divine the principles that made them popular. His office was filled with charts and graphs plotting the characteristics of various sticky songs. Meyer was always looking for new ways to measure stickiness, and about the time “Hey Ya!” was released, he started experimenting with data from the tests that Arbitron was conducting to see if it provided any fresh insights.</p>
+
+<p class="calibre2">Some of the stickiest songs at the time were sticky for obvious reasons—“Crazy in Love” by Beyoncé and “Señorita” by Justin Timberlake, for instance, had just been released and were already hugely popular, but those were great songs by established stars, so the stickiness made sense. Other songs, though, were sticky for reasons no one could really understand. For instance, when stations played “Breathe” by Blu Cantrell during the summer of 2003, almost no one changed the dial. The song is an eminently forgettable, beat-driven tune that DJs found so bland that most of them only played it reluctantly, they told music publications. But for some reason, whenever it came on the radio, people listened, even if, as pollsters later discovered, those same listeners said they didn’t like the song very much. Or consider “Here Without You” by 3 Doors Down, or almost any song by the group Maroon 5. Those bands are so featureless that critics and listeners created a new music category—“bath rock”—to describe their tepid sounds. Yet whenever they came on the radio, almost no one changed the station.</p>
+
+<p class="calibre2">Then there were songs that listeners said they actively <em class="calibre3">disliked,</em> but were sticky nonetheless. Take Christina Aguilera or Celine Dion. In survey after survey, male listeners said they hated Celine Dion and couldn’t stand her songs. But whenever a Dion tune came on the radio, men stayed tuned in. Within the Los Angeles market, stations that regularly played Dion at the end of each hour—when the number of listeners was measured—could reliably boost their audience by as much as 3 percent, a huge figure in the radio world. Male listeners may have <em class="calibre3">thought</em> they disliked Dion, but when her songs played, they stayed glued.<sup class="calibre5">7.18</sup></p>
+
+<p class="calibre2">One night, Meyer sat down and started listening to a bunch of sticky songs in a row, one right after the other, over and over again. As he did, he started to notice a similarity among them. It wasn’t that the songs sounded alike. Some of them were ballads, others were pop tunes. However, they all seemed similar in that each sounded exactly like what Meyer expected to hear from that particular genre. They sounded <em class="calibre3">familiar</em>—like everything else on the radio—but a little more polished, a bit closer to the golden mean of the perfect song.</p>
+
+<p class="calibre2">“Sometimes stations will do research by calling listeners on the phone, and play a snippet of a song, and listeners will say, ‘I’ve heard that a million times. I’m totally tired of it,’ ” Meyer told me. “But when it comes on the radio, your subconscious says, ‘I know this song! I’ve heard it a million times! I can sing along!’ Sticky songs are what you <em class="calibre3">expect</em> to hear on the radio. Your brain secretly wants that song, because it’s so familiar to everything else you’ve already heard and liked. It just sounds right.”</p>
+
+<p class="calibre2">There is evidence that a preference for things that sound “familiar” is a product of our neurology. Scientists have examined people’s brains as they listen to music, and have tracked which neural regions are involved in comprehending aural stimuli. Listening to music activates numerous areas of the brain, including the auditory cortex, the thalamus, and the superior parietal cortex.<sup class="calibre5">7.19</sup> These same areas are also associated with pattern recognition and helping the brain decide which inputs to pay attention to and which to ignore. The areas that process music, in other words, are designed to seek out patterns and look for familiarity. This makes sense. Music, after all, is complicated. The numerous tones, pitches, overlapping melodies, and competing sounds inside almost any song—or anyone speaking on a busy street, for that matter—are so overwhelming that, without our brain’s ability to focus on some sounds and ignore others, everything would seem like a cacophony of noise.<sup class="calibre5">7.20</sup></p>
+
+<p class="calibre2">Our brains crave familiarity in music because familiarity is how we manage to hear without becoming distracted by all the sound. Just as the scientists at MIT discovered that behavioral habits prevent us from becoming overwhelmed by the endless decisions we would otherwise have to make each day, listening habits exist because, without them, it would be impossible to determine if we should concentrate on our child’s voice, the coach’s whistle, or the noise from a busy street during a Saturday soccer game. Listening habits allow us to unconsciously separate important noises from those that can be ignored.</p>
+
+<p class="calibre2">That’s why songs that sound “familiar”—even if you’ve never heard them before—are sticky. Our brains are designed to prefer auditory patterns that seem similar to what we’ve already heard. When Celine Dion releases a new song—and it sounds like every other song she’s sung, as well as most of the other songs on the radio—our brains unconsciously crave its recognizability and the song becomes sticky. You might never attend a Celine Dion concert, but you’ll listen to her songs on the radio, because that’s what you <em class="calibre3">expect</em> to hear as you drive to work. Those songs correspond perfectly to your habits.</p>
+
+<p class="calibre2">This insight helped explain why “Hey Ya!” was failing on the radio, despite the fact that Hit Song Science and music executives were sure it would be a hit. The problem wasn’t that “Hey Ya!” was bad. The problem was that “Hey Ya!” <em class="calibre3">wasn’t familiar</em>. Radio listeners didn’t want to make a conscious decision each time they were presented with a new song. Instead, their brains wanted to follow a habit. Much of the time, we don’t actually choose if we like or dislike a song. It would take too much mental effort. Instead, we react to the cues (“This sounds like all the other songs I’ve ever liked”) and rewards (“It’s fun to hum along!”) and without thinking, we either start singing, or reach over and change the station.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">THE FAMILIARITY LOOP</p>
+
+<p class="calibre2">In a sense, Arista and radio DJs faced a variation of the problem Andrew Pole was confronting at Target. Listeners are happy to sit through a song they might say they dislike, as long as it seems like something they’ve heard before. Pregnant women are happy to use coupons they receive in the mail, unless those coupons make it obvious that Target is spying into their wombs, which is unfamiliar and kind of creepy. Getting a coupon that makes it clear Target knows you’re pregnant is at odds from what a customer expects. It’s like telling a forty-two-year-old investment banker that he sang along to Celine Dion. It just feels wrong.</p>
+
+<p class="calibre2">So how do DJs convince listeners to stick with songs such as “Hey Ya!” long enough for them to become familiar? How does Target convince pregnant women to use diaper coupons without creeping them out?</p>
+
+<p class="calibre2">By dressing something new in old clothes, and making the unfamiliar seem familiar.</p>
+
+<p class="calibre2"><strong class="calibre4">III.</strong></p>
+
+<p class="calibre2">In the early 1940s, the U.S. government began shipping much of the nation’s domestic meat supply to Europe and the Pacific theater to support troops fighting in World War II. Back home, the availability of steaks and pork chops began to dwindle. By the time the United States entered the war in late 1941, New York restaurants were using horse meat for hamburgers and a black market for poultry had emerged.<sup class="calibre5">7.21</sup> Federal officials became worried that a lengthy war effort would leave the nation starved of protein. This “problem will loom larger and larger in the United States as the war goes on,” former president Herbert Hoover wrote to Americans in a government pamphlet in 1943. “Our farms are short of labor to care for livestock; and on top of it all we must furnish supplies to the British and Russians. Meats and fats are just as much munitions in this war as are tanks and aeroplanes.”</p>
+
+<p class="calibre2">Concerned, the Department of Defense approached dozens of the nation’s leading sociologists, psychologists, and anthropologists—including Margaret Mead and Kurt Lewin, who would go on to become celebrity academics—and gave them an assignment: Figure out how to convince Americans to eat organ meats. Get housewives to serve their husbands and children the protein-rich livers, hearts, kidneys, brains, stomachs, and intestines that were left behind after the rib eyes and roast beef went overseas.</p>
+
+<p class="calibre2">At the time, organ meat wasn’t popular in America. A middle-class woman in 1940 would sooner starve than despoil her table with tongue or tripe. So when the scientists recruited into the Committee on Food Habits met for the first time in 1941, they set themselves a goal of systematically identifying the cultural barriers that discouraged Americans from eating organ meat. In all, more than two hundred studies were eventually published, and at their core, they all contained a similar finding: To change people’s diets, the exotic must be made familiar. And to do that, you must camouflage it in everyday garb.<sup class="calibre5">7.22</sup></p>
+
+<p class="calibre2">To convince Americans to eat livers and kidneys, housewives had to know how to make the foods look, taste, and smell as similar as possible to what their families <em class="calibre3">expected</em> to see on the dinner table, the scientists concluded. For instance, when the Subsistence Division of the Quartermaster Corps—the people in charge of feeding soldiers—started serving fresh cabbage to troops in 1943, it was rejected. So mess halls chopped and boiled the cabbage until it looked like every other vegetable on a soldier’s tray—and the troops ate it without complaint. “Soldiers were more likely to eat food, whether familiar or unfamiliar, when it was prepared similar to their prior experiences and served in a familiar fashion,” a present-day researcher evaluating those studies wrote.<sup class="calibre5">7.23</sup></p>
+
+<p class="calibre2">The secret to changing the American diet, the Committee on Food Habits concluded, was familiarity. Soon, housewives were receiving mailers from the government telling them “every husband will cheer for steak and kidney pie.”<sup class="calibre5">7.24</sup> Butchers started handing out recipes that explained how to slip liver into meatloaf.</p>
+
+<p class="calibre2">A few years after World War II ended, the Committee on Food Habits was dissolved. By then, however, organ meats had been fully integrated into the American diet. One study indicated that offal consumption rose by 33 percent during the war. By 1955, it was up 50 percent.<sup class="calibre5">7.25</sup> Kidney had become a staple at dinner. Liver was for special occasions. America’s dining patterns had shifted to such a degree that organ meats had become emblems of comfort.</p>
+
+<p class="calibre2">Since then, the U.S. government has launched dozens of other efforts to improve our diets. For example, there was the “Five a Day” campaign, intended to encourage people to eat five fruits or vegetables, the USDA’s food pyramid, and a push for low-fat cheeses and milks. None of them adhered to the committee’s findings. None tried to camouflage their recommendations in existing habits, and as a result, all of the campaigns failed. To date, the only government program ever to cause a lasting change in the American diet was the organ meat push of the 1940s.</p>
+
+<p class="calibre2">However, radio stations and massive companies—including Target—are a bit savvier.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">To make “Hey Ya!” a hit, DJs soon realized, they needed to make the song feel familiar. And to do that, something special was required.</p>
+
+<p class="calibre2">The problem was that computer programs such as Hit Song Science were pretty good at predicting people’s habits. But sometimes, those algorithms found habits that hadn’t actually emerged yet, and when companies market to habits we haven’t adopted or, even worse, are unwilling to admit to ourselves—like our secret affection for sappy ballads—firms risk going out of business. If a grocery store boasts “We have a huge selection of sugary cereals and ice cream!” shoppers stay away. If a butcher says “Here’s a piece of intestine for your dinner table,” a 1940s housewife serves tuna casserole instead. When a radio station boasts “Celine Dion every half hour!” no one tunes in. So instead, supermarket owners tout their apples and tomatoes (while making sure you pass the M&amp;M’s and Häagen-Dazs on the way to the register), butchers in the 1940s call liver “the new steak,” and DJs quietly slip in the theme song from <em class="calibre3">Titanic</em>.</p>
+
+<p class="calibre2">“Hey Ya!” needed to become part of an established listening habit to become a hit. And to become part of a habit, it had to be slightly camouflaged at first, the same way housewives camouflaged kidney by slipping it into meatloaf. So at WIOQ in Philadelphia—as well as at other stations around the nation—DJs started making sure that whenever “Hey Ya!” was played, it was sandwiched between songs that were already popular. “It’s textbook playlist theory now,” said Tom Webster, a radio consultant. “Play a new song between two consensus popular hits.”</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">DJs, however, didn’t air “Hey Ya!” alongside just any kind of hit. They sandwiched it between the types of songs that Rich Meyer had discovered were uniquely sticky, from artists like Blu Cantrell, 3 Doors Down, Maroon 5, and Christina Aguilera. (Some stations, in fact, were so eager they used the same song twice.)</p>
+
+<p class="calibre2">Consider, for instance, the WIOQ playlist for September 19, 2003:</p>
+
+<p class="calibre2">11:43    “Here Without You” by 3 Doors Down</p>
+
+<p class="calibre2">11:54    “Breathe” by Blu Cantrell</p>
+
+<p class="calibre2">11:58    “Hey Ya!” by OutKast</p>
+
+<p class="calibre2">12:01    “Breathe” by Blu Cantrell</p>
+
+<p class="calibre2">Or the playlist for October 16:</p>
+
+<p class="calibre2">9:41     “Harder to Breathe” by Maroon 5</p>
+
+<p class="calibre2">9:45     “Hey Ya!” by OutKast</p>
+
+<p class="calibre2">9:49     “Can’t Hold Us Down” by Christina Aguilera</p>
+
+<p class="calibre2">10:00    “Frontin’ ” by Pharrell</p>
+
+<p class="calibre2">November 12:</p>
+
+<p class="calibre2">9:58     “Here Without You” by 3 Doors Down</p>
+
+<p class="calibre2">10:01    “Hey Ya!” by OutKast</p>
+
+<p class="calibre2">10:05    “Like I Love You” by Justin Timberlake</p>
+
+<p class="calibre2">10:09    “Baby Boy” by Beyoncé</p>
+
+<p class="calibre2">“Managing a playlist is all about risk mitigation,” said Webster. “Stations have to take risks on new songs, otherwise people stop listening. But what listeners really want are songs they already like. So you have to make new songs seem familiar as fast as possible.”</p>
+
+<p class="calibre2">When WIOQ first started playing “Hey Ya!” in early September—before the sandwiching started—26.6 percent of listeners changed the station whenever it came on. By October, after playing it alongside sticky hits, that “tune-out factor” dropped to 13.7 percent. By December, it was 5.7 percent. Other major radio stations around the nation used the same sandwiching technique, and the tune-out rate followed the same pattern.</p>
+
+<p class="calibre2">And as listeners heard “Hey Ya!” again and again, it became familiar. Once the song had become popular, WIOQ was playing “Hey Ya!” as many as fifteen times a day. People’s listening habits had shifted to expect—crave, even—“Hey Ya!” A “Hey Ya!” habit emerged. The song went on to win a Grammy, sell more than 5.5 million albums, and earn radio stations millions of dollars. “This album cemented OutKast in the pantheon of superstars,” Bartels, the promotion executive, told me. “This is what introduced them to audiences outside of hip-hop. It’s so fulfilling now when a new artist plays me their single and says, <em class="calibre3">This is going to be the next ‘Hey Ya!’</em>”</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">After Andrew Pole built his pregnancy-prediction machine, after he identified hundreds of thousands of female shoppers who were probably pregnant, after someone pointed out that some—in fact, most—of those women might be a little upset if they received an advertisement making it obvious Target knew their reproductive status, everyone decided to take a step back and consider their options.</p>
+
+<p class="calibre2">The marketing department thought it might be wise to conduct a few small experiments before rolling out a national campaign. They had the ability to send specially designed mailers to small groups of customers, so they randomly chose women from Pole’s pregnancy list and started testing combinations of advertisements to see how shoppers reacted.</p>
+
+<p class="calibre2">“We have the capacity to send every customer an ad booklet, specifically designed for them, that says, ‘Here’s everything you bought last week, and a coupon for it,’ ” one Target executive with firsthand knowledge of Pole’s pregnancy predictor told me. “We do that for grocery products all the time.</p>
+
+<p class="calibre2">“With the pregnancy products, though, we learned that some women react badly. Then we started mixing in all these ads for things we knew pregnant women would never buy, so the baby ads looked random. We’d put an ad for a lawnmower next to diapers. We’d put a coupon for wineglasses next to infant clothes. That way, it looked like all the products were chosen by chance.</p>
+
+<p class="calibre2">“And we found out that as long as a pregnant woman thinks she hasn’t been spied on, she’ll use the coupons. She just assumes that everyone else on her block got the same mailer for diapers and cribs. As long as we don’t spook her, it works.”</p>
+
+<p class="calibre2">The answer to Target and Pole’s question—how do you advertise to a pregnant woman without revealing that you know she’s pregnant?—was essentially the same one that DJs used to hook listeners on “Hey Ya!” Target started sandwiching the diaper coupons between nonpregnancy products that made the advertisements seem anonymous, familiar, comfortable. They camouflaged what they knew.</p>
+
+<p class="calibre2">Soon, Target’s “Mom and Baby” sales exploded. The company doesn’t break out sales figures for specific divisions, but between 2002—when Pole was hired—and 2009, Target’s revenues grew from $44 billion to $65 billion. In 2005, the company’s president, Gregg Steinhafel, boasted to a room full of investors about the company’s “heightened focus on items and categories that appeal to specific guest segments such as mom and baby.</p>
+
+<p class="calibre2">“As our database tools grow increasingly sophisticated, Target Mail has come into its own as a useful tool for promoting value and convenience to specific guest segments such as new moms or teens,” he said. “For example, Target Baby is able to track life stages from prenatal care to car seats and strollers. In 2004, the Target Baby Direct Mail Program drove sizable increases in trips and sales.”<sup class="calibre5">7.26</sup></p>
+
+<p class="calibre2">Whether selling a new song, a new food, or a new crib, the lesson is the same: If you dress a new something in old habits, it’s easier for the public to accept it.</p>
+
+<p class="calibre2"><strong class="calibre4">IV.</strong></p>
+
+<p class="calibre2">The usefulness of this lesson isn’t limited to large corporations, government agencies, or radio companies hoping to manipulate our tastes. These same insights can be used to change how we live.</p>
+
+<p class="calibre2">In 2000, for instance, two statisticians were hired by the YMCA—one of the nation’s largest nonprofit organizations—to use the powers of data-driven fortune-telling to make the world a healthier place. The YMCA has more than 2,600 branches in the United States, most of them gyms and community centers. About a decade ago, the organization’s leaders began worrying about how to stay competitive. They asked a social scientist and a mathematician—Bill Lazarus and Dean Abbott—for help.</p>
+
+<p class="calibre2">The two men gathered data from more than 150,000 YMCA member satisfaction surveys that had been collected over the years and started looking for patterns. At that point, the accepted wisdom among YMCA executives was that people wanted fancy exercise equipment and sparkling, modern facilities. The YMCA had spent millions of dollars building weight rooms and yoga studios. When the surveys were analyzed, however, it turned out that while a facility’s attractiveness and the availability of workout machines might have caused people to join in the first place, what got them to stay was something else.</p>
+
+<p class="calibre2">Retention, the data said, was driven by emotional factors, such as whether employees knew members’ names or said hello when they walked in. People, it turns out, often go to the gym looking for a human connection, not a treadmill. If a member made a friend at the YMCA, they were much more likely to show up for workout sessions. In other words, people who join the YMCA have certain social habits. If the YMCA satisfied them, members were happy. So if the YMCA wanted to encourage people to exercise, it needed to take advantage of patterns that already existed, and teach employees to remember visitors’ names. It’s a variation of the lesson learned by Target and radio DJs: to sell a new habit—in this case exercise—wrap it in something that people already know and like, such as the instinct to go places where it’s easy to make friends.</p>
+
+<p class="calibre2">“We’re cracking the code on how to keep people at the gym,” Lazarus told me. “People want to visit places that satisfy their social needs. Getting people to exercise in groups makes it more likely they’ll stick with a workout. You can change the health of the nation this way.”</p>
+
+<p class="calibre2">Someday soon, say predictive analytics experts, it will be possible for companies to know our tastes and predict our habits better than we know ourselves. However, knowing that someone might prefer a certain brand of peanut butter isn’t enough to get them to act on that preference. To market a new habit—be it groceries or aerobics—you must understand how to make the novel seem familiar.</p>
+
+<p class="calibre2">The last time I spoke to Andrew Pole, I mentioned that my wife was seven months pregnant with our second child. Pole himself has children, and so we talked a bit about kids. My wife and I shop at Target on occasion, I said, and about a year earlier we had given the company our address, so we could start getting coupons in the mail. Recently, as my wife’s pregnancy had progressed, I’d been noticing a subtle upswing in the number of advertisements for diapers, lotions, and baby clothes arriving at our house.</p>
+
+<p class="calibre2">I was planning on using some of those coupons that very weekend, I told him. I was also thinking of buying a crib, and some drapes for the nursery, and maybe some Bob the Builder toys for my toddler. It was really helpful that Target was sending me exactly the right coupons for what I needed to buy.</p>
+
+<p class="calibre2">“Just wait till the baby comes,” Pole said. “We’ll be sending you coupons for things you want before you even know you want them.”</p>
+
+<p class="calibre2"><sup class="calibre5">1</sup>The reporting in this chapter is based on interviews with more than a dozen current and former Target employees, many of them conducted on a not-for-attribution basis because sources feared dismissal from the company or other retribution. Target was provided with an opportunity to review and respond to the reporting in this chapter, and was asked to make executives involved in the Guest Analytics department available for on-the-record interviews. The company declined to do so and declined to respond to fact-checking questions except in two emails. The first said: “At Target, our mission is to make Target the preferred shopping destination for our guests by delivering outstanding value, continuous innovation and an exceptional guest experience by consistently fulfilling our ‘Expect More. Pay Less.’ brand promise. Because we are so intently focused on this mission, we have made considerable investments in understanding our guests’ preferences. To assist in this effort, we’ve developed a number of research tools that allow us to gain insights into trends and preferences within different demographic segments of our guest population. We use data derived from these tools to inform our store layouts, product selection, promotions and coupons. This analysis allows Target to provide the most relevant shopping experience to our guests. For example, during an in-store transaction, our research tool can predict relevant offers for an individual guest based on their purchases, which can be delivered along with their receipt. Further, opt-in programs such as our baby registry help Target understand how guests’ needs evolve over time, enabling us to provide new mothers with money-saving coupons. We believe these efforts directly benefit our guests by providing more of what they need and want at Target—and have benefited Target by building stronger guest loyalty, driving greater shopping frequency and delivering increased sales and profitability.” A second email read: “Almost all of your statements contain inaccurate information and publishing them would be misleading to the public. We do not intend to address each statement point by point. Target takes its legal obligations seriously and is in compliance with all applicable federal and state laws, including those related to protected health information.”</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p><p class="content" style="margin:0pt; border:0pt; height:1em"> </p><p class="content" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre2"><strong class="calibre4">SADDLEBACK CHURCH AND THE MONTGOMERY BUS BOYCOTT</strong></p><p class="content" style="margin:0pt; border:0pt; height:1em"> </p><p class="calibre2"><strong class="calibre4">How Movements Happen</strong></p>
+
+<p class="calibre2"><strong class="calibre4">I.</strong></p>
+
+<p class="calibre2">The 6 P.M. Cleveland Avenue bus pulled to the curb and the petite forty-two-year-old African American woman in rimless glasses and a conservative brown jacket climbed on board, reached into her purse, and dropped a ten-cent fare into the till.<sup class="calibre5">8.1</sup></p>
+
+<p class="calibre2">It was Thursday, December 1, 1955, in Montgomery, Alabama, and she had just finished a long day at Montgomery Fair, the department store where she worked as a seamstress. The bus was crowded and, by law, the first four rows were reserved for white passengers. The area where blacks were allowed to sit, in the back, was already full and so the woman—Rosa Parks—sat in a center row, right behind the white section, where either race could claim a seat.</p>
+
+<p class="calibre2">As the bus continued on its route, more people boarded. Soon, all the rows were filled and some—including a white passenger—were standing in the aisle, holding on to an overhead bar. The bus driver, James F. Blake, seeing the white man on his feet, shouted at the black passengers in Parks’s area to give up their seats, but no one moved. It was noisy. They might not have heard. Blake pulled over to a bus stop in front of the Empire Theater on Montgomery Street and walked back.</p>
+
+<p class="calibre2">“Y’all better make it light on yourselves and let me have those seats,” he said. Three of the black passengers got up and moved to the rear, but Parks stayed put. She wasn’t <em class="calibre3">in</em> the white section, she told the driver, and besides, there was only one white rider standing.</p>
+
+<p class="calibre2">“If you don’t stand up,” Blake said, “I’m going to call the police and have you arrested.”</p>
+
+<p class="calibre2">“You may do that,” Parks said.<sup class="calibre5">8.2</sup></p>
+
+<p class="calibre2">The driver left and found two policemen.</p>
+
+<p class="calibre2">“Why don’t you stand up?” one of them asked Parks after they boarded.</p>
+
+<p class="calibre2">“Why do you push us around?” she said.</p>
+
+<p class="calibre2">“I don’t know,” the officer answered. “But the law is the law and you’re under arrest.”<sup class="calibre5">8.3</sup></p>
+
+<p class="calibre2">At that moment, though no one on that bus knew it, the civil rights movement pivoted. That small refusal was the first in a series of actions that shifted the battle over race relations from a struggle fought by activists in courts and legislatures into a contest that would draw its strength from entire communities and mass protests. Over the next year, Montgomery’s black population would rise up and boycott the city’s buses, ending their strike only once the law segregating races on public transportation was stricken from the books. The boycott would financially cripple the bus line, draw tens of thousands of protesters to rallies, introduce the country to a charismatic young leader named Martin Luther King, Jr., and spark a movement that would spread to Little Rock, Greensboro, Raleigh, Birmingham, and, eventually, to Congress. Parks would become a hero, a recipient of the Presidential Medal of Freedom, and a shining example of how a single act of defiance can change the world.</p>
+
+<p class="calibre2">But that isn’t the whole story. Rosa Parks and the Montgomery bus boycott became the epicenter of the civil rights campaign not only because of an individual act of defiance, but also because of social patterns. Parks’s experiences offer a lesson in the power of social habits—the behaviors that occur, unthinkingly, across dozens or hundreds or thousands of people which are often hard to see as they emerge, but which contain a power that can change the world. Social habits are what fill streets with protesters who may not know one another, who might be marching for different reasons, but who are all moving in the same direction. Social habits are why some initiatives become world-changing movements, while others fail to ignite. And the reason why social habits have such influence is because at the root of many movements—be they large-scale revolutions or simple fluctuations in the churches people attend—is a three-part process that historians and sociologists say shows up again and again:<sup class="calibre5">8.4</sup></p>
+
+<p class="calibre2">A movement starts because of the social habits of friendship and the strong ties between close acquaintances.</p>
+
+<p class="calibre2">It grows because of the habits of a community, and the weak ties that hold neighborhoods and clans together.</p>
+
+<p class="calibre2">And it endures because a movement’s leaders give participants new habits that create a fresh sense of identity and a feeling of ownership.</p>
+
+<p class="calibre2">Usually, only when all three parts of this process are fulfilled can a movement become self-propelling and reach a critical mass. There are other recipes for successful social change and hundreds of details that differ between eras and struggles. But understanding how social habits work helps explain why Montgomery and Rosa Parks became the catalyst for a civil rights crusade.</p>
+
+<p class="calibre2">It wasn’t inevitable that Parks’s act of rebellion that winter day would result in anything other than her arrest. Then habits intervened, and something amazing occurred.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Rosa Parks wasn’t the first black passenger jailed for breaking Montgomery’s bus segregation laws. She wasn’t even the first that year. In 1946, Geneva Johnson had been arrested for talking back to a Montgomery bus driver over seating.<sup class="calibre5">8.5</sup> In 1949, Viola White, Katie Wingfield, and two black children were arrested for sitting in the white section and refusing to move.<sup class="calibre5">8.6</sup> That same year, two black teenagers visiting from New Jersey—where buses were integrated—were arrested and jailed after breaking the law by sitting next to a white man and a boy.<sup class="calibre5">8.7</sup> In 1952, a Montgomery policeman shot and killed a black man when he argued with a bus driver. In 1955, just months before Parks was taken to jail, Claudette Colvin and Mary Louise Smith were arrested in separate incidents for refusing to give their seats to white passengers.</p>
+
+<p class="calibre2">None of those arrests resulted in boycotts or protests, however. “There weren’t many real activists in Montgomery at the time,” Taylor Branch, the Pulitzer Prize–winning civil rights historian, told me. “People didn’t mount protests or marches. Activism was something that happened in courts. It wasn’t something average people did.”</p>
+
+<p class="calibre2">When a young Martin Luther King, Jr., arrived in Montgomery in 1954, for instance, a year before Parks’s arrest, he found a majority of the city’s blacks accepted segregation “without apparent protest. Not only did they seem resigned to segregation per se; they also accepted the abuses and indignities which came with it.”<sup class="calibre5">8.8</sup></p>
+
+<p class="calibre2">So why, when Parks was arrested, did things change?</p>
+
+<p class="calibre2">One explanation is that the political climate was shifting. The previous year, the U.S. Supreme Court had handed down <em class="calibre3">Brown v. Board of Education,</em> ruling that segregation was illegal within public schools; six months before Parks’s arrest, the Court had issued what came to be known as <em class="calibre3">Brown II—</em>a decision ordering that school integration must proceed with “all deliberate speed.” There was a powerful sense across the nation that change was in the air.</p>
+
+<p class="calibre2">But that isn’t sufficient to explain why Montgomery became ground zero for the civil rights struggle. Claudette Colvin and Mary Louise Smith had been arrested in the wake of <em class="calibre3">Brown v. Board,</em> and yet they didn’t spark a protest. <em class="calibre3">Brown,</em> for many Montgomery residents, was an abstraction from a far-off courthouse, and it was unclear how—or if—its impact would be felt locally. Montgomery wasn’t Atlanta or Austin or other cities where progress seemed possible. “Montgomery was a pretty nasty place,” Branch said. “Racism was set in its ways there.”</p>
+
+<p class="calibre2">When Parks was arrested, however, it sparked something unusual within the city. Rosa Parks, unlike other people who had been jailed for violating the bus segregation law, was deeply respected and embedded within her community. So when she was arrested, it triggered a series of social habits—the habits of friendship—that ignited an initial protest. Parks’s membership in dozens of social networks across Montgomery allowed her friends to muster a response before the community’s normal apathy could take hold.</p>
+
+<p class="calibre2">Montgomery’s civil life, at the time, was dominated by hundreds of small groups that created the city’s social fabric. The city’s <em class="calibre3">Directory of Civil and Social Organizations</em> was almost as thick as its phone book. Every adult, it seemed—particularly every black adult—belonged to some kind of club, church, social group, community center, or neighborhood organization, and often more than one. And within these social networks, Rosa Parks was particularly well known and liked. “Rosa Parks was one of those rare people of whom everyone agreed that she gave more than she got,” Branch wrote in his history of the civil rights movement, <em class="calibre3">Parting the Waters</em>. “Her character represented one of the isolated high blips on the graph of human nature, offsetting a dozen or so sociopaths.”<sup class="calibre5">8.9</sup> Parks’s many friendships and affiliations cut across the city’s racial and economic lines. She was the secretary of the local NAACP chapter, attended the Methodist church, and helped oversee a youth organization at the Lutheran church near her home. She spent some weekends volunteering at a shelter, others with a botanical club, and on Wednesday nights often joined a group of women who knit blankets for a local hospital. She volunteered dressmaking services to poor families and provided last-minute gown alterations for wealthy white debutantes. She was so deeply enmeshed in the community, in fact, that her husband complained that she ate more often at potlucks than at home.</p>
+
+<p class="calibre2">In general, sociologists say, most of us have friends who are like us. We might have a few close acquaintances who are richer, a few who are poorer, and a few of different races—but, on the whole, our deepest relationships tend to be with people who look like us, earn about the same amount of money, and come from similar backgrounds.</p>
+
+<p class="calibre2">Parks’s friends, in contrast, spanned Montgomery’s social and economic hierarchies. She had what sociologists call “strong ties”—firsthand relationships—with dozens of groups throughout Montgomery that didn’t usually come into contact with one another. “This was absolutely key,” Branch said. “Rosa Parks transcended the social stratifications of the black community and Montgomery as a whole. She was friends with field hands and college professors.”</p>
+
+<p class="calibre2">And the power of those friendships became apparent as soon as Parks landed in jail.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Rosa Parks called her parents’ home from the police station. She was panicked, and her mother—who had no idea what to do—started going through a mental Rolodex of Parks’s friends, trying to think of someone who might be able to help. She called the wife of E. D. Nixon, the former head of the Montgomery NAACP, who in turn called her husband and told him that Parks needed to be bailed out of jail. He immediately agreed to help, and called a prominent white lawyer named Clifford Durr who knew Parks because she had hemmed dresses for his three daughters.</p>
+
+<p class="calibre2">Nixon and Durr went to the jailhouse, posted bail for Parks, and took her home. They’d been looking for the perfect case to challenge Montgomery’s bus segregation laws, and sensing an opportunity, they asked Parks if she would be willing to let them fight her arrest in court. Parks’s husband was opposed to the idea. “The white folks will kill you, Rosa,” he told her.<sup class="calibre5">8.10</sup></p>
+
+<p class="calibre2">But Parks had spent years working with Nixon at the NAACP. She had been in Durr’s house and had helped his daughters prepare for cotillions. Her friends were now asking her for a favor.</p>
+
+<p class="calibre2">“If you think it will mean something to Montgomery and do some good,” she told them, “I’ll be happy to go along with it.”<sup class="calibre5">8.11</sup></p>
+
+<p class="calibre2">That night—just a few hours after the arrest—news of Parks’s jailing began to filter through the black community. Jo Ann Robinson, the president of a powerful group of schoolteachers involved in politics and a friend of Parks’s from numerous organizations, heard about it. So did many of the schoolteachers in Robinson’s group, and many of the parents of their students. Close to midnight, Robinson called an impromptu meeting and suggested that everyone boycott the city’s buses on Monday, four days hence, when Parks was to appear in court.</p>
+
+<p class="calibre2">Afterward, Robinson snuck into her office’s mimeograph room and made copies of a flyer.</p>
+
+<p class="calibre2">“Another Negro woman has been arrested and thrown into jail because she refused to get up out of her seat on the bus for a white person to sit down,” it read. “This woman’s case will come up on Monday. We are, therefore, asking every Negro to stay off the buses Monday in protest of the arrest and trial.”<sup class="calibre5">8.12</sup></p>
+
+<p class="calibre2">Early the next morning, Robinson gave stacks of the flyers to schoolteachers and asked them to distribute it to parents and coworkers. Within twenty-four hours of Parks’s arrest, word of her jailing and the boycott had spread to some of the city’s most influential communities—the local NAACP, a large political group, a number of black schoolteachers, and the parents of their students. Many of the people who received a flyer knew Rosa Parks personally—they had sat next to her in church or at a volunteer meeting and considered her a friend. There’s a natural instinct embedded in friendship, a sympathy that makes us willing to fight for someone we like when they are treated unjustly. Studies show that people have no problem ignoring strangers’ injuries, but when a friend is insulted, our sense of outrage is enough to overcome the inertia that usually makes protests hard to organize. When Parks’s friends learned about her arrest and the boycott, the social habits of friendship—the natural inclination to help someone we respect—kicked in.</p>
+
+<p class="calibre2">The first mass movement of the modern civil rights era could have been sparked by any number of earlier arrests. But it began with Rosa Parks because she had a large, diverse, and connected set of friends—who, when she was arrested, reacted as friends naturally respond, by following the social habits of friendship and agreeing to show their support.</p>
+
+<p class="calibre2">Still, many expected the protest would be nothing more than a one-day event. Small protests pop up every day around the world, and almost all of them quickly fizzle out. No one has enough friends to change the world.</p>
+
+<p class="calibre2">Which is why the second aspect of the social habits of movements is so important. The Montgomery bus boycott became a society-wide action because the sense of obligation that held the black community together was activated soon after Parks’s friends started spreading the word. People who hardly knew Rosa Parks decided to participate because of a social peer pressure—an influence known as “the power of weak ties”—that made it difficult to avoid joining in.</p>
+
+<p class="calibre2"><strong class="calibre4">II.</strong></p>
+
+<p class="calibre2">Imagine, for a moment, that you’re an established midlevel executive at a prosperous company. You’re successful and well liked. You’ve spent years building a reputation inside your firm and cultivating a network of friends that you can tap for clients, advice, and industry gossip. You belong to a church, a gym, and a country club, as well as the local chapter of your college alumni association. You’re respected and often asked to join various committees. When people within your community hear of a business opportunity, they often pass it your way.</p>
+
+<p class="calibre2">Now imagine you get a phone call. It’s a midlevel executive at another company looking for a new job. Will you help him by putting in a good word with your boss, he asks?</p>
+
+<p class="calibre2">If the person on the telephone is a total stranger, it’s an easy decision. Why risk your standing inside your firm helping someone you don’t know?</p>
+
+<p class="calibre2">If the person on the phone is a close friend, on the other hand, it’s also an easy choice. Of course you’ll help. That’s what friends do.</p>
+
+<p class="calibre2">However, what if the person on the phone isn’t a good friend or a stranger, but something in between? What if you have friends in common, but don’t know each other very well? Do you vouch for the caller when your boss asks if he’s worth an interview? How much of your own reputation and energy, in other words, are you willing to expend to help a friend of a friend get a job?</p>
+
+<p class="calibre2">In the late 1960s, a Harvard PhD student named Mark Granovetter set out to answer that question by studying how 282 men had found their current employment.<sup class="calibre5">8.13</sup> He tracked how they had learned about open positions, whom they had called for referrals, the methods they used to land interviews, and most important, who had provided a helping hand. As expected, he found that when job hunters approached strangers for assistance, they were rejected. When they appealed to friends, help was provided.</p>
+
+<p class="calibre2">More surprising, however, was how often job hunters also received help from casual acquaintances—friends of friends—people who were neither strangers nor close pals. Granovetter called those connections “weak ties,” because they represented the links that connect people who have acquaintances in common, who share membership in social networks, but aren’t directly connected by the strong ties of friendship themselves.</p>
+
+<p class="calibre2">In fact, in landing a job, Granovetter discovered, weak-tie acquaintances were often <em class="calibre3">more</em> important than strong-tie friends because weak ties give us access to social networks where we don’t otherwise belong. Many of the people Granovetter studied had learned about new job opportunities through weak ties, rather than from close friends, which makes sense because we talk to our closest friends all the time, or work alongside them or read the same blogs. By the time they have heard about a new opportunity, we probably know about it, as well. On the other hand, our weak-tie acquaintances—the people we bump into every six months—are the ones who tell us about jobs we would otherwise never hear about.<sup class="calibre5">8.14</sup></p>
+
+<p class="calibre2">When sociologists have examined how opinions move through communities, how gossip spreads or political movements start, they’ve discovered a common pattern: Our weak-tie acquaintances are often as influential—if not more—than our close-tie friends. As Granovetter wrote, “Individuals with few weak ties will be deprived of information from distant parts of the social system and will be confined to the provincial news and views of their close friends. This deprivation will not only insulate them from the latest ideas and fashions but may put them in a disadvantaged position in the labor market, where advancement can depend … on knowing about appropriate job openings at just the right time.</p>
+
+<p class="calibre2">“Furthermore, such individuals may be difficult to organize or integrate into political movements of any kind.… While members of one or two cliques may be efficiently recruited, the problem is that, without weak ties, any momentum generated in this way does not spread <em class="calibre3">beyond</em> the clique. As a result, most of the population will be untouched.”<sup class="calibre5">8.15</sup></p>
+
+<p class="calibre2">The power of weak ties helps explain how a protest can expand from a group of friends into a broad social movement. Convincing thousands of people to pursue the same goal—especially when that pursuit entails real hardship, such as walking to work rather than taking the bus, or going to jail, or even skipping a morning cup of coffee because the company that sells it doesn’t support organic farming—is hard. Most people don’t care enough about the latest outrage to give up their bus ride or caffeine unless it’s a close friend that has been insulted or jailed. So there is a tool that activists have long relied upon to compel protest, even when a group of people don’t necessarily <em class="calibre3">want</em> to participate. It’s a form of persuasion that has been remarkably effective over hundreds of years. It’s the sense of obligation that neighborhoods or communities place upon themselves.</p>
+
+<p class="calibre2">In other words, peer pressure.</p>
+
+<p class="calibre2">Peer pressure—and the social habits that encourage people to conform to group expectations—is difficult to describe, because it often differs in form and expression from person to person. These social habits aren’t so much one consistent pattern as dozens of individual habits that ultimately cause everyone to move in the same direction.</p>
+
+<p class="calibre2">The habits of peer pressure, however, have something in common. They often spread through weak ties. And they gain their authority through communal expectations. If you ignore the social obligations of your neighborhood, if you shrug off the expected patterns of your community, you risk losing your social standing. You endanger your access to many of the social benefits that come from joining the country club, the alumni association, or the church in the first place.</p>
+
+<p class="calibre2">In other words, if you don’t give the caller looking for a job a helping hand, he might complain to his tennis partner, who might mention those grumblings to someone in the locker room who you were hoping to attract as a client, who is now less likely to return your call because you have a reputation for not being a team player. On a playground, peer pressure is dangerous. In adult life, it’s how business gets done and communities self-organize.</p>
+
+<p class="calibre2">Such peer pressure, on its own, isn’t enough to sustain a movement. But when the strong ties of friendship and the weak ties of peer pressure merge, they create incredible momentum. That’s when widespread social change can begin.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">To see how the combination of strong and weak ties can propel a movement, fast forward to nine years <em class="calibre3">after</em> Rosa Parks’s arrest, when hundreds of young people volunteered to expose themselves to deadly risks for the civil rights crusade.</p>
+
+<p class="calibre2">In 1964, students from across the country—many of them whites from Harvard, Yale, and other northern universities—applied for something called the “Mississippi Summer Project.” It was a ten-week program devoted to registering black voters in the South.<sup class="calibre5">8.16</sup> The project came to be known as Freedom Summer, and many who applied were aware it would be dangerous. In the months before the program started, newspapers and magazines were filled with articles predicting violence (which proved tragically accurate when, just a week after it began, white vigilantes killed three volunteers outside Longdale, Mississippi). The threat of harm kept many students from participating in the Mississippi Summer Project, even after they applied. More than a thousand applicants were accepted into Freedom Summer, but when it came time to head south in June, more than three hundred of those invited to participate decided to stay home.<sup class="calibre5">8.17</sup></p>
+
+<p class="calibre2">In the 1980s, a sociologist at the University of Arizona named Doug McAdam began wondering if it was possible to figure out why some people had participated in Freedom Summer and others withdrew.<sup class="calibre5">8.18</sup> He started by reading 720 of the applications students had submitted decades earlier. Each was five pages long. Applicants were asked about their backgrounds, why they wanted to go to Mississippi, and their experiences with voter registration. They were told to provide a list of people organizers should contact if they were arrested. There were essays, references, and, for some, interviews. Applying was not a casual undertaking.</p>
+
+<p class="calibre2">McAdam’s initial hypothesis was that students who ended up going to Mississippi probably had different motivations from those who stayed home, which explained the divergence in participation. To test this idea, he divided applicants into two groups. The first pile were people who said they wanted to go to Mississippi for “self-interested” motives, such as to “test myself,” to “be where the action is,” or to “learn about the southern way of life.” The second group were those with “other-oriented” motives, such as to “improve the lot of blacks,” to “aid in the full realization of democracy,” or to “demonstrate the power of nonviolence as a vehicle for social change.”</p>
+
+<p class="calibre2">The self-centered, McAdam hypothesized, would be more likely to stay home once they realized the risks of Freedom Summer. The other-oriented would be more likely to get on the bus.</p>
+
+<p class="calibre2">The hypothesis was wrong.</p>
+
+<p class="calibre2">The selfish and the selfless, according to the data, went South in equal numbers. Differences in motives did not explain “any significant distinctions between participants and withdrawals,” McAdam wrote.</p>
+
+<p class="calibre2">Next, McAdam compared applicants’ opportunity costs. Maybe those who stayed home had husbands or girlfriends keeping them from going to Mississippi? Maybe they had gotten jobs, and couldn’t swing a two-month unpaid break?</p>
+
+<p class="calibre2">Wrong again.</p>
+
+<p class="calibre2">“Being married or holding a full-time job actually enhanced the applicant’s chances of going south,” McAdam concluded.</p>
+
+<p class="calibre2">He had one hypothesis left. Each applicant was asked to list their memberships in student and political organizations and at least ten people they wanted kept informed of their summer activities, so McAdam took these lists and used them to chart each applicant’s social network. By comparing memberships in clubs, he was able to determine which applicants had friends who also applied for Freedom Summer.</p>
+
+<p class="calibre2">Once he finished, he finally had an answer as to why some students went to Mississippi, and others stayed home: because of social habits—or more specifically, because of the power of strong and weak ties working in tandem. The students who participated in Freedom Summer were enmeshed in the types of communities where both their close friends <em class="calibre3">and</em> their casual acquaintances expected them to get on the bus. Those who withdrew were also enmeshed in communities, but of a different kind—the kind where the social pressures and habits didn’t compel them to go to Mississippi.</p>
+
+<p class="calibre2">“Imagine you’re one of the students who applied,” McAdam told me. “On the day you signed up for Freedom Summer, you filled out the application with five of your closest friends and you were all feeling really motivated.</p>
+
+<p class="calibre2">“Now, it’s six months later and departure day is almost here. All the magazines are predicting violence in Mississippi. You called your parents, and they told you to stay at home. It would be strange, at that point, if you weren’t having second thoughts.</p>
+
+<p class="calibre2">“Then, you’re walking across campus and you see a bunch of people from your church group, and they say, ‘We’re coordinating rides—when should we pick you up?’ These people aren’t your closest friends, but you see them at club meetings and in the dorm, and they’re important within your social community. They all know you’ve been accepted to Freedom Summer, and that you’ve said you want to go. Good luck pulling out at that point. You’d lose a huge amount of social standing. Even if you’re having second thoughts, there’s real consequences if you withdraw. You’ll lose the respect of people whose opinions matter to you.”</p>
+
+<p class="calibre2">When McAdam looked at applicants with religious orientations—students who cited a “Christian duty to help those in need” as their motivation for applying, for instance, he found mixed levels of participation. However, among those applicants who mentioned a religious orientation <em class="calibre3">and</em> belonged to a religious organization, McAdam found that <em class="calibre3">every single one</em> made the trip to Mississippi. Once their communities knew they had been accepted into Freedom Summer, it was impossible for them to withdraw.<sup class="calibre5">8.19</sup></p>
+
+<p class="calibre2">On the other hand, consider the social networks of applicants who were accepted into the program but didn’t go to Mississippi. They, too, were involved in campus organizations. They, too, belonged to clubs and cared about their standing within those communities. But the organizations they belonged to—the newspaper and student government, academic groups and fraternities—had different expectations. Within those communities, someone could withdraw from Freedom Summer and suffer little or no decline in the prevailing social hierarchy.</p>
+
+<p class="calibre2">When faced with the prospect of getting arrested (or worse) in Mississippi, most students probably had second thoughts. However, some were embedded in communities where social habits—the expectations of their friends and the peer pressure of their acquaintances—compelled participation, so regardless of their hesitations, they bought a bus ticket. Others—who also cared about civil rights—belonged to communities where the social habits pointed in a slightly different direction, so they thought to themselves, <em class="calibre3">Maybe I’ll just stay home.</em></p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">On the morning after he bailed Rosa Parks out of jail, E. D. Nixon placed a call to the new minister of the Dexter Avenue Baptist Church, Martin Luther King, Jr. It was a little after 5 A.M., but Nixon didn’t say hello or ask if he had awoken King’s two-week-old daughter when the minister answered—he just launched into an account of Parks’s arrest, how she had been hauled into jail for refusing to give up her seat, and their plans to fight her case in court and boycott the city’s buses on Monday. At the time, King was twenty-six years old. He had been in Montgomery for only a year and was still trying to figure out his role within the community. Nixon was asking for King’s endorsement as well as permission to use his church for a boycott meeting that night. King was wary of getting too deeply involved. “Brother Nixon,” he said, “let me think about it and you call me back.”</p>
+
+<p class="calibre2">But Nixon didn’t stop there. He reached out to one of King’s closest friends—one of the strongest of King’s strong ties—named Ralph D. Abernathy, and asked him to help convince the young minister to participate. A few hours later, Nixon called King again.</p>
+
+<p class="calibre2">“I’ll go along with it,” King told him.</p>
+
+<p class="calibre2">“I’m glad to hear you say so,” Nixon said, “because I’ve talked to eighteen other people and told them to meet in your church tonight. It would have been kind of bad to be getting together there without you.”<sup class="calibre5">8.20</sup> Soon, King was drafted into serving as president of the organization that had sprung up to coordinate the boycott.</p>
+
+<p class="calibre2">On Sunday, three days after Parks’s arrest, the city’s black ministers—after speaking to King and other members of the new organization—explained to their congregations that every black church in the city had agreed to a one-day protest. The message was clear: It would be embarrassing for any parishioner to sit on the sidelines. That same day, the town’s newspaper, the <em class="calibre3">Advertiser,</em> contained an article about “a ‘top secret’ meeting of Montgomery Negroes who plan a boycott of city buses Monday.”<sup class="calibre5">8.21</sup> The reporter had gotten copies of flyers that white women had taken from their maids. The black parts of the city were “flooded with thousands of copies” of the leaflets, the article explained, and it was anticipated that every black citizen would participate. When the article was written, only Parks’s friends, the ministers, and the boycott organizers had publicly committed to the protest—but once the city’s black residents read the newspaper, they assumed, like white readers, that everyone else was already on board.</p>
+
+<p class="calibre2">Many people sitting in the pews and reading the newspapers knew Rosa Parks personally and were willing to boycott because of their friendships with her. Others didn’t know Parks, but they could sense the community was rallying behind her cause, and that if they were seen riding a bus on Monday, it would look bad. “If you work,” read a flyer handed out in churches, “take a cab, or share a ride, or walk.” Then everyone heard that the boycott’s leaders had convinced—or strong-armed—all the black taxi drivers into agreeing to carry black passengers on Monday for ten cents a ride, the same as a bus fare. The community’s weak ties were drawing everyone together. At that point, you were either with the boycott or against it.</p>
+
+<p class="calibre2">On the Monday morning of the boycott, King woke before dawn and got his coffee. His wife, Coretta, sat at the front window and waited for the first bus to pass. She shouted when she saw the headlights of the South Jackson line, normally filled with maids on their way to work, roll by with no passengers. The next bus was empty as well. And the one that came after. King got into his car and started driving around, checking other routes. In an hour, he counted eight black passengers. One week earlier, he would have seen hundreds.</p>
+
+<p class="calibre2">“I was jubilant,” he later wrote. “A miracle had taken place.… Men were seen riding mules to work, and more than one horse-drawn buggy drove the streets of Montgomery.… Spectators had gathered at the bus stops to watch what was happening. At first, they stood quietly, but as the day progressed they began to cheer the empty buses and laugh and make jokes. Noisy youngsters could be heard singing out, ‘No riders today.’ ”<sup class="calibre5">8.22</sup></p>
+
+<p class="calibre2">That afternoon, in a courtroom on Church Street, Rosa Parks was found guilty of violating the state’s segregation laws. More than five hundred blacks crowded the hallways and stood in front of the building, awaiting the verdict. The boycott and impromptu rally at the courthouse were the most significant black political activism in Montgomery’s history, and it had all come together in five days. It had started among Parks’s close friends, but it drew its power, King and other participants later said, because of a sense of obligation among the community—the social habits of weak ties. The community was pressured to stand together for fear that anyone who didn’t participate wasn’t someone you wanted to be friends with in the first place.</p>
+
+<p class="calibre2">There are plenty of people who would have participated in the boycott without such encouragement. King and the cabbies and the congregations might have made the same choices without the influence of strong and weak ties. But tens of thousands of people from across the city would not have decided to stay off the buses without the encouragement of social habits. “The once dormant and quiescent Negro community was now fully awake,” King later wrote.</p>
+
+<p class="calibre2">Those social habits, however, weren’t strong enough on their own to extend a one-day boycott into a yearlong movement. Within a few weeks, King would be openly worrying that people’s resolve was weakening, that “the ability of the Negro community to continue the struggle” was in doubt.<sup class="calibre5">8.23</sup></p>
+
+<p class="calibre2">Then those worries would evaporate. King, like thousands of other movement leaders, would shift the struggle’s guidance from his hands onto the shoulders of his followers, in large part by handing them new habits. He would activate the third part of the movement formula, and the boycott would become a self-perpetuating force.</p>
+
+<p class="calibre2"><strong class="calibre4">III.</strong></p>
+
+<p class="calibre2">In the summer of 1979, a young seminary student who was white, had been one year old when Rosa Parks was arrested, and was currently focused mostly on how he was going to support his growing family, posted a map on the wall of his Texas home and began drawing circles around major U.S.<sup class="calibre5">8.24</sup> cities, from Seattle to Miami.</p>
+
+<p class="calibre2">Rick Warren was a Baptist pastor with a pregnant wife and less than $2,000 in the bank. He wanted to start a new congregation among people who didn’t already attend church, but he had no idea where it should be located. “I figured I would go somewhere all my seminary friends didn’t want to go,” he told me. He spent the summer in libraries studying census records, phone books, newspaper articles, and maps. His wife was in her ninth month, and so every few hours Warren would jog to a pay phone, call home to make sure she hadn’t started labor yet, and then return to the stacks.</p>
+
+<p class="calibre2">One afternoon, Warren stumbled upon a description of a place called Saddleback Valley in Orange County, California. The book Warren was reading said it was the fastest-growing region in the fastestgrowing county in one of the fastest-growing states in America. There were a number of churches in the area, but none large enough to accommodate the quickly expanding population. Intrigued, Warren contacted religious leaders in Southern California who told him that many locals self-identified as Christian but didn’t attend services. “In the dusty, dimly lit basement of that university library, I heard God speak to me: ‘That’s where I want you to plant a church!’ ” Warren later wrote. “From that moment on, our destination was a settled issue.”<sup class="calibre5">8.25</sup></p>
+
+<p class="calibre2">Warren’s focus on building a congregation among the unchurched had begun five years earlier, when, as a missionary in Japan, he had discovered an old copy of a Christian magazine with an article headlined “Why Is This Man Dangerous?” It was about Donald McGavran, a controversial author focused on building churches in nations where most people hadn’t accepted Christ. At the center of McGavran’s philosophy was an admonition that missionaries should imitate the tactics of other successful movements—including the civil rights campaign—by appealing to people’s social habits. “The steady goal must be the Christianization of the entire fabric which is the people, or large enough parts of it that the social life of the individual is not destroyed,” McGavran had written in one of his books. Only the evangelist who helps people “to become followers of Christ <em class="calibre3">in their normal social relationship</em> has any chance of liberating multitudes.”<sup class="calibre5">8.26</sup></p>
+
+<p class="calibre2">That article—and, later, McGavran’s books—were a revelation to Rick Warren. Here, finally, was someone applying a rational logic to a topic that was usually couched in the language of miracles. Here was someone who understood that religion had to be, for lack of a better word, marketed.</p>
+
+<p class="calibre2">McGavran laid out a strategy that instructed church builders to speak to people in their “own languages,” to create places of worship where congregants saw their friends, heard the kinds of music they already listened to, and experienced the Bible’s lessons in digestible metaphors. Most important, McGavran said, ministers needed to convert <em class="calibre3">groups</em> of people, rather than individuals, so that a community’s social habits would encourage religious participation, rather than pulling people away.</p>
+
+<p class="calibre2">In December, after graduating from seminary and having the baby, Warren loaded his family and belongings into a U-Haul, drove to Orange County, and rented a small condo. His first prayer group attracted all of seven people and took place in his living room.</p>
+
+<p class="calibre2">Today, thirty years later, Saddleback Church is one of the largest ministries in the world, with more than twenty thousand parishioners visiting its 120-acre campus—and eight satellite campuses—each week. One of Warren’s books, <em class="calibre3">The Purpose-Driven Life,</em> has sold thirty million copies, making it among the biggest sellers in history. There are thousands of other churches modeled on his methods. Warren was chosen to perform the invocation at President Obama’s inauguration, and is considered one of the most influential religious leaders on earth.</p>
+
+<p class="calibre2">And at the core of his church’s growth and his success is a fundamental belief in the power of social habits.</p>
+
+<p class="calibre2">“We’ve thought long and hard about habitualizing faith, breaking it down into pieces<em class="calibre3">,”</em> Warren told me. “If you try to scare people into following Christ’s example, it’s not going to work for too long. The only way you get people to take responsibility for their spiritual maturity is to teach them <em class="calibre3">habits</em> of faith.</p>
+
+<p class="calibre2">“Once that happens, they become self-feeders. People follow Christ not because you’ve led them there, but because it’s who they are.”</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">When Warren first arrived in Saddleback Valley, he spent twelve weeks going door-to-door, introducing himself and asking strangers why they <em class="calibre3">didn’t</em> go to church. Many of the answers were practical—it was boring, people said, the music was bad, the sermons didn’t seem applicable to their lives, they needed child care, they hated dressing up, the pews were uncomfortable.</p>
+
+<p class="calibre2">Warren’s church would address each of those complaints. He told people to wear shorts and Hawaiian shirts, if they felt like it. An electric guitar was brought in. Warren’s sermons, from the start, focused on practical topics, with titles such as “How to Handle Discouragement,” “How to Feel Good About Yourself,” “How to Raise Healthy Families,” and “How to Survive Under Stress.”<sup class="calibre5">8.27</sup> His lessons were easy to understand, focused on real, daily problems, and could be applied as soon as parishioners left church.</p>
+
+<p class="calibre2">It started to work. Warren rented school auditoriums for services and office buildings for prayer meetings. The congregation hit fifty members, then one hundred, then two hundred in less than a year. Warren was working eighteen hours a day, seven days a week, answering congregants’ phone calls, leading classes, coming to their homes to offer marriage counseling, and, in his spare time, always looking for new venues to accommodate the church’s growing size.</p>
+
+<p class="calibre2">One Sunday in mid-December, Warren stood up to preach during the eleven o’clock service. He felt light-headed, dizzy. He gripped the podium and started to speak, but the words on the page were blurry. He began to fall, caught himself, and motioned to the assistant pastor—his only staff—to take the lectern.</p>
+
+<p class="calibre2">“I’m sorry, folks,” Warren told the audience. “I’m going to have to sit down.”<sup class="calibre5">8.28</sup></p>
+
+<p class="calibre2">For years, he had suffered from anxiety attacks and occasional bouts of melancholy that friends told him sounded like mild depressions. But it had never hit this bad before. The next day, Warren and his family began driving to Arizona, where his wife’s family had a house. Slowly, he recuperated. Some days, he would sleep for twelve hours and then take a walk through the desert, praying, trying to understand why these panic attacks were threatening to undo everything he had worked so hard to build. Nearly a month passed as he stayed away from the church. His melancholy became a full-fledged depression, darker than anything he had experienced before. He wasn’t certain if he would ever become healthy enough to return.</p>
+
+<p class="calibre2">Warren, as befitting a pastor, is a man prone to epiphanies. They had occurred when he found the magazine article about McGavran, and in the library in Texas. Walking through the desert, another one struck.</p>
+
+<p class="calibre2">“You focus on building people,” the Lord told him. “And I will build the church.”</p>
+
+<p class="calibre2">Unlike some of his previous revelations, however, this one didn’t suddenly make the path clear. Warren would continue to struggle with depression for months—and then during periods throughout his life. On that day, however, he made two decisions: He would go back to Saddleback, and he would figure out how to make running the church less work.</p>
+
+<p class="calibre2"></p></body></html>

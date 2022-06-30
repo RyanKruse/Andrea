@@ -1,0 +1,363 @@
+@namespace h "http://www.w3.org/1999/xhtml";
+.MsoNormal {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal1 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: center;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal10 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 13.5pt
+    }
+.MsoNormal11 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 5.9pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 13.5pt
+    }
+.MsoNormal12 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0.25in
+    }
+.MsoNormal13 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 1.4pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal14 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: -7.6pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal15 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 9pt
+    }
+.MsoNormal16 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 1.4pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 36pt
+    }
+.MsoNormal17 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 36pt;
+    margin-top: 1em;
+    text-align: right;
+    text-autospace: none;
+    text-indent: 13.5pt
+    }
+.MsoNormal18 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 23.9pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal19 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 14.9pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal2 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 36pt;
+    margin-top: 1em;
+    text-align: right;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal20 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 10.4pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal21 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: -3.1pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal22 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 31.55pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal23 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 14.2pt
+    }
+.MsoNormal24 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 3.15pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal25 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 36pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 14.2pt
+    }
+.MsoNormal26 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 10.25pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal27 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 21.3pt
+    }
+.MsoNormal28 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0.05in;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal29 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: -3.5pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal3 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: right;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal30 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: -3.5pt;
+    margin-top: 1em;
+    text-align: center;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal4 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 36pt
+    }
+.MsoNormal5 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0.5in
+    }
+.MsoNormal6 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 36pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal7 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 36pt;
+    margin-top: 1em;
+    text-align: center;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal8 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 5.9pt;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 0
+    }
+.MsoNormal9 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: left;
+    text-autospace: none;
+    text-indent: 27pt
+    }
+.Section {
+    display: block
+    }
+.calibre {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-left: 5pt;
+    margin-right: 5pt;
+    margin-top: 0;
+    page-break-before: always;
+    text-justify-trim: punctuation
+    }
+.calibre1 {
+    font-weight: bolder;
+    page-break-before: always
+    }
+.calibre10 {
+    color: black
+    }
+.calibre11 {
+    font-size: 1.41667em
+    }
+.calibre12 {
+    font-size: 0.75em
+    }
+.calibre2 {
+    font-size: 1em
+    }
+.calibre3 {
+    font-size: 0.58333em
+    }
+.calibre4 {
+    font-size: 1.66667em
+    }
+.calibre5 {
+    font-size: 0.41667em
+    }
+.calibre6 {
+    font-size: 1.125em
+    }
+.calibre7 {
+    font-style: italic
+    }
+.calibre8 {
+    color: black;
+    font-size: 1.125em
+    }
+.calibre9 {
+    color: black;
+    font-size: 1em
+    }

@@ -1,0 +1,452 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="uuid_id">
+  <metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:publisher>Simon and Schuster</dc:publisher>
+    <meta name="calibre:series_index" content="1"/>
+    <meta name="calibre:rating" content="8.00"/>
+    <dc:description>EDITORIAL REVIEW:
+
+*How to Win Friends and Influence People* is the first, and still the finest, book of its kind. One of the best-known motivational books in history, Dale Carnegie's groundbreaking work has sold millions of copies, has been translated into almost every known written language, and has helped countless people succeed in both their business and personal lives.  
+
+ First published in 1937, Carnegie's advice has remained relevant for generations because he addresses timeless questions about the fine art of getting along with people: How can you make people like you instantly? How can you persuade people to agree with you? How can you speak frankly to people without giving offense? The ability to read others and successfully navigate any social situation is critically important to those who want to get a job, keep a job, or simply expand their social network.  
+
+ The core principles of this book, originally written as a practical, working handbook on human relations, are proven effective. Carnegie explains the fundamentals of handling people with a positive approach; how to make people like you and want to help you; how to win people to your way of thinking without conflict; and how to be the kind of leader who inspires quality work, increased productivity, and high morale.  
+
+ As Carnegie explains, the majority of our success in life depends on our ability to communicate and manage personal relationships effectively, whether at home or at work. *How to Win Friends and Influence People* will help you discover and develop the people skills you need to live well and prosper.</dc:description>
+    <dc:language>en</dc:language>
+    <dc:creator opf:file-as="Carnegie, Dale" opf:role="aut">Dale Carnegie</dc:creator>
+    <meta name="calibre:timestamp" content="2010-08-16T18:51:19.585000+00:00"/>
+    <dc:title>How to Win Friends and Influence People</dc:title>
+    <meta name="cover" content="RW_~Cover02"/>
+    <dc:date>2009-08-15T07:00:00+00:00</dc:date>
+    <dc:contributor opf:role="bkp">calibre (0.7.14) [http://calibre-ebook.com]</dc:contributor>
+    <dc:identifier opf:scheme="ISBN">9781439167342</dc:identifier>
+    <dc:identifier id="uuid_id" opf:scheme="uuid">2b9499ce-a83a-4ec7-b13b-fd56a5dcfa0f</dc:identifier>
+    <dc:subject>Communication In Business</dc:subject>
+    <dc:subject>Psychology</dc:subject>
+    <dc:subject>Success</dc:subject>
+    <dc:subject>Personal Growth - Success</dc:subject>
+    <dc:subject>Applied Psychology</dc:subject>
+    <dc:subject>Business communication</dc:subject>
+    <dc:subject>Careers - General</dc:subject>
+    <dc:subject>General</dc:subject>
+    <dc:subject>Persuasion (Psychology)</dc:subject>
+    <dc:subject>Family &amp; Relationships</dc:subject>
+    <dc:subject>Interpersonal Relations</dc:subject>
+    <dc:subject>Leadership</dc:subject>
+    <dc:subject>Business &amp; Economics</dc:subject>
+    <dc:subject>Self-Help</dc:subject>
+    <dc:subject>Personal Growth</dc:subject>
+    <dc:subject>Careers</dc:subject>
+  </metadata>
+  <manifest>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_000.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People199" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_001.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People198" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_002.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People197" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_003.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People196" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_004.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People195" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_005.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People194" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_006.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People193" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_007.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People192" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_008.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People191" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_009.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People190" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_010.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People189" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_011.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People188" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_012.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People187" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_013.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People186" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_014.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People185" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_015.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People184" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_016.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People183" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_017.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People182" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_018.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People181" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_019.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People180" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_020.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People179" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_021.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People178" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_022.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People177" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_023.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People176" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_024.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People175" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_025.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People174" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_026.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People173" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_027.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People172" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_028.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People171" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_029.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People170" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_030.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People169" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_031.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People168" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_032.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People167" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_033.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People166" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_034.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People165" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_035.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People164" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_036.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People163" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_037.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People162" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_038.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People161" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_039.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People160" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_040.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People159" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_041.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People158" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_042.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People157" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_043.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People156" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_044.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People155" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_045.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People154" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_046.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People153" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_047.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People152" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_048.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People151" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_049.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People150" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_050.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People149" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_051.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People148" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_052.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People147" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_053.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People146" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_054.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People145" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_055.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People144" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_056.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People143" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_057.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People142" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_058.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People141" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_059.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People140" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_060.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People139" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_061.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People138" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_062.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People137" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_063.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People136" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_064.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People135" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_065.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People134" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_066.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People133" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_067.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People132" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_068.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People131" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_069.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People130" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_070.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People129" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_071.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People128" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_072.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People127" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_073.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People126" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_074.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People125" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_075.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People124" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_076.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People123" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_077.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People122" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_078.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People121" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_079.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People120" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_080.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People119" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_081.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People118" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_082.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People117" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_083.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People116" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_084.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People115" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_085.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People114" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_086.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People113" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_087.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People112" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_088.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People111" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_089.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People110" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_090.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People109" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_091.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People108" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_092.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People107" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_093.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People106" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_094.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People105" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_095.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People104" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_096.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People103" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_097.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People102" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_098.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People101" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_099.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People100" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_100.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People99" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_101.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People98" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_102.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People97" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_103.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People96" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_104.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People95" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_105.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People94" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_106.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People93" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_107.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People92" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_108.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People91" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_109.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People90" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_110.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People89" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_111.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People88" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_112.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People87" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_113.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People86" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_114.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People85" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_115.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People84" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_116.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People83" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_117.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People82" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_118.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People81" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_119.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People80" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_120.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People79" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_121.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People78" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_122.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People77" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_123.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People76" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_124.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People75" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_125.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People74" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_126.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People73" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_127.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People72" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_128.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People71" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_129.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People70" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_130.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People69" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_131.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People68" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_132.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People67" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_133.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People66" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_134.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People65" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_135.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People64" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_136.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People63" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_137.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People62" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_138.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People61" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_139.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People60" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_140.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People59" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_141.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People58" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_142.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People57" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_143.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People56" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_144.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People55" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_145.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People54" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_146.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People53" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_147.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People52" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_148.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People51" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_149.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People50" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_150.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People49" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_151.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People48" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_152.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People47" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_153.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People46" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_154.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People45" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_155.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People44" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_156.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People43" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_157.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People42" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_158.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People41" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_159.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People40" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_160.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People39" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_161.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People38" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_162.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People37" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_163.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People36" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_164.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People35" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_165.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People34" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_166.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People33" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_167.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People32" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_168.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People31" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_169.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People30" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_170.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People29" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_171.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People28" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_172.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People27" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_173.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People26" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_174.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People25" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_175.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People24" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_176.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People23" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_177.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People22" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_178.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People21" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_179.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People20" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_180.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People19" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_181.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People18" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_182.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People17" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_183.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People16" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_184.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People15" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_185.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People14" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_186.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People13" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_187.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People12" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_188.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People11" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_189.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People10" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_190.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People9" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_191.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People8" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_192.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People7" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_193.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People6" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_194.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People5" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_195.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People4" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_196.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People3" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_197.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People2" media-type="application/xhtml+xml"/>
+    <item href="Carnegie, Dale - How To Win Friends and Influence People_split_198.htm" id="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People1" media-type="application/xhtml+xml"/>
+    <item href="stylesheet.css" id="css" media-type="text/css"/>
+    <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
+    <item href="~Cover02.jpg" id="RW_~Cover02" media-type="image/jpeg"/>
+    <item href="toc.ncx" media-type="application/x-dtbncx+xml" id="ncx"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="titlepage"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People199"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People198"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People197"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People196"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People195"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People194"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People193"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People192"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People191"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People190"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People189"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People188"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People187"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People186"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People185"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People184"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People183"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People182"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People181"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People180"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People179"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People178"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People177"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People176"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People175"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People174"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People173"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People172"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People171"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People170"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People169"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People168"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People167"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People166"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People165"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People164"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People163"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People162"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People161"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People160"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People159"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People158"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People157"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People156"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People155"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People154"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People153"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People152"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People151"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People150"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People149"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People148"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People147"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People146"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People145"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People144"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People143"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People142"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People141"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People140"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People139"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People138"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People137"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People136"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People135"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People134"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People133"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People132"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People131"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People130"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People129"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People128"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People127"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People126"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People125"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People124"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People123"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People122"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People121"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People120"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People119"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People118"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People117"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People116"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People115"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People114"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People113"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People112"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People111"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People110"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People109"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People108"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People107"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People106"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People105"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People104"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People103"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People102"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People101"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People100"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People99"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People98"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People97"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People96"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People95"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People94"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People93"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People92"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People91"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People90"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People89"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People88"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People87"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People86"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People85"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People84"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People83"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People82"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People81"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People80"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People79"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People78"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People77"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People76"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People75"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People74"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People73"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People72"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People71"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People70"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People69"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People68"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People67"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People66"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People65"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People64"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People63"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People62"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People61"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People60"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People59"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People58"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People57"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People56"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People55"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People54"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People53"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People52"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People51"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People50"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People49"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People48"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People47"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People46"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People45"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People44"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People43"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People42"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People41"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People40"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People39"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People38"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People37"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People36"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People35"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People34"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People33"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People32"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People31"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People30"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People29"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People28"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People27"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People26"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People25"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People24"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People23"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People22"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People21"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People20"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People19"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People18"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People17"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People16"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People15"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People14"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People13"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People12"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People11"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People10"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People9"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People8"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People7"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People6"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People5"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People4"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People3"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People2"/>
+    <itemref idref="Carnegie,_Dale_-_How_To_Win_Friends_and_Influence_People1"/>
+  </spine>
+  <guide>
+    <reference href="titlepage.xhtml" type="cover"/>
+  </guide>
+</package>

@@ -11,11 +11,11 @@ Prefab: https://clearly.booth.pm/items/3258223
 
 			  Introduction
 
-Andrea is a virtual reality reader.
+Andrea is a virtual reality readering device.
 
 Enables reading large amounts of text in VRChat.
 
-Examples include:
+Text examples include:
 
 	1) Books.
 	2) Stories.
@@ -44,6 +44,6 @@ Follow the tutorial below to get started:
 
 YouTube Tutorial: ??????
 
-Connect on Discord for any questions.
+Contact on Discord for any questions.
 
 ----------------------------------------

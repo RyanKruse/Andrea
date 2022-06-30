@@ -1,0 +1,76 @@
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0" xml:lang="en">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+<dc:title>Deep Work</dc:title>
+<dc:creator id="creator01">Cal Newport</dc:creator>
+<meta property="role" refines="#creator01" scheme="marc:relators">aut</meta>
+<meta property="file-as" refines="#creator01">NEWPORT, CAL</meta>
+<meta property="display-seq" refines="#creator01">1</meta>
+<dc:publisher>Grand Central Publishing</dc:publisher>
+<dc:rights>Copyright © 2016 by Cal Newport</dc:rights>
+<dc:date>2016-01-05</dc:date>
+<dc:subject>Business &amp; Economics / Time Management</dc:subject>
+<dc:description>&lt;p&gt;&lt;b&gt;An Amazon Best Book of January 2016 in Business &amp; Leadership Pick&lt;/b&gt;&lt;p&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;p&gt;&lt;b&gt;One of the most valuable skills in our economy is becoming increasingly rare. If you master this skill, you'll achieve extraordinary results.&lt;/b&gt;&lt;p&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;p&gt;Deep work is the ability to focus without distraction on a cognitively demanding task. It's a skill that allows you to quickly master complicated information and produce better results in less time. Deep work will make you better at what you do and provide the sense of true fulfillment that comes from craftsmanship. In short, deep work is like a super power in our increasingly competitive twenty-first century economy. And yet, most people have lost the ability to go deep-spending their days instead in a frantic blur of e-mail and social media, not even realizing there's a better way.&lt;p&gt;&lt;br&gt;&lt;p&gt;In DEEP WORK, author and professor Cal Newport flips the narrative on impact in a connected age. Instead of arguing distraction is bad, he...</dc:description>
+<dc:identifier id="pub-id">9781455586660</dc:identifier>
+<meta property="dcterms:modified">2015-10-31T11:30:15Z</meta>
+<dc:language>en</dc:language>
+<meta content="cover-image" name="cover"/>
+</metadata>
+<manifest>
+<item href="cover.xhtml" id="cover" media-type="application/xhtml+xml"/>
+<item href="images/9781455586660.jpg" id="cover-image" media-type="image/jpeg" properties="cover-image"/>
+<item href="images/9781455586660_c.jpg" id="welcome-image" media-type="image/jpeg"/>
+<item href="welcome.xhtml" id="welcome" media-type="application/xhtml+xml"/>
+<item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
+<item href="css/stylesheet.css" id="style" media-type="text/css"/>
+<item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+<item href="newsletterSignup.xhtml" id="newsletterSignup" media-type="application/xhtml+xml"/>
+<item href="copyright.xhtml" id="copyright" media-type="application/xhtml+xml"/>
+<item href="toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+<item href="images/Art_tit.jpg" id="aArt_tit" media-type="image/jpeg"/>
+<item href="images/Art_sborn.jpg" id="aArt_sborn" media-type="image/jpeg"/>
+<item href="images/Art_tick.jpg" id="aArt_tick" media-type="image/jpeg"/>
+<item href="ad-card.xhtml" id="ad-card" media-type="application/xhtml+xml"/>
+<item href="preface002.xhtml" id="preface002" media-type="application/xhtml+xml"/>
+<item href="part001.xhtml" id="part001" media-type="application/xhtml+xml"/>
+<item href="chapter001.xhtml" id="chapter001" media-type="application/xhtml+xml"/>
+<item href="chapter002.xhtml" id="chapter002" media-type="application/xhtml+xml"/>
+<item href="chapter003.xhtml" id="chapter003" media-type="application/xhtml+xml"/>
+<item href="part002.xhtml" id="part002" media-type="application/xhtml+xml"/>
+<item href="chapter004.xhtml" id="chapter004" media-type="application/xhtml+xml"/>
+<item href="chapter005.xhtml" id="chapter005" media-type="application/xhtml+xml"/>
+<item href="chapter006.xhtml" id="chapter006" media-type="application/xhtml+xml"/>
+<item href="chapter007.xhtml" id="chapter007" media-type="application/xhtml+xml"/>
+<item href="appendix001.xhtml" id="appendix001" media-type="application/xhtml+xml"/>
+<item href="endnotes.xhtml" id="endnotes" media-type="application/xhtml+xml"/>
+<item href="footnotes.xhtml" id="footnotes" media-type="application/xhtml+xml"/>
+</manifest>
+<spine page-progression-direction="ltr" toc="ncx">
+<itemref idref="cover" linear="no"/>
+<itemref idref="titlepage" linear="yes"/>
+<itemref idref="welcome" linear="yes"/>
+<itemref idref="preface002" linear="yes"/>
+<itemref idref="part001" linear="yes"/>
+<itemref idref="chapter001" linear="yes"/>
+<itemref idref="chapter002" linear="yes"/>
+<itemref idref="chapter003" linear="yes"/>
+<itemref idref="part002" linear="yes"/>
+<itemref idref="chapter004" linear="yes"/>
+<itemref idref="chapter005" linear="yes"/>
+<itemref idref="chapter006" linear="yes"/>
+<itemref idref="chapter007" linear="yes"/>
+<itemref idref="appendix001" linear="yes"/>
+<itemref idref="ad-card" linear="yes"/>
+<itemref idref="endnotes" linear="yes"/>
+<itemref idref="footnotes" linear="yes"/>
+<itemref idref="newsletterSignup" linear="yes"/>
+<itemref idref="toc" linear="yes"/>
+<itemref idref="copyright" linear="yes"/>
+</spine>
+<guide>
+<reference href="copyright.xhtml" title="Copyright" type="copyright"/>
+<reference href="welcome.xhtml" title="Begin Reading" type="other.ms-firstpage"/>
+<reference href="welcome.xhtml" title="Begin Reading" type="text"/>
+<reference href="toc.xhtml" title="Table of Contents" type="toc"/>
+<reference href="cover.xhtml" title="Cover Image" type="cover"/>
+</guide>
+</package>

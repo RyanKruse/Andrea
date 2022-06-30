@@ -1,0 +1,796 @@
+@font-face{
+	font-family:"Free Sans";
+	font-style:normal;
+	font-weight:normal;
+	src:url("../font/FreeSans.otf");
+}
+@font-face{
+	font-family:"Free Sans";
+	font-style:normal;
+	font-weight:bold;
+	src:url("../font/FreeSansBold.otf");
+}
+@font-face{
+	font-family:"Free Sans";
+	font-style:italic;
+	font-weight:bold;
+	src:url("../font/FreeSansBoldOblique.otf");
+}
+@font-face{
+	font-family:"Free Sans";
+	font-style:italic;
+	font-weight:normal;
+	src:url("../font/FreeSansOblique.otf");
+}
+body, div, h1, h2, h3, h4, h5, h6, p {
+	widows: 2;
+	orphans: 2;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-style: normal;
+	text-align: left;
+	page-break-after: avoid;
+}
+i {
+	font-style: italic;
+}
+b {
+	font-weight: bold;
+}
+ol,ul{
+	margin: 0;
+	padding: 0 0 0 1.75em;
+	border: 0;
+	outline: 0;
+}
+li{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+table {
+	width: 100%;
+	margin: 1em 0;
+}
+img, div {
+	padding: 0;
+	margin: 0;
+}
+figure {
+	display: block;
+	padding: 0;
+	margin: 1em 0;
+	page-break-inside: avoid;
+}
+figcaption {
+	display: block;
+	padding: 0;
+	margin: 0;
+	page-break-inside: avoid;
+}
+div.h100 {
+	text-align: center;
+	height: 100%;
+	max-width: 100%;
+	clear: both;
+}
+img.h100 {
+	height: 100%;
+	max-width: 100%;
+}
+div.w100 {
+	text-align: center;
+	max-height: 100%;
+	width: 100%;
+	clear: both;
+}
+img.w100 {
+	max-height: 100%;
+	width: 100%;
+}
+img.h1em {
+	height: 1em;
+}
+img.h2em {
+	height: 2em;
+}
+img.h4em {
+	height: 4em;
+}
+div.footnote {
+	margin-top: 15%;
+}
+hr.transition{
+	display: block;
+	border: none;
+	margin: 0;
+}
+div.w30c {
+	text-align: center;
+	max-height: 100%;
+	margin: 0 35%;
+	clear: both;
+}
+div.w60c {
+	text-align: center;
+	max-height: 100%;
+	margin: 0 20%;
+	clear: both;
+}
+div.w80c {
+	text-align: center;
+	max-height: 100%;
+	margin: 0 10%;
+	clear: both;
+}
+div.table {
+	border: 1px solid #747678;
+	padding: 0 0 .25em 0;
+	margin: 1em 0;
+}
+table.NoBorder {
+	border-collapse:collapse;
+}
+table.Table-Style-1 {
+	border-collapse:collapse;
+}
+td.Head-cell {
+	background-color:#747678;
+	border-bottom: 1px solid #ffffff;
+	border-left: 1px solid #ffffff;
+	border-right: 1px solid #ffffff;
+	border-top: 1px solid #747678;
+	vertical-align:middle;
+padding: 4px;
+}
+td.NoBorder {
+padding: 4px;
+}
+td.Text-Cell {
+	border: 1px solid #747678;
+padding: 4px;
+}
+p.x01-FM-Contents-BM-Head {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.75em;
+	margin: 0 0 0 2.33em;
+	text-indent:0;
+}
+p.x01-FM-Contents-CN {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.75em;
+	margin: 0.89em 0 0 2.11em;
+	text-indent:-2.11em;
+}
+p.x01-FM-Contents-CN-Last {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.75em;
+	margin: 3.89em 0 0 2.11em;
+	text-indent:-2.11em;
+}
+p.x01-FM-Contents-PT {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.833em;
+	margin: 3.5em 0 0.5em 0;
+	text-align:center;
+	text-indent:0;
+}
+p.x01-FM-Copyright-Permissions {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.583em;
+	margin: 1.29em 0 0 0;
+	text-align:center;
+	text-indent:0;
+}
+p.x01-FM-Copyright-Text {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.583em;
+	margin: 0;
+	text-align:center;
+	text-indent:0;
+}
+p.x01-FM-Copyright-Text-Space {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.583em;
+	margin: 1.29em 0 0 0;
+	text-align:center;
+	text-indent:0;
+}
+/*May want to look at the style below*/
+h1.x01-FM-Head {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:1.5em;
+	margin: 15% 0 10% 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+h1.x02-Part-Subtitle {
+	color:#6d6e70;
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:1.583em;
+	margin: 0 0 0.89em 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+h1.x02-Part-Title {
+	color:#6d6e70;
+	font-family:"Gotham Bold", "Helvetica", sans-serif;
+	font-weight:bold;
+	font-size:2em;
+	margin: 20% 0 1.4em 0;
+	text-align:center;
+	text-indent:0;
+}
+/*May want to look at the style below*/
+p.x03-CO-Body-Text {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	margin: 10% 0 0 0;
+	text-indent:0;
+}
+h2.x03-Chapter-Number {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:1.5em;
+	margin: .2em 0 0.5em 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+h2.x03-Chapter-Subtitle {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:1.167em;
+	margin: 0.71em 0 1.21em 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+h2.x03-Chapter-Title {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:1.5em;
+	margin: 0.89em 0 0.94em 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+h2.x03-Chapter-Title-BRK {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:1.5em;
+	margin: .2em 0 0.94em 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+h2.x03-Chapter-Title-BRK1 {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:1.5em;
+	margin: 15% 0 0.94em 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+p.x04-Body-Text {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	margin: 0;
+	text-indent:1.24em;
+}
+p.x04-Body-Text-FL {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	margin: 0;
+	text-indent:0;
+}
+h3.x05-Head-A {
+	font-family:"Gotham Bold", "Helvetica", sans-serif;
+	font-weight:bold;
+	font-size:0.917em;
+	margin: 2.27em 0 0.73em 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+h3.x05-Head-A-2 {
+	font-family:"Gotham Bold", "Helvetica", sans-serif;
+	font-weight:bold;
+	font-size:0.917em;
+	margin: 2.27em 18% 0.73em 18%;
+	page-break-after:avoid;
+	text-indent:0;
+}
+h4.x05-Head-B {
+	font-family:"Gotham Medium", "Helvetica", sans-serif;
+	font-size:0.917em;
+	margin: 2.27em 0 0.73em 0;
+	page-break-after:avoid;
+	text-indent:0;
+}
+p.x05-Subhead-A {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.75em;
+	margin: 0 0 0.25em 0;
+	text-align:center;
+	text-indent:0;
+}
+p.x06-Chapter-Summary-Head {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:1em;
+	margin: 2.08em 0 0.67em 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+	border-top: solid 2px #747678;
+	padding: .5em 0 0 0;
+}
+p.x06-Cue {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	margin: 1.07em 0 0 0;
+	text-indent:0;
+}
+p.x06-Extract-1P {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.917em;
+	margin: 1.54em 2em;
+	text-align:center;
+	text-indent:0;
+}
+p.x06-Extract-First {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.917em;
+	margin: 1.54em 2em 0 2em;
+	text-align:center;
+	text-indent:0;
+}
+p.x06-Extract-Last {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.917em;
+	margin: 0 2em 1.54em 2em;
+	text-align:center;
+	text-indent:0;
+}
+p.x06-Verse {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	font-style:italic;
+	margin: 0;
+	text-align:center;
+	text-indent:0;
+}
+p.x06-Verse-First {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	font-style:italic;
+	margin: 1.51em 0 0 0;
+	text-align:center;
+	text-indent:0;
+}
+p.x06-Verse-Source {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	margin: 1.51em 0;
+	text-align:center;
+	text-indent:0;
+}
+li.x07-List-Bulleted {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	list-style-type:square;
+	margin: 0 0 0 0.18em;
+	text-indent:0;
+}
+p.x07-List-Bulleted {
+	font-size:1em;
+	margin:0;
+}
+li.x07-List-Bulleted-First {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	list-style-type:square;
+	margin: 1.51em 0 0 0.18em;
+	text-indent:0;
+}
+p.x07-List-Bulleted-First {
+	font-size:1em;
+	margin:0;
+}
+li.x07-List-Bulleted-Last {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	list-style-type:square;
+	margin: 0 0 1.51em 0.18em;
+	text-indent:0;
+}
+p.x07-List-Bulleted-Last {
+	font-size:1em;
+	margin:0;
+}
+li.x07-List-Numbered {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	list-style-type:decimal;
+	margin: 0 0 0 0.8em;
+	text-indent:0;
+}
+p.x07-List-Numbered {
+	font-size:1em;
+	margin:0;
+}
+li.x07-List-Numbered-First {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	list-style-type:decimal;
+	margin: 1.51em 0 0 0.8em;
+	text-indent:0;
+}
+p.x07-List-Numbered-First {
+	font-size:1em;
+	margin:0;
+}
+li.x07-List-Numbered-Last {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	list-style-type:decimal;
+	margin: 0 0 1.51em 0.8em;
+	text-indent:0;
+}
+p.x07-List-Numbered-Last {
+	font-size:1em;
+	margin:0;
+}
+p.x07-List-Unnumbered-Para {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	margin: 1.51em 1.07em 0 1.07em;
+	text-indent:0;
+}
+p.x07-List-Unnumbered-Para-First {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	margin: 1.51em 1.07em 0 1.07em;
+	text-indent:0;
+}
+p.x07-List-Unnumbered-Para-Last {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	margin: 1.51em 1.07em;
+	text-indent:0;
+}
+p.x08-Table-Body {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.75em;
+	margin: .2em .25em;
+	text-indent:0;
+}
+p.x08-Table-Body-Last {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.75em;
+	margin: .2em .25em 1.5em .25em;
+	text-indent:0;
+}
+p.x08-Table-Body-FR {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.75em;
+	margin: 0;
+	text-align:right;
+	text-indent:0;
+}
+p.x08-Table-Body-Hang-Small {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.75em;
+	margin: .2em .25em .2em 2.25em;
+	text-indent:-2em;
+}
+p.x08-Table-Caption {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.85em;
+	font-style:italic;
+	margin: 1.33em 0 0 0;
+	text-align:center;
+	text-indent:1.56em;
+}
+p.x08-Table-Column-Head {
+	color:#ffffff;
+	font-family:"Gotham Bold", "Helvetica", sans-serif;
+	font-weight:bold;
+	font-size:0.85em;
+	margin: 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+p.x08-Table-Column-Head-2 {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.85em;
+	margin: 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+p.x08-Table-Column-Head-3 {
+	background-color:#747678;
+	color:#ffffff;
+	font-family:"Gotham Bold", "Helvetica", sans-serif;
+	font-weight:bold;
+	font-size:0.85em;
+	margin: .5em 0 .25em 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+	padding: .35em;
+}
+p.x08-Table-Column-Head-3-First {
+	background-color:#747678;
+	color:#ffffff;
+	font-family:"Gotham Bold", "Helvetica", sans-serif;
+	font-weight:bold;
+	font-size:0.85em;
+	margin: 0 0 .25em 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+	padding: .35em;
+}
+p.x08-Table-Column-Head-Left {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	font-weight:bold;
+	margin: 0;
+	text-indent:0;
+}
+p.x08-Table-Column-Head-Right {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	font-weight:bold;
+	margin: 0;
+	text-align:right;
+	text-indent:0;
+}
+p.x08-Table-Hang {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.75em;
+	margin: .2em .25em .2em 3.25em;
+	text-indent:-3em;
+}
+p.x08-Table-Hang-Last {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.75em;
+	margin: .2em .25em .2em 3.25em;
+	text-indent:-3em;
+}
+p.x08-Table-Title {
+	font-family:"Gotham Bold", "Helvetica", sans-serif;
+	font-weight:bold;
+	font-size:0.833em;
+	margin: 1.5em 0 .35em 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+p.x12-Caption {
+	font-family:"Gotham Light", "Helvetica", sans-serif;
+	font-size:0.75em;
+	margin: 1.75em 4em 2.12em 4em;
+	text-indent:0;
+}
+p.x13-BM-Ack {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	margin: 0;
+	text-indent:1.24em;
+}
+/*May want to look at the style below*/
+p.x13-BM-Ack-FL {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	margin: 10% 0 0 0;
+	text-indent:0;
+}
+h1.x13-BM-Ack-Head {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:1.5em;
+	margin: 15% 0 0.94em 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+p.x13-BM-Endnote-Subpara {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.75em;
+	margin: 0 0 0 2.89em;
+	text-indent:0;
+}
+p.x13-BM-Endnotes {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.75em;
+	margin: 0 0 0 2.89em;
+	text-indent:-2.89em;
+}
+p.x13-BM-Endnotes-Head-A {
+	font-family:"Gotham Bold", "Helvetica", sans-serif;
+	font-weight:bold;
+	font-size:0.75em;
+	margin: 1.44em 0 0.67em 0;
+	text-align:center;
+	text-indent:0;
+}
+h1.x13-BM-Head {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:1.5em;
+	margin: 15% 0 10% 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+p.x13-BM-Index-1 {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.75em;
+	margin: 0 0 0 2.67em;
+	text-indent:-2.67em;
+}
+p.x13-BM-Index-2 {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.75em;
+	margin: 0 0 0 2.67em;
+	text-indent:-1.78em;
+}
+p.x13-BM-Index-3 {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.75em;
+	margin: 0 0 0 2.67em;
+	text-indent:-0.89em;
+}
+p.x13-BM-Index-Alpha {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.75em;
+	margin: 2.44em 0 0 2.67em;
+	text-indent:-2.67em;
+}
+/*May want to look at the style below*/
+li.x14-Free-Style-1 {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.833em;
+	list-style-type:decimal;
+	margin: 0.6em 10% 0 8.5%;
+	text-indent:0;
+}
+p.x14-Free-Style-1 {
+	font-size:1em;
+	margin:0;
+}
+/*May want to look at the style below*/
+p.x14-Free-Style-2 {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:0.833em;
+	margin: 0.6em 10% 0 10%;
+	text-indent:-0;
+}
+/*May want to look at the style below*/
+p.x14-Free-Style-3 {
+	font-family:"Gotham Bold", "Helvetica", sans-serif;
+	font-size:0.833em;
+	font-weight:bold;
+	margin: 1.5em 10% 1.25em 10%;
+	text-indent:-0;
+	border-bottom: dotted #747678 2px;
+	padding: 0 0 .2em 0;
+}
+/*May want to look at the style below*/
+p.x14-Free-Style-3-First {
+	font-family:"Gotham Bold", "Helvetica", sans-serif;
+	font-size:0.833em;
+	font-weight:bold;
+	margin: 15% 10% 1.25em 10%;
+	text-indent:-0;
+	border-bottom: dotted #747678 2px;
+	padding: 0 0 .2em 0;
+}
+p.x14-Freestyle-Download {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.938em;
+	margin: 1.51em 0 0 0;
+	text-align:center;
+	text-indent:0;
+}
+p.xFootnote-Text {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:1em;
+	margin: 0;
+	text-indent:0;
+}
+span._3-BM-Endnote-Key-Phrase {
+	font-weight:bold;
+}
+span._3-BM-Endnote-Key-Phrase-ITAL {
+	font-style:italic;
+	font-weight:bold;
+}
+span.BOLD_ITAL {
+	font-style:italic;
+	font-weight:bold;
+}
+span.FR {
+	float:right;
+}
+span.FreeFont {
+	font-family:"Free Sans", "Helvetica", sans-serif;
+}
+span.PT {
+	font-size:.85em;
+}
+span.RunIn {
+	font-size:70%;
+}
+span.SCAP {
+	font-size: 70%;
+}
+span.SUP {
+	vertical-align:super;
+	font-size: 65%;
+	line-height:0;
+}
+p.x03-CO-Body-Text::first-letter{
+	font-size:2.6em;
+	font-weight:bold;
+	line-height:0.85;
+	float:left;
+	margin:0 0.05em 0 0;
+	font-family:"Gotham Bold", "Helvetica", sans-serif;
+}
+p.x13-BM-Ack-FL::first-letter{
+	font-size:2.6em;
+	line-height:0.85;
+	font-weight:bold;
+	float:left;
+	margin:0 0.05em 0 0;
+	font-family:"Gotham Bold", "Helvetica", sans-serif;
+}
+
+h1.x13-BM-About-Au-Head {
+	font-family:"Gotham Book", "Helvetica", sans-serif;
+	font-size:1.5em;
+	margin: 15% 0 10% 0;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+p.x13-BM-About-Au {
+	font-family: "Minion Pro", "Georgia", serif;
+	font-size: 0.938em;
+	margin: 1.5em 0 0 0;
+	text-indent: 0em;
+}
+
+p.x13-BM-Index-Note {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:0.75em;
+	margin: 0 0 1em 0;
+	text-indent:0;
+}
+
+
+/* ----- NAV BARS ----- */
+
+div.x13-BM-Index-Nav-Bar {
+	margin:1em 0;
+	page-break-inside:avoid;
+	border-bottom: 2px solid #999999;
+	border-top: 2px solid #999999;
+	width:100%;
+}
+p.x13-BM-Index-Nav-Bar {
+	font-family:"Minion Pro", "Georgia", serif;
+	font-size:1em;
+	margin:.1em;
+	padding:.4em;
+	line-height:1.5em;
+	text-align:center;
+}
+span.x13-BM-Index-Nav-Bar-Letter {
+	text-align:center;
+	padding:0 .15em;
+	color:#999999;
+}

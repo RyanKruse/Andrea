@@ -1,0 +1,234 @@
+<package xmlns="http://www.idpf.org/2007/opf" prefix="schema: http://schema.org/ rendition: http://www.idpf.org/vocab/rendition/# ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" unique-identifier="EbookISBN" version="3.0" xml:lang="en-US">
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+		<dc:title id="title">Atomic Habits: Tiny Changes, Remarkable Results</dc:title>
+		<meta property="title-type" refines="#title">main</meta>
+		<meta property="display-seq" refines="#title">1</meta>
+		<dc:title id="subtitle">An Easy &amp; Proven Way to Build Good Habits &amp; Break Bad Ones</dc:title>
+		<meta property="title-type" refines="#subtitle">subtitle</meta>
+		<meta property="display-seq" refines="#subtitle">2</meta>
+		<meta content="Avery" name="imprint"/>
+		<dc:creator id="creator1">James Clear</dc:creator>
+		<meta property="display-seq" refines="#creator1">1</meta>
+		<meta property="role" refines="#creator1" scheme="marc:relators">aut</meta>
+		<meta property="file-as" refines="#creator1">Clear, James</meta>
+		<dc:publisher>Penguin Publishing Group</dc:publisher>
+		<dc:language>en-US</dc:language>
+		<meta property="dcterms:modified">2018-09-28T11:55:25Z</meta>
+		<dc:date>2018-10-16</dc:date>
+		<dc:source id="SourceISBN">9780735211292</dc:source>
+		<meta content="Adobe InDesign 12.1 unZip_INDD_ePub.app 1.6" name="generator"/>
+		<meta content="2018-09-18T00:00:00Z" name="created"/>
+		<meta content="cover.jpg" name="cover"/>
+		<meta property="ibooks:specified-fonts">true</meta>
+		<dc:identifier id="EbookISBN">9780735211308</dc:identifier>
+		<dc:rights>Copyright © 2018 by James Clear</dc:rights>
+		<meta property="schema:accessMode">textual</meta>
+		<meta property="schema:accessMode">visual</meta>
+		<meta property="schema:accessModeSufficient">textual,visual</meta>
+		<meta property="schema:accessibilityFeature">displayTransformability</meta>
+		<meta property="schema:accessibilityFeature">tableOfContents</meta>
+		<meta property="schema:accessibilityFeature">bookmarks</meta>
+		<meta property="schema:accessibilityHazard">none</meta>
+		<meta property="schema:accessibilitySummary">Accessibility metadata derived programmatically based on file type.</meta>
+	<description xmlns="http://purl.org/dc/elements/1.1/">&lt;b&gt;&lt;b&gt;&lt;i&gt;Tiny Changes, Remarkable Results&lt;/i&gt;&lt;/b&gt;&lt;/b&gt;&lt;br&gt;No matter your goals, &lt;i&gt;Atomic Habits&lt;/i&gt; offers a proven framework for improving&amp;#8212;every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.&lt;br&gt;If you're having trouble changing your habits, the problem isn't you. The problem is your system. Bad habits repeat themselves again and again not because you don't want to change, but because you have the wrong system for change. You do not rise to the level of your goals. You fall to the level of your systems. Here, you'll get a proven system that can take you to new heights.&lt;br&gt;Clear is known for his ability to distill complex topics into simple behaviors that can be easily applied to daily life and work. Here, he draws on the most proven ideas from biology, psychology, and neuroscience to create...</description>
+</metadata>
+	<manifest>
+		<item href="xhtml/01_Cover.xhtml" id="cover" media-type="application/xhtml+xml"/>
+		<item href="xhtml/02_Title_Page.xhtml" id="x9780735211308_EPUB" media-type="application/xhtml+xml"/>
+		<item href="xhtml/03_Copyright.xhtml" id="x9780735211308_EPUB-1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/04_Epigraph.xhtml" id="x9780735211308_EPUB-2" media-type="application/xhtml+xml"/>
+		<item href="xhtml/05_Contents.xhtml" id="x9780735211308_EPUB-3" media-type="application/xhtml+xml"/>
+		<item href="xhtml/06_Introduction_My_Story.xhtml" id="x9780735211308_EPUB-4" media-type="application/xhtml+xml"/>
+		<item href="xhtml/07_THE_FUNDAMENTALS_Why_.xhtml" id="x9780735211308_EPUB-5" media-type="application/xhtml+xml"/>
+		<item href="xhtml/08_1_The_Surprising_Powe.xhtml" id="x9780735211308_EPUB-6" media-type="application/xhtml+xml"/>
+		<item href="xhtml/09_2_How_Your_Habits_Sha.xhtml" id="x9780735211308_EPUB-7" media-type="application/xhtml+xml"/>
+		<item href="xhtml/10_3_How_to_Build_Better.xhtml" id="x9780735211308_EPUB-8" media-type="application/xhtml+xml"/>
+		<item href="xhtml/11_THE_1ST_LAW_Make_It_O.xhtml" id="x9780735211308_EPUB-9" media-type="application/xhtml+xml"/>
+		<item href="xhtml/12_4_The_Man_Who_Didn_t_.xhtml" id="x9780735211308_EPUB-10" media-type="application/xhtml+xml"/>
+		<item href="xhtml/13_5_The_Best_Way_to_Sta.xhtml" id="x9780735211308_EPUB-11" media-type="application/xhtml+xml"/>
+		<item href="xhtml/14_6_Motivation_Is_Overr.xhtml" id="x9780735211308_EPUB-12" media-type="application/xhtml+xml"/>
+		<item href="xhtml/15_7_The_Secret_to_Self-.xhtml" id="x9780735211308_EPUB-13" media-type="application/xhtml+xml"/>
+		<item href="xhtml/16_THE_2ND_LAW_Make_It_A.xhtml" id="x9780735211308_EPUB-14" media-type="application/xhtml+xml"/>
+		<item href="xhtml/17_8_How_to_Make_a_Habit.xhtml" id="x9780735211308_EPUB-15" media-type="application/xhtml+xml"/>
+		<item href="xhtml/18_9_The_Role_of_Family_.xhtml" id="x9780735211308_EPUB-16" media-type="application/xhtml+xml"/>
+		<item href="xhtml/19_10_How_to_Find_and_Fi.xhtml" id="x9780735211308_EPUB-17" media-type="application/xhtml+xml"/>
+		<item href="xhtml/20_THE_3RD_LAW_Make_It_E.xhtml" id="x9780735211308_EPUB-18" media-type="application/xhtml+xml"/>
+		<item href="xhtml/21_11_Walk_Slowly_but_Ne.xhtml" id="x9780735211308_EPUB-19" media-type="application/xhtml+xml"/>
+		<item href="xhtml/22_12_The_Law_of_Least_E.xhtml" id="x9780735211308_EPUB-20" media-type="application/xhtml+xml"/>
+		<item href="xhtml/23_13_How_to_Stop_Procra.xhtml" id="x9780735211308_EPUB-21" media-type="application/xhtml+xml"/>
+		<item href="xhtml/24_14_How_to_Make_Good_H.xhtml" id="x9780735211308_EPUB-22" media-type="application/xhtml+xml"/>
+		<item href="xhtml/25_THE_4TH_LAW_Make_It_S.xhtml" id="x9780735211308_EPUB-23" media-type="application/xhtml+xml"/>
+		<item href="xhtml/26_15_The_Cardinal_Rule_.xhtml" id="x9780735211308_EPUB-24" media-type="application/xhtml+xml"/>
+		<item href="xhtml/27_16_How_to_Stick_with_.xhtml" id="x9780735211308_EPUB-25" media-type="application/xhtml+xml"/>
+		<item href="xhtml/28_17_How_an_Accountabil.xhtml" id="x9780735211308_EPUB-26" media-type="application/xhtml+xml"/>
+		<item href="xhtml/29_ADVANCED_TACTICS_How_.xhtml" id="x9780735211308_EPUB-27" media-type="application/xhtml+xml"/>
+		<item href="xhtml/30_18_The_Truth_About_Ta.xhtml" id="x9780735211308_EPUB-28" media-type="application/xhtml+xml"/>
+		<item href="xhtml/31_19_The_Goldilocks_Rul.xhtml" id="x9780735211308_EPUB-29" media-type="application/xhtml+xml"/>
+		<item href="xhtml/32_20_The_Downside_of_Cr.xhtml" id="x9780735211308_EPUB-30" media-type="application/xhtml+xml"/>
+		<item href="xhtml/33_Conclusion_The_Secret.xhtml" id="x9780735211308_EPUB-31" media-type="application/xhtml+xml"/>
+		<item href="xhtml/34_Appendix.xhtml" id="x9780735211308_EPUB-32" media-type="application/xhtml+xml"/>
+		<item href="xhtml/35_What_Should_You_Read_.xhtml" id="x9780735211308_EPUB-33" media-type="application/xhtml+xml"/>
+		<item href="xhtml/36_Little_Lessons_from_t.xhtml" id="x9780735211308_EPUB-34" media-type="application/xhtml+xml"/>
+		<item href="xhtml/37_How_to_Apply_These_Id.xhtml" id="x9780735211308_EPUB-35" media-type="application/xhtml+xml"/>
+		<item href="xhtml/38_How_to_Apply_These_Id.xhtml" id="x9780735211308_EPUB-36" media-type="application/xhtml+xml"/>
+		<item href="xhtml/39_Acknowledgments.xhtml" id="x9780735211308_EPUB-37" media-type="application/xhtml+xml"/>
+		<item href="xhtml/40_Notes.xhtml" id="x9780735211308_EPUB-38" media-type="application/xhtml+xml"/>
+		<item href="xhtml/41_Index.xhtml" id="x9780735211308_EPUB-39" media-type="application/xhtml+xml"/>
+		<item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+		<item href="navDoc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+		<item href="css/idGeneratedStyles.css" id="idGeneratedStyles.css" media-type="text/css"/>
+		<item href="image/001_1PercentBetterEveryDay.jpg" id="x001_1PercentBetterEveryDay.jpg" media-type="image/jpeg"/>
+		<item href="image/002_LatentPotentialvsLinearProgress.jpg" id="x002_LatentPotentialvsLinearProgress.jpg" media-type="image/jpeg"/>
+		<item href="image/003_IPOModel.jpg" id="x003_IPOModel.jpg" media-type="image/jpeg"/>
+		<item href="image/004_OutcomeBasedvsIdentityBased.jpg" id="x004_OutcomeBasedvsIdentityBased.jpg" media-type="image/jpeg"/>
+		<item href="image/004_OutcomeBasedvsIdentityBased_2.jpg" id="x004_OutcomeBasedvsIdentityBased_2.jpg" media-type="image/jpeg"/>
+		<item href="image/005_FourStages.jpg" id="x005_FourStages.jpg" media-type="image/jpeg"/>
+		<item href="image/006_HabitLoop.jpg" id="x006_HabitLoop.jpg" media-type="image/jpeg"/>
+		<item href="image/007_HabitStacking.jpg" id="x007_HabitStacking.jpg" media-type="image/jpeg"/>
+		<item href="image/0088_DopamineSpike.jpg" id="x0088_DopamineSpike.jpg" media-type="image/jpeg"/>
+		<item href="image/009_AschLines.jpg" id="x009_AschLines.jpg" media-type="image/jpeg"/>
+		<item href="image/010_HabitLine.jpg" id="x010_HabitLine.jpg" media-type="image/jpeg"/>
+		<item href="image/011_AutomaticityCurve.jpg" id="x011_AutomaticityCurve.jpg" media-type="image/jpeg"/>
+		<item href="image/013_DecisiveMomentsTree.jpg" id="x013_DecisiveMomentsTree.jpg" media-type="image/jpeg"/>
+		<item href="image/014_GoldilocksRule.jpg" id="x014_GoldilocksRule.jpg" media-type="image/jpeg"/>
+		<item href="image/015_MasteryProcess-a.jpg" id="x015_MasteryProcess-a.jpg" media-type="image/jpeg"/>
+		<item href="image/015_MasteryProcess-b.jpg" id="x015_MasteryProcess-b.jpg" media-type="image/jpeg"/>
+		<item href="image/Avery_logo.jpg" id="Avery_logo.jpg" media-type="image/jpeg"/>
+		<item href="image/cover.jpg" id="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
+		<item href="image/Fig12_071218.jpg" id="Fig12_071218.jpg" media-type="image/jpeg"/>
+		<item href="image/invalid_page_number.jpg" id="invalid_page_number.jpg" media-type="image/jpeg"/>
+		<item href="image/page_iii.jpg" id="page_iii.jpg" media-type="image/jpeg"/>
+		<item href="image/penguin-logo-for-copyright.jpg" id="penguin-logo-for-copyright.jpg" media-type="image/jpeg"/>
+		<item href="image/Revised_dots.jpg" id="Revised_dots.jpg" media-type="image/jpeg"/>
+		<item href="font/FreeSans.otf" id="FreeSans" media-type="application/vnd.ms-opentype"/>
+		<item href="font/FreeSansBold.otf" id="FreeSansBold" media-type="application/vnd.ms-opentype"/>
+		<item href="font/FreeSansBoldOblique.otf" id="FreeSansBoldOblique" media-type="application/vnd.ms-opentype"/>
+		<item href="font/FreeSansOblique.otf" id="FreeSansOblique" media-type="application/vnd.ms-opentype"/>
+		<item href="xhtml/42_Footnote.xhtml" id="x9780735211308_EPUB-4_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/43_Footnote.xhtml" id="x9780735211308_EPUB-6_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/44_Footnote.xhtml" id="x9780735211308_EPUB-6_fn2" media-type="application/xhtml+xml"/>
+		<item href="xhtml/45_Footnote.xhtml" id="x9780735211308_EPUB-7_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/46_Footnote.xhtml" id="x9780735211308_EPUB-7_fn2" media-type="application/xhtml+xml"/>
+		<item href="xhtml/47_Footnote.xhtml" id="x9780735211308_EPUB-8_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/48_Footnote.xhtml" id="x9780735211308_EPUB-8_fn2" media-type="application/xhtml+xml"/>
+		<item href="xhtml/49_Footnote.xhtml" id="x9780735211308_EPUB-10_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/50_Footnote.xhtml" id="x9780735211308_EPUB-10_fn2" media-type="application/xhtml+xml"/>
+		<item href="xhtml/51_Footnote.xhtml" id="x9780735211308_EPUB-11_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/52_Footnote.xhtml" id="x9780735211308_EPUB-11_fn2" media-type="application/xhtml+xml"/>
+		<item href="xhtml/53_Footnote.xhtml" id="x9780735211308_EPUB-11_fn3" media-type="application/xhtml+xml"/>
+		<item href="xhtml/54_Footnote.xhtml" id="x9780735211308_EPUB-15_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/55_Footnote.xhtml" id="x9780735211308_EPUB-16_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/56_Footnote.xhtml" id="x9780735211308_EPUB-17_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/57_Footnote.xhtml" id="x9780735211308_EPUB-19_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/58_Footnote.xhtml" id="x9780735211308_EPUB-20_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/59_Footnote.xhtml" id="x9780735211308_EPUB-20_fn2" media-type="application/xhtml+xml"/>
+		<item href="xhtml/60_Footnote.xhtml" id="x9780735211308_EPUB-21_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/61_Footnote.xhtml" id="x9780735211308_EPUB-21_fn2" media-type="application/xhtml+xml"/>
+		<item href="xhtml/62_Footnote.xhtml" id="x9780735211308_EPUB-22_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/63_Footnote.xhtml" id="x9780735211308_EPUB-22_fn2" media-type="application/xhtml+xml"/>
+		<item href="xhtml/64_Footnote.xhtml" id="x9780735211308_EPUB-24_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/65_Footnote.xhtml" id="x9780735211308_EPUB-24_fn2" media-type="application/xhtml+xml"/>
+		<item href="xhtml/66_Footnote.xhtml" id="x9780735211308_EPUB-24_fn3" media-type="application/xhtml+xml"/>
+		<item href="xhtml/67_Footnote.xhtml" id="x9780735211308_EPUB-25_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/68_Footnote.xhtml" id="x9780735211308_EPUB-26_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/69_Footnote.xhtml" id="x9780735211308_EPUB-28_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/70_Footnote.xhtml" id="x9780735211308_EPUB-28_fn2" media-type="application/xhtml+xml"/>
+		<item href="xhtml/71_Footnote.xhtml" id="x9780735211308_EPUB-29_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/72_Footnote.xhtml" id="x9780735211308_EPUB-29_fn2" media-type="application/xhtml+xml"/>
+		<item href="xhtml/73_Footnote.xhtml" id="x9780735211308_EPUB-30_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/74_Footnote.xhtml" id="x9780735211308_EPUB-30_fn2" media-type="application/xhtml+xml"/>
+		<item href="xhtml/75_Footnote.xhtml" id="x9780735211308_EPUB-30_fn3" media-type="application/xhtml+xml"/>
+		<item href="xhtml/76_Footnote.xhtml" id="x9780735211308_EPUB-31_fn1" media-type="application/xhtml+xml"/>
+		<item href="xhtml/77_About_the_Author.xhtml" id="x77_About_the_Author.xhtml" media-type="application/xhtml+xml"/>
+		<item href="font/Shift-BoldItalic.otf" id="Shift-BoldItalic.otf" media-type="application/vnd.ms-opentype"/>
+		<item href="font/Shift-Light.otf" id="Shift-Light.otf" media-type="application/vnd.ms-opentype"/>
+		<item href="xhtml/78_next-reads.xhtml" id="next-reads.xhtml" media-type="application/xhtml+xml"/>
+		<item href="image/next-reads_logo.jpg" id="next-reads_logo.jpg" media-type="image/jpeg"/>
+	</manifest>
+	<spine toc="ncx">
+		<itemref idref="cover"/>
+		<itemref idref="x9780735211308_EPUB"/>
+		<itemref idref="x9780735211308_EPUB-1"/>
+		<itemref idref="x9780735211308_EPUB-2"/>
+		<itemref idref="x9780735211308_EPUB-3"/>
+		<itemref idref="x9780735211308_EPUB-4"/>
+		<itemref idref="x9780735211308_EPUB-5"/>
+		<itemref idref="x9780735211308_EPUB-6"/>
+		<itemref idref="x9780735211308_EPUB-7"/>
+		<itemref idref="x9780735211308_EPUB-8"/>
+		<itemref idref="x9780735211308_EPUB-9"/>
+		<itemref idref="x9780735211308_EPUB-10"/>
+		<itemref idref="x9780735211308_EPUB-11"/>
+		<itemref idref="x9780735211308_EPUB-12"/>
+		<itemref idref="x9780735211308_EPUB-13"/>
+		<itemref idref="x9780735211308_EPUB-14"/>
+		<itemref idref="x9780735211308_EPUB-15"/>
+		<itemref idref="x9780735211308_EPUB-16"/>
+		<itemref idref="x9780735211308_EPUB-17"/>
+		<itemref idref="x9780735211308_EPUB-18"/>
+		<itemref idref="x9780735211308_EPUB-19"/>
+		<itemref idref="x9780735211308_EPUB-20"/>
+		<itemref idref="x9780735211308_EPUB-21"/>
+		<itemref idref="x9780735211308_EPUB-22"/>
+		<itemref idref="x9780735211308_EPUB-23"/>
+		<itemref idref="x9780735211308_EPUB-24"/>
+		<itemref idref="x9780735211308_EPUB-25"/>
+		<itemref idref="x9780735211308_EPUB-26"/>
+		<itemref idref="x9780735211308_EPUB-27"/>
+		<itemref idref="x9780735211308_EPUB-28"/>
+		<itemref idref="x9780735211308_EPUB-29"/>
+		<itemref idref="x9780735211308_EPUB-30"/>
+		<itemref idref="x9780735211308_EPUB-31"/>
+		<itemref idref="x9780735211308_EPUB-32"/>
+		<itemref idref="x9780735211308_EPUB-33"/>
+		<itemref idref="x9780735211308_EPUB-34"/>
+		<itemref idref="x9780735211308_EPUB-35"/>
+		<itemref idref="x9780735211308_EPUB-36"/>
+		<itemref idref="x9780735211308_EPUB-37"/>
+		<itemref idref="x9780735211308_EPUB-38"/>
+		<itemref idref="x9780735211308_EPUB-39"/>
+		<itemref idref="x77_About_the_Author.xhtml"/>
+		<itemref idref="next-reads.xhtml"/>
+		<itemref idref="x9780735211308_EPUB-4_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-6_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-6_fn2" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-7_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-7_fn2" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-8_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-8_fn2" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-10_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-10_fn2" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-11_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-11_fn2" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-11_fn3" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-15_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-16_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-17_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-19_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-20_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-20_fn2" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-21_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-21_fn2" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-22_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-22_fn2" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-24_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-24_fn2" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-24_fn3" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-25_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-26_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-28_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-28_fn2" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-29_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-29_fn2" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-30_fn1" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-30_fn2" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-30_fn3" linear="no"/>
+		<itemref idref="x9780735211308_EPUB-31_fn1" linear="no"/>
+	</spine>
+	<guide>
+		<reference href="xhtml/01_Cover.xhtml" title="Cover" type="cover"/>
+		<reference href="xhtml/05_Contents.xhtml" title="Table of Contents" type="toc"/>
+		<reference href="xhtml/06_Introduction_My_Story.xhtml" title="Text" type="text"/>
+		<reference href="xhtml/06_Introduction_My_Story.xhtml" title="Start" type="start"/>
+	</guide>
+</package>

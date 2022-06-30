@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>artistName</key>
+	<string>Charles Duhigg</string>
+	<key>book-info</key>
+	<dict>
+		<key>cover-image-hash</key>
+		<string>051C0DE6472435C3A78AC3787D424972</string>
+		<key>cover-image-path</key>
+		<string>cover.jpeg</string>
+		<key>mime-type</key>
+		<string>application/epub+zip</string>
+		<key>package-file-hash</key>
+		<string>70FACFA7BA2C7C01F7B267D6E679A268</string>
+		<key>publisher-unique-id</key>
+		<string>86d6c4b7-bc6c-448b-9a97-33d7f0c74c2d</string>
+		<key>unique-id</key>
+		<integer>323269364758274490</integer>
+		<key>update-level</key>
+		<integer>2</integer>
+	</dict>
+	<key>itemName</key>
+	<string>The Power of Habit: Why We Do What We Do in Life and Business</string>
+	<key>playlistName</key>
+	<string>The Power of Habit: Why We Do What We Do in Life and Business</string>
+	<key>releaseDate</key>
+	<string>2012-02-27T20:00:00+00:00</string>
+	<key>sort-artist</key>
+	<string>Duhigg, Charles</string>
+	<key>sort-artist-status</key>
+	<integer>3</integer>
+</dict>
+</plist>

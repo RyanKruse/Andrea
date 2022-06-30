@@ -1,0 +1,239 @@
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="ISBN9780795336409" version="2.0">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+ 
+<dc:title>The 7 Habits of Highly Effective People</dc:title>
+<dc:creator>Stephen R. Covey</dc:creator>
+<dc:language>en</dc:language>
+<dc:rights>Copyright © 1989, 2004, 2013</dc:rights>
+<dc:publisher>Mango Media</dc:publisher>
+<dc:date>2013</dc:date>
+<dc:identifier id="ISBN9780795336409">ISBN9780795336409</dc:identifier>
+<meta content="img_1" name="cover"/>
+
+<description xmlns="http://purl.org/dc/elements/1.1/">&lt;b&gt;Infographics Edition&lt;/b&gt; &lt;p&gt; &lt;b&gt;What are the habits of successful people?&lt;/b&gt;&lt;i&gt;The 7 Habits of Highly Effective People&lt;/i&gt; has captivated readers for 25 years. It has transformed the lives of Presidents and CEOs, educators, parents, and students &amp;#8212; in short, millions of people of all ages and occupations have benefited from Dr. Covey's 7 Habits book. And, it can transform you. &lt;p&gt; This Infographics Edition of Stephen Covey's cherished classic commemorates the timeless wisdom and power of the 7 Habits book, and does it in a highly readable and understandable, infographics format. &lt;p&gt; What are the habits of successful people? This 7 Habits book guides you through each habit step-by-step: &lt;li&gt;Habit 1: Be Proactive &lt;li&gt;Habit 2: Begin With The End In Mind &lt;li&gt;Habit 3: Put First Things First &lt;li&gt;Habit 4: Think Win-Win &lt;li&gt;Habit 5: Seek First To Understand Then Be Understood &lt;li&gt;Habit 6: Synergize &lt;li&gt;Habit 7: Sharpen The Saw Dr. Covey's 7 Habits book is one of the most...</description>
+</metadata>
+<manifest>
+<item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+<item href="template.css" id="css" media-type="text/css"/>
+
+<item href="images/cover.png" id="img_1" media-type="image/png"/>
+<item href="images/line.png" id="img_2" media-type="image/png"/>
+<item href="images/p103-001.png" id="img_3" media-type="image/png"/>
+<item href="images/p105-001.png" id="img_4" media-type="image/png"/>
+<item href="images/p108-001.png" id="img_5" media-type="image/png"/>
+<item href="images/p111-001.png" id="img_6" media-type="image/png"/>
+<item href="images/p118-001.png" id="img_7" media-type="image/png"/>
+<item href="images/p121-001.png" id="img_9" media-type="image/png"/>
+<item href="images/p122-001.png" id="img_10" media-type="image/png"/>
+<item href="images/p123-001.png" id="img_11" media-type="image/png"/>
+<item href="images/p124-001.png" id="img_12" media-type="image/png"/>
+<item href="images/p134-001.png" id="img_13" media-type="image/png"/>
+<item href="images/p149-001.png" id="img_14" media-type="image/png"/>
+<item href="images/p159-001.png" id="img_15" media-type="image/png"/>
+<item href="images/p160-001.png" id="img_16" media-type="image/png"/>
+<item href="images/p164-001.png" id="img_17" media-type="image/png"/>
+<item href="images/p165-001.png" id="img_18" media-type="image/png"/>
+<item href="images/p184-001.png" id="img_19" media-type="image/png"/>
+<item href="images/p186-001.png" id="img_20" media-type="image/png"/>
+<item href="images/p192-001.png" id="img_21" media-type="image/png"/>
+<item href="images/p193-001.png" id="img_22" media-type="image/png"/>
+<item href="images/p193-002.png" id="img_23" media-type="image/png"/>
+<item href="images/p194-001.png" id="img_24" media-type="image/png"/>
+<item href="images/p194-002.png" id="img_25" media-type="image/png"/>
+<item href="images/p204-001.png" id="img_26" media-type="image/png"/>
+<item href="images/p206-001.png" id="img_27" media-type="image/png"/>
+<item href="images/p207-001.png" id="img_28" media-type="image/png"/>
+<item href="images/p208-001.png" id="img_29" media-type="image/png"/>
+<item href="images/p213-001.png" id="img_30" media-type="image/png"/>
+<item href="images/p213-002.png" id="img_31" media-type="image/png"/>
+<item href="images/p222-001.png" id="img_32" media-type="image/png"/>
+<item href="images/p223-001.png" id="img_33" media-type="image/png"/>
+<item href="images/p225-001.png" id="img_34" media-type="image/png"/>
+<item href="images/p247-001.png" id="img_35" media-type="image/png"/>
+<item href="images/p259-001.png" id="img_36" media-type="image/png"/>
+<item href="images/p261-001.png" id="img_37" media-type="image/png"/>
+<item href="images/p279-001.png" id="img_38" media-type="image/png"/>
+<item href="images/p314-001.png" id="img_40" media-type="image/png"/>
+<item href="images/p323-001.png" id="img_41" media-type="image/png"/>
+<item href="images/p329-001.png" id="img_42" media-type="image/png"/>
+<item href="images/p332-001.png" id="img_43" media-type="image/png"/>
+<item href="images/p350-001.png" id="img_44" media-type="image/png"/>
+<item href="images/p368-001.png" id="img_45" media-type="image/png"/>
+<item href="images/p370-001.png" id="img_46" media-type="image/png"/>
+<item href="images/p376-001.png" id="img_47" media-type="image/png"/>
+<item href="images/p379-001.png" id="img_48" media-type="image/png"/>
+<item href="images/p380-001.png" id="img_49" media-type="image/png"/>
+<item href="images/p382-001.png" id="img_50" media-type="image/png"/>
+<item href="images/p388-001.png" id="img_51" media-type="image/png"/>
+<item href="images/p426-001.png" id="img_52" media-type="image/png"/>
+<item href="images/p426-002.png" id="img_53" media-type="image/png"/>
+<item href="images/p426-003.png" id="img_54" media-type="image/png"/>
+<item href="images/p427-001.png" id="img_55" media-type="image/png"/>
+<item href="images/p427-002.png" id="img_56" media-type="image/png"/>
+<item href="images/p427-003.png" id="img_57" media-type="image/png"/>
+<item href="images/p427-004.png" id="img_58" media-type="image/png"/>
+<item href="images/p427-005.png" id="img_59" media-type="image/png"/>
+<item href="images/p427-006.png" id="img_60" media-type="image/png"/>
+<item href="images/p427-007.png" id="img_61" media-type="image/png"/>
+<item href="images/p427-008.png" id="img_62" media-type="image/png"/>
+<item href="images/p427-009.png" id="img_63" media-type="image/png"/>
+<item href="images/p427-010.png" id="img_64" media-type="image/png"/>
+<item href="images/p65-001.png" id="img_65" media-type="image/png"/>
+<item href="images/p66-001.png" id="img_66" media-type="image/png"/>
+<item href="images/p85-001.png" id="img_67" media-type="image/png"/>
+<item href="images/p88-001.png" id="img_68" media-type="image/png"/>
+<item href="images/p92-001.png" id="img_69" media-type="image/png"/>
+<item href="images/1.png" id="x1.png" media-type="image/png"/>
+
+		
+		<item href="images/13.png" id="x13.png" media-type="image/png"/>
+		<item href="images/14.png" id="x14.png" media-type="image/png"/>
+		<item href="images/16.png" id="x16.png" media-type="image/png"/>
+		<item href="images/17.png" id="x17.png" media-type="image/png"/>
+		<item href="images/19.png" id="x19.png" media-type="image/png"/>
+		<item href="images/2.png" id="x2.png" media-type="image/png"/>
+		<item href="images/20.png" id="x20.png" media-type="image/png"/>
+		<item href="images/21.png" id="x21.png" media-type="image/png"/>
+		<item href="images/22.png" id="x22.png" media-type="image/png"/>
+		<item href="images/23.png" id="x23.png" media-type="image/png"/>
+		<item href="images/24.png" id="x24.png" media-type="image/png"/>
+		<item href="images/25.png" id="x25.png" media-type="image/png"/>
+		<item href="images/26.png" id="x26.png" media-type="image/png"/>
+		<item href="images/27.png" id="x27.png" media-type="image/png"/>
+		<item href="images/29.png" id="x29.png" media-type="image/png"/>
+		<item href="images/3.png" id="x3.png" media-type="image/png"/>
+		<item href="images/30.png" id="x30.png" media-type="image/png"/>
+		<item href="images/4.png" id="x4.png" media-type="image/png"/>
+		<item href="images/5.png" id="x5.png" media-type="image/png"/>
+		<item href="images/6.png" id="x6.png" media-type="image/png"/>
+		<item href="images/7.png" id="x7.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph-09.png" id="x7HabitsInfograph-09.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph-10.png" id="x7HabitsInfograph-10.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph-11.png" id="x7HabitsInfograph-11.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph-12.png" id="x7HabitsInfograph-12.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph-13.png" id="x7HabitsInfograph-13.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph-14.png" id="x7HabitsInfograph-14.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph-15.png" id="x7HabitsInfograph-15.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph-16.png" id="x7HabitsInfograph-16.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph2-09.png" id="x7HabitsInfograph2-09.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph2-10.png" id="x7HabitsInfograph2-10.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph2-11.png" id="x7HabitsInfograph2-11.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph2-12.png" id="x7HabitsInfograph2-12.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph2-13.png" id="x7HabitsInfograph2-13.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph2-14.png" id="x7HabitsInfograph2-14.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph2-15.png" id="x7HabitsInfograph2-15.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph2-16.png" id="x7HabitsInfograph2-16.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph2-17.png" id="x7HabitsInfograph2-17.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph3-07.png" id="x7HabitsInfograph3-07.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph3-08.png" id="x7HabitsInfograph3-08.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph3-09.png" id="x7HabitsInfograph3-09.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph3-10.png" id="x7HabitsInfograph3-10.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph3-11.png" id="x7HabitsInfograph3-11.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph4-03.png" id="x7HabitsInfograph4-03.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph4-04.png" id="x7HabitsInfograph4-04.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph4-05.png" id="x7HabitsInfograph4-05.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph4-06.png" id="x7HabitsInfograph4-06.png" media-type="image/png"/>
+		<item href="images/7HabitsInfograph4-07.png" id="x7HabitsInfograph4-07.png" media-type="image/png"/>
+		<item href="images/8.png" id="x8.png" media-type="image/png"/>
+		<item href="images/9.png" id="x9.png" media-type="image/png"/>
+	
+
+
+<item href="25th_Anniversary_7_Habits_Split0.html" id="c_Split0" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split2.html" id="c_Split2" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split3.html" id="c_Split3" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split4.html" id="c_Split4" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split5.html" id="c_Split5" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split6.html" id="c_Split6" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split7.html" id="c_Split7" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split11.html" id="c_Split11" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split12.html" id="c_Split12" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split13.html" id="c_Split13" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split14.html" id="c_Split14" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split15.html" id="c_Split15" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split16.html" id="c_Split16" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split17.html" id="c_Split17" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split18.html" id="c_Split18" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split19.html" id="c_Split19" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split20.html" id="c_Split20" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split21.html" id="c_Split21" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split22.html" id="c_Split22" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split23.html" id="c_Split23" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split24.html" id="c_Split24" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split25.html" id="c_Split25" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split26.html" id="c_Split26" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split27.html" id="c_Split27" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split28.html" id="c_Split28" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split29.html" id="c_Split29" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split30.html" id="c_Split30" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split31.html" id="c_Split31" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split32.html" id="c_Split32" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split33.html" id="c_Split33" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split34.html" id="c_Split34" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split35.html" id="c_Split35" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split36.html" id="c_Split36" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split37.html" id="c_Split37" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split38.html" id="c_Split38" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split39.html" id="c_Split39" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split40.html" id="c_Split40" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split41.html" id="c_Split41" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split42.html" id="c_Split42" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split43.html" id="c_Split43" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split44.html" id="c_Split44" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split45.html" id="c_Split45" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split46.html" id="c_Split46" media-type="application/xhtml+xml"/>
+<item href="25th_Anniversary_7_Habits_Split47.html" id="c_Split47" media-type="application/xhtml+xml"/>
+</manifest>
+
+  <spine toc="ncx">
+<itemref idref="c_Split0"/>
+<itemref idref="c_Split2"/>
+<itemref idref="c_Split3"/>
+<itemref idref="c_Split4"/>
+<itemref idref="c_Split5"/>
+<itemref idref="c_Split6"/>
+<itemref idref="c_Split7"/>
+<itemref idref="c_Split11"/>
+<itemref idref="c_Split12"/>
+<itemref idref="c_Split13"/>
+<itemref idref="c_Split14"/>
+<itemref idref="c_Split15"/>
+<itemref idref="c_Split16"/>
+<itemref idref="c_Split17"/>
+<itemref idref="c_Split18"/>
+<itemref idref="c_Split19"/>
+<itemref idref="c_Split20"/>
+<itemref idref="c_Split21"/>
+<itemref idref="c_Split22"/>
+<itemref idref="c_Split23"/>
+<itemref idref="c_Split24"/>
+<itemref idref="c_Split25"/>
+<itemref idref="c_Split26"/>
+<itemref idref="c_Split27"/>
+<itemref idref="c_Split28"/>
+<itemref idref="c_Split29"/>
+<itemref idref="c_Split30"/>
+<itemref idref="c_Split31"/>
+<itemref idref="c_Split32"/>
+<itemref idref="c_Split33"/>
+<itemref idref="c_Split34"/>
+<itemref idref="c_Split35"/>
+<itemref idref="c_Split36"/>
+<itemref idref="c_Split37"/>
+<itemref idref="c_Split38"/>
+<itemref idref="c_Split39"/>
+<itemref idref="c_Split40"/>
+<itemref idref="c_Split41"/>
+<itemref idref="c_Split42"/>
+<itemref idref="c_Split43"/>
+<itemref idref="c_Split44"/>
+<itemref idref="c_Split45"/>
+<itemref idref="c_Split46"/>
+<itemref idref="c_Split47"/>
+  </spine>
+
+  <guide>
+	<reference href="25th_Anniversary_7_Habits_Split7.html#toc" title="Table of Contents" type="toc"/>
+	<reference href="25th_Anniversary_7_Habits_Split0.html#cover" title="Cover Page" type="Cover"/>
+  </guide>
+</package>
