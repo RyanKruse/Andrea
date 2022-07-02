@@ -1,4 +1,5 @@
 
+----------------------------------------
 
 Language Packs & Fallbacks:
 
@@ -19,10 +20,12 @@ Once the SDF file has been generated, it is safe to rename files (.ttf, .otf, .a
 You can generate a dynamic SDF file from a font type automatically by pressing CTRL + SHIFT + F12.
 Save 20 mb on world download size by removing all fallbacks from text using Noto Sans. When using compiler with books that have such texts, need to re-add them. 
 
+----------------------------------------
+
 TODO:
-Format all 16 books. Skip foreign language books.
+WTF? PopulateStyleSheet in Compiler can utilize Andrea's code?
 Changing font types too fast breaks the clones.
-Scrolling too fast skips the clones.
+Scrolling too fast skips the clones (shows a blank screen loading in new block).
 Scroll bar on main page (works in VR).
 
 Something broken with images around Loc 785, Loc 1325, 2973 re-add paragraphs? in 7 Habits.
@@ -37,37 +40,43 @@ Re-add the proof-of-concept GUI. Allow rolling.
 Changing font size and type snaps to closest Loc.
 	Functions ChangeFontSize and ChangeFontType.
 
+Format all 16 books. Skip foreign language books.
 
 
-General Structure.
 
-Row A - Life Improvement
-7 Habits of Highly Effective People
-Mindset
-Atomic Habits
-Grit
-The Power of Habit
-Deep Work
-The Subtle Art of Not Giving a F_ck
-Start With Why
+----------------------------------------
 
-Row B - Social Skills
-How to Win Friends and Influence People
-The Charisma Myth
-How to Make People Like You
-Just Listen
-How to Talk to Anyone
-Influence
-Social Skills Guidebook
-Quiet
+General Home Page Structure:
 
-Creating Book Button Images
+Row A - Life Improvement:
+	7 Habits of Highly Effective People
+	Mindset
+	Atomic Habits
+	Grit
+	The Power of Habit
+	Deep Work
+	The Subtle Art of Not Giving a F_ck
+	Start With Why
 
-Resize all to 523x - 800x - Image.
-Expand Canvas to 549x - 826x - Canvas.
-Add 13 Size Rounded Border. 	
-Remove Corners.
-Save Compressed PNG.
-Create sprite.
-Add Image to buttons.
-Buttons are all 348x - 529x - Button.
+Row B - Social Skills:
+	How to Win Friends and Influence People
+	The Charisma Myth
+	How to Make People Like You
+	Just Listen
+	How to Talk to Anyone
+	Influence
+	Social Skills Guidebook
+	Quiet
+
+----------------------------------------
+
+Tutorial on Creating Book Button Images:
+
+	Resize all to 523x - 800x - Image.
+	Expand Canvas to 549x - 826x - Canvas.
+	Add 13 Size Rounded Border. 	
+	Remove Corners.
+	Save Compressed PNG.
+	Create sprite.
+	Add Image to buttons.
+	Buttons are all 348x - 529x - Button.

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b47be65a5b79b274d98c1dc155351d37
+guid: 03fe4bc52a4395b419e32449905264a5
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,7 +11,9 @@ TrueTypeFontImporter:
   fontName: Times New Roman
   fontNames:
   - Times New Roman
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 33d2bb16fc9e0d5439c7664d9637451c, type: 3}
+  - {fileID: 12800000, guid: b47be65a5b79b274d98c1dc155351d37, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
