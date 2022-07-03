@@ -117,6 +117,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private TextMeshProUGUI _mainPreviousCloneTMP;
 
     [Header("Global Workflow Data Variables:")]
+    [SerializeField] private bool _isNoDoubleExecute;
     [SerializeField] private bool _isHaltPageTurn;
     [SerializeField] private bool _isRightTriggerActive;
     [SerializeField] private bool _isLeftTriggerActive;
@@ -1712,6 +1713,22 @@ public class Andrea : UdonSharpBehaviour
             _categoryVectorTarget1 = _categoryVectorDefault1 + new Vector3(0f, 800f, 0f);
             _isCategoryMinimized0 = true;
         }
+
+        if (_isNoDoubleExecute)
+        {
+            _isNoDoubleExecute = false;
+            return;
+        }
+        else if (!_isCategoryMinimized1)
+        {
+            _isNoDoubleExecute = true;
+            CategoryMinimize1();
+        }
+        else if(!_isCategoryMinimized2)
+        {
+            _isNoDoubleExecute = true;
+            CategoryMinimize2();
+        }
     }
 
     public void CategoryMinimize1()
@@ -1731,6 +1748,22 @@ public class Andrea : UdonSharpBehaviour
             _categoryVectorTarget2 = _categoryVectorDefault2 + new Vector3(0f, 800f, 0f);
             _isCategoryMinimized1 = true;
         }
+
+        if (_isNoDoubleExecute)
+        {
+            _isNoDoubleExecute = false;
+            return;
+        }
+        else if(!_isCategoryMinimized0)
+        {
+            _isNoDoubleExecute = true;
+            CategoryMinimize0();
+        }
+        else if(!_isCategoryMinimized2)
+        {
+            _isNoDoubleExecute = true;
+            CategoryMinimize2();
+        }
     }
 
     public void CategoryMinimize2()
@@ -1749,6 +1782,22 @@ public class Andrea : UdonSharpBehaviour
             _categoryVectorStart3 = _categoryGameObject3.transform.localPosition;
             _categoryVectorTarget3 = _categoryVectorDefault3 + new Vector3(0f, 800f, 0f);
             _isCategoryMinimized2 = true;
+        }
+
+        if (_isNoDoubleExecute)
+        {
+            _isNoDoubleExecute = false;
+            return;
+        }
+        else if(!_isCategoryMinimized0)
+        {
+            _isNoDoubleExecute = true;
+            CategoryMinimize0();
+        }
+        else if(!_isCategoryMinimized1)
+        {
+            _isNoDoubleExecute = true;
+            CategoryMinimize1();
         }
     }
 }
