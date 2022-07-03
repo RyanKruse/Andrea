@@ -23,9 +23,9 @@ Save 20 mb on world download size by removing all fallbacks from text using Noto
 ----------------------------------------
 
 TODO:
-Scroll horizontally (The Book elements having zero width or height is creating a scroll error)
-Arrow buttons lerp home screen up and down.
+Rotate arrow buttons.
 Buttons don't include text panel. 
+Rest button after getting tired of reading.
 
 WTF? PopulateStyleSheet in Compiler can utilize Andrea's code? Can skip parallel code logistics.
 Changing font types too fast breaks the clones (unsure about size).
@@ -53,7 +53,7 @@ Format all 16 books. Skip foreign language books.
 
 General Home Page Structure:
 
-Row A - Life Improvement:
+Category 0 - Personal Development:
 	7 Habits of Highly Effective People
 	Mindset
 	Atomic Habits
@@ -63,7 +63,7 @@ Row A - Life Improvement:
 	The Subtle Art of Not Giving a F_ck
 	Start With Why
 
-Row B - Social Skills:
+Category 1 - Communication Skills:
 	How to Win Friends and Influence People
 	The Charisma Myth
 	How to Make People Like You
@@ -73,15 +73,80 @@ Row B - Social Skills:
 	Social Skills Guidebook
 	Quiet
 
+Category 2 - Financial Independence:
+
+Category 3 - Biographies:
+
 ----------------------------------------
 
 Tutorial on Creating Book Button Images:
-
+	Greyscale at 50.
 	Resize all to 523x - 800x - Image.
 	Expand Canvas to 549x - 826x - Canvas.
-	Add 13 Size Rounded Border. 	
+	Add 13 brush thickness, 25 corner Rounded Border. 	
 	Remove Corners.
 	Save Compressed PNG.
 	Create sprite.
 	Add Image to buttons.
 	Buttons are all 348x - 529x - Button.
+
+----------------------------------------
+
+I use VRChat for 3 things. Sexual gratification. Social gratification. Contribution gratification. 
+
+Depressive and Mania Cycle of Biopolar Disorder.
+You need grit - Sticking to one thing.
+You need deep work - No distractions.
+You need values - Meaning to your project.
+
+Start with Why:
+When I was a rebellious child with no supervision or education, books were the only thing that kept me educated.
+I would read the New York Times, I would read Goosebumps, I would read my history text book.
+With mediums of communication becoming increasingly digital, having a book in your hands is becoming more scarce.
+I would like to offer a book to someone in the virtual space, to extend them the same hand that guided me when I was growing up.
+Maybe movies, TV shows, music, social media, and the plethora of content on the internet may drown up any interest in books.
+I'd like to make it as easy and accessible as possible to those willing to give their time to reading.
+And maybe I can help someone get through their childhood and grow up to be a happy, successful, well-minded adult. 
+Sex is done out of bordom. It is easy on +45D.
+
+Get out of stupid classes.
+Get into a prestigous college.
+Get an internship.
+Make Sassilization.
+Get a job.
+Make Sassilization in UE4.
+Babes.Exe
+Get an Internship.
+Get a job.
+Ditch Sassilization.
+Nuke.
+Read books.
+Start a business.
+Work hard at Alight.
+Learn Python.
+Make Sassilization in Python.
+Get a CS Masters.
+WGU.
+Retire.
+Apply to Georgia Tech.
+Make Sassilization in VRChat.
+Networking and scaling error.
+Make Candle in VRChat.
+Screw it let's travel.
+Ditch Gulderay, make Andrea.
+Make Andrea (Requires 2 months to release). 
+
+
+D Stages
+<1: Meh Relapse While We're Here.
+1-3: Hold on, one more real quick.
+3-7: Opiates wore off, aggressive horny ape.
+7-13: Man mode, relaxed but confident.
+13-28: Flatline, surgical strategy.
+28-34: Screw being passive, let's go out.
+34-39: Results suck, take action.
+39-45: Get in there, no matter what.
+45-50: Don't stop, keep going.
+50-55: Double down, follow the principles.
+55-60: Make reality happen. 
+60: HOLY ****ing ****.

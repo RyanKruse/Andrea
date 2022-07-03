@@ -47,6 +47,10 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private GameObject _confirmationMenuGameObject;
     [SerializeField] private GameObject _optionsMenuGameObject;
     [SerializeField] private GameObject _backButtonGameObject;
+    [SerializeField] private GameObject _categoryGameObject0;
+    [SerializeField] private GameObject _categoryGameObject1;
+    [SerializeField] private GameObject _categoryGameObject2;
+    [SerializeField] private GameObject _categoryGameObject3;
     [SerializeField] private TextAsset _styleSheetTextAsset;
     [SerializeField] private TextMeshProUGUI _helveticaTMP;
     [SerializeField] private TextMeshProUGUI _helveticaCloneTMP;
@@ -118,6 +122,13 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private bool _isLeftTriggerActive;
     [SerializeField] private bool _isOverflowAuditDefinePage;
     [SerializeField] private bool _isStringRichText;
+    [SerializeField] private bool _isCategoryLerp0;
+    [SerializeField] private bool _isCategoryLerp1;
+    [SerializeField] private bool _isCategoryLerp2;
+    [SerializeField] private bool _isCategoryMinimized0;
+    [SerializeField] private bool _isCategoryMinimized1;
+    [SerializeField] private bool _isCategoryMinimized2;
+    [SerializeField] private bool _isCategoryMinimized3;
     [SerializeField] private bool[] _richTextBoolList;
     [SerializeField] private int _cloneTime;
     [SerializeField] private int _overflowPageIndex;
@@ -127,12 +138,29 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private string _richTextString;
     [SerializeField] private string[] _richTextStringList;
     [SerializeField] private string[] _richTextOverflowList;
-    [SerializeField] public string[] _styleSheetNameList;
-    [SerializeField] public string[] _styleSheetTagList;
+    [SerializeField] public string[] _styleSheetNameList;  // Formatting C#.
+    [SerializeField] public string[] _styleSheetTagList;  // Formatting C#.
+    [SerializeField] private Vector3 _categoryVectorDefault0;
+    [SerializeField] private Vector3 _categoryVectorDefault1;
+    [SerializeField] private Vector3 _categoryVectorDefault2;
+    [SerializeField] private Vector3 _categoryVectorDefault3;
+    [SerializeField] private Vector3 _categoryVectorTarget0;
+    [SerializeField] private Vector3 _categoryVectorTarget1;
+    [SerializeField] private Vector3 _categoryVectorTarget2;
+    [SerializeField] private Vector3 _categoryVectorTarget3;
+    [SerializeField] private Vector3 _categoryVectorStart0;
+    [SerializeField] private Vector3 _categoryVectorStart1;
+    [SerializeField] private Vector3 _categoryVectorStart2;
+    [SerializeField] private Vector3 _categoryVectorStart3;
+
+
 
     // JUNK VARIABLES:
     [SerializeField] private int _adjustedLocationHeight;
     [SerializeField] private int _adjustedMaxHeight;
+    [SerializeField] private float timer0;
+    [SerializeField] private float timer1;
+    [SerializeField] private float timer2;
 
     private void Start()
     {
@@ -230,6 +258,17 @@ public class Andrea : UdonSharpBehaviour
         _overflowPageIndex = -1;
         _richTextBoolList = new bool[10];
         _richTextStringList = new string[10];
+        _categoryVectorDefault0 = _categoryGameObject0.transform.localPosition;
+        _categoryVectorDefault0 = _categoryGameObject1.transform.localPosition;
+        _categoryVectorDefault0 = _categoryGameObject2.transform.localPosition;
+        _categoryVectorDefault0 = _categoryGameObject3.transform.localPosition;
+        _categoryGameObject1.transform.SetParent(_categoryGameObject0.transform);
+        _categoryGameObject2.transform.SetParent(_categoryGameObject1.transform);
+        _categoryGameObject3.transform.SetParent(_categoryGameObject2.transform);
+        _categoryVectorTarget0 = _categoryVectorDefault0;
+        _categoryVectorTarget1 = _categoryVectorDefault1;
+        _categoryVectorTarget2 = _categoryVectorDefault2;
+        _categoryVectorTarget3 = _categoryVectorDefault3;
         HomeInfo();
     }
 
@@ -859,6 +898,11 @@ public class Andrea : UdonSharpBehaviour
         if (_isBookStaged)
         {
             ProcessInputs();
+        }
+
+        if (_mainMenuGameObject.activeSelf)
+        {
+            LerpUpdate();
         }
 
         // Process clone timer.
@@ -1618,5 +1662,93 @@ public class Andrea : UdonSharpBehaviour
         if (_candleAudioSource.isPlaying && clip == _softSwipeAudio) return;
         _candleAudioSource.clip = clip;
         _candleAudioSource.Play();
+    }
+
+    public void LerpUpdate()
+    {
+        if (_isCategoryLerp0 && timer0 > 0f)
+        {
+            _categoryGameObject1.transform.localPosition = Vector3.Lerp(_categoryVectorStart1, _categoryVectorTarget1, Mathf.SmoothStep(0.0f, 1.0f, Mathf.SmoothStep(0.0f, 1.0f, timer0)));
+            if (timer0 >= 1)
+            {
+                _isCategoryLerp0 = false;
+            }
+            timer0 += Time.deltaTime * 0.8f;
+        }
+        if (_isCategoryLerp1 && timer1 > 0f)
+        {
+            _categoryGameObject2.transform.localPosition = Vector3.Lerp(_categoryVectorStart2, _categoryVectorTarget2, Mathf.SmoothStep(0.0f, 1.0f, Mathf.SmoothStep(0.0f, 1.0f, timer1)));
+            if (timer1 >= 1)
+            {
+                _isCategoryLerp1 = false;
+            }
+            timer1 += Time.deltaTime * 0.8f;
+        }
+        if (_isCategoryLerp2 && timer2 > 0f)
+        {
+            _categoryGameObject3.transform.localPosition = Vector3.Lerp(_categoryVectorStart3, _categoryVectorTarget3, Mathf.SmoothStep(0.0f, 1.0f, Mathf.SmoothStep(0.0f, 1.0f, timer2)));
+            if (timer2 >= 1)
+            {
+                _isCategoryLerp2 = false;
+            }
+            timer2 += Time.deltaTime * 0.8f;
+        }
+    }
+
+    public void CategoryMinimize0()
+    {
+        _isCategoryLerp0 = true;
+        if (_isCategoryMinimized0)
+        {
+            timer0 = 0.001f;
+            _categoryVectorStart1 = _categoryGameObject1.transform.localPosition;
+            _categoryVectorTarget1 = _categoryVectorDefault1;
+            _isCategoryMinimized0 = false;
+        }
+        else
+        {
+            timer0 = 0.001f;
+            _categoryVectorStart1 = _categoryGameObject1.transform.localPosition;
+            _categoryVectorTarget1 = _categoryVectorDefault1 + new Vector3(0f, 800f, 0f);
+            _isCategoryMinimized0 = true;
+        }
+    }
+
+    public void CategoryMinimize1()
+    {
+        _isCategoryLerp1 = true;
+        if (_isCategoryMinimized1)
+        {
+            timer1 = 0.001f;
+            _categoryVectorStart2 = _categoryGameObject2.transform.localPosition;
+            _categoryVectorTarget2 = _categoryVectorDefault2;
+            _isCategoryMinimized1 = false;
+        }
+        else
+        {
+            timer1 = 0.001f;
+            _categoryVectorStart2 = _categoryGameObject2.transform.localPosition;
+            _categoryVectorTarget2 = _categoryVectorDefault2 + new Vector3(0f, 800f, 0f);
+            _isCategoryMinimized1 = true;
+        }
+    }
+
+    public void CategoryMinimize2()
+    {
+        _isCategoryLerp2 = true;
+        if (_isCategoryMinimized2)
+        {
+            timer2 = 0.001f;
+            _categoryVectorStart3 = _categoryGameObject3.transform.localPosition;
+            _categoryVectorTarget3 = _categoryVectorDefault3;
+            _isCategoryMinimized2 = false;
+        }
+        else
+        {
+            timer2 = 0.001f;
+            _categoryVectorStart3 = _categoryGameObject3.transform.localPosition;
+            _categoryVectorTarget3 = _categoryVectorDefault3 + new Vector3(0f, 800f, 0f);
+            _isCategoryMinimized2 = true;
+        }
     }
 }
