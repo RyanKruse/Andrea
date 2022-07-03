@@ -23,10 +23,15 @@ Save 20 mb on world download size by removing all fallbacks from text using Noto
 ----------------------------------------
 
 TODO:
-WTF? PopulateStyleSheet in Compiler can utilize Andrea's code?
-Changing font types too fast breaks the clones.
+Scroll horizontally (The Book elements having zero width or height is creating a scroll error)
+Arrow buttons lerp home screen up and down.
+Buttons don't include text panel. 
+
+WTF? PopulateStyleSheet in Compiler can utilize Andrea's code? Can skip parallel code logistics.
+Changing font types too fast breaks the clones (unsure about size).
 Scrolling too fast skips the clones (shows a blank screen loading in new block).
 Scroll bar on main page (works in VR).
+Some sort of break button.
 
 Something broken with images around Loc 785, Loc 1325, 2973 re-add paragraphs? in 7 Habits.
 Loc 1960, Loc 2364, 2729, 3099, 3111, 4419, 5107, 5698 is strange on end clipping (wide text).
