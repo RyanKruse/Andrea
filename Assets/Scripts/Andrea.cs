@@ -21,6 +21,8 @@ public class Andrea : UdonSharpBehaviour
 {
     [Header("Populated Data Variables From Inspector:")]
     [SerializeField] public Memory Memory;
+    [SerializeField] private bool _isVRSettingsOverride;
+    [SerializeField] private bool _isMinimizeCatalog;
     [SerializeField] private bool _isScrollWheelActive;
     [SerializeField] private bool _isRejectNumPadInputs;
     [SerializeField] private bool _isDontExecuteScript;
@@ -51,6 +53,11 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private GameObject _categoryGameObject1;
     [SerializeField] private GameObject _categoryGameObject2;
     [SerializeField] private GameObject _categoryGameObject3;
+    [SerializeField] private GameObject _categoryGameObject4;
+    [SerializeField] private GameObject _minimizeButtonGameObject0;
+    [SerializeField] private GameObject _minimizeButtonGameObject1;
+    [SerializeField] private GameObject _minimizeButtonGameObject2;
+    [SerializeField] private GameObject _minimizeButtonGameObject3;
     [SerializeField] private TextAsset _styleSheetTextAsset;
     [SerializeField] private TextMeshProUGUI _helveticaTMP;
     [SerializeField] private TextMeshProUGUI _helveticaCloneTMP;
@@ -126,10 +133,12 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private bool _isCategoryLerp0;
     [SerializeField] private bool _isCategoryLerp1;
     [SerializeField] private bool _isCategoryLerp2;
+    [SerializeField] private bool _isCategoryLerp3;
     [SerializeField] private bool _isCategoryMinimized0;
     [SerializeField] private bool _isCategoryMinimized1;
     [SerializeField] private bool _isCategoryMinimized2;
     [SerializeField] private bool _isCategoryMinimized3;
+    [SerializeField] private bool _isCategoryMinimized4;
     [SerializeField] private bool[] _richTextBoolList;
     [SerializeField] private int _cloneTime;
     [SerializeField] private int _overflowPageIndex;
@@ -145,15 +154,17 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private Vector3 _categoryVectorDefault1;
     [SerializeField] private Vector3 _categoryVectorDefault2;
     [SerializeField] private Vector3 _categoryVectorDefault3;
+    [SerializeField] private Vector3 _categoryVectorDefault4;
     [SerializeField] private Vector3 _categoryVectorTarget0;
     [SerializeField] private Vector3 _categoryVectorTarget1;
     [SerializeField] private Vector3 _categoryVectorTarget2;
     [SerializeField] private Vector3 _categoryVectorTarget3;
+    [SerializeField] private Vector3 _categoryVectorTarget4;
     [SerializeField] private Vector3 _categoryVectorStart0;
     [SerializeField] private Vector3 _categoryVectorStart1;
     [SerializeField] private Vector3 _categoryVectorStart2;
     [SerializeField] private Vector3 _categoryVectorStart3;
-
+    [SerializeField] private Vector3 _categoryVectorStart4;
 
 
     // JUNK VARIABLES:
@@ -162,6 +173,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private float timer0;
     [SerializeField] private float timer1;
     [SerializeField] private float timer2;
+    [SerializeField] private float timer3;
 
     private void Start()
     {
@@ -240,6 +252,11 @@ public class Andrea : UdonSharpBehaviour
 
     private void DefineMainVariables()
     {
+        if (_isVRSettingsOverride && Networking.LocalPlayer.IsUserInVR())
+        {
+            _defaultFontSizeIndex = 2;
+            MediumScale();
+        }
         Memory.PopulateTextAssetList();
         _mainMenuGameObject.SetActive(true);
         _confirmationMenuGameObject.SetActive(false);
@@ -260,16 +277,20 @@ public class Andrea : UdonSharpBehaviour
         _richTextBoolList = new bool[10];
         _richTextStringList = new string[10];
         _categoryVectorDefault0 = _categoryGameObject0.transform.localPosition;
-        _categoryVectorDefault0 = _categoryGameObject1.transform.localPosition;
-        _categoryVectorDefault0 = _categoryGameObject2.transform.localPosition;
-        _categoryVectorDefault0 = _categoryGameObject3.transform.localPosition;
+        _categoryVectorDefault1 = _categoryGameObject1.transform.localPosition;
+        _categoryVectorDefault2 = _categoryGameObject2.transform.localPosition;
+        _categoryVectorDefault3 = _categoryGameObject3.transform.localPosition;
+        _categoryVectorDefault4 = _categoryGameObject4.transform.localPosition;
         _categoryGameObject1.transform.SetParent(_categoryGameObject0.transform);
         _categoryGameObject2.transform.SetParent(_categoryGameObject1.transform);
         _categoryGameObject3.transform.SetParent(_categoryGameObject2.transform);
+        _categoryGameObject4.transform.SetParent(_categoryGameObject3.transform);
         _categoryVectorTarget0 = _categoryVectorDefault0;
         _categoryVectorTarget1 = _categoryVectorDefault1;
         _categoryVectorTarget2 = _categoryVectorDefault2;
         _categoryVectorTarget3 = _categoryVectorDefault3;
+        _categoryVectorTarget4 = _categoryVectorDefault4;
+        MinimizeCategories();
         HomeInfo();
     }
 
@@ -999,16 +1020,22 @@ public class Andrea : UdonSharpBehaviour
                 (_mainTurnPageIndex == 1 && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") >= 0.28f && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") >= 0.28f)))
             {
                 _isRightTriggerActive = true;
-                _mainPageIndex++;
-                DefinePage(_mainPageIndex, true);
+                if (_candleVRCPickup.IsHeld)
+                {
+                    _mainPageIndex++;
+                    DefinePage(_mainPageIndex, true);
+                }
             }
             else if (!_isLeftTriggerActive && ((_mainTurnPageIndex == 0 && Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryIndexTrigger") >= 0.28f) ||
                 (_mainTurnPageIndex == 2 && Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryHandTrigger") >= 0.28f) ||
                 (_mainTurnPageIndex == 1 && Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryHandTrigger") >= 0.28f && Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryIndexTrigger") >= 0.28f)))
             {
                 _isLeftTriggerActive = true;
-                _mainPageIndex--;
-                DefinePage(_mainPageIndex, false);
+                if (_candleVRCPickup.IsHeld)
+                {
+                    _mainPageIndex--;
+                    DefinePage(_mainPageIndex, false);
+                }
             }
         }
 
@@ -1576,17 +1603,17 @@ public class Andrea : UdonSharpBehaviour
 
     public void SmallScale()
     {
-        ChangeTabletSize(0.23f);
+        ChangeTabletSize(0.08f);
     }
 
     public void MediumScale()
     {
-        ChangeTabletSize(0.30f);
+        ChangeTabletSize(0.12f);
     }
 
     public void LargeScale()
     {
-        ChangeTabletSize(0.37f);
+        ChangeTabletSize(0.16f);
     }
 
     public void EnabledPickup()
@@ -1674,7 +1701,7 @@ public class Andrea : UdonSharpBehaviour
             {
                 _isCategoryLerp0 = false;
             }
-            timer0 += Time.deltaTime * 0.8f;
+            timer0 += Time.deltaTime * 0.75f;
         }
         if (_isCategoryLerp1 && timer1 > 0f)
         {
@@ -1683,7 +1710,7 @@ public class Andrea : UdonSharpBehaviour
             {
                 _isCategoryLerp1 = false;
             }
-            timer1 += Time.deltaTime * 0.8f;
+            timer1 += Time.deltaTime * 0.75f;
         }
         if (_isCategoryLerp2 && timer2 > 0f)
         {
@@ -1692,7 +1719,16 @@ public class Andrea : UdonSharpBehaviour
             {
                 _isCategoryLerp2 = false;
             }
-            timer2 += Time.deltaTime * 0.8f;
+            timer2 += Time.deltaTime * 0.75f;
+        }
+        if (_isCategoryLerp3 && timer3 > 0f)
+        {
+            _categoryGameObject4.transform.localPosition = Vector3.Lerp(_categoryVectorStart4, _categoryVectorTarget4, Mathf.SmoothStep(0.0f, 1.0f, Mathf.SmoothStep(0.0f, 1.0f, timer3)));
+            if (timer3 >= 1)
+            {
+                _isCategoryLerp3 = false;
+            }
+            timer3 += Time.deltaTime * 0.75f;
         }
     }
 
@@ -1705,6 +1741,7 @@ public class Andrea : UdonSharpBehaviour
             _categoryVectorStart1 = _categoryGameObject1.transform.localPosition;
             _categoryVectorTarget1 = _categoryVectorDefault1;
             _isCategoryMinimized0 = false;
+            // _minimizeButtonGameObject0.transform.Rotate(0f, 0f, -180f);
         }
         else
         {
@@ -1712,6 +1749,7 @@ public class Andrea : UdonSharpBehaviour
             _categoryVectorStart1 = _categoryGameObject1.transform.localPosition;
             _categoryVectorTarget1 = _categoryVectorDefault1 + new Vector3(0f, 800f, 0f);
             _isCategoryMinimized0 = true;
+            // _minimizeButtonGameObject0.transform.Rotate(0f, 0f, 180f);
         }
 
         if (_isNoDoubleExecute)
@@ -1729,6 +1767,11 @@ public class Andrea : UdonSharpBehaviour
             _isNoDoubleExecute = true;
             CategoryMinimize2();
         }
+        else if (!_isCategoryMinimized3)
+        {
+            _isNoDoubleExecute = true;
+            CategoryMinimize3();
+        }
     }
 
     public void CategoryMinimize1()
@@ -1740,6 +1783,7 @@ public class Andrea : UdonSharpBehaviour
             _categoryVectorStart2 = _categoryGameObject2.transform.localPosition;
             _categoryVectorTarget2 = _categoryVectorDefault2;
             _isCategoryMinimized1 = false;
+            // _minimizeButtonGameObject1.transform.Rotate(0f, 0f, -180f);
         }
         else
         {
@@ -1747,6 +1791,7 @@ public class Andrea : UdonSharpBehaviour
             _categoryVectorStart2 = _categoryGameObject2.transform.localPosition;
             _categoryVectorTarget2 = _categoryVectorDefault2 + new Vector3(0f, 800f, 0f);
             _isCategoryMinimized1 = true;
+            // _minimizeButtonGameObject1.transform.Rotate(0f, 0f, 180f);
         }
 
         if (_isNoDoubleExecute)
@@ -1764,6 +1809,11 @@ public class Andrea : UdonSharpBehaviour
             _isNoDoubleExecute = true;
             CategoryMinimize2();
         }
+        else if (!_isCategoryMinimized3)
+        {
+            _isNoDoubleExecute = true;
+            CategoryMinimize3();
+        }
     }
 
     public void CategoryMinimize2()
@@ -1775,6 +1825,7 @@ public class Andrea : UdonSharpBehaviour
             _categoryVectorStart3 = _categoryGameObject3.transform.localPosition;
             _categoryVectorTarget3 = _categoryVectorDefault3;
             _isCategoryMinimized2 = false;
+            // _minimizeButtonGameObject2.transform.Rotate(0f, 0f, -180f);
         }
         else
         {
@@ -1782,6 +1833,7 @@ public class Andrea : UdonSharpBehaviour
             _categoryVectorStart3 = _categoryGameObject3.transform.localPosition;
             _categoryVectorTarget3 = _categoryVectorDefault3 + new Vector3(0f, 800f, 0f);
             _isCategoryMinimized2 = true;
+            // _minimizeButtonGameObject2.transform.Rotate(0f, 0f, 180f);
         }
 
         if (_isNoDoubleExecute)
@@ -1799,5 +1851,61 @@ public class Andrea : UdonSharpBehaviour
             _isNoDoubleExecute = true;
             CategoryMinimize1();
         }
+        else if (!_isCategoryMinimized3)
+        {
+            _isNoDoubleExecute = true;
+            CategoryMinimize3();
+        }
+    }
+
+    public void CategoryMinimize3()
+    {
+        _isCategoryLerp3 = true;
+        if (_isCategoryMinimized3)
+        {
+            timer3 = 0.001f;
+            _categoryVectorStart4 = _categoryGameObject4.transform.localPosition;
+            _categoryVectorTarget4 = _categoryVectorDefault4;
+            _isCategoryMinimized3 = false;
+            // _minimizeButtonGameObject3.transform.Rotate(0f, 0f, -180f);
+        }
+        else
+        {
+            timer3 = 0.001f;
+            _categoryVectorStart4 = _categoryGameObject4.transform.localPosition;
+            _categoryVectorTarget4 = _categoryVectorDefault4 + new Vector3(0f, 800f, 0f);
+            _isCategoryMinimized3 = true;
+            // _minimizeButtonGameObject3.transform.Rotate(0f, 0f, 180f);
+        }
+
+        if (_isNoDoubleExecute)
+        {
+            _isNoDoubleExecute = false;
+            return;
+        }
+        else if (!_isCategoryMinimized0)
+        {
+            _isNoDoubleExecute = true;
+            CategoryMinimize0();
+        }
+        else if (!_isCategoryMinimized1)
+        {
+            _isNoDoubleExecute = true;
+            CategoryMinimize1();
+        }
+        else if (!_isCategoryMinimized2)
+        {
+            _isNoDoubleExecute = true;
+            CategoryMinimize2();
+        }
+    }
+
+    public void MinimizeCategories()
+    {
+        if (!_isMinimizeCatalog) return;
+        if (!_isCategoryMinimized0) CategoryMinimize0();
+        if (!_isCategoryMinimized1) CategoryMinimize1();
+        if (!_isCategoryMinimized2) CategoryMinimize2();
+        if (!_isCategoryMinimized3) CategoryMinimize3();
     }
 }

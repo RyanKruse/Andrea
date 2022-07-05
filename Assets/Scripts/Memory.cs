@@ -80,7 +80,12 @@ public class Memory : UdonSharpBehaviour
     [SerializeField] private TextAsset[] _28_Block;
     [SerializeField] private TextAsset[] _29_Text;
     [SerializeField] private TextAsset[] _29_Block;
+    [SerializeField] private TextAsset[] _30_Text;
+    [SerializeField] private TextAsset[] _30_Block;
+    [SerializeField] private TextAsset[] _31_Text;
+    [SerializeField] private TextAsset[] _31_Block;
     [SerializeField] private TextAsset[][] _TextAssetList;
+    [SerializeField] private Button[] _BookButtonList;
 
     public void PopulateTextAssetList()
     {
@@ -115,6 +120,8 @@ public class Memory : UdonSharpBehaviour
             _27_Text, _27_Block,
             _28_Text, _28_Block,
             _29_Text, _29_Block,
+            _30_Text, _30_Block,
+            _31_Text, _31_Block,
         };
     }
 
@@ -123,34 +130,36 @@ public class Memory : UdonSharpBehaviour
         return _TextAssetList[compilerIndex * 2 + Convert.ToInt32(!isText)];
     }
 
-    public void _00_Function() { Andrea.CalibrateMemory(0); }
-    public void _01_Function() { Andrea.CalibrateMemory(1); }
-    public void _02_Function() { Andrea.CalibrateMemory(2); }
-    public void _03_Function() { Andrea.CalibrateMemory(3); }
-    public void _04_Function() { Andrea.CalibrateMemory(4); }
-    public void _05_Function() { Andrea.CalibrateMemory(5); }
-    public void _06_Function() { Andrea.CalibrateMemory(6); }
-    public void _07_Function() { Andrea.CalibrateMemory(7); }
-    public void _08_Function() { Andrea.CalibrateMemory(8); }
-    public void _09_Function() { Andrea.CalibrateMemory(9); }
-    public void _10_Function() { Andrea.CalibrateMemory(10); }
-    public void _11_Function() { Andrea.CalibrateMemory(11); }
-    public void _12_Function() { Andrea.CalibrateMemory(12); }
-    public void _13_Function() { Andrea.CalibrateMemory(13); }
-    public void _14_Function() { Andrea.CalibrateMemory(14); }
-    public void _15_Function() { Andrea.CalibrateMemory(15); }
-    public void _16_Function() { Andrea.CalibrateMemory(16); }
-    public void _17_Function() { Andrea.CalibrateMemory(17); }
-    public void _18_Function() { Andrea.CalibrateMemory(18); }
-    public void _19_Function() { Andrea.CalibrateMemory(19); }
-    public void _20_Function() { Andrea.CalibrateMemory(20); }
-    public void _21_Function() { Andrea.CalibrateMemory(21); }
-    public void _22_Function() { Andrea.CalibrateMemory(22); }
-    public void _23_Function() { Andrea.CalibrateMemory(23); }
-    public void _24_Function() { Andrea.CalibrateMemory(24); }
-    public void _25_Function() { Andrea.CalibrateMemory(25); }
-    public void _26_Function() { Andrea.CalibrateMemory(26); }
-    public void _27_Function() { Andrea.CalibrateMemory(27); }
-    public void _28_Function() { Andrea.CalibrateMemory(28); }
-    public void _29_Function() { Andrea.CalibrateMemory(29); }
+    public void _00_Function() { if (_BookButtonList[0].IsInteractable()) Andrea.CalibrateMemory(0); }
+    public void _01_Function() { if (_BookButtonList[1].IsInteractable()) Andrea.CalibrateMemory(1); }
+    public void _02_Function() { if (_BookButtonList[2].IsInteractable()) Andrea.CalibrateMemory(2); }
+    public void _03_Function() { if (_BookButtonList[3].IsInteractable()) Andrea.CalibrateMemory(3); }
+    public void _04_Function() { if (_BookButtonList[4].IsInteractable()) Andrea.CalibrateMemory(4); }
+    public void _05_Function() { if (_BookButtonList[5].IsInteractable()) Andrea.CalibrateMemory(5); }
+    public void _06_Function() { if (_BookButtonList[6].IsInteractable()) Andrea.CalibrateMemory(6); }
+    public void _07_Function() { if (_BookButtonList[7].IsInteractable()) Andrea.CalibrateMemory(7); }
+    public void _08_Function() { if (_BookButtonList[8].IsInteractable()) Andrea.CalibrateMemory(8); }
+    public void _09_Function() { if (_BookButtonList[9].IsInteractable()) Andrea.CalibrateMemory(9); }
+    public void _10_Function() { if (_BookButtonList[10].IsInteractable()) Andrea.CalibrateMemory(10); }
+    public void _11_Function() { if (_BookButtonList[11].IsInteractable()) Andrea.CalibrateMemory(11); }
+    public void _12_Function() { if (_BookButtonList[12].IsInteractable()) Andrea.CalibrateMemory(12); }
+    public void _13_Function() { if (_BookButtonList[13].IsInteractable()) Andrea.CalibrateMemory(13); }
+    public void _14_Function() { if (_BookButtonList[14].IsInteractable()) Andrea.CalibrateMemory(14); }
+    public void _15_Function() { if (_BookButtonList[15].IsInteractable()) Andrea.CalibrateMemory(15); }
+    public void _16_Function() { if (_BookButtonList[16].IsInteractable()) Andrea.CalibrateMemory(16); }
+    public void _17_Function() { if (_BookButtonList[17].IsInteractable()) Andrea.CalibrateMemory(17); }
+    public void _18_Function() { if (_BookButtonList[18].IsInteractable()) Andrea.CalibrateMemory(18); }
+    public void _19_Function() { if (_BookButtonList[19].IsInteractable()) Andrea.CalibrateMemory(19); }
+    public void _20_Function() { if (_BookButtonList[20].IsInteractable()) Andrea.CalibrateMemory(20); }
+    public void _21_Function() { if (_BookButtonList[21].IsInteractable()) Andrea.CalibrateMemory(21); }
+    public void _22_Function() { if (_BookButtonList[22].IsInteractable()) Andrea.CalibrateMemory(22); }
+    public void _23_Function() { if (_BookButtonList[23].IsInteractable()) Andrea.CalibrateMemory(23); }
+    public void _24_Function() { if (_BookButtonList[24].IsInteractable()) Andrea.CalibrateMemory(24); }
+    public void _25_Function() { if (_BookButtonList[25].IsInteractable()) Andrea.CalibrateMemory(25); }
+    public void _26_Function() { if (_BookButtonList[26].IsInteractable()) Andrea.CalibrateMemory(26); }
+    public void _27_Function() { if (_BookButtonList[27].IsInteractable()) Andrea.CalibrateMemory(27); }
+    public void _28_Function() { if (_BookButtonList[28].IsInteractable()) Andrea.CalibrateMemory(28); }
+    public void _29_Function() { if (_BookButtonList[29].IsInteractable()) Andrea.CalibrateMemory(29); }
+    public void _30_Function() { if (_BookButtonList[30].IsInteractable()) Andrea.CalibrateMemory(30); }
+    public void _31_Function() { if (_BookButtonList[31].IsInteractable()) Andrea.CalibrateMemory(31); }
 }

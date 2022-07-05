@@ -22,12 +22,30 @@ Save 20 mb on world download size by removing all fallbacks from text using Noto
 
 ----------------------------------------
 
-TODO:
-Turn those sprites into images.
-Rotate arrow buttons.
-Button on catalog title headers. 
-Clicking on one should collapse all the others (beginning has edge case since all are not minimized at once).
-Rest - Screen Saver button after getting tired of reading.
+Andrea 4 Features
+	- Page increments use sliding page animations.
+	- Finger-touch sensitivity to increment pages.
+
+VR TODO:
+	- Toggle Grip (Lerped Screen Saver When Ungripped [Time, Loc, Title]).
+	- Light & Dark Mode (Default Light) -> Light had 219/217/214 Background, 255/255/255 Font
+	- Remove Times and Avenir Fonts.
+	- Swap increments when hand swap.
+	- Smooth lerp transform.
+	- Joystick increments page forward or backwards.
+	- Maybe disable the trigger button entirely?
+	- Tips Tab (Font Clarity, GUI, Tutorial).
+	- Loading Screen (On Book Selection).
+	- Lazer-cursor sensitivity to increment pages (Show Icon).
+	- Clear Unnecessary Text, Coloring, and Icons from Reading Screen.
+	- Remove Grey Bar (Was 149/149/149 Color).
+
+
+
+
+Home page can probably contain more details, and even have the top and bottom part thicker grey (149/149/149 color).
+Top tab is actually a button - tap to display navigation, return to menu, text format, break time, and stats. 
+Pressing bottom loc changes visibility. 
 
 Networking & Network Lock. 
 WTF? PopulateStyleSheet in Compiler can utilize Andrea's code? Can skip parallel code logistics.
@@ -36,6 +54,9 @@ Scrolling too fast skips the clones (shows a blank screen loading in new block).
 Scroll bar on main page (works in VR).
 Some sort of break button.
 
+Slightly reduce side lengths of grip bards.
+Slight pixile fighting on edges of Andrea tablet screen (Z-axis slight shift.).
+Changing to font size large on first page of block actually sent me back to previous block 2/3th of way through it. Left click goes back!
 Something broken with images around Loc 785, Loc 1325, 2973 re-add paragraphs? in 7 Habits.
 Loc 1960, Loc 2364, 2729, 3099, 3111, 4419, 5107, 5698 is strange on end clipping (wide text).
 Loc 6276 needs to be broken up (huge word combo)
@@ -43,16 +64,13 @@ Quotes from questions asked on last chapters needs to be consistent in interview
 Loc 6538 doesn't cut correctly?
 Very last block doesn't load - errors out.
 
-Re-add the proof-of-concept GUI. Allow rolling. 
 	
 Changing font size and type snaps to closest Loc.
 	Functions ChangeFontSize and ChangeFontType.
 
-Format all 16 books. Skip foreign language books.
 
 Discord community bottom left?
 Andrea 3 bottom right?
-
 
 ----------------------------------------
 
@@ -77,11 +95,12 @@ Category 1 - Communication Skills:
 	Influence
 	Social Skills Guidebook
 	Quiet
+	**The Highly-Sensitive-Person**
 
 Category 2 - Financial Independence:
 
 Category 4 - Health & Wellness:
-	Autism (The Highly-Sensitive-Person)
+	Game Addiction (Hooked On Games)
 	Porn Addiction (Your Brain On Porn)
 	Food addiction (Fat Chance)
 	Alcohol Addiction (This Naked Mind)
