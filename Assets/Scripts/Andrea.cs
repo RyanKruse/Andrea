@@ -49,6 +49,8 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private GameObject _confirmationMenuGameObject;
     [SerializeField] private GameObject _optionsMenuGameObject;
     [SerializeField] private GameObject _backButtonGameObject;
+    [SerializeField] private GameObject _rightHandGameObject;
+    [SerializeField] private GameObject _leftHandGameObject;
     [SerializeField] private GameObject _categoryGameObject0;
     [SerializeField] private GameObject _categoryGameObject1;
     [SerializeField] private GameObject _categoryGameObject2;
@@ -58,6 +60,8 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private GameObject _minimizeButtonGameObject1;
     [SerializeField] private GameObject _minimizeButtonGameObject2;
     [SerializeField] private GameObject _minimizeButtonGameObject3;
+    [SerializeField] private GameObject _miscsGameObject;
+    [SerializeField] private GameObject _screenGameObject;
     [SerializeField] private TextAsset _styleSheetTextAsset;
     [SerializeField] private TextMeshProUGUI _helveticaTMP;
     [SerializeField] private TextMeshProUGUI _helveticaCloneTMP;
@@ -128,7 +132,11 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private bool _isHaltPageTurn;
     [SerializeField] private bool _isRightTriggerActive;
     [SerializeField] private bool _isLeftTriggerActive;
+    [SerializeField] private bool _isRightGripActive;
+    [SerializeField] private bool _isLeftGripActive;
+    [SerializeField] private bool _isRightHandGripActive;
     [SerializeField] private bool _isOverflowAuditDefinePage;
+    [SerializeField] private bool _isTogglePickedUp;
     [SerializeField] private bool _isStringRichText;
     [SerializeField] private bool _isCategoryLerp0;
     [SerializeField] private bool _isCategoryLerp1;
@@ -165,6 +173,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private Vector3 _categoryVectorStart2;
     [SerializeField] private Vector3 _categoryVectorStart3;
     [SerializeField] private Vector3 _categoryVectorStart4;
+    [SerializeField] private Vector3 _previousRightHandPosition;
 
 
     // JUNK VARIABLES:
@@ -252,6 +261,7 @@ public class Andrea : UdonSharpBehaviour
 
     private void DefineMainVariables()
     {
+        _rightHandGameObject.transform.SetParent(null);
         if (_isVRSettingsOverride && Networking.LocalPlayer.IsUserInVR())
         {
             _defaultFontSizeIndex = 2;
@@ -909,6 +919,18 @@ public class Andrea : UdonSharpBehaviour
 
     private void Update()
     {
+
+        GripInputLogistics();
+
+        if (_miscsGameObject.GetComponent<BoxCollider>() != null)
+        {
+            _miscsGameObject.GetComponent<BoxCollider>().isTrigger = true;
+        }
+        if (_screenGameObject.GetComponent<BoxCollider>() != null)
+        {
+            _screenGameObject.GetComponent<BoxCollider>().isTrigger = true;
+        }
+
         // Process rich-text overflow.
         if (_overflowPageIndex >= 0)
         {
@@ -980,8 +1002,101 @@ public class Andrea : UdonSharpBehaviour
         }
     }
 
+    private void GripInputLogistics()
+    {
+        // Picking up tablet and releasing grip, while having it still toggled to hand, is huge violation of expectation. 
+
+        if (Networking.LocalPlayer != null && !Networking.LocalPlayer.IsUserInVR()) return;
+        // Hand Transform.
+        // FINGER_SHADOW.transform.position = LOCAL_PLAYER.GetBonePosition(fingerBone);
+        // account for difference in chest.
+        // Switch from trigger to joystick controls. (I use trigger for too many things unconsciously changing book pages).
+        // Joystick controls up and down are not utilized and accessible on Steam VR and all other headsets.
+        // The motion of "swipping down" on a joystick that swipes the page is high fidelity. Can even inch the page down slightly as users tug on the joystick.
+        // Frees up all other VR inputs. 
+        _rightHandGameObject.transform.position = Vector3.Slerp(_previousRightHandPosition, Networking.LocalPlayer.GetBonePosition(HumanBodyBones.RightHand), Time.deltaTime * 8f);
+        _rightHandGameObject.transform.rotation = Quaternion.Slerp(_rightHandGameObject.transform.rotation, Networking.LocalPlayer.GetBoneRotation(HumanBodyBones.RightHand), Time.deltaTime * 8f);
+        _previousRightHandPosition = _rightHandGameObject.transform.position;
+
+        if (_candleVRCPickup.IsHeld && _isTogglePickedUp == false)
+        {
+            _rightHandGameObject.transform.SetParent(null);
+            _candleVRCPickup.Drop();
+            _candleVRCPickup.pickupable = false;
+            _candleGameObject.transform.SetParent(_rightHandGameObject.transform);
+            _isRightGripActive = true;
+            return;
+        }
+
+        if (Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") <= 0.26f)  // _isRightGripActive // Toggle grip logistics.
+        {
+            // _isRightGripActive = false;  // Toggle grip logistics.
+            if (_candleGameObject.transform.parent == _rightHandGameObject.transform)
+            {
+                _candleVRCPickup.pickupable = true;
+                _candleGameObject.transform.SetParent(null);
+                // _isTogglePickedUp = true;  // Toggle grip logistics.
+                // This is when you remove the screen saver.
+            }
+        }
+        /*
+        // Toggle grip logistics.
+        else if (!_isRightGripActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") > 0.28f) // && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.28f)
+        {
+            _isRightGripActive = true;
+            if (_isTogglePickedUp && _candleGameObject.transform.parent == _rightHandGameObject.transform)
+            {
+                _isTogglePickedUp = false;
+                _candleVRCPickup.pickupable = true;
+                _candleGameObject.transform.SetParent(null);
+                return;
+            }
+
+        }
+        */
+        /*
+        if (_isBookStaged  && _isTogglePickedUp)
+        {
+            // Disable active controls if trigger is not pressed hard enough.
+            if (_isRightTriggerActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") <= 0.26f)
+            {
+                _isRightTriggerActive = false;
+            }
+
+            // Enable active controls is trigger is pressed hard enough.
+            else if (!_isRightTriggerActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.58f && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") <= 0.01f)  // Larger button push incase of double push.
+            {
+                _isRightTriggerActive = true;
+                if (_isTogglePickedUp)
+                {
+                    _mainPageIndex++;
+                    DefinePage(_mainPageIndex, true);
+                }
+            }
+
+            // Disable active controls if trigger is not pressed hard enough.
+            if (_isRightHandGripActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") <= 0.26f)
+            {
+                _isRightHandGripActive = false;
+            }
+
+            // Enable active controls is trigger is pressed hard enough.
+            else if (!_isRightHandGripActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") > 0.58f && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") <= 0.01f)
+            {
+                _isRightHandGripActive = true;
+                if (_isTogglePickedUp)
+                {
+                    _mainPageIndex--;
+                    DefinePage(_mainPageIndex, true);
+                }
+            }
+        }
+        */
+    }
+
     private void ProcessInputs()
     {
+
         // Do not turn page if another menu is active.
         if (_optionsMenuGameObject.activeSelf || _mainMenuGameObject.activeSelf || _confirmationMenuGameObject.activeSelf) return;
 
@@ -996,6 +1111,11 @@ public class Andrea : UdonSharpBehaviour
             _mainPageIndex--;
             DefinePage(_mainPageIndex, false);
         }
+
+
+        // return;
+
+
 
         // VR input for turning page left or right.
         if (Networking.LocalPlayer.IsUserInVR())
@@ -1020,7 +1140,7 @@ public class Andrea : UdonSharpBehaviour
                 (_mainTurnPageIndex == 1 && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") >= 0.28f && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") >= 0.28f)))
             {
                 _isRightTriggerActive = true;
-                if (_candleVRCPickup.IsHeld)
+                if (_candleGameObject.transform.parent == _rightHandGameObject.transform)
                 {
                     _mainPageIndex++;
                     DefinePage(_mainPageIndex, true);
@@ -1031,7 +1151,7 @@ public class Andrea : UdonSharpBehaviour
                 (_mainTurnPageIndex == 1 && Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryHandTrigger") >= 0.28f && Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryIndexTrigger") >= 0.28f)))
             {
                 _isLeftTriggerActive = true;
-                if (_candleVRCPickup.IsHeld)
+                if (_candleGameObject.transform.parent == _rightHandGameObject.transform)
                 {
                     _mainPageIndex--;
                     DefinePage(_mainPageIndex, false);

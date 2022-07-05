@@ -28,7 +28,7 @@ Andrea 4 Features
 
 VR TODO:
 	- Toggle Grip (Lerped Screen Saver When Ungripped [Time, Loc, Title]).
-	- Light & Dark Mode (Default Light) -> Light had 219/217/214 Background, 255/255/255 Font
+	- Light & Dark Mode (Default Light) -> Light had 219/217/214 Background, 0/0/0 Font | Dark had 24/26/27 Background, 177/175/172 Font
 	- Remove Times and Avenir Fonts.
 	- Swap increments when hand swap.
 	- Smooth lerp transform.
@@ -42,7 +42,7 @@ VR TODO:
 
 
 
-
+Buttons on home page headers slightly overlap the top ones.
 Home page can probably contain more details, and even have the top and bottom part thicker grey (149/149/149 color).
 Top tab is actually a button - tap to display navigation, return to menu, text format, break time, and stats. 
 Pressing bottom loc changes visibility. 
