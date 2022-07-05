@@ -24,21 +24,21 @@ Save 20 mb on world download size by removing all fallbacks from text using Noto
 
 Andrea 4 Features
 	- Page increments use sliding page animations.
-	- Finger-touch sensitivity to increment pages.
 
 VR TODO:
+	- Screen saver is... okay? Need to use the Header lerp method with smoothing timer variable. 
 	- Toggle Grip (Lerped Screen Saver When Ungripped [Time, Loc, Title]).
 	- Light & Dark Mode (Default Light) -> Light had 219/217/214 Background, 0/0/0 Font | Dark had 24/26/27 Background, 177/175/172 Font
 	- Remove Times and Avenir Fonts.
-	- Swap increments when hand swap.
-	- Smooth lerp transform.
-	- Joystick increments page forward or backwards.
-	- Maybe disable the trigger button entirely?
+	- Other hand logistics.
 	- Tips Tab (Font Clarity, GUI, Tutorial).
-	- Loading Screen (On Book Selection).
-	- Lazer-cursor sensitivity to increment pages (Show Icon).
 	- Clear Unnecessary Text, Coloring, and Icons from Reading Screen.
 	- Remove Grey Bar (Was 149/149/149 Color).
+
+		// Polish screen saver.
+	    // Account for differences in head.!!!
+        // Disable tablet when not being held.
+        // Check scale logistics again.
 
 
 
@@ -67,7 +67,7 @@ Very last block doesn't load - errors out.
 	
 Changing font size and type snaps to closest Loc.
 	Functions ChangeFontSize and ChangeFontType.
-
+	Slight Z fighting.
 
 Discord community bottom left?
 Andrea 3 bottom right?

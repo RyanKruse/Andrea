@@ -48,6 +48,8 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private GameObject _mainMenuGameObject;
     [SerializeField] private GameObject _confirmationMenuGameObject;
     [SerializeField] private GameObject _optionsMenuGameObject;
+    [SerializeField] private GameObject _screenSaverScreenGameObject;
+    [SerializeField] private GameObject _screenSaverBackgroundGameObject;
     [SerializeField] private GameObject _backButtonGameObject;
     [SerializeField] private GameObject _rightHandGameObject;
     [SerializeField] private GameObject _leftHandGameObject;
@@ -130,6 +132,8 @@ public class Andrea : UdonSharpBehaviour
     [Header("Global Workflow Data Variables:")]
     [SerializeField] private bool _isNoDoubleExecute;
     [SerializeField] private bool _isHaltPageTurn;
+    [SerializeField] private bool _isUpTriggerActive;
+    [SerializeField] private bool _isDownTriggerActive;
     [SerializeField] private bool _isRightTriggerActive;
     [SerializeField] private bool _isLeftTriggerActive;
     [SerializeField] private bool _isRightGripActive;
@@ -147,6 +151,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private bool _isCategoryMinimized2;
     [SerializeField] private bool _isCategoryMinimized3;
     [SerializeField] private bool _isCategoryMinimized4;
+    [SerializeField] private bool _isScreenSaverHidden;
     [SerializeField] private bool[] _richTextBoolList;
     [SerializeField] private int _cloneTime;
     [SerializeField] private int _overflowPageIndex;
@@ -174,6 +179,9 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private Vector3 _categoryVectorStart3;
     [SerializeField] private Vector3 _categoryVectorStart4;
     [SerializeField] private Vector3 _previousRightHandPosition;
+    [SerializeField] private Vector3 _previousPlayerPosition;
+    [SerializeField] private Vector3 _screenSaverBackgroundShown;
+    [SerializeField] private Vector3 _screenSaverBackgroundHidden;
 
 
     // JUNK VARIABLES:
@@ -300,6 +308,8 @@ public class Andrea : UdonSharpBehaviour
         _categoryVectorTarget2 = _categoryVectorDefault2;
         _categoryVectorTarget3 = _categoryVectorDefault3;
         _categoryVectorTarget4 = _categoryVectorDefault4;
+        _screenSaverBackgroundHidden = _screenSaverBackgroundGameObject.transform.localPosition;
+        _screenSaverBackgroundShown = _screenSaverBackgroundHidden + new Vector3(0f, 1300f, 0f);
         MinimizeCategories();
         HomeInfo();
     }
@@ -1004,44 +1014,47 @@ public class Andrea : UdonSharpBehaviour
 
     private void GripInputLogistics()
     {
-        // Picking up tablet and releasing grip, while having it still toggled to hand, is huge violation of expectation. 
+        if (_isScreenSaverHidden)
+        {
+            _screenSaverBackgroundGameObject.transform.localPosition = Vector3.Slerp(_screenSaverBackgroundGameObject.transform.localPosition, _screenSaverBackgroundHidden, Time.deltaTime * 1f);
+        }
+        else
+        {
+            _screenSaverBackgroundGameObject.transform.localPosition = Vector3.Slerp(_screenSaverBackgroundGameObject.transform.localPosition, _screenSaverBackgroundShown, Time.deltaTime * 1f);
+        }
 
         if (Networking.LocalPlayer != null && !Networking.LocalPlayer.IsUserInVR()) return;
         // Hand Transform.
         // FINGER_SHADOW.transform.position = LOCAL_PLAYER.GetBonePosition(fingerBone);
-        // account for difference in chest.
-        // Switch from trigger to joystick controls. (I use trigger for too many things unconsciously changing book pages).
-        // Joystick controls up and down are not utilized and accessible on Steam VR and all other headsets.
-        // The motion of "swipping down" on a joystick that swipes the page is high fidelity. Can even inch the page down slightly as users tug on the joystick.
-        // Frees up all other VR inputs. 
-        _rightHandGameObject.transform.position = Vector3.Slerp(_previousRightHandPosition, Networking.LocalPlayer.GetBonePosition(HumanBodyBones.RightHand), Time.deltaTime * 8f);
-        _rightHandGameObject.transform.rotation = Quaternion.Slerp(_rightHandGameObject.transform.rotation, Networking.LocalPlayer.GetBoneRotation(HumanBodyBones.RightHand), Time.deltaTime * 8f);
+        _rightHandGameObject.transform.position = Vector3.Slerp(_previousRightHandPosition + (Networking.LocalPlayer.GetPosition() - _previousPlayerPosition), Networking.LocalPlayer.GetBonePosition(HumanBodyBones.RightHand), Time.deltaTime * 7f);
+        _rightHandGameObject.transform.rotation = Quaternion.Slerp(_rightHandGameObject.transform.rotation, Networking.LocalPlayer.GetBoneRotation(HumanBodyBones.RightHand), Time.deltaTime * 7f);
         _previousRightHandPosition = _rightHandGameObject.transform.position;
+        _previousPlayerPosition = Networking.LocalPlayer.GetPosition(); 
 
         if (_candleVRCPickup.IsHeld && _isTogglePickedUp == false)
         {
-            _rightHandGameObject.transform.SetParent(null);
             _candleVRCPickup.Drop();
             _candleVRCPickup.pickupable = false;
             _candleGameObject.transform.SetParent(_rightHandGameObject.transform);
             _isRightGripActive = true;
+            _isScreenSaverHidden = true;
             return;
         }
 
-        if (Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") <= 0.26f)  // _isRightGripActive // Toggle grip logistics.
+        if (_isRightGripActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") <= 0.24f) // Toggle grip logistics.
         {
-            // _isRightGripActive = false;  // Toggle grip logistics.
+            _isRightGripActive = false;  // Toggle grip logistics.
             if (_candleGameObject.transform.parent == _rightHandGameObject.transform)
             {
-                _candleVRCPickup.pickupable = true;
-                _candleGameObject.transform.SetParent(null);
-                // _isTogglePickedUp = true;  // Toggle grip logistics.
+                // _candleVRCPickup.pickupable = true;  // Single Grip Logistics.
+                // _candleGameObject.transform.SetParent(null);  // Single Grip Logistics.
+                _isTogglePickedUp = true;  // Toggle grip logistics.
                 // This is when you remove the screen saver.
             }
         }
-        /*
+        
         // Toggle grip logistics.
-        else if (!_isRightGripActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") > 0.28f) // && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.28f)
+        else if (!_isRightGripActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") > 0.28f)
         {
             _isRightGripActive = true;
             if (_isTogglePickedUp && _candleGameObject.transform.parent == _rightHandGameObject.transform)
@@ -1049,11 +1062,42 @@ public class Andrea : UdonSharpBehaviour
                 _isTogglePickedUp = false;
                 _candleVRCPickup.pickupable = true;
                 _candleGameObject.transform.SetParent(null);
+                _isScreenSaverHidden = false;
+                // _screenSaverBackgroundGameObject.transform.localPosition = Vector3.Slerp(_screenSaverBackgroundGameObject.transform.localPosition, _screenSaverBackgroundShown, Time.deltaTime * 7f);
                 return;
             }
-
         }
-        */
+
+        if (!_isBookStaged) return;
+
+        if (_isUpTriggerActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryThumbstickVertical") <= 0.75f)
+        {
+            _isUpTriggerActive = false;
+        }
+        else if (!_isUpTriggerActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryThumbstickVertical") > 0.75f)
+        {
+            _isUpTriggerActive = true;
+            if (_candleGameObject.transform.parent == _rightHandGameObject.transform || true)
+            {
+                _mainPageIndex--;
+                DefinePage(_mainPageIndex, true);
+            }
+        }
+
+        else if (_isDownTriggerActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryThumbstickVertical") >= -0.75f)
+        {
+            _isDownTriggerActive = false;
+        }
+        else if (!_isDownTriggerActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryThumbstickVertical") < -0.75f)
+        {
+            _isDownTriggerActive = true;
+            if (_candleGameObject.transform.parent == _rightHandGameObject.transform || true)
+            {
+                _mainPageIndex++;
+                DefinePage(_mainPageIndex, true);
+            }
+        }
+
         /*
         if (_isBookStaged  && _isTogglePickedUp)
         {
@@ -1113,7 +1157,7 @@ public class Andrea : UdonSharpBehaviour
         }
 
 
-        // return;
+        return;
 
 
 
