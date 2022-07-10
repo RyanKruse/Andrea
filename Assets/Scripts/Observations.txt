@@ -1,31 +1,37 @@
 
 ----------------------------------------
 
-Language Packs & Fallbacks:
+Language Packs & Fallback Tips:
 
-If you see text not being displayed, then try swapping the language packs around or adding on more fallbacks.
-More fallbacks increase the download size for the prefab. The memory size of each language pack varies - choose only what's necessary.
-All fallbacks should be added to the Noto Sans and Noto Serif SDF files. These are the main language packs to handle fallbacks.
-There are several dozen language packs pre-downloaded. They are located in the Noto Sans Addons and Noto Serif Addons folders.
-Noto Sans has a more modern style of font. Noto Serif has a more traditional style of font.
+	- If you see text not being displayed, then try swapping the language packs around or adding on more fallbacks.
+	- More fallbacks increase the download size for the prefab. 
+    - The memory size of each language pack varies. Choose only what's necessary.
+	- All fallbacks should be added to the Noto Sans and Noto Serif SDF files. These language packs handle fallbacks.
+	- There are several dozen language packs pre-downloaded located in the Noto Sans Addons and Noto Serif Addons folders.
+	- Noto Sans has a more modern style of font. Noto Serif has a more traditional style of font.
 
-When modifying an SDF file, you may need to drag-and-drop the SDF files into the inspectors components again (where they are populated) to update them.
-Modifications include changing the fallbacks, atlas sizes, multi-atlas options, etc.
-Deleting an SDF file and recompiling a new one from the original font type file requires drag-and-drop into the inspectors components again.
-It also requires setting Atlas Width, Atlas Height, Multi-Atlas Textures, Clear Dynamic Data, and Resetting Fallbacks again.
+	- When modifying an SDF file, you may need to drag-and-drop the SDF files into the inspectors components again.
+	- Modifications include changing the fallbacks, atlas sizes, multi-atlas options, etc.
+	- Deleting an SDF file and recompiling a new one from the original font type file requires repopulation.
+	- Requires setting Atlas Width, Atlas Height, Multi-Atlas Textures, Clear Dynamic Data, and Resetting Fallbacks again.
 
-Do not rename font type files (.ttf, .otf) until the font SDF files (.asset) have been generated.
-Generating an font SDF file from a renamed font type file will create a mismatch and lead to run-time errors.
-Once the SDF file has been generated, it is safe to rename files (.ttf, .otf, .asset).
-You can generate a dynamic SDF file from a font type automatically by pressing CTRL + SHIFT + F12.
-Save 20 mb on world download size by removing all fallbacks from text using Noto Sans. When using compiler with books that have such texts, need to re-add them. 
+	- Do not rename font type files (.ttf, .otf) until the font SDF files (.asset) have been generated.
+	- Generating an font SDF file from a renamed font type file will create a mismatch and lead to run-time errors.
+	- Once the SDF file has been generated, it is safe to rename files (.ttf, .otf, .asset).
+	- You can generate a dynamic SDF file from a font type automatically by pressing CTRL + SHIFT + F12.
+	- Save 20 mb on world download size by removing all fallbacks from text using Noto Sans. 
+    - When using compiler with books that have such texts, need to re-add them. 
 
 ----------------------------------------
 
-Andrea 4 Features
-	- Page increments use sliding page animations.
+Oustanding Tasks:
 
-VR TODO:
+	- Fix Big Button.
+	- Walkthrough All Desktop Inputs.
+	- Multiple Screen Savers.
+	- Desktop Grid-Snap Rotation.
+	- 
+
 	- Screen saver is... okay? Need to use the Header lerp method with smoothing timer variable. 
 	- Toggle Grip (Lerped Screen Saver When Ungripped [Time, Loc, Title]).
 	- Light & Dark Mode (Default Light) -> Light had 219/217/214 Background, 0/0/0 Font | Dark had 24/26/27 Background, 177/175/172 Font
@@ -39,11 +45,11 @@ VR TODO:
 	    // Account for differences in head.!!!
         // Disable tablet when not being held.
         // Check scale logistics again.
+		// Remove return to home warning and preserve Andrea state.
 
+MAKE ALIVIA MADRIGAL IN VRCHAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+[Inspired: https://twitter.com/sora3_vrc/media]
 
-
-Buttons on home page headers slightly overlap the top ones.
-Home page can probably contain more details, and even have the top and bottom part thicker grey (149/149/149 color).
 Top tab is actually a button - tap to display navigation, return to menu, text format, break time, and stats. 
 Pressing bottom loc changes visibility. 
 
@@ -63,6 +69,7 @@ Loc 6276 needs to be broken up (huge word combo)
 Quotes from questions asked on last chapters needs to be consistent in interviews.
 Loc 6538 doesn't cut correctly?
 Very last block doesn't load - errors out.
+Options should be identical to YouTube mobile. 
 
 	
 Changing font size and type snaps to closest Loc.
@@ -75,6 +82,47 @@ Andrea 3 bottom right?
 ----------------------------------------
 
 General Home Page Structure:
+
+Category 0 - Personal Development [10]:
+	Atomic Habits
+X	The Subtle Art of Not Giving a F_ck
+X	7 Habits of Highly Effective People
+X	How to Win Friends and Influence People
+	Think And Grow Rich
+X	The Power of Habit
+	Grit
+	Deep Work
+	Mindset
+X	Social Skills Guidebook
+
+Category 1 - Classic Literature [10]:
+	1984
+	The Great Gatsby
+	The Catcher In The Rye
+	Crime and Punishment
+	Catch 22
+	The Adventures Of Tom
+	To Kill A Mockingbird
+	Pride and Prejudice
+	Lolita
+	The Grapes Of Wrath 
+
+Category 2 - Epic Novels [10]:
+	Harry Potter
+	The Lord Of The Rings
+	Dune
+	Atlas Shrugged
+	The Hunger Games
+	Ender's Game
+	Ready Player One
+	The Da Vinci Code
+	A Song Of Ice And Fire
+	The Hitchhiker's Guide To The Galaxy 
+
+Category 3 - VRChat Writers
+	Your Book Here
+
+	
 
 Category 0 - Personal Development:
 	7 Habits of Highly Effective People
@@ -144,3 +192,42 @@ I would like to offer a book to someone in the virtual space, to extend them the
 Maybe movies, TV shows, music, social media, and the plethora of content on the internet may drown up any interest in books.
 I'd like to make it as easy and accessible as possible to those willing to give their time to reading.
 And maybe I can help someone get through their childhood and grow up to be a happy, successful, well-minded adult. 
+
+
+Andrea
+
+Put books in correct order, just need to define where the starting index begins. Metadata is block 0. When a person opens a book, can skip past ToC and Acknowledgements.
+Laser point and click to change pages. High fidelity and used already in VRChat systems. Button locations similar to Kindle.
+Tap to turn. An interaction of tapping the corner area turns the page. Alternative to point and click.
+5 point tablet scale. Slider with 5 bullet snapping points to adjust size. 2 additional scales can be smaller.
+Grip bars on the side. Grip button once to snap to hand bone. Lerp rotation. No blue highlighting or buzz. Trigger to turn page. Other hand can tap to go back, tap to go forward, or point and click.
+Interchange top center with title and chapter header.
+Slight buzz when tapping or clicking.
+&amp error in HTWF Loc1100.
+Clicking on top center changes.
+Book title.
+Block title.
+Invisible.
+Clicking on bottom bar changes.
+Loc #.
+Page #.
+Time Remaining.
+Invisible.
+GUI System.
+Pointer hovering above buttons highlights them.
+Thicker, bolder text types.
+Transparency slider.
+Brightness slider.
+Scale slider.
+Font size slider. 
+Font type button.
+GUI Buttons.
+Home.
+Compass.
+Pinwheel.
+YouTube Style.
+
+
+
+
+

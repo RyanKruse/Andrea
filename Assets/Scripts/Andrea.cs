@@ -50,6 +50,8 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private GameObject _optionsMenuGameObject;
     [SerializeField] private GameObject _screenSaverScreenGameObject;
     [SerializeField] private GameObject _screenSaverBackgroundGameObject;
+    [SerializeField] private GameObject _bigButtonScreenGameObject;
+    [SerializeField] private GameObject _catalogButtonGameObject;
     [SerializeField] private GameObject _backButtonGameObject;
     [SerializeField] private GameObject _rightHandGameObject;
     [SerializeField] private GameObject _leftHandGameObject;
@@ -64,6 +66,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private GameObject _minimizeButtonGameObject3;
     [SerializeField] private GameObject _miscsGameObject;
     [SerializeField] private GameObject _screenGameObject;
+    [SerializeField] private GameObject _screenPhysicalGameObject;
     [SerializeField] private TextAsset _styleSheetTextAsset;
     [SerializeField] private TextMeshProUGUI _helveticaTMP;
     [SerializeField] private TextMeshProUGUI _helveticaCloneTMP;
@@ -93,6 +96,11 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private TextMeshProUGUI[] _fontTypeTextList;
     [SerializeField] private TextMeshProUGUI[] _tabletScaleTextList;
     [SerializeField] private TextMeshProUGUI[] _tabletOrientationTextList;
+    [SerializeField] private Sprite[] _loadingScreenSpriteList;
+    [SerializeField] private Material _materialGreyLight;
+    [SerializeField] private Material _materialGreyMedium;
+    [SerializeField] private Material _materialGreyDark;
+    [SerializeField] private Image _screenSaverHeaderImage;
 
     [Header("Fixed Data Variables From Field:")]
     [SerializeField] private int _cloneDelay;
@@ -130,6 +138,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private TextMeshProUGUI _mainPreviousCloneTMP;
 
     [Header("Global Workflow Data Variables:")]
+    [SerializeField] private bool _isShowBar;
     [SerializeField] private bool _isNoDoubleExecute;
     [SerializeField] private bool _isHaltPageTurn;
     [SerializeField] private bool _isUpTriggerActive;
@@ -184,6 +193,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private Vector3 _screenSaverBackgroundHidden;
 
 
+
     // JUNK VARIABLES:
     [SerializeField] private int _adjustedLocationHeight;
     [SerializeField] private int _adjustedMaxHeight;
@@ -191,6 +201,13 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private float timer1;
     [SerializeField] private float timer2;
     [SerializeField] private float timer3;
+
+    [SerializeField] private float timerScreenSaver;
+    [SerializeField] private bool _isScreenSaverLerp;
+    [SerializeField] private bool _isScreenSaverMinimized;
+    [SerializeField] private Vector3 _screenSaverVectorDefault;
+    [SerializeField] private Vector3 _screenSaverVectorTarget;
+    [SerializeField] private Vector3 _screenSaverVectorStart;
 
     private void Start()
     {
@@ -279,7 +296,7 @@ public class Andrea : UdonSharpBehaviour
         _mainMenuGameObject.SetActive(true);
         _confirmationMenuGameObject.SetActive(false);
         _optionsMenuGameObject.SetActive(false);
-        _backButtonGameObject.SetActive(false);
+        // _backButtonGameObject.SetActive(false);
         _topLeftTMP.gameObject.SetActive(false);
         _topLeftCloneTMP.gameObject.SetActive(false);
         _mainTextList = Memory.GetTextAsset(_defaultBookIndex, true);
@@ -299,6 +316,7 @@ public class Andrea : UdonSharpBehaviour
         _categoryVectorDefault2 = _categoryGameObject2.transform.localPosition;
         _categoryVectorDefault3 = _categoryGameObject3.transform.localPosition;
         _categoryVectorDefault4 = _categoryGameObject4.transform.localPosition;
+        _screenSaverVectorDefault = _screenSaverBackgroundGameObject.transform.localPosition;
         _categoryGameObject1.transform.SetParent(_categoryGameObject0.transform);
         _categoryGameObject2.transform.SetParent(_categoryGameObject1.transform);
         _categoryGameObject3.transform.SetParent(_categoryGameObject2.transform);
@@ -308,8 +326,10 @@ public class Andrea : UdonSharpBehaviour
         _categoryVectorTarget2 = _categoryVectorDefault2;
         _categoryVectorTarget3 = _categoryVectorDefault3;
         _categoryVectorTarget4 = _categoryVectorDefault4;
+        _screenSaverVectorTarget = _screenSaverVectorDefault;
         _screenSaverBackgroundHidden = _screenSaverBackgroundGameObject.transform.localPosition;
         _screenSaverBackgroundShown = _screenSaverBackgroundHidden + new Vector3(0f, 1300f, 0f);
+        ScreenSaverStart();
         MinimizeCategories();
         HomeInfo();
     }
@@ -322,9 +342,9 @@ public class Andrea : UdonSharpBehaviour
             _topCenterTMP.text = $"{_mainBlock.text.Substring(0, _mainBlock.text.IndexOf('\n'))}";
             _topCenterCloneTMP.text = _topCenterTMP.text;
             _mainMenuGameObject.SetActive(false);
-            _backButtonGameObject.SetActive(true);
-            _topLeftTMP.gameObject.SetActive(true);
-            _topLeftCloneTMP.gameObject.SetActive(true);
+            //_backButtonGameObject.SetActive(true);
+            //_topLeftTMP.gameObject.SetActive(true);
+            //_topLeftCloneTMP.gameObject.SetActive(true);
             _isOverflowAuditDefinePage = true;
         }
     }
@@ -959,6 +979,8 @@ public class Andrea : UdonSharpBehaviour
             LerpUpdate();
         }
 
+        LerpScreenSaver();
+
         // Process clone timer.
         if (_mainTMP != null)
         {
@@ -1014,6 +1036,7 @@ public class Andrea : UdonSharpBehaviour
 
     private void GripInputLogistics()
     {
+        /*
         if (_isScreenSaverHidden)
         {
             _screenSaverBackgroundGameObject.transform.localPosition = Vector3.Slerp(_screenSaverBackgroundGameObject.transform.localPosition, _screenSaverBackgroundHidden, Time.deltaTime * 1f);
@@ -1022,6 +1045,7 @@ public class Andrea : UdonSharpBehaviour
         {
             _screenSaverBackgroundGameObject.transform.localPosition = Vector3.Slerp(_screenSaverBackgroundGameObject.transform.localPosition, _screenSaverBackgroundShown, Time.deltaTime * 1f);
         }
+        */
 
         if (Networking.LocalPlayer != null && !Networking.LocalPlayer.IsUserInVR()) return;
         // Hand Transform.
@@ -1079,8 +1103,11 @@ public class Andrea : UdonSharpBehaviour
             _isUpTriggerActive = true;
             if (_candleGameObject.transform.parent == _rightHandGameObject.transform || true)
             {
-                _mainPageIndex--;
-                DefinePage(_mainPageIndex, true);
+                if (_isScreenSaverHidden)
+                {
+                    _mainPageIndex--;
+                    DefinePage(_mainPageIndex, true);
+                }
             }
         }
 
@@ -1093,8 +1120,11 @@ public class Andrea : UdonSharpBehaviour
             _isDownTriggerActive = true;
             if (_candleGameObject.transform.parent == _rightHandGameObject.transform || true)
             {
-                _mainPageIndex++;
-                DefinePage(_mainPageIndex, true);
+                if (_isScreenSaverHidden)
+                {
+                    _mainPageIndex++;
+                    DefinePage(_mainPageIndex, true);
+                }
             }
         }
 
@@ -1147,13 +1177,19 @@ public class Andrea : UdonSharpBehaviour
         // Desktop input for turning page left or right.
         if (!_isHaltPageTurn && Input.GetKeyDown("[3]") || Input.GetKey("[*]") || (Input.GetAxis("Mouse ScrollWheel") < 0f && _isScrollWheelActive))
         {
-            _mainPageIndex++;
-            DefinePage(_mainPageIndex, true);
+            if (_isScreenSaverHidden)
+            {
+                _mainPageIndex++;
+                DefinePage(_mainPageIndex, true);
+            }
         }
         else if (!_isHaltPageTurn && Input.GetKeyDown("[1]") || Input.GetKey("[/]") || (Input.GetAxis("Mouse ScrollWheel") > 0f && _isScrollWheelActive))
         {
-            _mainPageIndex--;
-            DefinePage(_mainPageIndex, false);
+            if (_isScreenSaverHidden)
+            {
+                _mainPageIndex--;
+                DefinePage(_mainPageIndex, false);
+            }
         }
 
 
@@ -1638,7 +1674,34 @@ public class Andrea : UdonSharpBehaviour
         }
         _mainBlockIndex = Mathf.Clamp(_mainBlockIndex, 0, _mainTextList.Length - 1);
         _isBookStaged = true;
+        _isShowBar = false;
+        _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyLight;
+        _backButtonGameObject.SetActive(false);
+        _catalogButtonGameObject.SetActive(false);
+        _topCenterCloneTMP.gameObject.SetActive(false);
+        _topCenterTMP.gameObject.SetActive(false);
+
+        _bigButtonScreenGameObject.SetActive(true);
+
         ExecuteCalibration();
+    }
+
+    public void BigButton()
+    {
+        if (!_backButtonGameObject.activeSelf)
+        {
+            _backButtonGameObject.SetActive(true);
+            _catalogButtonGameObject.SetActive(true);
+            _topCenterCloneTMP.gameObject.SetActive(true);
+            _topCenterTMP.gameObject.SetActive(true);
+        }
+        else
+        {
+            _backButtonGameObject.SetActive(false);
+            _catalogButtonGameObject.SetActive(false);
+            _topCenterCloneTMP.gameObject.SetActive(false);
+            _topCenterTMP.gameObject.SetActive(false);
+        }
     }
 
     public void BackButton()
@@ -1658,15 +1721,24 @@ public class Andrea : UdonSharpBehaviour
         {
             _confirmationMenuGameObject.SetActive(true);
         }
+        else if (_mainMenuGameObject.activeSelf && _isBookStaged == false)
+        {
+            if (_isScreenSaverHidden)
+            {
+                ScreenSaverClicked();
+            }
+        }
         else
         {
             _isBookStaged = false;
             _mainTMP.text = "";
             _mainCloneTMP.text = "";
             _mainMenuGameObject.SetActive(true);
-            _backButtonGameObject.SetActive(false);
+            _backButtonGameObject.SetActive(true);
+            _catalogButtonGameObject.SetActive(true);
             _topLeftTMP.gameObject.SetActive(false);
             _topLeftCloneTMP.gameObject.SetActive(false);
+            _bigButtonScreenGameObject.SetActive(false);
             HomeInfo();
         }
     }
@@ -1838,7 +1910,8 @@ public class Andrea : UdonSharpBehaviour
     {
         _mainMenuGameObject.SetActive(true);
         _confirmationMenuGameObject.SetActive(false);
-        _backButtonGameObject.SetActive(false);
+        _backButtonGameObject.SetActive(true);
+        _catalogButtonGameObject.SetActive(true);
         _topLeftTMP.gameObject.SetActive(false);
         _topLeftCloneTMP.gameObject.SetActive(false);
         BackButton();
@@ -1856,6 +1929,27 @@ public class Andrea : UdonSharpBehaviour
         _candleAudioSource.Play();
     }
 
+    private void ScreenSaverStart()
+    {
+        ScreenSaverClicked();
+        ScreenSaverClicked();
+        // _isScreenSaverHidden = false;
+
+    }
+
+    public void LerpScreenSaver()
+    {
+        if (_isScreenSaverLerp && timerScreenSaver > 0f)
+        {
+            _screenSaverBackgroundGameObject.transform.localPosition = Vector3.Lerp(_screenSaverVectorStart, _screenSaverVectorTarget, Mathf.SmoothStep(0.0f, 1.0f, Mathf.SmoothStep(0.0f, 1.0f, timerScreenSaver)));
+            if (timerScreenSaver >= 1)
+            {
+                _isScreenSaverLerp = false;
+            }
+            timerScreenSaver += Time.deltaTime * 0.35f;
+        }
+    }
+
     public void LerpUpdate()
     {
         if (_isCategoryLerp0 && timer0 > 0f)
@@ -1865,7 +1959,7 @@ public class Andrea : UdonSharpBehaviour
             {
                 _isCategoryLerp0 = false;
             }
-            timer0 += Time.deltaTime * 0.75f;
+            timer0 += Time.deltaTime * 0.50f;
         }
         if (_isCategoryLerp1 && timer1 > 0f)
         {
@@ -1874,7 +1968,7 @@ public class Andrea : UdonSharpBehaviour
             {
                 _isCategoryLerp1 = false;
             }
-            timer1 += Time.deltaTime * 0.75f;
+            timer1 += Time.deltaTime * 0.50f;
         }
         if (_isCategoryLerp2 && timer2 > 0f)
         {
@@ -1883,7 +1977,7 @@ public class Andrea : UdonSharpBehaviour
             {
                 _isCategoryLerp2 = false;
             }
-            timer2 += Time.deltaTime * 0.75f;
+            timer2 += Time.deltaTime * 0.50f;
         }
         if (_isCategoryLerp3 && timer3 > 0f)
         {
@@ -1892,8 +1986,53 @@ public class Andrea : UdonSharpBehaviour
             {
                 _isCategoryLerp3 = false;
             }
-            timer3 += Time.deltaTime * 0.75f;
+            timer3 += Time.deltaTime * 0.50f;
         }
+    }
+
+    public void ScreenSaverClicked()
+    {
+        _isScreenSaverLerp = true;
+        if (_isScreenSaverHidden)
+        {
+            timerScreenSaver = 0.001f;
+            _screenSaverVectorStart = _screenSaverBackgroundGameObject.transform.localPosition;
+            _screenSaverVectorTarget = _screenSaverBackgroundShown;
+            _isScreenSaverHidden = false;
+            _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyDark;
+            _backButtonGameObject.SetActive(false);
+            _catalogButtonGameObject.SetActive(false);
+            _topCenterTMP.gameObject.SetActive(false);
+            _topCenterCloneTMP.gameObject.SetActive(false);
+        }
+        else
+        {
+            timerScreenSaver = 0.001f;
+            _screenSaverVectorStart = _screenSaverBackgroundGameObject.transform.localPosition;
+            _screenSaverVectorTarget = _screenSaverBackgroundHidden;
+            _isScreenSaverHidden = true;
+            _catalogButtonGameObject.SetActive(true);
+            _backButtonGameObject.SetActive(true);
+            _topCenterTMP.gameObject.SetActive(true);
+            _topCenterCloneTMP.gameObject.SetActive(true);
+            if (_mainMenuGameObject.activeSelf)
+            {
+                _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyMedium;
+            }
+            else
+            {
+                _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyLight;
+            }
+        }
+        _screenSaverHeaderImage.color = _screenPhysicalGameObject.GetComponent<Renderer>().material.color;
+        /*
+        ColorBlock _colorBlock = _screenSaverHeaderImage.GetComponent<Button>().colors;
+        _colorBlock.normalColor = _screenSaverHeaderImage.color;
+        _colorBlock.highlightedColor = _screenSaverHeaderImage.color;
+        _colorBlock.pressedColor = _screenSaverHeaderImage.color;
+        _colorBlock.selectedColor = _screenSaverHeaderImage.color;
+        _screenSaverHeaderImage.GetComponent<Button>().colors = _colorBlock;
+        */
     }
 
     public void CategoryMinimize0()
@@ -2071,5 +2210,6 @@ public class Andrea : UdonSharpBehaviour
         if (!_isCategoryMinimized1) CategoryMinimize1();
         if (!_isCategoryMinimized2) CategoryMinimize2();
         if (!_isCategoryMinimized3) CategoryMinimize3();
+        CategoryMinimize0();  // Keep first category shown.
     }
 }
