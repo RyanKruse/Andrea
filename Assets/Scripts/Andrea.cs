@@ -21,6 +21,7 @@ public class Andrea : UdonSharpBehaviour
 {
     [Header("Populated Data Variables From Inspector:")]
     [SerializeField] public Memory Memory;
+    [SerializeField] private bool _isShowExtraOptions;
     [SerializeField] private bool _isVRSettingsOverride;
     [SerializeField] private bool _isMinimizeCatalog;
     [SerializeField] private bool _isScrollWheelActive;
@@ -67,6 +68,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private GameObject _miscsGameObject;
     [SerializeField] private GameObject _screenGameObject;
     [SerializeField] private GameObject _screenPhysicalGameObject;
+    [SerializeField] private GameObject _homeContainerGameObject;
     [SerializeField] private TextAsset _styleSheetTextAsset;
     [SerializeField] private TextMeshProUGUI _helveticaTMP;
     [SerializeField] private TextMeshProUGUI _helveticaCloneTMP;
@@ -101,6 +103,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private Material _materialGreyMedium;
     [SerializeField] private Material _materialGreyDark;
     [SerializeField] private Image _screenSaverHeaderImage;
+    [SerializeField] private Slider _locNavigationSlider;
 
     [Header("Fixed Data Variables From Field:")]
     [SerializeField] private int _cloneDelay;
@@ -161,6 +164,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private bool _isCategoryMinimized3;
     [SerializeField] private bool _isCategoryMinimized4;
     [SerializeField] private bool _isScreenSaverHidden;
+    [SerializeField] private bool _isHomeContainerHidden;
     [SerializeField] private bool[] _richTextBoolList;
     [SerializeField] private int _cloneTime;
     [SerializeField] private int _overflowPageIndex;
@@ -191,6 +195,8 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private Vector3 _previousPlayerPosition;
     [SerializeField] private Vector3 _screenSaverBackgroundShown;
     [SerializeField] private Vector3 _screenSaverBackgroundHidden;
+    [SerializeField] private Vector3 _homeContainerShown;
+    [SerializeField] private Vector3 _homeContainerHidden;
 
 
 
@@ -204,10 +210,16 @@ public class Andrea : UdonSharpBehaviour
 
     [SerializeField] private float timerScreenSaver;
     [SerializeField] private bool _isScreenSaverLerp;
-    [SerializeField] private bool _isScreenSaverMinimized;
     [SerializeField] private Vector3 _screenSaverVectorDefault;
     [SerializeField] private Vector3 _screenSaverVectorTarget;
     [SerializeField] private Vector3 _screenSaverVectorStart;
+
+    [SerializeField] private float timerHomeContainer;
+    [SerializeField] private bool _isHomeContainerLerp;
+    [SerializeField] private Vector3 _homeContainerVectorDefault;
+    [SerializeField] private Vector3 _homeContainerVectorTarget;
+    [SerializeField] private Vector3 _homeContainerVectorStart;
+
 
     private void Start()
     {
@@ -317,6 +329,7 @@ public class Andrea : UdonSharpBehaviour
         _categoryVectorDefault3 = _categoryGameObject3.transform.localPosition;
         _categoryVectorDefault4 = _categoryGameObject4.transform.localPosition;
         _screenSaverVectorDefault = _screenSaverBackgroundGameObject.transform.localPosition;
+        _homeContainerVectorDefault = _homeContainerGameObject.transform.localPosition;
         _categoryGameObject1.transform.SetParent(_categoryGameObject0.transform);
         _categoryGameObject2.transform.SetParent(_categoryGameObject1.transform);
         _categoryGameObject3.transform.SetParent(_categoryGameObject2.transform);
@@ -327,8 +340,11 @@ public class Andrea : UdonSharpBehaviour
         _categoryVectorTarget3 = _categoryVectorDefault3;
         _categoryVectorTarget4 = _categoryVectorDefault4;
         _screenSaverVectorTarget = _screenSaverVectorDefault;
+        _homeContainerVectorTarget = _homeContainerVectorDefault;
         _screenSaverBackgroundHidden = _screenSaverBackgroundGameObject.transform.localPosition;
         _screenSaverBackgroundShown = _screenSaverBackgroundHidden + new Vector3(0f, 1300f, 0f);
+        _homeContainerShown = _homeContainerVectorDefault;
+        _homeContainerHidden = _homeContainerVectorDefault + new Vector3(0f, -1200f, 0f);
         ScreenSaverStart();
         MinimizeCategories();
         HomeInfo();
@@ -341,7 +357,12 @@ public class Andrea : UdonSharpBehaviour
             Calibrate(0);
             _topCenterTMP.text = $"{_mainBlock.text.Substring(0, _mainBlock.text.IndexOf('\n'))}";
             _topCenterCloneTMP.text = _topCenterTMP.text;
-            _mainMenuGameObject.SetActive(false);
+            if (!_isHomeContainerHidden)
+            {
+                HomeContainer();
+            }
+            //_mainMenuGameObject.SetActive(false);
+            
             //_backButtonGameObject.SetActive(true);
             //_topLeftTMP.gameObject.SetActive(true);
             //_topLeftCloneTMP.gameObject.SetActive(true);
@@ -536,6 +557,8 @@ public class Andrea : UdonSharpBehaviour
 
     private void DecompressRichText(bool isAppendNewLine)
     {
+        // Here be dragons. Most complex function of Andrea.
+
         // Replaces all rich-text in text with custom rich-text.
         for (int _index = 0; _index < _styleSheetNameList.Length; _index++)
         {
@@ -721,6 +744,7 @@ public class Andrea : UdonSharpBehaviour
 
             // Nothing to process.
             _isAfterNewLine = false;
+
         }
     }
 
@@ -950,6 +974,8 @@ public class Andrea : UdonSharpBehaviour
     private void Update()
     {
 
+        LerpScreenSaver();
+
         GripInputLogistics();
 
         if (_miscsGameObject.GetComponent<BoxCollider>() != null)
@@ -974,12 +1000,10 @@ public class Andrea : UdonSharpBehaviour
             ProcessInputs();
         }
 
-        if (_mainMenuGameObject.activeSelf)
+        if (!_isHomeContainerHidden)
         {
             LerpUpdate();
         }
-
-        LerpScreenSaver();
 
         // Process clone timer.
         if (_mainTMP != null)
@@ -1172,7 +1196,7 @@ public class Andrea : UdonSharpBehaviour
     {
 
         // Do not turn page if another menu is active.
-        if (_optionsMenuGameObject.activeSelf || _mainMenuGameObject.activeSelf || _confirmationMenuGameObject.activeSelf) return;
+        if (_optionsMenuGameObject.activeSelf || !_isHomeContainerHidden || _confirmationMenuGameObject.activeSelf) return;
 
         // Desktop input for turning page left or right.
         if (!_isHaltPageTurn && Input.GetKeyDown("[3]") || Input.GetKey("[*]") || (Input.GetAxis("Mouse ScrollWheel") < 0f && _isScrollWheelActive))
@@ -1292,7 +1316,7 @@ public class Andrea : UdonSharpBehaviour
         _mainFontSizeIndex = _defaultFontSizeIndex;
         _mainFontSize = _fontSizeList[_defaultFontSizeIndex];
 
-        if (!_mainMenuGameObject.activeSelf)
+        if (_isHomeContainerHidden)
         {
             _mainTMP.text = "";
             Calibrate(0);
@@ -1310,7 +1334,7 @@ public class Andrea : UdonSharpBehaviour
         _mainFontTypeIndex = _defaultFontTypeIndex;
         _mainFontType = _fontTypeList[_defaultFontTypeIndex].Trim(_badCharList);
 
-        if (!_mainMenuGameObject.activeSelf)
+        if (_isHomeContainerHidden)
         {
             _mainTMP.text = "";
 
@@ -1504,6 +1528,11 @@ public class Andrea : UdonSharpBehaviour
         _bottomLeftTMP.text = $"Loc {_adjustedLocationHeight}";
         _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
 
+        if (_adjustedMaxHeight != 0)
+        {
+            _locNavigationSlider.value = Mathf.Max(0f, (float)_adjustedLocationHeight / (float)_adjustedMaxHeight);
+        }
+
         // Junk Code:
         // Refreshes the GUI text on the bottom of the page.
 
@@ -1683,7 +1712,24 @@ public class Andrea : UdonSharpBehaviour
 
         _bigButtonScreenGameObject.SetActive(true);
 
+        if (!_isHomeContainerHidden)
+        {
+            HomeContainer();
+        }
+
+        _backButtonGameObject.transform.localPosition = new Vector3(_backButtonGameObject.transform.localPosition.x, _backButtonGameObject.transform.localPosition.y, -2.5f);
+        _catalogButtonGameObject.transform.localPosition = new Vector3(_catalogButtonGameObject.transform.localPosition.x, _catalogButtonGameObject.transform.localPosition.y, -2.5f);
+
         ExecuteCalibration();
+
+        if (_isShowExtraOptions)
+        {
+            BigButton();
+        }
+        if (!_isScreenSaverHidden)
+        {
+            ScreenSaverClicked();
+        }
     }
 
     public void BigButton()
@@ -1694,6 +1740,7 @@ public class Andrea : UdonSharpBehaviour
             _catalogButtonGameObject.SetActive(true);
             _topCenterCloneTMP.gameObject.SetActive(true);
             _topCenterTMP.gameObject.SetActive(true);
+            _locNavigationSlider.gameObject.SetActive(true);
         }
         else
         {
@@ -1701,7 +1748,31 @@ public class Andrea : UdonSharpBehaviour
             _catalogButtonGameObject.SetActive(false);
             _topCenterCloneTMP.gameObject.SetActive(false);
             _topCenterTMP.gameObject.SetActive(false);
+            _locNavigationSlider.gameObject.SetActive(false);
         }
+    }
+
+    public void LocNavigationSlider()
+    {
+        _adjustedLocationHeight = Convert.ToInt32(Math.Ceiling(_adjustedMaxHeight * _locNavigationSlider.value));
+        _bottomLeftTMP.text = $"Loc { Math.Max(1, _adjustedLocationHeight) }";
+        _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
+        double _checkMath = Math.Min(Math.Ceiling((double)_adjustedLocationHeight * 99 / (double)_adjustedMaxHeight), 99);
+        _bottomRightTMP.text = $"{Convert.ToInt32(Math.Max(1, _checkMath))}%";
+        _bottomRightCloneTMP.text = _bottomRightTMP.text;
+        _bottomCenterTMP.text = "";
+        _bottomCenterCloneTMP.text = "";
+
+        if (_locNavigationSlider.value == 1)
+        {
+            _bottomCenterTMP.text = "★";
+            _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
+            _bottomRightTMP.text = "100%";
+            _bottomRightCloneTMP.text = _bottomRightTMP.text;
+        }
+
+        // Need to showcase block name - basically table of contents while navigating slider.
+        // Do not show it if not clicking and holding the slider. 
     }
 
     public void BackButton()
@@ -1717,11 +1788,19 @@ public class Andrea : UdonSharpBehaviour
         {
             _confirmationMenuGameObject.SetActive(false);
         }
+        /*
         else if (!_mainMenuGameObject.activeSelf)
         {
-            _confirmationMenuGameObject.SetActive(true);
+            _mainMenuGameObject.SetActive(true);
+            _confirmationMenuGameObject.SetActive(false);
+            _backButtonGameObject.SetActive(true);
+            _catalogButtonGameObject.SetActive(true);
+            _topLeftTMP.gameObject.SetActive(false);
+            _topLeftCloneTMP.gameObject.SetActive(false);
+            // _confirmationMenuGameObject.SetActive(true);
         }
-        else if (_mainMenuGameObject.activeSelf && _isBookStaged == false)
+        */
+        else if (!_isHomeContainerHidden && _isBookStaged == false)
         {
             if (_isScreenSaverHidden)
             {
@@ -1730,10 +1809,19 @@ public class Andrea : UdonSharpBehaviour
         }
         else
         {
+            _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyMedium;
+            _backButtonGameObject.transform.localPosition = new Vector3(_backButtonGameObject.transform.localPosition.x, _backButtonGameObject.transform.localPosition.y, -2f);
+            _catalogButtonGameObject.transform.localPosition = new Vector3(_catalogButtonGameObject.transform.localPosition.x, _catalogButtonGameObject.transform.localPosition.y, -2f);
             _isBookStaged = false;
             _mainTMP.text = "";
             _mainCloneTMP.text = "";
-            _mainMenuGameObject.SetActive(true);
+
+            if (_isHomeContainerHidden)
+            {
+                HomeContainer();
+            }
+            //_mainMenuGameObject.SetActive(true);
+
             _backButtonGameObject.SetActive(true);
             _catalogButtonGameObject.SetActive(true);
             _topLeftTMP.gameObject.SetActive(false);
@@ -1756,6 +1844,7 @@ public class Andrea : UdonSharpBehaviour
         _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
         _bottomRightTMP.text = "";
         _bottomRightCloneTMP.text = _bottomRightTMP.text;
+        _locNavigationSlider.gameObject.SetActive(false);
 
     }
 
@@ -1908,7 +1997,11 @@ public class Andrea : UdonSharpBehaviour
 
     public void YesConfirm()
     {
-        _mainMenuGameObject.SetActive(true);
+        if (_isHomeContainerHidden)
+        {
+            HomeContainer();
+        }
+        // _mainMenuGameObject.SetActive(true);
         _confirmationMenuGameObject.SetActive(false);
         _backButtonGameObject.SetActive(true);
         _catalogButtonGameObject.SetActive(true);
@@ -1947,6 +2040,15 @@ public class Andrea : UdonSharpBehaviour
                 _isScreenSaverLerp = false;
             }
             timerScreenSaver += Time.deltaTime * 0.35f;
+        }
+        if (_isHomeContainerLerp && timerHomeContainer > 0f)
+        {
+            _homeContainerGameObject.transform.localPosition = Vector3.Lerp(_homeContainerVectorStart, _homeContainerVectorTarget, Mathf.SmoothStep(0.0f, 1.0f, Mathf.SmoothStep(0.0f, 1.0f, timerHomeContainer)));
+            if (timerHomeContainer >= 1)
+            {
+                _isHomeContainerLerp = false;
+            }
+            timerHomeContainer += Time.deltaTime * 0.40f;
         }
     }
 
@@ -1990,6 +2092,25 @@ public class Andrea : UdonSharpBehaviour
         }
     }
 
+    private void HomeContainer()
+    {
+        _isHomeContainerLerp = true;
+        if (_isHomeContainerHidden)
+        {
+            timerHomeContainer = 0.001f;
+            _homeContainerVectorStart = _homeContainerGameObject.transform.localPosition;
+            _homeContainerVectorTarget = _homeContainerShown;
+            _isHomeContainerHidden = false;
+        }
+        else
+        {
+            timerHomeContainer = 0.001f;
+            _homeContainerVectorStart = _homeContainerGameObject.transform.localPosition;
+            _homeContainerVectorTarget = _homeContainerHidden;
+            _isHomeContainerHidden = true;
+        }
+    }
+
     public void ScreenSaverClicked()
     {
         _isScreenSaverLerp = true;
@@ -2004,6 +2125,7 @@ public class Andrea : UdonSharpBehaviour
             _catalogButtonGameObject.SetActive(false);
             _topCenterTMP.gameObject.SetActive(false);
             _topCenterCloneTMP.gameObject.SetActive(false);
+            _screenSaverHeaderImage.color = _screenPhysicalGameObject.GetComponent<Renderer>().material.color;
         }
         else
         {
@@ -2015,16 +2137,17 @@ public class Andrea : UdonSharpBehaviour
             _backButtonGameObject.SetActive(true);
             _topCenterTMP.gameObject.SetActive(true);
             _topCenterCloneTMP.gameObject.SetActive(true);
-            if (_mainMenuGameObject.activeSelf)
-            {
-                _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyMedium;
-            }
-            else
+
+            // Have to do it like this.
+            _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyMedium;
+            _screenSaverHeaderImage.color = _screenPhysicalGameObject.GetComponent<Renderer>().material.color;
+
+            if (_isHomeContainerHidden)
             {
                 _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyLight;
             }
         }
-        _screenSaverHeaderImage.color = _screenPhysicalGameObject.GetComponent<Renderer>().material.color;
+        // _screenSaverHeaderImage.color = _screenPhysicalGameObject.GetComponent<Renderer>().material.color;
         /*
         ColorBlock _colorBlock = _screenSaverHeaderImage.GetComponent<Button>().colors;
         _colorBlock.normalColor = _screenSaverHeaderImage.color;

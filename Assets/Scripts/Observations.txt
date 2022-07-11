@@ -26,16 +26,44 @@ Language Packs & Fallback Tips:
 
 Oustanding Tasks:
 
-	- Fix Big Button.
-	- Walkthrough All Desktop Inputs.
-	- Multiple Screen Savers.
-	- Desktop Grid-Snap Rotation.
-	- 
+Loading 100% on bottom left.
+People turn page, but goes backwards into table of contents and confused.
+Sharper movement on cube lerp.
+Showcase all extra options at start. People confused otherwise
+Info doesn't appear on books.
+Multiple screen savers.
+Can't use navigation bar because canvas doesn't overlap it. 
+Need to hide arrow cursor for desktop users pointing at screen.
+Preserve text when going back to home screen.
+Restore text when returning back to book (Keep bar shown?) 
+Show progress as flag on book icon.
+Preserve text for multiple books.
+Showcase block titles when chaning navigation (Hide when done loading).
+Scroll text when reading (Fast blip?)
+Must have loading screen with instructions.
+Options Menu
+	Font Size
+	Font Type
+	Tablet Size
+	Night Mode (Light had 219/217/214 Background, 0/0/0 Font | Dark had 24/26/27 Background, 177/175/172 Font)
+	About 
+Left hand support.
+Networking & Multiple Player Interaction & Pickup & Player Rejoin Local Transform
+Lazer pointer confusing, people expect something to happen on pickup. People dumb!!!
+Preloaded book to display world author's stuff.
+Clones are not grey enough when changing pages.
+People try to scroll holding the grey'd out books.
+Discord: Callie#0727
+Respawn tablet button.
+Options menu identical to YouTube (Big Button Doesn't Overlap).
 
-	- Screen saver is... okay? Need to use the Header lerp method with smoothing timer variable. 
+
+	- Desktop Grid-Snap Rotation.
+	- Style sheet on one of the quotes has texts really mushed together. Just format entire style sheet?
+	- Arrow isn't visib
+
 	- Toggle Grip (Lerped Screen Saver When Ungripped [Time, Loc, Title]).
-	- Light & Dark Mode (Default Light) -> Light had 219/217/214 Background, 0/0/0 Font | Dark had 24/26/27 Background, 177/175/172 Font
-	- Remove Times and Avenir Fonts.
+
 	- Other hand logistics.
 	- Tips Tab (Font Clarity, GUI, Tutorial).
 	- Clear Unnecessary Text, Coloring, and Icons from Reading Screen.
@@ -76,8 +104,38 @@ Changing font size and type snaps to closest Loc.
 	Functions ChangeFontSize and ChangeFontType.
 	Slight Z fighting.
 
+
+
+
 Discord community bottom left?
 Andrea 3 bottom right?
+
+
+
+Executes upon player releasing knob.
+
+Block headers first. 
+
+Get the percentage.
+Get the array list of all blocks.
+Count the numbers of elements.
+Select the element closest to the percentage.
+Get the Loc.
+Read the Loc Height (LH) and Block Height (BH).
+If Loc is between LH and BH, Step 2.
+Else if Loc below LH, Increment down and check until between, Step 2.
+Else if Loc above LH + BH, Increment up and check until between, Step 2.
+Set block header name in Andrea Loc Navigation Slider.
+
+Get current font type and font size.
+Load it into Andrea.
+Find floor of Loc by subtracting LH from Loc.
+Set that as main page index.
+Let clone grey out.
+Load it.
+
+
+
 
 ----------------------------------------
 
@@ -230,4 +288,4 @@ YouTube Style.
 
 
 
-
+Bahasa Indonesia, Català, ?eština, Deutsch, English, Español, Français, Italiano, Kurdi, Nederlands, Norsk, Polski, Português, Român?, Ti?ng Vi?t, Türkçe, ????????, ???????, ???????, ?????, ?????, ???????, ?????, ??????, ???, ????, ????, ???
