@@ -1,4 +1,6 @@
-# Candle (Being Updated to Andrea as of April 2022)
+# Candle (Being Updated to Andrea as of July 2022)
+
+Yes I know progress is slow. I am working hard every day to release Andrea.
 
 Author: Ryan Kruse
 
