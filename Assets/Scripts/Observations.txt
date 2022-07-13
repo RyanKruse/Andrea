@@ -26,107 +26,32 @@ Language Packs & Fallback Tips:
 
 Oustanding Tasks:
 
-Loading 100% on bottom left.
-People turn page, but goes backwards into table of contents and confused.
-Sharper movement on cube lerp.
-Showcase all extra options at start. People confused otherwise
-Info doesn't appear on books.
-Multiple screen savers.
-Can't use navigation bar because canvas doesn't overlap it. 
-Need to hide arrow cursor for desktop users pointing at screen.
+
+Hell Code #1:
 Preserve text when going back to home screen.
-Restore text when returning back to book (Keep bar shown?) 
+(Preserve Block and Loc? Can substitute to Hell Code #2)
+Restore text when returning back to book.
 Show progress as flag on book icon.
+Show star on flag if finished book.
 Preserve text for multiple books.
-Showcase block titles when chaning navigation (Hide when done loading).
-Scroll text when reading (Fast blip?)
-Must have loading screen with instructions.
-Options Menu
-	Font Size
-	Font Type
-	Tablet Size
-	Night Mode (Light had 219/217/214 Background, 0/0/0 Font | Dark had 24/26/27 Background, 177/175/172 Font)
-	About 
-Left hand support.
-Networking & Multiple Player Interaction & Pickup & Player Rejoin Local Transform
-Lazer pointer confusing, people expect something to happen on pickup. People dumb!!!
-Preloaded book to display world author's stuff.
-Clones are not grey enough when changing pages.
-People try to scroll holding the grey'd out books.
-Discord: Callie#0727
-Respawn tablet button.
-Options menu identical to YouTube (Big Button Doesn't Overlap).
-
-
-	- Desktop Grid-Snap Rotation.
-	- Style sheet on one of the quotes has texts really mushed together. Just format entire style sheet?
-	- Arrow isn't visib
-
-	- Toggle Grip (Lerped Screen Saver When Ungripped [Time, Loc, Title]).
-
-	- Other hand logistics.
-	- Tips Tab (Font Clarity, GUI, Tutorial).
-	- Clear Unnecessary Text, Coloring, and Icons from Reading Screen.
-	- Remove Grey Bar (Was 149/149/149 Color).
-
-		// Polish screen saver.
-	    // Account for differences in head.!!!
-        // Disable tablet when not being held.
-        // Check scale logistics again.
-		// Remove return to home warning and preserve Andrea state.
-
-MAKE ALIVIA MADRIGAL IN VRCHAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
-[Inspired: https://twitter.com/sora3_vrc/media]
-
-Top tab is actually a button - tap to display navigation, return to menu, text format, break time, and stats. 
-Pressing bottom loc changes visibility. 
-
-Networking & Network Lock. 
-WTF? PopulateStyleSheet in Compiler can utilize Andrea's code? Can skip parallel code logistics.
-Changing font types too fast breaks the clones (unsure about size).
-Scrolling too fast skips the clones (shows a blank screen loading in new block).
-Scroll bar on main page (works in VR).
-Some sort of break button.
-
-Slightly reduce side lengths of grip bards.
-Slight pixile fighting on edges of Andrea tablet screen (Z-axis slight shift.).
-Changing to font size large on first page of block actually sent me back to previous block 2/3th of way through it. Left click goes back!
-Something broken with images around Loc 785, Loc 1325, 2973 re-add paragraphs? in 7 Habits.
-Loc 1960, Loc 2364, 2729, 3099, 3111, 4419, 5107, 5698 is strange on end clipping (wide text).
-Loc 6276 needs to be broken up (huge word combo)
-Quotes from questions asked on last chapters needs to be consistent in interviews.
-Loc 6538 doesn't cut correctly?
-Very last block doesn't load - errors out.
-Options should be identical to YouTube mobile. 
-
-	
-Changing font size and type snaps to closest Loc.
-	Functions ChangeFontSize and ChangeFontType.
-	Slight Z fighting.
 
 
 
 
-Discord community bottom left?
-Andrea 3 bottom right?
-
-
-
+Hell Code #2
 Executes upon player releasing knob.
+Showcase block titles when chaning navigation (Hide when done loading).
+* * *
+Snap lock to floor of char index list.
+Doesn't update when clicking on it.
+Doesn't appear when clicking on it.
+Doesn't apepar when hovering on it.
+Need to check edge case where (LH + BH) / 100 = LH / 100 
 
-Block headers first. 
+[Pickup Here - See if you can get more than 1 event trigger working!]
+[Why? Because when we release the knob, we need to do calculations!]
 
-Get the percentage.
-Get the array list of all blocks.
-Count the numbers of elements.
-Select the element closest to the percentage.
-Get the Loc.
-Read the Loc Height (LH) and Block Height (BH).
-If Loc is between LH and BH, Step 2.
-Else if Loc below LH, Increment down and check until between, Step 2.
-Else if Loc above LH + BH, Increment up and check until between, Step 2.
-Set block header name in Andrea Loc Navigation Slider.
-
+Upon release needs to also update GUI.
 Get current font type and font size.
 Load it into Andrea.
 Find floor of Loc by subtracting LH from Loc.
@@ -136,6 +61,83 @@ Load it.
 
 
 
+Hell Code #3:
+Must have loading screen with instructions.
+Nav is a bit silly while book loading.
+Tips Tab (Font Clarity, GUI, Tutorial).
+
+
+Hell Code #4:
+Scroll text when reading (Fast blip?)
+
+
+
+Hell Code #5:
+Options Menu (Similar to YouTube or Kindle - Appears from top.)
+	- Font Size.
+	- Font Type.
+	- Tablet Size.
+	- Brightness (Light had 219/217/214 Background, 0/0/0 Font | Dark had 24/26/27 Background, 177/175/172 Font).
+	- Toggle Pickup.
+	- About (Discord, Info, Website).
+
+
+
+Hell Code #6:
+Networking & Multiple Player Interaction & Pickup & Player Rejoin Local Transform
+Networking & Network Lock. 
+
+
+
+Hell Code #7:
+Tapping screen logistics.
+
+
+
+Hell Code #8:
+VR polish.
+
+
+
+Hell Code #9:
+Merge compiler with Andrea.
+PopulateStyleSheet in Compiler can utilize Andrea's code? 
+Can skip parallel code logistics?
+
+
+
+Misc Code:
+Double Check Cube Lerp - Complaint Floaty.
+Need to hide arrow cursor for desktop users pointing at screen.
+Left hand support.
+Lazer pointer confusing, people expect something to happen on pickup. People dumb!!!
+Clones are not grey enough when changing pages.
+People try to scroll holding the grey'd out books.
+Respawn tablet button.
+Desktop Grid-Snap Rotation.
+Style sheet on one of the quotes has texts really mushed together. Just format entire style sheet?
+Screen saver shows book loc, title, and percentage.
+Disable toggle pickup, have that as option instead.
+Head position slightly jitters tablet - need to subtract that from calculations.
+Disable tablet when not being held by VR user.
+Scale logistics still broken.
+Changing font types too fast breaks the clones (unsure about size).
+Scrolling too fast skips the clones (shows a blank screen loading in new block).
+Slight pixile fighting on edges of Andrea tablet screen (Z-axis slight shift.).
+Changing to font size large on first page of block sent back to previous block 2/3th of way. Left click goes back!
+Something broken with images around Loc 785, Loc 1325, 2973 re-add paragraphs? in 7 Habits.
+Loc 1960, Loc 2364, 2729, 3099, 3111, 4419, 5107, 5698 is strange on end clipping (wide text).
+Loc 6276 needs to be broken up (huge word combo)
+Quotes from questions asked on last chapters needs to be consistent in interviews.
+Loc 6538 doesn't cut correctly?
+Changing font size and type snaps to closest Loc.
+Slight Z fighting a bit everywhere.
+Nasa coding github has a bunch of languages. Create tutorial in multiple languages.
+Ensure no blue highlighters.
+&amp error in HTWF Loc1100.
+Holding down joystick fast page increments.
+Buzz on controller as slight haptic feedback. 
+In Progress banner.
 
 ----------------------------------------
 
@@ -148,8 +150,8 @@ X	7 Habits of Highly Effective People
 X	How to Win Friends and Influence People
 	Think And Grow Rich
 X	The Power of Habit
-	Grit
 	Deep Work
+	Grit
 	Mindset
 X	Social Skills Guidebook
 
@@ -162,8 +164,8 @@ Category 1 - Classic Literature [10]:
 	The Adventures Of Tom
 	To Kill A Mockingbird
 	Pride and Prejudice
-	Lolita
 	The Grapes Of Wrath 
+	Lolita
 
 Category 2 - Epic Novels [10]:
 	Harry Potter
@@ -177,48 +179,8 @@ Category 2 - Epic Novels [10]:
 	A Song Of Ice And Fire
 	The Hitchhiker's Guide To The Galaxy 
 
-Category 3 - VRChat Writers
+Category 3 - VRChat [10]
 	Your Book Here
-
-	
-
-Category 0 - Personal Development:
-	7 Habits of Highly Effective People
-	Mindset
-	Atomic Habits
-	Grit
-	The Power of Habit
-	Deep Work
-	The Subtle Art of Not Giving a F_ck
-	Start With Why
-
-Category 1 - Communication Skills:
-	How to Win Friends and Influence People
-	The Charisma Myth
-	How to Make People Like You
-	Just Listen
-	How to Talk to Anyone
-	Influence
-	Social Skills Guidebook
-	Quiet
-	**The Highly-Sensitive-Person**
-
-Category 2 - Financial Independence:
-
-Category 4 - Health & Wellness:
-	Game Addiction (Hooked On Games)
-	Porn Addiction (Your Brain On Porn)
-	Food addiction (Fat Chance)
-	Alcohol Addiction (This Naked Mind)
-	Sleep Issues (Why We Sleep)
-	Smoking Addiction (Allen Carr's Easy Way to Quit Smoking)
-	Social Media Addiction (Ten Arguments for Deleting Social Media)
-	Internet Addiction (Digital Minimalism)
-
-Category 3 - Great Leadership:
-	Elon Musk
-	Jeff Bezos
-
 
 ----------------------------------------
 
@@ -232,60 +194,3 @@ Tutorial on Creating Book Button Images:
 	Create sprite.
 	Add Image to buttons.
 	Buttons are all 348x - 529x - Button.
-
-----------------------------------------
-
-I use VRChat for 3 things. Sexual gratification. Social gratification. Contribution gratification. 
-
-Depressive and Mania Cycle of Biopolar Disorder.
-You need grit - Sticking to one thing.
-You need deep work - No distractions.
-You need values - Meaning to your project.
-
-Start with Why:
-When I was a rebellious child with no supervision or education, books were the only thing that kept me educated.
-I would read the New York Times, I would read Goosebumps, I would read my history text book.
-With mediums of communication becoming increasingly digital, having a book in your hands is becoming more scarce.
-I would like to offer a book to someone in the virtual space, to extend them the same hand that guided me when I was growing up.
-Maybe movies, TV shows, music, social media, and the plethora of content on the internet may drown up any interest in books.
-I'd like to make it as easy and accessible as possible to those willing to give their time to reading.
-And maybe I can help someone get through their childhood and grow up to be a happy, successful, well-minded adult. 
-
-
-Andrea
-
-Put books in correct order, just need to define where the starting index begins. Metadata is block 0. When a person opens a book, can skip past ToC and Acknowledgements.
-Laser point and click to change pages. High fidelity and used already in VRChat systems. Button locations similar to Kindle.
-Tap to turn. An interaction of tapping the corner area turns the page. Alternative to point and click.
-5 point tablet scale. Slider with 5 bullet snapping points to adjust size. 2 additional scales can be smaller.
-Grip bars on the side. Grip button once to snap to hand bone. Lerp rotation. No blue highlighting or buzz. Trigger to turn page. Other hand can tap to go back, tap to go forward, or point and click.
-Interchange top center with title and chapter header.
-Slight buzz when tapping or clicking.
-&amp error in HTWF Loc1100.
-Clicking on top center changes.
-Book title.
-Block title.
-Invisible.
-Clicking on bottom bar changes.
-Loc #.
-Page #.
-Time Remaining.
-Invisible.
-GUI System.
-Pointer hovering above buttons highlights them.
-Thicker, bolder text types.
-Transparency slider.
-Brightness slider.
-Scale slider.
-Font size slider. 
-Font type button.
-GUI Buttons.
-Home.
-Compass.
-Pinwheel.
-YouTube Style.
-
-
-
-
-Bahasa Indonesia, Català, ?eština, Deutsch, English, Español, Français, Italiano, Kurdi, Nederlands, Norsk, Polski, Português, Român?, Ti?ng Vi?t, Türkçe, ????????, ???????, ???????, ?????, ?????, ???????, ?????, ??????, ???, ????, ????, ???
