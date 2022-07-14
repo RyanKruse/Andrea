@@ -29,7 +29,6 @@ Oustanding Tasks:
 
 Hell Code #1:
 Preserve text when going back to home screen.
-(Preserve Block and Loc? Can substitute to Hell Code #2)
 Restore text when returning back to book.
 Show progress as flag on book icon.
 Show star on flag if finished book.
@@ -39,76 +38,36 @@ Preserve text for multiple books.
 
 
 Hell Code #2
-Executes upon player releasing knob.
-Showcase block titles when chaning navigation (Hide when done loading).
-* * *
-Snap lock to floor of char index list.
-Doesn't update when clicking on it.
-Doesn't appear when clicking on it.
-Doesn't apepar when hovering on it.
-Need to check edge case where (LH + BH) / 100 = LH / 100 
-
-[Pickup Here - See if you can get more than 1 event trigger working!]
-[Why? Because when we release the knob, we need to do calculations!]
-
-Upon release needs to also update GUI.
-Get current font type and font size.
-Load it into Andrea.
-Find floor of Loc by subtracting LH from Loc.
-Set that as main page index.
-Let clone grey out.
-Load it.
+Snap lock to floor of char index list? People may think its buggy.
+Snap value to floor of char index list? People may think its buggy. 
+Clicking doesn't update the drag.
+Check edge case where (LH + BH) / 100 = LH / 100 
+Home top center text appeared on book screen.
 
 
 
 Hell Code #3:
 Must have loading screen with instructions.
 Nav is a bit silly while book loading.
-Tips Tab (Font Clarity, GUI, Tutorial).
+Tips (Turn Page, Toggle Pickup)?
+"Move the right controller joystick
+up or down to turn the page."
 
 
 Hell Code #4:
-Scroll text when reading (Fast blip?)
-
-
-
-Hell Code #5:
-Options Menu (Similar to YouTube or Kindle - Appears from top.)
-	- Font Size.
-	- Font Type.
-	- Tablet Size.
+Options Menu
+	- Lerp menu. Button selection coloring. Ensure smooth blend. 
+	- Arrow button regresses menu.
 	- Brightness (Light had 219/217/214 Background, 0/0/0 Font | Dark had 24/26/27 Background, 177/175/172 Font).
-	- Toggle Pickup.
-	- About (Discord, Info, Website).
-
-
-
-Hell Code #6:
-Networking & Multiple Player Interaction & Pickup & Player Rejoin Local Transform
-Networking & Network Lock. 
-
-
-
-Hell Code #7:
-Tapping screen logistics.
-
-
-
-Hell Code #8:
-VR polish.
-
-
-
-Hell Code #9:
-Merge compiler with Andrea.
-PopulateStyleSheet in Compiler can utilize Andrea's code? 
-Can skip parallel code logistics?
+	- Toggle Pickup? Where?
+	- About Icon Bottom Right Corner? (Discord, Info, Website).
 
 
 
 Misc Code:
+The buttons above Header 1 are bad. Reload scene?
 Double Check Cube Lerp - Complaint Floaty.
-Need to hide arrow cursor for desktop users pointing at screen.
+Need to hide arrow cursor for desktop users pointing at screen (Disable Screen Canvas?)
 Left hand support.
 Lazer pointer confusing, people expect something to happen on pickup. People dumb!!!
 Clones are not grey enough when changing pages.
@@ -138,6 +97,40 @@ Ensure no blue highlighters.
 Holding down joystick fast page increments.
 Buzz on controller as slight haptic feedback. 
 In Progress banner.
+Loc 3710 Large Notosans Book Index 0... Bullet Break Didn't Work! Block: 12. Page Index: 7.
+
+
+Andrea 4 - Hell Code #5:
+Scroll text when reading (Fast blip?)
+
+
+
+Andrea 4 - Hell Code #6:
+Networking & Multiple Player Interaction & Pickup & Player Rejoin Local Transform
+Networking & Network Lock. 
+
+
+
+Andrea 4 - Hell Code #7:
+Tapping screen logistics.
+
+
+
+Andrea 4 - Hell Code #8:
+VR polish.
+
+
+
+Andrea 4 - Hell Code #9:
+Merge compiler with Andrea.
+PopulateStyleSheet in Compiler can utilize Andrea's code? 
+Can skip parallel code logistics?
+
+
+Andrea 4 - Hell Code #10
+Clicking on Loc or Pecentage asks for input which looks like a padlock num input. 
+
+
 
 ----------------------------------------
 

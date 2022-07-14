@@ -145,7 +145,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private TextMeshProUGUI _mainPreviousCloneTMP;
 
     [Header("Global Workflow Data Variables:")]
-    [SerializeField] private bool _isShowBar;
+    // [SerializeField] private bool _isShowBar;
     [SerializeField] private bool _isNoDoubleExecute;
     [SerializeField] private bool _isHaltPageTurn;
     [SerializeField] private bool _isUpTriggerActive;
@@ -225,6 +225,11 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private Vector3 _homeContainerVectorTarget;
     [SerializeField] private Vector3 _homeContainerVectorStart;
 
+    [SerializeField] private bool _isLocNavClicked;
+    [SerializeField] private bool _isLocNavHover;
+    [SerializeField] private bool _isLocNavDragged;
+    [SerializeField] private int _locNavMainBlockIndex;
+    [SerializeField] private int _locNavMainTrueLoc;
 
     private void Start()
     {
@@ -350,6 +355,9 @@ public class Andrea : UdonSharpBehaviour
         _screenSaverBackgroundShown = _screenSaverBackgroundHidden + new Vector3(0f, 1300f, 0f);
         _homeContainerShown = _homeContainerVectorDefault;
         _homeContainerHidden = _homeContainerVectorDefault + new Vector3(0f, -1200f, 0f);
+        _bottomCoreTMP.gameObject.SetActive(false);
+        _bottomCoreCloneTMP.gameObject.SetActive(false);
+        _screenSaverScreenGameObject.SetActive(true);
         ScreenSaverStart(true);
         MinimizeCategories();
         HomeInfo();
@@ -1489,6 +1497,8 @@ public class Andrea : UdonSharpBehaviour
     private void RefreshBottomGUI()
     {
 
+        BlockNameSet(_mainBlockIndex);  // Update block name.
+
         // Junk Code (replaces RefreshBottomGUI() function):
         int _locCurrent = Convert.ToInt32(Math.Max(1, Math.Floor((_mainLocationHeight + _lastCharSliceList[_mainPageIndex]) / 100f)));
         string _locStringRaw = $"Loc {_locCurrent}";
@@ -1727,7 +1737,7 @@ public class Andrea : UdonSharpBehaviour
         }
         _mainBlockIndex = Mathf.Clamp(_mainBlockIndex, 0, _mainTextList.Length - 1);
         _isBookStaged = true;
-        _isShowBar = false;
+        // _isShowBar = false;
         _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyLight;
         _backButtonGameObject.SetActive(false);
         _catalogButtonGameObject.SetActive(false);
@@ -1776,11 +1786,71 @@ public class Andrea : UdonSharpBehaviour
         }
     }
 
-    public void LocNavigationSlider()
+    public void LocNavigationSliderClick()
+    {
+        _isLocNavClicked = true;
+        _bottomCoreTMP.gameObject.SetActive(true);
+        _bottomCoreCloneTMP.gameObject.SetActive(true);
+    }
+
+    public void LocNavigationSliderReleased()
+    {
+        _isLocNavClicked = false;
+        _bottomCoreTMP.gameObject.SetActive(_isLocNavHover);
+        _bottomCoreCloneTMP.gameObject.SetActive(_isLocNavHover);
+        if (_isLocNavDragged)
+        {
+            _isLocNavDragged = false;
+
+            // Page has exceeded bounds, so change text blocks.
+            PlayAudio(_hardSwipeAudio);
+
+            _mainTMP.text = "";
+            _mainBlockIndex = _locNavMainBlockIndex;
+            Calibrate(0);
+            _isOverflowAuditDefinePage = true;
+
+            // If incrementing up, start at the first page. If incrementing down, start at the last page.
+            _endCalibrationPageIndex = 0;
+        }
+    }
+
+    public void LocNavigationSliderEnter()
+    {
+        _isLocNavHover = true;
+        _bottomCoreTMP.gameObject.SetActive(true);
+        _bottomCoreCloneTMP.gameObject.SetActive(true);
+    }
+
+    public void LocNavigationSliderExit()
+    {
+        _isLocNavHover = false;
+        _bottomCoreTMP.gameObject.SetActive(_isLocNavClicked);
+        _bottomCoreCloneTMP.gameObject.SetActive(_isLocNavClicked);
+    }
+
+    private void BlockNameSet(int blockIndex)
+    {
+        string _blockName = _mainTextList[blockIndex].name;
+        if (_blockName.IndexOf('-') >= 0)
+        {
+            _bottomCoreTMP.text = $"{_blockName.Substring(_blockName.IndexOf('-') + 2)}";
+            _bottomCoreCloneTMP.text = $"{_blockName.Substring(_blockName.IndexOf('-') + 2)}";
+        }
+        else
+        {
+            _bottomCoreTMP.text = $"{_blockName}";
+            _bottomCoreCloneTMP.text = $"{_blockName}";
+        }
+    }
+
+    public void LocNavigationSliderDrag()
     {
         // Cannot interact with variables while overflow adjusting or no book staged.
         if (_overflowPageIndex >= 0 || !_isBookStaged) return;
-        
+
+        _isLocNavDragged = true;
+
         _adjustedLocationHeight = Convert.ToInt32(Math.Ceiling(_adjustedMaxHeight * _locNavigationSlider.value));
         _bottomLeftTMP.text = $"Loc { Math.Max(1, _adjustedLocationHeight) }";
         _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
@@ -1827,19 +1897,10 @@ public class Andrea : UdonSharpBehaviour
 
             if (_trueLoc >= _locationHeightOfDrilledBlock && _trueLoc <= _locationHeightOfDrilledBlock + _blockHeightOfDrilledBlock)
             {
-                string _blockName = _mainTextList[_mainBlockIndexGuess].name;
-                if (_blockName.IndexOf('-') >= 0)
-                {
-                    _bottomCoreTMP.text = $"{_blockName.Substring(_blockName.IndexOf('-') + 2)}";
-                    _bottomCoreCloneTMP.text = $"{_blockName.Substring(_blockName.IndexOf('-') + 2)}";
-                }
-                else
-                {
-                    _bottomCoreTMP.text = $"{_blockName}";
-                    _bottomCoreCloneTMP.text = $"{_blockName}";
-                }
+                BlockNameSet(_mainBlockIndexGuess);
 
-
+                _locNavMainBlockIndex = _mainBlockIndexGuess;
+                _locNavMainTrueLoc = _trueLoc;
                 // _bottomCoreTMP.text = $"{_mainBlock.text.Substring(0, _mainBlock.text.IndexOf('\n'))}";
                 // _bottomCoreCloneTMP.text = _bottomCoreTMP.text;
                 break;
