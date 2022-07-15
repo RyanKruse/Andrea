@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="uuid_id">
+  <metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:publisher>Back Bay Books; Reissue edition</dc:publisher>
+    <meta name="calibre:title_sort" content="The Catcher in the Rye"/>
+    <dc:description>&lt;div&gt;&lt;h3 class="productDescriptionSource"&gt;Amazon.com Review&lt;/h3&gt;
+  &lt;div class="productDescriptionWrapper"&gt;
+  Since his debut in 1951 as &lt;i&gt;The Catcher in the Rye&lt;/i&gt;,  Holden 
+Caulfield has been synonymous with "cynical  adolescent." Holden 
+narrates the story of a couple of days in his  sixteen-year-old life, 
+just after he's been expelled from prep school,  in a slang that sounds 
+edgy even today and keeps this novel on banned  book lists. It begins,&lt;br&gt;&lt;p&gt;
+   "If you really want to hear about it, the first thing you'll probably
+  want to know is where I was born and what my lousy childhood was like,
+  and how my parents were occupied and all before they had me, and all  
+that David Copperfield kind of crap, but I don't feel like going into  
+it, if you want to know the truth. In the first place, that stuff  bores
+ me, and in the second place, my parents would have about two  
+hemorrhages apiece if I told anything pretty personal about them."  &lt;/p&gt;&lt;p&gt;
+   His constant wry observations about what he encounters, from teachers
+  to phonies (the two of course are not mutually exclusive) capture the 
+ essence of the eternal teenage experience of alienation.
+  &lt;em&gt;--This text refers to the 
+
+
+
+
+&lt;a href="http://www.amazon.com/gp/product/0316769533/ref=dp_proddesc_1?ie=UTF8&amp;amp;n=283155" class="product"&gt;Hardcover&lt;/a&gt;
+ edition.&lt;/em&gt;
+  &lt;/p&gt;&lt;div class="emptyClear"&gt; &lt;/div&gt;
+  &lt;/div&gt;
+
+      &lt;h3 class="productDescriptionSource"&gt;Review&lt;/h3&gt;
+  &lt;div class="productDescriptionWrapper"&gt;
+  Novel by J.D. Salinger, published in 1951. The influential and widely 
+acclaimed story details the two days in the life of 16-year-old Holden 
+Caulfield after he has been expelled from prep school. Confused and 
+disillusioned, he searches for truth and rails against the "phoniness" 
+of the adult world. He ends up exhausted and emotionally ill, in a 
+psychiatrist's office. After he recovers from his breakdown, Holden 
+relates his experiences to the reader. --none
+  &lt;em&gt;--This text refers to an out of print or unavailable edition of this title.&lt;/em&gt;&lt;/div&gt;&lt;/div&gt;</dc:description>
+    <dc:language>en</dc:language>
+    <dc:creator opf:file-as="Salinger, J. D." opf:role="aut">J. D. Salinger</dc:creator>
+    <meta name="calibre:timestamp" content="2011-02-08T11:08:04.774000+00:00"/>
+    <dc:title>The Catcher in the Rye</dc:title>
+    <meta name="cover" content="cover"/>
+    <dc:date>2001-01-30T05:00:00+00:00</dc:date>
+    <dc:contributor opf:role="bkp">calibre (0.7.47) [http://calibre-ebook.com]</dc:contributor>
+    <dc:identifier opf:scheme="ISBN">9780316769174</dc:identifier>
+    <dc:identifier id="uuid_id" opf:scheme="uuid">8c0c73e3-32e5-4324-b11d-4377bf00de0f</dc:identifier>
+    <dc:subject>Classics</dc:subject>
+  </metadata>
+  <manifest>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_000.html" id="html28" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_001.html" id="html27" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_002.html" id="html26" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_003.html" id="html25" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_004.html" id="html24" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_005.html" id="html23" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_006.html" id="html22" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_007.html" id="html21" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_008.html" id="html20" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_009.html" id="html19" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_010.html" id="html18" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_011.html" id="html17" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_012.html" id="html16" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_013.html" id="html15" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_014.html" id="html14" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_015.html" id="html13" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_016.html" id="html12" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_017.html" id="html11" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_018.html" id="html10" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_019.html" id="html9" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_020.html" id="html8" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_021.html" id="html7" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_022.html" id="html6" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_023.html" id="html5" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_024.html" id="html4" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_025.html" id="html3" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_026.html" id="html2" media-type="application/xhtml+xml"/>
+    <item href="The Catcher in the Rye - J. D. Salinger_split_027.html" id="html1" media-type="application/xhtml+xml"/>
+    <item href="cover.jpeg" id="cover" media-type="image/jpeg"/>
+    <item href="stylesheet.css" id="css" media-type="text/css"/>
+    <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" media-type="application/x-dtbncx+xml" id="ncx"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="titlepage"/>
+    <itemref idref="html28"/>
+    <itemref idref="html27"/>
+    <itemref idref="html26"/>
+    <itemref idref="html25"/>
+    <itemref idref="html24"/>
+    <itemref idref="html23"/>
+    <itemref idref="html22"/>
+    <itemref idref="html21"/>
+    <itemref idref="html20"/>
+    <itemref idref="html19"/>
+    <itemref idref="html18"/>
+    <itemref idref="html17"/>
+    <itemref idref="html16"/>
+    <itemref idref="html15"/>
+    <itemref idref="html14"/>
+    <itemref idref="html13"/>
+    <itemref idref="html12"/>
+    <itemref idref="html11"/>
+    <itemref idref="html10"/>
+    <itemref idref="html9"/>
+    <itemref idref="html8"/>
+    <itemref idref="html7"/>
+    <itemref idref="html6"/>
+    <itemref idref="html5"/>
+    <itemref idref="html4"/>
+    <itemref idref="html3"/>
+    <itemref idref="html2"/>
+    <itemref idref="html1"/>
+  </spine>
+  <guide>
+    <reference href="titlepage.xhtml" type="cover" title="Cover"/>
+  </guide>
+</package>

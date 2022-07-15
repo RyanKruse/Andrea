@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<package xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="id">
+  <metadata>
+    <dc:rights>Public domain in the USA.</dc:rights>
+    <dc:identifier id="id" opf:scheme="URI">http://www.gutenberg.org/ebooks/74</dc:identifier>
+    <dc:creator opf:file-as="Twain, Mark">Mark Twain</dc:creator>
+    <dc:title>The Adventures of Tom Sawyer</dc:title>
+    <dc:language xsi:type="dcterms:RFC4646">en</dc:language>
+    <dc:subject>Humorous stories</dc:subject>
+    <dc:subject>Bildungsromans</dc:subject>
+    <dc:subject>Boys -- Fiction</dc:subject>
+    <dc:subject>Male friendship -- Fiction</dc:subject>
+    <dc:subject>Adventure stories</dc:subject>
+    <dc:subject>Missouri -- Fiction</dc:subject>
+    <dc:subject>Sawyer, Tom (Fictitious character) -- Fiction</dc:subject>
+    <dc:subject>Child witnesses -- Fiction</dc:subject>
+    <dc:subject>Runaway children -- Fiction</dc:subject>
+    <dc:subject>Mississippi River Valley -- Fiction</dc:subject>
+    <dc:date opf:event="publication">2004-07-01</dc:date>
+    <dc:date opf:event="conversion">2010-08-22T11:01:00.824814+00:00</dc:date>
+    <dc:source>http://www.gutenberg.org/files/74/74-h/74-h.htm</dc:source>
+    <meta content="coverpage" name="cover"/>
+  </metadata>
+  <manifest>
+    <!--Image: 543 x 683 size=64105 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@cover.jpg" id="coverpage" media-type="image/jpeg"/>
+    <!--Image: 584 x 728 size=59908 (was 832 x 1038 scale=0.70) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@bookcover.jpg" id="item1" media-type="image/jpeg"/>
+    <!--Image: 149 x 754 size=28872 (was 204 x 1028 scale=0.73) q=90-->
+    <item href="www.gutenberg.org@files@74@74-h@images@spine.jpg" id="item2" media-type="image/jpeg"/>
+    <!--Image: 550 x 754 size=63784 (was 750 x 1027 scale=0.73) q=30-->
+    <item href="www.gutenberg.org@files@74@74-h@images@frontispiece.jpg" id="item3" media-type="image/jpeg"/>
+    <!--Image: 584 x 713 size=48671 (was 843 x 1030 scale=0.69) q=85-->
+    <item href="www.gutenberg.org@files@74@74-h@images@titlepage.jpg" id="item4" media-type="image/jpeg"/>
+    <!--Image: 473 x 245 size=11079 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@dedication.jpg" id="item5" media-type="image/jpeg"/>
+    <!--Image: 584 x 708 size=62724 (was 791 x 959 scale=0.74) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@01-017.jpg" id="item6" media-type="image/jpeg"/>
+    <!--Image: 293 x 627 size=55437 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@01-018.jpg" id="item7" media-type="image/jpeg"/>
+    <!--Image: 430 x 309 size=49407 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@01-019.jpg" id="item8" media-type="image/jpeg"/>
+    <!--Image: 358 x 537 size=56739 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@01-023.jpg" id="item9" media-type="image/jpeg"/>
+    <!--Image: 394 x 521 size=56476 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@01-025.jpg" id="item10" media-type="image/jpeg"/>
+    <!--Image: 584 x 717 size=59576 (was 790 x 971 scale=0.74) q=40-->
+    <item href="www.gutenberg.org@files@74@74-h@images@02-026.jpg" id="item11" media-type="image/jpeg"/>
+    <!--Image: 584 x 434 size=59177 (was 692 x 515 scale=0.84) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@02-028.jpg" id="item12" media-type="image/jpeg"/>
+    <!--Image: 579 x 754 size=58620 (was 787 x 1024 scale=0.74) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@02-030.jpg" id="item13" media-type="image/jpeg"/>
+    <!--Image: 510 x 176 size=25253 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@02-031.jpg" id="item14" media-type="image/jpeg"/>
+    <!--Image: 332 x 501 size=49437 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@02-032.jpg" id="item15" media-type="image/jpeg"/>
+    <!--Image: 584 x 701 size=58524 (was 783 x 941 scale=0.75) q=40-->
+    <item href="www.gutenberg.org@files@74@74-h@images@03-033.jpg" id="item16" media-type="image/jpeg"/>
+    <!--Image: 420 x 404 size=42642 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@03-034.jpg" id="item17" media-type="image/jpeg"/>
+    <!--Image: 584 x 440 size=56335 (was 669 x 505 scale=0.87) q=60-->
+    <item href="www.gutenberg.org@files@74@74-h@images@03-035.jpg" id="item18" media-type="image/jpeg"/>
+    <!--Image: 325 x 485 size=44127 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@03-036.jpg" id="item19" media-type="image/jpeg"/>
+    <!--Image: 413 x 419 size=61731 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@03-038.jpg" id="item20" media-type="image/jpeg"/>
+    <!--Image: 368 x 473 size=58721 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@03-039a.jpg" id="item21" media-type="image/jpeg"/>
+    <!--Image: 327 x 448 size=37615 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@03-039b.jpg" id="item22" media-type="image/jpeg"/>
+    <!--Image: 279 x 754 size=60338 (was 335 x 905 scale=0.83) q=80-->
+    <item href="www.gutenberg.org@files@74@74-h@images@03-040.jpg" id="item23" media-type="image/jpeg"/>
+    <!--Image: 584 x 193 size=31482 (was 774 x 257 scale=0.75) q=90-->
+    <item href="www.gutenberg.org@files@74@74-h@images@03-041.jpg" id="item24" media-type="image/jpeg"/>
+    <!--Image: 584 x 678 size=60123 (was 829 x 963 scale=0.70) q=40-->
+    <item href="www.gutenberg.org@files@74@74-h@images@04-042.jpg" id="item25" media-type="image/jpeg"/>
+    <!--Image: 323 x 463 size=47581 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@04-044.jpg" id="item26" media-type="image/jpeg"/>
+    <!--Image: 384 x 576 size=59273 q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@04-045.jpg" id="item27" media-type="image/jpeg"/>
+    <!--Image: 584 x 455 size=64018 (was 647 x 505 scale=0.90) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@04-047.jpg" id="item28" media-type="image/jpeg"/>
+    <!--Image: 370 x 522 size=58846 q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@04-051.jpg" id="item29" media-type="image/jpeg"/>
+    <!--Image: 584 x 226 size=38210 (was 774 x 300 scale=0.75) q=90-->
+    <item href="www.gutenberg.org@files@74@74-h@images@04-052.jpg" id="item30" media-type="image/jpeg"/>
+    <!--Image: 584 x 707 size=64006 (was 768 x 931 scale=0.76) q=40-->
+    <item href="www.gutenberg.org@files@74@74-h@images@05-053.jpg" id="item31" media-type="image/jpeg"/>
+    <!--Image: 345 x 492 size=46207 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@05-054.jpg" id="item32" media-type="image/jpeg"/>
+    <!--Image: 584 x 410 size=63279 (was 794 x 558 scale=0.74) q=85-->
+    <item href="www.gutenberg.org@files@74@74-h@images@05-055.jpg" id="item33" media-type="image/jpeg"/>
+    <!--Image: 359 x 544 size=50959 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@05-057.jpg" id="item34" media-type="image/jpeg"/>
+    <!--Image: 492 x 373 size=51415 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@05-058.jpg" id="item35" media-type="image/jpeg"/>
+    <!--Image: 584 x 369 size=48046 (was 614 x 389 scale=0.95) q=90-->
+    <item href="www.gutenberg.org@files@74@74-h@images@05-059.jpg" id="item36" media-type="image/jpeg"/>
+    <!--Image: 584 x 730 size=57815 (was 808 x 1011 scale=0.72) q=40-->
+    <item href="www.gutenberg.org@files@74@74-h@images@06-060.jpg" id="item37" media-type="image/jpeg"/>
+    <!--Image: 367 x 516 size=56180 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@06-063.jpg" id="item38" media-type="image/jpeg"/>
+    <!--Image: 341 x 488 size=44004 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@06-064.jpg" id="item39" media-type="image/jpeg"/>
+    <!--Image: 322 x 580 size=49367 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@06-067.jpg" id="item40" media-type="image/jpeg"/>
+    <!--Image: 346 x 518 size=49479 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@06-069.jpg" id="item41" media-type="image/jpeg"/>
+    <!--Image: 454 x 348 size=27345 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@06-070.jpg" id="item42" media-type="image/jpeg"/>
+    <!--Image: 373 x 459 size=47162 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@06-071.jpg" id="item43" media-type="image/jpeg"/>
+    <!--Image: 584 x 685 size=62340 (was 777 x 912 scale=0.75) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@07-072.jpg" id="item44" media-type="image/jpeg"/>
+    <!--Image: 352 x 516 size=53773 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@07-077.jpg" id="item45" media-type="image/jpeg"/>
+    <!--Image: 584 x 256 size=46788 (was 765 x 336 scale=0.76) q=90-->
+    <item href="www.gutenberg.org@files@74@74-h@images@07-078.jpg" id="item46" media-type="image/jpeg"/>
+    <!--Image: 584 x 666 size=56633 (was 810 x 924 scale=0.72) q=40-->
+    <item href="www.gutenberg.org@files@74@74-h@images@08-079.jpg" id="item47" media-type="image/jpeg"/>
+    <!--Image: 270 x 754 size=53183 (was 337 x 941 scale=0.80) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@08-081.jpg" id="item48" media-type="image/jpeg"/>
+    <!--Image: 345 x 545 size=59437 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@08-083.jpg" id="item49" media-type="image/jpeg"/>
+    <!--Image: 359 x 510 size=51015 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@08-084.jpg" id="item50" media-type="image/jpeg"/>
+    <!--Image: 584 x 660 size=63229 (was 814 x 920 scale=0.72) q=60-->
+    <item href="www.gutenberg.org@files@74@74-h@images@09-085.jpg" id="item51" media-type="image/jpeg"/>
+    <!--Image: 362 x 548 size=53723 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@09-086.jpg" id="item52" media-type="image/jpeg"/>
+    <!--Image: 332 x 494 size=49692 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@09-088.jpg" id="item53" media-type="image/jpeg"/>
+    <!--Image: 584 x 469 size=63985 (was 646 x 519 scale=0.90) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@09-091.jpg" id="item54" media-type="image/jpeg"/>
+    <!--Image: 584 x 250 size=46614 (was 706 x 303 scale=0.83) q=90-->
+    <item href="www.gutenberg.org@files@74@74-h@images@09-092.jpg" id="item55" media-type="image/jpeg"/>
+    <!--Image: 584 x 681 size=56815 (was 788 x 919 scale=0.74) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@10-093.jpg" id="item56" media-type="image/jpeg"/>
+    <!--Image: 581 x 754 size=59171 (was 795 x 1030 scale=0.73) q=60-->
+    <item href="www.gutenberg.org@files@74@74-h@images@10-095.jpg" id="item57" media-type="image/jpeg"/>
+    <!--Image: 584 x 475 size=53906 (was 654 x 533 scale=0.89) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@10-098.jpg" id="item58" media-type="image/jpeg"/>
+    <!--Image: 417 x 545 size=60008 q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@10-100.jpg" id="item59" media-type="image/jpeg"/>
+    <!--Image: 584 x 702 size=62597 (was 774 x 931 scale=0.75) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@11-101.jpg" id="item60" media-type="image/jpeg"/>
+    <!--Image: 356 x 495 size=50526 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@11-102.jpg" id="item61" media-type="image/jpeg"/>
+    <!--Image: 584 x 443 size=58485 (was 674 x 512 scale=0.87) q=60-->
+    <item href="www.gutenberg.org@files@74@74-h@images@11-103.jpg" id="item62" media-type="image/jpeg"/>
+    <!--Image: 447 x 271 size=17533 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@11-106.jpg" id="item63" media-type="image/jpeg"/>
+    <!--Image: 584 x 617 size=57138 (was 826 x 874 scale=0.71) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@12-107.jpg" id="item64" media-type="image/jpeg"/>
+    <!--Image: 351 x 484 size=52792 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@12-108.jpg" id="item65" media-type="image/jpeg"/>
+    <!--Image: 584 x 430 size=63572 (was 680 x 501 scale=0.86) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@12-110.jpg" id="item66" media-type="image/jpeg"/>
+    <!--Image: 352 x 248 size=18087 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@12-112.jpg" id="item67" media-type="image/jpeg"/>
+    <!--Image: 584 x 688 size=61477 (was 780 x 919 scale=0.75) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@13-113.jpg" id="item68" media-type="image/jpeg"/>
+    <!--Image: 584 x 451 size=59067 (was 682 x 527 scale=0.86) q=80-->
+    <item href="www.gutenberg.org@files@74@74-h@images@13-117.jpg" id="item69" media-type="image/jpeg"/>
+    <!--Image: 368 x 492 size=50746 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@13-118.jpg" id="item70" media-type="image/jpeg"/>
+    <!--Image: 584 x 715 size=63339 (was 775 x 950 scale=0.75) q=40-->
+    <item href="www.gutenberg.org@files@74@74-h@images@14-121.jpg" id="item71" media-type="image/jpeg"/>
+    <!--Image: 346 x 495 size=56020 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@14-123.jpg" id="item72" media-type="image/jpeg"/>
+    <!--Image: 383 x 495 size=57797 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@14-124.jpg" id="item73" media-type="image/jpeg"/>
+    <!--Image: 584 x 419 size=54044 (was 713 x 512 scale=0.82) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@14-125.jpg" id="item74" media-type="image/jpeg"/>
+    <!--Image: 354 x 486 size=50649 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@14-127.jpg" id="item75" media-type="image/jpeg"/>
+    <!--Image: 584 x 647 size=54906 (was 815 x 904 scale=0.72) q=60-->
+    <item href="www.gutenberg.org@files@74@74-h@images@15-128.jpg" id="item76" media-type="image/jpeg"/>
+    <!--Image: 584 x 436 size=53857 (was 708 x 529 scale=0.82) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@15-130.jpg" id="item77" media-type="image/jpeg"/>
+    <!--Image: 584 x 303 size=48464 (was 730 x 379 scale=0.80) q=90-->
+    <item href="www.gutenberg.org@files@74@74-h@images@15-133.jpg" id="item78" media-type="image/jpeg"/>
+    <!--Image: 584 x 741 size=59884 (was 798 x 1013 scale=0.73) q=40-->
+    <item href="www.gutenberg.org@files@74@74-h@images@16-134.jpg" id="item79" media-type="image/jpeg"/>
+    <!--Image: 357 x 523 size=49623 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@16-135.jpg" id="item80" media-type="image/jpeg"/>
+    <!--Image: 351 x 517 size=54891 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@16-139.jpg" id="item81" media-type="image/jpeg"/>
+    <!--Image: 289 x 754 size=53068 (was 366 x 953 scale=0.79) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@16-141.jpg" id="item82" media-type="image/jpeg"/>
+    <!--Image: 361 x 524 size=52174 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@16-143.jpg" id="item83" media-type="image/jpeg"/>
+    <!--Image: 584 x 650 size=63930 (was 831 x 925 scale=0.70) q=60-->
+    <item href="www.gutenberg.org@files@74@74-h@images@17-144.jpg" id="item84" media-type="image/jpeg"/>
+    <!--Image: 584 x 411 size=62068 (was 715 x 504 scale=0.82) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@17-147.jpg" id="item85" media-type="image/jpeg"/>
+    <!--Image: 584 x 640 size=60553 (was 803 x 880 scale=0.73) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@18-148.jpg" id="item86" media-type="image/jpeg"/>
+    <!--Image: 489 x 383 size=61945 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@18-150.jpg" id="item87" media-type="image/jpeg"/>
+    <!--Image: 359 x 495 size=61267 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@18-152.jpg" id="item88" media-type="image/jpeg"/>
+    <!--Image: 352 x 490 size=55959 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@18-154.jpg" id="item89" media-type="image/jpeg"/>
+    <!--Image: 369 x 523 size=58942 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@18-155.jpg" id="item90" media-type="image/jpeg"/>
+    <!--Image: 373 x 510 size=48670 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@18-156.jpg" id="item91" media-type="image/jpeg"/>
+    <!--Image: 353 x 496 size=56002 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@18-157.jpg" id="item92" media-type="image/jpeg"/>
+    <!--Image: 584 x 640 size=56846 (was 800 x 877 scale=0.73) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@19-158.jpg" id="item93" media-type="image/jpeg"/>
+    <!--Image: 363 x 519 size=58956 q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@19-160.jpg" id="item94" media-type="image/jpeg"/>
+    <!--Image: 584 x 690 size=58840 (was 797 x 942 scale=0.73) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@20-161.jpg" id="item95" media-type="image/jpeg"/>
+    <!--Image: 361 x 490 size=56095 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@20-163.jpg" id="item96" media-type="image/jpeg"/>
+    <!--Image: 352 x 490 size=55874 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@20-165.jpg" id="item97" media-type="image/jpeg"/>
+    <!--Image: 569 x 275 size=29209 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@20-166.jpg" id="item98" media-type="image/jpeg"/>
+    <!--Image: 584 x 667 size=60240 (was 792 x 905 scale=0.74) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@21-167.jpg" id="item99" media-type="image/jpeg"/>
+    <!--Image: 584 x 423 size=56020 (was 712 x 516 scale=0.82) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@21-168.jpg" id="item100" media-type="image/jpeg"/>
+    <!--Image: 584 x 427 size=53876 (was 677 x 496 scale=0.86) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@21-170.jpg" id="item101" media-type="image/jpeg"/>
+    <!--Image: 584 x 431 size=52551 (was 683 x 505 scale=0.86) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@21-173.jpg" id="item102" media-type="image/jpeg"/>
+    <!--Image: 284 x 754 size=57350 (was 356 x 945 scale=0.80) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@21-174.jpg" id="item103" media-type="image/jpeg"/>
+    <!--Image: 584 x 282 size=45675 (was 778 x 376 scale=0.75) q=90-->
+    <item href="www.gutenberg.org@files@74@74-h@images@21-175.jpg" id="item104" media-type="image/jpeg"/>
+    <!--Image: 584 x 695 size=61902 (was 778 x 926 scale=0.75) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@22-176.jpg" id="item105" media-type="image/jpeg"/>
+    <!--Image: 584 x 444 size=54909 (was 690 x 525 scale=0.85) q=60-->
+    <item href="www.gutenberg.org@files@74@74-h@images@22-177.jpg" id="item106" media-type="image/jpeg"/>
+    <!--Image: 363 x 482 size=52664 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@22-178.jpg" id="item107" media-type="image/jpeg"/>
+    <!--Image: 415 x 508 size=58005 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@22-180.jpg" id="item108" media-type="image/jpeg"/>
+    <!--Image: 584 x 685 size=56863 (was 791 x 928 scale=0.74) q=40-->
+    <item href="www.gutenberg.org@files@74@74-h@images@23-181.jpg" id="item109" media-type="image/jpeg"/>
+    <!--Image: 301 x 754 size=51989 (was 377 x 944 scale=0.80) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@23-184.jpg" id="item110" media-type="image/jpeg"/>
+    <!--Image: 348 x 483 size=55252 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@23-186.jpg" id="item111" media-type="image/jpeg"/>
+    <!--Image: 584 x 424 size=58954 (was 672 x 489 scale=0.87) q=60-->
+    <item href="www.gutenberg.org@files@74@74-h@images@23-188.jpg" id="item112" media-type="image/jpeg"/>
+    <!--Image: 584 x 659 size=64289 (was 788 x 890 scale=0.74) q=60-->
+    <item href="www.gutenberg.org@files@74@74-h@images@24-189.jpg" id="item113" media-type="image/jpeg"/>
+    <!--Image: 347 x 493 size=59148 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@24-190.jpg" id="item114" media-type="image/jpeg"/>
+    <!--Image: 584 x 720 size=61148 (was 764 x 943 scale=0.76) q=40-->
+    <item href="www.gutenberg.org@files@74@74-h@images@25-191.jpg" id="item115" media-type="image/jpeg"/>
+    <!--Image: 371 x 514 size=60496 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@25-192.jpg" id="item116" media-type="image/jpeg"/>
+    <!--Image: 355 x 484 size=58024 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@25-194.jpg" id="item117" media-type="image/jpeg"/>
+    <!--Image: 352 x 514 size=53469 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@25-195.jpg" id="item118" media-type="image/jpeg"/>
+    <!--Image: 584 x 442 size=54129 (was 684 x 518 scale=0.85) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@25-198.jpg" id="item119" media-type="image/jpeg"/>
+    <!--Image: 584 x 683 size=63515 (was 801 x 938 scale=0.73) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@26-199.jpg" id="item120" media-type="image/jpeg"/>
+    <!--Image: 338 x 462 size=43777 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@26-200.jpg" id="item121" media-type="image/jpeg"/>
+    <!--Image: 584 x 436 size=59049 (was 690 x 516 scale=0.85) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@26-205.jpg" id="item122" media-type="image/jpeg"/>
+    <!--Image: 365 x 492 size=58234 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@26-207.jpg" id="item123" media-type="image/jpeg"/>
+    <!--Image: 584 x 652 size=57287 (was 798 x 892 scale=0.73) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@27-208.jpg" id="item124" media-type="image/jpeg"/>
+    <!--Image: 365 x 489 size=51606 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@27-209.jpg" id="item125" media-type="image/jpeg"/>
+    <!--Image: 584 x 232 size=41529 (was 755 x 301 scale=0.77) q=90-->
+    <item href="www.gutenberg.org@files@74@74-h@images@27-211.jpg" id="item126" media-type="image/jpeg"/>
+    <!--Image: 584 x 671 size=59139 (was 804 x 925 scale=0.73) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@28-212.jpg" id="item127" media-type="image/jpeg"/>
+    <!--Image: 372 x 516 size=51961 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@28-213.jpg" id="item128" media-type="image/jpeg"/>
+    <!--Image: 584 x 449 size=53918 (was 676 x 520 scale=0.86) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@28-214.jpg" id="item129" media-type="image/jpeg"/>
+    <!--Image: 584 x 243 size=43210 (was 759 x 317 scale=0.77) q=90-->
+    <item href="www.gutenberg.org@files@74@74-h@images@28-216.jpg" id="item130" media-type="image/jpeg"/>
+    <!--Image: 584 x 663 size=64003 (was 809 x 919 scale=0.72) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@29-217.jpg" id="item131" media-type="image/jpeg"/>
+    <!--Image: 287 x 754 size=60263 (was 361 x 948 scale=0.80) q=80-->
+    <item href="www.gutenberg.org@files@74@74-h@images@29-220.jpg" id="item132" media-type="image/jpeg"/>
+    <!--Image: 352 x 497 size=53929 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@29-221.jpg" id="item133" media-type="image/jpeg"/>
+    <!--Image: 584 x 435 size=54281 (was 698 x 520 scale=0.84) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@29-224.jpg" id="item134" media-type="image/jpeg"/>
+    <!--Image: 512 x 368 size=24157 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@29-225.jpg" id="item135" media-type="image/jpeg"/>
+    <!--Image: 584 x 674 size=62472 (was 794 x 917 scale=0.74) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@30-226.jpg" id="item136" media-type="image/jpeg"/>
+    <!--Image: 356 x 488 size=49266 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@30-227.jpg" id="item137" media-type="image/jpeg"/>
+    <!--Image: 344 x 508 size=56477 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@30-229.jpg" id="item138" media-type="image/jpeg"/>
+    <!--Image: 362 x 512 size=60693 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@30-232.jpg" id="item139" media-type="image/jpeg"/>
+    <!--Image: 584 x 442 size=56400 (was 679 x 514 scale=0.86) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@30-233.jpg" id="item140" media-type="image/jpeg"/>
+    <!--Image: 371 x 492 size=55196 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@30-234.jpg" id="item141" media-type="image/jpeg"/>
+    <!--Image: 349 x 513 size=59755 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@30-235.jpg" id="item142" media-type="image/jpeg"/>
+    <!--Image: 584 x 671 size=63445 (was 791 x 909 scale=0.74) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@31-236.jpg" id="item143" media-type="image/jpeg"/>
+    <!--Image: 361 x 658 size=63005 q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@31-237.jpg" id="item144" media-type="image/jpeg"/>
+    <!--Image: 584 x 595 size=56808 (was 636 x 649 scale=0.92) q=60-->
+    <item href="www.gutenberg.org@files@74@74-h@images@31-238.jpg" id="item145" media-type="image/jpeg"/>
+    <!--Image: 363 x 495 size=51615 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@31-240.jpg" id="item146" media-type="image/jpeg"/>
+    <!--Image: 354 x 496 size=59319 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@31-242.jpg" id="item147" media-type="image/jpeg"/>
+    <!--Image: 584 x 509 size=58582 (was 681 x 594 scale=0.86) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@31-245.jpg" id="item148" media-type="image/jpeg"/>
+    <!--Image: 584 x 665 size=63486 (was 813 x 926 scale=0.72) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@32-247.jpg" id="item149" media-type="image/jpeg"/>
+    <!--Image: 584 x 456 size=52536 (was 683 x 534 scale=0.86) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@32-248.jpg" id="item150" media-type="image/jpeg"/>
+    <!--Image: 584 x 430 size=54503 (was 705 x 520 scale=0.83) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@32-249.jpg" id="item151" media-type="image/jpeg"/>
+    <!--Image: 584 x 247 size=50252 (was 676 x 286 scale=0.86) q=90-->
+    <item href="www.gutenberg.org@files@74@74-h@images@32-251.jpg" id="item152" media-type="image/jpeg"/>
+    <!--Image: 584 x 667 size=60490 (was 803 x 918 scale=0.73) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@33-252.jpg" id="item153" media-type="image/jpeg"/>
+    <!--Image: 584 x 444 size=51728 (was 671 x 511 scale=0.87) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@33-253.jpg" id="item154" media-type="image/jpeg"/>
+    <!--Image: 219 x 728 size=47800 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@33-254.jpg" id="item155" media-type="image/jpeg"/>
+    <!--Image: 584 x 277 size=62431 (was 675 x 321 scale=0.87) q=85-->
+    <item href="www.gutenberg.org@files@74@74-h@images@33-255.jpg" id="item156" media-type="image/jpeg"/>
+    <!--Image: 275 x 754 size=64352 (was 338 x 926 scale=0.81) q=80-->
+    <item href="www.gutenberg.org@files@74@74-h@images@33-257.jpg" id="item157" media-type="image/jpeg"/>
+    <!--Image: 584 x 452 size=56834 (was 664 x 515 scale=0.88) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@33-261.jpg" id="item158" media-type="image/jpeg"/>
+    <!--Image: 311 x 410 size=23922 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@33-263.jpg" id="item159" media-type="image/jpeg"/>
+    <!--Image: 584 x 678 size=62750 (was 764 x 888 scale=0.76) q=60-->
+    <item href="www.gutenberg.org@files@74@74-h@images@34-264.jpg" id="item160" media-type="image/jpeg"/>
+    <!--Image: 584 x 452 size=60750 (was 682 x 528 scale=0.86) q=70-->
+    <item href="www.gutenberg.org@files@74@74-h@images@34-266.jpg" id="item161" media-type="image/jpeg"/>
+    <!--Image: 356 x 346 size=21307 -->
+    <item href="www.gutenberg.org@files@74@74-h@images@34-267.jpg" id="item162" media-type="image/jpeg"/>
+    <!--Image: 584 x 697 size=62990 (was 796 x 951 scale=0.73) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@35-268.jpg" id="item163" media-type="image/jpeg"/>
+    <!--Image: 584 x 546 size=62433 (was 601 x 562 scale=0.97) q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@35-271.jpg" id="item164" media-type="image/jpeg"/>
+    <!--Image: 584 x 522 size=61273 (was 641 x 574 scale=0.91) q=60-->
+    <item href="www.gutenberg.org@files@74@74-h@images@35-273.jpg" id="item165" media-type="image/jpeg"/>
+    <!--Image: 564 x 728 size=61214 q=50-->
+    <item href="www.gutenberg.org@files@74@74-h@images@35-274.jpg" id="item166" media-type="image/jpeg"/>
+    <item href="pgepub.css" id="item167" media-type="text/css"/>
+    <item href="0.css" id="item168" media-type="text/css"/>
+    <item href="1.css" id="item169" media-type="text/css"/>
+    <item href="2.css" id="item170" media-type="text/css"/>
+    <item href="3.css" id="item171" media-type="text/css"/>
+    <item href="4.css" id="item172" media-type="text/css"/>
+    <item href="5.css" id="item173" media-type="text/css"/>
+    <item href="6.css" id="item174" media-type="text/css"/>
+    <item href="7.css" id="item175" media-type="text/css"/>
+    <item href="8.css" id="item176" media-type="text/css"/>
+    <item href="9.css" id="item177" media-type="text/css"/>
+    <item href="10.css" id="item178" media-type="text/css"/>
+    <item href="11.css" id="item179" media-type="text/css"/>
+    <item href="12.css" id="item180" media-type="text/css"/>
+    <item href="13.css" id="item181" media-type="text/css"/>
+    <item href="14.css" id="item182" media-type="text/css"/>
+    <item href="15.css" id="item183" media-type="text/css"/>
+    <item href="16.css" id="item184" media-type="text/css"/>
+    <item href="17.css" id="item185" media-type="text/css"/>
+    <!--Chunk: size=36253-->
+    <item href="www.gutenberg.org@files@74@74-h@74-h-0.htm" id="item186" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=51492 Split on div-->
+    <item href="www.gutenberg.org@files@74@74-h@p1-0.htm" id="item187" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=7465-->
+    <item href="www.gutenberg.org@files@74@74-h@p1-1.htm" id="item188" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=53589 Split on div-->
+    <item href="www.gutenberg.org@files@74@74-h@p2-0.htm" id="item189" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=34950-->
+    <item href="www.gutenberg.org@files@74@74-h@p2-1.htm" id="item190" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=52167 Split on div-->
+    <item href="www.gutenberg.org@files@74@74-h@p3-0.htm" id="item191" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=24613-->
+    <item href="www.gutenberg.org@files@74@74-h@p3-1.htm" id="item192" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=63318 Split on div-->
+    <item href="www.gutenberg.org@files@74@74-h@p4-0.htm" id="item193" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=18296-->
+    <item href="www.gutenberg.org@files@74@74-h@p4-1.htm" id="item194" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=53389 Split on div-->
+    <item href="www.gutenberg.org@files@74@74-h@p5-0.htm" id="item195" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=18905-->
+    <item href="www.gutenberg.org@files@74@74-h@p5-1.htm" id="item196" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=58005 Split on div-->
+    <item href="www.gutenberg.org@files@74@74-h@p6-0.htm" id="item197" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=14244-->
+    <item href="www.gutenberg.org@files@74@74-h@p6-1.htm" id="item198" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=53914 Split on div-->
+    <item href="www.gutenberg.org@files@74@74-h@p7-0.htm" id="item199" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=25202-->
+    <item href="www.gutenberg.org@files@74@74-h@p7-1.htm" id="item200" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=52564 Split on div-->
+    <item href="www.gutenberg.org@files@74@74-h@p8-0.htm" id="item201" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=8287-->
+    <item href="www.gutenberg.org@files@74@74-h@p8-1.htm" id="item202" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="item186" linear="yes"/>
+    <itemref idref="item187" linear="yes"/>
+    <itemref idref="item188" linear="yes"/>
+    <itemref idref="item189" linear="yes"/>
+    <itemref idref="item190" linear="yes"/>
+    <itemref idref="item191" linear="yes"/>
+    <itemref idref="item192" linear="yes"/>
+    <itemref idref="item193" linear="yes"/>
+    <itemref idref="item194" linear="yes"/>
+    <itemref idref="item195" linear="yes"/>
+    <itemref idref="item196" linear="yes"/>
+    <itemref idref="item197" linear="yes"/>
+    <itemref idref="item198" linear="yes"/>
+    <itemref idref="item199" linear="yes"/>
+    <itemref idref="item200" linear="yes"/>
+    <itemref idref="item201" linear="yes"/>
+    <itemref idref="item202" linear="yes"/>
+  </spine>
+  <guide>
+    <reference href="www.gutenberg.org@files@74@74-h@74-h-0.htm#pgepubid00001" type="toc" title="CONTENTS"/>
+  </guide>
+</package>

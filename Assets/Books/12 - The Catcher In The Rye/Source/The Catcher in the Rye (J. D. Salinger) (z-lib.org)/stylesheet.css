@@ -1,0 +1,68 @@
+@namespace h "http://www.w3.org/1999/xhtml";
+.calibre {
+    display: block;
+    font-size: 1em;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-left: 5pt;
+    margin-right: 5pt;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0
+    }
+.calibre1 {
+    border-bottom: 0;
+    border-top: 0;
+    display: block;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-indent: 0.5em
+    }
+.calibre2 {
+    display: block
+    }
+.calibre3 {
+    border-bottom: 0;
+    border-top: 0;
+    display: block;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-align: CENTER;
+    text-indent: 0.5em
+    }
+.calibre4 {
+    font-size: 1.25em;
+    line-height: 1.2
+    }
+.calibre5 {
+    font-style: italic
+    }
+.calibre6 {
+    font-size: 1.125em;
+    line-height: 1.2
+    }
+.calibre7 {
+    font-weight: bolder;
+    line-height: 1.2
+    }
+.western {
+    display: block;
+    font-family: "Times New Roman", serif;
+    font-size: 1.375em;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.08in;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.67em;
+    text-align: center
+    }

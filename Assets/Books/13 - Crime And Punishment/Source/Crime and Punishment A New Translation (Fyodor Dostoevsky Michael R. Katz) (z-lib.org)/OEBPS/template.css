@@ -1,0 +1,220 @@
+body
+{
+margin: 1.5em;
+font-size:small;
+text-align: left;
+}
+img
+{
+max-width: 95%;
+max-height: 95%;
+}
+a
+{
+text-decoration:none;
+}
+.cover
+{
+margin: 0em 0em 0em 0em;
+text-align: center;
+}
+.alsot
+{
+margin: 3em 0em 0em 0em;
+font-family:sans-serif;
+}
+.table
+{
+margin: 1em 0em 1em 0em;
+width:100%;
+}
+.also_t
+{
+margin: 1em 0em 0em 2em;
+}
+.also_tt
+{
+margin: 2em 0em 0em 0em;
+font-family:sans-serif;
+}
+.ht
+{
+margin: 5em 0em 0em 0em;
+text-align: center;
+}
+.tit
+{
+margin: 0em 0em 0em 0em;
+text-align: center;
+}
+.copyt
+{
+margin: 3em 0em 0em 0em;
+font-size:85%;
+}
+.copysp
+{
+margin: 1em 0em 0em 0em;
+font-size:85%;
+}
+.copy
+{
+margin: 0em 0em 0em 0em;
+font-size:85%;
+}
+.img
+{
+max-width: 100%;
+}
+.dedt
+{
+margin: 5em 0em 0em 0em;
+text-align:center;
+font-size:110%;
+}
+.image
+{
+margin: 1.5em 0em 1.5em 0em;
+text-align: center;
+}
+.fmo
+{
+margin: 4em 0em 2.5em 0em;
+font-size:150%;
+color:#6D6E71;
+font-weight:bold;
+font-family:sans-serif;
+text-align:right;
+}
+.pn
+{
+margin: 3em 0em 3em 0em;
+text-align:center;
+}
+.Drop
+{
+margin:0em;
+font-size:250%;
+line-height:0;
+font-family:sans-serif;
+color:#6D6E71;
+}
+.cn
+{
+margin: 4em 2em 2.5em 0em;
+font-size:150%;
+text-align:right;
+font-weight:bold;
+font-family:sans-serif;
+color:#6D6E71;
+}
+.noindent
+{
+margin: 0em 0em 0em 0em;
+text-align:left;
+}
+.quotet
+{
+margin: 1em 1.5em 0em 1.5em;
+text-align:left;
+}
+.quote
+{
+margin: 0em 1.5em 0em 1.5em;
+text-align:left;
+}
+
+.pty1
+{
+margin: 1em 2.5em 0em 2.5em;
+text-align:left;
+font-style:italic;
+}
+.ptyL
+{
+margin: 0em 2.5em 1em 2.5em;
+text-align:left;
+font-style:italic;
+}
+.underline
+{
+        font-size:small;
+        text-decoration: underline;
+}
+
+.quoteind
+{
+margin: 0em 1.5em 0em 1.5em;
+text-align:left;
+text-indent:1.5em;
+}
+.noindentsp
+{
+margin: 1em 0em 0em 0em;
+text-align:left;
+}
+.indent
+{
+margin: 0em 0em 0em 0em;
+text-indent:1.5em;
+text-align: left;
+}
+
+.indentsp
+{
+margin: 1em 0em 0em 0em;
+text-indent:1.5em;
+text-align: left;
+}
+.h1
+{
+margin: 1em 0em 0.5em 0em;
+text-align: center;
+font-size:110%;
+font-weight:bold;
+}
+.h2
+{
+padding-top:2em;
+margin: 0em 0em 2em 0em;
+text-align: center;
+font-size:110%;
+font-weight:bold;
+}
+.indright
+{
+margin: 0.3em 0em 0em 70%;
+}
+.fline
+{
+margin: 1em 0em 1em 0em;
+border-top: 0.1em solid black;
+width:25%;
+}
+.fn
+{
+margin:0em 0em 0em 0em;
+font-size:90%;
+}
+.glo
+{
+margin:0.5em 0em 0em 1em;
+text-indent:-1em;
+}
+.glo2
+{
+margin:0.5em 0em 0em 3em;
+}
+
+.glo1
+{
+margin:0.5em 0em 0em 8em;
+}
+
+
+
+img 
+{
+max-width: 95%;
+max-height: 95%;
+}

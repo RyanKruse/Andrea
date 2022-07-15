@@ -1,0 +1,114 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="p" version="2.0">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+	    <dc:creator role="aut" file-as="Steinbeck, John &amp; DeMott, Robert">John Steinbeck</dc:creator>
+<dc:creator role="aut">Robert DeMott</dc:creator>
+<dc:title>The Grapes of Wrath</dc:title>
+			<dc:date>2006-11-15T05:00:00+00:00</dc:date>
+			<dc:identifier id="p"/>
+			<dc:format>524 pages</dc:format>
+			<dc:coverage>London</dc:coverage>
+			<dc:coverage>New York</dc:coverage>
+			<dc:coverage>Canada</dc:coverage>
+			<dc:coverage>Ireland</dc:coverage>
+			<dc:coverage>New Delhi</dc:coverage>
+			<dc:coverage>South Africa</dc:coverage>
+			<dc:coverage>England</dc:coverage>
+			<dc:type>Text</dc:type>
+			<dc:language>en-CA</dc:language>
+			<dc:rights>All rights reserved.</dc:rights>
+			<dc:publisher>Penguin Group</dc:publisher>
+	<opf:meta xmlns:opf="http://www.idpf.org/2007/opf" name="calibre:rating" content="8"/>
+<dc:identifier xmlns:opf="http://www.idpf.org/2007/opf" opf:scheme="ISBN">9780143039433</dc:identifier>
+<dc:subject xmlns:opf="http://www.idpf.org/2007/opf">General</dc:subject>
+<dc:subject xmlns:opf="http://www.idpf.org/2007/opf">Literary</dc:subject>
+<dc:subject xmlns:opf="http://www.idpf.org/2007/opf">Historical</dc:subject>
+<dc:subject xmlns:opf="http://www.idpf.org/2007/opf">Fiction</dc:subject>
+<dc:subject xmlns:opf="http://www.idpf.org/2007/opf">Classics</dc:subject>
+<dc:subject xmlns:opf="http://www.idpf.org/2007/opf">Domestic fiction</dc:subject>
+<dc:subject xmlns:opf="http://www.idpf.org/2007/opf">Political fiction</dc:subject>
+<dc:subject xmlns:opf="http://www.idpf.org/2007/opf">California</dc:subject>
+<dc:subject xmlns:opf="http://www.idpf.org/2007/opf">Rural families</dc:subject>
+<dc:subject xmlns:opf="http://www.idpf.org/2007/opf">Migrant agricultural laborers</dc:subject>
+<dc:subject xmlns:opf="http://www.idpf.org/2007/opf">Depressions</dc:subject>
+<dc:subject xmlns:opf="http://www.idpf.org/2007/opf">Labor camps</dc:subject>
+<dc:subject xmlns:opf="http://www.idpf.org/2007/opf">Oklahoma</dc:subject>
+<dc:description xmlns:opf="http://www.idpf.org/2007/opf">SUMMARY:
+When The Grapes of Wrath was published in 1939, America, still recovering from the Great Depression, came face to face with itself in a startling, lyrical way. John Steinbeck gathered the country's recent shames and devastations--the Hoovervilles, the desperate, dirty children, the dissolution of kin, the oppressive labor conditions--in the Joad family. Then he set them down on a westward-running road, local dialect and all, for the world to acknowledge. For this marvel of observation and perception, he won the Pulitzer in 1940. The prize must have come, at least in part, because alongside the poverty and dispossession, Steinbeck chronicled the Joads' refusal, even inability, to let go of their faltering but unmistakable hold on human dignity. Witnessing their degeneration from Oklahoma farmers to a diminished band of migrant workers is nothing short of crushing. The Joads lose family members to death and cowardice as they go, and are challenged by everything from weather to the authorities to the California locals themselves. As Tom Joad puts it: "They're a-workin' away at our spirits. They're a tryin' to make us cringe an' crawl like a whipped bitch. They tryin' to break us. Why, Jesus Christ, Ma, they comes a time when the on'y way a fella can keep his decency is by takin' a sock at a cop. They're workin' on our decency." The point, though, is that decency remains intact, if somewhat battle-scarred, and this, as much as the depression and the plight of the "Okies," is a part of American history. When the California of their dreams proves to be less than edenic, Ma tells Tom: "You got to have patience. Why, Tom--us people will go on livin' when all them people is gone. Why, Tom, we're the people that live. They ain't gonna wipe us out. Why, we're the people--we go on." It's almost as if she's talking about the very novel she inhabits, for Steinbeck's characters, more than most literary creations, do go on. They continue, now as much as ever, to illuminate and humanize an era for generations of readers who, thankfully, have no experiential point of reference for understanding the depression. The book's final, haunting image of Rose of Sharon--Rosasharn, as they call her--the eldest Joad daughter, forcing the milk intended for her stillborn baby onto a starving stranger, is a lesson on the grandest scale. "'You got to,'" she says, simply. And so do we all. --Melanie Rehak</dc:description>
+<meta name="calibre:user_metadata:#quality" content="{&quot;is_category&quot;: true, &quot;#extra#&quot;: null, &quot;kind&quot;: &quot;field&quot;, &quot;is_custom&quot;: true, &quot;name&quot;: &quot;Quality&quot;, &quot;datatype&quot;: &quot;rating&quot;, &quot;rec_index&quot;: 21, &quot;search_terms&quot;: [&quot;#quality&quot;], &quot;link_column&quot;: &quot;value&quot;, &quot;label&quot;: &quot;quality&quot;, &quot;colnum&quot;: 1, &quot;column&quot;: &quot;value&quot;, &quot;#value#&quot;: null, &quot;category_sort&quot;: &quot;value&quot;, &quot;table&quot;: &quot;custom_column_1&quot;, &quot;is_editable&quot;: true, &quot;is_multiple&quot;: null, &quot;display&quot;: {}}"/>
+        </metadata>
+	<manifest>
+        <item href="toc.ncx" id="ncx" media-type="application/xhtml+xml"/>
+        <item href="cover.html" id="cover" media-type="application/xhtml+xml"/>
+        <item href="frontm.html" id="frontm" media-type="application/xhtml+xml"/>
+        <item href="chapter01a.html" id="chapter01a" media-type="application/xhtml+xml"/>
+        <item href="chapter01.html" id="chapter01" media-type="application/xhtml+xml"/>
+        <item href="chapter02.html" id="chapter02" media-type="application/xhtml+xml"/>
+        <item href="chapter03.html" id="chapter03" media-type="application/xhtml+xml"/>
+        <item href="chapter04.html" id="chapter04" media-type="application/xhtml+xml"/>
+        <item href="chapter05.html" id="chapter05" media-type="application/xhtml+xml"/>
+        <item href="chapter06.html" id="chapter06" media-type="application/xhtml+xml"/>
+        <item href="chapter07.html" id="chapter07" media-type="application/xhtml+xml"/>
+        <item href="chapter08.html" id="chapter08" media-type="application/xhtml+xml"/>
+        <item href="chapter09.html" id="chapter09" media-type="application/xhtml+xml"/>
+        <item href="chapter10.html" id="chapter10" media-type="application/xhtml+xml"/>
+        <item href="chapter11.html" id="chapter11" media-type="application/xhtml+xml"/>
+        <item href="chapter12.html" id="chapter12" media-type="application/xhtml+xml"/>
+        <item href="chapter13.html" id="chapter13" media-type="application/xhtml+xml"/>
+        <item href="chapter14.html" id="chapter14" media-type="application/xhtml+xml"/>
+        <item href="chapter15.html" id="chapter15" media-type="application/xhtml+xml"/>
+        <item href="chapter16.html" id="chapter16" media-type="application/xhtml+xml"/>
+        <item href="chapter17.html" id="chapter17" media-type="application/xhtml+xml"/>
+        <item href="chapter18.html" id="chapter18" media-type="application/xhtml+xml"/>
+        <item href="chapter19.html" id="chapter19" media-type="application/xhtml+xml"/>
+        <item href="chapter20.html" id="chapter20" media-type="application/xhtml+xml"/>
+        <item href="chapter21.html" id="chapter21" media-type="application/xhtml+xml"/>
+        <item href="chapter22.html" id="chapter22" media-type="application/xhtml+xml"/>
+        <item href="chapter23.html" id="chapter23" media-type="application/xhtml+xml"/>
+        <item href="chapter24.html" id="chapter24" media-type="application/xhtml+xml"/>
+        <item href="chapter25.html" id="chapter25" media-type="application/xhtml+xml"/>
+        <item href="chapter26.html" id="chapter26" media-type="application/xhtml+xml"/>
+        <item href="chapter27.html" id="chapter27" media-type="application/xhtml+xml"/>
+        <item href="chapter28.html" id="chapter28" media-type="application/xhtml+xml"/>
+        <item href="chapter29.html" id="chapter29" media-type="application/xhtml+xml"/>
+        <item href="chapter30.html" id="chapter30" media-type="application/xhtml+xml"/>
+        <item href="page-template.xpgt" id="pt" media-type="application/vnd.adobe-page-template+xml"/>      
+        <item href="images/9780141185064.001.jpg" id="pub01" media-type="image/jpeg"/>
+        <item href="page-map.xml" id="map" media-type="application/oebps-page-map+xml"/>
+</manifest>
+	<spine page-map="map" toc="ncx">
+                <itemref idref="cover"/>   
+		<itemref idref="frontm"/>
+		<itemref idref="chapter01a"/>
+		<itemref idref="chapter01"/>
+		<itemref idref="chapter02"/>
+		<itemref idref="chapter03"/>
+		<itemref idref="chapter04"/>
+		<itemref idref="chapter05"/>
+		<itemref idref="chapter06"/>
+		<itemref idref="chapter07"/>
+		<itemref idref="chapter08"/>
+		<itemref idref="chapter09"/>
+		<itemref idref="chapter10"/>
+		<itemref idref="chapter11"/>
+		<itemref idref="chapter12"/>
+		<itemref idref="chapter13"/>
+		<itemref idref="chapter14"/>
+		<itemref idref="chapter15"/>
+		<itemref idref="chapter16"/>
+		<itemref idref="chapter17"/>
+		<itemref idref="chapter18"/>
+		<itemref idref="chapter19"/>
+		<itemref idref="chapter20"/>
+		<itemref idref="chapter21"/>
+		<itemref idref="chapter22"/>
+		<itemref idref="chapter23"/>
+		<itemref idref="chapter24"/>
+		<itemref idref="chapter25"/>
+		<itemref idref="chapter26"/>
+		<itemref idref="chapter27"/>
+		<itemref idref="chapter28"/>
+		<itemref idref="chapter29"/>
+		<itemref idref="chapter30"/>
+	</spine>
+</package>

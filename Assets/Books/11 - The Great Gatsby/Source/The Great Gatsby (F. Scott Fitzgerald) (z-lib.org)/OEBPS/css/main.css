@@ -1,0 +1,192 @@
+@font-face
+{
+ font-style: normal;
+ font-family: Font_8e900892-70e9-407a-9a85-fc4ee92d329a;
+ src:  url(../fonts/LiberationSerif-Regular.ttf) ;
+ font-weight: normal;}
+@font-face
+{
+ font-style: italic;
+ font-family: Font_8e900892-70e9-407a-9a85-fc4ee92d329a;
+ src:  url(../fonts/LiberationSerif-Italic.ttf) ;
+ font-weight: normal;}
+@font-face
+{
+ font-style: normal;
+ font-family: Font_8e900892-70e9-407a-9a85-fc4ee92d329a;
+ src:  url(../fonts/LiberationSerif-Bold.ttf) ;
+ font-weight: bold;}
+@font-face
+{
+ font-style: italic;
+ font-family: Font_8e900892-70e9-407a-9a85-fc4ee92d329a;
+ src:  url(../fonts/LiberationSerif-BoldItalic.ttf) ;
+ font-weight: bold;}
+@font-face
+{
+ font-style: italic;
+ font-family: Font_8e900892-70e9-407a-9a85-fc4ee92d329a;
+ src:  url(../fonts/LiberationSerif-Italic.ttf) ;}
+body
+{
+ font-family: "Font_8e900892-70e9-407a-9a85-fc4ee92d329a";
+ margin-right: 8pt;}
+.epub
+{
+ font-family: "Font_8e900892-70e9-407a-9a85-fc4ee92d329a";}
+code
+{
+ font-family: "Font_8e900892-70e9-407a-9a85-fc4ee92d329a";}
+h1,h2,h3,h4,h5,h6
+{
+ text-align: center;
+ page-break-after: avoid;
+ page-break-inside: avoid;}
+.section_image
+{
+ page-break-inside: avoid;
+ display: block;
+ text-align: center;}
+.body_image
+{
+ page-break-inside: avoid;
+ display: block;
+ text-align: center;}
+.epigraph
+{
+ font-style: italic;
+ page-break-inside: avoid;
+ margin: 0.5em 0px;
+ margin-bottom: 1em;
+ font-size: 0.9em;}
+body.cover
+{
+ margin: 0px;
+ padding: 0px;}
+svg.cover-svg
+{
+ height: 100%;
+ width: 100%;}
+img
+{
+ max-width: 95%;}
+div.img
+{
+ padding: 3px;
+ text-align: center;}
+div.title1
+{
+ page-break-after: avoid;
+ page-break-inside: avoid;
+ font-weight: bold;
+ margin: 1em 0px 0.5em 0px;
+ font-size: 1.4em;
+ text-align: center;}
+p.title-p
+{
+ margin: 0px 0px 0.5em 0px;}
+div.title2
+{
+ page-break-after: avoid;
+ page-break-inside: avoid;
+ font-weight: bold;
+ margin: 1em 0px 0.5em 1.5625em;
+ font-size: 1.1em;}
+div.title3
+{
+ page-break-after: avoid;
+ page-break-inside: avoid;
+ font-weight: bold;
+ margin: 1em 0px 0.5em 1.923em;
+ font-size: 1.0em;}
+p
+{
+ margin: 0px;
+ margin-top: 0;
+ margin-bottom: 0;
+ text-indent: 1.5em;
+ text-align: justify;}
+.subtitle
+{
+ font-style: italic;
+ page-break-after: avoid;
+ page-break-inside: avoid;
+ font-weight: bold;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: center;}
+p.empty-line
+{
+ height: 1em;
+ margin: 0px;}
+a
+{
+ vertical-align: super;
+ line-height: 0.1;
+ font-size: 0.7em;}
+div.annotation
+{
+ font-style: italic;
+ margin: 0em 0px 0em 0em;
+ text-indent: 0px;
+ font-size: smaller;}
+div.citation
+{
+ font-style: italic;
+ margin: 1em 0px 1em 2em;
+ text-indent: 0px;}
+div.poem
+{
+ margin: 0.5em 15% 0.5em 15%;
+ text-align: center;}
+div.stanza
+{
+ page-break-inside: avoid;
+ margin: 0.5em 0px;
+ text-align: left;}
+p.v
+{
+ padding-left: 1em;
+ text-indent: -1em;
+ margin: 0px;
+ text-align: left;}
+div.section
+{}
+div.title4
+{
+ page-break-after: avoid;
+ page-break-inside: avoid;
+ font-weight: bold;
+ margin: 1em 0px 0.5em 2.083em;
+ font-size: 1.0em;}
+a.note_anchor
+{
+ font-size: larger;
+ vertical-align: middle;
+ text-align: center;}
+p.note_section
+{
+ text-align: center;
+ display: block;}
+div.coverpage
+{
+ text-align: center;
+ page-break-after: always;}
+img.coverimage
+{
+ max-width: 100%;
+ height: 100%;}
+div.titlepage
+{
+ text-align: center;
+ page-break-after: always;}
+table
+{
+ border: 1px solid black;
+ border-collapse: collapse;
+ margin: 0.5em;
+ font-size: 0.8em;}
+td
+{
+ border: 1px solid black;
+ padding: 0.3em;}

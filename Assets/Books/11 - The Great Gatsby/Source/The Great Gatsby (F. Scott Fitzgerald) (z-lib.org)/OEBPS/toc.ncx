@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta name="dtb:uid" content="FB2BookID" />
+    <meta name="dtb:depth" content="1" />
+    <meta name="dtb:totalPageCount" content="0" />
+    <meta name="dtb:maxPageNumber" content="0" />
+  </head>
+  <docTitle>
+    <text>The Great Gatsby</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="NavPoint-1" playOrder="1">
+      <navLabel>
+        <text>CHAPTER I</text>
+      </navLabel>
+      <content src="section2.xhtml" />
+    </navPoint>
+    <navPoint id="NavPoint-2" playOrder="2">
+      <navLabel>
+        <text>CHAPTER II</text>
+      </navLabel>
+      <content src="section3.xhtml" />
+    </navPoint>
+    <navPoint id="NavPoint-3" playOrder="3">
+      <navLabel>
+        <text>CHAPTER III</text>
+      </navLabel>
+      <content src="section4.xhtml" />
+    </navPoint>
+    <navPoint id="NavPoint-4" playOrder="4">
+      <navLabel>
+        <text>CHAPTER IV</text>
+      </navLabel>
+      <content src="section5.xhtml" />
+    </navPoint>
+    <navPoint id="NavPoint-5" playOrder="5">
+      <navLabel>
+        <text>CHAPTER V</text>
+      </navLabel>
+      <content src="section6.xhtml" />
+    </navPoint>
+    <navPoint id="NavPoint-6" playOrder="6">
+      <navLabel>
+        <text>CHAPTER VI</text>
+      </navLabel>
+      <content src="section7.xhtml" />
+    </navPoint>
+    <navPoint id="NavPoint-7" playOrder="7">
+      <navLabel>
+        <text>CHAPTER VII</text>
+      </navLabel>
+      <content src="section8.xhtml" />
+    </navPoint>
+    <navPoint id="NavPoint-8" playOrder="8">
+      <navLabel>
+        <text>CHAPTER VIII</text>
+      </navLabel>
+      <content src="section9.xhtml" />
+    </navPoint>
+    <navPoint id="NavPoint-9" playOrder="9">
+      <navLabel>
+        <text>CHAPTER IX</text>
+      </navLabel>
+      <content src="section10.xhtml" />
+    </navPoint>
+  </navMap>
+</ncx>

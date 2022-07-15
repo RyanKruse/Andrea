@@ -1,0 +1,26 @@
+@charset "utf-8";
+/**/
+body {
+    background: #faebd7;
+    margin: 10%;
+    text-align: justify
+    }
+p {
+    text-indent: 1em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em
+    }
+h1, h2, h3, h4, h5, h6 {
+    text-align: center
+    }
+hr {
+    width: 33%;
+    text-align: center
+    }
+blockquote {
+    font-size: 97%
+    }
+.toc {
+    margin-left: 15%;
+    margin-bottom: 0
+    }

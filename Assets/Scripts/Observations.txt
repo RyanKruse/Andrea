@@ -26,15 +26,14 @@ Language Packs & Fallback Tips:
 
 Oustanding Tasks:
 
+[START HELL CODE #4 - HELL CODE #1 COMPLETE]
+
+Expand top buttons image size to overlap text.
+If hovering button, show "Back" or "Settings" while hovering TopCenter shows book title?
+Star kind of blips in and out when nav selecting 100%.
 
 Hell Code #1:
-Preserve text when going back to home screen.
-Restore text when returning back to book.
-Show progress as flag on book icon.
-Show star on flag if finished book.
-Preserve text for multiple books.
-
-
+Stress test by multiple books and modifying settings.
 
 
 Hell Code #2
@@ -141,8 +140,8 @@ Category 0 - Personal Development [10]:
 X	The Subtle Art of Not Giving a F_ck
 X	7 Habits of Highly Effective People
 X	How to Win Friends and Influence People
-	Think And Grow Rich
 X	The Power of Habit
+	Think And Grow Rich
 	Deep Work
 	Grit
 	Mindset
@@ -153,8 +152,8 @@ Category 1 - Classic Literature [10]:
 	The Great Gatsby
 	The Catcher In The Rye
 	Crime and Punishment
-	Catch 22
-	The Adventures Of Tom
+	Catch-22
+	The Adventures of Tom Sawyer
 	To Kill A Mockingbird
 	Pride and Prejudice
 	The Grapes Of Wrath 

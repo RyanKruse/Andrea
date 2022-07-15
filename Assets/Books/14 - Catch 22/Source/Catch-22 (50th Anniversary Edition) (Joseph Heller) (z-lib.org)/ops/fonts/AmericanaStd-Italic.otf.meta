@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 3be3f36aaee6b2843b3ff548862a945a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Americana Std
+  fontNames:
+  - Americana Std
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5a105bf205ca3414c9b9099a9cb0f9ab, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

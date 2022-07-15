@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="eng">
+  <head>
+    <meta content="94fe5d7c-e6b9-4746-bc31-9ccae88f2280" name="dtb:uid"/>
+    <meta content="2" name="dtb:depth"/>
+    <meta content="calibre (3.9.0)" name="dtb:generator"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>1984: Illustrated (The Evergreen Classics)</text>
+  </docTitle>
+  <navMap>
+    <navPoint class="chapter" id="nav0" playOrder="1">
+      <navLabel>
+        <text>PART ONE</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_000.xhtml"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav1" playOrder="2">
+      <navLabel>
+        <text>Chapter 1</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_000.xhtml#HJgsLqzORrKVMgzkdao7qw1437"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav2" playOrder="3">
+      <navLabel>
+        <text>Chapter 2</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_000.xhtml#HJgsLqzORrKVMgzkdao7qw1438"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav3" playOrder="4">
+      <navLabel>
+        <text>Chapter 3</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_000.xhtml#HJgsLqzORrKVMgzkdao7qw1439"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav4" playOrder="5">
+      <navLabel>
+        <text>Chapter 4</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_000.xhtml#HJgsLqzORrKVMgzkdao7qw1440"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav5" playOrder="6">
+      <navLabel>
+        <text>Chapter 5</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_000.xhtml#HJgsLqzORrKVMgzkdao7qw1441"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav6" playOrder="7">
+      <navLabel>
+        <text>Chapter 6</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_000.xhtml#HJgsLqzORrKVMgzkdao7qw1442"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav7" playOrder="8">
+      <navLabel>
+        <text>Chapter 7</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_000.xhtml#HJgsLqzORrKVMgzkdao7qw1443"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav8" playOrder="9">
+      <navLabel>
+        <text>Chapter 8</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_000.xhtml#HJgsLqzORrKVMgzkdao7qw1444"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav9" playOrder="10">
+      <navLabel>
+        <text>PART TWO</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_001.xhtml#HJgsLqzORrKVMgzkdao7qw1445"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav10" playOrder="11">
+      <navLabel>
+        <text>Chapter 1</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_001.xhtml#HJgsLqzORrKVMgzkdao7qw1446"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav11" playOrder="12">
+      <navLabel>
+        <text>Chapter 2</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_001.xhtml#HJgsLqzORrKVMgzkdao7qw1447"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav12" playOrder="13">
+      <navLabel>
+        <text>Chapter 3</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_001.xhtml#HJgsLqzORrKVMgzkdao7qw1448"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav13" playOrder="14">
+      <navLabel>
+        <text>Chapter 4</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_001.xhtml#HJgsLqzORrKVMgzkdao7qw1449"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav14" playOrder="15">
+      <navLabel>
+        <text>Chapter 5</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_001.xhtml#HJgsLqzORrKVMgzkdao7qw1450"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav15" playOrder="16">
+      <navLabel>
+        <text>Chapter 6</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_001.xhtml#HJgsLqzORrKVMgzkdao7qw1451"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav16" playOrder="17">
+      <navLabel>
+        <text>Chapter 7</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_002.xhtml#HJgsLqzORrKVMgzkdao7qw1452"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav17" playOrder="18">
+      <navLabel>
+        <text>Chapter 8</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_002.xhtml#HJgsLqzORrKVMgzkdao7qw1453"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav18" playOrder="19">
+      <navLabel>
+        <text>Chapter 9</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_002.xhtml#HJgsLqzORrKVMgzkdao7qw1454"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav19" playOrder="20">
+      <navLabel>
+        <text>PART THREE</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_002.xhtml#HJgsLqzORrKVMgzkdao7qw1455"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav20" playOrder="21">
+      <navLabel>
+        <text>Chapter 1</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_002.xhtml#HJgsLqzORrKVMgzkdao7qw1456"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav21" playOrder="22">
+      <navLabel>
+        <text>Chapter 2</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_002.xhtml#HJgsLqzORrKVMgzkdao7qw1457"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav22" playOrder="23">
+      <navLabel>
+        <text>Chapter 3</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_003.xhtml#HJgsLqzORrKVMgzkdao7qw1458"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav23" playOrder="24">
+      <navLabel>
+        <text>Chapter 4</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_003.xhtml#HJgsLqzORrKVMgzkdao7qw1459"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav24" playOrder="25">
+      <navLabel>
+        <text>Chapter 5</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_003.xhtml#HJgsLqzORrKVMgzkdao7qw1460"/>
+    </navPoint>
+    <navPoint class="chapter" id="nav25" playOrder="26">
+      <navLabel>
+        <text>Chapter 6</text>
+      </navLabel>
+      <content src="OEBPS/part0003_split_003.xhtml#HJgsLqzORrKVMgzkdao7qw1461"/>
+    </navPoint>
+  </navMap>
+</ncx>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package version="2.0" unique-identifier="FB2BookID" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcterms="http://purl.org/dc/terms/">
+    <dc:title>The Great Gatsby</dc:title>
+    <dc:language xsi:type="dcterms:RFC3066">en</dc:language>
+    <dc:identifier id="FB2BookID" p6:scheme="URI" xmlns:p6="http://www.idpf.org/2007/opf">urn:uuid:0f4008fa-3d92-4cc0-a1af-62c654cd6af8</dc:identifier>
+    <dc:creator p6:role="aut" p6:file-as="Fitzgerald, Francis" xmlns:p6="http://www.idpf.org/2007/opf">Francis Scott Key Fitzgerald</dc:creator>
+    <dc:contributor p6:role="adp" xmlns:p6="http://www.idpf.org/2007/opf">Sclex</dc:contributor>
+    <dc:description>Set in the post-Great War Long Island/New York world of the rich. The narrator, Nick Carraway, sympathetically records the pathos of Gatsby’s romantic dream which founders on the reality of corruption, the insulated selfishness of Tom and Daisy, and the cutting edge of violence.  </dc:description>
+    <dc:subject>prose_classic</dc:subject>
+    <meta name="cover" content="images/cover.jpg" />
+  </metadata>
+  <manifest>
+    <item id="cover.jpg" href="images/cover.jpg" media-type="image/jpeg" />
+    <item id="LiberationSerif-Regular" href="fonts/LiberationSerif-Regular.ttf" media-type="application/x-font-ttf" />
+    <item id="LiberationSerif-Italic" href="fonts/LiberationSerif-Italic.ttf" media-type="application/x-font-ttf" />
+    <item id="LiberationSerif-Bold" href="fonts/LiberationSerif-Bold.ttf" media-type="application/x-font-ttf" />
+    <item id="LiberationSerif-BoldItalic" href="fonts/LiberationSerif-BoldItalic.ttf" media-type="application/x-font-ttf" />
+    <item id="mainCSS" href="css/main.css" media-type="text/css" />
+    <item id="cover" href="cover.xhtml" media-type="application/xhtml+xml" />
+    <item id="title" href="title.xhtml" media-type="application/xhtml+xml" />
+    <item id="annotation" href="annotation.xhtml" media-type="application/xhtml+xml" />
+    <item id="bookcontent1_0" href="section1.xhtml" media-type="application/xhtml+xml" />
+    <item id="bookcontent2_0" href="section2.xhtml" media-type="application/xhtml+xml" />
+    <item id="bookcontent3_0" href="section3.xhtml" media-type="application/xhtml+xml" />
+    <item id="bookcontent4_0" href="section4.xhtml" media-type="application/xhtml+xml" />
+    <item id="bookcontent5_0" href="section5.xhtml" media-type="application/xhtml+xml" />
+    <item id="bookcontent6_0" href="section6.xhtml" media-type="application/xhtml+xml" />
+    <item id="bookcontent7_0" href="section7.xhtml" media-type="application/xhtml+xml" />
+    <item id="bookcontent8_0" href="section8.xhtml" media-type="application/xhtml+xml" />
+    <item id="bookcontent9_0" href="section9.xhtml" media-type="application/xhtml+xml" />
+    <item id="bookcontent10_0" href="section10.xhtml" media-type="application/xhtml+xml" />
+    <item id="bookcontent11_0" href="fb2info.xhtml" media-type="application/xhtml+xml" />
+    <item id="about" href="about.xhtml" media-type="application/xhtml+xml" />
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover" />
+    <itemref idref="title" />
+    <itemref idref="annotation" />
+    <itemref idref="bookcontent1_0" />
+    <itemref idref="bookcontent2_0" />
+    <itemref idref="bookcontent3_0" />
+    <itemref idref="bookcontent4_0" />
+    <itemref idref="bookcontent5_0" />
+    <itemref idref="bookcontent6_0" />
+    <itemref idref="bookcontent7_0" />
+    <itemref idref="bookcontent8_0" />
+    <itemref idref="bookcontent9_0" />
+    <itemref idref="bookcontent10_0" />
+    <itemref idref="bookcontent11_0" />
+    <itemref idref="about" />
+  </spine>
+  <guide>
+    <reference type="cover" title="cover" href="cover.xhtml" />
+    <reference type="title-page" title="title" href="title.xhtml" />
+    <reference type="preface" title="annotation" href="annotation.xhtml" />
+    <reference type="title-page" title="bookcontent1_0" href="section1.xhtml" />
+    <reference type="text" title="bookcontent2_0" href="section2.xhtml" />
+    <reference type="text" title="bookcontent3_0" href="section3.xhtml" />
+    <reference type="text" title="bookcontent4_0" href="section4.xhtml" />
+    <reference type="text" title="bookcontent5_0" href="section5.xhtml" />
+    <reference type="text" title="bookcontent6_0" href="section6.xhtml" />
+    <reference type="text" title="bookcontent7_0" href="section7.xhtml" />
+    <reference type="text" title="bookcontent8_0" href="section8.xhtml" />
+    <reference type="text" title="bookcontent9_0" href="section9.xhtml" />
+    <reference type="text" title="bookcontent10_0" href="section10.xhtml" />
+    <reference type="notes" title="bookcontent11_0" href="fb2info.xhtml" />
+    <reference type="copyright-page" title="about" href="about.xhtml" />
+  </guide>
+</package>

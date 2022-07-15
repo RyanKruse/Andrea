@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="p9781451632965">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:title>Catch-22</dc:title>
+    <dc:creator>Joseph Heller</dc:creator>
+    <dc:identifier id="p9781451632965">9781451632965</dc:identifier>
+    <dc:language>En</dc:language>
+    <dc:publisher>Simon &amp; Schuster</dc:publisher>
+    <meta name="cover" content="my--cover--image" />
+    <meta name="BNContentKind" content="book" xmlns="" />
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+    <item id="a_css" href="styles/9781451632965.css" media-type="text/css" />
+    <item id="a_pt" href="styles/page-template.xpgt" media-type="application/vnd.adobe-page-template+xml" />
+    <item id="my--cover--image" href="images/9781451632965.jpg" media-type="image/jpeg" />
+    <item id="a_icover" href="images/9781451632965_cover.jpg" media-type="image/jpeg" />
+    <item id="a_cover" href="xhtml/a_cover.html" media-type="application/xhtml+xml" />
+    <item id="a_authorbio" href="xhtml/a_authorbio.html" media-type="application/xhtml+xml" />
+    <item id="a_ebookregfront" href="xhtml/a_ebookregfront.html" media-type="application/xhtml+xml" />
+    <item id="a_contents" href="xhtml/a_contents.html" media-type="application/xhtml+xml" />
+    <item id="a_ch01" href="xhtml/a_ch01.html" media-type="application/xhtml+xml" />
+    <item id="a_ch02" href="xhtml/a_ch02.html" media-type="application/xhtml+xml" />
+    <item id="a_ch03" href="xhtml/a_ch03.html" media-type="application/xhtml+xml" />
+    <item id="a_ch04" href="xhtml/a_ch04.html" media-type="application/xhtml+xml" />
+    <item id="a_ch05" href="xhtml/a_ch05.html" media-type="application/xhtml+xml" />
+    <item id="a_ch06" href="xhtml/a_ch06.html" media-type="application/xhtml+xml" />
+    <item id="a_ch07" href="xhtml/a_ch07.html" media-type="application/xhtml+xml" />
+    <item id="a_ch08" href="xhtml/a_ch08.html" media-type="application/xhtml+xml" />
+    <item id="a_ch09" href="xhtml/a_ch09.html" media-type="application/xhtml+xml" />
+    <item id="a_ch10" href="xhtml/a_ch10.html" media-type="application/xhtml+xml" />
+    <item id="a_ch11" href="xhtml/a_ch11.html" media-type="application/xhtml+xml" />
+    <item id="a_ch12" href="xhtml/a_ch12.html" media-type="application/xhtml+xml" />
+    <item id="a_ch13" href="xhtml/a_ch13.html" media-type="application/xhtml+xml" />
+    <item id="a_ch14" href="xhtml/a_ch14.html" media-type="application/xhtml+xml" />
+    <item id="a_ch15" href="xhtml/a_ch15.html" media-type="application/xhtml+xml" />
+    <item id="a_ch16" href="xhtml/a_ch16.html" media-type="application/xhtml+xml" />
+    <item id="a_ch17" href="xhtml/a_ch17.html" media-type="application/xhtml+xml" />
+    <item id="a_ch18" href="xhtml/a_ch18.html" media-type="application/xhtml+xml" />
+    <item id="a_ch19" href="xhtml/a_ch19.html" media-type="application/xhtml+xml" />
+    <item id="a_ch20" href="xhtml/a_ch20.html" media-type="application/xhtml+xml" />
+    <item id="a_ch21" href="xhtml/a_ch21.html" media-type="application/xhtml+xml" />
+    <item id="a_ch22" href="xhtml/a_ch22.html" media-type="application/xhtml+xml" />
+    <item id="a_ch23" href="xhtml/a_ch23.html" media-type="application/xhtml+xml" />
+    <item id="a_ch24" href="xhtml/a_ch24.html" media-type="application/xhtml+xml" />
+    <item id="a_ch25" href="xhtml/a_ch25.html" media-type="application/xhtml+xml" />
+    <item id="a_ch26" href="xhtml/a_ch26.html" media-type="application/xhtml+xml" />
+    <item id="a_ch27" href="xhtml/a_ch27.html" media-type="application/xhtml+xml" />
+    <item id="a_ch28" href="xhtml/a_ch28.html" media-type="application/xhtml+xml" />
+    <item id="a_ch29" href="xhtml/a_ch29.html" media-type="application/xhtml+xml" />
+    <item id="a_ch30" href="xhtml/a_ch30.html" media-type="application/xhtml+xml" />
+    <item id="a_ch31" href="xhtml/a_ch31.html" media-type="application/xhtml+xml" />
+    <item id="a_ch32" href="xhtml/a_ch32.html" media-type="application/xhtml+xml" />
+    <item id="a_ch33" href="xhtml/a_ch33.html" media-type="application/xhtml+xml" />
+    <item id="a_ch34" href="xhtml/a_ch34.html" media-type="application/xhtml+xml" />
+    <item id="a_ch35" href="xhtml/a_ch35.html" media-type="application/xhtml+xml" />
+    <item id="a_ch36" href="xhtml/a_ch36.html" media-type="application/xhtml+xml" />
+    <item id="a_ch37" href="xhtml/a_ch37.html" media-type="application/xhtml+xml" />
+    <item id="a_ch38" href="xhtml/a_ch38.html" media-type="application/xhtml+xml" />
+    <item id="a_ch39" href="xhtml/a_ch39.html" media-type="application/xhtml+xml" />
+    <item id="a_ch40" href="xhtml/a_ch40.html" media-type="application/xhtml+xml" />
+    <item id="a_ch41" href="xhtml/a_ch41.html" media-type="application/xhtml+xml" />
+    <item id="a_ch42" href="xhtml/a_ch42.html" media-type="application/xhtml+xml" />
+    <item id="a_ch43" href="xhtml/a_ch43.html" media-type="application/xhtml+xml" />
+    <item id="a_ebookregback" href="xhtml/a_ebookregback.html" media-type="application/xhtml+xml" />
+    <item id="a_promo" href="images/a_promo.jpg" media-type="image/jpeg" />
+    <item id="a_bm04" href="images/a_bm04.jpg" media-type="image/jpeg" />
+    <item id="a_bm02" href="images/a_bm02.jpg" media-type="image/jpeg" />
+    <item id="a_bm03" href="images/a_bm03.jpg" media-type="image/jpeg" />
+    <item id="a_font1" href="fonts/ACaslonPro-Italic.otf" media-type="application/x-font-otf" />
+    <item id="a_font2" href="fonts/ACaslonPro-Regular.otf" media-type="application/x-font-otf" />
+    <item id="a_font3" href="fonts/HelveticaNeueLTStd-Bd.otf" media-type="application/x-font-otf" />
+    <item id="a_font4" href="fonts/HelveticaLTStd-Roman.otf" media-type="application/x-font-otf" />
+    <item id="a_font5" href="fonts/HelveticaNeueLTStd-BdCn.otf" media-type="application/x-font-otf" />
+    <item id="a_font6" href="fonts/HelveticaNeueLTStd-BdIt.otf" media-type="application/x-font-otf" />
+    <item id="a_font7" href="fonts/HelveticaNeueLTStd-Md.otf" media-type="application/x-font-otf" />
+    <item id="a_font8" href="fonts/HelveticaNeueLTStd-MdIt.otf" media-type="application/x-font-otf" />
+    <item id="a_font9" href="fonts/HelveticaNeueLTStd-Roman.otf" media-type="application/x-font-otf" />
+    <item id="a_font10" href="fonts/TimesLTStd-Bold.otf" media-type="application/x-font-otf" />
+    <item id="a_font11" href="fonts/TimesLTStd-BoldItalic.otf" media-type="application/x-font-otf" />
+    <item id="a_font12" href="fonts/TimesLTStd-Italic.otf" media-type="application/x-font-otf" />
+    <item id="a_font13" href="fonts/TimesLTStd-Roman.otf" media-type="application/x-font-otf" />
+    <item id="a_font14" href="fonts/TradeGothicLTStd-BdCn20.otf" media-type="application/x-font-otf" />
+    <item id="a_font15" href="fonts/TradeGothicLTStd-Cn18.otf" media-type="application/x-font-otf" />
+    <item id="a_font16" href="fonts/EngraversLTStd-BoldFace.otf" media-type="application/x-font-otf" />
+    <item id="a_font17" href="fonts/JansonTextLTStd-Bold.otf" media-type="application/x-font-otf" />
+    <item id="a_font18" href="fonts/JansonTextLTStd-BoldItalic.otf" media-type="application/x-font-otf" />
+    <item id="a_font19" href="fonts/JansonTextLTStd-Italic.otf" media-type="application/x-font-otf" />
+    <item id="a_font20" href="fonts/JansonTextLTStd-Roman.otf" media-type="application/x-font-otf" />
+    <item id="a_font21" href="fonts/AmericanaStd.otf" media-type="application/x-font-otf" />
+    <item id="a_font22" href="fonts/AmericanaStd-Italic.otf" media-type="application/x-font-otf" />
+    <item id="font1" href="fonts/BemboStd-Bold.otf" media-type="application/x-font-otf" />
+    <item id="font2" href="fonts/BemboStd-Italic.otf" media-type="application/x-font-otf" />
+    <item id="font3" href="fonts/BemboStd-BoldItalic.otf" media-type="application/x-font-otf" />
+    <item id="font4" href="fonts/BemboStd.otf" media-type="application/x-font-otf" />
+    <item id="fm01" href="xhtml/fm01.html" media-type="application/xhtml+xml" />
+    <item id="fm02" href="xhtml/fm02.html" media-type="application/xhtml+xml" />
+    <item id="title" href="xhtml/title.html" media-type="application/xhtml+xml" />
+    <item id="copyright" href="xhtml/copyright.html" media-type="application/xhtml+xml" />
+    <item id="dedi" href="xhtml/dedi.html" media-type="application/xhtml+xml" />
+    <item id="introduction" href="xhtml/introduction.html" media-type="application/xhtml+xml" />
+    <item id="dedi2" href="xhtml/dedi2.html" media-type="application/xhtml+xml" />
+    <item id="half" href="xhtml/half.html" media-type="application/xhtml+xml" />
+    <item id="half2" href="xhtml/half2.html" media-type="application/xhtml+xml" />
+    <item id="ch00_part01" href="xhtml/ch00_part01.html" media-type="application/xhtml+xml" />
+    <item id="ch01" href="xhtml/ch01.html" media-type="application/xhtml+xml" />
+    <item id="ch02" href="xhtml/ch02.html" media-type="application/xhtml+xml" />
+    <item id="ch03" href="xhtml/ch03.html" media-type="application/xhtml+xml" />
+    <item id="ch03b_part02" href="xhtml/ch03b_part02.html" media-type="application/xhtml+xml" />
+    <item id="ch04" href="xhtml/ch04.html" media-type="application/xhtml+xml" />
+    <item id="ch05" href="xhtml/ch05.html" media-type="application/xhtml+xml" />
+    <item id="ch06" href="xhtml/ch06.html" media-type="application/xhtml+xml" />
+    <item id="ch07" href="xhtml/ch07.html" media-type="application/xhtml+xml" />
+    <item id="ch08" href="xhtml/ch08.html" media-type="application/xhtml+xml" />
+    <item id="ch09" href="xhtml/ch09.html" media-type="application/xhtml+xml" />
+    <item id="ch10" href="xhtml/ch10.html" media-type="application/xhtml+xml" />
+    <item id="ch11" href="xhtml/ch11.html" media-type="application/xhtml+xml" />
+    <item id="ch12" href="xhtml/ch12.html" media-type="application/xhtml+xml" />
+    <item id="ch13" href="xhtml/ch13.html" media-type="application/xhtml+xml" />
+    <item id="ch14" href="xhtml/ch14.html" media-type="application/xhtml+xml" />
+    <item id="stylesheeta" href="styles/9781451632965a.css" media-type="text/css" />
+    <item id="img01" href="images/bd1.jpg" media-type="image/jpeg" />
+    <item id="img02" href="images/f0462-01.jpg" media-type="image/jpeg" />
+    <item id="img03" href="images/bd.jpg" media-type="image/jpeg" />
+    <item id="f0465-01" href="images/f0465-01.jpg" media-type="image/jpeg" />
+    <item id="f0467-01" href="images/f0467-01.jpg" media-type="image/jpeg" />
+    <item id="f0470-01" href="images/f0470-01.jpg" media-type="image/jpeg" />
+    <item id="f0471-01" href="images/f0471-01.jpg" media-type="image/jpeg" />
+    <item id="f0480-01" href="images/f0480-01.jpg" media-type="image/jpeg" />
+    <item id="f0524-01" href="images/f0524-01.jpg" media-type="image/jpeg" />
+    <item id="f0524-02" href="images/f0524-02.jpg" media-type="image/jpeg" />
+    <item id="f0524-03" href="images/f0524-03.jpg" media-type="image/jpeg" />
+    <item id="f0524-04" href="images/f0524-04.jpg" media-type="image/jpeg" />
+    <item id="f0524-05" href="images/f0524-05.jpg" media-type="image/jpeg" />
+    <item id="f0525-01" href="images/f0525-01.jpg" media-type="image/jpeg" />
+    <item id="f0525-02" href="images/f0525-02.jpg" media-type="image/jpeg" />
+    <item id="f0525-03" href="images/f0525-03.jpg" media-type="image/jpeg" />
+    <item id="f0525-04" href="images/f0525-04.jpg" media-type="image/jpeg" />
+    <item id="pub1" href="images/pub1.jpg" media-type="image/jpeg" />
+    <item id="titlea" href="images/titlea.jpg" media-type="image/jpeg" />
+  </manifest>
+  <spine xmlns="http://www.idpf.org/2007/opf" toc="ncx">
+    <itemref idref="a_cover" />
+    <itemref idref="fm01" />
+    <itemref idref="fm02" />
+    <itemref idref="a_ebookregfront" />
+    <itemref idref="title" />
+    <itemref idref="dedi" />
+    <itemref idref="a_contents" />
+    <itemref idref="introduction" />
+    <itemref idref="dedi2" />
+    <itemref idref="half" />
+    <itemref idref="a_ch01" />
+    <itemref idref="a_ch02" />
+    <itemref idref="a_ch03" />
+    <itemref idref="a_ch04" />
+    <itemref idref="a_ch05" />
+    <itemref idref="a_ch06" />
+    <itemref idref="a_ch07" />
+    <itemref idref="a_ch08" />
+    <itemref idref="a_ch09" />
+    <itemref idref="a_ch10" />
+    <itemref idref="a_ch11" />
+    <itemref idref="a_ch12" />
+    <itemref idref="a_ch13" />
+    <itemref idref="a_ch14" />
+    <itemref idref="a_ch15" />
+    <itemref idref="a_ch16" />
+    <itemref idref="a_ch17" />
+    <itemref idref="a_ch18" />
+    <itemref idref="a_ch19" />
+    <itemref idref="a_ch20" />
+    <itemref idref="a_ch21" />
+    <itemref idref="a_ch22" />
+    <itemref idref="a_ch23" />
+    <itemref idref="a_ch24" />
+    <itemref idref="a_ch25" />
+    <itemref idref="a_ch26" />
+    <itemref idref="a_ch27" />
+    <itemref idref="a_ch28" />
+    <itemref idref="a_ch29" />
+    <itemref idref="a_ch30" />
+    <itemref idref="a_ch31" />
+    <itemref idref="a_ch32" />
+    <itemref idref="a_ch33" />
+    <itemref idref="a_ch34" />
+    <itemref idref="a_ch35" />
+    <itemref idref="a_ch36" />
+    <itemref idref="a_ch37" />
+    <itemref idref="a_ch38" />
+    <itemref idref="a_ch39" />
+    <itemref idref="a_ch40" />
+    <itemref idref="a_ch41" />
+    <itemref idref="a_ch42" />
+    <itemref idref="a_authorbio" />
+    <itemref idref="half2" />
+    <itemref idref="ch00_part01" />
+    <itemref idref="ch01" />
+    <itemref idref="ch02" />
+    <itemref idref="ch03" />
+    <itemref idref="ch03b_part02" />
+    <itemref idref="ch04" />
+    <itemref idref="ch05" />
+    <itemref idref="ch06" />
+    <itemref idref="ch07" />
+    <itemref idref="ch08" />
+    <itemref idref="ch09" />
+    <itemref idref="ch10" />
+    <itemref idref="ch11" />
+    <itemref idref="ch12" />
+    <itemref idref="ch13" />
+    <itemref idref="ch14" />
+    <itemref idref="a_ebookregback" />
+    <itemref idref="copyright" />
+  </spine>
+  <guide>
+    <reference type="toc" title="Contents" href="xhtml/a_contents.html" />
+    <reference type="cover" title="Cover" href="xhtml/a_cover.html" />
+    <reference type="text" title="SRL" href="xhtml/a_cover.html" />
+  </guide>
+</package>

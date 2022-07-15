@@ -1,0 +1,316 @@
+@font-face
+ { 
+	font-family: "Charis"; 
+	src: url(fonts/CharisSILR.ttf); 
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face
+ { 
+		font-family: "Charis"; 
+		src: url(fonts/CharisSILB.ttf); 
+		font-style: normal;
+		font-weight: bold;
+		
+}
+
+@font-face
+ { 
+		font-family: "Charis"; 
+		src: url(fonts/CharisSILI.ttf); 
+		font-style: italic;
+		font-weight: normal;
+}
+
+@font-face 
+{ 
+	font-family: "Charis"; 
+	src: url(fonts/CharisSILBI.ttf); 
+	font-style: italic;
+	font-weight: bold;
+}
+body
+{
+     font-family: "Charis";
+     font-size: medium;
+     line-height: 1.2em;
+}
+svg
+{
+     height: 96%;
+     width: 98%;
+}
+.author
+{
+    font-size: large;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    page-break-before: right;
+}
+.center
+{
+    text-align: center;
+    font-size: medium;
+    margin-top: 0.8em;
+    margin-bottom: 0.7em;
+}
+.center1a
+{
+    font-size: small;
+    margin-top: .2em;
+    margin-bottom: .2em;
+}
+.center1b
+{
+    font-size: large;
+    margin-top: .5em;
+    margin-bottom: 2.5em;
+}
+.copyright1
+{
+     font-size: medium;
+    margin-top: 0.8em;
+    margin-bottom: 0.7em;
+    text-align: justify;
+    page-break-before: right;
+}
+.copyright
+{
+    font-size: small;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: justify;
+}
+h1
+{
+    font-size: xx-large;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+h2
+{
+    font-size: x-large;
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+    text-align: justify;
+    page-break-before: right;
+}
+.indent1
+{
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+    text-align: justify;
+    font-size: small;
+    text-indent: 1.3em;
+}
+.indent2
+{
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+    font-size: medium;
+    text-align: justify;
+}
+.No-indent
+{
+    margin-top: 1em;
+    margin-bottom: .2em;
+     font-size: medium;
+    text-align: justify;
+}
+.No-indent1
+{
+    margin-top: .2em;
+    margin-bottom: .2em;
+     font-size: medium;
+}
+.indent
+{
+    margin-top: .2em;
+    margin-bottom: .2em;
+    text-align: justify;
+    text-indent: 1em;
+     font-size: medium;
+}
+.indent1a
+{
+    margin-top: 1.5em;
+    margin-bottom: .2em;
+     font-size: medium;
+    text-align: justify;
+}
+.noindent
+{
+    margin-top: 1em;
+    margin-bottom: .2em;
+    font-size: small;
+    text-align: justify;
+}
+.noindent1
+{
+    margin-top: 1em;
+    margin-bottom: .2em;
+     font-size: medium;
+    text-align: justify;
+}
+.noindents
+{
+    margin-top: 1em;
+    margin-bottom: .2em;
+     font-size: medium;
+    text-align: justify;
+}
+.poem
+{
+    margin-left: 3em;
+    margin-top: 1em;
+    margin-bottom: .2em;
+    text-indent: -.5em;
+     font-size: medium;
+}
+.publisher
+{
+    font-size: medium;
+    margin-top: 15em;
+    margin-bottom: .6em;
+    text-align: justify;
+}
+.publisher1
+{
+     font-size: medium;
+    margin-top: .2em;
+    margin-bottom: .5em;
+    text-align: justify;
+}
+.right
+{
+    font-size: medium;
+    margin-left: 10em;
+    margin-top: .4em;
+    margin-bottom: 2.5em;
+
+}
+.subtitle
+{
+    font-size: medium;
+    margin-top: .2em;
+    margin-bottom: 1.2em;
+}
+.Toc-chaptitle
+{
+    margin-top: .2em;
+    margin-bottom: .414em;
+     font-size: medium;
+}
+.Toc-chaptitle1a
+{
+    margin-top: 2em;
+    font-weight: bold;
+    margin-bottom: .2em;
+    font-size: medium;
+}
+SPAN.foot
+{
+    font-size: small;
+}
+SPAN.weblink
+{
+    text-decoration: underline;
+    color: #0000FF;
+}
+
+em
+{
+    font-family: "Georgia Italic";
+}
+SPAN.san
+{
+    font-family: "Sabon";
+}
+SPAN.san1
+{
+    font-family: "Sabon Italic";
+}
+SPAN.san2
+{
+    font-family: "Sabon Bold";
+}
+.dspace
+{
+    margin-top: 1.5em;
+    margin-bottom: .2em;
+     font-size: medium;
+}
+.indentr
+{
+    margin-top: .2em;
+    margin-bottom: .2em;
+    text-align: justify;
+     font-size: medium;
+    page-break-before: right;
+}
+.poem1
+{
+    margin-top: 1em;
+    margin-bottom: .2em;
+    font-size: small;
+    text-align: justify;
+}
+.noindentr
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: small;
+    text-align: justify;
+}
+.introduction
+{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: small;
+    text-align: justify;
+}
+.dspacer
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: medium;
+    text-align: justify;
+}
+.dspacers
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: small;
+    text-align: justify;
+}
+.No-indent11
+{
+    margin-top: .2em;
+    margin-bottom: .2em;
+     font-size: medium;
+    margin-left: .5em;
+    text-align: justify;
+    text-indent: -1em;
+}
+.dspacer1
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: small;
+    text-align: justify;
+}
+div.halftitle
+{
+    page-break-before: right;
+
+}
+div.title
+{
+    page-break-before: right;
+}
+div.copy
+{
+    page-break-before: right;
+}
