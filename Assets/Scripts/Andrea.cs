@@ -175,6 +175,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private bool _isCategoryMinimized4;
     [SerializeField] private bool _isScreenSaverHidden;
     [SerializeField] private bool _isHomeContainerHidden;
+    [SerializeField] private bool _isOptionsContainerHidden;
     [SerializeField] private bool[] _richTextBoolList;
     [SerializeField] private int _cloneTime;
     [SerializeField] private int _overflowPageIndex;
@@ -207,6 +208,8 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private Vector3 _screenSaverBackgroundHidden;
     [SerializeField] private Vector3 _homeContainerShown;
     [SerializeField] private Vector3 _homeContainerHidden;
+    [SerializeField] private Vector3 _optionsContainerShown;
+    [SerializeField] private Vector3 _optionsContainerHidden;
 
 
 
@@ -231,6 +234,12 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private Vector3 _homeContainerVectorTarget;
     [SerializeField] private Vector3 _homeContainerVectorStart;
 
+    [SerializeField] private float timerOptionsContainer;
+    [SerializeField] private bool _isOptionsContainerLerp;
+    [SerializeField] private Vector3 _optionsContainerVectorDefault;
+    [SerializeField] private Vector3 _optionsContainerVectorTarget;
+    [SerializeField] private Vector3 _optionsContainerVectorStart;
+
     [SerializeField] private bool _isLocNavClicked;
     [SerializeField] private bool _isLocNavHover;
     [SerializeField] private bool _isLocNavDragged;
@@ -239,6 +248,17 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private bool _isLoadBookNew;
     [SerializeField] private bool _isBookPresetLoc;
     [SerializeField] private int _deepFreezePageIndex;
+    [SerializeField] private GameObject _optionsContainerGameObject;
+
+    [SerializeField] private Image _smallSizeImage;
+    [SerializeField] private Image _mediumSizeImage;
+    [SerializeField] private Image _largeSizeImage;
+    [SerializeField] private Image _helveticaTypeImage;
+    [SerializeField] private Image _notoSerifTypeImage;
+    [SerializeField] private Image _tahomaTypeImage;
+    [SerializeField] private Image _smallScaleImage;
+    [SerializeField] private Image _mediumScaleImage;
+    [SerializeField] private Image _largeScaleImage;
 
     private void Start()
     {
@@ -326,7 +346,6 @@ public class Andrea : UdonSharpBehaviour
         Memory.PopulateTextAssetList();
         _mainMenuGameObject.SetActive(true);
         _confirmationMenuGameObject.SetActive(false);
-        _optionsMenuGameObject.SetActive(false);
         // _backButtonGameObject.SetActive(false);
         _topLeftTMP.gameObject.SetActive(false);
         _topLeftCloneTMP.gameObject.SetActive(false);
@@ -350,6 +369,7 @@ public class Andrea : UdonSharpBehaviour
         _categoryVectorDefault4 = _categoryGameObject4.transform.localPosition;
         _screenSaverVectorDefault = _screenSaverBackgroundGameObject.transform.localPosition;
         _homeContainerVectorDefault = _homeContainerGameObject.transform.localPosition;
+
         _categoryGameObject1.transform.SetParent(_categoryGameObject0.transform);
         _categoryGameObject2.transform.SetParent(_categoryGameObject1.transform);
         _categoryGameObject3.transform.SetParent(_categoryGameObject2.transform);
@@ -365,9 +385,21 @@ public class Andrea : UdonSharpBehaviour
         _screenSaverBackgroundShown = _screenSaverBackgroundHidden + new Vector3(0f, 1300f, 0f);
         _homeContainerShown = _homeContainerVectorDefault;
         _homeContainerHidden = _homeContainerVectorDefault + new Vector3(0f, -1200f, 0f);
+
+
+        _optionsMenuGameObject.SetActive(true);
+        _optionsContainerVectorDefault = _optionsContainerGameObject.transform.localPosition;
+        _optionsContainerVectorTarget = _optionsContainerVectorDefault;
+        _optionsContainerShown = _optionsContainerVectorDefault;
+        _optionsContainerHidden = _optionsContainerVectorDefault + new Vector3(0f, 460f, 0f);
+        // Hide the options menu.
+        OptionsButton();
+
+
         _bottomCoreTMP.gameObject.SetActive(false);
         _bottomCoreCloneTMP.gameObject.SetActive(false);
         _screenSaverScreenGameObject.SetActive(true);
+        _locNavigationSlider.gameObject.SetActive(false);
 
         // We need to set the banners up.
         foreach (GameObject _banner in _bookBannerGameObjectList)
@@ -1042,6 +1074,11 @@ public class Andrea : UdonSharpBehaviour
             _screenGameObject.GetComponent<BoxCollider>().isTrigger = true;
         }
 
+        if (_isCategoryLerp0 || _isCategoryLerp1 || _isCategoryLerp2 || _isCategoryLerp3)
+        {
+            LerpUpdate();
+        }
+
         // Process rich-text overflow.
         if (_overflowPageIndex >= 0)
         {
@@ -1053,11 +1090,6 @@ public class Andrea : UdonSharpBehaviour
         if (_isBookStaged)
         {
             ProcessInputs();
-        }
-
-        if (!_isHomeContainerHidden)
-        {
-            LerpUpdate();
         }
 
         // Process clone timer.
@@ -1263,7 +1295,9 @@ public class Andrea : UdonSharpBehaviour
     {
 
         // Do not turn page if another menu is active.
-        if (_optionsMenuGameObject.activeSelf || !_isHomeContainerHidden || _confirmationMenuGameObject.activeSelf) return;
+        // Experimental - keep page turning on for options container.
+        // !_isOptionsContainerHidden || 
+        if (!_isHomeContainerHidden || _confirmationMenuGameObject.activeSelf) return;
 
         // Desktop input for turning page left or right.
         if (!_isHaltPageTurn && Input.GetKeyDown("[3]") || Input.GetKey("[*]") || (Input.GetAxis("Mouse ScrollWheel") < 0f && _isScrollWheelActive))
@@ -1766,6 +1800,8 @@ public class Andrea : UdonSharpBehaviour
 
     public void CalibrateMemory(int index)
     {
+        if (_overflowPageIndex >= 0) return;
+
         // Called by memory script for processing. Not called by Andrea script.
         PlayAudio(_selectBookAudio);
 
@@ -1793,11 +1829,24 @@ public class Andrea : UdonSharpBehaviour
         _topRightTMP.gameObject.SetActive(false);
         _topRightCloneTMP.gameObject.SetActive(false);
 
+        // Sometimes Home appears even after selecting a book.
+        _topCenterTMP.text = "";
+        _topCenterCloneTMP.text = _topCenterTMP.text;
+
         // _bigButtonScreenGameObject.SetActive(true);
 
         if (!_isHomeContainerHidden)
         {
             HomeContainer();
+        }
+
+        if (!_isOptionsContainerHidden)
+        {
+            _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyMedium;
+            _topCenterTMP.gameObject.SetActive(true);
+            _topCenterCloneTMP.gameObject.SetActive(true);
+            _topCenterTMP.text = $"Settings";
+            _topCenterCloneTMP.text = _topCenterTMP.text;
         }
 
         _backButtonGameObject.transform.localPosition = new Vector3(_backButtonGameObject.transform.localPosition.x, _backButtonGameObject.transform.localPosition.y, -2.5f);
@@ -2066,12 +2115,14 @@ public class Andrea : UdonSharpBehaviour
     */
     public void BackButton()
     {
+        if (_overflowPageIndex >= 0) return;
+        
         // Called by clicking on the back button.
-        PlayAudio(_backAudio);
 
-        if (_optionsMenuGameObject.activeSelf)
+        if (!_isOptionsContainerHidden)
         {
-            _optionsMenuGameObject.SetActive(false);
+            // Audio already plays from this button.
+            OptionsButton();
         }
         else if (_confirmationMenuGameObject.activeSelf)
         {
@@ -2093,11 +2144,13 @@ public class Andrea : UdonSharpBehaviour
         {
             if (_isScreenSaverHidden)
             {
+                // PlayAudio(_backAudio);
                 ScreenSaverClicked();
             }
         }
         else
         {
+            PlayAudio(_backAudio);
             _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyMedium;
             _backButtonGameObject.transform.localPosition = new Vector3(_backButtonGameObject.transform.localPosition.x, _backButtonGameObject.transform.localPosition.y, -2f);
             _catalogButtonGameObject.transform.localPosition = new Vector3(_catalogButtonGameObject.transform.localPosition.x, _catalogButtonGameObject.transform.localPosition.y, -2f);
@@ -2114,12 +2167,15 @@ public class Andrea : UdonSharpBehaviour
             _screenSaverAndreaText.SetActive(true);
             _backButtonGameObject.SetActive(true);
             _catalogButtonGameObject.SetActive(true);
-            _topLeftTMP.gameObject.SetActive(true);
-            _topLeftCloneTMP.gameObject.SetActive(true);
+
             _topCenterCloneTMP.gameObject.SetActive(true);
             _topCenterTMP.gameObject.SetActive(true);
-            _topRightTMP.gameObject.SetActive(true);
-            _topRightCloneTMP.gameObject.SetActive(true);
+
+            // Keep disabled for now to reduce clutter.
+            // _topLeftTMP.gameObject.SetActive(true);
+            // _topLeftCloneTMP.gameObject.SetActive(true);
+            // _topRightTMP.gameObject.SetActive(true);
+            // _topRightCloneTMP.gameObject.SetActive(true);
             // _bigButtonScreenGameObject.SetActive(false);
 
             // banner logistics.
@@ -2129,6 +2185,7 @@ public class Andrea : UdonSharpBehaviour
             _banner.SetActive(true);
             TextMeshProUGUI _bannerText = _bookBannerTMPList[_bannerIndex];
 
+            // Strange one-time-bug here.
             double _checkMath = Math.Min(Math.Ceiling((double)_adjustedLocationHeight * 99 / (double)_adjustedMaxHeight), 99);
             _bannerText.text = $"{Convert.ToInt32(Math.Max(1, _checkMath))}\n%";
 
@@ -2144,6 +2201,11 @@ public class Andrea : UdonSharpBehaviour
             // <line-height=40><size=35>Loc
             // <size=40>18   ·
             // ·52
+
+            if (timerScreenSaver >= 1 && _isScreenSaverHidden)
+            {
+                SelectRandomScreenSaverBackground(false);
+            }
 
             HomeInfo();
         }
@@ -2168,36 +2230,100 @@ public class Andrea : UdonSharpBehaviour
 
     public void OptionsButton()
     {
+        // Do not display options with screen saver shown.
+        // if (!_isScreenSaverHidden) return;
+
         // Called by clicking on the catalog button.
         PlayAudio(_optionsAudio);
 
-        if (_optionsMenuGameObject.activeSelf)
+        _isOptionsContainerLerp = true;
+
+        if (_isOptionsContainerHidden)
         {
-            _optionsMenuGameObject.SetActive(false);
+            _isOptionsContainerHidden = false;
+            timerOptionsContainer = 0.001f;
+            _optionsContainerVectorStart = _optionsContainerGameObject.transform.localPosition;
+            _optionsContainerVectorTarget = _optionsContainerShown;
+            _topCenterTMP.text = "Settings";
+            if (_isBookStaged)
+            {
+                _topCenterTMP.gameObject.SetActive(true);
+                _topCenterCloneTMP.gameObject.SetActive(true);
+                _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyMedium;
+                // _topCenterTMP.text = $"{_mainBlock.text.Substring(0, _mainBlock.text.IndexOf('\n'))}";
+                _topCenterCloneTMP.text = _topCenterTMP.text;
+            }
         }
         else
         {
-            _optionsMenuGameObject.SetActive(true);
+            _isOptionsContainerHidden = true;
+            timerOptionsContainer = 0.001f;
+            _optionsContainerVectorStart = _optionsContainerGameObject.transform.localPosition;
+            _optionsContainerVectorTarget = _optionsContainerHidden;
         }
     }
 
     public void SmallSize()
     {
+        Color tempColor;
+        tempColor = _smallSizeImage.color;
+        tempColor.a = .33f;
+        _smallSizeImage.color = tempColor;
+        tempColor = _mediumSizeImage.color;
+        tempColor.a = .66f;
+        _mediumSizeImage.color = tempColor;
+        tempColor = _largeSizeImage.color;
+        tempColor.a = .66f;
+        _largeSizeImage.color = tempColor;
+
         ChangeFontSize(0);
     }
 
     public void MediumSize()
     {
+        Color tempColor;
+        tempColor = _smallSizeImage.color;
+        tempColor.a = .66f;
+        _smallSizeImage.color = tempColor;
+        tempColor = _mediumSizeImage.color;
+        tempColor.a = .33f;
+        _mediumSizeImage.color = tempColor;
+        tempColor = _largeSizeImage.color;
+        tempColor.a = .66f;
+        _largeSizeImage.color = tempColor;
+
         ChangeFontSize(1);
     }
 
     public void LargeSize()
     {
+        Color tempColor;
+        tempColor = _smallSizeImage.color;
+        tempColor.a = .66f;
+        _smallSizeImage.color = tempColor;
+        tempColor = _mediumSizeImage.color;
+        tempColor.a = .66f;
+        _mediumSizeImage.color = tempColor;
+        tempColor = _largeSizeImage.color;
+        tempColor.a = .33f;
+        _largeSizeImage.color = tempColor;
+
         ChangeFontSize(2);
     }
 
     public void HelveticaType()
     {
+        Color tempColor;
+        tempColor = _helveticaTypeImage.color;
+        tempColor.a = .33f;
+        _helveticaTypeImage.color = tempColor;
+        tempColor = _notoSerifTypeImage.color;
+        tempColor.a = .66f;
+        _notoSerifTypeImage.color = tempColor;
+        tempColor = _tahomaTypeImage.color;
+        tempColor.a = .66f;
+        _tahomaTypeImage.color = tempColor;
+
         if (_defaultFontTypeIndex != 0)
         {
             ChangeFontType(0);
@@ -2206,6 +2332,17 @@ public class Andrea : UdonSharpBehaviour
 
     public void TahomaType()
     {
+        Color tempColor;
+        tempColor = _helveticaTypeImage.color;
+        tempColor.a = .66f;
+        _helveticaTypeImage.color = tempColor;
+        tempColor = _notoSerifTypeImage.color;
+        tempColor.a = .66f;
+        _notoSerifTypeImage.color = tempColor;
+        tempColor = _tahomaTypeImage.color;
+        tempColor.a = .33f;
+        _tahomaTypeImage.color = tempColor;
+
         if (_defaultFontTypeIndex != 1)
         {
             ChangeFontType(1);
@@ -2214,6 +2351,17 @@ public class Andrea : UdonSharpBehaviour
 
     public void NotoSerifType()
     {
+        Color tempColor;
+        tempColor = _helveticaTypeImage.color;
+        tempColor.a = .66f;
+        _helveticaTypeImage.color = tempColor;
+        tempColor = _notoSerifTypeImage.color;
+        tempColor.a = .33f;
+        _notoSerifTypeImage.color = tempColor;
+        tempColor = _tahomaTypeImage.color;
+        tempColor.a = .66f;
+        _tahomaTypeImage.color = tempColor;
+
         if (_defaultFontTypeIndex != 2)
         {
             ChangeFontType(2);
@@ -2222,6 +2370,7 @@ public class Andrea : UdonSharpBehaviour
 
     public void TimesType()
     {
+        // Not in Andrea right now.
         if (_defaultFontTypeIndex != 3)
         {
             ChangeFontType(3);
@@ -2230,6 +2379,7 @@ public class Andrea : UdonSharpBehaviour
 
     public void VerdanaType()
     {
+        // Not in Andrea right now.
         if (_defaultFontTypeIndex != 4)
         {
             ChangeFontType(4);
@@ -2238,6 +2388,7 @@ public class Andrea : UdonSharpBehaviour
 
     public void AvenirType()
     {
+        // Not in Andrea right now.
         if (_defaultFontTypeIndex != 5)
         {
             ChangeFontType(5);
@@ -2246,17 +2397,55 @@ public class Andrea : UdonSharpBehaviour
 
     public void SmallScale()
     {
+        Color tempColor;
+        tempColor = _smallScaleImage.color;
+        tempColor.a = .33f;
+        _smallScaleImage.color = tempColor;
+        tempColor = _mediumScaleImage.color;
+        tempColor.a = .66f;
+        _mediumScaleImage.color = tempColor;
+        tempColor = _largeScaleImage.color;
+        tempColor.a = .66f;
+        _largeScaleImage.color = tempColor;
+
         ChangeTabletSize(0.08f);
     }
 
     public void MediumScale()
     {
+        Color tempColor;
+        tempColor = _smallScaleImage.color;
+        tempColor.a = .66f;
+        _smallScaleImage.color = tempColor;
+        tempColor = _mediumScaleImage.color;
+        tempColor.a = .33f;
+        _mediumScaleImage.color = tempColor;
+        tempColor = _largeScaleImage.color;
+        tempColor.a = .66f;
+        _largeScaleImage.color = tempColor;
+
         ChangeTabletSize(0.12f);
     }
 
     public void LargeScale()
     {
+        Color tempColor;
+        tempColor = _smallScaleImage.color;
+        tempColor.a = .66f;
+        _smallScaleImage.color = tempColor;
+        tempColor = _mediumScaleImage.color;
+        tempColor.a = .66f;
+        _mediumScaleImage.color = tempColor;
+        tempColor = _largeScaleImage.color;
+        tempColor.a = .33f;
+        _largeScaleImage.color = tempColor;
+
         ChangeTabletSize(0.16f);
+    }
+
+    public void BrightnessSliderDrag()
+    {
+
     }
 
     public void EnabledPickup()
@@ -2359,7 +2548,8 @@ public class Andrea : UdonSharpBehaviour
             if (isStart || !_isBookStaged)
             {
                 // These are bad photos for the Andrea logo.
-                int[] _badInts = new int[] { 11, 13, 7, 6, 3, 1, 0 };
+                int[] _badInts = new int[] { 11, 13, 7, 6, 3, 1, 0 };  // { -1 };
+                // { 11, 13, 7, 6, 3, 1, 0 };  // Disabled for now.
                 if (Array.IndexOf(_badInts, _randomInt) != -1)
                 {
                     _randomInt = _screenSaverIndex;
@@ -2401,6 +2591,31 @@ public class Andrea : UdonSharpBehaviour
                 }
             }
             timerHomeContainer += Time.deltaTime * 0.40f;
+        }
+        if (_isOptionsContainerLerp && timerOptionsContainer > 0f)
+        {
+            _optionsContainerGameObject.transform.localPosition = Vector3.Lerp(_optionsContainerVectorStart, _optionsContainerVectorTarget, Mathf.SmoothStep(0.0f, 1.0f, Mathf.SmoothStep(0.0f, 1.0f, timerOptionsContainer)));
+            if (timerOptionsContainer >= 1)
+            {
+                _isOptionsContainerLerp = false;
+                if (_isOptionsContainerHidden && _isBookStaged)
+                {
+                    _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyLight;
+                    _topCenterTMP.gameObject.SetActive(false);
+                    _topCenterCloneTMP.gameObject.SetActive(false);
+                    _topCenterTMP.text = $"Home";
+                    _topCenterCloneTMP.text = _topCenterTMP.text;
+                }
+                else if (_isOptionsContainerHidden && !_isBookStaged)
+                {
+                    _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyMedium;
+                    _topCenterTMP.gameObject.SetActive(true);
+                    _topCenterCloneTMP.gameObject.SetActive(true);
+                    _topCenterTMP.text = $"Home";
+                    _topCenterCloneTMP.text = _topCenterTMP.text;
+                }
+            }
+            timerOptionsContainer += Time.deltaTime * 0.5f;
         }
     }
 
@@ -2485,6 +2700,8 @@ public class Andrea : UdonSharpBehaviour
             _topRightTMP.gameObject.SetActive(false);
             _topRightCloneTMP.gameObject.SetActive(false);
             _screenSaverHeaderImage.color = _screenPhysicalGameObject.GetComponent<Renderer>().material.color;
+
+            PlayAudio(_backAudio);
         }
         else
         {
@@ -2496,10 +2713,14 @@ public class Andrea : UdonSharpBehaviour
             _backButtonGameObject.SetActive(true);
             _topCenterTMP.gameObject.SetActive(true);
             _topCenterCloneTMP.gameObject.SetActive(true);
-            _topLeftTMP.gameObject.SetActive(true);
-            _topLeftCloneTMP.gameObject.SetActive(true);
-            _topRightTMP.gameObject.SetActive(true);
-            _topRightCloneTMP.gameObject.SetActive(true);
+
+            PlayAudio(_selectBookAudio);
+
+            // Keep disabled for now to reduce clutter.
+            // _topRightTMP.gameObject.SetActive(true);
+            // _topRightCloneTMP.gameObject.SetActive(true);
+            // _topLeftTMP.gameObject.SetActive(true);
+            // _topLeftCloneTMP.gameObject.SetActive(true);
 
             // Have to do it like this.
             _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyMedium;

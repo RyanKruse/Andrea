@@ -26,14 +26,13 @@ Language Packs & Fallback Tips:
 
 Oustanding Tasks:
 
-[START HELL CODE #4 - HELL CODE #1 COMPLETE]
-
 Expand top buttons image size to overlap text.
 If hovering button, show "Back" or "Settings" while hovering TopCenter shows book title?
 Star kind of blips in and out when nav selecting 100%.
 
 Hell Code #1:
 Stress test by multiple books and modifying settings.
+Bug if you spam "Return" and "Book Button" where it loads a completely different page.
 
 
 Hell Code #2
@@ -55,16 +54,21 @@ up or down to turn the page."
 
 Hell Code #4:
 Options Menu
-	- Lerp menu. Button selection coloring. Ensure smooth blend. 
-	- Arrow button regresses menu.
+	- Home and grey medium background appears during screen saver at start of runtime?
+	- Changing options in main menu and then loading book bricks it (clone never goes away).
+	- Changing options while navigating book logistics or changing block is brickable.
+	- Smooth lerp on tablet scale.
 	- Brightness (Light had 219/217/214 Background, 0/0/0 Font | Dark had 24/26/27 Background, 177/175/172 Font).
-	- Toggle Pickup? Where?
-	- About Icon Bottom Right Corner? (Discord, Info, Website).
-
-
+	- The clone for Settings on CenterTop TMP doesn't change with text.
+	- Pickup networking is shart for this device - doesn't sync and glitches.
+	- Device has colliders!?
+	- Holding down joystick eventually fast scrolls?
+	- White noise audio button?
+	- Add Grey line of top of personal development header tab #0
+	- Last block should be 100% and starred by default?
 
 Misc Code:
-The buttons above Header 1 are bad. Reload scene?
+Double check toggle pickup to see if intuitive or people dumb. 99% people dumb.
 Double Check Cube Lerp - Complaint Floaty.
 Need to hide arrow cursor for desktop users pointing at screen (Disable Screen Canvas?)
 Left hand support.
