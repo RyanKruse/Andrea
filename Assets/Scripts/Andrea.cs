@@ -52,6 +52,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private GameObject _mainMenuGameObject;
     [SerializeField] private GameObject _confirmationMenuGameObject;
     [SerializeField] private GameObject _optionsMenuGameObject;
+    [SerializeField] private GameObject _bottomBarGameObject;
     [SerializeField] private GameObject _screenSaverScreenGameObject;
     [SerializeField] private GameObject _screenSaverBackgroundGameObject;
     [SerializeField] private GameObject _bigButtonScreenGameObject;
@@ -1073,6 +1074,10 @@ public class Andrea : UdonSharpBehaviour
         {
             _screenGameObject.GetComponent<BoxCollider>().isTrigger = true;
         }
+        if (_bottomBarGameObject.GetComponent<BoxCollider>() != null)
+        {
+            _bottomBarGameObject.GetComponent<BoxCollider>().isTrigger = true;
+        }
 
         if (_isCategoryLerp0 || _isCategoryLerp1 || _isCategoryLerp2 || _isCategoryLerp3)
         {
@@ -1137,7 +1142,7 @@ public class Andrea : UdonSharpBehaviour
         // Removed for now, distracts from reading.
         if (_mainPageLength != 1)
         {
-            _bottomLeftTMP.text = $"Load {(_mainPageLength == 1 ? 99 : _mainPageIndex * 100 / (_mainPageLength - 1))}%";
+            _bottomLeftTMP.text = $"<cspace=-0.02em>Load {(_mainPageLength == 1 ? 99 : _mainPageIndex * 100 / (_mainPageLength - 1))}%";
             // _bottomLeftTMP.text = $"Loading... {(_mainPageLength == 1 ? 100 : _mainPageIndex * 100 / (_mainPageLength - 1))}%";
             _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
         }
@@ -2245,6 +2250,7 @@ public class Andrea : UdonSharpBehaviour
             _optionsContainerVectorStart = _optionsContainerGameObject.transform.localPosition;
             _optionsContainerVectorTarget = _optionsContainerShown;
             _topCenterTMP.text = "Settings";
+            _topCenterCloneTMP.text = _topCenterTMP.text;
             if (_isBookStaged)
             {
                 _topCenterTMP.gameObject.SetActive(true);
@@ -2606,7 +2612,7 @@ public class Andrea : UdonSharpBehaviour
                     _topCenterTMP.text = $"Home";
                     _topCenterCloneTMP.text = _topCenterTMP.text;
                 }
-                else if (_isOptionsContainerHidden && !_isBookStaged)
+                else if (_isOptionsContainerHidden && !_isBookStaged && _isScreenSaverHidden)
                 {
                     _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyMedium;
                     _topCenterTMP.gameObject.SetActive(true);
@@ -2713,7 +2719,18 @@ public class Andrea : UdonSharpBehaviour
             _backButtonGameObject.SetActive(true);
             _topCenterTMP.gameObject.SetActive(true);
             _topCenterCloneTMP.gameObject.SetActive(true);
+            if (!_isHomeContainerHidden && _isOptionsContainerHidden)
+            {
+                _topCenterTMP.text = "Home";
+                _topCenterCloneTMP.text = _topCenterTMP.text;
 
+            }
+            if (!_isOptionsContainerHidden)
+            {
+                _topCenterTMP.text = "Settings";
+                _topCenterCloneTMP.text = _topCenterTMP.text;
+
+            }
             PlayAudio(_selectBookAudio);
 
             // Keep disabled for now to reduce clutter.

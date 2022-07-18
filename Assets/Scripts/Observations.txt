@@ -25,22 +25,19 @@ Language Packs & Fallback Tips:
 ----------------------------------------
 
 Oustanding Tasks:
-
-Expand top buttons image size to overlap text.
-If hovering button, show "Back" or "Settings" while hovering TopCenter shows book title?
-Star kind of blips in and out when nav selecting 100%.
+Title headers, options, and book info text doesn't seem as crisp. Grey and blurry.
+Maybe need to refresh all the text after a rescale or load?
+Happens when interacting with options.
 
 Hell Code #1:
 Stress test by multiple books and modifying settings.
-Bug if you spam "Return" and "Book Button" where it loads a completely different page.
+Clone residue error.
 
 
 Hell Code #2
-Snap lock to floor of char index list? People may think its buggy.
-Snap value to floor of char index list? People may think its buggy. 
 Clicking doesn't update the drag.
-Check edge case where (LH + BH) / 100 = LH / 100 
-Home top center text appeared on book screen.
+Holding drag while previous drag loading may shift it to old position.
+Check edge case where (LH + BH) / 100 = LH / 100
 
 
 
@@ -50,11 +47,11 @@ Nav is a bit silly while book loading.
 Tips (Turn Page, Toggle Pickup)?
 "Move the right controller joystick
 up or down to turn the page."
+Changing font type and font size should keep loc as close to identical as possible.
 
 
 Hell Code #4:
 Options Menu
-	- Home and grey medium background appears during screen saver at start of runtime?
 	- Changing options in main menu and then loading book bricks it (clone never goes away).
 	- Changing options while navigating book logistics or changing block is brickable.
 	- Smooth lerp on tablet scale.
