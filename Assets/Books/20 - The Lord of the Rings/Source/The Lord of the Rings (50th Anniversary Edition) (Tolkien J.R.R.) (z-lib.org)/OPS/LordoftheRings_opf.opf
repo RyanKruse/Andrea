@@ -1,0 +1,244 @@
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="PrimaryID" version="2.0">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+<dc:title>The Lord of the Rings</dc:title>
+<dc:creator opf:file-as="TOLKIEN, J.R.R." opf:role="aut">J.R.R. Tolkien</dc:creator>
+<dc:publisher>Houghton Mifflin Harcourt</dc:publisher>
+<dc:identifier id="PrimaryID" opf:scheme="URN">urn:uuid:9F58BEA7-8436-1014-A472-81D76AE71A57</dc:identifier>
+<dc:language>en-US</dc:language>
+<meta content="" name="price"/>
+    <meta content="cover-image" name="cover"/>
+<description xmlns="http://purl.org/dc/elements/1.1/">&lt;p&gt;One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them&lt;p&gt;In ancient times the Rings of Power were crafted by the Elven-smiths, and Sauron, the Dark Lord, forged the One Ring, filling it with his own power so that he could rule all others. But the One Ring was taken from him, and though he sought it throughout Middle-earth, it remained lost to him. After many ages it fell by chance into the hands of the hobbit Bilbo Baggins.&lt;p&gt;From Sauron's fastness in the Dark Tower of Mordor, his power spread far and wide. Sauron gathered all the Great Rings to him, but always he searched for the One Ring that would complete his dominion.&lt;p&gt;When Bilbo reached his eleventy-first birthday he disappeared, bequeathing to his young cousin Frodo the Ruling Ring and a perilous quest: to journey across Middle-earth, deep into the shadow of the Dark Lord, and destroy the Ring by casting it into the Cracks of Doom.&lt;p&gt;The Lord of the Rings tells of the...</description>
+</metadata>
+<manifest>
+<item href="images/TheLordOfTheRingsCover.jpg" id="cover-image" media-type="image/jpeg"/>
+<item href="css/LordoftheRings_style.css" id="style" media-type="text/css"/>
+<item href="LordoftheRings_toc.html" id="toc" media-type="application/xhtml+xml"/>
+<item href="images/Art_P020.jpg" id="Art_P020.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P025a.jpg" id="Art_P025a.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P025b.jpg" id="Art_P025b.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P050.jpg" id="Art_P050.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P170a.jpg" id="Art_P170a.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P170b.jpg" id="Art_P170b.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P170c.jpg" id="Art_P170c.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P170d.jpg" id="Art_P170d.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P244xxx.jpg" id="Art_P244xxx.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P305.jpg" id="Art_P305.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P319.jpg" id="Art_P319.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1079.jpg" id="Art_P1079.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1100.jpg" id="Art_P1100.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1101.jpg" id="Art_P1101.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1102.jpg" id="Art_P1102.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1103.jpg" id="Art_P1103.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1104.jpg" id="Art_P1104.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1105.jpg" id="Art_P1105.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1106.jpg" id="Art_P1106.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1119.jpg" id="Art_P1119.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1124.jpg" id="Art_P1124.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1125.jpg" id="Art_P1125.jpg" media-type="image/jpeg"/>
+<item href="images/Art_Piiia.jpg" id="Art_Piiia.jpg" media-type="image/jpeg"/>
+<item href="images/Art_Piiib.jpg" id="Art_Piiib.jpg" media-type="image/jpeg"/>
+<item href="images/Art_Piiic.jpg" id="Art_Piiic.jpg" media-type="image/jpeg"/>
+<item href="images/Art_Piiid.jpg" id="Art_Piiid.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1571.jpg" id="Art_P1571.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1572.jpg" id="Art_P1572.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1573.jpg" id="Art_P1573.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1574.jpg" id="Art_P1574.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1575.jpg" id="Art_P1575.jpg" media-type="image/jpeg"/>
+<item href="images/Art_P1576.jpg" id="Art_P1576.jpg" media-type="image/jpeg"/>
+<item href="images/title.jpg" id="title.jpg" media-type="image/jpeg"/>
+<item href="images/rune_bottom.jpg" id="rune_bottom.jpg" media-type="image/jpeg"/>
+<item href="images/rune_top.jpg" id="rune_top.jpg" media-type="image/jpeg"/>
+<item href="images/Art_copy.jpg" id="Art_copy.jpg" media-type="image/jpeg"/>
+<item href="images/Art_logo.jpg" id="Art_logo.jpg" media-type="image/jpeg"/>
+<item href="images/umacr.jpg" id="umacr.jpg" media-type="image/jpeg"/>
+<item href="LordoftheRings_copy.html" id="copyright" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+<item href="LordoftheRings_epig-1.html" id="epig-1" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_pref-1.html" id="pref-1" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_intr-1.html" id="intr-1" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_fore-1.html" id="fore-1" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_prol-1.html" id="prol-1" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_part-1.html" id="part-1" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-1.html" id="chap-1" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-2.html" id="chap-2" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-3.html" id="chap-3" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-4.html" id="chap-4" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-5.html" id="chap-5" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-6.html" id="chap-6" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-7.html" id="chap-7" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-8.html" id="chap-8" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-9.html" id="chap-9" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-10.html" id="chap-10" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-11.html" id="chap-11" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-12.html" id="chap-12" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_part-2.html" id="part-2" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-13.html" id="chap-13" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-14.html" id="chap-14" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-15.html" id="chap-15" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-16.html" id="chap-16" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-17.html" id="chap-17" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-18.html" id="chap-18" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-19.html" id="chap-19" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-20.html" id="chap-20" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-21.html" id="chap-21" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-22.html" id="chap-22" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_part-3.html" id="part-3" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_part-4.html" id="part-4" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-23.html" id="chap-23" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-24.html" id="chap-24" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-25.html" id="chap-25" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-26.html" id="chap-26" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-27.html" id="chap-27" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-28.html" id="chap-28" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-29.html" id="chap-29" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-30.html" id="chap-30" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-31.html" id="chap-31" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-32.html" id="chap-32" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-33.html" id="chap-33" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_part-5.html" id="part-5" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-34.html" id="chap-34" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-35.html" id="chap-35" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-36.html" id="chap-36" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-37.html" id="chap-37" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-38.html" id="chap-38" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-39.html" id="chap-39" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-40.html" id="chap-40" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-41.html" id="chap-41" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-42.html" id="chap-42" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-43.html" id="chap-43" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_part-6.html" id="part-6" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_part-7.html" id="part-7" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-44.html" id="chap-44" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-45.html" id="chap-45" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-46.html" id="chap-46" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-47.html" id="chap-47" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-48.html" id="chap-48" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-49.html" id="chap-49" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-50.html" id="chap-50" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-51.html" id="chap-51" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-52.html" id="chap-52" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-53.html" id="chap-53" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_part-8.html" id="part-8" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-54.html" id="chap-54" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-55.html" id="chap-55" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-56.html" id="chap-56" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-57.html" id="chap-57" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-58.html" id="chap-58" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-59.html" id="chap-59" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-60.html" id="chap-60" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-61.html" id="chap-61" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_chap-62.html" id="chap-62" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_appe-1.html" id="appe-1" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_appe-2.html" id="appe-2" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_appe-3.html" id="appe-3" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_appe-4.html" id="appe-4" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_appe-5.html" id="appe-5" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_appe-6.html" id="appe-6" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_indx-1.html" id="index" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_appe-7.html" id="appe-7" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_title-1.html" id="title-1" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_part-0.html" id="part-0" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_foot-1.html" id="foot-1" media-type="application/xhtml+xml"/>
+<item href="LordoftheRings_adca-1.html" id="adca-1" media-type="application/xhtml+xml"/>
+<item href="images/Art_Piia.jpg" id="add" media-type="image/jpeg"/>
+<item href="images/Art_Piib.jpg" id="add2" media-type="image/jpeg"/>
+<item href="images/Art_Pxiv.jpg" id="add3" media-type="image/jpeg"/>
+<item href="images/map01.png" id="maps01" media-type="image/png"/>
+<item href="images/map02.png" id="maps02" media-type="image/png"/>
+</manifest>
+<spine toc="ncx">
+<itemref idref="title-1" linear="yes"/>
+<itemref idref="epig-1" linear="yes"/>
+<itemref idref="toc" linear="yes"/>
+<itemref idref="pref-1" linear="yes"/>
+<itemref idref="intr-1" linear="yes"/>
+<itemref idref="fore-1" linear="yes"/>
+<itemref idref="prol-1" linear="yes"/>
+<itemref idref="part-0" linear="yes"/>
+<itemref idref="part-1" linear="yes"/>
+<itemref idref="chap-1" linear="yes"/>
+<itemref idref="chap-2" linear="yes"/>
+<itemref idref="chap-3" linear="yes"/>
+<itemref idref="chap-4" linear="yes"/>
+<itemref idref="chap-5" linear="yes"/>
+<itemref idref="chap-6" linear="yes"/>
+<itemref idref="chap-7" linear="yes"/>
+<itemref idref="chap-8" linear="yes"/>
+<itemref idref="chap-9" linear="yes"/>
+<itemref idref="chap-10" linear="yes"/>
+<itemref idref="chap-11" linear="yes"/>
+<itemref idref="chap-12" linear="yes"/>
+<itemref idref="part-2" linear="yes"/>
+<itemref idref="chap-13" linear="yes"/>
+<itemref idref="chap-14" linear="yes"/>
+<itemref idref="chap-15" linear="yes"/>
+<itemref idref="chap-16" linear="yes"/>
+<itemref idref="chap-17" linear="yes"/>
+<itemref idref="chap-18" linear="yes"/>
+<itemref idref="chap-19" linear="yes"/>
+<itemref idref="chap-20" linear="yes"/>
+<itemref idref="chap-21" linear="yes"/>
+<itemref idref="chap-22" linear="yes"/>
+<itemref idref="part-3" linear="yes"/>
+<itemref idref="part-4" linear="yes"/>
+<itemref idref="chap-23" linear="yes"/>
+<itemref idref="chap-24" linear="yes"/>
+<itemref idref="chap-25" linear="yes"/>
+<itemref idref="chap-26" linear="yes"/>
+<itemref idref="chap-27" linear="yes"/>
+<itemref idref="chap-28" linear="yes"/>
+<itemref idref="chap-29" linear="yes"/>
+<itemref idref="chap-30" linear="yes"/>
+<itemref idref="chap-31" linear="yes"/>
+<itemref idref="chap-32" linear="yes"/>
+<itemref idref="chap-33" linear="yes"/>
+<itemref idref="part-5" linear="yes"/>
+<itemref idref="chap-34" linear="yes"/>
+<itemref idref="chap-35" linear="yes"/>
+<itemref idref="chap-36" linear="yes"/>
+<itemref idref="chap-37" linear="yes"/>
+<itemref idref="chap-38" linear="yes"/>
+<itemref idref="chap-39" linear="yes"/>
+<itemref idref="chap-40" linear="yes"/>
+<itemref idref="chap-41" linear="yes"/>
+<itemref idref="chap-42" linear="yes"/>
+<itemref idref="chap-43" linear="yes"/>
+<itemref idref="part-6" linear="yes"/>
+<itemref idref="part-7" linear="yes"/>
+<itemref idref="chap-44" linear="yes"/>
+<itemref idref="chap-45" linear="yes"/>
+<itemref idref="chap-46" linear="yes"/>
+<itemref idref="chap-47" linear="yes"/>
+<itemref idref="chap-48" linear="yes"/>
+<itemref idref="chap-49" linear="yes"/>
+<itemref idref="chap-50" linear="yes"/>
+<itemref idref="chap-51" linear="yes"/>
+<itemref idref="chap-52" linear="yes"/>
+<itemref idref="chap-53" linear="yes"/>
+<itemref idref="part-8" linear="yes"/>
+<itemref idref="chap-54" linear="yes"/>
+<itemref idref="chap-55" linear="yes"/>
+<itemref idref="chap-56" linear="yes"/>
+<itemref idref="chap-57" linear="yes"/>
+<itemref idref="chap-58" linear="yes"/>
+<itemref idref="chap-59" linear="yes"/>
+<itemref idref="chap-60" linear="yes"/>
+<itemref idref="chap-61" linear="yes"/>
+<itemref idref="chap-62" linear="yes"/>
+<itemref idref="appe-1" linear="yes"/>
+<itemref idref="appe-2" linear="yes"/>
+<itemref idref="appe-3" linear="yes"/>
+<itemref idref="appe-4" linear="yes"/>
+<itemref idref="appe-5" linear="yes"/>
+<itemref idref="appe-6" linear="yes"/>
+<itemref idref="index" linear="yes"/>
+<itemref idref="appe-7" linear="yes"/>
+<itemref idref="adca-1" linear="yes"/>
+<itemref idref="copyright" linear="yes"/>
+<itemref idref="foot-1" linear="yes"/>
+</spine>
+<guide>
+<reference href="LordoftheRings_toc.html" title="Table of Contents" type="toc"/>
+<reference href="LordoftheRings_copy.html" title="Copyright Page" type="copyright"/>
+</guide>
+</package>

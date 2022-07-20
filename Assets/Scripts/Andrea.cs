@@ -1,10 +1,10 @@
 ﻿// Author: Ryan C. Kruse
 // VRChat: Clearly
-// Discord: Clearly Ryan#3238
+// Discord: Clearly#3238
 // GitHub: https://github.com/RyanKruse/Andrea
 // Booth: https://clearly.booth.pm/
 // Comments: This code is held together by gum and paperclips.
-//           Do not attempt to modify it. Just message me.
+//           It is advisable to message me for coding requests.
 
 using UdonSharp;
 using UnityEngine;
@@ -76,6 +76,8 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private GameObject _handleIconGameObject;
     [SerializeField] private GameObject _screenSaverAndreaText;
     [SerializeField] private GameObject[] _bookBannerGameObjectList;
+    [SerializeField] private GameObject[] _bookButtonGameObjectList;
+    [SerializeField] private GameObject[] _everySingleTextBoxGameObjectList;
     [SerializeField] private TextMeshProUGUI[] _bookBannerTMPList;
     [SerializeField] private TextAsset _styleSheetTextAsset;
     [SerializeField] private TextMeshProUGUI _helveticaTMP;
@@ -108,6 +110,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private TextMeshProUGUI[] _fontTypeTextList;
     [SerializeField] private TextMeshProUGUI[] _tabletScaleTextList;
     [SerializeField] private TextMeshProUGUI[] _tabletOrientationTextList;
+    [SerializeField] private TextMeshProUGUI[] _everySingleTextBoxList;
     [SerializeField] private Sprite[] _loadingScreenSpriteList;
     [SerializeField] private Material _materialGreyLight;
     [SerializeField] private Material _materialGreyMedium;
@@ -261,6 +264,12 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private Image _mediumScaleImage;
     [SerializeField] private Image _largeScaleImage;
 
+    [SerializeField] private bool _isTutorialMode;
+
+    [SerializeField] private int _bigHammerLocCoordinates;
+    [SerializeField] private Sprite _bannerInteractable;
+    [SerializeField] private Sprite _bannerNotInteractable;
+
     private void Start()
     {
         if (_isDontExecuteScript) return;
@@ -387,6 +396,10 @@ public class Andrea : UdonSharpBehaviour
         _homeContainerShown = _homeContainerVectorDefault;
         _homeContainerHidden = _homeContainerVectorDefault + new Vector3(0f, -1200f, 0f);
 
+        _bottomCoreTMP.text = "";
+        _bottomCoreCloneTMP.text = _bottomCoreTMP.text;
+        _bigHammerLocCoordinates = -1;
+        _isTutorialMode = true;
 
         _optionsMenuGameObject.SetActive(true);
         _optionsContainerVectorDefault = _optionsContainerGameObject.transform.localPosition;
@@ -410,6 +423,44 @@ public class Andrea : UdonSharpBehaviour
         for (int i = 0; i < _preservedLocBookList.Length; i++)
         {
             _preservedLocBookList[i] = -1;
+        }
+
+        // Get text components of all children.
+        int _counter = 0;
+        foreach (TextMeshProUGUI g in transform.GetComponentsInChildren<TextMeshProUGUI>())
+        {
+            _counter++;
+        }
+
+        _everySingleTextBoxList = new TextMeshProUGUI[_counter];
+        _everySingleTextBoxGameObjectList = new GameObject[_counter];
+        _counter = 0;
+        foreach (TextMeshProUGUI g in transform.GetComponentsInChildren<TextMeshProUGUI>())
+        {
+            _everySingleTextBoxList[_counter] = g;
+            _everySingleTextBoxGameObjectList[_counter] = g.gameObject;
+            _counter++;
+        }
+
+        for (int i = 0; i < _bookButtonGameObjectList.Length; i++)
+        {
+            bool _isInteractable = _bookButtonGameObjectList[i].GetComponent<Button>().interactable;
+            Button _bannerButton = _bookBannerGameObjectList[i].GetComponent<Button>();
+            _bannerButton.interactable = _isInteractable;
+            if (!_isInteractable)
+            {
+                _bannerButton.image.sprite = _bannerNotInteractable;
+                _bookBannerGameObjectList[i].SetActive(true);
+                foreach (TextMeshProUGUI g in _bookBannerGameObjectList[i].GetComponentsInChildren<TextMeshProUGUI>())
+                {
+                    g.text = $"<size=40><line-height=-57><cspace=-.00em>\nn/a";
+                }
+            }
+            else
+            {
+                _bannerButton.image.sprite = _bannerInteractable;
+                _bookBannerGameObjectList[i].SetActive(false);
+            }
         }
 
         ScreenSaverStart(true);
@@ -631,11 +682,17 @@ public class Andrea : UdonSharpBehaviour
 
         // Debug.Log($"LoopOverflowAudit() | Audit Complete! | _mainPageIndex: {_mainPageIndex}");
 
+        _helveticaCloneTMP.text = "";
+        _tahomaCloneTMP.text = "";
+        _notoSerifCloneTMP.text = "";
+
         // Refresh page and make TMP visible again.
         if (_isOverflowAuditDefinePage)
         {
             // Debug.Log($"LoopOverflowAudit() | Pre-Defined Page | _mainPageIndex: {_mainPageIndex}");
             DefinePage(_mainPageIndex, true);
+            _mainCloneTMP.text = _mainTMP.text;
+            _mainPreviousCloneTMP = null;
             // Debug.Log($"LoopOverflowAudit() | Post-Defined Page | _mainPageIndex: {_mainPageIndex}");
             _isOverflowAuditDefinePage = false;
         }
@@ -1088,13 +1145,33 @@ public class Andrea : UdonSharpBehaviour
         if (_overflowPageIndex >= 0)
         {
             ProcessRichTextOverflow();
-            return;
-        }
 
-        // Process inputs only if book staged.
-        if (_isBookStaged)
-        {
-            ProcessInputs();
+            // Process clone timer. (Junk Code).
+            /*
+            if (_mainTMP != null && _overflowPageIndex == -1)
+            {
+                _cloneTick += Time.deltaTime;
+                while (_cloneTick >= _cloneCycle)
+                {
+                    _cloneTick -= _cloneCycle;
+                    if (_mainTMP.text != _mainCloneTMP.text)
+                    {
+                        _cloneTime++;
+                        if (_cloneTime >= _cloneDelay)  // Hundreths of Second.
+                        {
+                            _cloneTime = 0;
+                            _mainCloneTMP.text = _mainTMP.text;
+                            if (_mainPreviousCloneTMP != null)
+                            {
+                                _mainPreviousCloneTMP.text = "";
+                            }
+                        }
+                    }
+                }
+            }
+            */
+
+            return;
         }
 
         // Process clone timer.
@@ -1111,6 +1188,13 @@ public class Andrea : UdonSharpBehaviour
                     {
                         _cloneTime = 0;
                         _mainCloneTMP.text = _mainTMP.text;
+                        // Unsure why blank?
+                        /*
+                        if (_mainTMP.text != "")
+                        {
+                            _mainCloneTMP.text = _mainTMP.text;
+                        }
+                        */
                         if (_mainPreviousCloneTMP != null)
                         {
                             _mainPreviousCloneTMP.text = "";
@@ -1119,7 +1203,13 @@ public class Andrea : UdonSharpBehaviour
                 }
             }
         }
-        
+
+        // Process inputs only if book staged.
+        if (_isBookStaged)
+        {
+            ProcessInputs();
+        }
+
 
         // Junk Code:
         /*
@@ -1296,6 +1386,26 @@ public class Andrea : UdonSharpBehaviour
         */
     }
 
+    private void DisableTutorialMode()
+    {
+        if (_isOptionsContainerHidden && !_isOptionsContainerLerp)
+        {
+            _isTutorialMode = false;
+            _topCenterTMP.text = "Home";
+            _topCenterCloneTMP.text = _topCenterTMP.text;
+            _topCenterCloneTMP.gameObject.SetActive(false);
+            _topCenterTMP.gameObject.SetActive(false);
+        }
+        else
+        {
+            _isTutorialMode = false;
+            _topCenterTMP.text = "Settings";
+            _topCenterCloneTMP.text = _topCenterTMP.text;
+        }
+    }
+
+    // On Pickup.
+
     private void ProcessInputs()
     {
 
@@ -1310,7 +1420,16 @@ public class Andrea : UdonSharpBehaviour
             if (_isScreenSaverHidden)
             {
                 _mainPageIndex++;
-                DefinePage(_mainPageIndex, true);
+                // Need to check if clone is blank, so we can ignore this input to give Andrea one frame to update the previous clone text.
+                if (_overflowPageIndex == -1 && _mainCloneTMP.text != "")
+                {
+                    _bigHammerLocCoordinates = -1;
+                    if (_isTutorialMode)
+                    {
+                        DisableTutorialMode();
+                    }
+                    DefinePage(_mainPageIndex, true);
+                }
             }
         }
         else if (!_isHaltPageTurn && Input.GetKeyDown("[1]") || Input.GetKey("[/]") || (Input.GetAxis("Mouse ScrollWheel") > 0f && _isScrollWheelActive))
@@ -1318,13 +1437,21 @@ public class Andrea : UdonSharpBehaviour
             if (_isScreenSaverHidden)
             {
                 _mainPageIndex--;
-                DefinePage(_mainPageIndex, false);
+                if (_overflowPageIndex == -1 && _mainCloneTMP.text != "")
+                {
+                    _bigHammerLocCoordinates = -1;
+                    if (_isTutorialMode && _adjustedLocationHeight > 1)
+                    {
+                        DisableTutorialMode();
+                    }
+                    DefinePage(_mainPageIndex, false);
+                }
             }
         }
 
 
         return;
-
+        /*
 
 
         // VR input for turning page left or right.
@@ -1412,42 +1539,60 @@ public class Andrea : UdonSharpBehaviour
         {
             _candleGameObject.transform.Translate(Vector3.down * 0.01f);
         }
+        */
     }
 
     private void ChangeFontSize(int fontSizeIndex)
     {
-        PlayAudio(_clickAudio);
+        // if (_isOptionsContainerHidden) return;
 
         _defaultFontSizeIndex = fontSizeIndex;
         _mainFontSizeIndex = _defaultFontSizeIndex;
         _mainFontSize = _fontSizeList[_defaultFontSizeIndex];
 
-        if (_isHomeContainerHidden)
-        {
-            _mainTMP.text = "";
-            Calibrate(0);
-            // Need to add loc logistics (find nearest loc before and after calibration)
-
-            _isOverflowAuditDefinePage = true;
-        }
+        ChangeFontLogistics();
     }
 
     private void ChangeFontType(int fontTypeIndex)
     {
-        PlayAudio(_clickAudio);
+        // if (_isOptionsContainerHidden) return;
 
         _defaultFontTypeIndex = fontTypeIndex;
         _mainFontTypeIndex = _defaultFontTypeIndex;
         _mainFontType = _fontTypeList[_defaultFontTypeIndex].Trim(_badCharList);
 
+        ChangeFontLogistics();
+    }
+
+    private void ChangeFontLogistics()
+    {
+        PlayAudio(_clickAudio);
+
         if (_isHomeContainerHidden)
         {
             _mainTMP.text = "";
+            if (_bigHammerLocCoordinates == -1)
+            {
+                if (_overflowPageIndex == -1)
+                {
+                    _bigHammerLocCoordinates = Convert.ToInt32(Math.Max(1, Math.Floor((_mainLocationHeight + _lastCharSliceList[_mainPageIndex]) / 1f)));
+                }
+                else
+                {
+                    _bigHammerLocCoordinates = _mainLocationHeight;
+                    // _bigHammerLocCoordinates = Convert.ToInt32(Math.Max(1, Math.Floor((_mainLocationHeight + _lastCharSliceList[_deepFreezePageIndex]) / 1f)));
+                }
+            }
 
             // We clear clone text when changing font types.
             _mainPreviousCloneTMP = _mainCloneTMP;
 
-            Calibrate(0);
+            BigHammerLogistics(_bigHammerLocCoordinates);
+
+            // Keep this loc constant until page changed, return button, or settings closed.
+            // I may want to press a bunch of buttons to compare the difference!
+
+            // Calibrate(0);
             // Need to add loc logistics (find nearest loc before and after calibration)
 
             _isOverflowAuditDefinePage = true;
@@ -1459,6 +1604,9 @@ public class Andrea : UdonSharpBehaviour
         PlayAudio(_clickAudio);
 
         _candleGameObject.transform.localScale = new Vector3(scaleSize, scaleSize, scaleSize);
+
+        // Need to update all fonts because Andrea changing scale size makes fonts blurry.
+        SuperFontScaleUpdate();
     }
 
     private void DefinePage(int pageIndexUnclamped, bool isIncrement)
@@ -1575,15 +1723,8 @@ public class Andrea : UdonSharpBehaviour
         _endCalibrationPageIndex = isIncrement ? 0 : -1;
     }
 
-    private void RefreshBottomGUI()
+    private void SetAdjustedLocationHeightNoCollision(int locCurrent)
     {
-
-        BlockNameSet(_mainBlockIndex);  // Update block name.
-
-        // Junk Code (replaces RefreshBottomGUI() function):
-        int _locCurrent = Convert.ToInt32(Math.Max(1, Math.Floor((_mainLocationHeight + _lastCharSliceList[_mainPageIndex]) / 100f)));
-        string _locStringRaw = $"Loc {_locCurrent}";
-
         // If on page index 0, need to check last page index of previous block to see if same locString.
         // If same locString, need to drill in while loops checking the last page indexes of each prior until they do not match.
         // After that, add +1 to the locString for each positive drill that occured. 
@@ -1639,11 +1780,33 @@ public class Andrea : UdonSharpBehaviour
             }
         }
 
-        _adjustedLocationHeight = _locCurrent + _drillDepth - 1;
+        if (_drillDepth > 1)
+        {
+            // Debug.Log($"Drill Detected - Adjust Loc By +{_drillDepth - 1}");
+        }
+
+        _adjustedLocationHeight = locCurrent + _drillDepth - 1;
+    }
+
+    private void RefreshBottomGUI()
+    {
+        if (!_isLocNavClicked)
+        {
+            BlockNameSet(_mainBlockIndex);  // Update block name only if not already holding.
+        }
+
+        // Junk Code (replaces RefreshBottomGUI() function):
+        int _locCurrent = Convert.ToInt32(Math.Max(1, Math.Floor((_mainLocationHeight + _lastCharSliceList[_mainPageIndex]) / 100f)));
+        string _locStringRaw = $"Loc {_locCurrent}";
+
+        SetAdjustedLocationHeightNoCollision(_locCurrent);
+
+
         _bottomLeftTMP.text = $"Loc {_adjustedLocationHeight}";
         _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
 
-        if (_adjustedMaxHeight != 0)
+        if (_adjustedMaxHeight != 0 && !_isLocNavClicked)  
+            // Ensures we don't move the slider while holding the slider knoob.
         {
             _locNavigationSlider.value = Mathf.Max(0f, (float)_adjustedLocationHeight / (float)_adjustedMaxHeight);
         }
@@ -1814,7 +1977,7 @@ public class Andrea : UdonSharpBehaviour
         _mainBlockIndex = _defaultBlockIndex;
         _mainBookIndex = index;
         _mainTextList = Memory.GetTextAsset(_mainBookIndex, true);
-        _mainBlockList = Memory.GetTextAsset(_mainBookIndex, false);
+        _mainBlockList = Memory.GetTextAsset(_mainBookIndex, false);  // Critical to set before big hammer.
         if (_mainTextList == null)
         {
             Debug.Log("_mainTextList variable not assigned!");
@@ -1860,85 +2023,13 @@ public class Andrea : UdonSharpBehaviour
         // Before entering calibration, we need to validate that we don't already have a loc stored in memory.
         if (_preservedLocBookList[_mainBookIndex] != -1)
         {
-            // Copied and pasted from LocNavigatinSliderDrag().
-
-            _isBookPresetLoc = true;
-
-            double _checkMath = Math.Min(Math.Ceiling((double)_adjustedLocationHeight * 99 / (double)_adjustedMaxHeight), 99);
-            int _mainBlockIndexGuess = Convert.ToInt32(Mathf.Max(0f, (_mainBlockList.Length - 1) * (float)(_checkMath / 99f)));
-            int _trueLoc = _preservedLocBookList[_mainBookIndex];
-
-            // Check to make sure we're not on block 0. Can't drill past it.
-            while (_mainBlockIndexGuess >= 0)
-            {
-                // Get the block contents of the previous block.
-                TextAsset _mainBlockGuess = _mainBlockList[_mainBlockIndexGuess];
-
-                // Gets the exact global location index of last character in the block.
-                int _startLocationIndex = _mainBlockGuess.text.IndexOf(_locationCodeList[0]) + _locationCodeList[0].Length;
-
-                int _endLocationIndex = _mainBlockGuess.text.IndexOf(_locationCodeList[1]) - 1;
-
-
-                int _locationHeightOfDrilledBlock = Convert.ToInt32(_mainBlockGuess.text.Substring(_startLocationIndex, _endLocationIndex - _startLocationIndex));
-
-                // Gets the exact global block index of last character in the block.
-                int _startLocationIndex2 = _mainBlockGuess.text.IndexOf(_locationCodeList[1]) + _locationCodeList[1].Length;
-
-                int _endLocationIndex2 = _mainBlockGuess.text.IndexOf(_locationCodeList[2]) - 1;
-
-
-                int _blockHeightOfDrilledBlock = Convert.ToInt32(_mainBlockGuess.text.Substring(_startLocationIndex2, _endLocationIndex2 - _startLocationIndex2));
-
-                // Debug.Log($"_mainBlock: Skipped | _startLocationIndex: {_startLocationIndex} | _endLocationIndex: {_endLocationIndex} | _locationHeightOfDrilledBlock: {_locationHeightOfDrilledBlock} | _locationHeight: {_locationHeight} | _drillDepth: {_drillDepth}");
-
-                if (_trueLoc >= _locationHeightOfDrilledBlock && _trueLoc <= _locationHeightOfDrilledBlock + _blockHeightOfDrilledBlock)
-                {
-                    BlockNameSet(_mainBlockIndexGuess);
-
-                    _locNavMainBlockIndex = _mainBlockIndexGuess;
-                    _locNavMainTrueLoc = _trueLoc;
-
-                    // Now we need to actually load the block and then get the page index.
-
-                    _mainBlockIndex = _mainBlockIndexGuess;
-                    _mainPageIndex = 0;
-                    ExecuteCalibration();
-
-                    for (int i = 0; i < _lastCharSliceList.Length; i++)
-                    {
-                        if (_locationHeightOfDrilledBlock + _lastCharSliceList[i] > _trueLoc)
-                        {
-                            i--;
-                            _mainPageIndex = i;
-                            break;
-                        }
-                    }
-
-
-                    // Debug.Log($"_mainPageIndex: {_mainPageIndex} | _trueLoc: {_trueLoc} | _mainBlockIndex: {_mainBlockIndex} | ");
-
-                    // Deep freeze to preserve this value after calibration and richtext overflow audit.
-                    _deepFreezePageIndex = _mainPageIndex;
-
-                    // _bottomCoreTMP.text = $"{_mainBlock.text.Substring(0, _mainBlock.text.IndexOf('\n'))}";
-                    // _bottomCoreCloneTMP.text = _bottomCoreTMP.text;
-                    break;
-                }
-                else if (_trueLoc < _locationHeightOfDrilledBlock)
-                {
-                    Debug.Log($"Lower our guess.");
-                    _mainBlockIndexGuess--;
-                }
-                else
-                {
-                    Debug.Log($"Increase our guess.");
-                    _mainBlockIndexGuess++;
-                }
-            }
+            // Debug.Log($"Calibrate Memory() | Big Hammer: {_preservedLocBookList[_mainBookIndex]}");
+            BigHammerLogistics(_preservedLocBookList[_mainBookIndex]);
         }
         else
         {
+            // Loading a brand new book, so value should be zero.
+            _locNavigationSlider.value = 0;
             ExecuteCalibration();
         }
 
@@ -1949,6 +2040,145 @@ public class Andrea : UdonSharpBehaviour
         if (!_isScreenSaverHidden)
         {
             ScreenSaverClicked();
+        }
+
+        if (_isTutorialMode && _topCenterTMP.text != "Settings")
+        {
+            TutorialModeText();
+        }
+    }
+
+    private void TutorialModeText()
+    {
+        if (Networking.LocalPlayer.IsUserInVR())
+        {
+            _topCenterTMP.text = "Turn Page ➜ Right Joystick";
+            _topCenterCloneTMP.text = _topCenterTMP.text;
+            _topCenterCloneTMP.gameObject.SetActive(true);
+            _topCenterTMP.gameObject.SetActive(true);
+        }
+        else
+        {
+            _topCenterTMP.text = "Turn Page ➜ Mouse Scroll";
+            _topCenterCloneTMP.text = _topCenterTMP.text;
+            _topCenterCloneTMP.gameObject.SetActive(true);
+            _topCenterTMP.gameObject.SetActive(true);
+        }
+    }
+
+    private void BigHammerLogistics(int locTarget)
+    {
+        // Copied and pasted from LocNavigatinSliderDrag().
+
+        _isBookPresetLoc = true;
+
+        // We absolutely need to update _adjustedLocationHeight & _adjustedMaxHeight.
+        // Otherwise, there is old residue data from previous books.
+
+        if (_isLoadBookNew)  // Only need to do this when loading a new book, not when changing font types or sizes.
+        {
+
+
+            // Set location height (adjusted).
+            SetAdjustedLocationHeightNoCollision(Convert.ToInt32(Math.Max(1, Math.Floor(locTarget / 100f))));
+
+            // Set max height (adjusted).
+
+            TextAsset _tempBlock = _mainBlockList[0];
+            int _startLocationIndex1 = _tempBlock.text.IndexOf(_locationCodeList[2]) + _locationCodeList[2].Length;
+            int _endLocationIndex1 = _tempBlock.text.IndexOf('\n', _startLocationIndex1) - 1;
+            _mainMaxHeight = Convert.ToInt32(_tempBlock.text.Substring(_startLocationIndex1, _endLocationIndex1 - _startLocationIndex1));
+            _adjustedMaxHeight = Convert.ToInt32(Math.Floor(_mainMaxHeight / 100f));
+
+            // Update the slider value location.
+            _locNavigationSlider.value = Mathf.Max(0f, (float)_adjustedLocationHeight / (float)_adjustedMaxHeight);
+
+            // Testing to see if error occurs.
+            // _adjustedLocationHeight = 0;
+
+        }
+
+        double _checkMath = Math.Min(Math.Ceiling((double)_adjustedLocationHeight * 99 / (double)_adjustedMaxHeight), 99);
+        int _mainBlockIndexGuess = Convert.ToInt32(Mathf.Max(0f, (_mainBlockList.Length - 1) * (float)(_checkMath / 99f)));
+        int _trueLoc = locTarget;
+
+        // Debug.Log($"Before While Loop | _adjustedLocationHeight: {_adjustedLocationHeight} | _adjustedMaxHeight: {_adjustedMaxHeight} | _checkMath: {_checkMath} | _mainBlockIndexGuess: {_mainBlockIndexGuess} | _trueLoc: {_trueLoc}");
+
+        // Check to make sure we're not on block 0. Can't drill past it.
+        while (_mainBlockIndexGuess >= 0)
+        {
+            // Get the block contents of the previous block.
+            TextAsset _mainBlockGuess = _mainBlockList[_mainBlockIndexGuess];
+
+            // Gets the exact global location index of last character in the block.
+            int _startLocationIndex = _mainBlockGuess.text.IndexOf(_locationCodeList[0]) + _locationCodeList[0].Length;
+
+            int _endLocationIndex = _mainBlockGuess.text.IndexOf(_locationCodeList[1]) - 1;
+
+
+            int _locationHeightOfDrilledBlock = Convert.ToInt32(_mainBlockGuess.text.Substring(_startLocationIndex, _endLocationIndex - _startLocationIndex));
+
+            // Gets the exact global block index of last character in the block.
+            int _startLocationIndex2 = _mainBlockGuess.text.IndexOf(_locationCodeList[1]) + _locationCodeList[1].Length;
+
+            int _endLocationIndex2 = _mainBlockGuess.text.IndexOf(_locationCodeList[2]) - 1;
+
+
+            int _blockHeightOfDrilledBlock = Convert.ToInt32(_mainBlockGuess.text.Substring(_startLocationIndex2, _endLocationIndex2 - _startLocationIndex2));
+
+            // Debug.Log($"_mainBlock: Skipped | _startLocationIndex: {_startLocationIndex} | _endLocationIndex: {_endLocationIndex} | _locationHeightOfDrilledBlock: {_locationHeightOfDrilledBlock} | _locationHeight: {_locationHeight} | _drillDepth: {_drillDepth}");
+
+            if (_trueLoc >= _locationHeightOfDrilledBlock && _trueLoc < _locationHeightOfDrilledBlock + _blockHeightOfDrilledBlock)
+            {
+                // Do not use the <= sign. Undershoots by 1.
+                // Debug.Log($"Main Block Index Guessed Correctly | _mainBlockIndexGuess: {_mainBlockIndexGuess} | _trueLoc: {_trueLoc} | _locationHeightOfDrilledBlock: {_locationHeightOfDrilledBlock} | _blockHeightOfDrilledBlock: {_blockHeightOfDrilledBlock}");
+
+                BlockNameSet(_mainBlockIndexGuess);
+
+                _locNavMainBlockIndex = _mainBlockIndexGuess;
+                _locNavMainTrueLoc = _trueLoc;
+
+                // Now we need to actually load the block and then get the page index.
+
+                _mainBlockIndex = _mainBlockIndexGuess;
+                _mainPageIndex = 0;
+
+                // Debug.Log($"BigHammerLogistics() - 1 | _mainBlockIndex: {_mainBlockIndex} | _mainPageIndex: {_mainPageIndex} | _deepFreezePageIndex: {_deepFreezePageIndex}");
+
+                ExecuteCalibration();
+
+                for (int i = 0; i < _lastCharSliceList.Length; i++)
+                {
+                    if (_locationHeightOfDrilledBlock + _lastCharSliceList[i] > _trueLoc)
+                    {
+                        i--;
+                        _mainPageIndex = i;
+                        break;
+                    }
+                }
+
+
+                // Debug.Log($"_mainPageIndex: {_mainPageIndex} | _trueLoc: {_trueLoc} | _mainBlockIndex: {_mainBlockIndex} | ");
+
+                // Deep freeze to preserve this value after calibration and richtext overflow audit.
+                _deepFreezePageIndex = _mainPageIndex;
+
+                // Debug.Log($"BigHammerLogistics() - 2 | _mainBlockIndex: {_mainBlockIndex} | _mainPageIndex: {_mainPageIndex} | _deepFreezePageIndex: {_deepFreezePageIndex}");
+
+                // _bottomCoreTMP.text = $"{_mainBlock.text.Substring(0, _mainBlock.text.IndexOf('\n'))}";
+                // _bottomCoreCloneTMP.text = _bottomCoreTMP.text;
+                break;
+            }
+            else if (_trueLoc < _locationHeightOfDrilledBlock)
+            {
+                // Debug.Log($"_mainBlockIndexGuess: {_mainBlockIndexGuess} | Lower our guess by 1.");
+                _mainBlockIndexGuess--;
+            }
+            else
+            {
+                // Debug.Log($"_mainBlockIndexGuess: {_mainBlockIndexGuess} | Increase our guess by 1.");
+                _mainBlockIndexGuess++;
+            }
         }
     }
 
@@ -1977,6 +2207,9 @@ public class Andrea : UdonSharpBehaviour
         _isLocNavClicked = true;
         _bottomCoreTMP.gameObject.SetActive(true);
         _bottomCoreCloneTMP.gameObject.SetActive(true);
+
+        // Need to update the loc logistics.
+        LocNavigationSliderDrag();
     }
 
     public void LocNavigationSliderReleased()
@@ -1988,8 +2221,14 @@ public class Andrea : UdonSharpBehaviour
         {
             _isLocNavDragged = false;
 
+
             // Page has exceeded bounds, so change text blocks.
             PlayAudio(_hardSwipeAudio);
+
+            // Remove big hammer logistics since page index is 100% #0.
+            _isBookPresetLoc = false;
+            _bigHammerLocCoordinates = -1;
+            _mainPageIndex = 0;
 
             _mainTMP.text = "";
             _mainBlockIndex = _locNavMainBlockIndex;
@@ -2033,7 +2272,9 @@ public class Andrea : UdonSharpBehaviour
     public void LocNavigationSliderDrag()
     {
         // Cannot interact with variables while overflow adjusting or no book staged.
-        if (_overflowPageIndex >= 0 || !_isBookStaged) return;
+        if (!_isBookStaged || _adjustedMaxHeight == 0) return;
+
+        // if (_overflowPageIndex >= 0) return;
 
         _isLocNavDragged = true;
 
@@ -2120,16 +2361,18 @@ public class Andrea : UdonSharpBehaviour
     */
     public void BackButton()
     {
-        if (_overflowPageIndex >= 0) return;
-        
         // Called by clicking on the back button.
 
         if (!_isOptionsContainerHidden)
         {
             // Audio already plays from this button.
             OptionsButton();
+            return;
         }
-        else if (_confirmationMenuGameObject.activeSelf)
+
+        if (_overflowPageIndex >= 0) return;
+
+        if (_confirmationMenuGameObject.activeSelf)
         {
             _confirmationMenuGameObject.SetActive(false);
         }
@@ -2192,7 +2435,7 @@ public class Andrea : UdonSharpBehaviour
 
             // Strange one-time-bug here.
             double _checkMath = Math.Min(Math.Ceiling((double)_adjustedLocationHeight * 99 / (double)_adjustedMaxHeight), 99);
-            _bannerText.text = $"{Convert.ToInt32(Math.Max(1, _checkMath))}\n%";
+            _bannerText.text = $"<line-height=52>{Convert.ToInt32(Math.Max(1, _checkMath))}\n%";
 
             if (_mainBlockIndex == _mainTextList.Length - 1 && _mainPageIndex == _mainPageLength - 1)
             {
@@ -2242,6 +2485,7 @@ public class Andrea : UdonSharpBehaviour
         PlayAudio(_optionsAudio);
 
         _isOptionsContainerLerp = true;
+        _bigHammerLocCoordinates = -1;
 
         if (_isOptionsContainerHidden)
         {
@@ -2414,7 +2658,7 @@ public class Andrea : UdonSharpBehaviour
         tempColor.a = .66f;
         _largeScaleImage.color = tempColor;
 
-        ChangeTabletSize(0.08f);
+        ChangeTabletSize(0.1f);
     }
 
     public void MediumScale()
@@ -2430,7 +2674,7 @@ public class Andrea : UdonSharpBehaviour
         tempColor.a = .66f;
         _largeScaleImage.color = tempColor;
 
-        ChangeTabletSize(0.12f);
+        ChangeTabletSize(0.15f);
     }
 
     public void LargeScale()
@@ -2446,7 +2690,7 @@ public class Andrea : UdonSharpBehaviour
         tempColor.a = .33f;
         _largeScaleImage.color = tempColor;
 
-        ChangeTabletSize(0.16f);
+        ChangeTabletSize(0.2f);
     }
 
     public void BrightnessSliderDrag()
@@ -2611,6 +2855,10 @@ public class Andrea : UdonSharpBehaviour
                     _topCenterCloneTMP.gameObject.SetActive(false);
                     _topCenterTMP.text = $"Home";
                     _topCenterCloneTMP.text = _topCenterTMP.text;
+                    if (_isTutorialMode)
+                    {
+                        TutorialModeText();
+                    }
                 }
                 else if (_isOptionsContainerHidden && !_isBookStaged && _isScreenSaverHidden)
                 {
@@ -2935,5 +3183,48 @@ public class Andrea : UdonSharpBehaviour
         if (!_isCategoryMinimized2) CategoryMinimize2();
         if (!_isCategoryMinimized3) CategoryMinimize3();
         CategoryMinimize0();  // Keep first category shown.
+    }
+
+    public void TopCenterButtonPointerEnter()
+    {
+        // Button disabled for now - too many options.
+        if ((_topCenterTMP.text != "Home" && _topCenterTMP.text != "Settings" && _isScreenSaverHidden && _isBookStaged) || (_isBookStaged && _topCenterTMP.text != "Settings" && _isScreenSaverHidden))
+        {
+            _topCenterTMP.gameObject.SetActive(true);
+            _topCenterCloneTMP.gameObject.SetActive(true);
+            _topCenterTMP.text = $"{_mainBlock.text.Substring(0, _mainBlock.text.IndexOf('\n'))}";
+            _topCenterCloneTMP.text = _topCenterTMP.text;
+        }
+    }
+
+    public void TopCenterButtonPointerExit()
+    {
+        // Button disabled for now - too many options.
+        if (_topCenterTMP.text != "Home" && _topCenterTMP.text != "Settings")
+        {
+            _topCenterTMP.gameObject.SetActive(false);
+            _topCenterCloneTMP.gameObject.SetActive(false);
+            _topCenterTMP.text = $"";
+            _topCenterCloneTMP.text = _topCenterTMP.text;
+        }
+    }
+
+    public void OptionsIconClicked()
+    {
+        if (!_isOptionsContainerHidden)
+        {
+            OptionsButton();
+        }
+    }
+       
+    private void SuperFontScaleUpdate()
+    {
+        bool _isActive = false;
+        foreach (GameObject g in _everySingleTextBoxGameObjectList)
+        {
+            _isActive = g.activeSelf;
+            g.SetActive(!_isActive);
+            g.SetActive(_isActive);
+        }
     }
 }

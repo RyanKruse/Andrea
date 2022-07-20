@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en-US">
+<head>
+<meta name="dtb:uid" content="9780312932084"/>
+<meta content="1" name="dtb:depth"/>
+<meta content="0" name="dtb:totalPageCount"/>
+<meta content="0" name="dtb:maxPageNumber"/>
+</head>
+<docTitle>
+<text>Ender&#8217;s Game</text>
+</docTitle>
+     <navMap>
+	<navPoint id="cover" playOrder="1">
+	  <navLabel>
+	    <text>Cover Page</text>
+	  </navLabel>
+	<content src="xhtml/cover.xml"/>
+</navPoint>
+	
+	<navPoint id="title" playOrder="2">
+	  <navLabel>
+	    <text>Title</text>
+	  </navLabel>
+	<content src="xhtml/title.html"/>
+</navPoint>
+	
+	<navPoint id="copyright" playOrder="3">
+	  <navLabel>
+	    <text>Copyright</text>
+	  </navLabel>
+	<content src="xhtml/copyright.html"/>
+</navPoint>
+	
+	<navPoint id="dedication" playOrder="4">
+	  <navLabel>
+	    <text>Dedication</text>
+	  </navLabel>
+	<content src="xhtml/dedication.html"/>
+</navPoint>
+	
+	<navPoint id="contents" playOrder="5">
+	  <navLabel>
+	    <text>Contents</text>
+	  </navLabel>
+	<content src="xhtml/contents.html"/>
+</navPoint>
+	
+	<navPoint id="frontmatter01" playOrder="6">
+	  <navLabel>
+	    <text>Acknowledgments</text>
+	  </navLabel>
+	<content src="xhtml/frontmatter01.html"/>
+</navPoint>
+	
+	<navPoint id="frontmatter02" playOrder="7">
+	  <navLabel>
+	    <text>Introduction</text>
+	  </navLabel>
+	<content src="xhtml/frontmatter02.html"/>
+</navPoint>
+	
+	<navPoint id="chapter01" playOrder="8">
+	  <navLabel>
+	    <text>1. Third</text>
+	  </navLabel>
+	<content src="xhtml/chapter01.html"/>
+</navPoint>
+	
+	<navPoint id="chapter02" playOrder="9">
+	  <navLabel>
+	    <text>2. Peter</text>
+	  </navLabel>
+	<content src="xhtml/chapter02.html"/>
+</navPoint>
+	
+	<navPoint id="chapter03" playOrder="10">
+	  <navLabel>
+	    <text>3. Graff</text>
+	  </navLabel>
+	<content src="xhtml/chapter03.html"/>
+</navPoint>
+	
+	<navPoint id="chapter04" playOrder="11">
+	  <navLabel>
+	    <text>4. Launch</text>
+	  </navLabel>
+	<content src="xhtml/chapter04.html"/>
+</navPoint>
+	
+	<navPoint id="chapter05" playOrder="12">
+	  <navLabel>
+	    <text>5. Games</text>
+	  </navLabel>
+	<content src="xhtml/chapter05.html"/>
+</navPoint>
+	
+	<navPoint id="chapter06" playOrder="13">
+	  <navLabel>
+	    <text>6. The Giant&#8217;s Drink</text>
+	  </navLabel>
+	<content src="xhtml/chapter06.html"/>
+</navPoint>
+	
+	<navPoint id="chapter07" playOrder="14">
+	  <navLabel>
+	    <text>7. Salamander</text>
+	  </navLabel>
+	<content src="xhtml/chapter07.html"/>
+</navPoint>
+	
+	<navPoint id="chapter08" playOrder="15">
+	  <navLabel>
+	    <text>8. Rat</text>
+	  </navLabel>
+	<content src="xhtml/chapter08.html"/>
+</navPoint>
+	
+	<navPoint id="chapter09" playOrder="16">
+	  <navLabel>
+	    <text>9. Locke and Demosthenes</text>
+	  </navLabel>
+	<content src="xhtml/chapter09.html"/>
+</navPoint>
+	
+	<navPoint id="chapter10" playOrder="17">
+	  <navLabel>
+	    <text>10. Dragon</text>
+	  </navLabel>
+	<content src="xhtml/chapter10.html"/>
+</navPoint>
+	
+	<navPoint id="chapter11" playOrder="18">
+	  <navLabel>
+	    <text>11. Veni Vidi Vici</text>
+	  </navLabel>
+	<content src="xhtml/chapter11.html"/>
+</navPoint>
+	
+	<navPoint id="chapter12" playOrder="19">
+	  <navLabel>
+	    <text>12. Bonzo</text>
+	  </navLabel>
+	<content src="xhtml/chapter12.html"/>
+</navPoint>
+	
+	<navPoint id="chapter13" playOrder="20">
+	  <navLabel>
+	    <text>13. Valentine</text>
+	  </navLabel>
+	<content src="xhtml/chapter13.html"/>
+</navPoint>
+	
+	<navPoint id="chapter14" playOrder="21">
+	  <navLabel>
+	    <text>14. Ender&#8217;s Teacher</text>
+	  </navLabel>
+	<content src="xhtml/chapter14.html"/>
+</navPoint>
+	
+	<navPoint id="chapter15" playOrder="22">
+	  <navLabel>
+	    <text>15. Speaker for the Dead</text>
+	  </navLabel>
+	<content src="xhtml/chapter15.html"/>
+</navPoint>
+	
+
+
+	<navPoint id="bm" playOrder="23">
+	  <navLabel>
+	    <text>Preview</text>
+	  </navLabel>
+	<content src="xhtml/9780812533057_bm.html"/>
+</navPoint>
+	
+
+
+</navMap>
+</ncx>

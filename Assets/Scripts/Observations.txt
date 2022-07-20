@@ -24,81 +24,133 @@ Language Packs & Fallback Tips:
 
 ----------------------------------------
 
+Andrea 3 
+
+----------------------------------------
+
+
 Oustanding Tasks:
-Title headers, options, and book info text doesn't seem as crisp. Grey and blurry.
-Maybe need to refresh all the text after a rescale or load?
-Happens when interacting with options.
 
-Hell Code #1:
-Stress test by multiple books and modifying settings.
-Clone residue error.
+Release Andrea first.
+Perfection may endlessly have Candle v2 as main prototype. 
+Add a "requested features" section to show you're not slacking.
+Just submitting your first draft - same as submitting a first essay draft in college. 
 
 
-Hell Code #2
-Clicking doesn't update the drag.
-Holding drag while previous drag loading may shift it to old position.
-Check edge case where (LH + BH) / 100 = LH / 100
+Slightly increase character space as they get super clumped sometimes.
+Music option for reading books.
+White noise option for reading books.
+Information tab - get it in other people's worlds.
+Option to hold 
+Z-fighting on back of tablet.
+Left hand options.
+Controller dead-space issue.
+Pickup still iffy - need more user feedback.
+Floaty.
+Text to speech for tired readers.
+Mirror in the world.
+Grabbing tablet accidently big issue.
+Multiple tablets with networking.
+Hovering desktop cursor over slider doesn't show block title.
+
+Maybe just super expand the back side info.
+Include your discord info. Booth info. Basic tutorial.
+Maybe on screen saver, remind people what loc they are on.
+Slight complaint on the color of the tablet background "old color looking".
+"This is where I was at! God, I have to remember what percent I was at in this book"
+"There definently needs to be a save system in here. Makes it much easier."
+
+Doesn't look like people are holding the book when they are reading in VR.
+Need to have SOME networking on the book, otherwise multiple people can't read.
+Usually it's just one person reading and the other people nagging that person for attention. 
+
+Confusing that the Loc Change on Nav Slider released and takes to first page index instead of the block instead, not the actual loc itself.
+Maybe should change to the actual loc itself. And have arrows left and right to go to first and last page of block.
+
+Percent doesn't show when book loading from main menu.
+Save data for users when they leave the world.
+When one person grabs it, it automatically snaps to another person's hand.
+
+Toggle pickup is apparently super, super scary to people.
+Like, I cannot underestimate how scary of a first impression the tablet makes.
+One single violation of expectation in first 5 seconds and it's like "this thing sucks."
+Have to remove this feature as default, the violation is too much relative to power user convinence.
+Add a "Toggle Pickup" with a hint explaining what it does.
+Hint: Same dialog as the VRChat explaination for toggle pickup.
+
+The super floatiness of the device is what people's first impression is when they pick it up. Another violation of expectation. Need to hint to the player to use laser to interact with main page. "Use laser cursor to interact." or "Interact using laser cursor." 
+
+Stick drift makes experience for rift S users impossible. 
+Maybe allow option to go to start of chapter after nav slider?
+Replace "Brightness" slider with "Warmth" slider and perform same functionality?
+
+Text Settings | Device Settings | 
+Font Type | Tablet Size
+Font Size | Toggle Tablet Pickup (resets if respawn)
+Background Brightness | Toggle Player Movement (resets if respawn)
+
+A thicker tablet black edges would actually be an advantage. I keep on peeking behind the tablet.
+
+
+Networking using Truce VR logistics? Other people literally cannot use this thing in worlds more than one player since it is not setup for it. And their curiosity guides them to it. Make it realistic, local networking added. 
 
 
 
-Hell Code #3:
-Must have loading screen with instructions.
-Nav is a bit silly while book loading.
-Tips (Turn Page, Toggle Pickup)?
-"Move the right controller joystick
-up or down to turn the page."
-Changing font type and font size should keep loc as close to identical as possible.
+
+
+Virtual Reality.
++ Double check cube lerp.
++ Double check toggle pickup.
++ Left hand support.
++ Networking pickup.
++ Fast page scroll.
++ Screen saver logistics.
++ Buzz haptic feedback.
++ Scale Bug (***).
++ Scroll books don't work (players keep pressing image).
+
+Desktop.
++ Hide mouse cursor.
++ Desktop Z Grid-Snap Rotation.
+
+Andrea.
++ Tutorial multiple language.
++ People try to scroll holding the grey'd out books.
++ Simplify interface for developers.
++ Polish book block title headers.
++ If really laggy, clone delay appears to stick around too long.
 
 
 Hell Code #4:
 Options Menu
-	- Changing options in main menu and then loading book bricks it (clone never goes away).
-	- Changing options while navigating book logistics or changing block is brickable.
 	- Smooth lerp on tablet scale.
 	- Brightness (Light had 219/217/214 Background, 0/0/0 Font | Dark had 24/26/27 Background, 177/175/172 Font).
-	- The clone for Settings on CenterTop TMP doesn't change with text.
-	- Pickup networking is shart for this device - doesn't sync and glitches.
-	- Device has colliders!?
-	- Holding down joystick eventually fast scrolls?
-	- White noise audio button?
-	- Add Grey line of top of personal development header tab #0
-	- Last block should be 100% and starred by default?
+	- Scale still inconsistent with desktop and VR users.
+	- Toggle Pickup Button.
+
 
 Misc Code:
-Double check toggle pickup to see if intuitive or people dumb. 99% people dumb.
-Double Check Cube Lerp - Complaint Floaty.
-Need to hide arrow cursor for desktop users pointing at screen (Disable Screen Canvas?)
-Left hand support.
-Lazer pointer confusing, people expect something to happen on pickup. People dumb!!!
-Clones are not grey enough when changing pages.
-People try to scroll holding the grey'd out books.
 Respawn tablet button.
-Desktop Grid-Snap Rotation.
-Style sheet on one of the quotes has texts really mushed together. Just format entire style sheet?
-Screen saver shows book loc, title, and percentage.
-Disable toggle pickup, have that as option instead.
+Style sheet on one of the quotes has texts really mushed together. Redo format entire style sheet?
 Head position slightly jitters tablet - need to subtract that from calculations.
-Disable tablet when not being held by VR user.
-Scale logistics still broken.
-Changing font types too fast breaks the clones (unsure about size).
-Scrolling too fast skips the clones (shows a blank screen loading in new block).
-Slight pixile fighting on edges of Andrea tablet screen (Z-axis slight shift.).
-Changing to font size large on first page of block sent back to previous block 2/3th of way. Left click goes back!
+
+
 Something broken with images around Loc 785, Loc 1325, 2973 re-add paragraphs? in 7 Habits.
 Loc 1960, Loc 2364, 2729, 3099, 3111, 4419, 5107, 5698 is strange on end clipping (wide text).
 Loc 6276 needs to be broken up (huge word combo)
 Quotes from questions asked on last chapters needs to be consistent in interviews.
 Loc 6538 doesn't cut correctly?
-Changing font size and type snaps to closest Loc.
-Slight Z fighting a bit everywhere.
-Nasa coding github has a bunch of languages. Create tutorial in multiple languages.
 Ensure no blue highlighters.
 &amp error in HTWF Loc1100.
-Holding down joystick fast page increments.
-Buzz on controller as slight haptic feedback. 
-In Progress banner.
 Loc 3710 Large Notosans Book Index 0... Bullet Break Didn't Work! Block: 12. Page Index: 7.
 
+
+
+----------------------------------------
+
+Andrea 4
+
+----------------------------------------
 
 Andrea 4 - Hell Code #5:
 Scroll text when reading (Fast blip?)
@@ -118,7 +170,7 @@ Tapping screen logistics.
 
 Andrea 4 - Hell Code #8:
 VR polish.
-
+Slight pixil fighting on edges.
 
 
 Andrea 4 - Hell Code #9:
@@ -127,8 +179,20 @@ PopulateStyleSheet in Compiler can utilize Andrea's code?
 Can skip parallel code logistics?
 
 
+
 Andrea 4 - Hell Code #10
 Clicking on Loc or Pecentage asks for input which looks like a padlock num input. 
+
+
+
+Andrea 4 - Hell Code #11
+White noise audio.
+Audiobook option.
+
+
+
+Andrea 4 - Hell Code #12
+Book images.
 
 
 
@@ -137,43 +201,30 @@ Clicking on Loc or Pecentage asks for input which looks like a padlock num input
 General Home Page Structure:
 
 Category 0 - Personal Development [10]:
-	Atomic Habits
-X	The Subtle Art of Not Giving a F_ck
-X	7 Habits of Highly Effective People
-X	How to Win Friends and Influence People
-X	The Power of Habit
-	Think And Grow Rich
-	Deep Work
-	Grit
-	Mindset
-X	Social Skills Guidebook
+1	Atomic Habits
+2X	The Subtle Art of Not Giving a F_ck
+3X	7 Habits of Highly Effective People
+4X	How to Win Friends and Influence People
 
-Category 1 - Classic Literature [10]:
-	1984
-	The Great Gatsby
-	The Catcher In The Rye
-	Crime and Punishment
-	Catch-22
-	The Adventures of Tom Sawyer
-	To Kill A Mockingbird
-	Pride and Prejudice
-	The Grapes Of Wrath 
-	Lolita
+Category 1 - Canonical Literature [10]:
+1	1984
+2	The Great Gatsby
+3	To Kill A Mockingbird
+4	The Catcher In The Rye
 
 Category 2 - Epic Novels [10]:
-	Harry Potter
-	The Lord Of The Rings
-	Dune
-	Atlas Shrugged
-	The Hunger Games
-	Ender's Game
-	Ready Player One
-	The Da Vinci Code
-	A Song Of Ice And Fire
-	The Hitchhiker's Guide To The Galaxy 
+1	Harry Potter
+2	The Lord Of The Rings
+3	Atlas Shrugged
+4   Dune
 
-Category 3 - VRChat [10]
-	Your Book Here
+Category 3 - Simulations [10]
+1	Snow Crash
+2	Ready Player One
+3	Ender's Game
+4	The Hunger Games
+
+
 
 ----------------------------------------
 

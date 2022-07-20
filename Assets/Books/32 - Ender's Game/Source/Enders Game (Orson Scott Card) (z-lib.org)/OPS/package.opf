@@ -1,0 +1,104 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?><package xmlns="http://www.idpf.org/2007/opf" unique-identifier="sonybookid" version="2.0">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<dc:creator opf:role="aut">Orson Scott Card</dc:creator>
+			<dc:source>URN:ISBN:978-0-3129-3208-4</dc:source>
+			<dc:identifier id="sonybookid" opf:scheme="sonybookid">CBUSCEHOL02TNB0I</dc:identifier>
+			<dc:publisher>Macmillan</dc:publisher>
+			<dc:language>en-US</dc:language>
+			<dc:type>Text</dc:type>
+			<dc:title>Ender’s Game</dc:title>
+			<dc:format>252 pages</dc:format>
+			<dc:rights>All rights reserved</dc:rights>
+			<meta content="cover-image" name="cover"/>
+	<dc:date opf:event="publication">2010-04-01</dc:date>
+</metadata>
+	<manifest>
+	<item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+	<item href="images/9780312932084.jpg" id="cover-image" media-type="image/jpeg"/>
+	<item href="xhtml/cover.xml" id="html-cover-page" media-type="application/xhtml+xml"/>
+	<item href="xhtml/halftitle.html" id="halftitle" media-type="application/xhtml+xml"/>
+	<item href="xhtml/abouttheauthor.html" id="abouttheauthor" media-type="application/xhtml+xml"/>
+	<item href="xhtml/title.html" id="title" media-type="application/xhtml+xml"/>
+	<item href="xhtml/copyright.html" id="copyright" media-type="application/xhtml+xml"/>
+	<item href="xhtml/dedication.html" id="dedication" media-type="application/xhtml+xml"/>
+	<item href="xhtml/contents.html" id="contents" media-type="application/xhtml+xml"/>
+	<item href="xhtml/frontmatter01.html" id="frontmatter01" media-type="application/xhtml+xml"/>
+	<item href="xhtml/frontmatter02.html" id="frontmatter02" media-type="application/xhtml+xml"/>
+	<item href="xhtml/frontmatter03.html" id="frontmatter03" media-type="application/xhtml+xml"/>
+	<item href="xhtml/halftitle01.html" id="halftitle01" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter01.html" id="chapter01" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter02.html" id="chapter02" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter03.html" id="chapter03" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter04.html" id="chapter04" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter05.html" id="chapter05" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter06.html" id="chapter06" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter07.html" id="chapter07" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter08.html" id="chapter08" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter09.html" id="chapter09" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter10.html" id="chapter10" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter11.html" id="chapter11" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter12.html" id="chapter12" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter13.html" id="chapter13" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter14.html" id="chapter14" media-type="application/xhtml+xml"/>
+	<item href="xhtml/chapter15.html" id="chapter15" media-type="application/xhtml+xml"/>
+	<item href="styles/stylesheet.css" id="css" media-type="text/css"/>
+	<item href="styles/9780812533057.css" id="css1" media-type="text/css"/>
+
+	
+
+
+<item href="xhtml/9780812533057_tp02.html" id="tp02" media-type="application/xhtml+xml"/>
+<item href="xhtml/9780812533057_cop02.html" id="cop02" media-type="application/xhtml+xml"/>
+<item href="xhtml/9780812533057_ch01a.html" id="ch01a" media-type="application/xhtml+xml"/>
+<item href="xhtml/9780812533057_bm.html" id="bm" media-type="application/xhtml+xml"/>
+<item href="images/tit.jpg" id="image_0005" media-type="image/jpeg"/>
+<item href="images/bm.jpg" id="image_0006" media-type="image/jpeg"/>
+
+
+
+	<item href="images/logo.jpg" id="image3" media-type="image/jpeg"/>
+	<item href="images/line.jpg" id="image4" media-type="image/jpeg"/>
+	<item href="images/line1.jpg" id="image5" media-type="image/jpeg"/>
+	<item href="images/pub.jpg" id="image6" media-type="image/jpeg"/>
+</manifest>
+	<spine toc="ncx">
+		<itemref idref="html-cover-page" linear="no"/>
+		<itemref idref="frontmatter03"/>
+		<itemref idref="halftitle"/>
+		<itemref idref="abouttheauthor"/>
+		<itemref idref="title"/>
+		<itemref idref="copyright"/>
+		<itemref idref="dedication"/>
+		<itemref idref="contents"/>
+		<itemref idref="frontmatter01"/>
+		<itemref idref="frontmatter02"/>
+		<itemref idref="halftitle01"/>
+		<itemref idref="chapter01"/>
+		<itemref idref="chapter02"/>
+		<itemref idref="chapter03"/>
+		<itemref idref="chapter04"/>
+		<itemref idref="chapter05"/>
+		<itemref idref="chapter06"/>
+		<itemref idref="chapter07"/>
+		<itemref idref="chapter08"/>
+		<itemref idref="chapter09"/>
+		<itemref idref="chapter10"/>
+		<itemref idref="chapter11"/>
+		<itemref idref="chapter12"/>
+		<itemref idref="chapter13"/>
+		<itemref idref="chapter14"/>
+		<itemref idref="chapter15"/>
+
+
+<itemref idref="bm"/>
+<itemref idref="tp02"/>
+<itemref idref="ch01a"/>
+<itemref idref="cop02"/>
+
+
+                </spine>
+	<guide>
+                <reference href="xhtml/contents.html" title="Contents" type="toc"/> 
+		<reference href="cover.xml" title="Cover Image" type="cover"/>
+	</guide>
+</package>

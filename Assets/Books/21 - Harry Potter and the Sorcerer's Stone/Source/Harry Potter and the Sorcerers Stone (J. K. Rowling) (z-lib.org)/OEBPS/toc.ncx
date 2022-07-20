@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta name="dtb:uid" content="urn:uuid:54668d51-d0a6-46ae-9971-acef3958da4c"/>
+    <meta name="dtb:depth" content="1"/>
+  </head>
+  <docTitle>
+    <text>HP 1 - Harry Potter and the Sorcerer's Stone</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="part1" playOrder="0">
+      <navLabel>
+        <text>HP 1 - Harry Potter and the Sorcerer's Stone</text>
+      </navLabel>
+      <content src="part1.xhtml"/>
+    </navPoint>
+    <navPoint id="part2" playOrder="1">
+      <navLabel>
+        <text>CHAPTER ONE</text>
+      </navLabel>
+      <content src="part2.xhtml"/>
+    </navPoint>
+    <navPoint id="part3" playOrder="2">
+      <navLabel>
+        <text>CHAPTER TWO</text>
+      </navLabel>
+      <content src="part3.xhtml"/>
+    </navPoint>
+    <navPoint id="part4" playOrder="3">
+      <navLabel>
+        <text>CHAPTER THREE</text>
+      </navLabel>
+      <content src="part4.xhtml"/>
+    </navPoint>
+    <navPoint id="part5" playOrder="4">
+      <navLabel>
+        <text>CHAPTER FOUR</text>
+      </navLabel>
+      <content src="part5.xhtml"/>
+    </navPoint>
+    <navPoint id="part6" playOrder="5">
+      <navLabel>
+        <text>CHAPTER FIVE</text>
+      </navLabel>
+      <content src="part6.xhtml"/>
+    </navPoint>
+    <navPoint id="part7" playOrder="6">
+      <navLabel>
+        <text>CHAPTER SIX</text>
+      </navLabel>
+      <content src="part7.xhtml"/>
+    </navPoint>
+    <navPoint id="part8" playOrder="7">
+      <navLabel>
+        <text>CHAPTER SEVEN</text>
+      </navLabel>
+      <content src="part8.xhtml"/>
+    </navPoint>
+    <navPoint id="part9" playOrder="8">
+      <navLabel>
+        <text>CHAPTER EIGHT</text>
+      </navLabel>
+      <content src="part9.xhtml"/>
+    </navPoint>
+    <navPoint id="part10" playOrder="9">
+      <navLabel>
+        <text>CHAPTER NINE</text>
+      </navLabel>
+      <content src="part10.xhtml"/>
+    </navPoint>
+    <navPoint id="part11" playOrder="10">
+      <navLabel>
+        <text>CHAPTER TEN</text>
+      </navLabel>
+      <content src="part11.xhtml"/>
+    </navPoint>
+    <navPoint id="part12" playOrder="11">
+      <navLabel>
+        <text>CHAPTER ELEVEN</text>
+      </navLabel>
+      <content src="part12.xhtml"/>
+    </navPoint>
+    <navPoint id="part13" playOrder="12">
+      <navLabel>
+        <text>CHAPTER TWELVE</text>
+      </navLabel>
+      <content src="part13.xhtml"/>
+    </navPoint>
+    <navPoint id="part14" playOrder="13">
+      <navLabel>
+        <text>CHAPTER THIRTEEN</text>
+      </navLabel>
+      <content src="part14.xhtml"/>
+    </navPoint>
+    <navPoint id="part15" playOrder="14">
+      <navLabel>
+        <text>CHAPTER FOURTEEN</text>
+      </navLabel>
+      <content src="part15.xhtml"/>
+    </navPoint>
+    <navPoint id="part16" playOrder="15">
+      <navLabel>
+        <text>CHAPTER FIFTEEN</text>
+      </navLabel>
+      <content src="part16.xhtml"/>
+    </navPoint>
+    <navPoint id="part17" playOrder="16">
+      <navLabel>
+        <text>CHAPTER SIXTEEN</text>
+      </navLabel>
+      <content src="part17.xhtml"/>
+    </navPoint>
+    <navPoint id="part18" playOrder="17">
+      <navLabel>
+        <text>CHAPTER SEVENTEEN</text>
+      </navLabel>
+      <content src="part18.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>

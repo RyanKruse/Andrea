@@ -1,0 +1,278 @@
+@page{
+	margin: 5pt;
+}
+div.h100 {
+	text-align: center;
+	height: 100%;
+	height: 95vh;
+	max-height: 100%;
+	max-width: 100%;
+	clear: both;
+}
+img.h100 {
+	height: 100%;
+	max-width: 100%;
+}
+@media amzn-mobi {
+	/* for any kindle related style */
+	div.list{
+	margin-top: 2em;
+}
+p.hang{
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+	text-indent: -1em;
+}
+}
+div.titlepage{
+	/* for title page style */
+	margin-top: 4em;
+	margin-bottom: 0em;
+}
+img.h2em {
+	height: 3em;
+}
+p.booktitle{
+	/* for title of book style in titlepage */
+	font-size: 3.2em;
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+p.author{
+	/* for author style in titlepage */
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 20%;
+}
+p.publisher{
+	/* for publisher in title page */
+	font-size: 0.8em;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 0.2em;
+	margin-bottom: 0em;
+}
+div.copyright{
+	/* for spacing and marings whole copyright page */
+	font-size: 0.8em;	text-indent:0em;
+	margin-top: 2em;
+	margin-bottom: 0em;
+}
+p.dedication{
+	/* for paragraph style in dedication page */
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 15%;
+	margin-bottom: 0em;
+}
+h1.part {
+	/* for part heading style */
+	text-align: center;
+	font-size: 0.8em;	
+	margin-top: 15%;
+	margin-bottom: 0;
+	font-weight: normal;
+}
+h1.part_title {
+	text-align: center;
+	font-size: 1.6em;
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+p.right{
+	/* style for paragraph in right */
+	text-align: right;
+}
+p.left{
+	/* style for paragraph in right */
+	text-align: right;
+}
+p.left0{
+	/* style for paragraph in right */
+	text-align: right;
+	margin-right: 3.8em;
+}
+p.center{
+	/* style for center paragraph */
+	margin-top: 0.2em;
+	text-align: center;
+	margin-bottom: 0em;
+}
+p.center3{
+	/* style for center paragraph */
+	margin-top: 0em;
+	text-align: center;
+	margin-bottom: 0em;
+}
+p.copyImprint{
+	/* for style of paragraph of copyright page */
+	text-align: center;
+	margin-top: 15%;
+	margin-bottom: 0em;
+}
+p.copy{
+	/* for style of paragraph of copyright page */
+	text-align: center;
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+p.head{
+	/* heading-1 style in book */
+	text-align: center;
+	font-size: 1.3em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+div.block{
+	/* for blockquote style */
+	margin-left: 1.5em;
+	margin-right: 1.5em;
+	margin-bottom: 2em;
+	margin-top: 3em;
+	font-size: 0.8em;
+}
+div.block0{
+	/* for blockquote style */
+	margin-left: 12%;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	font-size: 0.8em;
+}
+p.nonindent{
+	/* for nonindent paragraph */
+	margin-top: 0.0em;
+	text-indent: 0em;
+	margin-bottom: 0em;
+}
+p.nonindent1{
+	/* for top margin in nonindent paragraph */
+	margin-top: 1.5em;
+	text-indent: 0em;
+	margin-bottom: 0em;
+}
+p.indent{
+	/* for indent paragraph */
+	text-indent: 1.5em;
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+p.indent1{
+	/* for indent paragraph */
+	text-indent: 1.5em;
+	margin-top: 1em;
+	margin-bottom: 0em;
+}
+span.dropcaps{
+	/* for dropcaps style */
+	float:left;
+	font-size: 3em;
+	line-height: 1.5em;
+	margin-top: -0.45em;
+	margin-right: 0.05em;
+	margin-bottom: -0.45em;
+}
+span.small{
+	font-size: 0.8em;
+}
+span.small10{
+	font-size: 0.6em;
+}
+img{
+	max-height: 100%;
+	max-width: 100%;
+}
+a{
+	color:#4c7aa9;
+}
+sup {
+	vertical-align: 4px;
+}
+sup.frac, sub.frac {
+	font-size: 0.7em;
+}
+.toc{
+	font-size:1em;
+	margin: 0 0 0 1.5em;
+	text-indent:-1.5em;
+}
+.toc1{
+	font-size:1em;
+	margin: 1em 0 0 1.5em;
+	text-indent:-1.5em;
+}
+/* Please add new style after this comment tag */
+	p.center1{
+	margin-top: 1em;
+	text-align: center;
+	margin-bottom: 1em;
+}
+p.copy1{
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 0em;
+}
+h1.heading{
+	text-align: center;
+	font-size: 1.1em;
+	margin-top: 15%;
+	margin-bottom: 10%;
+}
+p.center01{
+	margin-top: 1em;
+	text-align: center;
+	margin-bottom: 0em;
+}
+p.center0{
+	margin-top: 1.5em;
+	text-align: center;
+	margin-bottom: 0em;
+}
+h1.appendix{
+	/* heading-1 style in book */
+	text-align: center;
+	font-size: 1.1em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	font-weight: normal;
+}
+p.hang0{
+	margin-top: 0em;
+	margin-bottom: 0em;
+	margin-left: 1em;
+	text-indent: -1em;
+}
+p.hang00{
+	margin-top: 1em;
+	margin-bottom: 0em;
+	margin-left: 1em;
+	text-indent: -1em;
+}
+div.block01{
+	/* for blockquote style */
+	margin-left: 1.5em;
+	margin-right: 0em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+p.center2{
+	margin-top: 2em;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+h1.x13-BM-About-Au-Head {
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 1.1em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	font-weight: normal;
+}
+p.x13-BM-About-Au {
+	font-family: serif;
+	font-size: 0.9em;
+	margin: 1.5em 0 0 0;
+	text-indent: 0em;
+}

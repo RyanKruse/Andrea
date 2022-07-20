@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>artistName</key>
+	<string>Orson Scott Card</string>
+	<key>book-info</key>
+	<dict>
+		<key>cover-image-hash</key>
+		<string>409EABB934FDB9535C1B9AE0263E322D</string>
+		<key>cover-image-path</key>
+		<string>OPS/images/9780312932084.jpg</string>
+		<key>package-file-hash</key>
+		<string>6786669F632CDC59B905C5AE8818E334</string>
+		<key>publisher-unique-id</key>
+		<string>CBUSCEHOL02TNB0I</string>
+		<key>unique-id</key>
+		<integer>-5107126987006014167</integer>
+	</dict>
+	<key>itemName</key>
+	<string>Ender’s Game</string>
+	<key>playlistName</key>
+	<string>Ender’s Game</string>
+	<key>releaseDate</key>
+	<string>2010-04-01</string>
+</dict>
+</plist>

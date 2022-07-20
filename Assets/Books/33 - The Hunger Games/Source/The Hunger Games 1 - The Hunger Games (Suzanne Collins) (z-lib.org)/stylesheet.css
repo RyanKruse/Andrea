@@ -1,0 +1,220 @@
+@namespace h "http://www.w3.org/1999/xhtml";
+.Apple-style-span {
+    font-size: 0.88889em;
+    line-height: 1.2
+    }
+.Apple-style-span1 {
+    font-size: 0.75em;
+    font-weight: normal
+    }
+.MsoNormal {
+    display: block;
+    line-height: normal;
+    margin-bottom: 6pt;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em
+    }
+.calibre {
+    display: block;
+    font-size: 1em;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-left: 5pt;
+    margin-right: 5pt;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    page-break-before: always
+    }
+.calibre1 {
+    display: table-row;
+    vertical-align: middle
+    }
+.calibre10 {
+    display: block;
+    font-size: 1.375em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.67em;
+    page-break-before: always
+    }
+.calibre11 {
+    font-style: italic
+    }
+.calibre12 {
+    font-weight: bolder
+    }
+.calibre13 {
+    color: inherit;
+    cursor: inherit;
+    text-decoration: inherit
+    }
+.calibre14 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.67em
+    }
+.calibre15 {
+    display: block;
+    list-style-type: disc;
+    margin-bottom: 1em;
+    margin-right: 0;
+    margin-top: 1em
+    }
+.calibre16 {
+    display: list-item
+    }
+.calibre2 {
+    display: block
+    }
+.calibre3 {
+    display: block;
+    font-size: 1.125em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em
+    }
+.calibre4 {
+    font-size: 0.75em
+    }
+.calibre5 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em
+    }
+.calibre6 {
+    font-weight: bolder;
+    mso-bidi-font-weight: normal
+    }
+.calibre7 {
+    font-style: italic;
+    mso-bidi-font-style: normal
+    }
+.calibre8 {
+    height: auto;
+    width: auto
+    }
+.calibre9 {
+    display: block;
+    page-break-after: always
+    }
+.cbjbanner {
+    -webkit-border-radius: 8px;
+    background: #eee;
+    border: thin solid black;
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em
+    }
+.cbjcomments {
+    display: block;
+    font-family: sans-serif
+    }
+.cbjcontent {
+    display: table-cell;
+    font-family: sans-serif;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    text-align: left;
+    vertical-align: inherit;
+    width: 67%
+    }
+.cbjfooter {
+    display: block;
+    font-family: sans-serif;
+    font-size: 0.75em;
+    margin-top: 8px;
+    text-align: center
+    }
+.cbjheader {
+    border-collapse: separate;
+    border-spacing: 2px;
+    display: table;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-indent: 0;
+    width: 100%
+    }
+.cbjlabel {
+    display: table-cell;
+    font-family: sans-serif;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    text-align: right;
+    vertical-align: inherit;
+    width: 33%
+    }
+.cbjpubdata {
+    display: table-cell;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    text-align: center;
+    vertical-align: inherit
+    }
+.cbjseries {
+    display: table-cell;
+    font-size: 1em;
+    line-height: 1.2;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    text-align: center;
+    vertical-align: inherit
+    }
+.cbjtitle {
+    display: table-cell;
+    font-size: 1.25em;
+    font-style: italic;
+    line-height: 1.2;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    text-align: center;
+    vertical-align: inherit
+    }
+.metadatadivider {
+    border: 1px inset;
+    border-bottom: solid black 1px;
+    border-left: solid white 0;
+    border-right: solid white 0;
+    border-top: solid white 0;
+    color: gray;
+    display: block;
+    height: 2px;
+    margin-bottom: 0.5em;
+    margin-left: 5%;
+    margin-right: auto;
+    margin-top: 0.5em;
+    width: 90%
+    }
+.title {
+    line-height: 1.2
+    }

@@ -1,9 +1,10 @@
 ﻿
 
-Project: Andrea 3
+Project: Andrea
+Version: 3
 Author: Ryan C. Kruse
 VRChat: Clearly
-Discord: Clearly_Ryan#3238
+Discord: Clearly#3238
 GitHub: https://github.com/RyanKruse/Andrea
 Prefab: https://clearly.booth.pm/items/3258223
 
@@ -11,11 +12,9 @@ Prefab: https://clearly.booth.pm/items/3258223
 
 			  Introduction
 
-Andrea is a virtual reality readering device.
+Andrea is a virtual device for reading books and other large texts.
 
-Enables reading large amounts of text in VRChat.
-
-Text examples include:
+Some examples that can be utilized on the device include:
 
 	1) Books.
 	2) Stories.
@@ -27,6 +26,10 @@ Text examples include:
 	8) Stand-Up.
 	9) Speeches.
 	10) Lyrics.
+
+No programming required to use the device.
+
+Just drop your text files in, compile, and enjoy.
 
 ----------------------------------------
 
@@ -44,6 +47,6 @@ Follow the tutorial below to get started:
 
 YouTube Tutorial: ??????
 
-Contact on Discord for any questions.
+Contact me on Discord for any questions!
 
 ----------------------------------------

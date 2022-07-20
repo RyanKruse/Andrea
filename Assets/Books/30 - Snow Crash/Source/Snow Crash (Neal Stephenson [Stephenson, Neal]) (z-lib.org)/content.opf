@@ -1,0 +1,389 @@
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uuid_id" prefix="calibre: https://calibre-ebook.com">
+  <metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata">
+    <dc:title id="id">Snow Crash</dc:title>
+    <dc:creator id="id-1">Neal Stephenson</dc:creator>
+    <dc:identifier>wd:Q768389</dc:identifier>
+    <dc:identifier>isbn:9780553380958</dc:identifier>
+    <dc:identifier>google:RMd3GpIFxcUC</dc:identifier>
+    <dc:identifier>goodreads:830</dc:identifier>
+    <dc:identifier>kobo:snow-crash-1</dc:identifier>
+    <dc:identifier>calibre:3852</dc:identifier>
+    <dc:identifier>uuid:005d7152-1c2c-4a32-97b8-57c0b0669d75</dc:identifier>
+    <dc:identifier id="uuid_id">uuid:005d7152-1c2c-4a32-97b8-57c0b0669d75</dc:identifier>
+    <dc:rights>Copyright 1992</dc:rights>
+    <dc:language>en</dc:language>
+    <dc:contributor id="id-2">calibre (5.15.0) [https://calibre-ebook.com]</dc:contributor>
+    <dc:subject>Dystopian</dc:subject>
+    <dc:subject>Cyberpunk</dc:subject>
+    <dc:subject>Fiction</dc:subject>
+    <dc:subject>Technology</dc:subject>
+    <dc:subject>American</dc:subject>
+    <dc:subject>Science Fiction</dc:subject>
+    <dc:subject>Action &amp; Adventure</dc:subject>
+    <dc:subject>21st Century</dc:subject>
+    <dc:subject>Science Fiction Fantasy</dc:subject>
+    <opf:meta refines="#id" property="title-type">main</opf:meta>
+    <opf:meta refines="#id" property="file-as">Snow Crash</opf:meta>
+    <meta name="cover" content="cover"/>
+    <meta property="dcterms:modified" scheme="dcterms:W3CDTF">2021-04-12T06:26:13Z</meta>
+    <opf:meta refines="#id-2" property="role" scheme="marc:relators">bkp</opf:meta>
+    <opf:meta refines="#id-1" property="role" scheme="marc:relators">aut</opf:meta>
+    <opf:meta refines="#id-1" property="file-as">Stephenson, Neal</opf:meta>
+    <opf:meta property="calibre:author_link_map">{"Neal Stephenson": ""}</opf:meta>
+    <opf:meta property="calibre:user_metadata">{
+  "#ddc": {
+    "#extra#": null,
+    "#value#": null,
+    "category_sort": "value",
+    "colnum": 12,
+    "column": "value",
+    "datatype": "text",
+    "display": {},
+    "is_category": true,
+    "is_csp": false,
+    "is_custom": true,
+    "is_editable": true,
+    "is_multiple": null,
+    "is_multiple2": {},
+    "kind": "field",
+    "label": "ddc",
+    "link_column": "value",
+    "name": "DDC",
+    "rec_index": 22,
+    "search_terms": [
+      "#ddc"
+    ],
+    "table": "custom_column_12"
+  },
+  "#fast": {
+    "#extra#": null,
+    "#value#": [],
+    "category_sort": "value",
+    "colnum": 13,
+    "column": "value",
+    "datatype": "text",
+    "display": {},
+    "is_category": true,
+    "is_csp": false,
+    "is_custom": true,
+    "is_editable": true,
+    "is_multiple": "|",
+    "is_multiple2": {
+      "cache_to_list": "|",
+      "list_to_ui": ", ",
+      "ui_to_list": ","
+    },
+    "kind": "field",
+    "label": "fast",
+    "link_column": "value",
+    "name": "FAST Tags",
+    "rec_index": 23,
+    "search_terms": [
+      "#fast"
+    ],
+    "table": "custom_column_13"
+  },
+  "#formats": {
+    "#extra#": null,
+    "#value#": "EPUB",
+    "category_sort": "value",
+    "colnum": 11,
+    "column": "value",
+    "datatype": "composite",
+    "display": {
+      "composite_sort": "text",
+      "composite_template": "{:'re(approximate_formats(), ',', ', ')'}",
+      "contains_html": false,
+      "description": "",
+      "make_category": false,
+      "use_decorations": 0
+    },
+    "is_category": false,
+    "is_csp": false,
+    "is_custom": true,
+    "is_editable": true,
+    "is_multiple": null,
+    "is_multiple2": {},
+    "kind": "field",
+    "label": "formats",
+    "link_column": "value",
+    "name": "Formats",
+    "rec_index": 24,
+    "search_terms": [
+      "#formats"
+    ],
+    "table": "custom_column_11"
+  },
+  "#gfog": {
+    "#extra#": null,
+    "#value#": 9.372269240633234,
+    "category_sort": "value",
+    "colnum": 1,
+    "column": "value",
+    "datatype": "float",
+    "display": {
+      "description": "",
+      "number_format": "{0:.1f}"
+    },
+    "is_category": false,
+    "is_csp": false,
+    "is_custom": true,
+    "is_editable": true,
+    "is_multiple": null,
+    "is_multiple2": {},
+    "kind": "field",
+    "label": "gfog",
+    "link_column": "value",
+    "name": "Gunning Fog",
+    "rec_index": 25,
+    "search_terms": [
+      "#gfog"
+    ],
+    "table": "custom_column_1"
+  },
+  "#lcead": {
+    "#extra#": null,
+    "#value#": [],
+    "category_sort": "value",
+    "colnum": 14,
+    "column": "value",
+    "datatype": "text",
+    "display": {},
+    "is_category": true,
+    "is_csp": false,
+    "is_custom": true,
+    "is_editable": true,
+    "is_multiple": "|",
+    "is_multiple2": {
+      "cache_to_list": "|",
+      "list_to_ui": ", ",
+      "ui_to_list": ","
+    },
+    "kind": "field",
+    "label": "lcead",
+    "link_column": "value",
+    "name": "LC Extra Author Details",
+    "rec_index": 26,
+    "search_terms": [
+      "#lcead"
+    ],
+    "table": "custom_column_14"
+  },
+  "#pages": {
+    "#extra#": null,
+    "#value#": null,
+    "category_sort": "value",
+    "colnum": 2,
+    "column": "value",
+    "datatype": "int",
+    "display": {
+      "description": "",
+      "number_format": "{0:,d}"
+    },
+    "is_category": false,
+    "is_csp": false,
+    "is_custom": true,
+    "is_editable": true,
+    "is_multiple": null,
+    "is_multiple2": {},
+    "kind": "field",
+    "label": "pages",
+    "link_column": "value",
+    "name": "Pages",
+    "rec_index": 27,
+    "search_terms": [
+      "#pages"
+    ],
+    "table": "custom_column_2"
+  },
+  "#words": {
+    "#extra#": null,
+    "#value#": 159523,
+    "category_sort": "value",
+    "colnum": 10,
+    "column": "value",
+    "datatype": "int",
+    "display": {
+      "description": "Words",
+      "number_format": "{0:,d}"
+    },
+    "is_category": false,
+    "is_csp": false,
+    "is_custom": true,
+    "is_editable": true,
+    "is_multiple": null,
+    "is_multiple2": {},
+    "kind": "field",
+    "label": "words",
+    "link_column": "value",
+    "name": "Words",
+    "rec_index": 28,
+    "search_terms": [
+      "#words"
+    ],
+    "table": "custom_column_10"
+  }
+}</opf:meta>
+  </metadata>
+  <manifest>
+    <item id="titlepage" href="titlepage.xhtml" media-type="application/xhtml+xml" properties="svg calibre:title-page"/>
+    <item id="c01" href="OEBPS/Step_9780553898194_epub_c01_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c02" href="OEBPS/Step_9780553898194_epub_c02_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c03" href="OEBPS/Step_9780553898194_epub_c03_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c04" href="OEBPS/Step_9780553898194_epub_c04_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c05" href="OEBPS/Step_9780553898194_epub_c05_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c06" href="OEBPS/Step_9780553898194_epub_c06_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c07" href="OEBPS/Step_9780553898194_epub_c07_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c08" href="OEBPS/Step_9780553898194_epub_c08_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c09" href="OEBPS/Step_9780553898194_epub_c09_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c10" href="OEBPS/Step_9780553898194_epub_c10_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c11" href="OEBPS/Step_9780553898194_epub_c11_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c12" href="OEBPS/Step_9780553898194_epub_c12_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c13" href="OEBPS/Step_9780553898194_epub_c13_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c14" href="OEBPS/Step_9780553898194_epub_c14_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c15" href="OEBPS/Step_9780553898194_epub_c15_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c16" href="OEBPS/Step_9780553898194_epub_c16_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c17" href="OEBPS/Step_9780553898194_epub_c17_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c18" href="OEBPS/Step_9780553898194_epub_c18_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c19" href="OEBPS/Step_9780553898194_epub_c19_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c20" href="OEBPS/Step_9780553898194_epub_c20_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c21" href="OEBPS/Step_9780553898194_epub_c21_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c22" href="OEBPS/Step_9780553898194_epub_c22_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c23" href="OEBPS/Step_9780553898194_epub_c23_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c24" href="OEBPS/Step_9780553898194_epub_c24_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c25" href="OEBPS/Step_9780553898194_epub_c25_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c26" href="OEBPS/Step_9780553898194_epub_c26_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c27" href="OEBPS/Step_9780553898194_epub_c27_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c28" href="OEBPS/Step_9780553898194_epub_c28_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c29" href="OEBPS/Step_9780553898194_epub_c29_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c30" href="OEBPS/Step_9780553898194_epub_c30_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c31" href="OEBPS/Step_9780553898194_epub_c31_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c32" href="OEBPS/Step_9780553898194_epub_c32_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c33" href="OEBPS/Step_9780553898194_epub_c33_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c34" href="OEBPS/Step_9780553898194_epub_c34_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c35" href="OEBPS/Step_9780553898194_epub_c35_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c36" href="OEBPS/Step_9780553898194_epub_c36_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c37" href="OEBPS/Step_9780553898194_epub_c37_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c38" href="OEBPS/Step_9780553898194_epub_c38_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c39" href="OEBPS/Step_9780553898194_epub_c39_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c40" href="OEBPS/Step_9780553898194_epub_c40_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c41" href="OEBPS/Step_9780553898194_epub_c41_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c42" href="OEBPS/Step_9780553898194_epub_c42_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c43" href="OEBPS/Step_9780553898194_epub_c43_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c44" href="OEBPS/Step_9780553898194_epub_c44_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c45" href="OEBPS/Step_9780553898194_epub_c45_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c46" href="OEBPS/Step_9780553898194_epub_c46_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c47" href="OEBPS/Step_9780553898194_epub_c47_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c48" href="OEBPS/Step_9780553898194_epub_c48_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c49" href="OEBPS/Step_9780553898194_epub_c49_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c50" href="OEBPS/Step_9780553898194_epub_c50_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c51" href="OEBPS/Step_9780553898194_epub_c51_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c52" href="OEBPS/Step_9780553898194_epub_c52_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c53" href="OEBPS/Step_9780553898194_epub_c53_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c54" href="OEBPS/Step_9780553898194_epub_c54_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c55" href="OEBPS/Step_9780553898194_epub_c55_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c56" href="OEBPS/Step_9780553898194_epub_c56_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c57" href="OEBPS/Step_9780553898194_epub_c57_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c58" href="OEBPS/Step_9780553898194_epub_c58_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c59" href="OEBPS/Step_9780553898194_epub_c59_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c60" href="OEBPS/Step_9780553898194_epub_c60_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c61" href="OEBPS/Step_9780553898194_epub_c61_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c62" href="OEBPS/Step_9780553898194_epub_c62_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c63" href="OEBPS/Step_9780553898194_epub_c63_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c64" href="OEBPS/Step_9780553898194_epub_c64_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c65" href="OEBPS/Step_9780553898194_epub_c65_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c66" href="OEBPS/Step_9780553898194_epub_c66_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c67" href="OEBPS/Step_9780553898194_epub_c67_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c68" href="OEBPS/Step_9780553898194_epub_c68_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c69" href="OEBPS/Step_9780553898194_epub_c69_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c70" href="OEBPS/Step_9780553898194_epub_c70_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="c71" href="OEBPS/Step_9780553898194_epub_c71_r1.htm" media-type="application/xhtml+xml"/>
+    <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="page_css" href="page_styles.css" media-type="text/css"/>
+    <item id="css" href="stylesheet.css" media-type="text/css"/>
+    <item id="cover" href="cover.jpeg" media-type="image/jpeg" properties="cover-image"/>
+    <item id="Step_9780553898194_epub_001_r1" href="OEBPS/images/Step_9780553898194_epub_001_r1.jpg" media-type="image/jpeg"/>
+    <item id="Step_9780553898194_epub_002_r1" href="OEBPS/images/Step_9780553898194_epub_002_r1.jpg" media-type="image/jpeg"/>
+    <item id="Step_9780553898194_epub_003_r1" href="OEBPS/images/Step_9780553898194_epub_003_r1.jpg" media-type="image/jpeg"/>
+    <item id="Step_9780553898194_epub_004_r1" href="OEBPS/images/Step_9780553898194_epub_004_r1.jpg" media-type="image/jpeg"/>
+    <item id="Step_9780553898194_epub_005_r1" href="OEBPS/images/Step_9780553898194_epub_005_r1.jpg" media-type="image/jpeg"/>
+    <item id="Step_9780553898194_epub_006_r1" href="OEBPS/images/Step_9780553898194_epub_006_r1.jpg" media-type="image/jpeg"/>
+    <item id="Step_9780553898194_epub_007_r1" href="OEBPS/images/Step_9780553898194_epub_007_r1.jpg" media-type="image/jpeg"/>
+    <item id="Step_9780553898194_epub_008_r1" href="OEBPS/images/Step_9780553898194_epub_008_r1.jpg" media-type="image/jpeg"/>
+    <item id="Step_9780553898194_epub_009_r1" href="OEBPS/images/Step_9780553898194_epub_009_r1.jpg" media-type="image/jpeg"/>
+  </manifest>
+  <spine>
+    <itemref idref="titlepage"/>
+    <itemref idref="c01"/>
+    <itemref idref="c02"/>
+    <itemref idref="c03"/>
+    <itemref idref="c04"/>
+    <itemref idref="c05"/>
+    <itemref idref="c06"/>
+    <itemref idref="c07"/>
+    <itemref idref="c08"/>
+    <itemref idref="c09"/>
+    <itemref idref="c10"/>
+    <itemref idref="c11"/>
+    <itemref idref="c12"/>
+    <itemref idref="c13"/>
+    <itemref idref="c14"/>
+    <itemref idref="c15"/>
+    <itemref idref="c16"/>
+    <itemref idref="c17"/>
+    <itemref idref="c18"/>
+    <itemref idref="c19"/>
+    <itemref idref="c20"/>
+    <itemref idref="c21"/>
+    <itemref idref="c22"/>
+    <itemref idref="c23"/>
+    <itemref idref="c24"/>
+    <itemref idref="c25"/>
+    <itemref idref="c26"/>
+    <itemref idref="c27"/>
+    <itemref idref="c28"/>
+    <itemref idref="c29"/>
+    <itemref idref="c30"/>
+    <itemref idref="c31"/>
+    <itemref idref="c32"/>
+    <itemref idref="c33"/>
+    <itemref idref="c34"/>
+    <itemref idref="c35"/>
+    <itemref idref="c36"/>
+    <itemref idref="c37"/>
+    <itemref idref="c38"/>
+    <itemref idref="c39"/>
+    <itemref idref="c40"/>
+    <itemref idref="c41"/>
+    <itemref idref="c42"/>
+    <itemref idref="c43"/>
+    <itemref idref="c44"/>
+    <itemref idref="c45"/>
+    <itemref idref="c46"/>
+    <itemref idref="c47"/>
+    <itemref idref="c48"/>
+    <itemref idref="c49"/>
+    <itemref idref="c50"/>
+    <itemref idref="c51"/>
+    <itemref idref="c52"/>
+    <itemref idref="c53"/>
+    <itemref idref="c54"/>
+    <itemref idref="c55"/>
+    <itemref idref="c56"/>
+    <itemref idref="c57"/>
+    <itemref idref="c58"/>
+    <itemref idref="c59"/>
+    <itemref idref="c60"/>
+    <itemref idref="c61"/>
+    <itemref idref="c62"/>
+    <itemref idref="c63"/>
+    <itemref idref="c64"/>
+    <itemref idref="c65"/>
+    <itemref idref="c66"/>
+    <itemref idref="c67"/>
+    <itemref idref="c68"/>
+    <itemref idref="c69"/>
+    <itemref idref="c70"/>
+    <itemref idref="c71"/>
+  </spine>
+</package>

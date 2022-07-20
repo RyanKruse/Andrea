@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>artistName</key>
+	<string>Cline, Ernest</string>
+	<key>book-info</key>
+	<dict>
+		<key>cover-image-hash</key>
+		<string>E7E17F2BB6D1529FCB91E0A72F43905E</string>
+		<key>cover-image-path</key>
+		<string>cover.jpeg</string>
+		<key>package-file-hash</key>
+		<string>E30C4C36442D4321BEBD6F537322A0C6</string>
+		<key>publisher-unique-id</key>
+		<string>fb0a8e30-4fdd-4686-af59-9da18fc1a7f5</string>
+		<key>unique-id</key>
+		<integer>-7813128533770263340</integer>
+	</dict>
+	<key>itemName</key>
+	<string>Ready Player One</string>
+	<key>playlistName</key>
+	<string>Ready Player One</string>
+	<key>releaseDate</key>
+	<string>2011-08-16T04:00:00+00:00</string>
+	<key>sort-artist</key>
+	<string>Cline, Ernest</string>
+	<key>sort-artist-status</key>
+	<integer>3</integer>
+</dict>
+</plist>
