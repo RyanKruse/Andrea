@@ -24,65 +24,27 @@ Language Packs & Fallback Tips:
 
 ----------------------------------------
 
-Andrea 3 
+Andrea
 
 ----------------------------------------
 
 
 Oustanding Tasks:
 
-Release Andrea first.
-Perfection may endlessly have Candle v2 as main prototype. 
-Add a "requested features" section to show you're not slacking.
-Just submitting your first draft - same as submitting a first essay draft in college. 
+Back text is jumping out on the Andrea base model.
+Recompile on largest text failed.
+Left hand logistics support.
+Pickup is possible too close.
+"No coding required!" Make it super super user friendly to upload books.
+Need zero unity knowledge to upload. A total noob should figure it out.
+Networking on pickup is still super jocking. Add networking 100%.
+Make guide straight forward, simple, and interface simplified!
 
 
-Slightly increase character space as they get super clumped sometimes.
-Music option for reading books.
-White noise option for reading books.
-Information tab - get it in other people's worlds.
-Option to hold 
-Z-fighting on back of tablet.
-Left hand options.
-Controller dead-space issue.
-Pickup still iffy - need more user feedback.
-Floaty.
-Text to speech for tired readers.
-Mirror in the world.
-Grabbing tablet accidently big issue.
-Multiple tablets with networking.
-Hovering desktop cursor over slider doesn't show block title.
-
-Maybe just super expand the back side info.
-Include your discord info. Booth info. Basic tutorial.
-Maybe on screen saver, remind people what loc they are on.
-Slight complaint on the color of the tablet background "old color looking".
-"This is where I was at! God, I have to remember what percent I was at in this book"
-"There definently needs to be a save system in here. Makes it much easier."
-
-Doesn't look like people are holding the book when they are reading in VR.
-Need to have SOME networking on the book, otherwise multiple people can't read.
-Usually it's just one person reading and the other people nagging that person for attention. 
-
-Confusing that the Loc Change on Nav Slider released and takes to first page index instead of the block instead, not the actual loc itself.
-Maybe should change to the actual loc itself. And have arrows left and right to go to first and last page of block.
-
-Percent doesn't show when book loading from main menu.
-Save data for users when they leave the world.
-When one person grabs it, it automatically snaps to another person's hand.
-
-Toggle pickup is apparently super, super scary to people.
-Like, I cannot underestimate how scary of a first impression the tablet makes.
-One single violation of expectation in first 5 seconds and it's like "this thing sucks."
-Have to remove this feature as default, the violation is too much relative to power user convinence.
-Add a "Toggle Pickup" with a hint explaining what it does.
-Hint: Same dialog as the VRChat explaination for toggle pickup.
-
-The super floatiness of the device is what people's first impression is when they pick it up. Another violation of expectation. Need to hint to the player to use laser to interact with main page. "Use laser cursor to interact." or "Interact using laser cursor." 
-
-Stick drift makes experience for rift S users impossible. 
-Maybe allow option to go to start of chapter after nav slider?
 Replace "Brightness" slider with "Warmth" slider and perform same functionality?
+White background... much easier to read and distingush text. 
+
+"Andrea Book" is the new title of the world. So people know wtf they are getting into and appears higher on the search result for books. Or not, just call it andrea. 
 
 Text Settings | Device Settings | 
 Font Type | Tablet Size
@@ -91,6 +53,8 @@ Background Brightness | Toggle Player Movement (resets if respawn)
 
 A thicker tablet black edges would actually be an advantage. I keep on peeking behind the tablet.
 
+Could also be that having the tablet far away, large, with smaller text be advantagous.
+
 
 Networking using Truce VR logistics? Other people literally cannot use this thing in worlds more than one player since it is not setup for it. And their curiosity guides them to it. Make it realistic, local networking added. 
 
@@ -98,8 +62,9 @@ Networking using Truce VR logistics? Other people literally cannot use this thin
 
 
 
+
 Virtual Reality.
-+ Double check cube lerp.
++ Double check cube lerp floatiness.
 + Double check toggle pickup.
 + Left hand support.
 + Networking pickup.
@@ -108,6 +73,9 @@ Virtual Reality.
 + Buzz haptic feedback.
 + Scale Bug (***).
 + Scroll books don't work (players keep pressing image).
++ Tablet keeps teleporting back to player's hand when others interact?
++ Screen saver showcases the loc and percentage?
++ Keep screen saver hidden even when releasing book? People don't hold when reading?
 
 Desktop.
 + Hide mouse cursor.
@@ -119,7 +87,13 @@ Andrea.
 + Simplify interface for developers.
 + Polish book block title headers.
 + If really laggy, clone delay appears to stick around too long.
++ Multiple tablet compatibility check.
++ Needs networking, otherwise people interupt reader (cannot participate).
 
+Before Publish.
++ Mirror button.
++ Multiple tablets.
++ Table asthetics.
 
 Hell Code #4:
 Options Menu
@@ -129,11 +103,20 @@ Options Menu
 	- Toggle Pickup Button.
 
 
+	
+Andrea 4 - Hell Code #6:
+Networking & Multiple Player Interaction & Pickup & Player Rejoin Local Transform
+Networking & Network Lock. 
+
+
+
 Misc Code:
 Respawn tablet button.
 Style sheet on one of the quotes has texts really mushed together. Redo format entire style sheet?
 Head position slightly jitters tablet - need to subtract that from calculations.
 
+VR polish.
+Slight pixil fighting on edges.
 
 Something broken with images around Loc 785, Loc 1325, 2973 re-add paragraphs? in 7 Habits.
 Loc 1960, Loc 2364, 2729, 3099, 3111, 4419, 5107, 5698 is strange on end clipping (wide text).
@@ -148,93 +131,70 @@ Loc 3710 Large Notosans Book Index 0... Bullet Break Didn't Work! Block: 12. Pag
 
 ----------------------------------------
 
-Andrea 4
+Andrea Requested Features
 
 ----------------------------------------
 
-Andrea 4 - Hell Code #5:
-Scroll text when reading (Fast blip?)
+Andrea - Feature Request #1:
+Scrolling text when reading.
 
+Andrea - Feature Request #2:
+Tapping screen UI interface.
 
+Andrea - Feature Request #3:
+Merge Compiler with Andrea.
 
-Andrea 4 - Hell Code #6:
-Networking & Multiple Player Interaction & Pickup & Player Rejoin Local Transform
-Networking & Network Lock. 
+Andrea - Feature Request #4:
+More readable C# code.
 
+Andrea - Feature Request #5:
+Smart book navigation panel.
 
+Andrea - Feature Request #6:
+Audio book option.
 
-Andrea 4 - Hell Code #7:
-Tapping screen logistics.
+Andrea - Feature Request #7:
+Background music option.
 
+Andrea - Feature Request #8:
+Support for in-text images.
 
+Andrea - Feature Request #9 [Urgent]:
+User persistence on book progress.
 
-Andrea 4 - Hell Code #8:
-VR polish.
-Slight pixil fighting on edges.
+Andrea - Feature Request #10:
+White noise audio option.
 
+Andrea - Feature Request #11:
+Andrea information page.
 
-Andrea 4 - Hell Code #9:
-Merge compiler with Andrea.
-PopulateStyleSheet in Compiler can utilize Andrea's code? 
-Can skip parallel code logistics?
+Andrea - Feature Request #12:
+Cursor on-hover logistics.
 
+Andrea - Feature Request #13:
+Joystick dead space dampener.
 
+Andrea - Feature Request #14 [Urgent]:
+Networking logistics.
 
-Andrea 4 - Hell Code #10
-Clicking on Loc or Pecentage asks for input which looks like a padlock num input. 
+Andrea - Feature Request #15:
+Render cull ownership timer.
 
-
-
-Andrea 4 - Hell Code #11
-White noise audio.
-Audiobook option.
-
-
-
-Andrea 4 - Hell Code #12
-Book images.
-
-
-
-----------------------------------------
-
-General Home Page Structure:
-
-Category 0 - Personal Development [10]:
-1	Atomic Habits
-2X	The Subtle Art of Not Giving a F_ck
-3X	7 Habits of Highly Effective People
-4X	How to Win Friends and Influence People
-
-Category 1 - Canonical Literature [10]:
-1	1984
-2	The Great Gatsby
-3	To Kill A Mockingbird
-4	The Catcher In The Rye
-
-Category 2 - Epic Novels [10]:
-1	Harry Potter
-2	The Lord Of The Rings
-3	Atlas Shrugged
-4   Dune
-
-Category 3 - Simulations [10]
-1	Snow Crash
-2	Ready Player One
-3	Ender's Game
-4	The Hunger Games
-
+Andrea - Feature Request #16:
 
 
 ----------------------------------------
 
-Tutorial on Creating Book Button Images:
-	Greyscale at 50.
-	Resize all to 523x - 800x - Image.
-	Expand Canvas to 549x - 826x - Canvas.
-	Add 13 brush thickness, 25 corner Rounded Border. 	
-	Remove Corners.
-	Save Compressed PNG.
-	Create sprite.
-	Add Image to buttons.
-	Buttons are all 348x - 529x - Button.
+Tutorial on Book Button Images
+
+----------------------------------------
+
+	• Greyscale at 50.
+	• Resize all to 523x - 800x - Image.
+	• Expand Canvas to 549x - 826x - Canvas.
+	• Add 13 brush thickness, 25 corner Rounded Border. 	
+	• Remove Corners.
+	• Save Compressed PNG.
+	• Create sprite.
+	• Add Image to buttons.
+	• Buttons are all 348x - 529x - Button.

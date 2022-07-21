@@ -350,7 +350,8 @@ public class Andrea : UdonSharpBehaviour
         _rightHandGameObject.transform.SetParent(null);
         if (_isVRSettingsOverride && Networking.LocalPlayer.IsUserInVR())
         {
-            _defaultFontSizeIndex = 2;
+            // Skip for now.
+            // _defaultFontSizeIndex = 2;
             MediumScale();
         }
         Memory.PopulateTextAssetList();
@@ -447,7 +448,11 @@ public class Andrea : UdonSharpBehaviour
             bool _isInteractable = _bookButtonGameObjectList[i].GetComponent<Button>().interactable;
             Button _bannerButton = _bookBannerGameObjectList[i].GetComponent<Button>();
             _bannerButton.interactable = _isInteractable;
-            if (!_isInteractable)
+            if (!_bookButtonGameObjectList[i].transform.parent.gameObject.activeSelf)
+            {
+                Destroy(_bookButtonGameObjectList[i].transform.parent.gameObject);
+            }
+            else if (!_isInteractable)
             {
                 _bannerButton.image.sprite = _bannerNotInteractable;
                 _bookBannerGameObjectList[i].SetActive(true);
@@ -1268,10 +1273,15 @@ public class Andrea : UdonSharpBehaviour
         if (Networking.LocalPlayer != null && !Networking.LocalPlayer.IsUserInVR()) return;
         // Hand Transform.
         // FINGER_SHADOW.transform.position = LOCAL_PLAYER.GetBonePosition(fingerBone);
-        _rightHandGameObject.transform.position = Vector3.Slerp(_previousRightHandPosition + (Networking.LocalPlayer.GetPosition() - _previousPlayerPosition), Networking.LocalPlayer.GetBonePosition(HumanBodyBones.RightHand), Time.deltaTime * 9f);
-        _rightHandGameObject.transform.rotation = Quaternion.Slerp(_rightHandGameObject.transform.rotation, Networking.LocalPlayer.GetBoneRotation(HumanBodyBones.RightHand), Time.deltaTime * 9f);
-        _previousRightHandPosition = _rightHandGameObject.transform.position;
-        _previousPlayerPosition = Networking.LocalPlayer.GetPosition(); 
+
+        // _rightHandGameObject.transform.position = Vector3.Slerp(_previousRightHandPosition + (Networking.LocalPlayer.GetPosition() - _previousPlayerPosition), Networking.LocalPlayer.GetBonePosition(HumanBodyBones.RightHand), Time.deltaTime * 9f);
+
+
+        _rightHandGameObject.transform.position = Vector3.Slerp(_rightHandGameObject.transform.position, Networking.LocalPlayer.GetBonePosition(HumanBodyBones.RightHand), Time.deltaTime * 10f);
+        _rightHandGameObject.transform.rotation = Quaternion.Slerp(_rightHandGameObject.transform.rotation, Networking.LocalPlayer.GetBoneRotation(HumanBodyBones.RightHand), Time.deltaTime * 10f);
+
+        // _previousRightHandPosition = _rightHandGameObject.transform.position;
+        // _previousPlayerPosition = Networking.LocalPlayer.GetPosition(); 
 
         if (_candleVRCPickup.IsHeld && _isTogglePickedUp == false)
         {
@@ -1279,23 +1289,32 @@ public class Andrea : UdonSharpBehaviour
             _candleVRCPickup.pickupable = false;
             _candleGameObject.transform.SetParent(_rightHandGameObject.transform);
             _isRightGripActive = true;
-            _isScreenSaverHidden = true;
+            if (!_isScreenSaverHidden)
+            {
+                ScreenSaverClicked();
+            }
             return;
         }
 
         if (_isRightGripActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") <= 0.24f) // Toggle grip logistics.
         {
-            _isRightGripActive = false;  // Toggle grip logistics.
+            // _isRightGripActive = false;  // Toggle grip logistics.
             if (_candleGameObject.transform.parent == _rightHandGameObject.transform)
             {
-                // _candleVRCPickup.pickupable = true;  // Single Grip Logistics.
-                // _candleGameObject.transform.SetParent(null);  // Single Grip Logistics.
-                _isTogglePickedUp = true;  // Toggle grip logistics.
+                _candleVRCPickup.pickupable = true;  // Single Grip Logistics.
+                _candleGameObject.transform.SetParent(null);  // Single Grip Logistics.
+                _isRightGripActive = false;
+                if (_isScreenSaverHidden)
+                {
+                    // ScreenSaverClicked();
+                }
+                // _isTogglePickedUp = true;  // Toggle grip logistics.
                 // This is when you remove the screen saver.
             }
         }
         
         // Toggle grip logistics.
+        /*
         else if (!_isRightGripActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") > 0.28f)
         {
             _isRightGripActive = true;
@@ -1309,6 +1328,7 @@ public class Andrea : UdonSharpBehaviour
                 return;
             }
         }
+        */
 
         if (!_isBookStaged) return;
 
@@ -1324,7 +1344,16 @@ public class Andrea : UdonSharpBehaviour
                 if (_isScreenSaverHidden)
                 {
                     _mainPageIndex--;
-                    DefinePage(_mainPageIndex, true);
+                    if (_overflowPageIndex == -1 && _mainCloneTMP.text != "")
+                    {
+                        _bigHammerLocCoordinates = -1;
+                        if (_isTutorialMode && _adjustedLocationHeight > 1)
+                        {
+                            DisableTutorialMode();
+                        }
+                        DefinePage(_mainPageIndex, false);
+                    }
+                    // DefinePage(_mainPageIndex, true);
                 }
             }
         }
@@ -1341,7 +1370,16 @@ public class Andrea : UdonSharpBehaviour
                 if (_isScreenSaverHidden)
                 {
                     _mainPageIndex++;
-                    DefinePage(_mainPageIndex, true);
+                    if (_overflowPageIndex == -1 && _mainCloneTMP.text != "")
+                    {
+                        _bigHammerLocCoordinates = -1;
+                        if (_isTutorialMode)
+                        {
+                            DisableTutorialMode();
+                        }
+                        DefinePage(_mainPageIndex, true);
+                    }
+                    // DefinePage(_mainPageIndex, true);
                 }
             }
         }
@@ -1602,6 +1640,11 @@ public class Andrea : UdonSharpBehaviour
     private void ChangeTabletSize(float scaleSize)
     {
         PlayAudio(_clickAudio);
+
+        if (!Networking.LocalPlayer.IsUserInVR())
+        {
+            scaleSize = scaleSize + 0.05f;
+        }
 
         _candleGameObject.transform.localScale = new Vector3(scaleSize, scaleSize, scaleSize);
 
@@ -2020,18 +2063,46 @@ public class Andrea : UdonSharpBehaviour
         _backButtonGameObject.transform.localPosition = new Vector3(_backButtonGameObject.transform.localPosition.x, _backButtonGameObject.transform.localPosition.y, -2.5f);
         _catalogButtonGameObject.transform.localPosition = new Vector3(_catalogButtonGameObject.transform.localPosition.x, _catalogButtonGameObject.transform.localPosition.y, -2.5f);
 
+        _bottomRightTMP.gameObject.SetActive(true);
+        _bottomRightCloneTMP.gameObject.SetActive(true);
+
         // Before entering calibration, we need to validate that we don't already have a loc stored in memory.
         if (_preservedLocBookList[_mainBookIndex] != -1)
         {
             // Debug.Log($"Calibrate Memory() | Big Hammer: {_preservedLocBookList[_mainBookIndex]}");
+
             BigHammerLogistics(_preservedLocBookList[_mainBookIndex]);
+
+            double _checkMath = Math.Min(Math.Ceiling((double)_adjustedLocationHeight * 99 / (double)_adjustedMaxHeight), 99);
+
+            if (_mainBlockIndex == _mainTextList.Length - 1 && _mainPageIndex == _mainPageLength - 1)
+            {
+                _bottomCenterTMP.text = "★";
+                _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
+                _bottomRightTMP.text = "100%";
+            }
+            else
+            {
+                _bottomCenterTMP.text = "";
+                _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
+                _bottomRightTMP.text = $"{Convert.ToInt32(Math.Max(1, _checkMath))}%";
+            }
         }
         else
         {
             // Loading a brand new book, so value should be zero.
             _locNavigationSlider.value = 0;
             ExecuteCalibration();
+
+            _bottomCenterTMP.text = "";
+            _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
+            _bottomRightTMP.text = $"1%";
+            _bottomRightCloneTMP.text = _bottomRightTMP.text;
         }
+
+        // Need to update the navslider block title and the percentages on the bottom right text.
+        BlockNameSet(_mainBlockIndex);
+
 
         if (_isShowExtraOptions)
         {
@@ -2100,6 +2171,7 @@ public class Andrea : UdonSharpBehaviour
 
         double _checkMath = Math.Min(Math.Ceiling((double)_adjustedLocationHeight * 99 / (double)_adjustedMaxHeight), 99);
         int _mainBlockIndexGuess = Convert.ToInt32(Mathf.Max(0f, (_mainBlockList.Length - 1) * (float)(_checkMath / 99f)));
+        _mainBlockIndexGuess = Mathf.Min(_mainBlockList.Length - 1, _mainBlockIndexGuess);
         int _trueLoc = locTarget;
 
         // Debug.Log($"Before While Loop | _adjustedLocationHeight: {_adjustedLocationHeight} | _adjustedMaxHeight: {_adjustedMaxHeight} | _checkMath: {_checkMath} | _mainBlockIndexGuess: {_mainBlockIndexGuess} | _trueLoc: {_trueLoc}");
@@ -2126,7 +2198,7 @@ public class Andrea : UdonSharpBehaviour
 
             int _blockHeightOfDrilledBlock = Convert.ToInt32(_mainBlockGuess.text.Substring(_startLocationIndex2, _endLocationIndex2 - _startLocationIndex2));
 
-            // Debug.Log($"_mainBlock: Skipped | _startLocationIndex: {_startLocationIndex} | _endLocationIndex: {_endLocationIndex} | _locationHeightOfDrilledBlock: {_locationHeightOfDrilledBlock} | _locationHeight: {_locationHeight} | _drillDepth: {_drillDepth}");
+            // Debug.Log($"_mainBlockIndexGuess: {_mainBlockIndexGuess} | _startLocationIndex: {_startLocationIndex} | _endLocationIndex: {_endLocationIndex} | _locationHeightOfDrilledBlock: {_locationHeightOfDrilledBlock}");
 
             if (_trueLoc >= _locationHeightOfDrilledBlock && _trueLoc < _locationHeightOfDrilledBlock + _blockHeightOfDrilledBlock)
             {
@@ -2232,11 +2304,20 @@ public class Andrea : UdonSharpBehaviour
 
             _mainTMP.text = "";
             _mainBlockIndex = _locNavMainBlockIndex;
-            Calibrate(0);
-            _isOverflowAuditDefinePage = true;
 
-            // If incrementing up, start at the first page. If incrementing down, start at the last page.
-            _endCalibrationPageIndex = 0;
+
+            // Uncommenting this takes us to page index 0.
+            // Calibrate(0);
+            // _isOverflowAuditDefinePage = true;
+            // _endCalibrationPageIndex = 0;
+
+
+
+            // _isLoadBookNew = true;
+            // Need to subtract one from the max height, otherwise will try to overshoot beyond.
+            int _locTarget = Convert.ToInt32(Math.Ceiling((_mainMaxHeight - 1) * _locNavigationSlider.value));
+            // Debug.Log($"Loc Target: {_locTarget} | ");
+            BigHammerLogistics(_locTarget);
         }
     }
 
@@ -2658,7 +2739,7 @@ public class Andrea : UdonSharpBehaviour
         tempColor.a = .66f;
         _largeScaleImage.color = tempColor;
 
-        ChangeTabletSize(0.1f);
+        ChangeTabletSize(0.15f);
     }
 
     public void MediumScale()
@@ -2674,7 +2755,7 @@ public class Andrea : UdonSharpBehaviour
         tempColor.a = .66f;
         _largeScaleImage.color = tempColor;
 
-        ChangeTabletSize(0.15f);
+        ChangeTabletSize(0.20f);
     }
 
     public void LargeScale()
@@ -2690,7 +2771,7 @@ public class Andrea : UdonSharpBehaviour
         tempColor.a = .33f;
         _largeScaleImage.color = tempColor;
 
-        ChangeTabletSize(0.2f);
+        ChangeTabletSize(0.25f);
     }
 
     public void BrightnessSliderDrag()
