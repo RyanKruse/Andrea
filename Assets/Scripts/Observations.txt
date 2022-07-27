@@ -31,27 +31,19 @@ Andrea
 
 Oustanding Tasks:
 
-Back text is jumping out on the Andrea base model.
-Recompile on largest text failed.
-Left hand logistics support.
-Pickup is possible too close.
-"No coding required!" Make it super super user friendly to upload books.
-Need zero unity knowledge to upload. A total noob should figure it out.
-Networking on pickup is still super jocking. Add networking 100%.
-Make guide straight forward, simple, and interface simplified!
+[Multiplayer VR] Bug - Multiple Players Interacting Udon Crashed.
 
+[Restart] Need to add Gothic Fiction and restructure book categories.
 
-Replace "Brightness" slider with "Warmth" slider and perform same functionality?
-White background... much easier to read and distingush text. 
+[VR] Was it righthand current position, or right hand previous position lerp?
 
-"Andrea Book" is the new title of the world. So people know wtf they are getting into and appears higher on the search result for books. Or not, just call it andrea. 
+[VR] Left hand logistics support.
 
-Text Settings | Device Settings | 
-Font Type | Tablet Size
-Font Size | Toggle Tablet Pickup (resets if respawn)
-Background Brightness | Toggle Player Movement (resets if respawn)
+[Multiplayer VR] No Pickup Stealing.
 
-A thicker tablet black edges would actually be an advantage. I keep on peeking behind the tablet.
+[VR] Reduced pickup distance.
+
+Brightness Slider with dark mode.
 
 Could also be that having the tablet far away, large, with smaller text be advantagous.
 
@@ -65,7 +57,6 @@ Networking using Truce VR logistics? Other people literally cannot use this thin
 
 Virtual Reality.
 + Double check cube lerp floatiness.
-+ Double check toggle pickup.
 + Left hand support.
 + Networking pickup.
 + Fast page scroll.
@@ -82,7 +73,7 @@ Desktop.
 + Desktop Z Grid-Snap Rotation.
 
 Andrea.
-+ Tutorial multiple language.
++ Super easy tutorial in multiple language (with most of interface simplified out).
 + People try to scroll holding the grey'd out books.
 + Simplify interface for developers.
 + Polish book block title headers.
@@ -91,7 +82,6 @@ Andrea.
 + Needs networking, otherwise people interupt reader (cannot participate).
 
 Before Publish.
-+ Mirror button.
 + Multiple tablets.
 + Table asthetics.
 
@@ -181,6 +171,15 @@ Andrea - Feature Request #15:
 Render cull ownership timer.
 
 Andrea - Feature Request #16:
+VR Toggle Pickup Logistics.
+
+Andrea - Feature Request #17:
+
+Andrea - Feature Request #18:
+
+Andrea - Feature Request #19:
+
+Andrea - Feature Request #20:
 
 
 ----------------------------------------
@@ -198,3 +197,25 @@ Tutorial on Book Button Images
 	• Create sprite.
 	• Add Image to buttons.
 	• Buttons are all 348x - 529x - Button.
+
+----------------------------------------
+
+Public Domain Books
+
+----------------------------------------
+
+	Personal Development
+	• How to Win Friends and Influence People
+	• Think and Grow Rich
+
+	Canonical Literature
+	• The Great Gatsby
+	• 1984
+	
+	Gothic Fiction
+	• Dracula 
+	• Frankenstein
+
+	Novel of Manners
+	• Pride and Prejudice
+	• Crime and Punishment

@@ -12,9 +12,9 @@ Prefab: https://clearly.booth.pm/items/3258223
 
 			  Introduction
 
-Andrea is a virtual device for reading books and other large texts.
+Andrea is a device for reading books and other large texts in VRChat.
 
-Some examples that can be utilized on the device include:
+Some text examples that can be published on Andrea include:
 
 	1) Books.
 	2) Stories.
@@ -27,7 +27,9 @@ Some examples that can be utilized on the device include:
 	9) Speeches.
 	10) Lyrics.
 
-No programming required to use the device.
+No coding is required to use the device.
+
+Nearly all foreign languages are supported.
 
 Just drop your text files in, compile, and enjoy.
 
@@ -50,3 +52,5 @@ YouTube Tutorial: ??????
 Contact me on Discord for any questions!
 
 ----------------------------------------
+
+All books on prefab are public domain.

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx version="2005-1" xml:lang="en" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+<head>
+<meta name="dtb:uid" content="978-0-9907976-1-6"/>
+<meta name="dtb:depth" content="1"/>
+<meta name="dtb:totalPageCount" content="416"/>
+<meta name="dtb:maxPageNumber" content="0"/>
+</head>
+<docTitle><text>Think and Grow Rich!</text></docTitle>
+<docAuthor><text>Napoleon Hill</text></docAuthor>
+<navMap>
+<navPoint id="navpoint-1" playOrder="1">
+<navLabel><text>Cover</text></navLabel>
+<content src="xhtml/00_cover.xhtml"/>
+</navPoint>
+
+<navPoint id="navpoint-2" playOrder="2">
+<navLabel><text>Title</text></navLabel>
+<content src="xhtml/04_title.xhtml"/>
+</navPoint>
+
+<navPoint id="navpoint-3" playOrder="3">
+<navLabel><text>Special Foreword by Bob Proctor </text></navLabel>
+<content src="xhtml/09_spec.xhtml"/>
+</navPoint>
+
+<navPoint id="navpoint-4" playOrder="4">
+<navLabel><text>The Editor&#x2019;s Foreword </text></navLabel>
+<content src="xhtml/11_editor.xhtml"/>
+</navPoint>
+
+<navPoint id="navpoint-5" playOrder="5">
+<navLabel><text>The Author&#x2019;s Preface </text></navLabel>
+<content src="xhtml/12_preface.xhtml"/>
+</navPoint>
+
+<navPoint id="navpoint-6" playOrder="6">
+<navLabel><text>Introduction: MINDPOWER: The Man Who &#x201C;Thought&#x201D; His Way</text></navLabel>
+<content src="xhtml/13_intro.xhtml"/>
+</navPoint>
+
+<navPoint id="navpoint-7" playOrder="7">
+<navLabel><text>1. DESIRE: The Starting Point of All Achievement </text></navLabel>
+<content src="xhtml/14_chap1.xhtml"/>
+<navPoint id="navpoint-8" playOrder="8">
+<navLabel><text>The First Step to Riches</text></navLabel>
+<content src="xhtml/14_chap1.xhtml#chapter1"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-9" playOrder="9">
+<navLabel><text> 2. FAITH: Visualization and Belief in the Attainment of Desire </text></navLabel>
+<content src="xhtml/15_chap2.xhtml"/>
+<navPoint id="navpoint-10" playOrder="10">
+<navLabel><text>The Second Step to Riches</text></navLabel>
+<content src="xhtml/15_chap2.xhtml#chapter2"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-11" playOrder="11">
+<navLabel><text>3. AUTOSUGGESTION: The Medium for Influencing the Subconscious Mind </text></navLabel>
+<content src="xhtml/16_chap3.xhtml"/>
+<navPoint id="navpoint-12" playOrder="12">
+<navLabel><text>The Third Step to Riches</text></navLabel>
+<content src="xhtml/16_chap3.xhtml#chapter3"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-13" playOrder="13">
+<navLabel><text>4. SPECIALIZED KNOWLEDGE: Personal Experiences or Observations </text></navLabel>
+<content src="xhtml/17_chap4.xhtml"/>
+<navPoint id="navpoint-14" playOrder="14">
+<navLabel><text>The Fourth Step to Riches</text></navLabel>
+<content src="xhtml/17_chap4.xhtml#chapter4"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-15" playOrder="15">
+<navLabel><text>5. IMAGINATION: The Workshop of the Mind	 </text></navLabel>
+<content src="xhtml/19_chap5.xhtml"/>
+<navPoint id="navpoint-16" playOrder="16">
+<navLabel><text>The Fifth Step to Riches</text></navLabel>
+<content src="xhtml/19_chap5.xhtml#chapter5"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-17" playOrder="17">
+<navLabel><text>6. ORGANIZED PLANNING: The Crystallization of Desire into Action </text></navLabel>
+<content src="xhtml/21_chap6.xhtml"/>
+<navPoint id="navpoint-18" playOrder="18">
+<navLabel><text>The Sixth Step to Riches</text></navLabel>
+<content src="xhtml/21_chap6.xhtml#chapter6"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-19" playOrder="19">
+<navLabel><text>7. DECISION: The Mastery of Procrastination </text></navLabel>
+<content src="xhtml/22_chap7.xhtml"/>
+<navPoint id="navpoint-20" playOrder="20">
+<navLabel><text>The Seventh Step to Riches</text></navLabel>
+<content src="xhtml/22_chap7.xhtml#chapter7"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-21" playOrder="21">
+<navLabel><text>8. PERSISTENCE: The Sustained Effort Necessary to Induce Faith </text></navLabel>
+<content src="xhtml/24_chap8.xhtml"/>
+<navPoint id="navpoint-22" playOrder="22">
+<navLabel><text>The Eighth Step to Riches</text></navLabel>
+<content src="xhtml/24_chap8.xhtml#chapter8"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-23" playOrder="23">
+<navLabel><text>9. POWER OF THE MASTER MIND: The Driving Force </text></navLabel>
+<content src="xhtml/25_chap9.xhtml"/>
+<navPoint id="navpoint-24" playOrder="24">
+<navLabel><text>The Ninth Step to Riches </text></navLabel>
+<content src="xhtml/25_chap9.xhtml#chapter9"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-25" playOrder="25">
+<navLabel><text>10. THE MYSTERY OF SEX TRANSMUTATION </text></navLabel>
+<content src="xhtml/26_chap10.xhtml"/>
+<navPoint id="navpoint-26" playOrder="26">
+<navLabel><text>The Tenth Step to Riches </text></navLabel>
+<content src="xhtml/26_chap10.xhtml#chapter10"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-27" playOrder="27">
+<navLabel><text>11. THE SUBCONSCIOUS MIND: The Connecting Link</text></navLabel>
+<content src="xhtml/28_chap11.xhtml"/>
+<navPoint id="navpoint-28" playOrder="28">
+<navLabel><text>The Eleventh Step to Riches </text></navLabel>
+<content src="xhtml/28_chap11.xhtml#chapter11"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-29" playOrder="29">
+<navLabel><text>12. THE BRAIN: A Broadcasting and Receiving Station for Thought</text></navLabel>
+<content src="xhtml/29_chap12.xhtml"/>
+<navPoint id="navpoint-30" playOrder="30">
+<navLabel><text>The Twelfth Step to Riches </text></navLabel>
+<content src="xhtml/29_chap12.xhtml#chapter12"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-31" playOrder="31">
+<navLabel><text>13. THE SIXTH SENSE: The Door to the Temple of Wisdom </text></navLabel>
+<content src="xhtml/31_chap13.xhtml"/>
+<navPoint id="navpoint-32" playOrder="32">
+<navLabel><text>The Thirteenth Step to Riches</text></navLabel>
+<content src="xhtml/31_chap13.xhtml#chapter13"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-33" playOrder="33">
+<navLabel><text>Epilogue: HOW TO OUTWIT THE 6 GHOSTS OF FEAR</text></navLabel>
+<content src="xhtml/33_chap14.xhtml"/>
+<navPoint id="navpoint-34" playOrder="34">
+<navLabel><text>Take Inventory of Yourself</text></navLabel>
+<content src="xhtml/33_chap14.xhtml#chapter14"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-35" playOrder="35">
+<navLabel><text>Appendix</text></navLabel>
+<content src="xhtml/34_appe-toc.xhtml"/>
+
+<navPoint id="navpoint-36" playOrder="36">
+<navLabel><text>Appendix A: A Soaring Spirit—Valediction for Napoleon Hill</text></navLabel>
+<content src="xhtml/36_appeA.xhtml"/>
+</navPoint>
+<navPoint id="navpoint-37" playOrder="37">
+<navLabel><text>Appendix B: Tributes to the Author</text></navLabel>
+<content src="xhtml/37_appeB.xhtml"/>
+</navPoint>
+<navPoint id="navpoint-38" playOrder="38">
+<navLabel><text>Appendix C: Original Publisher's Preface</text></navLabel>
+<content src="xhtml/39_appeC.xhtml"/>
+</navPoint>
+<navPoint id="navpoint-39" playOrder="39">
+<navLabel><text>Appendix D: This Standing Army</text></navLabel>
+<content src="xhtml/40_appeD.xhtml"/>
+</navPoint>
+<navPoint id="navpoint-40" playOrder="40">
+<navLabel><text>Appendix E: What Do You Want Most?</text></navLabel>
+<content src="xhtml/42_appeE.xhtml"/>
+</navPoint>
+<navPoint id="navpoint-41" playOrder="41">
+<navLabel><text>Appendix F: Early Sources</text></navLabel>
+<content src="xhtml/44_appeF.xhtml"/>
+</navPoint>
+<navPoint id="navpoint-42" playOrder="42">
+<navLabel><text>Appendix G: Works by Napoleon Hill</text></navLabel>
+<content src="xhtml/45_appeG.xhtml"/>
+</navPoint>
+<navPoint id="navpoint-43" playOrder="43">
+<navLabel><text>Appendix H: "It Couldn't Be Done"</text></navLabel>
+<content src="xhtml/47_appeH.xhtml"/>
+</navPoint>
+<navPoint id="navpoint-44" playOrder="44">
+<navLabel><text>Appendix I: The Mindpower Press</text></navLabel>
+<content src="xhtml/48_appeI.xhtml"/>
+</navPoint>
+</navPoint>
+
+<navPoint id="navpoint-45" playOrder="45">
+<navLabel><text>Acknowledgements </text></navLabel>
+<content src="xhtml/49_ackn.xhtml"/>
+</navPoint>
+
+<navPoint id="navpoint-46" playOrder="46">
+<navLabel><text>Endnotes</text></navLabel>
+<content src="xhtml/50_endnotes.xhtml"/>
+</navPoint>
+
+<navPoint id="navpoint-47" playOrder="47">
+<navLabel><text>Index</text></navLabel>
+<content src="xhtml/52_index.xhtml"/>
+</navPoint>
+
+<navPoint id="navpoint-48" playOrder="48">
+<navLabel><text>Backcover</text></navLabel>
+<content src="xhtml/58_backcover.xhtml"/>
+</navPoint>
+
+</navMap>
+</ncx>

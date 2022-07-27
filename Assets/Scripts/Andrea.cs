@@ -265,10 +265,12 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private Image _largeScaleImage;
 
     [SerializeField] private bool _isTutorialMode;
+    [SerializeField] private bool _isFirstTimeMode;
 
     [SerializeField] private int _bigHammerLocCoordinates;
     [SerializeField] private Sprite _bannerInteractable;
     [SerializeField] private Sprite _bannerNotInteractable;
+    [HideInInspector][UdonSynced(UdonSyncMode.None)] public int registry;
 
     private void Start()
     {
@@ -401,6 +403,7 @@ public class Andrea : UdonSharpBehaviour
         _bottomCoreCloneTMP.text = _bottomCoreTMP.text;
         _bigHammerLocCoordinates = -1;
         _isTutorialMode = true;
+        _isFirstTimeMode = true;
 
         _optionsMenuGameObject.SetActive(true);
         _optionsContainerVectorDefault = _optionsContainerGameObject.transform.localPosition;
@@ -1123,6 +1126,19 @@ public class Andrea : UdonSharpBehaviour
 
     private void Update()
     {
+        if (registry == 0)
+        {
+            _candleVRCPickup.pickupable = true;
+        }
+        else if (Networking.IsOwner(this.gameObject) && registry != 0 && !_isLeftGripActive && !_isRightGripActive) // Incase if person holding Andrea leaves, the new owner will set registry back to zero and make it pickupable.
+        {
+            registry = 0;
+            _candleVRCPickup.pickupable = true;
+        }
+        else
+        {
+            _candleVRCPickup.pickupable = false;
+        }
 
         LerpScreenSaver();
 
@@ -1276,19 +1292,39 @@ public class Andrea : UdonSharpBehaviour
 
         // _rightHandGameObject.transform.position = Vector3.Slerp(_previousRightHandPosition + (Networking.LocalPlayer.GetPosition() - _previousPlayerPosition), Networking.LocalPlayer.GetBonePosition(HumanBodyBones.RightHand), Time.deltaTime * 9f);
 
-
-        _rightHandGameObject.transform.position = Vector3.Slerp(_rightHandGameObject.transform.position, Networking.LocalPlayer.GetBonePosition(HumanBodyBones.RightHand), Time.deltaTime * 10f);
-        _rightHandGameObject.transform.rotation = Quaternion.Slerp(_rightHandGameObject.transform.rotation, Networking.LocalPlayer.GetBoneRotation(HumanBodyBones.RightHand), Time.deltaTime * 10f);
-
-        // _previousRightHandPosition = _rightHandGameObject.transform.position;
-        // _previousPlayerPosition = Networking.LocalPlayer.GetPosition(); 
-
-        if (_candleVRCPickup.IsHeld && _isTogglePickedUp == false)
+        if (_candleVRCPickup.IsHeld && registry != 0)
         {
             _candleVRCPickup.Drop();
+        }
+
+        // Test which is better, previous position or current one?
+        _rightHandGameObject.transform.position = Vector3.Slerp(_previousRightHandPosition, Networking.LocalPlayer.GetBonePosition(HumanBodyBones.RightHand), Time.deltaTime * 11f);
+        _rightHandGameObject.transform.rotation = Quaternion.Slerp(_rightHandGameObject.transform.rotation, Networking.LocalPlayer.GetBoneRotation(HumanBodyBones.RightHand), Time.deltaTime * 11f);
+        _previousRightHandPosition = _rightHandGameObject.transform.position;
+        // _previousPlayerPosition = Networking.LocalPlayer.GetPosition(); 
+
+        _leftHandGameObject.transform.position = Vector3.Slerp(_leftHandGameObject.transform.position, Networking.LocalPlayer.GetBonePosition(HumanBodyBones.LeftHand), Time.deltaTime * 11f);
+        _leftHandGameObject.transform.rotation = Quaternion.Slerp(_leftHandGameObject.transform.rotation, Networking.LocalPlayer.GetBoneRotation(HumanBodyBones.LeftHand), Time.deltaTime * 11f);
+
+        if (_candleVRCPickup.IsHeld && _isTogglePickedUp == false && registry == 0)
+        {
+            Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
+            _candleVRCPickup.Drop();
             _candleVRCPickup.pickupable = false;
-            _candleGameObject.transform.SetParent(_rightHandGameObject.transform);
-            _isRightGripActive = true;
+            if (_candleVRCPickup.currentHand == VRC_Pickup.PickupHand.Right)
+            {
+                _candleGameObject.transform.SetParent(_rightHandGameObject.transform);
+                _isRightGripActive = true;
+                registry = 1;
+            }
+            else
+            {
+                _candleGameObject.transform.SetParent(_leftHandGameObject.transform);
+                _isLeftGripActive = true;
+                registry = 2;
+            }
+
+
             if (!_isScreenSaverHidden)
             {
                 ScreenSaverClicked();
@@ -1304,6 +1340,8 @@ public class Andrea : UdonSharpBehaviour
                 _candleVRCPickup.pickupable = true;  // Single Grip Logistics.
                 _candleGameObject.transform.SetParent(null);  // Single Grip Logistics.
                 _isRightGripActive = false;
+                Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
+                registry = 0;
                 if (_isScreenSaverHidden)
                 {
                     // ScreenSaverClicked();
@@ -1312,7 +1350,20 @@ public class Andrea : UdonSharpBehaviour
                 // This is when you remove the screen saver.
             }
         }
-        
+
+        if (_isLeftGripActive && Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryHandTrigger") <= 0.24f) // Toggle grip logistics.
+        {
+            // _isLeftGripActive = false;  // Toggle grip logistics.
+            if (_candleGameObject.transform.parent == _leftHandGameObject.transform)
+            {
+                _candleVRCPickup.pickupable = true;  // Single Grip Logistics.
+                _candleGameObject.transform.SetParent(null);  // Single Grip Logistics.
+                _isLeftGripActive = false;
+                Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
+                registry = 0;
+            }
+        }
+
         // Toggle grip logistics.
         /*
         else if (!_isRightGripActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") > 0.28f)
@@ -1429,7 +1480,7 @@ public class Andrea : UdonSharpBehaviour
         if (_isOptionsContainerHidden && !_isOptionsContainerLerp)
         {
             _isTutorialMode = false;
-            _topCenterTMP.text = "Home";
+            _topCenterTMP.text = $"{Networking.LocalPlayer.displayName}'s Library";
             _topCenterCloneTMP.text = _topCenterTMP.text;
             _topCenterCloneTMP.gameObject.SetActive(false);
             _topCenterTMP.gameObject.SetActive(false);
@@ -2029,6 +2080,7 @@ public class Andrea : UdonSharpBehaviour
 
         _isLoadBookNew = true;
         _isBookStaged = true;
+        _isFirstTimeMode = false;
         // _isShowBar = false;
         _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyLight;
         _backButtonGameObject.SetActive(false);
@@ -2080,12 +2132,14 @@ public class Andrea : UdonSharpBehaviour
                 _bottomCenterTMP.text = "★";
                 _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
                 _bottomRightTMP.text = "100%";
+                _bottomRightCloneTMP.text = _bottomRightTMP.text;
             }
             else
             {
                 _bottomCenterTMP.text = "";
                 _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
                 _bottomRightTMP.text = $"{Convert.ToInt32(Math.Max(1, _checkMath))}%";
+                _bottomRightCloneTMP.text = _bottomRightTMP.text;
             }
         }
         else
@@ -2121,16 +2175,17 @@ public class Andrea : UdonSharpBehaviour
 
     private void TutorialModeText()
     {
+        //➜ 
         if (Networking.LocalPlayer.IsUserInVR())
         {
-            _topCenterTMP.text = "Turn Page ➜ Right Joystick";
+            _topCenterTMP.text = "Right Joystick Up/Down to Turn Page";
             _topCenterCloneTMP.text = _topCenterTMP.text;
             _topCenterCloneTMP.gameObject.SetActive(true);
             _topCenterTMP.gameObject.SetActive(true);
         }
         else
         {
-            _topCenterTMP.text = "Turn Page ➜ Mouse Scroll";
+            _topCenterTMP.text = "Mouse Scroll to Turn Page";
             _topCenterCloneTMP.text = _topCenterTMP.text;
             _topCenterCloneTMP.gameObject.SetActive(true);
             _topCenterTMP.gameObject.SetActive(true);
@@ -2545,13 +2600,13 @@ public class Andrea : UdonSharpBehaviour
         // _mainPercentageInfoTMP.text = DateTime.Now.ToShortTimeString();
 
         // Junk Code: Keep displays to a minimum.
-        _topCenterTMP.text = "Home";
+        _topCenterTMP.text = $"{Networking.LocalPlayer.displayName}'s Library";
         _topCenterCloneTMP.text = _topCenterTMP.text;
-        _bottomLeftTMP.text = "";
+        _bottomLeftTMP.text = "Public Domain";
         _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
         _bottomCenterTMP.text = "";
         _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
-        _bottomRightTMP.text = "";
+        _bottomRightTMP.text = "Version 3";
         _bottomRightCloneTMP.text = _bottomRightTMP.text;
         _locNavigationSlider.gameObject.SetActive(false);
 
@@ -2565,6 +2620,7 @@ public class Andrea : UdonSharpBehaviour
         // Called by clicking on the catalog button.
         PlayAudio(_optionsAudio);
 
+        _isFirstTimeMode = false;
         _isOptionsContainerLerp = true;
         _bigHammerLocCoordinates = -1;
 
@@ -2865,6 +2921,7 @@ public class Andrea : UdonSharpBehaviour
         ScreenSaverClicked();
         ScreenSaverClicked();
         SelectRandomScreenSaverBackground(isStart);
+        _isFirstTimeMode = true;
         // _isScreenSaverHidden = false;
 
     }
@@ -2934,7 +2991,7 @@ public class Andrea : UdonSharpBehaviour
                     _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyLight;
                     _topCenterTMP.gameObject.SetActive(false);
                     _topCenterCloneTMP.gameObject.SetActive(false);
-                    _topCenterTMP.text = $"Home";
+                    _topCenterTMP.text = $"{Networking.LocalPlayer.displayName}'s Library";
                     _topCenterCloneTMP.text = _topCenterTMP.text;
                     if (_isTutorialMode)
                     {
@@ -2946,8 +3003,9 @@ public class Andrea : UdonSharpBehaviour
                     _screenPhysicalGameObject.GetComponent<Renderer>().material = _materialGreyMedium;
                     _topCenterTMP.gameObject.SetActive(true);
                     _topCenterCloneTMP.gameObject.SetActive(true);
-                    _topCenterTMP.text = $"Home";
+                    _topCenterTMP.text = $"{Networking.LocalPlayer.displayName}'s Library";
                     _topCenterCloneTMP.text = _topCenterTMP.text;
+
                 }
             }
             timerOptionsContainer += Time.deltaTime * 0.5f;
@@ -3013,6 +3071,29 @@ public class Andrea : UdonSharpBehaviour
         }
     }
 
+    private void TopCenterText()
+    {
+        if (!_isHomeContainerHidden && _isOptionsContainerHidden)
+        {
+            _topCenterTMP.text = $"{Networking.LocalPlayer.displayName}'s Library";
+
+            if (_isFirstTimeMode)
+            {
+                // _topCenterTMP.text = "Click to Interact";  // Disabled for now.
+            }
+
+            _topCenterCloneTMP.text = _topCenterTMP.text;
+
+
+        }
+        if (!_isOptionsContainerHidden)
+        {
+            _topCenterTMP.text = "Settings";
+            _topCenterCloneTMP.text = _topCenterTMP.text;
+
+        }
+    }
+
     public void ScreenSaverClicked()
     {
         // Prevents showing the screen saver when the home container is disappearing.
@@ -3034,9 +3115,15 @@ public class Andrea : UdonSharpBehaviour
             _topLeftCloneTMP.gameObject.SetActive(false);
             _topRightTMP.gameObject.SetActive(false);
             _topRightCloneTMP.gameObject.SetActive(false);
+            _bottomRightTMP.gameObject.SetActive(false);
+            _bottomRightCloneTMP.gameObject.SetActive(false);
+            _bottomLeftTMP.gameObject.SetActive(false);
+            _bottomLeftCloneTMP.gameObject.SetActive(false);
             _screenSaverHeaderImage.color = _screenPhysicalGameObject.GetComponent<Renderer>().material.color;
 
             PlayAudio(_backAudio);
+            _isFirstTimeMode = false;
+
         }
         else
         {
@@ -3048,18 +3135,12 @@ public class Andrea : UdonSharpBehaviour
             _backButtonGameObject.SetActive(true);
             _topCenterTMP.gameObject.SetActive(true);
             _topCenterCloneTMP.gameObject.SetActive(true);
-            if (!_isHomeContainerHidden && _isOptionsContainerHidden)
-            {
-                _topCenterTMP.text = "Home";
-                _topCenterCloneTMP.text = _topCenterTMP.text;
-
-            }
-            if (!_isOptionsContainerHidden)
-            {
-                _topCenterTMP.text = "Settings";
-                _topCenterCloneTMP.text = _topCenterTMP.text;
-
-            }
+            _bottomRightTMP.gameObject.SetActive(true);
+            _bottomRightCloneTMP.gameObject.SetActive(true);
+            _bottomLeftTMP.gameObject.SetActive(true);
+            _bottomLeftCloneTMP.gameObject.SetActive(true);
+            
+            TopCenterText();
             PlayAudio(_selectBookAudio);
 
             // Keep disabled for now to reduce clutter.
@@ -3090,6 +3171,8 @@ public class Andrea : UdonSharpBehaviour
 
     public void CategoryMinimize0()
     {
+        _isFirstTimeMode = false;
+        TopCenterText();
         _isCategoryLerp0 = true;
         if (_isCategoryMinimized0)
         {
@@ -3132,6 +3215,8 @@ public class Andrea : UdonSharpBehaviour
 
     public void CategoryMinimize1()
     {
+        _isFirstTimeMode = false;
+        TopCenterText();
         _isCategoryLerp1 = true;
         if (_isCategoryMinimized1)
         {
@@ -3174,6 +3259,8 @@ public class Andrea : UdonSharpBehaviour
 
     public void CategoryMinimize2()
     {
+        _isFirstTimeMode = false;
+        TopCenterText();
         _isCategoryLerp2 = true;
         if (_isCategoryMinimized2)
         {
@@ -3216,6 +3303,8 @@ public class Andrea : UdonSharpBehaviour
 
     public void CategoryMinimize3()
     {
+        _isFirstTimeMode = false;
+        TopCenterText();
         _isCategoryLerp3 = true;
         if (_isCategoryMinimized3)
         {
@@ -3264,12 +3353,13 @@ public class Andrea : UdonSharpBehaviour
         if (!_isCategoryMinimized2) CategoryMinimize2();
         if (!_isCategoryMinimized3) CategoryMinimize3();
         CategoryMinimize0();  // Keep first category shown.
+        _isFirstTimeMode = true;
     }
 
     public void TopCenterButtonPointerEnter()
     {
         // Button disabled for now - too many options.
-        if ((_topCenterTMP.text != "Home" && _topCenterTMP.text != "Settings" && _isScreenSaverHidden && _isBookStaged) || (_isBookStaged && _topCenterTMP.text != "Settings" && _isScreenSaverHidden))
+        if ((_topCenterTMP.text != $"{Networking.LocalPlayer.displayName}'s Library" && _topCenterTMP.text != "Settings" && _isScreenSaverHidden && _isBookStaged) || (_isBookStaged && _topCenterTMP.text != "Settings" && _isScreenSaverHidden))
         {
             _topCenterTMP.gameObject.SetActive(true);
             _topCenterCloneTMP.gameObject.SetActive(true);
@@ -3281,7 +3371,7 @@ public class Andrea : UdonSharpBehaviour
     public void TopCenterButtonPointerExit()
     {
         // Button disabled for now - too many options.
-        if (_topCenterTMP.text != "Home" && _topCenterTMP.text != "Settings")
+        if (_topCenterTMP.text != $"{Networking.LocalPlayer.displayName}'s Library" && _topCenterTMP.text != "Settings")
         {
             _topCenterTMP.gameObject.SetActive(false);
             _topCenterCloneTMP.gameObject.SetActive(false);
