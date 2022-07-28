@@ -270,6 +270,17 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private int _bigHammerLocCoordinates;
     [SerializeField] private Sprite _bannerInteractable;
     [SerializeField] private Sprite _bannerNotInteractable;
+    [SerializeField] private float _brightnessSliderValue;
+    [SerializeField] private Slider _brightnessSlider;
+    [SerializeField] private GameObject _AndreaScreenModel;
+    [SerializeField] private bool _isTextDarkMode;
+    [SerializeField] private Image _sliderBackground;
+    [SerializeField] private Image _sliderFill;
+    [SerializeField] private Image _sliderButton;
+    [SerializeField] private int _calibrateMemoryDeepFreeze;
+    // [SerializeField] private VRC_UiShape _screemVRCUIShape;
+
+
     [HideInInspector][UdonSynced(UdonSyncMode.None)] public int registry;
 
     private void Start()
@@ -470,6 +481,15 @@ public class Andrea : UdonSharpBehaviour
                 _bookBannerGameObjectList[i].SetActive(false);
             }
         }
+        _calibrateMemoryDeepFreeze = -1;
+
+        Color tempColor;
+        tempColor.r = .898f;
+        tempColor.g = .890f;
+        tempColor.b = .878f;
+        tempColor.a = 1.0f;
+
+        _materialGreyLight.color = tempColor;
 
         ScreenSaverStart(true);
         MinimizeCategories();
@@ -1253,7 +1273,7 @@ public class Andrea : UdonSharpBehaviour
         // Removed for now, distracts from reading.
         if (_mainPageLength != 1)
         {
-            _bottomLeftTMP.text = $"<cspace=-0.02em>Load {(_mainPageLength == 1 ? 99 : _mainPageIndex * 100 / (_mainPageLength - 1))}%";
+            _bottomLeftTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}<cspace=-0.02em>Load {(_mainPageLength == 1 ? 99 : _mainPageIndex * 100 / (_mainPageLength - 1))}%";
             // _bottomLeftTMP.text = $"Loading... {(_mainPageLength == 1 ? 100 : _mainPageIndex * 100 / (_mainPageLength - 1))}%";
             _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
         }
@@ -1402,6 +1422,7 @@ public class Andrea : UdonSharpBehaviour
                         {
                             DisableTutorialMode();
                         }
+                        PlayAudio(_softSwipeAudio);
                         DefinePage(_mainPageIndex, false);
                     }
                     // DefinePage(_mainPageIndex, true);
@@ -1428,6 +1449,7 @@ public class Andrea : UdonSharpBehaviour
                         {
                             DisableTutorialMode();
                         }
+                        PlayAudio(_softSwipeAudio);
                         DefinePage(_mainPageIndex, true);
                     }
                     // DefinePage(_mainPageIndex, true);
@@ -1517,6 +1539,7 @@ public class Andrea : UdonSharpBehaviour
                     {
                         DisableTutorialMode();
                     }
+                    PlayAudio(_softSwipeAudio);
                     DefinePage(_mainPageIndex, true);
                 }
             }
@@ -1533,6 +1556,7 @@ public class Andrea : UdonSharpBehaviour
                     {
                         DisableTutorialMode();
                     }
+                    PlayAudio(_softSwipeAudio);
                     DefinePage(_mainPageIndex, false);
                 }
             }
@@ -1703,28 +1727,8 @@ public class Andrea : UdonSharpBehaviour
         SuperFontScaleUpdate();
     }
 
-    private void DefinePage(int pageIndexUnclamped, bool isIncrement)
+    private int DefineInsertIndex()
     {
-        // Junk Code:
-        // _blankScreenGameObject.SetActive(true);
-        // _blankTahomaTMP.text = _mainTMP.text;
-
-        // Detect if page has exceeded block bounds.
-        _mainPageIndex = Mathf.Clamp(_mainPageIndex, 0, _mainPageLength - 1);
-        if (_overflowPageIndex == -1)
-        {
-            // Hidden for now - too many UI movements on main screen. 
-            _handleIconGameObject.transform.localEulerAngles = new Vector3(0f, 0f, isIncrement ? -90f : 90f);
-            _handleIconGameObject.transform.localPosition = new Vector3(isIncrement ? 0.75f : -0.75f, 0f, 0f);
-        }
-        if (pageIndexUnclamped != _mainPageIndex)
-        {
-            ChangeBlock(pageIndexUnclamped > _mainPageIndex);
-            return;
-        }
-
-        // Determine if a new-line needs to be added as starting text.
-        int _insertIndex = 1;
         if (_mainPageIndex == 0)
         {
             _mainTMP.text = "\n";
@@ -1756,11 +1760,36 @@ public class Andrea : UdonSharpBehaviour
             {
                 // This occurs if no new line exists at the top of this page or the preceding text page.
                 _mainTMP.text = "";
-                _insertIndex = 0;
+                return 0;
             }
         }
+        return 1;
+    }
 
-        PlayAudio(_softSwipeAudio);
+    private void DefinePage(int pageIndexUnclamped, bool isIncrement)
+    {
+        // Junk Code:
+        // _blankScreenGameObject.SetActive(true);
+        // _blankTahomaTMP.text = _mainTMP.text;
+
+        // Detect if page has exceeded block bounds.
+        _mainPageIndex = Mathf.Clamp(_mainPageIndex, 0, _mainPageLength - 1);
+        if (_overflowPageIndex == -1)
+        {
+            // Hidden for now - too many UI movements on main screen. 
+            _handleIconGameObject.transform.localEulerAngles = new Vector3(0f, 0f, isIncrement ? -90f : 90f);
+            _handleIconGameObject.transform.localPosition = new Vector3(isIncrement ? 0.75f : -0.75f, 0f, 0f);
+        }
+        if (pageIndexUnclamped != _mainPageIndex)
+        {
+            ChangeBlock(pageIndexUnclamped > _mainPageIndex);
+            return;
+        }
+
+        // Determine if a new-line needs to be added as starting text.
+        int _insertIndex = DefineInsertIndex();
+
+        // PlayAudio(_softSwipeAudio);
 
         // Populate the text.
         _mainTMP.text += _mainText.text.Substring(_mainPageIndex == 0 ? 0 : _lastCharSliceList[_mainPageIndex] + 1, _lastCharSliceList[_mainPageIndex + 1] - _lastCharSliceList[_mainPageIndex]);
@@ -1777,8 +1806,14 @@ public class Andrea : UdonSharpBehaviour
             _mainTMP.text = _mainTMP.text.Insert(_insertIndex, _richTextOverflowList[_mainPageIndex - 1] == null ? "" : _richTextOverflowList[_mainPageIndex - 1]);
         }
         _mainTMP.text = _mainTMP.text.Insert(_insertIndex, $"<size={_mainFontSize}>");
+        if (_isTextDarkMode)
+        {
+            _mainTMP.text = _mainTMP.text.Insert(_insertIndex, $"<color=#ffffff75>");
+        }
+
         _mainTMP.text = _mainTMP.text.Substring(_insertIndex);  // Removes \n.
         _mainTMP.text = _mainTMP.text.Replace("##", $"<align=\"center\"><size=125><sprite name=\"Image_4\"></size><align=\"justified\">\n");  // Cutoff Picture Bottom.
+
 
         // Clone copies the main text.
         // _mainCloneTMP.text = _mainTMP.text;
@@ -1891,12 +1926,12 @@ public class Andrea : UdonSharpBehaviour
 
         // Junk Code (replaces RefreshBottomGUI() function):
         int _locCurrent = Convert.ToInt32(Math.Max(1, Math.Floor((_mainLocationHeight + _lastCharSliceList[_mainPageIndex]) / 100f)));
-        string _locStringRaw = $"Loc {_locCurrent}";
+        // string _locStringRaw = $"Loc {_locCurrent}";
 
         SetAdjustedLocationHeightNoCollision(_locCurrent);
 
 
-        _bottomLeftTMP.text = $"Loc {_adjustedLocationHeight}";
+        _bottomLeftTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}Loc {_adjustedLocationHeight}";
         _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
 
         if (_adjustedMaxHeight != 0 && !_isLocNavClicked)  
@@ -1935,15 +1970,15 @@ public class Andrea : UdonSharpBehaviour
 
         if (_mainBlockIndex == _mainTextList.Length - 1 && _mainPageIndex == _mainPageLength - 1)
         {
-            _bottomCenterTMP.text = "★";
+            _bottomCenterTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}★";
             _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
-            _bottomRightTMP.text = "100%";
+            _bottomRightTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}100%";
         }
         else
         {
             _bottomCenterTMP.text = "";
             _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
-            _bottomRightTMP.text = $"{Convert.ToInt32(Math.Max(1, _checkMath))}%";
+            _bottomRightTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}{Convert.ToInt32(Math.Max(1, _checkMath))}%";
         }
 
         _bottomRightCloneTMP.text = _bottomRightTMP.text;
@@ -2064,6 +2099,23 @@ public class Andrea : UdonSharpBehaviour
     {
         if (_overflowPageIndex >= 0) return;
 
+        if (!_isOptionsContainerHidden || (_isOptionsContainerHidden && _isOptionsContainerLerp))
+        {
+            if (!_isOptionsContainerHidden)
+            {
+                OptionsButton();
+            }
+            _calibrateMemoryDeepFreeze = index;
+            return;
+        }
+
+        _calibrateMemoryDeepFreeze = -1;
+        if (!Networking.LocalPlayer.IsUserInVR())
+        {
+            // _screenGameObject.GetComponent<GraphicRaycaster>().enabled = false;
+            // _screemVRCUIShape.enabled = false;
+        }    
+
         // Called by memory script for processing. Not called by Andrea script.
         PlayAudio(_selectBookAudio);
 
@@ -2129,16 +2181,16 @@ public class Andrea : UdonSharpBehaviour
 
             if (_mainBlockIndex == _mainTextList.Length - 1 && _mainPageIndex == _mainPageLength - 1)
             {
-                _bottomCenterTMP.text = "★";
+                _bottomCenterTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}★";
                 _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
-                _bottomRightTMP.text = "100%";
+                _bottomRightTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}100%";
                 _bottomRightCloneTMP.text = _bottomRightTMP.text;
             }
             else
             {
                 _bottomCenterTMP.text = "";
                 _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
-                _bottomRightTMP.text = $"{Convert.ToInt32(Math.Max(1, _checkMath))}%";
+                _bottomRightTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}{Convert.ToInt32(Math.Max(1, _checkMath))}%";
                 _bottomRightCloneTMP.text = _bottomRightTMP.text;
             }
         }
@@ -2150,13 +2202,14 @@ public class Andrea : UdonSharpBehaviour
 
             _bottomCenterTMP.text = "";
             _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
-            _bottomRightTMP.text = $"1%";
+            _bottomRightTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}1%";
             _bottomRightCloneTMP.text = _bottomRightTMP.text;
         }
 
         // Need to update the navslider block title and the percentages on the bottom right text.
         BlockNameSet(_mainBlockIndex);
-
+        // Update the brightness.
+        BrightnessSliderDrag();
 
         if (_isShowExtraOptions)
         {
@@ -2178,14 +2231,14 @@ public class Andrea : UdonSharpBehaviour
         //➜ 
         if (Networking.LocalPlayer.IsUserInVR())
         {
-            _topCenterTMP.text = "Right Joystick Up/Down to Turn Page";
+            _topCenterTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}Right Joystick Up/Down to Turn Page";
             _topCenterCloneTMP.text = _topCenterTMP.text;
             _topCenterCloneTMP.gameObject.SetActive(true);
             _topCenterTMP.gameObject.SetActive(true);
         }
         else
         {
-            _topCenterTMP.text = "Mouse Scroll to Turn Page";
+            _topCenterTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}Mouse Scroll to Turn Page";
             _topCenterCloneTMP.text = _topCenterTMP.text;
             _topCenterCloneTMP.gameObject.SetActive(true);
             _topCenterTMP.gameObject.SetActive(true);
@@ -2395,13 +2448,13 @@ public class Andrea : UdonSharpBehaviour
         string _blockName = _mainTextList[blockIndex].name;
         if (_blockName.IndexOf('-') >= 0)
         {
-            _bottomCoreTMP.text = $"{_blockName.Substring(_blockName.IndexOf('-') + 2)}";
-            _bottomCoreCloneTMP.text = $"{_blockName.Substring(_blockName.IndexOf('-') + 2)}";
+            _bottomCoreTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}{_blockName.Substring(_blockName.IndexOf('-') + 2)}";
+            _bottomCoreCloneTMP.text = _bottomCoreTMP.text;
         }
         else
         {
-            _bottomCoreTMP.text = $"{_blockName}";
-            _bottomCoreCloneTMP.text = $"{_blockName}";
+            _bottomCoreTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}{_blockName}";
+            _bottomCoreCloneTMP.text = _bottomCoreTMP.text;
         }
     }
 
@@ -2415,19 +2468,19 @@ public class Andrea : UdonSharpBehaviour
         _isLocNavDragged = true;
 
         _adjustedLocationHeight = Convert.ToInt32(Math.Ceiling(_adjustedMaxHeight * _locNavigationSlider.value));
-        _bottomLeftTMP.text = $"Loc { Math.Max(1, _adjustedLocationHeight) }";
+        _bottomLeftTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}Loc { Math.Max(1, _adjustedLocationHeight) }";
         _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
         double _checkMath = Math.Min(Math.Ceiling((double)_adjustedLocationHeight * 99 / (double)_adjustedMaxHeight), 99);
-        _bottomRightTMP.text = $"{Convert.ToInt32(Math.Max(1, _checkMath))}%";
+        _bottomRightTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}{Convert.ToInt32(Math.Max(1, _checkMath))}%";
         _bottomRightCloneTMP.text = _bottomRightTMP.text;
         _bottomCenterTMP.text = "";
         _bottomCenterCloneTMP.text = "";
 
         if (_locNavigationSlider.value == 1)
         {
-            _bottomCenterTMP.text = "★";
+            _bottomCenterTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}★";
             _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
-            _bottomRightTMP.text = "100%";
+            _bottomRightTMP.text = $"{(_isTextDarkMode ? "<color=#ffffff75>" : "")}100%";
             _bottomRightCloneTMP.text = _bottomRightTMP.text;
         }
 
@@ -2498,7 +2551,7 @@ public class Andrea : UdonSharpBehaviour
     public void BackButton()
     {
         // Called by clicking on the back button.
-
+        _calibrateMemoryDeepFreeze = -1;
         if (!_isOptionsContainerHidden)
         {
             // Audio already plays from this button.
@@ -2555,6 +2608,13 @@ public class Andrea : UdonSharpBehaviour
             _topCenterCloneTMP.gameObject.SetActive(true);
             _topCenterTMP.gameObject.SetActive(true);
 
+            _bottomLeftTMP.gameObject.SetActive(true);
+            _bottomLeftCloneTMP.gameObject.SetActive(true);
+            _bottomRightTMP.gameObject.SetActive(true);
+            _bottomRightCloneTMP.gameObject.SetActive(true);
+            _bottomCenterTMP.gameObject.SetActive(true);
+            _bottomCenterCloneTMP.gameObject.SetActive(true);
+
             // Keep disabled for now to reduce clutter.
             // _topLeftTMP.gameObject.SetActive(true);
             // _topLeftCloneTMP.gameObject.SetActive(true);
@@ -2572,6 +2632,12 @@ public class Andrea : UdonSharpBehaviour
             // Strange one-time-bug here.
             double _checkMath = Math.Min(Math.Ceiling((double)_adjustedLocationHeight * 99 / (double)_adjustedMaxHeight), 99);
             _bannerText.text = $"<line-height=52>{Convert.ToInt32(Math.Max(1, _checkMath))}\n%";
+
+            if (!Networking.LocalPlayer.IsUserInVR())
+            {
+                // _screenGameObject.GetComponent<GraphicRaycaster>().enabled = true;
+                // _screemVRCUIShape.enabled = true;
+            }
 
             if (_mainBlockIndex == _mainTextList.Length - 1 && _mainPageIndex == _mainPageLength - 1)
             {
@@ -2612,6 +2678,13 @@ public class Andrea : UdonSharpBehaviour
 
     }
 
+    public void OptionsButtonClicked()
+    {
+        if (_calibrateMemoryDeepFreeze != -1) return;
+
+        OptionsButton();
+    }
+
     public void OptionsButton()
     {
         // Do not display options with screen saver shown.
@@ -2640,6 +2713,18 @@ public class Andrea : UdonSharpBehaviour
                 // _topCenterTMP.text = $"{_mainBlock.text.Substring(0, _mainBlock.text.IndexOf('\n'))}";
                 _topCenterCloneTMP.text = _topCenterTMP.text;
             }
+            if (_isBookStaged)
+            {
+                _bottomLeftTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                _bottomLeftCloneTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                _bottomRightTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                _bottomRightCloneTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                _bottomCenterTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                _bottomCenterCloneTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                // _bottomCoreTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                // _bottomCoreCloneTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                _locNavigationSlider.gameObject.SetActive(_isOptionsContainerHidden);
+            }
         }
         else
         {
@@ -2647,6 +2732,7 @@ public class Andrea : UdonSharpBehaviour
             timerOptionsContainer = 0.001f;
             _optionsContainerVectorStart = _optionsContainerGameObject.transform.localPosition;
             _optionsContainerVectorTarget = _optionsContainerHidden;
+            _calibrateMemoryDeepFreeze = -1;
         }
     }
 
@@ -2795,7 +2881,7 @@ public class Andrea : UdonSharpBehaviour
         tempColor.a = .66f;
         _largeScaleImage.color = tempColor;
 
-        ChangeTabletSize(0.15f);
+        ChangeTabletSize(0.125f);
     }
 
     public void MediumScale()
@@ -2827,12 +2913,82 @@ public class Andrea : UdonSharpBehaviour
         tempColor.a = .33f;
         _largeScaleImage.color = tempColor;
 
-        ChangeTabletSize(0.25f);
+        ChangeTabletSize(0.275f);
+    }
+
+    public void BrightnessSliderClicked()
+    {
+        BrightnessSliderDrag();
     }
 
     public void BrightnessSliderDrag()
     {
+        // if (!_isBookStaged || _adjustedMaxHeight == 0) return;
 
+        _brightnessSliderValue = _brightnessSlider.value + 0.1f ;
+
+        Color tempColor;
+        // tempColor = _readingScreenGameObject.GetComponent<Image>().color;
+        tempColor.r = .898f * _brightnessSliderValue;
+        tempColor.g = .890f * _brightnessSliderValue;
+        tempColor.b = .878f * _brightnessSliderValue;
+        tempColor.a = 1.0f;
+        _readingScreenGameObject.GetComponent<Image>().color = tempColor;
+
+        
+
+        Color tempColor1;
+        tempColor1.r = tempColor.r * .985f;
+        tempColor1.g = tempColor.g * .985f;
+        tempColor1.b = tempColor.b * .985f;
+        tempColor1.a = 1.0f;
+        // _sliderBackground.color = tempColor1;
+
+        Color tempColor2;
+        tempColor2.r = tempColor.r * 1.05f;
+        tempColor2.g = tempColor.g * 1.05f;
+        tempColor2.b = tempColor.b * 1.05f;
+        tempColor2.a = 1.0f;
+        _sliderBackground.color = tempColor2;
+        _sliderFill.color = tempColor2;
+        _sliderButton.color = tempColor2;
+
+
+        tempColor.a = 0.004f;
+        _optionsMenuGameObject.GetComponent<Image>().color = tempColor;
+
+        float _test = (6 * (1 - _brightnessSlider.value)) / 255f;
+        tempColor.r = tempColor.r + _test;
+        tempColor.g = tempColor.g + _test;
+        tempColor.b = tempColor.b + _test;
+        tempColor.a = 1.0f;
+        _materialGreyLight.color = tempColor;
+
+        // if (!_isBookStaged) return;
+
+        if (_isTutorialMode && _topCenterTMP.text != "Settings" && _isBookStaged)
+        {
+            TutorialModeText();
+        }
+
+        if (_brightnessSliderValue < 0.35f)
+        {
+            _isTextDarkMode = true;
+            if (_mainTMP != null && !_mainTMP.text.Contains($"<color=#ffffff75>") && _isBookStaged && _overflowPageIndex == -1)
+            {
+                DefinePage(_mainPageIndex, false);
+            }
+        }
+        else
+        {
+            _isTextDarkMode = false;
+            if (_mainTMP != null && _mainTMP.text.Contains($"<color=#ffffff75>") && _isBookStaged && _overflowPageIndex == -1)
+            {
+                DefinePage(_mainPageIndex, false);
+            }
+        }
+        // _AndreaScreenModel.GetComponent<MeshRenderer>().material.color = tempColor;
+        // _readingScreenGameObject
     }
 
     public void EnabledPickup()
@@ -2997,6 +3153,16 @@ public class Andrea : UdonSharpBehaviour
                     {
                         TutorialModeText();
                     }
+                    _bottomLeftTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                    _bottomLeftCloneTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                    _bottomRightTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                    _bottomRightCloneTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                    _bottomCenterTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                    _bottomCenterCloneTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                    // _bottomCoreTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                    // _bottomCoreCloneTMP.gameObject.SetActive(_isOptionsContainerHidden);
+                    _locNavigationSlider.gameObject.SetActive(_isOptionsContainerHidden);
+
                 }
                 else if (_isOptionsContainerHidden && !_isBookStaged && _isScreenSaverHidden)
                 {
@@ -3006,7 +3172,13 @@ public class Andrea : UdonSharpBehaviour
                     _topCenterTMP.text = $"{Networking.LocalPlayer.displayName}'s Library";
                     _topCenterCloneTMP.text = _topCenterTMP.text;
 
+                    if (_calibrateMemoryDeepFreeze != -1)
+                    {
+                        CalibrateMemory(_calibrateMemoryDeepFreeze);
+                    }
                 }
+
+                
             }
             timerOptionsContainer += Time.deltaTime * 0.5f;
         }
@@ -3119,6 +3291,8 @@ public class Andrea : UdonSharpBehaviour
             _bottomRightCloneTMP.gameObject.SetActive(false);
             _bottomLeftTMP.gameObject.SetActive(false);
             _bottomLeftCloneTMP.gameObject.SetActive(false);
+            _bottomCenterTMP.gameObject.SetActive(false);
+            _bottomCenterCloneTMP.gameObject.SetActive(false);
             _screenSaverHeaderImage.color = _screenPhysicalGameObject.GetComponent<Renderer>().material.color;
 
             PlayAudio(_backAudio);
@@ -3139,7 +3313,9 @@ public class Andrea : UdonSharpBehaviour
             _bottomRightCloneTMP.gameObject.SetActive(true);
             _bottomLeftTMP.gameObject.SetActive(true);
             _bottomLeftCloneTMP.gameObject.SetActive(true);
-            
+            _bottomCenterTMP.gameObject.SetActive(true);
+            _bottomCenterCloneTMP.gameObject.SetActive(true);
+
             TopCenterText();
             PlayAudio(_selectBookAudio);
 
@@ -3384,7 +3560,7 @@ public class Andrea : UdonSharpBehaviour
     {
         if (!_isOptionsContainerHidden)
         {
-            OptionsButton();
+            OptionsButtonClicked();
         }
     }
        

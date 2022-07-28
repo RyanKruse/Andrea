@@ -35,7 +35,7 @@ Oustanding Tasks:
 
 [Restart] Need to add Gothic Fiction and restructure book categories.
 
-[VR] Was it righthand current position, or right hand previous position lerp?
+[VR] Was it righthand current position, or right hand previous position lerp [Check Jitter]?
 
 [VR] Left hand logistics support.
 
@@ -43,17 +43,9 @@ Oustanding Tasks:
 
 [VR] Reduced pickup distance.
 
-Brightness Slider with dark mode.
+Setup books and censor copyrighted books.
 
-Could also be that having the tablet far away, large, with smaller text be advantagous.
-
-
-Networking using Truce VR logistics? Other people literally cannot use this thing in worlds more than one player since it is not setup for it. And their curiosity guides them to it. Make it realistic, local networking added. 
-
-
-
-
-
+Add developers tab for testing.
 
 Virtual Reality.
 + Double check cube lerp floatiness.
@@ -62,15 +54,10 @@ Virtual Reality.
 + Fast page scroll.
 + Screen saver logistics.
 + Buzz haptic feedback.
-+ Scale Bug (***).
 + Scroll books don't work (players keep pressing image).
 + Tablet keeps teleporting back to player's hand when others interact?
 + Screen saver showcases the loc and percentage?
 + Keep screen saver hidden even when releasing book? People don't hold when reading?
-
-Desktop.
-+ Hide mouse cursor.
-+ Desktop Z Grid-Snap Rotation.
 
 Andrea.
 + Super easy tutorial in multiple language (with most of interface simplified out).
@@ -84,30 +71,16 @@ Andrea.
 Before Publish.
 + Multiple tablets.
 + Table asthetics.
++ Networking bugs.
 
 Hell Code #4:
 Options Menu
 	- Smooth lerp on tablet scale.
-	- Brightness (Light had 219/217/214 Background, 0/0/0 Font | Dark had 24/26/27 Background, 177/175/172 Font).
-	- Scale still inconsistent with desktop and VR users.
-	- Toggle Pickup Button.
 
 
-	
-Andrea 4 - Hell Code #6:
-Networking & Multiple Player Interaction & Pickup & Player Rejoin Local Transform
-Networking & Network Lock. 
+Text Debug Errprs:
 
-
-
-Misc Code:
-Respawn tablet button.
 Style sheet on one of the quotes has texts really mushed together. Redo format entire style sheet?
-Head position slightly jitters tablet - need to subtract that from calculations.
-
-VR polish.
-Slight pixil fighting on edges.
-
 Something broken with images around Loc 785, Loc 1325, 2973 re-add paragraphs? in 7 Habits.
 Loc 1960, Loc 2364, 2729, 3099, 3111, 4419, 5107, 5698 is strange on end clipping (wide text).
 Loc 6276 needs to be broken up (huge word combo)
@@ -174,8 +147,10 @@ Andrea - Feature Request #16:
 VR Toggle Pickup Logistics.
 
 Andrea - Feature Request #17:
+Full screen button. 
 
 Andrea - Feature Request #18:
+Respawn tablet logistics.
 
 Andrea - Feature Request #19:
 
