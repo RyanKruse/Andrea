@@ -31,9 +31,14 @@ Andrea
 
 Oustanding Tasks:
 
-[Multiplayer VR] Bug - Multiple Players Interacting Udon Crashed.
+# Clicking button on VR doesn't work (header).
+Hands pickup is totally broken.
+Networking on pages, settings, and book is a must.
+# Bottom core flickering.
 
-[Restart] Need to add Gothic Fiction and restructure book categories.
+
+
+[Multiplayer VR] Bug - Multiple Players Interacting Udon Crashed.
 
 [VR] Was it righthand current position, or right hand previous position lerp [Check Jitter]?
 
@@ -43,10 +48,6 @@ Oustanding Tasks:
 
 [VR] Reduced pickup distance.
 
-Setup books and censor copyrighted books.
-
-Add developers tab for testing.
-
 Virtual Reality.
 + Double check cube lerp floatiness.
 + Left hand support.
@@ -54,10 +55,6 @@ Virtual Reality.
 + Fast page scroll.
 + Screen saver logistics.
 + Buzz haptic feedback.
-+ Scroll books don't work (players keep pressing image).
-+ Tablet keeps teleporting back to player's hand when others interact?
-+ Screen saver showcases the loc and percentage?
-+ Keep screen saver hidden even when releasing book? People don't hold when reading?
 
 Andrea.
 + Super easy tutorial in multiple language (with most of interface simplified out).
@@ -153,6 +150,7 @@ Andrea - Feature Request #18:
 Respawn tablet logistics.
 
 Andrea - Feature Request #19:
+Scroll books on image button.
 
 Andrea - Feature Request #20:
 

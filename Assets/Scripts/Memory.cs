@@ -84,6 +84,22 @@ public class Memory : UdonSharpBehaviour
     [SerializeField] private TextAsset[] _30_Block;
     [SerializeField] private TextAsset[] _31_Text;
     [SerializeField] private TextAsset[] _31_Block;
+    [SerializeField] private TextAsset[] _32_Text;
+    [SerializeField] private TextAsset[] _32_Block;
+    [SerializeField] private TextAsset[] _33_Text;
+    [SerializeField] private TextAsset[] _33_Block;
+    [SerializeField] private TextAsset[] _34_Text;
+    [SerializeField] private TextAsset[] _34_Block;
+    [SerializeField] private TextAsset[] _35_Text;
+    [SerializeField] private TextAsset[] _35_Block;
+    [SerializeField] private TextAsset[] _36_Text;
+    [SerializeField] private TextAsset[] _36_Block;
+    [SerializeField] private TextAsset[] _37_Text;
+    [SerializeField] private TextAsset[] _37_Block;
+    [SerializeField] private TextAsset[] _38_Text;
+    [SerializeField] private TextAsset[] _38_Block;
+    [SerializeField] private TextAsset[] _39_Text;
+    [SerializeField] private TextAsset[] _39_Block;
     [SerializeField] private TextAsset[][] _TextAssetList;
     [SerializeField] private Button[] _BookButtonList;
 
@@ -122,6 +138,14 @@ public class Memory : UdonSharpBehaviour
             _29_Text, _29_Block,
             _30_Text, _30_Block,
             _31_Text, _31_Block,
+            _32_Text, _32_Block,
+            _33_Text, _33_Block,
+            _34_Text, _34_Block,
+            _35_Text, _35_Block,
+            _36_Text, _36_Block,
+            _37_Text, _37_Block,
+            _38_Text, _38_Block,
+            _39_Text, _39_Block,
         };
     }
 
@@ -162,4 +186,12 @@ public class Memory : UdonSharpBehaviour
     public void _29_Function() { if (_BookButtonList[29].IsInteractable()) Andrea.CalibrateMemory(29); }
     public void _30_Function() { if (_BookButtonList[30].IsInteractable()) Andrea.CalibrateMemory(30); }
     public void _31_Function() { if (_BookButtonList[31].IsInteractable()) Andrea.CalibrateMemory(31); }
+    public void _32_Function() { if (_BookButtonList[32].IsInteractable()) Andrea.CalibrateMemory(32); }
+    public void _33_Function() { if (_BookButtonList[33].IsInteractable()) Andrea.CalibrateMemory(33); }
+    public void _34_Function() { if (_BookButtonList[34].IsInteractable()) Andrea.CalibrateMemory(34); }
+    public void _35_Function() { if (_BookButtonList[35].IsInteractable()) Andrea.CalibrateMemory(35); }
+    public void _36_Function() { if (_BookButtonList[36].IsInteractable()) Andrea.CalibrateMemory(36); }
+    public void _37_Function() { if (_BookButtonList[37].IsInteractable()) Andrea.CalibrateMemory(37); }
+    public void _38_Function() { if (_BookButtonList[38].IsInteractable()) Andrea.CalibrateMemory(38); }
+    public void _39_Function() { if (_BookButtonList[39].IsInteractable()) Andrea.CalibrateMemory(39); }
 }

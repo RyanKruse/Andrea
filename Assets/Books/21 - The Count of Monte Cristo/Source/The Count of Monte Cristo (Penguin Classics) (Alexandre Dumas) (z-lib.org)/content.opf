@@ -1,0 +1,302 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="uuid_id">
+  <metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:publisher>Penguin Books</dc:publisher>
+    <meta name="calibre:series_index" content="1"/>
+    <meta name="calibre:rating" content="8.00"/>
+    <dc:description>&lt;h3&gt;Product Description&lt;/h3&gt;&lt;p&gt;This enduringly popular tale of love and revenge in the post-Napoleonic era follows Edmond Dantes as he prepares to captain his own ship and marry his beloved Mercedes. But on his wedding day, he is betrayed by spiteful enemies and arrested on trumped-up charges. Condemned to lifelong imprisonment, he befriends Faria, a priest and fellow inmate with an escape plan. When Faria dies, Edmond escapes alone. Free at last, and incredibly wealthy, Edmond enters society posing as the Count of Monte Cristo to reclaim his lost love and enact a terrible vengeance on his accusers. &lt;/p&gt;&lt;h3&gt;Language Notes&lt;/h3&gt;&lt;p&gt;Text: English (translation)&lt;br /&gt;Original Language: French &lt;/p&gt;</dc:description>
+    <dc:language>en</dc:language>
+    <dc:creator opf:file-as="Dumas, Alexandre" opf:role="aut">Alexandre Dumas</dc:creator>
+    <meta name="calibre:timestamp" content="2010-12-19T03:16:54.510000+00:00"/>
+    <dc:title>The Count of Monte Cristo (Unabridged Penguin)</dc:title>
+    <meta name="cover" content="cover"/>
+    <dc:date>2001-12-31T10:00:00+00:00</dc:date>
+    <dc:contributor opf:role="bkp">calibre (0.7.34) [http://calibre-ebook.com]</dc:contributor>
+    <dc:identifier opf:scheme="ISBN">9780142000731</dc:identifier>
+    <dc:identifier id="uuid_id" opf:scheme="uuid">92166f34-0d53-4bd0-b453-d29a68a1824f</dc:identifier>
+    <dc:subject>culture</dc:subject>
+    <dc:subject>novels</dc:subject>
+    <dc:subject>classic</dc:subject>
+  </metadata>
+  <manifest>
+    <item href="The_Count_of_Monte_Cristo_split_000.html" id="id1130" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_001.html" id="id1129" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_002.html" id="id1128" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_003.html" id="id1127" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_004.html" id="id1126" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_005.html" id="id1125" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_006.html" id="id1124" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_007.html" id="id1123" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_008.html" id="id1122" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_009.html" id="id1121" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_010.html" id="id1120" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_011.html" id="id1119" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_012.html" id="id1118" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_013.html" id="id1117" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_014.html" id="id1116" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_015.html" id="id1115" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_016.html" id="id1114" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_017.html" id="id1113" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_018.html" id="id1112" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_019.html" id="id1111" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_020.html" id="id1110" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_021.html" id="id1109" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_022.html" id="id1108" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_023.html" id="id1107" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_024.html" id="id1106" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_025.html" id="id1105" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_026.html" id="id1104" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_027.html" id="id1103" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_028.html" id="id1102" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_029.html" id="id1101" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_030.html" id="id1100" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_031.html" id="id199" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_032.html" id="id198" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_033.html" id="id197" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_034.html" id="id196" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_035.html" id="id195" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_036.html" id="id194" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_037.html" id="id193" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_038.html" id="id192" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_039.html" id="id191" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_040.html" id="id190" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_041.html" id="id189" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_042.html" id="id188" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_043.html" id="id187" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_044.html" id="id186" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_045.html" id="id185" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_046.html" id="id184" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_047.html" id="id183" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_048.html" id="id182" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_049.html" id="id181" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_050.html" id="id180" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_051.html" id="id179" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_052.html" id="id178" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_053.html" id="id177" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_054.html" id="id176" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_055.html" id="id175" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_056.html" id="id174" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_057.html" id="id173" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_058.html" id="id172" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_059.html" id="id171" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_060.html" id="id170" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_061.html" id="id169" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_062.html" id="id168" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_063.html" id="id167" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_064.html" id="id166" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_065.html" id="id165" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_066.html" id="id164" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_067.html" id="id163" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_068.html" id="id162" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_069.html" id="id161" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_070.html" id="id160" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_071.html" id="id159" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_072.html" id="id158" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_073.html" id="id157" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_074.html" id="id156" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_075.html" id="id155" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_076.html" id="id154" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_077.html" id="id153" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_078.html" id="id152" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_079.html" id="id151" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_080.html" id="id150" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_081.html" id="id149" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_082.html" id="id148" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_083.html" id="id147" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_084.html" id="id146" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_085.html" id="id145" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_086.html" id="id144" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_087.html" id="id143" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_088.html" id="id142" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_089.html" id="id141" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_090.html" id="id140" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_091.html" id="id139" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_092.html" id="id138" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_093.html" id="id137" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_094.html" id="id136" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_095.html" id="id135" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_096.html" id="id134" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_097.html" id="id133" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_098.html" id="id132" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_099.html" id="id131" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_100.html" id="id130" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_101.html" id="id129" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_102.html" id="id128" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_103.html" id="id127" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_104.html" id="id126" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_105.html" id="id125" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_106.html" id="id124" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_107.html" id="id123" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_108.html" id="id122" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_109.html" id="id121" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_110.html" id="id120" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_111.html" id="id119" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_112.html" id="id118" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_113.html" id="id117" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_114.html" id="id116" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_115.html" id="id115" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_116.html" id="id114" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_117.html" id="id113" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_118.html" id="id112" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_119.html" id="id111" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_120.html" id="id110" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_121.html" id="id19" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_122.html" id="id18" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_123.html" id="id17" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_124.html" id="id16" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_125.html" id="id15" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_126.html" id="id14" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_127.html" id="id13" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_128.html" id="id12" media-type="application/xhtml+xml"/>
+    <item href="The_Count_of_Monte_Cristo_split_129.html" id="id11" media-type="application/xhtml+xml"/>
+    <item href="cover.jpeg" id="cover" media-type="image/jpeg"/>
+    <item href="images/00001.jpg" id="id3" media-type="image/jpeg"/>
+    <item href="images/00002.jpg" id="id4" media-type="image/jpeg"/>
+    <item href="images/00003.jpg" id="id5" media-type="image/jpeg"/>
+    <item href="images/00004.jpg" id="id6" media-type="image/jpeg"/>
+    <item href="images/00005.jpg" id="id7" media-type="image/jpeg"/>
+    <item href="images/00006.jpg" id="id8" media-type="image/jpeg"/>
+    <item href="images/00007.jpg" id="id9" media-type="image/jpeg"/>
+    <item href="images/00008.jpg" id="id10" media-type="image/jpeg"/>
+    <item href="stylesheet.css" id="css" media-type="text/css"/>
+    <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" media-type="application/x-dtbncx+xml" id="ncx"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="titlepage"/>
+    <itemref idref="id1130"/>
+    <itemref idref="id1129"/>
+    <itemref idref="id1128"/>
+    <itemref idref="id1127"/>
+    <itemref idref="id1126"/>
+    <itemref idref="id1125"/>
+    <itemref idref="id1124"/>
+    <itemref idref="id1123"/>
+    <itemref idref="id1122"/>
+    <itemref idref="id1121"/>
+    <itemref idref="id1120"/>
+    <itemref idref="id1119"/>
+    <itemref idref="id1118"/>
+    <itemref idref="id1117"/>
+    <itemref idref="id1116"/>
+    <itemref idref="id1115"/>
+    <itemref idref="id1114"/>
+    <itemref idref="id1113"/>
+    <itemref idref="id1112"/>
+    <itemref idref="id1111"/>
+    <itemref idref="id1110"/>
+    <itemref idref="id1109"/>
+    <itemref idref="id1108"/>
+    <itemref idref="id1107"/>
+    <itemref idref="id1106"/>
+    <itemref idref="id1105"/>
+    <itemref idref="id1104"/>
+    <itemref idref="id1103"/>
+    <itemref idref="id1102"/>
+    <itemref idref="id1101"/>
+    <itemref idref="id1100"/>
+    <itemref idref="id199"/>
+    <itemref idref="id198"/>
+    <itemref idref="id197"/>
+    <itemref idref="id196"/>
+    <itemref idref="id195"/>
+    <itemref idref="id194"/>
+    <itemref idref="id193"/>
+    <itemref idref="id192"/>
+    <itemref idref="id191"/>
+    <itemref idref="id190"/>
+    <itemref idref="id189"/>
+    <itemref idref="id188"/>
+    <itemref idref="id187"/>
+    <itemref idref="id186"/>
+    <itemref idref="id185"/>
+    <itemref idref="id184"/>
+    <itemref idref="id183"/>
+    <itemref idref="id182"/>
+    <itemref idref="id181"/>
+    <itemref idref="id180"/>
+    <itemref idref="id179"/>
+    <itemref idref="id178"/>
+    <itemref idref="id177"/>
+    <itemref idref="id176"/>
+    <itemref idref="id175"/>
+    <itemref idref="id174"/>
+    <itemref idref="id173"/>
+    <itemref idref="id172"/>
+    <itemref idref="id171"/>
+    <itemref idref="id170"/>
+    <itemref idref="id169"/>
+    <itemref idref="id168"/>
+    <itemref idref="id167"/>
+    <itemref idref="id166"/>
+    <itemref idref="id165"/>
+    <itemref idref="id164"/>
+    <itemref idref="id163"/>
+    <itemref idref="id162"/>
+    <itemref idref="id161"/>
+    <itemref idref="id160"/>
+    <itemref idref="id159"/>
+    <itemref idref="id158"/>
+    <itemref idref="id157"/>
+    <itemref idref="id156"/>
+    <itemref idref="id155"/>
+    <itemref idref="id154"/>
+    <itemref idref="id153"/>
+    <itemref idref="id152"/>
+    <itemref idref="id151"/>
+    <itemref idref="id150"/>
+    <itemref idref="id149"/>
+    <itemref idref="id148"/>
+    <itemref idref="id147"/>
+    <itemref idref="id146"/>
+    <itemref idref="id145"/>
+    <itemref idref="id144"/>
+    <itemref idref="id143"/>
+    <itemref idref="id142"/>
+    <itemref idref="id141"/>
+    <itemref idref="id140"/>
+    <itemref idref="id139"/>
+    <itemref idref="id138"/>
+    <itemref idref="id137"/>
+    <itemref idref="id136"/>
+    <itemref idref="id135"/>
+    <itemref idref="id134"/>
+    <itemref idref="id133"/>
+    <itemref idref="id132"/>
+    <itemref idref="id131"/>
+    <itemref idref="id130"/>
+    <itemref idref="id129"/>
+    <itemref idref="id128"/>
+    <itemref idref="id127"/>
+    <itemref idref="id126"/>
+    <itemref idref="id125"/>
+    <itemref idref="id124"/>
+    <itemref idref="id123"/>
+    <itemref idref="id122"/>
+    <itemref idref="id121"/>
+    <itemref idref="id120"/>
+    <itemref idref="id119"/>
+    <itemref idref="id118"/>
+    <itemref idref="id117"/>
+    <itemref idref="id116"/>
+    <itemref idref="id115"/>
+    <itemref idref="id114"/>
+    <itemref idref="id113"/>
+    <itemref idref="id112"/>
+    <itemref idref="id111"/>
+    <itemref idref="id110"/>
+    <itemref idref="id19"/>
+    <itemref idref="id18"/>
+    <itemref idref="id17"/>
+    <itemref idref="id16"/>
+    <itemref idref="id15"/>
+    <itemref idref="id14"/>
+    <itemref idref="id13"/>
+    <itemref idref="id12"/>
+    <itemref idref="id11"/>
+  </spine>
+  <guide>
+    <reference href="The_Count_of_Monte_Cristo_split_004.html#filepos15433" type="toc" title="Table of Contents"/>
+    <reference href="titlepage.xhtml" type="cover" title="Cover"/>
+  </guide>
+</package>

@@ -1,0 +1,1162 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Книга: The Power of Habit</title>
+    <meta content="Duhigg Charles" name="Author"/>
+    <meta content="Автор: Duhigg Charles, Книга: The Power of Habit, Жанр: проза" name="description"/>
+    <meta content="6 months" name="revisit"/>
+    <script type="text/javascript">
+
+var xmlHttp = false;
+/*@cc_on @*/
+/*@if (@_jscript_version &gt;= 5)
+try {
+  xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+} catch (e) {
+  try {
+    xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+  } catch (e2) {
+    xmlHttp = false;
+  }
+}
+@end @*/
+
+if (!xmlHttp &amp;&amp; typeof XMLHttpRequest != 'undefined') {
+  xmlHttp = new XMLHttpRequest();
+}
+
+function Get_Cookie( name )
+{
+	var start = document.cookie.indexOf( name + "=" );
+	var len = start + name.length + 1;
+	if ( ( !start ) &amp;&amp; ( name != document.cookie.substring( 0, name.length ) ) ) {return null;}
+	if ( start == -1 ) return null;
+	var end = document.cookie.indexOf( ";", len );
+	if ( end == -1 ) end = document.cookie.length;
+	return unescape( document.cookie.substring( len, end ) );
+} 
+
+function hidelayer( layer_ref )
+{
+  state = 'hidden';
+  if (document.all) { //IS IE 4 or 5 (or 6 beta)
+    eval( "if( document.all." + layer_ref +" ) document.all." + layer_ref + ".style.visibility = state");
+  }
+  if (document.layers) { //IS NETSCAPE 4 or below
+    if( document.layers[layer_ref] ) document.layers[layer_ref].visibility = state;
+  }
+  if (document.getElementById &amp;&amp; !document.all) {
+    maxwell_smart = document.getElementById(layer_ref);
+    if( maxwell_smart ) maxwell_smart.style.visibility = state;
+  }
+}
+
+function showlayer( layer_ref )
+{
+  state = 'visible';
+  if (document.all) { //IS IE 4 or 5 (or 6 beta)
+    eval( "if( document.all." + layer_ref +" ) document.all." + layer_ref + ".style.visibility = state");
+  }
+  if (document.layers) { //IS NETSCAPE 4 or below
+    if( document.layers[layer_ref] ) document.layers[layer_ref].visibility = state;
+  }
+  if (document.getElementById &amp;&amp; !document.all) {
+    maxwell_smart = document.getElementById(layer_ref);
+    if( maxwell_smart ) maxwell_smart.style.visibility = state;
+  }
+}
+
+
+function GotoContent()
+{
+	window.location.replace("#label"+document.bookfooter.contents.value);
+}
+
+function getBodyScrollTop()
+{
+  return self.pageYOffset || 
+    (document.documentElement &amp;&amp; document.documentElement.scrollTop) || 
+    (document.body &amp;&amp; document.body.scrollTop);
+}
+
+function getDocumentHeight()
+{
+  return (document.body.scrollHeight &gt; document.body.offsetHeight)?
+    document.body.scrollHeight:
+    document.body.offsetHeight;
+}
+
+var timeoutpid=0;
+function ServerStatus()
+{
+   if (xmlHttp.readyState == 4)
+   {
+   		var response = xmlHttp.responseText;
+   		if( response.length&gt;2 )
+   		{
+			document.getElementById('note').innerHTML = '&lt;br&gt;'+response;
+			showlayer('note');
+			clearTimeout(timeoutpid);
+			timeoutpid=setTimeout("document.getElementById('note').innerHTML = ''; hidelayer('note');",10000);
+		}
+   }
+}
+
+
+function SavePosition()
+{
+	var pos=getBodyScrollTop();
+	var height=getDocumentHeight();
+	var percent=Math.round(pos*100000/height);
+	var url = "/saveBookPos.php?book=1008062&amp;pos="+percent;
+	document.cookie="booklastposition1008062="+percent+"; path=/; expires=Mon, 01-Jan-2050 00:00:00 GMT";
+
+}
+
+function RestorePosition( ppos )
+{
+	var percent=Get_Cookie('booklastposition1008062');
+	if( ppos  )
+	{
+		percent=ppos;
+		//alert('restore '+percent+'/'+ppos);
+	}
+	else
+	{
+		if( Get_Cookie('bgColor') ) document.bgColor='#'+Get_Cookie('bgColor');
+		if( Get_Cookie('fgColor') ) document.fgColor='#'+Get_Cookie('fgColor');
+		var b=document.getElementsByTagName('p');
+		var fontSize=Get_Cookie('fontSize');
+		if( fontSize )
+		{
+			for( i=0; i&lt;b.length; i++ )
+			{
+				b[i].style.fontSize = fontSize+'px';
+			}
+		
+		}
+	}
+	var height=getDocumentHeight();
+	var pos=Math.round(percent*height/100000);
+	if( percent&gt;0 ) document.body.scrollTop=pos;
+	document.getElementById('note').innerHTML = '';
+}
+
+function ReaderSettings()
+{
+	var bcolor=document.bookfooter.backgroundcolor.value;
+	if( bcolor.length==6 )
+	{
+		document.bgColor="#"+bcolor;
+		document.cookie="bgColor="+bcolor+"; path=/; expires=Mon, 01-Jan-2050 00:00:00 GMT";
+	}
+	var fcolor=document.bookfooter.textcolor.value;
+	if( fcolor.length==6 )
+	{
+		document.fgColor="#"+fcolor;
+		document.cookie="fgColor="+fcolor+"; path=/; expires=Mon, 01-Jan-2050 00:00:00 GMT";
+	}
+	var fsize=document.bookfooter.fsize.value;
+	if( fsize&gt;4 )
+	{
+		var pos=getBodyScrollTop();
+		var height=getDocumentHeight();
+		var percent=Math.round(pos*100000/height);
+		var b=document.getElementsByTagName('p');
+		for( i=0; i&lt;b.length; i++ ) 
+		{
+			b[i].style.fontSize = fsize+"px";
+		
+		}
+		if( percent==0 ) percent=1;
+		setTimeout("RestorePosition("+percent+")",500);
+		document.cookie="fontSize="+fsize+"; path=/; expires=Mon, 01-Jan-2050 00:00:00 GMT";
+	}
+
+}
+
+function DisplaySettings( id )
+{
+	state='unknown';
+	if (document.all) { //IS IE 4 or 5 (or 6 beta)
+    	eval( "if( document.all." + id +" ) state=document.all." + id + ".style.display");
+    }
+	if (document.layers) { //IS NETSCAPE 4 or below
+    	if( document.layers[id] ) state=document.layers[id].display;
+	}
+	if (document.getElementById &amp;&amp; !document.all) {
+    	maxwell_smart = document.getElementById(id);
+    	if( maxwell_smart ) state=maxwell_smart.style.display;
+	}
+	if( state == 'none' ) state='inline';
+	else state='none'; 
+	if (document.all) { 
+    	eval( "if( document.all." + id +" ) document.all." + id + ".style.display = state");
+	}
+	if (document.layers) {
+    	if( document.layers[id] ) document.layers[id].display = state;
+	}
+	if (document.getElementById &amp;&amp; !document.all) {
+    	maxwell_smart = document.getElementById(id);
+    	if( maxwell_smart ) maxwell_smart.style.display = state;
+	}
+}
+
+function tableruler()
+{
+	return 0;
+}
+
+</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="page_styles.css" type="text/css" rel="stylesheet"/>
+</head>
+  <body onscroll="SavePosition();" onload="RestorePosition();" onunload="SavePosition();" class="calibre">
+<div class="content"><div class="calibre1">
+<br class="content"/>
+</div>
+<br class="content"/><div class="calibre1"></div>
+<div class="content">
+<div class="content">
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2"><em class="calibre3">The Power of Habit</em> is a work of nonfiction. Nonetheless, some names and personal characteristics of individuals or events have been changed in order to disguise identities. Any resulting resemblance to persons living or dead is entirely coincidental and unintentional.</p>
+
+<p class="calibre2">Copyright © 2012 by Charles Duhigg</p>
+
+<p class="calibre2">All rights reserved.</p>
+
+<p class="calibre2">Published in the United States by Random House, an imprint of</p><br class="content"/><p class="calibre2">The Random House Publishing Group, a division of Random House, Inc., New York.</p>
+
+<p class="calibre2">RANDOM HOUSE and colophon are registered trademarks of Random House, Inc.</p>
+
+<p class="calibre2">Library of Congress Cataloging-in-Publication Data</p><br class="content"/><p class="calibre2">Duhigg, Charles.</p><br class="content"/><p class="calibre2">The power of habit : why we do what we do in life and business / by Charles Duhigg.</p><br class="content"/><p class="calibre2">p.   cm.</p><br class="content"/><p class="calibre2">Includes bibliographical references and index.</p><br class="content"/><p class="calibre2">eISBN: 978-0-679-60385-6</p><br class="content"/><p class="calibre2">1. Habit.   2. Habit—Social aspects.   3. Change (Psychology)   I. Title.</p><br class="content"/><p class="calibre2">BF335.D76 2012</p><br class="content"/><p class="calibre2">158.1—dc23                      2011029545</p>
+
+<p class="calibre2">Illustration on this page by Andrew Pole</p><br class="content"/><p class="calibre2">All other illustrations by Anton Ioukhnovets</p>
+
+<p class="calibre2">www.atrandom.com</p>
+
+<p class="calibre2">v3.1</p>
+
+<p class="calibre2"><strong class="calibre4">CONTENTS</strong></p>
+
+<p class="calibre2"><em class="calibre3">Cover</em></p>
+
+<p class="calibre2"><em class="calibre3">Title Page</em></p>
+
+<p class="calibre2"><em class="calibre3">Copyright</em></p>
+
+<p class="calibre2"><em class="calibre3">Dedication</em></p>
+
+<p class="calibre2">PROLOGUE</p><br class="content"/><p class="calibre2">The Habit Cure</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2"><strong class="calibre4">PART ONE</strong></p><br class="content"/><p class="calibre2"><strong class="calibre4">The Habits of Individuals</strong></p>
+
+<p class="calibre2">1. THE HABIT LOOP</p><br class="content"/><p class="calibre2">How Habits Work</p>
+
+<p class="calibre2">2. THE CRAVING BRAIN</p><br class="content"/><p class="calibre2">How to Create New Habits</p>
+
+<p class="calibre2">3. THE GOLDEN RULE OF HABIT CHANGE</p><br class="content"/><p class="calibre2">Why Transformation Occurs</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2"><strong class="calibre4">PART TWO</strong></p><br class="content"/><p class="calibre2"><strong class="calibre4">The Habits of Successful Organizations</strong></p>
+
+<p class="calibre2">4. KEYSTONE HABITS, OR THE BALLAD OF PAUL O’NEILL</p><br class="content"/><p class="calibre2">Which Habits Matter Most</p>
+
+<p class="calibre2">5. STARBUCKS AND THE HABIT OF SUCCESS</p><br class="content"/><p class="calibre2">When Willpower Becomes Automatic</p>
+
+<p class="calibre2">6. THE POWER OF A CRISIS</p><br class="content"/><p class="calibre2">How Leaders Create Habits Through Accident</p><br class="content"/><p class="calibre2">and Design</p>
+
+<p class="calibre2">7. HOW TARGET KNOWS WHAT YOU WANT BEFORE YOU DO</p><br class="content"/><p class="calibre2">When Companies Predict (and Manipulate) Habits</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2"><strong class="calibre4">PART THREE</strong></p><br class="content"/><p class="calibre2"><strong class="calibre4">The Habits of Societies</strong></p>
+
+<p class="calibre2">8. SADDLEBACK CHURCH AND THE MONTGOMERY BUS BOYCOTT</p><br class="content"/><p class="calibre2">How Movements Happen</p>
+
+<p class="calibre2">9. THE NEUROLOGY OF FREE WILL</p><br class="content"/><p class="calibre2">Are We Responsible for Our Habits?</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">APPENDIX</p><br class="content"/><p class="calibre2">A Reader’s Guide to Using These Ideas</p>
+
+<p class="calibre2">Acknowledgments</p>
+
+<p class="calibre2">A Note on Sources</p>
+
+<p class="calibre2">Notes</p>
+
+<p class="calibre2"><strong class="calibre4">PROLOGUE</strong></p><br class="content"/><p class="calibre2"><strong class="calibre4">The Habit Cure</strong></p>
+
+<p class="calibre2">She was the scientists’ favorite participant.</p>
+
+<p class="calibre2">Lisa Allen, according to her file, was thirty-four years old, had started smoking and drinking when she was sixteen, and had struggled with obesity for most of her life. At one point, in her mid-twenties, collection agencies were hounding her to recover $10,000 in debts. An old résumé listed her longest job as lasting less than a year.</p>
+
+<p class="calibre2">The woman in front of the researchers today, however, was lean and vibrant, with the toned legs of a runner. She looked a decade younger than the photos in her chart and like she could out-exercise anyone in the room. According to the most recent report in her file, Lisa had no outstanding debts, didn’t drink, and was in her thirty-ninth month at a graphic design firm.</p>
+
+<p class="calibre2">“How long since your last cigarette?” one of the physicians asked, starting down the list of questions Lisa answered every time she came to this laboratory outside Bethesda, Maryland.</p>
+
+<p class="calibre2">“Almost four years,” she said, “and I’ve lost sixty pounds and run a marathon since then.” She’d also started a master’s degree and bought a home. It had been an eventful stretch.</p>
+
+<p class="calibre2">The scientists in the room included neurologists, psychologists, geneticists, and a sociologist. For the past three years, with funding from the National Institutes of Health, they had poked and prodded Lisa and more than two dozen other former smokers, chronic overeaters, problem drinkers, obsessive shoppers, and people with other destructive habits. All of the participants had one thing in common: They had remade their lives in relatively short periods of time. The researchers wanted to understand how. So they measured subjects’ vital signs, installed video cameras inside their homes to watch their daily routines, sequenced portions of their DNA, and, with technologies that allowed them to peer inside people’s skulls in real time, watched as blood and electrical impulses flowed through their brains while they were exposed to temptations such as cigarette smoke and lavish meals.<sup class="calibre5">prl.1</sup> The researchers’ goal was to figure out how habits work on a neurological level—and what it took to make them change.</p>
+
+<p class="calibre2">“I know you’ve told this story a dozen times,” the doctor said to Lisa, “but some of my colleagues have only heard it secondhand. Would you mind describing again how you gave up cigarettes?”</p>
+
+<p class="calibre2">“Sure,” Lisa said. “It started in Cairo.” The vacation had been something of a rash decision, she explained. A few months earlier, her husband had come home from work and announced that he was leaving her because he was in love with another woman. It took Lisa a while to process the betrayal and absorb the fact that she was actually getting a divorce. There was a period of mourning, then a period of obsessively spying on him, following his new girlfriend around town, calling her after midnight and hanging up. Then there was the evening Lisa showed up at the girlfriend’s house, drunk, pounding on her door and screaming that she was going to burn the condo down.</p>
+
+<p class="calibre2">“It wasn’t a great time for me,” Lisa said. “I had always wanted to see the pyramids, and my credit cards weren’t maxed out yet, so … ”</p>
+
+<p class="calibre2">On her first morning in Cairo, Lisa woke at dawn to the sound of the call to prayer from a nearby mosque. It was pitch black inside her hotel room. Half blind and jet-lagged, she reached for a cigarette.</p>
+
+<p class="calibre2">She was so disoriented that she didn’t realize—until she smelled burning plastic—that she was trying to light a pen, not a Marlboro. She had spent the past four months crying, binge eating, unable to sleep, and feeling ashamed, helpless, depressed, and angry, all at once. Lying in bed, she broke down. “It was like this wave of sadness,” she said. “I felt like everything I had ever wanted had crumbled. I couldn’t even smoke right.</p>
+
+<p class="calibre2">“And then I started thinking about my ex-husband, and how hard it would be to find another job when I got back, and how much I was going to hate it and how unhealthy I felt all the time. I got up and knocked over a water jug and it shattered on the floor, and I started crying even harder. I felt desperate, like I had to change something, at least one thing I could control.”</p>
+
+<p class="calibre2">She showered and left the hotel. As she rode through Cairo’s rutted streets in a taxi and then onto the dirt roads leading to the Sphinx, the pyramids of Giza, and the vast, endless desert around them, her self-pity, for a brief moment, gave way. She needed a goal in her life, she thought. Something to work toward.</p>
+
+<p class="calibre2">So she decided, sitting in the taxi, that she would come back to Egypt and trek through the desert.</p>
+
+<p class="calibre2">It was a crazy idea, Lisa knew. She was out of shape, overweight, with no money in the bank. She didn’t know the name of the desert she was looking at or if such a trip was possible. None of that mattered, though. She needed something to focus on. Lisa decided that she would give herself one year to prepare. And to survive such an expedition, she was certain she would have to make sacrifices.</p>
+
+<p class="calibre2">In particular, she would need to quit smoking.</p>
+
+<p class="calibre2">When Lisa finally made her way across the desert eleven months later—in an air-conditioned and motorized tour with a half-dozen other people, mind you—the caravan carried so much water, food, tents, maps, global positioning systems, and two-way radios that throwing in a carton of cigarettes wouldn’t have made much of a difference.</p>
+
+<p class="calibre2">But in the taxi, Lisa didn’t know that. And to the scientists at the laboratory, the details of her trek weren’t relevant. Because for reasons they were just beginning to understand, that one small shift in Lisa’s perception that day in Cairo—the conviction that she <em class="calibre3">had</em> to give up smoking to accomplish her goal—had touched off a series of changes that would ultimately radiate out to every part of her life. Over the next six months, she would replace smoking with jogging, and that, in turn, changed how she ate, worked, slept, saved money, scheduled her workdays, planned for the future, and so on. She would start running half-marathons, and then a marathon, go back to school, buy a house, and get engaged. Eventually she was recruited into the scientists’ study, and when researchers began examining images of Lisa’s brain, they saw something remarkable: One set of neurological patterns—her old habits—had been overridden by new patterns. They could still see the neural activity of her old behaviors, but those impulses were crowded out by new urges. As Lisa’s habits changed, so had her brain.</p>
+
+<p class="calibre2">It wasn’t the trip to Cairo that had caused the shift, scientists were convinced, or the divorce or desert trek. It was that Lisa had focused on changing just one habit—smoking—at first. Everyone in the study had gone through a similar process. By focusing on one pattern—what is known as a “keystone habit”—Lisa had taught herself how to reprogram the other routines in her life, as well.</p>
+
+<p class="calibre2">It’s not just individuals who are capable of such shifts. When companies focus on changing habits, whole organizations can transform. Firms such as Procter &amp; Gamble, Starbucks, Alcoa, and Target have seized on this insight to influence how work gets done, how employees communicate, and—without customers realizing it—the way people shop.</p>
+
+<p class="calibre2">“I want to show you one of your most recent scans,” a researcher told Lisa near the end of her exam. He pulled up a picture on a computer screen that showed images from inside her head. “When you see food, these areas”—he pointed to a place near the center of her brain—“which are associated with craving and hunger, are still active. Your brain still produces the urges that made you overeat.</p>
+
+<p class="calibre2">“However, there’s new activity in this area”—he pointed to the region closest to her forehead—“where we believe behavioral inhibition and self-discipline starts. That activity has become more pronounced each time you’ve come in.”</p>
+
+<p class="calibre2">Lisa was the scientists’ favorite participant because her brain scans were so compelling, so useful in creating a map of where behavioral patterns—habits—reside within our minds. “You’re helping us understand how a decision becomes an automatic behavior,” the doctor told her.</p>
+
+<p class="calibre2">Everyone in the room felt like they were on the brink of something important. And they were.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">When you woke up this morning, what did you do first? Did you hop in the shower, check your email, or grab a doughnut from the kitchen counter? Did you brush your teeth before or after you toweled off? Tie the left or right shoe first? What did you say to your kids on your way out the door? Which route did you drive to work? When you got to your desk, did you deal with email, chat with a colleague, or jump into writing a memo? Salad or hamburger for lunch? When you got home, did you put on your sneakers and go for a run, or pour yourself a drink and eat dinner in front of the TV?</p>
+
+<p class="calibre2">“All our life, so far as it has definite form, is but a mass of habits,” William James wrote in 1892.<sup class="calibre5">prl.2</sup> Most of the choices we make each day may feel like the products of well-considered decision making, but they’re not. They’re habits. And though each habit means relatively little on its own, over time, the meals we order, what we say to our kids each night, whether we save or spend, how often we exercise, and the way we organize our thoughts and work routines have enormous impacts on our health, productivity, financial security, and happiness. One paper published by a Duke University researcher in 2006 found that more than 40 percent of the actions people performed each day weren’t actual decisions, but habits.<sup class="calibre5">prl.3</sup></p>
+
+<p class="calibre2">William James—like countless others, from Aristotle to Oprah—spent much of his life trying to understand why habits exist. But only in the past two decades have scientists and marketers really begun understanding how habits <em class="calibre3">work</em>—and more important, how they change.</p>
+
+<p class="calibre2">This book is divided into three parts. The first section focuses on how habits emerge within individual lives. It explores the neurology of habit formation, how to build new habits and change old ones, and the methods, for instance, that one ad man used to push toothbrushing from an obscure practice into a national obsession. It shows how Procter &amp; Gamble turned a spray named Febreze into a billion-dollar business by taking advantage of consumers’ habitual urges, how Alcoholics Anonymous reforms lives by attacking habits at the core of addiction, and how coach Tony Dungy reversed the fortunes of the worst team in the National Football League by focusing on his players’ automatic reactions to subtle on-field cues.</p>
+
+<p class="calibre2">The second part examines the habits of successful companies and organizations. It details how an executive named Paul O’Neill—before he became treasury secretary—remade a struggling aluminum manufacturer into the top performer in the Dow Jones Industrial Average by focusing on one keystone habit, and how Starbucks turned a high school dropout into a top manager by instilling habits designed to strengthen his willpower. It describes why even the most talented surgeons can make catastrophic mistakes when a hospital’s organizational habits go awry.</p>
+
+<p class="calibre2">The third part looks at the habits of societies. It recounts how Martin Luther King, Jr., and the civil rights movement succeeded, in part, by changing the ingrained social habits of Montgomery, Alabama—and why a similar focus helped a young pastor named Rick Warren build the nation’s largest church in Saddleback Valley, California. Finally, it explores thorny ethical questions, such as whether a murderer in Britain should go free if he can convincingly argue that his habits led him to kill.</p>
+
+<p class="calibre2">Each chapter revolves around a central argument: Habits can be changed, if we understand how they work.</p>
+
+<p class="calibre2">This book draws on hundreds of academic studies, interviews with more than three hundred scientists and executives, and research conducted at dozens of companies. (For an index of resources, please see the book’s notes and http://www.thepowerofhabit.com.) It focuses on habits as they are technically defined: the choices that all of us deliberately make at some point, and then stop thinking about but continue doing, often every day. At one point, we all consciously decided how much to eat and what to focus on when we got to the office, how often to have a drink or when to go for a jog. Then we stopped making a choice, and the behavior became automatic. It’s a natural consequence of our neurology. And by understanding how it happens, you can rebuild those patterns in whichever way you choose.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">I first became interested in the science of habits eight years ago, as a newspaper reporter in Baghdad. The U.S. military, it occurred to me as I watched it in action, is one of the biggest habit-formation experiments in history.<sup class="calibre5">prl.4</sup> Basic training teaches soldiers carefully designed habits for how to shoot, think, and communicate under fire. On the battlefield, every command that’s issued draws on behaviors practiced to the point of automation. The entire organization relies on endlessly rehearsed routines for building bases, setting strategic priorities, and deciding how to respond to attacks. In those early days of the war, when the insurgency was spreading and death tolls were mounting, commanders were looking for habits they could instill among soldiers and Iraqis that might create a durable peace.</p>
+
+<p class="calibre2">I had been in Iraq for about two months when I heard about an officer conducting an impromptu habit modification program in Kufa, a small city ninety miles south of the capital. He was an army major who had analyzed videotapes of recent riots and had identified a pattern: Violence was usually preceded by a crowd of Iraqis gathering in a plaza or other open space and, over the course of several hours, growing in size. Food vendors would show up, as well as spectators. Then, someone would throw a rock or a bottle and all hell would break loose.</p>
+
+<p class="calibre2">When the major met with Kufa’s mayor, he made an odd request: Could they keep food vendors out of the plazas? Sure, the mayor said. A few weeks later, a small crowd gathered near the Masjid al-Kufa, or Great Mosque of Kufa. Throughout the afternoon, it grew in size. Some people started chanting angry slogans. Iraqi police, sensing trouble, radioed the base and asked U.S. troops to stand by. At dusk, the crowd started getting restless and hungry. People looked for the kebab sellers normally filling the plaza, but there were none to be found. The spectators left. The chanters became dispirited. By 8 P.M., everyone was gone.</p>
+
+<p class="calibre2">When I visited the base near Kufa, I talked to the major. You wouldn’t necessarily think about a crowd’s dynamics in terms of habits, he told me. But he had spent his entire career getting drilled in the psychology of habit formation.</p>
+
+<p class="calibre2">At boot camp, he had absorbed habits for loading his weapon, falling asleep in a war zone, maintaining focus amid the chaos of battle, and making decisions while exhausted and overwhelmed. He had attended classes that taught him habits for saving money, exercising each day, and communicating with bunkmates. As he moved up the ranks, he learned the importance of organizational habits in ensuring that subordinates could make decisions without constantly asking permission, and how the right routines made it easier to work alongside people he normally couldn’t stand. And now, as an impromptu nation builder, he was seeing how crowds and cultures abided by many of the same rules. In some sense, he said, a community was a giant collection of habits occurring among thousands of people that, depending on how they’re influenced, could result in violence or peace. In addition to removing the food vendors, he had launched dozens of different experiments in Kufa to influence residents’ habits. There hadn’t been a riot since he arrived.</p>
+
+<p class="calibre2">“Understanding habits is the most important thing I’ve learned in the army,” the major told me. “It’s changed everything about how I see the world. You want to fall asleep fast and wake up feeling good? Pay attention to your nighttime patterns and what you automatically do when you get up. You want to make running easy? Create triggers to make it a routine. I drill my kids on this stuff. My wife and I write out habit plans for our marriage. This is all we talk about in command meetings. Not one person in Kufa would have told me that we could influence crowds by taking away the kebab stands, but once you see everything as a bunch of habits, it’s like someone gave you a flashlight and a crowbar and you can get to work.”</p>
+
+<p class="calibre2">The major was a small man from Georgia. He was perpetually spitting either sunflower seeds or chewing tobacco into a cup. He told me that prior to entering the military, his best career option had been repairing telephone lines, or, possibly, becoming a methamphetamine entrepreneur, a path some of his high school peers had chosen to less success. Now, he oversaw eight hundred troops in one of the most sophisticated fighting organizations on earth.</p>
+
+<p class="calibre2">“I’m telling you, if a hick like me can learn this stuff, anyone can. I tell my soldiers all the time, there’s nothing you can’t do if you get the habits right.”</p>
+
+<p class="calibre2">In the past decade, our understanding of the neurology and psychology of habits and the way patterns work within our lives, societies, and organizations has expanded in ways we couldn’t have imagined fifty years ago. We now know why habits emerge, how they change, and the science behind their mechanics. We know how to break them into parts and rebuild them to our specifications. We understand how to make people eat less, exercise more, work more efficiently, and live healthier lives. Transforming a habit isn’t necessarily easy or quick. It isn’t always simple.</p>
+
+<p class="calibre2">But it is possible. And now we understand how.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p><br class="content"/><br class="content"/><p class="calibre2"><strong class="calibre4">THE HABIT LOOP</strong></p><br class="content"/><p class="calibre2"><strong class="calibre4">How Habits Work</strong></p>
+
+<p class="calibre2"><strong class="calibre4">I.</strong></p>
+
+<p class="calibre2">In the fall of 1993, a man who would upend much of what we know about habits walked into a laboratory in San Diego for a scheduled appointment. He was elderly, a shade over six feet tall, and neatly dressed in a blue button-down shirt.<sup class="calibre5">1.1</sup> His thick white hair would have inspired envy at any fiftieth high school reunion. Arthritis caused him to limp slightly as he paced the laboratory’s hallways, and he held his wife’s hand, walking slowly, as if unsure about what each new step would bring.</p>
+
+<p class="calibre2">About a year earlier, Eugene Pauly, or “E.P.” as he would come to be known in medical literature, had been at home in Playa del Rey, preparing for dinner, when his wife mentioned that their son, Michael, was coming over.</p>
+
+<p class="calibre2">“Who’s Michael?” Eugene asked.<sup class="calibre5">1.2</sup></p>
+
+<p class="calibre2">“Your child,” said his wife, Beverly. “You know, the one we raised?”</p>
+
+<p class="calibre2">Eugene looked at her blankly. “Who is that?” he asked.</p>
+
+<p class="calibre2">The next day, Eugene started vomiting and writhing with stomach cramps. Within twenty-four hours, his dehydration was so pronounced that a panicked Beverly took him to the emergency room. His temperature started rising, hitting 105 degrees as he sweated a yellow halo of perspiration onto the hospital’s sheets. He became delirious, then violent, yelling and pushing when nurses tried to insert an IV into his arm. Only after sedation was a physician able to slide a long needle between two vertebra in the small of his back and extract a few drops of cerebrospinal fluid.</p>
+
+<p class="calibre2">The doctor performing the procedure sensed trouble immediately. The fluid surrounding the brain and spinal nerves is a barrier against infection and injury. In healthy individuals, it is clear and quick flowing, moving with an almost silky rush through a needle. The sample from Eugene’s spine was cloudy and dripped out sluggishly, as if filled with microscopic grit.<sup class="calibre5">1.3</sup> When the results came back from the laboratory, Eugene’s physicians learned why he was ill: He was suffering from viral encephalitis, a disease caused by a relatively harmless virus that produces cold sores, fever blisters, and mild infections on the skin. In rare cases, however, the virus can make its way into the brain, inflicting catastrophic damage as it chews through the delicate folds of tissue where our thoughts, dreams—and according to some, souls—reside.</p>
+
+<p class="calibre2">Eugene’s doctors told Beverly there was nothing they could do to counter the damage already done, but a large dose of antiviral drugs might prevent it from spreading. Eugene slipped into a coma and for ten days was close to death. Gradually, as the drugs fought the disease, his fever receded and the virus disappeared. When he finally awoke, he was weak and disoriented and couldn’t swallow properly. He couldn’t form sentences and would sometimes gasp, as if he had momentarily forgotten how to breathe. But he was alive.</p>
+
+<p class="calibre2">Eventually, Eugene was well enough for a battery of tests. The doctors were amazed to find that his body—including his nervous system—appeared largely unscathed. He could move his limbs and was responsive to noise and light. Scans of his head, though, revealed ominous shadows near the center of his brain. The virus had destroyed an oval of tissue close to where his cranium and spinal column met. “He might not be the person you remember,” one doctor warned Beverly. “You need to be ready if your husband is gone.”</p>
+
+<p class="calibre2">Eugene was moved to a different wing of the hospital. Within a week, he was swallowing easily. Another week, and he started talking normally, asking for Jell-O and salt, flipping through television channels and complaining about boring soap operas. By the time he was discharged to a rehabilitation center five weeks later, Eugene was walking down hallways and offering nurses unsolicited advice about their weekend plans.</p>
+
+<p class="calibre2">“I don’t think I’ve ever seen anyone come back like this,” a doctor told Beverly. “I don’t want to raise your hopes, but this is amazing.”</p>
+
+<p class="calibre2">Beverly, however, remained concerned. In the rehab hospital it became clear that the disease had changed her husband in unsettling ways. Eugene couldn’t remember which day of the week it was, for instance, or the names of his doctors and nurses, no matter how many times they introduced themselves. “Why do they keep asking me all these questions?” he asked Beverly one day after a physician left his room. When he finally returned home, things got even stranger. Eugene didn’t seem to remember their friends. He had trouble following conversations. Some mornings, he would get out of bed, walk into the kitchen, cook himself bacon and eggs, then climb back under the covers and turn on the radio. Forty minutes later, he would do the same thing: get up, cook bacon and eggs, climb back into bed, and fiddle with the radio. Then he would do it again.</p>
+
+<p class="calibre2">Alarmed, Beverly reached out to specialists, including a researcher at the University of California, San Diego, who specialized in memory loss. Which is how, on a sunny fall day, Beverly and Eugene found themselves in a nondescript building on the university’s campus, holding hands as they walked slowly down a hallway. They were shown into a small exam room. Eugene began chatting with a young woman who was using a computer.</p>
+
+<p class="calibre2">“Having been in electronics over the years, I’m amazed at all this,” he said, gesturing at the machine she was typing on. “When I was younger, that thing would have been in a couple of six-foot racks and taken up this whole room.”</p>
+
+<p class="calibre2">The woman continued pecking at the keyboard. Eugene chuckled.</p>
+
+<p class="calibre2">“That is incredible,” he said. “All those printed circuits and diodes and triodes. When I was in electronics, there would have been a couple of six-foot racks holding that thing.”</p>
+
+<p class="calibre2">A scientist entered the room and introduced himself. He asked Eugene how old he was.</p>
+
+<p class="calibre2">“Oh, let’s see, fifty-nine or sixty?” Eugene replied. He was seventy-one years old.</p>
+
+<p class="calibre2">The scientist started typing on the computer. Eugene smiled and pointed at it. “That is really something,” he said. “You know, when I was in electronics there would have been a couple of six-foot racks holding that thing!”</p>
+
+<p class="calibre2">The scientist was fifty-two-year-old Larry Squire, a professor who had spent the past three decades studying the neuroanatomy of memory. His specialty was exploring how the brain stores events. His work with Eugene, however, would soon open a new world to him and hundreds of other researchers who have reshaped our understanding of how habits function. Squire’s studies would show that even someone who can’t remember his own age or almost anything else can develop habits that seem inconceivably complex—until you realize that everyone relies on similar neurological processes every day. His and others’ research would help reveal the subconscious mechanisms that impact the countless choices that seem as if they’re the products of well-reasoned thought, but actually are influenced by urges most of us barely recognize or understand.</p>
+
+<p class="calibre2">By the time Squire met Eugene, he had already been studying images of his brain for weeks. The scans indicated that almost all the damage within Eugene’s skull was limited to a five-centimeter area near the center of his head. The virus had almost entirely destroyed his medial temporal lobe, a sliver of cells which scientists suspected was responsible for all sorts of cognitive tasks such as recall of the past and the regulation of some emotions. The completeness of the destruction didn’t surprise Squire—viral encephalitis consumes tissue with a ruthless, almost surgical, precision. What shocked him was how familiar the images seemed.</p>
+
+<p class="calibre2">Thirty years earlier, as a PhD student at MIT, Squire had worked alongside a group studying a man known as “H.M.,” one of the most famous patients in medical history. When H.M.—his real name was Henry Molaison, but scientists shrouded his identity throughout his life—was seven years old, he was hit by a bicycle and landed hard on his head.<sup class="calibre5">1.4</sup><sup class="calibre5">, </sup><sup class="calibre5">1.5</sup><sup class="calibre5">, </sup><sup class="calibre5">1.6</sup> Soon afterward, he developed seizures and started blacking out. At sixteen, he had his first grand mal seizure, the kind that affects the entire brain; soon, he was losing consciousness up to ten times a day.</p>
+
+<p class="calibre2">By the time he turned twenty-seven, H.M. was desperate. Anticonvulsive drugs hadn’t helped. He was smart, but couldn’t hold a job.<sup class="calibre5">1.7</sup> He still lived with his parents. H.M. wanted a normal existence. So he sought help from a physician whose tolerance for experimentation outweighed his fear of malpractice. Studies had suggested that an area of the brain called the hippocampus might play a role in seizures. When the doctor proposed cutting into H.M.’s head, lifting up the front portion of his brain, and, with a small straw, sucking out the hippocampus and some surrounding tissue from the interior of his skull, H.M.<sup class="calibre5">1.8</sup><sup class="calibre5">, </sup><sup class="calibre5">1.9</sup> gave his consent.</p>
+
+<p class="calibre2">The surgery occurred in 1953, and as H.M. healed, his seizures slowed. Almost immediately, however, it became clear that his brain had been radically altered. H.M. knew his name and that his mother was from Ireland. He could remember the 1929 stock market crash and news reports about the invasion of Normandy. But almost everything that came afterward—all the memories, experiences, and struggles from most of the decade before his surgery—had been erased. When a doctor began testing H.M.’s memory by showing him playing cards and lists of numbers, he discovered that H.M. couldn’t retain any new information for more than twenty seconds or so.</p>
+
+<p class="calibre2">From the day of his surgery until his death in 2008, every person H.M. met, every song he heard, every room he entered, was a completely fresh experience. His brain was frozen in time. Each day, he was befuddled by the fact that someone could change the television channel by pointing a black rectangle of plastic at the screen. He introduced himself to his doctors and nurses over and over, dozens of times each day.<sup class="calibre5">1.10</sup></p>
+
+<p class="calibre2">“I loved learning about H.M., because memory seemed like such a tangible, exciting way to study the brain,” Squire told me. “I grew up in Ohio, and I can remember, in first grade, my teacher handing everyone crayons, and I started mixing all the colors together to see if it would make black. Why have I kept that memory, but I can’t remember what my teacher looked like? Why does my brain decide that one memory is more important than another?”</p><br class="content"/><div class="calibre1">
+<br class="content"/>
+</div>
+
+
+<p class="calibre2">When Squire received the images of Eugene’s brain, he marveled at how similar it seemed to H.M.’s. There were empty, walnut-sized chunks in the middle of both their heads. Eugene’s memory—just like H.M.’s—had been removed.</p>
+
+<p class="calibre2">As Squire began examining Eugene, though, he saw that this patient was different from H.M. in some profound ways. Whereas almost everyone knew within minutes of meeting H.M. that something was amiss, Eugene could carry on conversations and perform tasks that wouldn’t alert a casual observer that anything was wrong. The effects of H.M.’s surgery had been so debilitating that he was institutionalized for the remainder of his life. Eugene, on the other hand, lived at home with his wife. H.M. couldn’t really carry on conversations. Eugene, in contrast, had an amazing knack for guiding almost any discussion to a topic he was comfortable talking about at length, such as satellites—he had worked as a technician for an aerospace company—or the weather.</p>
+
+<p class="calibre2">Squire started his exam of Eugene by asking him about his youth. Eugene talked about the town where he had grown up in central California, his time in the merchant marines, a trip he had taken to Australia as a young man. He could remember most of the events in his life that had occurred prior to about 1960. When Squire asked about later decades, Eugene politely changed the topic and said he had trouble recollecting some recent events.</p>
+
+<p class="calibre2">Squire conducted a few intelligence tests and found that Eugene’s intellect was still sharp for a man who couldn’t remember the last three decades. What’s more, Eugene still had all the habits he had formed in his youth, so whenever Squire gave him a cup of water or complimented him on a particularly detailed answer, Eugene would thank him and offer a compliment in return. Whenever someone entered the room, Eugene would introduce himself and ask about their day.</p>
+
+<p class="calibre2">But when Squire asked Eugene to memorize a string of numbers or describe the hallway outside the laboratory’s door, the doctor found his patient couldn’t retain any new information for more than a minute or so. When someone showed Eugene photos of his grandchildren, he had no idea who they were. When Squire asked if he remembered getting sick, Eugene said he had no recollection of his illness or the hospital stay. In fact, Eugene almost never recalled that he was suffering from amnesia. His mental image of himself didn’t include memory loss, and since he couldn’t remember the injury, he couldn’t conceive of anything being wrong.</p>
+
+<p class="calibre2">In the months after meeting Eugene, Squire conducted experiments that tested the limits of his memory. By then, Eugene and Beverly had moved from Playa del Rey to San Diego to be closer to their daughter, and Squire often visited their home for his exams. One day, Squire asked Eugene to sketch a layout of his house. Eugene couldn’t draw a rudimentary map showing where the kitchen or bedroom was located. “When you get out of bed in the morning, how do you leave your room?” Squire asked.</p>
+
+<p class="calibre2">“You know,” Eugene said, “I’m not really sure.”</p>
+
+<p class="calibre2">Squire took notes on his laptop, and as the scientist typed, Eugene became distracted. He glanced across the room and then stood up, walked into a hallway, and opened the door to the bathroom. A few minutes later, the toilet flushed, the faucet ran, and Eugene, wiping his hands on his pants, walked back into the living room and sat down again in his chair next to Squire. He waited patiently for the next question.</p>
+
+<p class="calibre2">At the time, no one wondered how a man who couldn’t draw a map of his home was able to find the bathroom without hesitation. But that question, and others like it, would eventually lead to a trail of discoveries that has transformed our understanding of habits’ power.<sup class="calibre5">1.11</sup> It would help spark a scientific revolution that today involves hundreds of researchers who are learning, for the first time, to understand all the habits that influence our lives.</p>
+
+<p class="calibre2">As Eugene sat at the table, he looked at Squire’s laptop.</p>
+
+<p class="calibre2">“That’s amazing,” he said, gesturing at the computer. “You know, when I was in electronics, there would have been a couple of six-foot racks holding that thing.”</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">In the first few weeks after they moved into their new house, Beverly tried to take Eugene outside each day. The doctors had told her that it was important for him to get exercise, and if Eugene was inside too long he drove Beverly crazy, asking her the same questions over and over in an endless loop. So each morning and afternoon, she took him on a walk around the block, always together and always along the same route.</p>
+
+<p class="calibre2">The doctors had warned Beverly that she would need to monitor Eugene constantly. If he ever got lost, they said, he would never be able to find his way home. But one morning, while she was getting dressed, Eugene slipped out the front door. He had a tendency to wander from room to room, so it took her a while to notice he was gone. When she did, she became frantic. She ran outside and scanned the street. She couldn’t see him. She went to the neighbors’ house and pounded on the windows. Their homes looked similar—maybe Eugene had become confused and had gone inside? She ran to the door and rang the bell until someone answered. Eugene wasn’t there. She sprinted back to the street, running up the block, screaming Eugene’s name. She was crying. What if he had wandered into traffic? How would he tell anyone where he lived? She had been outside for fifteen minutes already, looking everywhere. She ran home to call the police.</p>
+
+<p class="calibre2">When she burst through the door, she found Eugene in the living room, sitting in front of the television watching the History Channel. Her tears confused him. He didn’t remember leaving, he said, didn’t know where he’d been, and couldn’t understand why she was so upset. Then Beverly saw a pile of pinecones on the table, like the ones she’d seen in a neighbor’s yard down the street. She came closer and looked at Eugene’s hands. His fingers were sticky with sap. That’s when she realized that Eugene had gone for a walk by himself. He had wandered down the street and collected some souvenirs.</p>
+
+<p class="calibre2">And he had found his way home.</p>
+
+<p class="calibre2">Soon, Eugene was going for walks every morning. Beverly tried to stop him, but it was pointless.</p>
+
+<p class="calibre2">“Even if I told him to stay inside, he wouldn’t remember a few minutes later,” she told me. “I followed him a few times to make sure he wouldn’t get lost, but he always came back.” Sometimes he would return with pinecones or rocks. Once he came back with a wallet; another time with a puppy. He never remembered where they came from.</p>
+
+<p class="calibre2">When Squire and his assistants heard about these walks, they started to suspect that something was happening inside Eugene’s head that didn’t have anything to do with his conscious memory. They designed an experiment. One of Squire’s assistants visited the house one day and asked Eugene to draw a map of the block where he lived. He couldn’t do it. How about where his house was located on the street, she asked. He doodled a bit, then forgot the assignment. She asked him to point out which doorway led to the kitchen. Eugene looked around the room. He didn’t know, he said. She asked Eugene what he would do if he were hungry. He stood up, walked into the kitchen, opened a cabinet, and took down a jar of nuts.</p>
+
+<p class="calibre2">Later that week, a visitor joined Eugene on his daily stroll. They walked for about fifteen minutes through the perpetual spring of Southern California, the scent of bougainvillea heavy in the air. Eugene didn’t say much, but he always led the way and seemed to know where he was going. He never asked for directions. As they rounded the corner near his house, the visitor asked Eugene where he lived. “I don’t know, exactly,” he said. Then he walked up his sidewalk, opened his front door, went into the living room, and turned on the television.</p>
+
+<p class="calibre2">It was clear to Squire that Eugene was absorbing new information. But where inside his brain was that information residing? How could someone find a jar of nuts when he couldn’t say where the kitchen was located? Or find his way home when he had no idea which house was his? How, Squire wondered, were new patterns forming inside Eugene’s damaged brain?</p>
+
+<p class="calibre2"><strong class="calibre4">II.</strong></p>
+
+<p class="calibre2">Within the building that houses the Brain and Cognitive Sciences department of the Massachusetts Institute of Technology are laboratories that contain what, to the casual observer, look like dollhouse versions of surgical theaters. There are tiny scalpels, small drills, and miniature saws less than a quarter inch wide attached to robotic arms. Even the operating tables are tiny, as if prepared for child-sized surgeons. The rooms are always kept at a chilly sixty degrees because a slight nip in the air steadies researchers’ fingers during delicate procedures. Inside these laboratories, neurologists cut into the skulls of anesthetized rats, implanting tiny sensors that can record the smallest changes inside their brains. When the rats wake, they hardly seem to notice that there are now dozens of microscopic wires arrayed, like neurological spider webs, inside their heads.</p>
+
+<p class="calibre2">These laboratories have become the epicenter for a quiet revolution in the science of habit formation, and the experiments unfolding here explain how Eugene—as well as you, me, and everyone else—developed the behaviors necessary to make it through each day. The rats in these labs have illuminated the complexity that occurs inside our heads whenever we do something as mundane as brush our teeth or back the car out of the driveway. And for Squire, these laboratories helped explain how Eugene managed to learn new habits.</p>
+
+<p class="calibre2">When the MIT researchers started working on habits in the 1990s—at about the same time that Eugene came down with his fever—they were curious about a nub of neurological tissue known as the basal ganglia. If you picture the human brain as an onion, composed of layer upon layer of cells, then the outside layers—those closest to the scalp—are generally the most recent additions from an evolutionary perspective. When you dream up a new invention or laugh at a friend’s joke, it’s the outside parts of your brain at work. That’s where the most complex thinking occurs.</p>
+
+<p class="calibre2">Deeper inside the brain and closer to the brain stem—where the brain meets the spinal column—are older, more primitive structures. They control our automatic behaviors, such as breathing and swallowing, or the startle response we feel when someone leaps out from behind a bush. Toward the center of the skull is a golf ball–sized lump of tissue that is similar to what you might find inside the head of a fish, reptile, or mammal.<sup class="calibre5">1.12</sup> This is the basal ganglia, an oval of cells that, for years, scientists didn’t understand very well, except for suspicions that it played a role in diseases such as Parkinson’s.<sup class="calibre5">1.13</sup><sup class="calibre5">, </sup><sup class="calibre5">1.14</sup></p>
+
+<p class="calibre2">In the early 1990s, the MIT researchers began wondering if the basal ganglia might be integral to habits as well. They noticed that animals with injured basal ganglia suddenly developed problems with tasks such as learning how to run through mazes or remembering how to open food containers.<sup class="calibre5">1.15</sup> They decided to experiment by employing new micro-technologies that allowed them to observe, in minute detail, what was occurring within the heads of rats as they performed dozens of routines. In surgery, each rat had what looked like a small joystick and dozens of tiny wires inserted into its skull. Afterward, the animal was placed into a T-shaped maze with chocolate at one end.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">The maze was structured so that each rat was positioned behind a partition that opened when a loud click sounded.<sup class="calibre5">1.16</sup> Initially, when a rat heard the click and saw the partition disappear, it would usually wander up and down the center aisle, sniffing in corners and scratching at walls. It appeared to smell the chocolate, but couldn’t figure out how to find it. When it reached the top of the T, it often turned to the right, away from the chocolate, and then wandered left, sometimes pausing for no obvious reason. Eventually, most animals discovered the reward. But there was no discernible pattern in their meanderings. It seemed as if each rat was taking a leisurely, unthinking stroll.</p>
+
+<p class="calibre2">The probes in the rats’ heads, however, told a different story. While each animal wandered through the maze, its brain—and in particular, its basal ganglia—worked furiously. Each time a rat sniffed the air or scratched a wall, its brain exploded with activity, as if analyzing each new scent, sight, and sound. The rat was processing information the entire time it meandered.</p>
+
+<p class="calibre2">The scientists repeated their experiment, again and again, watching how each rat’s brain activity changed as it moved through the same route hundreds of times. A series of shifts slowly emerged. The rats stopped sniffing corners and making wrong turns. Instead, they zipped through the maze faster and faster. And within their brains, something unexpected occurred: As each rat learned how to navigate the maze, its mental activity <em class="calibre3">decreased</em>. As the route became more and more automatic, each rat started thinking less and less.</p>
+
+<p class="calibre2">It was as if the first few times a rat explored the maze, its brain had to work at full power to make sense of all the new information. But after a few days of running the same route, the rat didn’t need to scratch the walls or smell the air anymore, and so the brain activity associated with scratching and smelling ceased. It didn’t need to choose which direction to turn, and so decision-making centers of the brain went quiet. All it had to do was recall the quickest path to the chocolate. Within a week, even the brain structures related to memory had quieted. The rat had internalized how to sprint through the maze to such a degree that it hardly needed to think at all.</p>
+
+<p class="calibre2">But that internalization—run straight, hang a left, eat the chocolate—relied upon the basal ganglia, the brain probes indicated. This tiny, ancient neurological structure seemed to take over as the rat ran faster and faster and its brain worked less and less. The basal ganglia was central to recalling patterns and acting on them. The basal ganglia, in other words, stored habits even while the rest of the brain went to sleep.</p>
+
+<p class="calibre2">To see this capacity in action, consider this graph, which shows activity within a rat’s skull as it encounters the maze for the first time.<sup class="calibre5">1.17</sup> Initially, the brain is working hard the entire time:</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">After a week, once the route is familiar and the scurrying has become a habit, the rat’s brain settles down as it runs through the maze:</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">This process—in which the brain converts a sequence of actions into an automatic routine—is known as “chunking,” and it’s at the root of how habits form.<sup class="calibre5">1.18</sup> There are dozens—if not hundreds—of behavioral chunks that we rely on every day. Some are simple: You automatically put toothpaste on your toothbrush before sticking it in your mouth. Some, such as getting dressed or making the kids’ lunch, are a little more complex.</p>
+
+<p class="calibre2">Others are so complicated that it’s remarkable a small bit of tissue that evolved millions of years ago can turn them into habits at all. Take the act of backing your car out of the driveway. When you first learned to drive, the driveway required a major dose of concentration, and for good reason: It involves opening the garage, unlocking the car door, adjusting the seat, inserting the key in the ignition, turning it clockwise, moving the rearview and side mirrors and checking for obstacles, putting your foot on the brake, moving the gearshift into reverse, removing your foot from the brake, mentally estimating the distance between the garage and the street while keeping the wheels aligned and monitoring for oncoming traffic, calculating how reflected images in the mirrors translate into actual distances between the bumper, the garbage cans, and the hedges, all while applying slight pressure to the gas pedal and brake, and, most likely, telling your passenger to please stop fiddling with the radio.</p>
+
+<p class="calibre2">Nowadays, however, you do all of that every time you pull onto the street with hardly any thought. The routine occurs by habit.</p>
+
+<p class="calibre2">Millions of people perform this intricate ballet every morning, unthinkingly, because as soon as we pull out the car keys, our basal ganglia kicks in, identifying the habit we’ve stored in our brains related to backing an automobile into the street. Once that habit starts unfolding, our gray matter is free to quiet itself or chase other thoughts, which is why we have enough mental capacity to realize that Jimmy forgot his lunchbox inside.</p>
+
+<p class="calibre2">Habits, scientists say, emerge because the brain is constantly looking for ways to save effort. Left to its own devices, the brain will try to make almost any routine into a habit, because habits allow our minds to ramp down more often. This effort-saving instinct is a huge advantage. An efficient brain requires less room, which makes for a smaller head, which makes childbirth easier and therefore causes fewer infant and mother deaths. An efficient brain also allows us to stop thinking constantly about basic behaviors, such as walking and choosing what to eat, so we can devote mental energy to inventing spears, irrigation systems, and, eventually, airplanes and video games.</p>
+
+<p class="calibre2">But conserving mental effort is tricky, because if our brains power down at the wrong moment, we might fail to notice something important, such as a predator hiding in the bushes or a speeding car as we pull onto the street. So our basal ganglia have devised a clever system to determine when to let habits take over. It’s something that happens whenever a chunk of behavior starts or ends.</p>
+
+<p class="calibre2">To see how it works, look closely at the graph of the rat’s neurological habit again. Notice that brain activity spikes at the beginning of the maze, when the rat hears the click before the partition starts moving, and again at the end, when it finds the chocolate.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Those spikes are the brain’s way of determining when to cede control to a habit, and which habit to use. From behind a partition, for instance, it’s difficult for a rat to know if it’s inside a familiar maze or an unfamiliar cupboard with a cat lurking outside. To deal with this uncertainty, the brain spends a lot of effort at the beginning of a habit looking for something—a cue—that offers a hint as to which pattern to use. From behind a partition, if a rat hears a click, it knows to use the maze habit. If it hears a meow, it chooses a different pattern. And at the end of the activity, when the reward appears, the brain shakes itself awake and makes sure everything unfolded as expected.</p>
+
+<p class="calibre2">This process within our brains is a three-step loop. First, there is a <em class="calibre3">cue,</em> a trigger that tells your brain to go into automatic mode and which habit to use. Then there is the <em class="calibre3">routine,</em> which can be physical or mental or emotional. Finally, there is a <em class="calibre3">reward,</em> which helps your brain figure out if this particular loop is worth remembering for the future:</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">THE HABIT LOOP</p>
+
+<p class="calibre2">Over time, this loop—cue, routine, reward; cue, routine, reward—becomes more and more automatic. The cue and reward become intertwined until a powerful sense of anticipation and craving emerges. Eventually, whether in a chilly MIT laboratory or your driveway, a habit is born.<sup class="calibre5">1.19</sup></p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Habits aren’t destiny. As the next two chapters explain, habits can be ignored, changed, or replaced. But the reason the discovery of the habit loop is so important is that it reveals a basic truth: When a habit emerges, the brain stops fully participating in decision making. It stops working so hard, or diverts focus to other tasks. So unless you deliberately <em class="calibre3">fight</em> a habit—unless you find new routines—the pattern will unfold automatically.</p>
+
+<p class="calibre2">However, simply understanding how habits work—learning the structure of the habit loop—makes them easier to control. Once you break a habit into its components, you can fiddle with the gears.</p>
+
+<p class="calibre2">“We’ve done experiments where we trained rats to run down a maze until it was a habit, and then we extinguished the habit by changing the placement of the reward,” Ann Graybiel, a scientist at MIT who oversaw many of the basal ganglia experiments, told me. “Then one day, we’ll put the reward in the old place, and put in the rat, and, by golly, the old habit will reemerge right away. Habits never really disappear. They’re encoded into the structures of our brain, and that’s a huge advantage for us, because it would be awful if we had to relearn how to drive after every vacation. The problem is that your brain can’t tell the difference between bad and good habits, and so if you have a bad one, it’s always lurking there, waiting for the right cues and rewards.”<sup class="calibre5">1.20</sup></p>
+
+<p class="calibre2">This explains why it’s so hard to create exercise habits, for instance, or change what we eat. Once we develop a routine of sitting on the couch, rather than running, or snacking whenever we pass a doughnut box, those patterns always remain inside our heads. By the same rule, though, if we learn to create new neurological routines that overpower those behaviors—if we take control of the habit loop—we can force those bad tendencies into the background, just as Lisa Allen did after her Cairo trip. And once someone creates a new pattern, studies have demonstrated, going for a jog or ignoring the doughnuts becomes as automatic as any other habit.</p>
+
+<p class="calibre2">Without habit loops, our brains would shut down, overwhelmed by the minutiae of daily life. People whose basal ganglia are damaged by injury or disease often become mentally paralyzed. They have trouble performing basic activities, such as opening a door or deciding what to eat. They lose the ability to ignore insignificant details—one study, for example, found that patients with basal ganglia injuries couldn’t recognize facial expressions, including fear and disgust, because they were perpetually uncertain about which part of the face to focus on. Without our basal ganglia, we lose access to the hundreds of habits we rely on every day. Did you pause this morning to decide whether to tie your left or right shoe first? Did you have trouble figuring out if you should brush your teeth before or after you showered?</p>
+
+<p class="calibre2">Of course not. Those decisions are habitual, effortless. As long as your basal ganglia is intact and the cues remain constant, the behaviors will occur unthinkingly. (Though when you go on vacation, you may get dressed in different ways or brush your teeth at a different point in your morning routine without noticing it.)</p>
+
+<p class="calibre2">At the same time, however, the brain’s dependence on automatic routines can be dangerous. Habits are often as much a curse as a benefit.</p>
+
+<p class="calibre2">Take Eugene, for instance. Habits gave him his life back after he lost his memory. Then they took everything away again.</p>
+
+<p class="calibre2"><strong class="calibre4">III.</strong></p>
+
+<p class="calibre2">As Larry Squire, the memory specialist, spent more and more time with Eugene, he became convinced his patient was somehow learning new behaviors. Images of Eugene’s brain showed that his basal ganglia had escaped injury from the viral encephalitis. Was it possible, the scientist wondered, that Eugene, even with severe brain damage, could still use the cue-routine-reward loop? Could this ancient neurological process explain how Eugene was able to walk around the block and find the jar of nuts in the kitchen?</p>
+
+<p class="calibre2">To test if Eugene was forming new habits, Squire devised an experiment. He took sixteen different objects—bits of plastic and brightly colored pieces of toys—and glued them to cardboard rectangles. He then divided them into eight pairs: choice A and choice B. In each pairing, one piece of cardboard, chosen at random, had a sticker placed on the bottom that read “correct.”<sup class="calibre5">1.21</sup></p>
+
+<p class="calibre2">Eugene was seated at a table, given a pair of objects, and asked to choose one. Next, he was told to turn over his choice to see if there was a “correct” sticker underneath. This is a common way to measure memory. Since there are only sixteen objects, and they are always presented in the same eight pairings, most people can memorize which item is “correct” after a few rounds. Monkeys can memorize all the “correct” items after eight to ten days.</p>
+
+<p class="calibre2">Eugene couldn’t remember any of the “correct” items, no matter how many times he did the test. He repeated the experiment twice a week for months, looking at forty pairings each day.</p>
+
+<p class="calibre2">“Do you know why you are here today?” a researcher asked at the beginning of one session a few weeks into the experiment.</p>
+
+<p class="calibre2">“I don’t think so,” Eugene said.</p>
+
+<p class="calibre2">“I’m going to show you some objects. Do you know why?”</p>
+
+<p class="calibre2">“Am I supposed to describe them to you, or tell you what they are used for?” Eugene couldn’t recollect the previous sessions at all.</p>
+
+<p class="calibre2">But as the weeks passed, Eugene’s performance improved. After twenty-eight days of training, Eugene was choosing the “correct” object 85 percent of the time. At thirty-six days, he was right 95 percent of the time. After one test, Eugene looked at the researcher, bewildered by his success.</p>
+
+<p class="calibre2">“How am I doing this?” he asked her.</p>
+
+<p class="calibre2">“Tell me what is going on in your head,” the researcher said. “Do you say to yourself, ‘I remember seeing that one’?”</p>
+
+<p class="calibre2">“No,” Eugene said. “It’s here somehow or another”—he pointed to his head—“and the hand goes for it.”</p>
+
+<p class="calibre2">To Squire, however, it made perfect sense. Eugene was exposed to a cue: a pair of objects always presented in the same combination. There was a routine: He would choose one object and look to see if there was a sticker underneath, even if he had no idea why he felt compelled to turn the cardboard over. Then there was a reward: the satisfaction he received after finding a sticker proclaiming “correct.” Eventually, a habit loop emerged.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">EUGENE’S HABIT LOOP</p>
+
+<p class="calibre2">To make sure this pattern was, in fact, a habit, Squire conducted one more experiment. He took all sixteen items and put them in front of Eugene at the same time. He asked him to put all the “correct” objects into one pile.</p>
+
+<p class="calibre2">Eugene had no idea where to begin. “Gosh sakes, how to remember this?” he asked. He reached for one object and started to turn it over. The experimenter stopped him. No, she explained. The task was to put the items in <em class="calibre3">piles</em>. Why was he trying to turn them over?</p>
+
+<p class="calibre2">“That’s just a habit, I think,” he said.</p>
+
+<p class="calibre2">He couldn’t do it. The objects, when presented outside of the context of the habit loop, made no sense to him.</p>
+
+<p class="calibre2">Here was the proof Squire was looking for. The experiments demonstrated that Eugene had the ability to form new habits, even when they involved tasks or objects he couldn’t remember for more than a few seconds. This explained how Eugene managed to go for a walk every morning. The cues—certain trees on corners or the placement of particular mailboxes—were consistent every time he went outside, so though he couldn’t recognize his house, his habits always guided him back to his front door. It also explained why Eugene would eat breakfast three or four times a day, even if he wasn’t hungry. As long as the right cues were present—such as his radio or the morning light through his windows—he automatically followed the script dictated by his basal ganglia.</p>
+
+<p class="calibre2">What’s more, there were dozens of other habits in Eugene’s life that no one noticed until they started looking for them. Eugene’s daughter, for instance, would often stop by his house to say hello. She would talk to her father in the living room for a bit, then go into the kitchen to visit with her mother, and then leave, waving good-bye on her way out the door. Eugene, who had forgotten their earlier conversation by the time she left, would get angry—why was she leaving without chatting?—and then forget why he was upset. But the emotional habit had already started, and so his anger would persist, red hot and beyond his understanding, until it burned itself out.</p>
+
+<p class="calibre2">“Sometimes he would bang the table or curse, and if you asked him why, he’d say ‘I don’t know, but I’m mad!’ ” Beverly told me. He would kick his chair, or snap at whoever came into the room. Then, a few minutes later, he would smile and talk about the weather. “It was like, once it started, he had to finish the frustration,” she said.</p>
+
+<p class="calibre2">Squire’s new experiment also showed something else: that habits are surprisingly delicate. If Eugene’s cues changed the slightest bit, his habits fell apart. The few times he walked around the block, for instance, and something was different—the city was doing street repairs or a windstorm had blown branches all over the sidewalk—Eugene would get lost, no matter how close he was to home, until a kind neighbor showed him the way to his door. If his daughter stopped to chat with him for ten seconds before she walked out, his anger habit never emerged.</p>
+
+<p class="calibre2">Squire’s experiments with Eugene revolutionized the scientific community’s understanding of how the brain works by proving, once and for all, that it’s possible to learn and make unconscious choices without remembering anything about the lesson or decision making.<sup class="calibre5">1.22</sup> Eugene showed that habits, as much as memory and reason, are at the root of how we behave. We might not remember the experiences that create our habits, but once they are lodged within our brains they influence how we act—often without our realization.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Since Squire’s first paper on Eugene’s habits was published, the science of habit formation has exploded into a major field of study. Researchers at Duke, Harvard, UCLA, Yale, USC, Princeton, the University of Pennsylvania, and at schools in the United Kingdom, Germany, and the Netherlands, as well as corporate scientists working for Procter &amp; Gamble, Microsoft, Google, and hundreds of other companies are focused on understanding the neurology and psychology of habits, their strengths and weaknesses, and why they emerge and how they can be changed.</p><br class="content"/><div class="calibre1">
+<br class="content"/>
+</div>
+
+
+<p class="calibre2">Researchers have learned that cues can be almost anything, from a visual trigger such as a candy bar or a television commercial to a certain place, a time of day, an emotion, a sequence of thoughts, or the company of particular people. Routines can be incredibly complex or fantastically simple (some habits, such as those related to emotions, are measured in milliseconds). Rewards can range from food or drugs that cause physical sensations, to emotional payoffs, such as the feelings of pride that accompany praise or self-congratulation.</p>
+
+<p class="calibre2">And in almost every experiment, researchers have seen echoes of Squire’s discoveries with Eugene: Habits are powerful, but delicate. They can emerge outside our consciousness, or can be deliberately designed. They often occur without our permission, but can be reshaped by fiddling with their parts. They shape our lives far more than we realize—they are so strong, in fact, that they cause our brains to cling to them at the exclusion of all else, including common sense.</p>
+
+<p class="calibre2">In one set of experiments, for example, researchers affiliated with the National Institute on Alcohol Abuse and Alcoholism trained mice to press levers in response to certain cues until the behavior became a habit. The mice were always rewarded with food. Then, the scientists poisoned the food so that it made the animals violently ill, or electrified the floor, so that when the mice walked toward their reward they received a shock. The mice knew the food and cage were dangerous—when they were offered the poisoned pellets in a bowl or saw the electrified floor panels, they stayed away. When they saw their old cues, however, they unthinkingly pressed the lever and ate the food, or they walked across the floor, even as they vomited or jumped from the electricity. The habit was so ingrained the mice couldn’t stop themselves.<sup class="calibre5">1.23</sup></p>
+
+<p class="calibre2">It’s not hard to find an analog in the human world. Consider fast food, for instance. It makes sense—when the kids are starving and you’re driving home after a long day—to stop, just this once, at McDonald’s or Burger King. The meals are inexpensive. It tastes so good. After all, one dose of processed meat, salty fries, and sugary soda poses a relatively small health risk, right? It’s not like you do it all the time.</p>
+
+<p class="calibre2">But habits emerge without our permission. Studies indicate that families usually don’t <em class="calibre3">intend</em> to eat fast food on a regular basis. What happens is that a once a month pattern slowly becomes once a week, and then twice a week—as the cues and rewards create a habit—until the kids are consuming an unhealthy amount of hamburgers and fries. When researchers at the University of North Texas and Yale tried to understand why families gradually increased their fast food consumption, they found a series of cues and rewards that most customers never knew were influencing their behaviors.<sup class="calibre5">1.24</sup> They discovered the habit loop.</p>
+
+<p class="calibre2">Every McDonald’s, for instance, looks the same—the company deliberately tries to standardize stores’ architecture and what employees say to customers, so everything is a consistent cue to trigger eating routines. The foods at some chains are specifically engineered to deliver immediate rewards—the fries, for instance, are designed to begin disintegrating the moment they hit your tongue, in order to deliver a hit of salt and grease as fast as possible, causing your pleasure centers to light up and your brain to lock in the pattern. All the better for tightening the habit loop.<sup class="calibre5">1.25</sup></p>
+
+<p class="calibre2">However, even these habits are delicate. When a fast food restaurant closes down, the families that previously ate there will often start having dinner at home, rather than seek out an alternative location. Even small shifts can end the pattern. But since we often don’t recognize these habit loops as they grow, we are blind to our ability to control them. By learning to observe the cues and rewards, though, we can change the routines.</p>
+
+<p class="calibre2"><strong class="calibre4">IV.</strong></p>
+
+<p class="calibre2">By 2000, seven years after Eugene’s illness, his life had achieved a kind of equilibrium. He went for a walk every morning. He ate what he wanted, sometimes five or six times a day. His wife knew that as long as the television was tuned to the History Channel, Eugene would settle into his plush chair and watch it regardless of whether it was airing reruns or new programs. He couldn’t tell the difference.</p>
+
+<p class="calibre2">As he got older, however, Eugene’s habits started impacting his life in negative ways. He was sedentary, sometimes watching television for hours at a time because he never grew bored with the shows. His physicians became worried about his heart. The doctors told Beverly to keep him on a strict diet of healthy foods. She tried, but it was difficult to influence how frequently he ate or what he consumed. He never recalled her admonitions. Even if the refrigerator was stocked with fruits and vegetables, Eugene would root around until he found the bacon and eggs. That was his routine. And as Eugene aged and his bones became more brittle, the doctors said he needed to be more careful walking around. In his mind, however, Eugene was twenty years younger. He never remembered to step carefully.</p>
+
+<p class="calibre2">“All my life I was fascinated by memory,” Squire told me. “Then I met E.P., and saw how rich life can be even if you can’t remember it. The brain has this amazing ability to find happiness even when the memories of it are gone.</p>
+
+<p class="calibre2">“It’s hard to turn that off, though, which ultimately worked against him.”</p>
+
+<p class="calibre2">Beverly tried to use her understanding of habits to help Eugene avoid problems as he aged. She discovered that she could short-circuit some of his worst patterns by inserting new cues. If she didn’t keep bacon in the fridge, Eugene wouldn’t eat multiple, unhealthy breakfasts. When she put a salad next to his chair, he would sometimes pick at it, and as the meal became a habit, he stopped searching the kitchen for treats. His diet gradually improved.</p>
+
+<p class="calibre2">Despite these efforts, however, Eugene’s health still declined. One spring day, Eugene was watching television when he suddenly shouted. Beverly ran in and saw him clutching his chest. She called an ambulance. At the hospital, they diagnosed a minor heart attack. By then the pain had passed and Eugene was fighting to get off his gurney. That night, he kept pulling off the monitors attached to his chest so he could roll over and sleep. Alarms would blare and nurses would rush in. They tried to get him to quit fiddling with the sensors by taping the leads in place and telling him they would use restraints if he continued fussing. Nothing worked. He forgot the threats as soon as they were issued.</p>
+
+<p class="calibre2">Then his daughter told a nurse to try complimenting him on his willingness to sit still, and to repeat the compliment, over and over, each time she saw him. “We wanted to, you know, get his pride involved,” his daughter, Carol Rayes, told me. “We’d say, ‘Oh, Dad, you’re really doing something important for science by keeping these doodads in place.’ ” The nurses started to dote on him. He loved it. After a couple of days, he did whatever they asked. Eugene returned home a week later.</p>
+
+<p class="calibre2">Then, in the fall of 2008, while walking through his living room, Eugene tripped on a ledge near the fireplace, fell, and broke his hip. At the hospital, Squire and his team worried that he would have panic attacks because he wouldn’t know where he was. So they left notes by his bedside explaining what had happened and posted photos of his children on the walls. His wife and kids came every day.</p>
+
+<p class="calibre2">Eugene, however, never grew worried. He never asked why he was in the hospital. “He seemed at peace with all the uncertainty by that point,” said Squire. “It had been fifteen years since he had lost his memory. It was as if part of his brain knew there were some things he would never understand and was okay with that.”</p>
+
+<p class="calibre2">Beverly came to the hospital every day. “I spent a long time talking to him,” she said. “I told him that I loved him, and about our kids and what a good life we had. I pointed to the pictures and talked about how much he was adored. We were married for fifty-seven years, and forty-two of those were a real, normal marriage. Sometimes it was hard, because I wanted my old husband back so much. But at least I knew he was happy.”</p>
+
+<p class="calibre2">A few weeks later, his daughter came to visit. “What’s the plan?” Eugene asked when she arrived. She took him outside in a wheelchair, onto the hospital’s lawn. “It’s a beautiful day,” Eugene said. “Pretty nice weather, huh?” She told him about her kids and they played with a dog. She thought he might be able to come home soon. The sun was going down. She started to get ready to take him inside.</p>
+
+<p class="calibre2">Eugene looked at her.</p>
+
+<p class="calibre2">“I’m lucky to have a daughter like you,” he said. She was caught off-guard. She couldn’t remember the last time he had said something so sweet.</p>
+
+<p class="calibre2">“I’m lucky that you’re my dad,” she told him.</p>
+
+<p class="calibre2">“Gosh, it’s a beautiful day,” he said. “What do you think about the weather?”</p>
+
+<p class="calibre2">That night, at one o’clock in the morning, Beverly’s phone rang. The doctor said Eugene had suffered a massive heart attack and the staff had done everything possible, but hadn’t been able to revive him. He was gone. After his death, he would be celebrated by researchers, the images of his brain studied in hundreds of labs and medical schools.</p>
+
+<p class="calibre2">“I know he would have been really proud to know how much he contributed to science,” Beverly told me. “He told me once, pretty soon after we got married, that he wanted to do something important with his life, something that mattered. And he did. He just never remembered any of it.”</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p><br class="content"/><br class="content"/><p class="calibre2"><strong class="calibre4">THE CRAVING BRAIN</strong></p><br class="content"/><p class="calibre2"><strong class="calibre4">How to Create New Habits</strong></p>
+
+<p class="calibre2"><strong class="calibre4">I.</strong></p>
+
+<p class="calibre2">One day in the early 1900s, a prominent American executive named Claude C. Hopkins was approached by an old friend with a new business idea. The friend had discovered an amazing product, he explained, that he was convinced would be a hit. It was a toothpaste, a minty, frothy concoction he called “Pepsodent.” There were some dicey investors involved—one of them had a string of busted land deals; another, it was rumored, was connected to the mob—but this venture, the friend promised, was going to be huge. If, that is, Hopkins would consent to help design a national promotional campaign.<sup class="calibre5">2.1</sup></p>
+
+<p class="calibre2">Hopkins, at the time, was at the top of a booming industry that had hardly existed a few decades earlier: advertising. Hopkins was the man who had convinced Americans to buy Schlitz beer by boasting that the company cleaned their bottles “with live steam,” while neglecting to mention that every other company used the exact same method. He had seduced millions of women into purchasing Palmolive soap by proclaiming that Cleopatra had washed with it, despite the sputtering protests of outraged historians. He had made Puffed Wheat famous by saying that it was “shot from guns” until the grains puffed “to eight times normal size.” He had turned dozens of previously unknown products—Quaker Oats, Goodyear tires, the Bissell carpet sweeper, Van Camp’s pork and beans—into household names. And in the process, he had made himself so rich that his best-selling autobiography, <em class="calibre3">My Life in Advertising,</em> devoted long passages to the difficulties of spending so much money.</p>
+
+<p class="calibre2">Claude Hopkins was best known for a series of rules he coined explaining how to create new habits among consumers. These rules would transform industries and eventually became conventional wisdom among marketers, educational reformers, public health professionals, politicians, and CEOs. Even today, Hopkins’s rules influence everything from how we buy cleaning supplies to the tools governments use for eradicating disease. They are fundamental to creating any new routine.</p>
+
+<p class="calibre2">However, when his old friend approached Hopkins about Pepsodent, the ad man expressed only mild interest. It was no secret that the health of Americans’ teeth was in steep decline. As the nation had become wealthier, people had started buying larger amounts of sugary, processed foods.<sup class="calibre5">2.2</sup> When the government started drafting men for World War I, so many recruits had rotting teeth that officials said poor dental hygiene was a national security risk.</p>
+
+<p class="calibre2">Yet as Hopkins knew, selling toothpaste was financial suicide. There was already an army of door-to-door salesmen hawking dubious tooth powders and elixirs, most of them going broke.</p>
+
+<p class="calibre2">The problem was that hardly anyone bought toothpaste because, despite the nation’s dental problems, hardly anyone brushed their teeth.<sup class="calibre5">2.3</sup></p>
+
+<p class="calibre2">So Hopkins gave his friend’s proposal a bit of thought, and then declined. He’d stick with soaps and cereals, he said. “I did not see a way to educate the laity in technical tooth-paste theories,” Hopkins explained in his autobiography. The friend, however, was persistent. He came back again and again, appealing to Hopkins’s considerable ego until, eventually, the ad man gave in.</p>
+
+<p class="calibre2">“I finally agreed to undertake the campaign if he gave me a six months’ option on a block of stock,” Hopkins wrote. The friend agreed.</p>
+
+<p class="calibre2">It would be the wisest financial decision of Hopkins’s life.</p>
+
+<p class="calibre2">Within five years of that partnership, Hopkins turned Pepsodent into one of the best-known products on earth and, in the process, helped create a toothbrushing habit that moved across America with startling speed. Soon, everyone from Shirley Temple to Clark Gable was bragging about their “Pepsodent smile.”<sup class="calibre5">2.4</sup>By 1930, Pepsodent was sold in China, South Africa, Brazil, Germany, and almost anywhere else Hopkins could buy ads.<sup class="calibre5">2.5</sup>A decade after the first Pepsodent campaign, pollsters found that toothbrushing had become a ritual for more than half the American population.<sup class="calibre5">2.6</sup> Hopkins had helped establish toothbrushing as a daily activity.</p>
+
+<p class="calibre2">The secret to his success, Hopkins would later boast, was that he had found a certain kind of cue and reward that fueled a particular habit. It’s an alchemy so powerful that even today the basic principles are still used video game designers, food companies, hospitals, and millions of salesmen around the world. Eugene Pauly taught us about the habit loop, but it was Claude Hopkins that showed how new habits can be cultivated and grown.</p>
+
+<p class="calibre2">So what, exactly, did Hopkins do?</p>
+
+<p class="calibre2">He created a craving. And that craving, it turns out, is what makes cues and rewards work. That craving is what powers the habit loop.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Throughout his career, one of Claude Hopkins’s signature tactics was to find simple triggers to convince consumers to use his products every day. He sold Quaker Oats, for instance, as a breakfast cereal that could provide energy for twenty-four hours—but only if you ate a bowl every morning. He hawked tonics that cured stomachaches, joint pain, bad skin, and “womanly problems”—but only if you drank the medicine at symptoms’ first appearance. Soon, people were devouring oatmeal at daybreak and chugging from little brown bottles whenever they felt a hint of fatigue, which, as luck would have it, often happened at least once a day.</p>
+
+<p class="calibre2">To sell Pepsodent, then, Hopkins needed a trigger that would justify the toothpaste’s daily use. He sat down with a pile of dental textbooks. “It was dry reading,” he later wrote. “But in the middle of one book I found a reference to the mucin plaques on teeth, which I afterward called ‘the film.’ That gave me an appealing idea. I resolved to advertise this toothpaste as a creator of beauty. To deal with that cloudy film.”</p>
+
+<p class="calibre2">In focusing on tooth film, Hopkins was ignoring the fact that this same film has always covered people’s teeth and hadn’t seemed to bother anyone. The film is a naturally occurring membrane that builds up on teeth regardless of what you eat or how often you brush.<sup class="calibre5">2.7</sup> People had never paid much attention to it, and there was little reason why they should: You can get rid of the film by eating an apple, running your finger over your teeth, brushing, or vigorously swirling liquid around your mouth. Toothpaste didn’t do anything to help remove the film. In fact, one of the leading dental researchers of the time said that all toothpastes—particularly Pepsodent—were worthless.<sup class="calibre5">2.8</sup></p>
+
+<p class="calibre2">That didn’t stop Hopkins from exploiting his discovery. Here, he decided, was a cue that could trigger a habit. Soon, cities were plastered with Pepsodent ads.</p>
+
+<p class="calibre2">“Just run your tongue across your teeth,” read one. “<em class="calibre3">You’ll feel a film—</em>that’s what makes your teeth look ‘off color’ and invites decay.”</p>
+
+<p class="calibre2">“Note how many pretty teeth are seen everywhere,” read another ad, featuring smiling beauties. “Millions are using a new method of teeth cleansing. Why would any woman have dingy film on her teeth? Pepsodent removes the film!”<sup class="calibre5">2.9</sup></p>
+
+<p class="calibre2">The brilliance of these appeals was that they relied upon a cue—tooth film—that was universal and impossible to ignore. Telling someone to run their tongue across their teeth, it turned out, was likely to cause them to run their tongue across their teeth. And when they did, they were likely to feel a film. Hopkins had found a cue that was simple, had existed for ages, and was so easy to trigger that an advertisement could cause people to comply automatically.</p>
+
+<p class="calibre2">Moreover, the reward, as Hopkins envisioned it, was even more enticing. Who, after all, doesn’t want to be more beautiful? Who doesn’t want a prettier smile? Particularly when all it takes is a quick brush with Pepsodent?</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">HOPKINS’S CONCEPTION OF THE PEPSODENT HABIT LOOP</p>
+
+<p class="calibre2">After the campaign launched, a quiet week passed. Then two. In the third week, demand exploded. There were so many orders for Pepsodent that the company couldn’t keep up. In three years, the product went international, and Hopkins was crafting ads in Spanish, German, and Chinese. Within a decade, Pepsodent was one of the top-selling goods in the world, and remained America’s best-selling toothpaste for more than thirty years.<sup class="calibre5">2.10</sup><sup class="calibre5">, </sup><sup class="calibre5">2.11</sup></p>
+
+<p class="calibre2">Before Pepsodent appeared, only 7 percent of Americans had a tube of toothpaste in their medicine chests. A decade after Hopkins’s ad campaign went nationwide, that number had jumped to 65 percent.<sup class="calibre5">2.12</sup> By the end of World War II, the military downgraded concerns about recruits’ teeth because so many soldiers were brushing every day.</p>
+
+<p class="calibre2">“I made for myself a million dollars on Pepsodent,” Hopkins wrote a few years after the product appeared on shelves. The key, he said, was that he had “learned the right human psychology.” That psychology was grounded in two basic rules:</p>
+
+<p class="calibre2">First, find a simple and obvious cue.</p>
+
+<p class="calibre2">Second, clearly define the rewards.</p>
+
+<p class="calibre2">If you get those elements right, Hopkins promised, it was like magic. Look at Pepsodent: He had identified a cue—tooth film—and a reward—beautiful teeth—that had persuaded millions to start a daily ritual. Even today, Hopkins’s rules are a staple of marketing textbooks and the foundation of millions of ad campaigns.</p>
+
+<p class="calibre2">And those same principles have been used to create thousands of other habits—often without people realizing how closely they are hewing to Hopkins’s formula. Studies of people who have successfully started new exercise routines, for instance, show they are more likely to stick with a workout plan if they choose a specific cue, such as running as soon as they get home from work, and a clear reward, such as a beer or an evening of guilt-free television.<sup class="calibre5">2.13</sup>Research on dieting says creating new food habits requires a predetermined cue—such as planning menus in advance—and simple rewards for dieters when they stick to their intentions.<sup class="calibre5">2.14</sup></p>
+
+<p class="calibre2">“The time has come when advertising has in some hands reached the status of a science,” Hopkins wrote. “Advertising, once a gamble, has thus become, under able direction, one of the safest of business ventures.”</p>
+
+<p class="calibre2">It’s quite a boast. However, it turns out that Hopkins’s two rules aren’t enough. There’s also a third rule that must be satisfied to create a habit—a rule so subtle that Hopkins himself relied on it without knowing it existed. It explains everything from why it’s so hard to ignore a box of doughnuts to how a morning jog can become a nearly effortless routine.</p>
+
+<p class="calibre2"><strong class="calibre4">II.</strong></p>
+
+<p class="calibre2">The scientists and marketing executives at Procter &amp; Gamble were gathered around a beat-up table in a small, windowless room, reading the transcript of an interview with a woman who owned nine cats, when one of them finally said what everyone was thinking.</p>
+
+<p class="calibre2">“If we get fired, what exactly happens?” she asked. “Do security guards show up and walk us out, or do we get some kind of warning beforehand?”</p>
+
+<p class="calibre2">The team’s leader, a onetime rising star within the company named Drake Stimson, stared at her.</p>
+
+<p class="calibre2">“I don’t know,” he said. His hair was a mess. His eyes were tired. “I never thought things would get this bad. They told me running this project was a promotion.”</p>
+
+<p class="calibre2">It was 1996, and the group at the table was finding out, despite Claude Hopkins’s assertions, how utterly unscientific the process of selling something could become. They all worked for one of the largest consumer goods firms on earth, the company behind Pringles potato chips, Oil of Olay, Bounty paper towels, CoverGirl cosmetics, Dawn, Downy, and Duracell, as well as dozens of other brands. P&amp;G collected more data than almost any other merchant on earth and relied on complex statistical methods to craft their marketing campaigns. The firm was incredibly good at figuring out how to sell things. In the clothes-washing market alone, P&amp;G’s products cleaned one out of every two laundry loads in America.<sup class="calibre5">2.15</sup> Its revenues topped $35 billion per year.<sup class="calibre5">2.16</sup></p>
+
+<p class="calibre2">However, Stimson’s team, which had been entrusted with designing the ad campaign for one of P&amp;G’s most promising new products, was on the brink of failure. The company had spent millions of dollars developing a spray that could remove bad smells from almost any fabric. And the researchers in that tiny, windowless room had no idea how to get people to buy it.</p>
+
+<p class="calibre2">The spray had been created about three years earlier, when one of P&amp;G’s chemists was working with a substance called hydroxypropyl beta cyclodextrin, or HPBCD, in a laboratory. The chemist was a smoker. His clothes usually smelled like an ashtray. One day, after working with HPBCD, his wife greeted him at the door when he got home.</p>
+
+<p class="calibre2">“Did you quit smoking?” she asked him.</p>
+
+<p class="calibre2">“No,” he said. He was suspicious. She had been harassing him to give up cigarettes for years. This seemed like some kind of reverse psychology trickery.</p>
+
+<p class="calibre2">“You don’t smell like smoke, is all,” she said.</p>
+
+<p class="calibre2">The next day, he went back to the lab and started experimenting with HPBCD and various scents. Soon, he had hundreds of vials containing fabrics that smelled like wet dogs, cigars, sweaty socks, Chinese food, musty shirts, and dirty towels. When he put HPBCD in water and sprayed it on the samples, the scents were drawn into the chemical’s molecules. After the mist dried, the smell was gone.</p>
+
+<p class="calibre2">When the chemist explained his findings to P&amp;G’s executives, they were ecstatic. For years, market research had said that consumers were clamoring for something that could get rid of bad smells—not mask them, but eradicate them altogether. When one team of researchers had interviewed customers, they found that many of them left their blouses or slacks outside after a night at a bar or party. “My clothes smell like cigarettes when I get home, but I don’t want to pay for dry cleaning every time I go out,” one woman said.</p>
+
+<p class="calibre2">P&amp;G, sensing an opportunity, launched a top-secret project to turn HPBCD into a viable product. They spent millions perfecting the formula, finally producing a colorless, odorless liquid that could wipe out almost any foul odor. The science behind the spray was so advanced that NASA would eventually use it to clean the interiors of shuttles after they returned from space. The best part was that it was cheap to manufacture, didn’t leave stains, and could make any stinky couch, old jacket, or stained car interior smell, well, scentless. The project had been a major gamble, but P&amp;G was now poised to earn billions—if they could come up with the right marketing campaign.</p>
+
+<p class="calibre2">They decided to call it Febreze, and asked Stimson, a thirty-one-year-old wunderkind with a background in math and psychology, to lead the marketing team.<sup class="calibre5">2.17</sup> Stimson was tall and handsome, with a strong chin, a gentle voice, and a taste for high-end meals. (“I’d rather my kids smoked weed than ate in McDonald’s,” he once told a colleague.) Before joining P&amp;G, he had spent five years on Wall Street building mathematical models for choosing stocks. When he relocated to Cincinnati, where P&amp;G was headquartered, he was tapped to help run important business lines, including Bounce fabric softener and Downy dryer sheets. But Febreze was different. It was a chance to launch an entirely new category of product—to add something to a consumer’s shopping cart that had never been there before. All Stimson needed to do was figure out how to make Febreze into a habit, and the product would fly off the shelves. How tough could that be?</p>
+
+<p class="calibre2">Stimson and his colleagues decided to introduce Febreze in a few test markets—Phoenix, Salt Lake City, and Boise. They flew in and handed out samples, and then asked people if they could come by their homes. Over the course of two months, they visited hundreds of households. Their first big breakthrough came when they visited a park ranger in Phoenix. She was in her late twenties and lived by herself. Her job was to trap animals that wandered out of the desert. She caught coyotes, raccoons, the occasional mountain lion. And skunks. Lots and lots of skunks. Which often sprayed her when they were caught.</p>
+
+<p class="calibre2">“I’m single, and I’d like to find someone to have kids with,” the ranger told Stimson and his colleagues while they sat in her living room. “I go on a lot of dates. I mean, I think I’m attractive, you know? I’m smart and I feel like I’m a good catch.”</p>
+
+<p class="calibre2">But her love life was crippled, she explained, because everything in her life smelled like skunk. Her house, her truck, her clothing, her boots, her hands, her curtains. Even her bed. She had tried all sorts of cures. She bought special soaps and shampoos. She burned candles and used expensive carpet shampooing machines. None of it worked.</p>
+
+<p class="calibre2">“When I’m on a date, I’ll get a whiff of something that smells like skunk and I’ll start obsessing about it,” she told them. “I’ll start wondering, does he smell it? What if I bring him home and he wants to leave?</p>
+
+<p class="calibre2">“I went on four dates last year with a really nice guy, a guy I really liked, and I waited forever to invite him to my place. Eventually, he came over, and I thought everything was going really well. Then the next day, he said he wanted to ‘take a break.’ He was really polite about it, but I keep wondering, was it the smell?”</p>
+
+<p class="calibre2">“Well, I’m glad you got a chance to try Febreze,” Stimson said. “How’d you like it?”</p>
+
+<p class="calibre2">She looked at him. She was crying.</p>
+
+<p class="calibre2">“I want to thank you,” she said. “This spray has changed my life.”</p>
+
+<p class="calibre2">After she had received samples of Febreze, she had gone home and sprayed her couch. She sprayed the curtains, the rug, the bedspread, her jeans, her uniform, the interior of her car. The bottle ran out, so she got another one, and sprayed everything else.</p>
+
+<p class="calibre2">“I’ve asked all of my friends to come over,” the woman said. “They can’t smell it anymore. The skunk is gone.”</p>
+
+<p class="calibre2">By now, she was crying so hard that one of Stimson’s colleagues was patting her on the shoulder. “Thank you so much,” the woman said. “I feel so free. Thank you. This product is so important.”</p>
+
+<p class="calibre2">Stimson sniffed the air inside her living room. He couldn’t smell anything. <em class="calibre3">We’re going to make a fortune with this stuff,</em> he thought.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Stimson and his team went back to P&amp;G headquarters and started reviewing the marketing campaign they were about to roll out. The key to selling Febreze, they decided, was conveying that sense of relief the park ranger felt. They had to position Febreze as something that would allow people to rid themselves of embarrassing smells. All of them were familiar with Claude Hopkins’s rules, or the modern incarnations that filled business school textbooks. They wanted to keep the ads simple: Find an obvious cue and clearly define the reward.</p>
+
+<p class="calibre2">They designed two television commercials. The first showed a woman talking about the smoking section of a restaurant. Whenever she eats there, her jacket smells like smoke. A friend tells her if she uses Febreze, it will eliminate the odor. The cue: the smell of cigarettes. The reward: odor eliminated from clothes. The second ad featured a woman worrying about her dog, Sophie, who always sits on the couch.<sup class="calibre5">2.18</sup> “Sophie will always smell like Sophie,” she says, but with Febreze, “now my furniture doesn’t have to.” The cue: pet smells, which are familiar to the seventy million households with animals.<sup class="calibre5">2.19</sup> The reward: a house that doesn’t smell like a kennel.</p>
+
+<p class="calibre2">Stimson and his colleagues began airing the advertisements in 1996 in the same test cities. They gave away samples, put advertisements in mailboxes, and paid grocers to build mountains of Febreze near cash registers. Then they sat back, anticipating how they would spend their bonuses.</p>
+
+<p class="calibre2">A week passed. Then two. A month. Two months. Sales started small—and got smaller. Panicked, the company sent researchers into stores to see what was happening. Shelves were filled with Febreze bottles that had never been touched. They started visiting housewives who had received free samples.</p>
+
+<p class="calibre2">“Oh, yes!” one of them told a P&amp;G researcher. “The spray! I remember it. Let’s see.” The woman got down on her knees in the kitchen and started rooting through the cabinet underneath the sink. “I used it for a while, but then I forgot about it. I think it’s back here somewhere.” She stood up. “Maybe it’s in the closet?” She walked over and pushed aside some brooms. “Yes! Here it is! In the back! See? It’s still almost full. Did you want it back?”</p><br class="content"/><div class="calibre1">
+<br class="content"/>
+</div>
+
+
+<p class="calibre2">Febreze was a dud.</p>
+
+<p class="calibre2">For Stimson, this was a disaster. Rival executives in other divisions sensed an opportunity in his failure. He heard whispers that some people were lobbying to kill Febreze and get him reassigned to Nicky Clarke hair products, the consumer goods equivalent of Siberia.</p>
+
+<p class="calibre2">One of P&amp;G’s divisional presidents called an emergency meeting and announced they had to cut their losses on Febreze before board members started asking questions. Stimson’s boss stood up and made an impassioned plea. “There’s still a chance to turn everything around,” he said. “At the very least, let’s ask the PhDs to figure out what’s going on.” P&amp;G had recently snapped up scientists from Stanford, Carnegie Mellon, and elsewhere who were supposed experts in consumer psychology. The division’s president agreed to give the product a little more time.</p>
+
+<p class="calibre2">So a new group of researchers joined Stimson’s team and started conducting more interviews.<sup class="calibre5">2.20</sup> Their first inkling of why Febreze was failing came when they visited a woman’s home outside Phoenix. They could smell her nine cats before they went inside. The house’s interior, however, was clean and organized. She was somewhat of a neat freak, the woman explained. She vacuumed every day and didn’t like to open her windows, since the wind blew in dust. When Stimson and the scientists walked into her living room, where the cats lived, the scent was so overpowering that one of them gagged.</p>
+
+<p class="calibre2">“What do you do about the cat smell?” a scientist asked the woman.</p>
+
+<p class="calibre2">“It’s usually not a problem,” she said.</p>
+
+<p class="calibre2">“How often do you notice a smell?”</p>
+
+<p class="calibre2">“Oh, about once a month,” the woman replied.</p>
+
+<p class="calibre2">The researchers looked at one another.</p>
+
+<p class="calibre2">“Do you smell it now?” a scientist asked.</p>
+
+<p class="calibre2">“No,” she said.</p>
+
+<p class="calibre2">The same pattern played out in dozens of other smelly homes the researchers visited. People couldn’t detect most of the bad smells in their lives. If you live with nine cats, you become desensitized to their scent. If you smoke cigarettes, it damages your olfactory capacities so much that you can’t smell smoke anymore. Scents are strange; even the strongest fade with constant exposure. That’s why no one was using Febreze, Stimson realized. The product’s cue—the thing that was supposed to trigger daily use—was hidden from the people who needed it most. Bad scents simply weren’t noticed frequently enough to trigger a regular habit. As a result, Febreze ended up in the back of a closet. The people with the greatest proclivity to use the spray never smelled the odors that should have reminded them the living room needed a spritz.</p>
+
+<p class="calibre2">Stimson’s team went back to headquarters and gathered in the windowless conference room, rereading the transcript of the woman with nine cats. The psychologist asked what happens if you get fired. Stimson put his head in his hands. If he couldn’t sell Febreze to a woman with nine cats, he wondered, who <em class="calibre3">could</em> he sell it to? How do you build a new habit when there’s no cue to trigger usage, and when the consumers who most need it don’t appreciate the reward?</p>
+
+<p class="calibre2"><strong class="calibre4">III.</strong></p>
+
+<p class="calibre2">The laboratory belonging to Wolfram Schultz, a professor of neuroscience at the University of Cambridge, is not a pretty place. His desk has been alternately described by colleagues as a black hole where documents are lost forever and a petri dish where organisms can grow, undisturbed and in wild proliferation, for years. When Schultz needs to clean something, which is uncommon, he doesn’t use sprays or cleansers. He wets a paper towel and wipes hard. If his clothes smell like smoke or cat hair, he doesn’t notice. Or care.</p>
+
+<p class="calibre2">However, the experiments that Schultz has conducted over the past twenty years have revolutionized our understanding of how cues, rewards, and habits interact. He has explained why some cues and rewards have more power than others, and has provided a scientific road map that explains why Pepsodent was a hit, how some dieters and exercise buffs manage to change their habits so quickly, and—in the end—what it took to make Febreze sell.</p>
+
+<p class="calibre2">In the 1980s, Schultz was part of a group of scientists studying the brains of monkeys as they learned to perform certain tasks, such as pulling on levers or opening clasps. Their goal was to figure out which parts of the brain were responsible for new actions.</p>
+
+<p class="calibre2">“One day, I noticed this thing that is interesting to me,” Schultz told me. He was born in Germany and now, when he speaks English, sounds a bit like Arnold Schwarzenegger if the Terminator were a member of the Royal Society. “A few of the monkeys we watched loved apple juice, and the other monkeys loved grape juice, and so I began to wonder, what is going on inside those little monkey heads? Why do different rewards affect the brain in different ways?”</p>
+
+<p class="calibre2">Schultz began a series of experiments to decipher how rewards work on a neurochemical level. As technology progressed, he gained access, in the 1990s, to devices similar to those used by the researchers at MIT. Rather than rats, however, Schultz was interested in monkeys like Julio, an eight-pound macaque with hazel eyes who had a very thin electrode inserted into his brain that allowed Schultz to observe neuronal activity as it occurred.<sup class="calibre5">2.21</sup></p>
+
+<p class="calibre2">One day, Schultz positioned Julio on a chair in a dimly lit room and turned on a computer monitor. Julio’s job was to touch a lever whenever colored shapes—small yellow spirals, red squiggles, blue lines—appeared on the screen. If Julio touched the lever when a shape appeared, a drop of blackberry juice would run down a tube hanging from the ceiling and onto the monkey’s lips.</p>
+
+<p class="calibre2">Julio liked blackberry juice.</p>
+
+<p class="calibre2">At first, Julio was only mildly interested in what was happening on the screen. He spent most of his time trying to squirm out of the chair. But once the first dose of juice arrived, Julio became very focused on the monitor. As the monkey came to understand, through dozens of repetitions, that the shapes on the screen were a cue for a routine (touch the lever) that resulted in a reward (blackberry juice), he started staring at the screen with a laserlike intensity. He didn’t squirm. When a yellow squiggle appeared, he went for the lever. When a blue line flashed, he pounced. And when the juice arrived, Julio would lick his lips contentedly.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">JULIO’S REWARD RESPONSE WHEN HE RECEIVES THE JUICE</p>
+
+<p class="calibre2">As Schultz monitored the activity within Julio’s brain, he saw a pattern emerge. Whenever Julio received his reward, his brain activity would spike in a manner that suggested he was experiencing happiness.<sup class="calibre5">2.22</sup> A transcript of that neurological activity shows what it looks like when a monkey’s brain says, in essence, “I got a reward!”</p>
+
+<p class="calibre2">Schultz took Julio through the same experiment again and again, recording the neurological response each time. Whenever Julio received his juice, the “I got a reward!” pattern appeared on the computer attached to the probe in the monkey’s head. Gradually, from a neurological perspective, Julio’s behavior became a habit.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">JULIO’S HABIT LOOP</p>
+
+<p class="calibre2">What was most interesting to Schultz, however, was how things changed as the experiment proceeded. As the monkey became more and more practiced at the behavior—as the habit became stronger and stronger—Julio’s brain began <em class="calibre3">anticipating</em> the blackberry juice. Schultz’s probes started recording the “I got a reward!” pattern the instant Julio saw the shapes on the screen, <em class="calibre3">before</em> the juice arrived:</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">NOW, JULIO’S REWARD RESPONSE OCCURS BEFORE THE JUICE ARRIVES</p>
+
+<p class="calibre2">In other words, the shapes on the monitor had become a cue not just for pulling a lever, but also for a pleasure response inside the monkey’s brain. Julio started expecting his reward as soon as he saw the yellow spirals and red squiggles.</p>
+
+<p class="calibre2">Then Schultz adjusted the experiment. Previously, Julio had received juice as soon as he touched the lever. Now, sometimes, the juice didn’t arrive at all, even if Julio performed correctly. Or it would arrive after a slight delay. Or it would be watered down until it was only half as sweet.</p>
+
+<p class="calibre2">When the juice didn’t arrive or was late or diluted, Julio would get angry and make unhappy noises, or become mopey. And within Julio’s brain, Schultz watched a new pattern emerge: craving. When Julio anticipated juice but didn’t receive it, a neurological pattern associated with desire and frustration erupted inside his skull. When Julio saw the cue, he started anticipating a juice-fueled joy. But if the juice didn’t arrive, that joy became a craving that, if unsatisfied, drove Julio to anger or depression.</p>
+
+<p class="calibre2">Researchers in other labs have found similar patterns. Other monkeys were trained to anticipate juice whenever they saw a shape on a screen. Then, researchers tried to distract them. They opened the lab’s door, so the monkeys could go outside and play with their friends. They put food in a corner, so the monkeys could eat if they abandoned the experiment.</p>
+
+<p class="calibre2">For those monkeys who hadn’t developed a strong habit, the distractions worked. They slid out of their chairs, left the room, and never looked back. They hadn’t learned to crave the juice. However, once a monkey had developed a habit—once its brain <em class="calibre3">anticipated</em> the reward—the distractions held no allure. The animal would sit there, watching the monitor and pressing the lever, over and over again, regardless of the offer of food or the opportunity to go outside. The anticipation and sense of craving was so overwhelming that the monkeys stayed glued to their screens, the same way a gambler will play slots long after he’s lost his winnings.<sup class="calibre5">2.23</sup></p>
+
+<p class="calibre2">This explains why habits are so powerful: They create neurological cravings. Most of the time, these cravings emerge so gradually that we’re not really aware they exist, so we’re often blind to their influence. But as we associate cues with certain rewards, a subconscious craving emerges in our brains that starts the habit loop spinning. One researcher at Cornell, for instance, found how powerfully food and scent cravings can affect behavior when he noticed how Cinnabon stores were positioned inside shopping malls. Most food sellers locate their kiosks in food courts, but Cinnabon tries to locate their stores <em class="calibre3">away</em> from other food stalls.<sup class="calibre5">2.24</sup> Why? Because Cinnabon executives want the smell of cinnamon rolls to waft down hallways and around corners uninterrupted, so that shoppers will start subconsciously craving a roll. By the time a consumer turns a corner and sees the Cinnabon store, that craving is a roaring monster inside his head and he’ll reach, unthinkingly, for his wallet. The habit loop is spinning because a sense of craving has emerged.<sup class="calibre5">2.25</sup></p>
+
+<p class="calibre2">“There is nothing programmed into our brains that makes us see a box of doughnuts and automatically want a sugary treat,” Schultz told me. “But once our brain learns that a doughnut box contains yummy sugar and other carbohydrates, it will start <em class="calibre3">anticipating</em> the sugar high. Our brains will push us toward the box. Then, if we don’t eat the doughnut, we’ll feel disappointed.”</p>
+
+<p class="calibre2">To understand this process, consider how Julio’s habit emerged. First, he saw a shape on the screen:</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Over time, Julio learned that the appearance of the shape meant it was time to execute a routine. So he touched the lever:</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">As a result, Julio received a drop of blackberry juice.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">That’s basic learning. The habit only emerges once Julio begins <em class="calibre3">craving</em> the juice when he sees the cue. Once that craving exists, Julio will act automatically. He’ll follow the habit:</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">JULIO’S HABIT LOOP</p>
+
+<p class="calibre2">This is how new habits are created: by putting together a cue, a routine, and a reward, and then cultivating a craving that drives the loop.<sup class="calibre5">2.26</sup> Take, for instance, smoking. When a smoker sees a cue—say, a pack of Marlboros—her brain starts anticipating a hit of nicotine. Just the sight of cigarettes is enough for the brain to crave a nicotine rush. If it doesn’t arrive, the craving grows until the smoker reaches, unthinkingly, for a Marlboro.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Or take email. When a computer chimes or a smartphone vibrates with a new message, the brain starts anticipating the momentary distraction that opening an email provides. That expectation, if unsatisfied, can build until a meeting is filled with antsy executives checking their buzzing BlackBerrys under the table, even if they know it’s probably only their latest fantasy football results. (On the other hand, if someone disables the buzzing—and, thus, removes the cue—people can work for hours without thinking to check their in-boxes.)</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Scientists have studied the brains of alcoholics, smokers, and overeaters and have measured how their neurology—the structures of their brains and the flow of neurochemicals inside their skulls—changes as their cravings became ingrained. Particularly strong habits, wrote two researchers at the University of Michigan, produce addiction-like reactions so that “wanting evolves into obsessive craving” that can force our brains into autopilot, “even in the face of strong disincentives, including loss of reputation, job, home, and family.”<sup class="calibre5">2.27</sup></p>
+
+<p class="calibre2">However, these cravings don’t have complete authority over us. As the next chapter explains, there are mechanisms that can help us ignore the temptations. But to overpower the habit, we must recognize which craving is driving the behavior. If we’re not conscious of the anticipation, then we’re like the shoppers who wander, as if drawn by an unseen force, into Cinnabon.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">To understand the power of cravings in creating habits, consider how exercise habits emerge. In 2002 researchers at New Mexico State University wanted to understand why people habitually exercise.<sup class="calibre5">2.28</sup> They studied 266 individuals, most of whom worked out at least three times a week. What they found was that many of them had started running or lifting weights almost on a whim, or because they suddenly had free time or wanted to deal with unexpected stresses in their lives. However, the reason they <em class="calibre3">continued—</em>why it became a habit—was because of a specific reward they started to crave.</p>
+
+<p class="calibre2">In one group, 92 percent of people said they habitually exercised because it made them “feel good”—they grew to expect and crave the endorphins and other neurochemicals a workout provided. In another group, 67 percent of people said that working out gave them a sense of “accomplishment”—they had come to crave a regular sense of triumph from tracking their performances, and that self-reward was enough to make the physical activity into a habit.</p>
+
+<p class="calibre2">If you want to start running each morning, it’s essential that you choose a simple cue (like always lacing up your sneakers before breakfast or leaving your running clothes next to your bed) and a clear reward (such as a midday treat, a sense of accomplishment from recording your miles, or the endorphin rush you get from a jog). But countless studies have shown that a cue and a reward, on their own, aren’t enough for a new habit to last. Only when your brain starts <em class="calibre3">expecting</em> the reward—craving the endorphins or sense of accomplishment—will it become automatic to lace up your jogging shoes each morning. The cue, in addition to triggering a routine, must also trigger a craving for the reward to come.<sup class="calibre5">2.29</sup></p>
+
+<p class="calibre2">“Let me ask you about a problem I have,” I said to Wolfram Schultz, the neuroscientist, after he explained to me how craving emerges. “I have a two-year-old, and when I’m home feeding him dinner—chicken nuggets and stuff like that—I’ll reach over and eat one myself without thinking about it. It’s a habit. And now I’m gaining weight.”</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">“Everybody does that,” Schultz said. He has three children of his own, all adults now. When they were young, he would pick at their dinners unthinkingly. “In some ways,” he told me, “we’re like the monkeys. When we see the chicken or fries on the table, our brains begin anticipating that food, even if we’re not hungry. Our brains are craving them. Frankly, I don’t even <em class="calibre3">like</em> this kind of food, but suddenly, it’s hard to fight this urge. And as soon as I eat it, I feel this rush of pleasure as the craving is satisfied. It’s humiliating, but that’s how habits work.</p>
+
+<p class="calibre2">“I guess I should be thankful,” he said, “because the same process has let me create good habits. I work hard because I expect pride from a discovery. I exercise because I expect feeling good afterward. I just wish I could pick and choose better.”</p>
+
+<p class="calibre2"><strong class="calibre4">IV.</strong></p>
+
+<p class="calibre2">After their disastrous interview with the cat woman, Drake Stimson’s team at P&amp;G started looking outside the usual channels for help. They began reading up on experiments such as those conducted by Wolfram Schultz. They asked a Harvard Business School professor to conduct psychological tests of Febreze’s ad campaigns. They interviewed customer after customer, looking for something that would give them a clue how to make Febreze a regular part of consumers’ lives.</p>
+
+<p class="calibre2">One day, they went to speak with a woman in a suburb near Scottsdale. She was in her forties with four kids. Her house was clean, but not compulsively tidy. To the surprise of the researchers, she loved Febreze.</p>
+
+<p class="calibre2">“I use it every day,” she told them.</p>
+
+<p class="calibre2">“You do?” Stimson said. The house didn’t seem like the kind of place with smelly problems. There weren’t any pets. No one smoked. “How? What smells are you trying to get rid of?”</p>
+
+<p class="calibre2">“I don’t really use it for specific smells,” the woman said. “I mean, you know, I’ve got boys. They’re going through puberty, and if I don’t clean their rooms, it smells like a locker. But I don’t really use it that way. I use it for normal cleaning—a couple of sprays when I’m done in a room. It’s a nice way to make everything smell good as a final touch.”</p>
+
+<p class="calibre2">They asked if they could watch her clean the house. In the bedroom, she made her bed, plumped the pillows, tightened the sheet’s corners, and then took a Febreze bottle and sprayed the smoothed comforter. In the living room, she vacuumed, picked up the kids’ shoes, straightened the coffee table, and sprayed Febreze on the freshly cleaned carpet. “It’s nice, you know?” she said. “Spraying feels like a little mini-celebration when I’m done with a room.” At the rate she was using Febreze, Stimson estimated, she would empty a bottle every two weeks.</p>
+
+<p class="calibre2">P&amp;G had collected thousands of hours of videotapes of people cleaning their homes over the years. When the researchers got back to Cincinnati, some of them spent an evening looking through the tapes. The next morning, one of the scientists asked the Febreze team to join him in the conference room. He cued up the tape of one woman—a twenty-six-year-old with three children—making a bed. She smoothed the sheets and adjusted a pillow. Then, she smiled and left the room.</p>
+
+<p class="calibre2">“Did you see that?” the researcher asked excitedly.</p>
+
+<p class="calibre2">He put on another clip. A younger, brunette woman spread out a colorful bedspread, straightened a pillow, and then smiled at her handiwork. “There it is again!” the researcher said. The next clip showed a woman in workout clothes tidying her kitchen and wiping the counter before easing into a relaxing stretch.</p>
+
+<p class="calibre2">The researcher looked at his colleagues.</p>
+
+<p class="calibre2">“Do you see it?” he asked.</p>
+
+<p class="calibre2">“Each of them is doing something relaxing or happy when they finish cleaning,” he said. “We can build off that! What if Febreze was something that happened at the <em class="calibre3">end</em> of the cleaning routine, rather than the beginning? What if it was the fun part of making something cleaner?”</p>
+
+<p class="calibre2">Stimson’s team ran one more test. Previously, the product’s advertising had focused on eliminating bad smells. The company printed up new labels that showed open windows and gusts of fresh air. More perfume was added to the recipe, so that instead of merely neutralizing odors, Febreze had its own distinct scent. Television commercials were filmed of women spraying freshly made beds and spritzing just-laundered clothing. The tagline had been “Gets bad smells out of fabrics.” It was rewritten as “Cleans life’s smells.”</p>
+
+<p class="calibre2">Each change was designed to appeal to a specific, daily cue: Cleaning a room. Making a bed. Vacuuming a rug. In each one, Febreze was positioned as the reward: the nice smell that occurs at the end of a cleaning routine. Most important, each ad was calibrated to elicit a craving: that things will smell as nice as they look when the cleaning ritual is done. The irony is that a product manufactured to destroy odors was transformed into the opposite. Instead of eliminating scents on dirty fabrics, it became an air freshener used as the finishing touch, once things are already clean.</p>
+
+<p class="calibre2">When the researchers went back into consumers’ homes after the new ads aired and the redesigned bottles were given away, they found that some housewives in the test market had started expecting—craving—the Febreze scent. One woman said that when her bottle ran dry, she squirted diluted perfume on her laundry. “If I don’t smell something nice at the end, it doesn’t really seem clean now,” she told them.</p>
+
+<p class="calibre2">“The park ranger with the skunk problem sent us in the wrong direction,” Stimson told me. “She made us think that Febreze would succeed by providing a solution to a problem. But who wants to admit their house stinks?</p>
+
+<p class="calibre2">“We were looking at it all wrong. No one craves scentlessness. On the other hand, lots of people crave a nice smell after they’ve spent thirty minutes cleaning.”</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">THE FEBREZE HABIT LOOP</p>
+
+<p class="calibre2">The Febreze relaunch took place in the summer of 1998. Within two months, sales doubled. Within a year, customers had spent more than $230 million on the product.<sup class="calibre5">2.30</sup> Since then, Febreze has spawned dozens of spin-offs—air fresheners, candles, laundry detergents, and kitchen sprays—that, all told, now account for sales of more than $1 billion per year. Eventually, P&amp;G began mentioning to customers that, in addition to smelling good, Febreze can also kill bad odors.</p>
+
+<p class="calibre2">Stimson was promoted and his team received their bonuses. The formula had worked. They had found simple and obvious cues. They had clearly defined the reward.</p>
+
+<p class="calibre2">But only once they created a sense of craving—the desire to make everything smell as nice as it looked—did Febreze become a hit. That craving is an essential part of the formula for creating new habits that Claude Hopkins, the Pepsodent ad man, never recognized.</p>
+
+<p class="calibre2"><strong class="calibre4">V.</strong></p>
+
+<p class="calibre2">In his final years of life, Hopkins took to the lecture circuit. His talks on the “Laws of Scientific Advertising” attracted thousands of people. From stages, he often compared himself to Thomas Edison and George Washington and spun out wild forecasts about the future (flying automobiles featured prominently). But he never mentioned cravings or the neurological roots of the habit loop. After all, it would be another seventy years before the MIT scientists and Wolfram Schultz conducted their experiments.</p>
+
+<p class="calibre2">So how did Hopkins manage to build such a powerful toothbrushing habit without the benefit of those insights?</p>
+
+<p class="calibre2">Well, it turns out that he actually <em class="calibre3">did</em> take advantage of the principles eventually discovered at MIT and inside Schultz’s laboratory, even if nobody knew it at the time.</p>
+
+<p class="calibre2">Hopkins’s experiences with Pepsodent weren’t quite as straightforward as he portrays them in his memoirs. Though he boasted that he discovered an amazing cue in tooth film, and bragged that he was the first to offer consumers the clear reward of beautiful teeth, it turns out that Hopkins wasn’t the originator of those tactics. Not by a long shot. Consider, for instance, some of the advertisements for other toothpastes that filled magazines and newspapers even before Hopkins knew that Pepsodent existed.</p>
+
+<p class="calibre2">“The ingredients of this preparation are especially intended to prevent deposits of <em class="calibre3">tartar</em> from accumulating around the necks of the teeth,” read an ad for Dr. Sheffield’s Crème Dentifrice that predated Pepsodent. “Clean that dirty layer!”</p>
+
+<p class="calibre2">“Your white enamel is only <em class="calibre3">hidden</em> by a coating of film,” read an advertisement that appeared while Hopkins was looking through his dental textbooks. “Sanitol Tooth Paste quickly restores the original whiteness by removing film.”</p>
+
+<p class="calibre2">“The charm of a lovely smile depends upon the beauty of your teeth,” proclaimed a third ad. “Beautiful, satin smooth teeth are often the secret of a pretty girl’s attractiveness. Use S.S. White Toothpaste!”</p>
+
+<p class="calibre2">Dozens of other advertising men had used the same language as Pepsodent years before Hopkins jumped in the game. All of their ads had promised to remove tooth film and had offered the reward of beautiful, white teeth. None of them had worked.</p>
+
+<p class="calibre2">But once Hopkins launched his campaign, sales of Pepsodent exploded. Why was Pepsodent different?</p>
+
+<p class="calibre2">Because Hopkins’s success was driven by the same factors that caused Julio the monkey to touch the lever and housewives to spray Febreze on freshly made beds. Pepsodent created a craving.</p>
+
+<p class="calibre2">Hopkins doesn’t spend any of his autobiography discussing the ingredients in Pepsodent, but the recipe listed on the toothpaste’s patent application and company records reveals something interesting: Unlike other pastes of the period, Pepsodent contained citric acid, as well as doses of mint oil and other chemicals.<sup class="calibre5">2.31</sup> Pepsodent’s inventor used those ingredients to make the toothpaste taste fresh, but they had another, unanticipated effect as well. They’re irritants that create a cool, tingling sensation on the tongue and gums.</p>
+
+<p class="calibre2">After Pepsodent started dominating the marketplace, researchers at competing companies scrambled to figure out why. What they found was that customers said that if they forgot to use Pepsodent, they realized their mistake because they missed that cool, tingling sensation in their mouths. They expected—they <em class="calibre3">craved—</em>that slight irritation. If it wasn’t there, their mouths didn’t feel clean.</p>
+
+<p class="calibre2">Claude Hopkins wasn’t selling beautiful teeth. He was selling a sensation. Once people craved that cool tingling—once they equated it with cleanliness—brushing became a habit.</p>
+
+<p class="calibre2">When other companies discovered what Hopkins was really selling, they started imitating him. Within a few decades, almost every toothpaste contained oils and chemicals that caused gums to tingle. Soon, Pepsodent started getting outsold. Even today, almost all toothpastes contain additives with the sole job of making your mouth tingle after you brush.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">THE REAL PEPSODENT HABIT LOOP</p>
+
+<p class="calibre2">“Consumers need some kind of signal that a product is working,” Tracy Sinclair, who was a brand manager for Oral-B and Crest Kids Toothpaste, told me. “We can make toothpaste taste like anything—blueberries, green tea—and as long as it has a cool tingle, people feel like their mouth is clean. The tingling doesn’t make the toothpaste work any better. It just convinces people it’s doing the job.”</p>
+
+<p class="calibre2">Anyone can use this basic formula to create habits of her or his own. Want to exercise more? Choose a cue, such as going to the gym as soon as you wake up, and a reward, such as a smoothie after each workout. Then think about that smoothie, or about the endorphin rush you’ll feel. Allow yourself to anticipate the reward. Eventually, that craving will make it easier to push through the gym doors every day.</p>
+
+<p class="calibre2">Want to craft a new eating habit? When researchers affiliated with the National Weight Control Registry—a project involving more than six thousand people who have lost more than thirty pounds—looked at the habits of successful dieters, they found that 78 percent of them ate breakfast every morning, a meal cued by a time of day.<sup class="calibre5">2.32</sup> But most of the successful dieters <em class="calibre3">also</em> envisioned a specific reward for sticking with their diet—a bikini they wanted to wear or the sense of pride they felt when they stepped on the scale each day—something they chose carefully and really wanted. They focused on the craving for that reward when temptations arose, cultivated the craving into a mild obsession. And their cravings for that reward, researchers found, crowded out the temptation to drop the diet. The craving drove the habit loop.<sup class="calibre5">2.33</sup></p>
+
+<p class="calibre2">For companies, understanding the science of cravings is revolutionary. There are dozens of daily rituals we <em class="calibre3">ought</em> to perform each day that never become habits. We should watch our salt and drink more water. We should eat more vegetables and fewer fats. We should take vitamins and apply sunscreen. The facts could not be more clear on this last front: Dabbing a bit of sunscreen on your face each morning significantly lowers the odds of skin cancer. Yet, while everyone brushes their teeth, fewer than 10 percent of Americans apply sunscreen each day.<sup class="calibre5">2.34</sup> Why?</p>
+
+<p class="calibre2">Because there’s no craving that has made sunscreen into a daily habit. Some companies are trying to fix that by giving sunscreens a tingling sensation or something that lets people know they’ve applied it to their skin. They’re hoping it will cue an expectation the same way the craving for a tingling mouth reminds us to brush our teeth. They’ve already used similar tactics in hundreds of other products.</p>
+
+<p class="calibre2">“Foaming is a huge reward,” said Sinclair, the brand manager. “Shampoo doesn’t have to foam, but we add foaming chemicals because people expect it each time they wash their hair. Same thing with laundry detergent. And toothpaste—now every company adds sodium laureth sulfate to make toothpaste foam more. There’s no cleaning benefit, but people feel better when there’s a bunch of suds around their mouth. Once the customer starts expecting that foam, the habit starts growing.”</p>
+
+<p class="calibre2">Cravings are what drive habits. And figuring out how to spark a craving makes creating a new habit easier. It’s as true now as it was almost a century ago. Every night, millions of people scrub their teeth in order to get a tingling feeling; every morning, millions put on their jogging shoes to capture an endorphin rush they’ve learned to crave.</p><br class="content"/><div class="calibre1">
+<br class="content"/>
+</div>
+
+
+<p class="calibre2">And when they get home, after they clean the kitchen or tidy their bedrooms, some of them will spray a bit of Febreze.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p><br class="content"/><br class="content"/><p class="calibre2"><strong class="calibre4">THE GOLDEN RULE OF HABIT CHANGE</strong></p><br class="content"/><p class="calibre2"><strong class="calibre4">Why Transformation Occurs</strong></p>
+
+<p class="calibre2"><strong class="calibre4">I.</strong></p>
+
+<p class="calibre2">The game clock at the far end of the field says there are eight minutes and nineteen seconds left when Tony Dungy, the new head coach of the Tampa Bay Buccaneers—one of the worst teams in the National Football League, not to mention the history of professional football—starts to feel a tiny glimmer of hope.<sup class="calibre5">3.1</sup></p>
+
+<p class="calibre2">It’s late on a Sunday afternoon, November 17, 1996.<sup class="calibre5">3.2</sup> The Buccaneers are playing in San Diego against the Chargers, a team that appeared in the Super Bowl the previous year. The Bucs are losing, 17 to 16. They’ve been losing all game. They’ve been losing all season. They’ve been losing all decade. The Buccaneers have not won a game on the West Coast in sixteen years, and many of the team’s current players were in grade school the last time the Bucs had a victorious season. So far this year, their record is 2–8. In one of those games, the Detroit Lions—a team so bad it would later be described as putting the “less” in “hopeless”—beat the Bucs 21 to 6, and then, three weeks later, beat them again, 27 to 0.<sup class="calibre5">3.3</sup> One newspaper columnist has started referring to the Bucs as “America’s Orange Doormat.”<sup class="calibre5">3.4</sup> ESPN is predicting that Dungy, who got his job only in January, could be fired before the year is done.</p>
+
+<p class="calibre2">On the sidelines, however, as Dungy watches his team arrange itself for the next play, it feels like the sun has finally broken through the clouds. He doesn’t smile. He never lets his emotions show during a game. But something is taking place on the field, something he’s been working toward for years. As the jeers from the hostile crowd of fifty thousand rain down upon him, Tony Dungy sees something that no one else does. He sees proof that his plan is starting to work.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">Tony Dungy had waited an eternity for this job. For seventeen years, he prowled the sidelines as an assistant coach, first at the University of Minnesota, then with the Pittsburgh Steelers, then the Kansas City Chiefs, and then back to Minnesota with the Vikings. Four times in the past decade, he had been invited to interview for head coaching positions with NFL teams.</p>
+
+<p class="calibre2">All four times, the interviews hadn’t gone well.</p>
+
+<p class="calibre2">Part of the problem was Dungy’s coaching philosophy. In his job interviews, he would patiently explain his belief that the key to winning was changing players’ habits. He wanted to get players to stop making so many decisions during a game, he said. He wanted them to react automatically, habitually. If he could instill the right habits, his team would win. Period.</p>
+
+<p class="calibre2">“Champions don’t do extraordinary things,” Dungy would explain. “They do ordinary things, but they do them without thinking, too fast for the other team to react. They follow the habits they’ve learned.”</p>
+
+<p class="calibre2">How, the owners would ask, are you going to create those new habits?</p>
+
+<p class="calibre2">Oh, no, he wasn’t going to create <em class="calibre3">new</em> habits, Dungy would answer. Players spent their lives building the habits that got them to the NFL. No athlete is going to abandon those patterns simply because some new coach says to.</p>
+
+<p class="calibre2">So rather than creating new habits, Dungy was going to <em class="calibre3">change</em> players’ old ones. And the secret to changing old habits was using what was already inside players’ heads. Habits are a three-step loop—the cue, the routine, and the reward—but Dungy only wanted to attack the middle step, the routine. He knew from experience that it was easier to convince someone to adopt a new behavior if there was something familiar at the beginning and end.<sup class="calibre5">3.5</sup></p>
+
+<p class="calibre2">His coaching strategy embodied an axiom, a Golden Rule of habit change that study after study has shown is among the most powerful tools for creating change. Dungy recognized that you can never truly extinguish bad habits.</p>
+
+<p class="calibre2">Rather, to change a habit, you must keep the old cue, and deliver the old reward, but insert a new routine.</p>
+
+<p class="calibre2">That’s the rule: If you use the same cue, and provide the same reward, you can shift the routine and change the habit. Almost any behavior can be transformed if the cue and reward stay the same.</p>
+
+<p class="calibre2">The Golden Rule has influenced treatments for alcoholism, obesity, obsessive-compulsive disorders, and hundreds of other destructive behaviors, and understanding it can help anyone change their own habits. (Attempts to give up snacking, for instance, will often fail unless there’s a new routine to satisfy old cues and reward urges. A smoker usually can’t quit unless she finds some activity to replace cigarettes when her nicotine craving is triggered.)</p>
+
+<p class="calibre2">Four times Dungy explained his habit-based philosophy to team owners. Four times they listened politely, thanked him for his time, and then hired someone else.</p>
+
+<p class="calibre2">Then, in 1996, the woeful Buccaneers called. Dungy flew to Tampa Bay and, once again, laid out his plan for how they could win. The day after the final interview, they offered him the job.</p>
+
+<p class="calibre2"><strong class="calibre4">THE GOLDEN RULE OF HABIT CHANGE</strong></p>
+
+<p class="calibre2">You Can’t Extinguish a Bad Habit, You Can Only Change It.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">HOW IT WORKS: USE THE SAME CUE. PROVIDE THE SAME REWARD. CHANGE THE ROUTINE.</p>
+
+<p class="calibre2">Dungy’s system would eventually turn the Bucs into one of the league’s winningest teams. He would become the only coach in NFL history to reach the play-offs in ten consecutive years, the first African American coach to win a Super Bowl, and one of the most respected figures in professional athletics. His coaching techniques would spread throughout the league and all of sports. His approach would help illuminate how to remake the habits in anyone’s life.</p>
+
+<p class="calibre2">But all of that would come later. Today, in San Diego, Dungy just wanted to win.</p>
+
+<p class="calibre2"></p><div class="calibre1"></div>
+<p class="calibre2"></p>
+
+<p class="calibre2">From the sidelines, Dungy looks up at the clock: 8:19 remaining. The Bucs have been behind all game and have squandered opportunity after opportunity, in typical fashion. If their defense doesn’t make something happen right now, this game will effectively be over. San Diego has the ball on their own twenty-yard line, and the Chargers’ quarterback, Stan Humphries, is preparing to lead a drive that, he hopes, will put the game away. The play clock begins, and Humphries is poised to take the snap.</p>
+
+<p class="calibre2">But Dungy isn’t looking at Humphries. Instead, he’s watching his own players align into a formation they have spent months perfecting. Traditionally, football is a game of feints and counterfeints, trick plays and misdirection. Coaches with the thickest playbooks and most complicated schemes usually win. Dungy, however, has taken the opposite approach. He isn’t interested in complication or obfuscation. When Dungy’s defensive players line up, it is obvious to everyone exactly which play they are going to use.</p>
+
+<p class="calibre2">Dungy has opted for this approach because, in theory, he doesn’t need misdirection. He simply needs his team to be faster than everyone else. In football, milliseconds matter. So instead of teaching his players hundreds of formations, he has taught them only a handful, but they have practiced over and over until the behaviors are automatic. When his strategy works, his players can move with a speed that is impossible to overcome.<sup class="calibre5">3.6</sup></p>
+
+<p class="calibre2">But only when it works. If his players think too much or hesitate or second-guess their instincts, the system falls apart. And so far, Dungy’s players have been a mess.</p>
+
+<p class="calibre2">This time, however, as the Bucs line up on the twenty-yard line, something is different. Take Regan Upshaw, a Buccaneer defensive end who has settled into a three-point stance on the scrimmage line. Instead of looking up and down the line, trying to absorb as much information as possible, Upshaw is looking only at the cues that Dungy taught him to focus on. First, he glances at the outside foot of the opposite lineman (his toes are back, which means he is preparing to step backward and block while the quarterback passes); next, Upshaw looks at the lineman’s shoulders (rotated slightly inward), and the space between him and the next player (a fraction narrower than expected).</p>
+
+<p class="calibre2">Upshaw has practiced how to react to each of these cues so many times that, at this point, he doesn’t have to think about what to do. He just follows his habits.</p>
+
+<p class="calibre2">San Diego’s quarterback approaches the line of scrimmage and glances right, then left, barks the count and takes the ball. He drops back five steps and stands tall, swiveling his head, looking for an open receiver. Three seconds have passed since the play started. The stadium’s eyes and the television cameras are on him.</p>
+
+<p class="calibre2">So most observers fail to see what’s happening among the Buccaneers. As soon as Humphries took the snap, Upshaw sprang into action. Within the first second of the play, he darted right, across the line of scrimmage, so fast the offensive lineman couldn’t block him. Within the next second, Upshaw ran four more paces downfield, his steps a blur. In the next second, Upshaw moved three strides closer to the quarterback, his path impossible for the offensive lineman to predict.</p>
+
+<p class="calibre2">As the play moves into its fourth second, Humphries, the San Diego quarterback, is suddenly exposed. He hesitates, sees Upshaw from the corner of his eye. And that’s when Humphries makes his mistake. He starts <em class="calibre3">thinking</em>.</p>
+
+<p class="calibre2">Humphries spots a teammate, a rookie tight end named Brian Roche, twenty yards downfield. There’s another San Diego receiver much closer, waving his arms, calling for the ball. The short pass is the safe choice. Instead, Humphries, under pressure, performs a split-second analysis, cocks his arm, and heaves to Roche.</p>
+
+<p class="calibre2">That hurried decision is precisely what Dungy was hoping for. As soon as the ball is in the air, a Buccaneer safety named John Lynch starts moving. Lynch’s job was straightforward: When the play started, he ran to a particular point on the field and waited for his cue. There’s enormous pressure to improvise in this situation. But Dungy has drilled Lynch until his routine is automatic. And as a result, when the ball leaves the quarterback’s hands, Lynch is standing ten yards from Roche, waiting.</p>
+
+<p class="calibre2">As the ball spins through the air, Lynch reads his cues—the direction of the quarterback’s face mask and hands, the spacing of the receivers—and starts moving before it’s clear where the ball will land. Roche, the San Diego receiver, springs forward, but Lynch cuts around him and intercepts the pass. Before Roche can react, Lynch takes off down the field toward the Chargers’ end zone. The other Buccaneers are perfectly positioned to clear his route. Lynch runs 10, then 15, then 20, then almost 25 yards before he is finally pushed out of bounds. The entire play has taken less than ten seconds.</p>
+
+<p class="calibre2">Two minutes later, the Bucs score a touchdown, taking the lead for the first time all game. Five minutes later, they kick a field goal. In between, Dungy’s defense shuts down each of San Diego’s comeback attempts. The Buccaneers win, 25 to 17, one of the biggest upsets of the season.</p>
+
+<p class="calibre2">At the end of the game, Lynch and Dungy exit the field together.</p>
+
+<p class="calibre2">“It feels like something was different out there,” Lynch says as they walk into the tunnel.</p>
+
+<p class="calibre2">“We’re starting to believe,” Dungy replies.</p>
+
+<p class="calibre2"><strong class="calibre4">II.</strong></p>
+
+<p class="calibre2">To understand how a coach’s focus on changing habits could remake a team, it’s necessary to look outside the world of sports. Way outside, to a dingy basement on the Lower East Side of New York City in 1934, where one of the largest and most successful attempts at wide-scale habit change was born.</p>
+
+<p class="calibre2">Sitting in the basement was a thirty-nine-year-old alcoholic named Bill Wilson.<sup class="calibre5">3.7</sup><sup class="calibre5">, </sup><sup class="calibre5">3.8</sup> Years earlier, Wilson had taken his first drink during officers’ training camp in New Bedford, Massachusetts, where he was learning to fire machine guns before getting shipped to France and World War I. Prominent families who lived near the base often invited officers to dinner, and one Sunday night, Wilson attended a party where he was served rarebit and beer. He was twenty-two years old and had never had alcohol before. The only polite thing, it seemed, was to drink the glass served to him. A few weeks later, Wilson was invited to another elegant affair. Men were in tuxedos, women were flirting. A butler came by and put a Bronx cocktail—a combination of gin, dry and sweet vermouth, and orange juice—into Wilson’s hand. He took a sip and felt, he later said, as if he had found “the elixir of life.”<sup class="calibre5">3.9</sup></p>
+
+<p class="calibre2">By the mid-1930s, back from Europe, his marriage falling apart and a fortune from selling stocks vaporized, Wilson was consuming three bottles of booze a day. On a cold November afternoon, while he was sitting in the gloom, an old drinking buddy called. Wilson invited him over and mixed a pitcher of pineapple juice and gin.<sup class="calibre5">3.10</sup> He poured his friend a glass.</p>
+
+</div>
+</div></div></body></html>

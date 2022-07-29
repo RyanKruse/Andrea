@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
+  <head>
+    <meta content="92166f34-0d53-4bd0-b453-d29a68a1824f" name="dtb:uid"/>
+    <meta content="2" name="dtb:depth"/>
+    <meta content="calibre (0.7.34)" name="dtb:generator"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>The Count of Monte Cristo (Unabridged Penguin)</text>
+  </docTitle>
+  <navMap>
+    <navPoint class="chapter" id="ac6a9fbe-2616-4db3-8943-08a62f25d742" playOrder="1">
+      <navLabel>
+        <text>Chronology</text>
+      </navLabel>
+      <content src="The_Count_of_Monte_Cristo_split_005.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="d76ee474-cb21-496a-a2a2-a0ea39778194" playOrder="2">
+      <navLabel>
+        <text>Introduction</text>
+      </navLabel>
+      <content src="The_Count_of_Monte_Cristo_split_006.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="0ea40d64-c074-4c90-af9c-10aeadeb4eb2" playOrder="3">
+      <navLabel>
+        <text>Further Reading</text>
+      </navLabel>
+      <content src="The_Count_of_Monte_Cristo_split_007.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="f31c5091-bf4c-4c46-a806-acf54a3ca2cc" playOrder="4">
+      <navLabel>
+        <text>A Note on the Text</text>
+      </navLabel>
+      <content src="The_Count_of_Monte_Cristo_split_008.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="09ea76d8-94a2-42a7-a249-39132065da05" playOrder="5">
+      <navLabel>
+        <text>The Count of Monte Cristo</text>
+      </navLabel>
+      <content src="The_Count_of_Monte_Cristo_split_009.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="0491b193-6720-4753-86f2-c6cbbc4771bd" playOrder="6">
+      <navLabel>
+        <text>Notes</text>
+      </navLabel>
+      <content src="The_Count_of_Monte_Cristo_split_128.html"/>
+    </navPoint>
+  </navMap>
+</ncx>

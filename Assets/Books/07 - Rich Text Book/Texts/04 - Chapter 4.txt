@@ -1,0 +1,28 @@
+﻿
+<h1>CHAPTER 4</h1>
+
+Alphabet rich-text commands for formatting paragraphs:
+
+•Bulleted List
+
+A)Alphabet List A
+
+A.Alphabet List B
+
+A-Alphabet List C
+
+A:Alphabet List D
+
+A|Alphabet List E
+
+Insert an invisible space before the word "Tabbed" to increase indent size:
+
+A)​Tabbed-Alphabet List A
+
+A.​Tabbed-Alphabet List B
+
+A-​Tabbed-Alphabet List C
+
+A:​Tabbed-Alphabet List D
+
+A|​Tabbed-Alphabet List E

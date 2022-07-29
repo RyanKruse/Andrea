@@ -1,0 +1,14 @@
+﻿
+<h1>CHAPTER 1</h1>
+
+Basic rich-text commands for formatting paragraphs:
+
+<b>Bold Text</b>
+
+<i>Italic Text</i>
+
+<smallcaps>Small-Caps Text</smallcaps>
+
+<t>Tabbed Text
+
+<sprite=1>Image Text

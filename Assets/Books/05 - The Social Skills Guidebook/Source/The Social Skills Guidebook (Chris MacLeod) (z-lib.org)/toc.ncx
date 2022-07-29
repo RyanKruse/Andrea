@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="eng">
+  <head>
+    <meta content="83c6af10-2eb9-4dfd-9d03-a28143c0367f" name="dtb:uid"/>
+    <meta content="3" name="dtb:depth"/>
+    <meta content="calibre (2.43.0)" name="dtb:generator"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>The Social Skills Guidebook: Manage Shyness, Improve Your Conversations, and Make Friends, Without Giving Up Who You Are</text>
+  </docTitle>
+  <navMap>
+    <navPoint class="chapter" id="num_1" playOrder="0">
+      <navLabel>
+        <text>Title Page</text>
+      </navLabel>
+      <content src="text/part0000.html#Title-Page"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_2" playOrder="1">
+      <navLabel>
+        <text>Copyright</text>
+      </navLabel>
+      <content src="text/part0001.html#Copyright"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_3" playOrder="2">
+      <navLabel>
+        <text>Table of Contents</text>
+      </navLabel>
+      <content src="text/part0002.html#1T140-521396c7573443b8ae1c8cbd94281b38"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_4" playOrder="3">
+      <navLabel>
+        <text>Introduction</text>
+      </navLabel>
+      <content src="text/part0003.html#Introduction"/>
+      <navPoint class="chapter" id="num_5" playOrder="4">
+        <navLabel>
+          <text>1. The Overall Process of Improving Your Social Skills</text>
+        </navLabel>
+        <content src="text/part0004.html#Chapter-1_The-Overall-Process-of-Improving-Your-Social-Skills"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_6" playOrder="5">
+        <navLabel>
+          <text>2. Addressing Some Common Challenges and Concerns about Working on Your Social Skills</text>
+        </navLabel>
+        <content src="text/part0005.html#Chapter-2_Addressing-Some-Common-Challenges-and-Concerns-about-Working-on-Your-Social-Skills"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="num_7" playOrder="6">
+      <navLabel>
+        <text>Section 1: Tackling the Main Mental Barriers to Socializing</text>
+      </navLabel>
+      <content src="text/part0006.html#Section-1_Tackling-the-Main-Mental-Barriers-to-Socializing"/>
+      <navPoint class="chapter" id="num_8" playOrder="7">
+        <navLabel>
+          <text>3. Seeing the Effects of Shyness, Social Anxiety, Insecurity, and Discouragement</text>
+        </navLabel>
+        <content src="text/part0007.html#Chapter-3_Seeing-the-Effects-of-Shyness-Social-Anxiety-Insecurity-and-Discouragement"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_9" playOrder="8">
+        <navLabel>
+          <text>4. Shifting your Mind-Set about Your Social Discomfort</text>
+        </navLabel>
+        <content src="text/part0008.html#Chapter-4_Shifting-Your-Mind-Set-about-Your-Social-Discomfort"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_10" playOrder="9">
+        <navLabel>
+          <text>5. Handling Counterproductive Thinking about Socializing</text>
+        </navLabel>
+        <content src="text/part0009.html#Chapter-5_Handling-Counterproductive-Thinking-about-Socializing"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_11" playOrder="10">
+        <navLabel>
+          <text>6. Hands-On Strategies for Taking the Edge Off Anxiety</text>
+        </navLabel>
+        <content src="text/part0010.html#Chapter-6_Hands-On-Strategies-for-Taking-the-Edge-Off-Anxiety"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_12" playOrder="11">
+        <navLabel>
+          <text>7. Reducing Fears and Insecurities through Real-World Experiences</text>
+        </navLabel>
+        <content src="text/part0011.html#Chapter-7_Reducing-Fears-and-Insecurities-through-Real-World-Experiences"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_13" playOrder="12">
+        <navLabel>
+          <text>8. Increasing Your Self-Esteem and Confidence</text>
+        </navLabel>
+        <content src="text/part0012.html#Chapter-8_Increasing-Your-Self-Esteem-and-Confidence"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="num_14" playOrder="13">
+      <navLabel>
+        <text>Section 2: Developing Your Conversations Skills</text>
+      </navLabel>
+      <content src="text/part0013.html#Section-2_Developing-Your-Conversation-Skills"/>
+      <navPoint class="chapter" id="num_15" playOrder="14">
+        <navLabel>
+          <text>9. Getting a Basic Feel for Conversations</text>
+        </navLabel>
+        <content src="text/part0014.html#Chapter-9_Getting-a-Basic-Feel-for-Conversations"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_16" playOrder="15">
+        <navLabel>
+          <text>10. Dealing with Awkward Silences</text>
+        </navLabel>
+        <content src="text/part0015.html#Chapter-10_Dealing-with-Awkward-Silences"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_17" playOrder="16">
+        <navLabel>
+          <text>11. Starting One-on-One Conversations</text>
+        </navLabel>
+        <content src="text/part0016.html#Chapter-11_Starting-One-on-One-Conversations"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_18" playOrder="17">
+        <navLabel>
+          <text>12. Having Deeper Conversations</text>
+        </navLabel>
+        <content src="text/part0017.html#Chapter-12_Having-Deeper-Conversations"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_19" playOrder="18">
+        <navLabel>
+          <text>13. Ending Conversations</text>
+        </navLabel>
+        <content src="text/part0018.html#Chapter-13_Ending-Conversations"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_20" playOrder="19">
+        <navLabel>
+          <text>14. Navigating Group Conversations</text>
+        </navLabel>
+        <content src="text/part0019.html#Chapter-14_Navigating-Group-Conversations"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_21" playOrder="20">
+        <navLabel>
+          <text>15. Making Conversation in Particular Situations</text>
+        </navLabel>
+        <content src="text/part0020.html#Chapter-15_Making-Conversation-in-Particular-Situations"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_22" playOrder="21">
+        <navLabel>
+          <text>16. Becoming Aware of Empathy</text>
+        </navLabel>
+        <content src="text/part0021.html#Chapter-16_Becoming-Aware-of-Empathy"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_23" playOrder="22">
+        <navLabel>
+          <text>17. Core Listening Skills</text>
+        </navLabel>
+        <content src="text/part0022.html#Chapter-17_Core-Listening-Skills"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_24" playOrder="23">
+        <navLabel>
+          <text>18. Recognizing and Acting on Other People’s Nonverbal Communication</text>
+        </navLabel>
+        <content src="text/part0023.html#Chapter-18_Recognizing-and-Acting-on-Other-Peoples-Nonverbal-Communication"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_25" playOrder="24">
+        <navLabel>
+          <text>19. Improving Your Own Nonverbal Communication</text>
+        </navLabel>
+        <content src="text/part0024.html#Chapter-19_Improving-Your-Own-Nonverbal-Communication"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_26" playOrder="25">
+        <navLabel>
+          <text>20. Conversation Mistakes</text>
+        </navLabel>
+        <content src="text/part0025.html#Chapter-20_Conversation-Mistakes"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_27" playOrder="26">
+        <navLabel>
+          <text>21. Being More Likable</text>
+        </navLabel>
+        <content src="text/part0026.html#Chapter-21_Being-More-Likable"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_28" playOrder="27">
+        <navLabel>
+          <text>22. Being More Fun</text>
+        </navLabel>
+        <content src="text/part0027.html#Chapter-22_Being-More-Fun"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_29" playOrder="28">
+        <navLabel>
+          <text>23. Assertiveness Skills</text>
+        </navLabel>
+        <content src="text/part0028.html#Chapter-23_Assertiveness-Skills"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="num_30" playOrder="29">
+      <navLabel>
+        <text>Section 3: Forming and Growing Friendships</text>
+      </navLabel>
+      <content src="text/part0029.html#Section-3_Forming-and-Growing-Friendships"/>
+      <navPoint class="chapter" id="num_31" playOrder="30">
+        <navLabel>
+          <text>24. Introduction to the Process of Making Friends</text>
+        </navLabel>
+        <content src="text/part0030.html#Chapter-24_Introduction-to-the-Process-of-Making-Friends"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_32" playOrder="31">
+        <navLabel>
+          <text>25. Finding Potential Friends</text>
+        </navLabel>
+        <content src="text/part0031.html#Chapter-25_Finding-Potential-Friends"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_33" playOrder="32">
+        <navLabel>
+          <text>26. Making Plans with Potential Friends</text>
+        </navLabel>
+        <content src="text/part0032.html#Chapter-26_Making-Plans-with-Potential-Friends"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_34" playOrder="33">
+        <navLabel>
+          <text>27. Deepening New Friendships</text>
+        </navLabel>
+        <content src="text/part0033.html#Chapter-27_Deepening-New-Friendships"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_35" playOrder="34">
+        <navLabel>
+          <text>28. Making a Group of Friends</text>
+        </navLabel>
+        <content src="text/part0034.html#Chapter-28_Making-a-Group-of-Friends"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_36" playOrder="35">
+        <navLabel>
+          <text>29. Making Friends in Particular Situations</text>
+        </navLabel>
+        <content src="text/part0035.html#Chapter-29_Making-Friends-in-Particular-Situations"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_37" playOrder="36">
+        <navLabel>
+          <text>30. Troubleshooting the Process of Making Friends</text>
+        </navLabel>
+        <content src="text/part0036.html#Chapter-30_Troubleshooting-the-Process-of-Making-Friends"/>
+      </navPoint>
+      <navPoint class="chapter" id="num_38" playOrder="37">
+        <navLabel>
+          <text>31. Looking Forward as Your Social Skills Improve</text>
+        </navLabel>
+        <content src="text/part0037.html#Chapter-31_Looking-Forward-as-Your-Social-Skills-Improve"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="num_39" playOrder="38">
+      <navLabel>
+        <text>Appendix A: Asperger's Syndrome / Mild Autism</text>
+      </navLabel>
+      <content src="text/part0038.html#Appendix-A-Aspergers-Syndrome-Mild-Autism"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_40" playOrder="39">
+      <navLabel>
+        <text>Further Reading</text>
+      </navLabel>
+      <content src="text/part0039.html#Further-Reading"/>
+    </navPoint>
+  </navMap>
+</ncx>

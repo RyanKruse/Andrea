@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx
+  PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en-US">
+<head>
+<meta name="dtb:uid" content="a9780316028226"/>
+<meta name="dtb:depth" content="1"/>
+<meta name="dtb:totalPageCount" content="0"/>
+<meta name="dtb:maxPageNumber" content="0"/>
+</head>
+<docTitle><text>Dracula</text></docTitle>
+<docAuthor><text>Bram Stoker</text></docAuthor>
+<navMap>
+<navPoint id="fore_1" playOrder="1"><navLabel><text>Foreword</text></navLabel><content src="Dracula_fore_1.html"/></navPoint>
+<navPoint id="dedi_1" playOrder="2"><navLabel><text>Dedication</text></navLabel><content src="Dracula_dedi_1.html"/></navPoint>
+<navPoint id="epig_1" playOrder="3"><navLabel><text>Epigraph</text></navLabel><content src="Dracula_epig_1.html"/></navPoint>
+<navPoint id="chap_1" playOrder="4"><navLabel><text>Chapter I: Jonathan Harker’s Journal</text></navLabel><content src="Dracula_chap_1.html"/></navPoint>
+<navPoint id="chap_2" playOrder="5"><navLabel><text>Chapter II: Jonathan Harker’s Journal</text></navLabel><content src="Dracula_chap_2.html"/></navPoint>
+<navPoint id="chap_3" playOrder="6"><navLabel><text>Chapter III: Jonathan Harker’s Journal</text></navLabel><content src="Dracula_chap_3.html"/></navPoint>
+<navPoint id="chap_4" playOrder="7"><navLabel><text>Chapter IV: Jonathan Harker’s Journal</text></navLabel><content src="Dracula_chap_4.html"/></navPoint>
+<navPoint id="chap_5" playOrder="8"><navLabel><text>Chapter V: Letter From Miss Mina Murray to Miss Lucy Westenra</text></navLabel><content src="Dracula_chap_5.html"/></navPoint>
+<navPoint id="chap_6" playOrder="9"><navLabel><text>Chapter VI: Mina Murray’s Journal</text></navLabel><content src="Dracula_chap_6.html"/></navPoint>
+<navPoint id="chap_7" playOrder="10"><navLabel><text>Chapter VII: Cutting from the Dailygraph, 8 August</text></navLabel><content src="Dracula_chap_7.html"/></navPoint>
+<navPoint id="chap_8" playOrder="11"><navLabel><text>Chapter VIII: Mina Murray’s Journal</text></navLabel><content src="Dracula_chap_8.html"/></navPoint>
+<navPoint id="chap_9" playOrder="12"><navLabel><text>Chapter IX: Letter, Mina Harker to Lucy Westenra</text></navLabel><content src="Dracula_chap_9.html"/></navPoint>
+<navPoint id="chap_10" playOrder="13"><navLabel><text>Chapter X: Letter, Dr Seward to Hon. Arthur Holmwood</text></navLabel><content src="Dracula_chap_10.html"/></navPoint>
+<navPoint id="chap_11" playOrder="14"><navLabel><text>Chapter XI: Lucy Westenra’s Diary</text></navLabel><content src="Dracula_chap_11.html"/></navPoint>
+<navPoint id="chap_12" playOrder="15"><navLabel><text>Chapter XII: Dr Seward’s Diary</text></navLabel><content src="Dracula_chap_12.html"/></navPoint>
+<navPoint id="chap_13" playOrder="16"><navLabel><text>Chapter XIII: Dr Seward’s Diary</text></navLabel><content src="Dracula_chap_13.html"/></navPoint>
+<navPoint id="chap_14" playOrder="17"><navLabel><text>Chapter XIV: Mina Harker’s Journal</text></navLabel><content src="Dracula_chap_14.html"/></navPoint>
+<navPoint id="chap_15" playOrder="18"><navLabel><text>Chapter XV: Dr Seward’s Diary</text></navLabel><content src="Dracula_chap_15.html"/></navPoint>
+<navPoint id="chap_16" playOrder="19"><navLabel><text>Chapter XVI: Dr Seward’s Diary</text></navLabel><content src="Dracula_chap_16.html"/></navPoint>
+<navPoint id="chap_17" playOrder="20"><navLabel><text>Chapter XVII: Dr Seward’s Diary</text></navLabel><content src="Dracula_chap_17.html"/></navPoint>
+<navPoint id="chap_18" playOrder="21"><navLabel><text>Chapter XVIII: Dr Seward’s Diary</text></navLabel><content src="Dracula_chap_18.html"/></navPoint>
+<navPoint id="chap_19" playOrder="22"><navLabel><text>Chapter XIX: Jonathan Harker’s Journal</text></navLabel><content src="Dracula_chap_19.html"/></navPoint>
+<navPoint id="chap_20" playOrder="23"><navLabel><text>Chapter XX: Jonathan Harker’s Journal</text></navLabel><content src="Dracula_chap_20.html"/></navPoint>
+<navPoint id="chap_21" playOrder="24"><navLabel><text>Chapter XXI: Dr Seward’s Diary</text></navLabel><content src="Dracula_chap_21.html"/></navPoint>
+<navPoint id="chap_22" playOrder="25"><navLabel><text>Chapter XXII: Jonathan Harker’s Journal</text></navLabel><content src="Dracula_chap_22.html"/></navPoint>
+<navPoint id="chap_23" playOrder="26"><navLabel><text>Chapter XXIII: Dr Seward’s Diary</text></navLabel><content src="Dracula_chap_23.html"/></navPoint>
+<navPoint id="chap_24" playOrder="27"><navLabel><text>Chapter XXIV: Dr Seward’s Phonograph Diary, Spoken by Van Helsing</text></navLabel><content src="Dracula_chap_24.html"/></navPoint>
+<navPoint id="chap_25" playOrder="28"><navLabel><text>Chapter XXV: Dr Seward’s Diary</text></navLabel><content src="Dracula_chap_25.html"/></navPoint>
+<navPoint id="chap_26" playOrder="29"><navLabel><text>Chapter XXVI: Dr Seward’s Diary</text></navLabel><content src="Dracula_chap_26.html"/></navPoint>
+<navPoint id="chap_27" playOrder="30"><navLabel><text>Chapter XXVII: Mina Harker’s Journal</text></navLabel><content src="Dracula_chap_27.html"/></navPoint>
+<navPoint id="appe_1" playOrder="31"><navLabel><text>Note</text></navLabel><content src="Dracula_appe_1.html"/></navPoint>
+<navPoint id="auth_bio_1" playOrder="32"><navLabel><text>About The Author of the Foreword to This Edition</text></navLabel><content src="Dracula_auth_bio_1.html"/></navPoint>
+<navPoint id="auth_bio_2" playOrder="33"><navLabel><text>About The Author</text></navLabel><content src="Dracula_auth_bio_2.html"/></navPoint>
+
+</navMap>
+</ncx>

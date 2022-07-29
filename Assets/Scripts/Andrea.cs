@@ -50,7 +50,6 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private GameObject _compilerGameObject;
     [SerializeField] private GameObject _readingScreenGameObject;
     [SerializeField] private GameObject _mainMenuGameObject;
-    [SerializeField] private GameObject _confirmationMenuGameObject;
     [SerializeField] private GameObject _optionsMenuGameObject;
     [SerializeField] private GameObject _bottomBarGameObject;
     [SerializeField] private GameObject _screenSaverScreenGameObject;
@@ -278,6 +277,7 @@ public class Andrea : UdonSharpBehaviour
     [SerializeField] private Image _sliderFill;
     [SerializeField] private Image _sliderButton;
     [SerializeField] private int _calibrateMemoryDeepFreeze;
+    [SerializeField] private TextMeshProUGUI _topDebugTMP;
     // [SerializeField] private VRC_UiShape _screemVRCUIShape;
 
 
@@ -369,7 +369,6 @@ public class Andrea : UdonSharpBehaviour
         }
         Memory.PopulateTextAssetList();
         _mainMenuGameObject.SetActive(true);
-        _confirmationMenuGameObject.SetActive(false);
         // _backButtonGameObject.SetActive(false);
         _topLeftTMP.gameObject.SetActive(false);
         _topLeftCloneTMP.gameObject.SetActive(false);
@@ -1159,7 +1158,6 @@ public class Andrea : UdonSharpBehaviour
         {
             _candleVRCPickup.pickupable = false;
         }
-
         LerpScreenSaver();
 
         GripInputLogistics();
@@ -1384,6 +1382,8 @@ public class Andrea : UdonSharpBehaviour
             }
         }
 
+        _topDebugTMP.text = $"Registry: {registry}\nRight Grip: {_isRightGripActive}\nLeft Grip: {_isLeftGripActive}\nParent: {_candleGameObject.transform.parent.gameObject.name}";
+
         // Toggle grip logistics.
         /*
         else if (!_isRightGripActive && Input.GetAxisRaw("Oculus_CrossPlatform_SecondaryHandTrigger") > 0.28f)
@@ -1523,7 +1523,7 @@ public class Andrea : UdonSharpBehaviour
         // Do not turn page if another menu is active.
         // Experimental - keep page turning on for options container.
         // !_isOptionsContainerHidden || 
-        if (!_isHomeContainerHidden || _confirmationMenuGameObject.activeSelf) return;
+        if (!_isHomeContainerHidden) return;
 
         // Desktop input for turning page left or right.
         if (!_isHaltPageTurn && Input.GetKeyDown("[3]") || Input.GetKey("[*]") || (Input.GetAxis("Mouse ScrollWheel") < 0f && _isScrollWheelActive))
@@ -2561,10 +2561,6 @@ public class Andrea : UdonSharpBehaviour
 
         if (_overflowPageIndex >= 0) return;
 
-        if (_confirmationMenuGameObject.activeSelf)
-        {
-            _confirmationMenuGameObject.SetActive(false);
-        }
         /*
         else if (!_mainMenuGameObject.activeSelf)
         {
@@ -2668,7 +2664,7 @@ public class Andrea : UdonSharpBehaviour
         // Junk Code: Keep displays to a minimum.
         _topCenterTMP.text = $"{Networking.LocalPlayer.displayName}'s Library";
         _topCenterCloneTMP.text = _topCenterTMP.text;
-        _bottomLeftTMP.text = "Public Domain";
+        _bottomLeftTMP.text = "Prototype";  // "Public Domain";
         _bottomLeftCloneTMP.text = _bottomLeftTMP.text;
         _bottomCenterTMP.text = "";
         _bottomCenterCloneTMP.text = _bottomCenterTMP.text;
@@ -3052,7 +3048,6 @@ public class Andrea : UdonSharpBehaviour
             HomeContainer();
         }
         // _mainMenuGameObject.SetActive(true);
-        _confirmationMenuGameObject.SetActive(false);
         _backButtonGameObject.SetActive(true);
         _catalogButtonGameObject.SetActive(true);
         _topLeftTMP.gameObject.SetActive(false);
@@ -3062,7 +3057,7 @@ public class Andrea : UdonSharpBehaviour
 
     public void NoConfirm()
     {
-        _confirmationMenuGameObject.SetActive(false);
+        
     }
 
     private void PlayAudio(AudioClip clip)

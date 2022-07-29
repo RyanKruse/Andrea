@@ -1,0 +1,98 @@
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" unique-identifier="a9780316028226" version="2.0">
+<metadata xmlns:opf="http://www.idpf.org/2007/opf">
+<dc:title>Dracula</dc:title>
+<dc:creator opf:file-as="STOKER, BRAM" opf:role="aut">Bram Stoker</dc:creator>
+<dc:publisher>Little, Brown and Company</dc:publisher>
+<dc:date/>
+<dc:subject/>
+<dc:description>&lt;p&gt;Bram Stoker's classic novel of suspense and horror was a bestseller in Britain when it was published in 1897. A late 20th-century biographer of Stoker has suggested that famed Victorian actor Henry Irving, for whom Stoker worked for many years, was an inspiration for some of Count Dracula's characteristics.</dc:description>
+<dc:rights/>
+<dc:identifier id="a9780316028226" opf:scheme="ISBN">9780316028226</dc:identifier>
+<dc:language>en-US</dc:language>
+<meta content="cover-image" name="cover"/>
+<meta content="7.99" name="srp-usd"/></metadata>
+<manifest>
+<item href="images/Dracula-cover.jpg" id="cover-image" media-type="image/jpeg"/>
+<item href="cover.xml" id="cover" media-type="application/xhtml+xml"/>
+<item href="css/Dracula_style.css" id="style" media-type="text/css"/>
+<item href="Dracula_toc.html" id="toc" media-type="application/xhtml+xml"/>
+<item href="Dracula_copyright.html" id="copyright" media-type="application/xhtml+xml"/>
+<item href="Dracula.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+<item href="Dracula_fore_1.html" id="fore_1" media-type="application/xhtml+xml"/>
+<item href="Dracula_dedi_1.html" id="dedi_1" media-type="application/xhtml+xml"/>
+<item href="Dracula_epig_1.html" id="epig_1" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_1.html" id="chap_1" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_2.html" id="chap_2" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_3.html" id="chap_3" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_4.html" id="chap_4" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_5.html" id="chap_5" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_6.html" id="chap_6" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_7.html" id="chap_7" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_8.html" id="chap_8" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_9.html" id="chap_9" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_10.html" id="chap_10" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_11.html" id="chap_11" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_12.html" id="chap_12" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_13.html" id="chap_13" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_14.html" id="chap_14" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_15.html" id="chap_15" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_16.html" id="chap_16" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_17.html" id="chap_17" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_18.html" id="chap_18" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_19.html" id="chap_19" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_20.html" id="chap_20" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_21.html" id="chap_21" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_22.html" id="chap_22" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_23.html" id="chap_23" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_24.html" id="chap_24" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_25.html" id="chap_25" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_26.html" id="chap_26" media-type="application/xhtml+xml"/>
+<item href="Dracula_chap_27.html" id="chap_27" media-type="application/xhtml+xml"/>
+<item href="Dracula_appe_1.html" id="appe_1" media-type="application/xhtml+xml"/>
+<item href="Dracula_auth_bio_1.html" id="auth_bio_1" media-type="application/xhtml+xml"/>
+<item href="Dracula_auth_bio_2.html" id="auth_bio_2" media-type="application/xhtml+xml"/>
+</manifest>
+<spine toc="ncx">
+<itemref idref="cover" linear="no"/>
+<itemref idref="copyright" linear="yes"/>
+<itemref idref="toc" linear="yes"/>
+<itemref idref="fore_1" linear="yes"/>
+<itemref idref="dedi_1" linear="yes"/>
+<itemref idref="epig_1" linear="yes"/>
+<itemref idref="chap_1" linear="yes"/>
+<itemref idref="chap_2" linear="yes"/>
+<itemref idref="chap_3" linear="yes"/>
+<itemref idref="chap_4" linear="yes"/>
+<itemref idref="chap_5" linear="yes"/>
+<itemref idref="chap_6" linear="yes"/>
+<itemref idref="chap_7" linear="yes"/>
+<itemref idref="chap_8" linear="yes"/>
+<itemref idref="chap_9" linear="yes"/>
+<itemref idref="chap_10" linear="yes"/>
+<itemref idref="chap_11" linear="yes"/>
+<itemref idref="chap_12" linear="yes"/>
+<itemref idref="chap_13" linear="yes"/>
+<itemref idref="chap_14" linear="yes"/>
+<itemref idref="chap_15" linear="yes"/>
+<itemref idref="chap_16" linear="yes"/>
+<itemref idref="chap_17" linear="yes"/>
+<itemref idref="chap_18" linear="yes"/>
+<itemref idref="chap_19" linear="yes"/>
+<itemref idref="chap_20" linear="yes"/>
+<itemref idref="chap_21" linear="yes"/>
+<itemref idref="chap_22" linear="yes"/>
+<itemref idref="chap_23" linear="yes"/>
+<itemref idref="chap_24" linear="yes"/>
+<itemref idref="chap_25" linear="yes"/>
+<itemref idref="chap_26" linear="yes"/>
+<itemref idref="chap_27" linear="yes"/>
+<itemref idref="appe_1" linear="yes"/>
+<itemref idref="auth_bio_1" linear="yes"/>
+<itemref idref="auth_bio_2" linear="yes"/>
+</spine>
+<guide>
+<reference href="Dracula_copy.html" title="Copyright Page" type="copyright"/>
+<reference href="Dracula_toc.html" title="Table of Contents" type="toc"/>
+<reference href="cover.xml" title="Cover Image" type="cover"/>
+</guide>
+</package>

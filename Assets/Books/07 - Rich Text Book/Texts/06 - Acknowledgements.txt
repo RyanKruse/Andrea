@@ -1,0 +1,64 @@
+
+
+
+<h2>ACKNOWLEDGMENTS</h2>
+
+
+
+Below is a paragraph that utilizes all of the formatting tools from the previous chapters. Refer to this text file as an example on how to store text into the Candle:
+
+<h1>Cursus Metus Aliquam</h1>
+
+<h2>Obortis Feugiat Vivamus at Augue Eget</h2>
+
+<smallcaps>Lorem ipsum dolor sit amet,</smallcaps> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id faucibus nisl tincidunt eget nullam. <b>Purus viverra accumsan</b> in nisl nisi scelerisque. Egestas egestas fringilla phasellus faucibus scelerisque. In ornare quam viverra orci sagittis eu volutpat. 
+
+<h4>Tristique senectus et netus et.</h4>
+
+<t>Eu nisl nunc mi ipsum faucibus vitae aliquet nec. Eu feugiat pretium nibh <i>ipsum consequat</i> nisl vel pretium lectus. Tellus molestie nunc non blandit. Tortor posuere ac ut consequat. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Pharetra et ultrices neque ornare. In nibh mauris cursus mattis molestie a iaculis at erat. Amet facilisis magna etiam tempor orci eu lobortis elementum. Aenean pharetra magna ac placerat vestibulum. <i>Luctus accumsan tortor posuere ac.</i> 
+
+<q4>Nisi quis eleifend quam adipiscing vitae proin sagittis.</q4>
+
+<t>Ut tristique et egestas quis ipsum. Cras semper auctor neque vitae tempus quam pellentesque nec nam. Semper viverra nam libero justo laoreet. Est ante in nibh <b>mauris cursus mattis.</b> 
+
+A.<b>Porttitor</b>: leo a diam sollicitudin tempor id eu nisl. 
+B.<b>Volutpat</b>: est velit egestas dui id. 
+C.<b>Mauris</b>: pharetra et ultrices neque ornare aenean euismod. 
+D.<b>Maecenas</b>: sed enim ut sem viverra aliquet eget sit. 
+•​A arcu cursus vitae congue mauris.
+•​Sed sed risus pretium quam.
+
+<t><i>Scelerisque in dictum</i> non consectetur. Vivamus at augue eget arcu. Mauris ultrices eros in cursus turpis massa tincidunt dui ut.
+
+<t>Quis commodo odio aenean sed adipiscing diam donec adipiscing. Ipsum consequat nisl vel pretium lectus. Faucibus turpis in eu mi. A arcu cursus vitae congue mauris rhoncus aenean vel. Rhoncus mattis rhoncus urna neque. Consequat mauris nunc congue nisi vitae suscipit tellus mauris a. Malesuada bibendum arcu vitae elementum curabitur vitae nunc. 
+
+<h6>Nisl condimentum id venenatis a condimentum.</h6>
+
+<t>Lacus vel facilisis volutpat est velit egestas dui id. Imperdiet dui accumsan sit amet. <i>Aenean et tortor at risus.</i> Facilisis gravida neque convallis a cras semper. Enim praesent elementum facilisis leo. Commodo ullamcorper a lacus vestibulum sed arcu non odio. Scelerisque purus semper eget duis at tellus at urna. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt.
+
+•In aliquam sem fringilla ut morbi. 
+•Vestibulum morbi blandit cursus risus at ultrices mi tempus. 
+•Mollis aliquam ut porttitor leo. 
+1)​Est ullamcorper eget nulla facilisi etiam dignissim. 
+2)​Lobortis elementum nibh tellus molestie. 
+3)​Tortor dignissim convallis aenean et tortor at. 
+
+<t><b>Penatibus et magnis</b> dis parturient montes nascetur ridiculus mus mauris. Nunc sed velit dignissim sodales ut. Venenatis cras sed felis eget velit aliquet sagittis id consectetur. Elementum curabitur vitae nunc sed velit.
+
+<t>Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum. In iaculis nunc sed augue. Sed vulputate odio ut enim blandit volutpat maecenas. <b>Bibendum ut tristique et egestas.</b>
+
+<h5>Integer quis auctor elit sed vulputate mi sit amet.</h5>
+
+<t>Convallis tellus id interdum velit laoreet. Sed arcu non odio euismod. Sed cras ornare arcu dui vivamus arcu felis. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Id aliquet <i>lectus proin</i> nibh nisl condimentum id. Lobortis feugiat vivamus at augue eget arcu dictum. Egestas egestas <smallcaps>Fringilla Phasellus Faucibus</smallcaps> scelerisque eleifend donec. Velit egestas dui id ornare arcu odio ut sem. Sed sed risus pretium quam. Enim ut sem viverra aliquet eget sit amet tellus. Diam maecenas ultricies mi eget mauris.
+
+<q3>At in tellus integer feugiat scelerisque varius morbi enim.</q3>
+
+<t>Facilisis gravida neque convallis a cras. Mauris a diam maecenas sed enim. Facilisi etiam dignissim diam quis enim lobortis. <i>Interdum varius sit amet mattis vulputate</i> enim nulla aliquet porttitor. Ultrices dui sapien eget mi proin sed libero. Vitae et leo duis ut diam quam nulla. Ultricies mi eget mauris pharetra et ultrices neque. <smallcaps>Dictumst quisque sagittis</smallcaps> purus sit amet volutpat consequat mauris. Mi bibendum neque egestas congue quisque. Sapien eget mi proin sed libero enim sed. Enim lobortis scelerisque fermentum dui faucibus in ornare.
+
+<t>Sit amet risus nullam eget felis eget nunc. A scelerisque purus semper eget duis at tellus. Sit amet purus gravida quis blandit turpis. Ultrices dui sapien eget mi proin. Gravida arcu ac tortor dignissim convallis aenean et tortor at. Massa ultricies mi quis hendrerit dolor magna eget. 
+
+<h3>Turpis cursus in hac habitasse platea dictumst quisque.</h3>
+
+Amet justo donec enim diam vulputate ut pharetra sit amet. <b>Risus pretium quam vulputate dignissim.</b> Eget felis eget nunc lobortis mattis aliquam faucibus. Amet massa vitae tortor condimentum lacinia quis vel. Imperdiet sed euismod nisi porta lorem mollis aliquam ut. Auctor elit sed vulputate mi sit amet mauris commodo quis. 
+
+<h6>Condimentum lacinia quis vel eros donec ac odio.</h6>
